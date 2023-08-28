@@ -17,7 +17,7 @@ output:
 # All icons were obtained from https://icons.getbootstrap.com/
 website:   
   page-navigation: true
-  title: "MTH_190"
+  title: "SDS 192 Fall '23"
   
   navbar:
  
@@ -44,6 +44,8 @@ website:
   #   href: midterms.html
     - text: Syllabus
       href: ./course-materials/syllabus/syllabus.html
+    - text: Schwab
+      href: course-materials/schwab.qmd
   #  - icon: fa-github fa-lg
   #    href: https://github.com/rudeboybert/SDS192
   

@@ -2,19 +2,24 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.0.37">
+<meta name="generator" content="quarto-1.2.475">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>MTH_190 - Syllabus</title>
+<title>SDS 192 Fall ’23 - Syllabus</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-span.underline{text-decoration: underline;}
-div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
 </style>
 
 
@@ -63,42 +68,48 @@ ul.task-list{list-style: none;}
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
-      <a class="navbar-brand" href="../../index.html">
-    <span class="navbar-title">MTH_190</span>
-  </a>
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">SDS 192 Fall ’23</span>
+    </a>
+  </div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../Resources.html">Resources</a>
+    <a class="nav-link" href="../../Resources.html">
+ <span class="menu-text">Resources</span></a>
   </li>  
   <li class="nav-item compact">
     <a class="nav-link" href="https://mdsr-book.github.io/mdsr2e/"><i class="bi bi-book" role="img">
 </i> 
- </a>
+ <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="https://moderndive.com/C-appendixC.html">T &amp; T</a>
+    <a class="nav-link" href="https://moderndive.com/C-appendixC.html">
+ <span class="menu-text">T &amp; T</span></a>
   </li>  
   <li class="nav-item compact">
     <a class="nav-link" href="https://www.slack.com"><i class="bi bi-slack" role="img">
 </i> 
- </a>
+ <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="http://hcc-rstudiosrv1.hcc.edu:8787/auth-sign-in">R</a>
+    <a class="nav-link" href="http://hcc-rstudiosrv1.hcc.edu:8787/auth-sign-in">
+ <span class="menu-text">R</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/"><i class="bi bi-github" role="img">
 </i> 
- </a>
+ <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../.././course-materials/syllabus/syllabus.html">Syllabus</a>
+    <a class="nav-link" href="../.././course-materials/syllabus/syllabus.html">
+ <span class="menu-text">Syllabus</span></a>
   </li>  
 </ul>
               <div id="quarto-search" class="" title="Search"></div>
@@ -110,10 +121,10 @@ ul.task-list{list-style: none;}
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
-    <nav id="TOC" role="doc-toc">
+    <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">Class Days</h2>
    
-  <ul>
+  <ul class="collapse">
   <li><a href="#basicinfo" id="toc-basicinfo" class="nav-link active" data-scroll-target="#basicinfo">Basic information</a>
   <ul class="collapse">
   <li><a href="#work-life-balance" id="toc-work-life-balance" class="nav-link" data-scroll-target="#work-life-balance">Instructor work-life balance</a></li>
@@ -131,9 +142,11 @@ ul.task-list{list-style: none;}
   <li><a href="#projects-40" id="toc-projects-40" class="nav-link" data-scroll-target="#projects-40">Projects 40%</a></li>
   <li><a href="#final-project-20" id="toc-final-project-20" class="nav-link" data-scroll-target="#final-project-20">Final project 20%</a></li>
   <li><a href="#problem-sets-25" id="toc-problem-sets-25" class="nav-link" data-scroll-target="#problem-sets-25">Problem sets 25%</a></li>
-  <li><a href="#engagement" id="toc-engagement" class="nav-link" data-scroll-target="#engagement">Engagment 15%</a></li>
+  <li><a href="#engagement" id="toc-engagement" class="nav-link" data-scroll-target="#engagement">Engagement 15%</a></li>
   <li><a href="#tentative-assignment-schedule" id="toc-tentative-assignment-schedule" class="nav-link" data-scroll-target="#tentative-assignment-schedule">Tentative Assignment schedule</a></li>
   <li><a href="#policies-1" id="toc-policies-1" class="nav-link" data-scroll-target="#policies-1">Policies</a></li>
+  <li><a href="#policies" id="toc-policies" class="nav-link" data-scroll-target="#policies">Policies</a></li>
+  <li><a href="#resources" id="toc-resources" class="nav-link" data-scroll-target="#resources">Resources</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -154,6 +167,7 @@ ul.task-list{list-style: none;}
 <div class="quarto-title-meta">
 
     
+  
     
   </div>
   
@@ -169,29 +183,32 @@ h1{font-weight: 400;}
 <section id="basicinfo" class="level1">
 <h1>Basic information</h1>
 <ul>
-<li><strong>Course title:</strong> MTH 190: Introduction to Data Science</li>
-<li><strong>Instructor:</strong> [Nicholas Schwab (he/him)] - Assistant Professor of Mathematics. Please call me “Schwab” or “Professor Schwab”</li>
-<li><strong>Office location:</strong> Frost 362</li>
-<li><strong>Email:</strong> nschwab@hcc.edu</li>
-<li><strong>Meeting locations/times:</strong>
+<li><p><strong>Course title:</strong> SDS 192: Introduction to Data Science</p></li>
+<li><p><strong>Contact Info:</strong><br>
+<svg aria-hidden="true" role="img" viewbox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M207.8 20.73c-93.45 18.32-168.7 93.66-187 187.1c-27.64 140.9 68.65 266.2 199.1 285.1c19.01 2.888 36.17-12.26 36.17-31.49l.0001-.6631c0-15.74-11.44-28.88-26.84-31.24c-84.35-12.98-149.2-86.13-149.2-174.2c0-102.9 88.61-185.5 193.4-175.4c91.54 8.869 158.6 91.25 158.6 183.2l0 16.16c0 22.09-17.94 40.05-40 40.05s-40.01-17.96-40.01-40.05v-120.1c0-8.847-7.161-16.02-16.01-16.02l-31.98 .0036c-7.299 0-13.2 4.992-15.12 11.68c-24.85-12.15-54.24-16.38-86.06-5.106c-38.75 13.73-68.12 48.91-73.72 89.64c-9.483 69.01 43.81 128 110.9 128c26.44 0 50.43-9.544 69.59-24.88c24 31.3 65.23 48.69 109.4 37.49C465.2 369.3 496 324.1 495.1 277.2V256.3C495.1 107.1 361.2-9.332 207.8 20.73zM239.1 304.3c-26.47 0-48-21.56-48-48.05s21.53-48.05 48-48.05s48 21.56 48 48.05S266.5 304.3 239.1 304.3z"></path></svg> <a href="mailto:nschwab@smith.edu">nschwab@smith.edu</a><br>
+<svg aria-hidden="true" role="img" viewbox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M511.2 387l-23.25 100.8c-3.266 14.25-15.79 24.22-30.46 24.22C205.2 512 0 306.8 0 54.5c0-14.66 9.969-27.2 24.22-30.45l100.8-23.25C139.7-2.602 154.7 5.018 160.8 18.92l46.52 108.5c5.438 12.78 1.77 27.67-8.98 36.45L144.5 207.1c33.98 69.22 90.26 125.5 159.5 159.5l44.08-53.8c8.688-10.78 23.69-14.51 36.47-8.975l108.5 46.51C506.1 357.2 514.6 372.4 511.2 387z"></path></svg> 413-585-3440<br>
+<svg aria-hidden="true" role="img" viewbox="0 0 496 512" style="height:1em;width:0.97em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg> <a href="http://www.github.com/Nics-Github">Nics-Github</a> <svg aria-hidden="true" role="img" viewbox="0 0 576 512" style="height:1em;width:1.12em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M384 112v288c0 26.51-21.49 48-48 48h-288c-26.51 0-48-21.49-48-48v-288c0-26.51 21.49-48 48-48h288C362.5 64 384 85.49 384 112zM576 127.5v256.9c0 25.5-29.17 40.39-50.39 25.79L416 334.7V177.3l109.6-75.56C546.9 87.13 576 102.1 576 127.5z"></path></svg> <a href="https://smith.zoom.us/j/8227449694">nschwab</a></p></li>
+<li><p><strong>Office location:</strong> McConnell 213</p></li>
+<li><p><strong>Email:</strong> nschwab@smith.edu</p></li>
+<li><p><strong>Meeting locations/times:</strong></p></li>
+</ul>
+<p>Morning Section</p>
+<pre><code>-   MWF: 10:50 AM - 11:05 PM / Sabin-Reed 220
+
+Afternoon Section
+
+-   M: 1:40 AM - 11:55 / Sabin- Reed 301 WF: 1:20 AM - 12:35 / Sabin- Reed 301</code></pre>
 <ul>
-<li>MF: 11:00 AM - 12:15 PM / Kittredge Center 420</li>
+<li><p><strong>Getting help</strong>:</p>
+<ul>
+<li><p>For non personal/sensitive questions, ask on the <code>#questions</code> channel on Slack. For personal/sensitive matters, Slack DM Professor Schwab.</p></li>
+<li><p>Prof.&nbsp;Schwab’s student question hours:</p>
+<ul>
+<li><p>W 12:15 - 1:15 pm</p></li>
+<li><p>F 12:15 - 1:15 pm</p></li>
+<li><p>Request a zoom appointment.]</p></li>
 </ul></li>
-<li><strong>Getting help</strong>:
-<ul>
-<li>For non personal/sensitive questions, ask on the <code>#questions</code> channel on Slack. For personal/sensitive matters, Slack DM Professor Schwab.</li>
-<li>Prof.&nbsp;Schwab’s hours:
-<ul>
-<li><p>MF 10:00am - 10:50</p></li>
-<li><p>W 1:00 - 1:50pm</p></li>
-<li><p>W 4:00 - 5:00pm by appointment only.</p></li>
-<li><p>FR 362 or <a href="https://calendar.google.com/calendar/u/0/selfsched?sstoken=UU10THFMNFV0NEJafGRlZmF1bHR8MzA4NTk0ZDE0OThjM2E4ZmU4ZjljYTU2NGYwZDJiMzk">set up a zoom appointment.</a></p></li>
-</ul></li>
-<li>AJ’s office hours
-<ul>
-<li>Office hours: MW 7-9pm</li>
-<li>See the slack chanel for AJ’s zoom link</li>
-</ul></li>
+<li><p><a href="https://www.smith.edu/academics/spinelli-center/tutoring">Spinelli Center</a></p></li>
 </ul></li>
 </ul>
 <section id="work-life-balance" class="level2">
@@ -228,16 +245,15 @@ h1{font-weight: 400;}
 </section>
 <section id="course-description-objectives" class="level1">
 <h1>Course Description &amp; Objectives</h1>
-<p>The world is awash with raw data, and students will benefit in the job market from learning to properly analyze it. The purpose of this course is to introduce students to the concepts of data science early in their college education. In this course, students will learn to code in R or Python, popular programming languages commonly used in Data Science. This course can also be seen as an introduction to programming languages and coding. It is designed to be accessible to students from a wide range of backgrounds and interests, including those without advanced mathematics or computer programming experience.</p>
-<p>Prerequisite(s):&nbsp;MTH 085&nbsp;or&nbsp;MTH 099&nbsp;or&nbsp;MTH 011/MTH 012&nbsp;with a grade of C- or better; or SM08, or adequate score on the Mathematics Placement Examination.&nbsp; No computer language experience necessary but student must have a willingness to learn to code.</p>
-<p><strong>3 Class Hours 3 Credits</strong></p>
+<p>An introduction to data science using Python, R and SQL. Students learn how to scrape, process and clean data from the web; manipulate data in a variety of formats; contextualize variation in data; construct point and interval estimates using resampling techniques; visualize multidimensional data; design accurate, clear and appropriate data graphics; create data maps and perform basic spatial analysis; and query large relational databases. SDS 100 is required for students who have not previously completed SDS 201, SDS 220, SDS 290 or SDS 291.</p>
+<p><strong>4 Class Hours 4 Credits</strong></p>
 <hr>
 </section>
 <section id="basic-outline-of-course-content" class="level1">
 <h1>BASIC OUTLINE OF COURSE CONTENT:</h1>
 <ul>
 <li><p>Introduction to Programming Language for Data Science (R or Python) and Computing Environment (RStudio, Jupyter Notebook, etc.)</p></li>
-<li><p>Data Science Life Cycle&nbsp;</p></li>
+<li><p>Data Science Life Cycle</p></li>
 <li><p>Grammar of Graphics</p></li>
 <li><p>Data Visualization</p></li>
 <li><p>Data Wrangling</p></li>
@@ -245,24 +261,23 @@ h1{font-weight: 400;}
 <li><p>Web Scraping and Importing Data</p></li>
 <li><p>Data Management</p></li>
 <li><p>Data Ethics</p></li>
+<li><p>Iteration</p></li>
 <li><p>Introduction to Database Querying with SQL</p></li>
 <li><p>Further Topics based on time and student interest may include:</p>
 <ul>
-<li><p>Iteration</p></li>
 <li><p>Dynamic and Customized Data Graphics</p></li>
 <li><p>Geospatial Data and Maps</p></li>
-<li><p>Text Mining</p></li>
-<li><p>Introduction to Machine Learning (to motivate interest in an Intro to Data Science 2 course that would be devoted to this.)</p></li>
+<li><p>Learning with AI</p></li>
 </ul></li>
 </ul>
 </section>
 <section id="student-learning-outcomes" class="level1">
 <h1>Student Learning outcomes</h1>
-<p>Students who complete this course will be able to:&nbsp;</p>
+<p>Students who complete this course will be able to:</p>
 <ul>
 <li><p>Develop skills in using modern technology to conduct data analysis.</p></li>
-<li><p>Draw meaningful conclusions and insights from real world data.&nbsp;</p></li>
-<li><p>Understand data collection from various sources and appropriate data management.&nbsp;</p></li>
+<li><p>Draw meaningful conclusions and insights from real world data.</p></li>
+<li><p>Understand data collection from various sources and appropriate data management.</p></li>
 <li><p>Effectively organize, clean, prepare data for analysis</p></li>
 <li><p>Communicate clear, meaningful data visualizations.</p></li>
 <li><p>Develop understanding and appreciation of ethics in Data Science.</p></li>
@@ -274,7 +289,7 @@ h1{font-weight: 400;}
 </section>
 <section id="book-and-software" class="level1">
 <h1>Book and software</h1>
-<p>The Modern Data Science with R <strong>textbook</strong> is accessible on the navigational bar of this webpage as well as via <a href="https://mdsr-book.github.io/mdsr2e/">this link</a>. Students will use the HCC RStudio workbench to do computations in R find it <a href="http://hcc-rstudiosrv1.hcc.edu:8787/s/93126cfc78a31806f480a/auth-sign-in?appUri=%2F">here</a>.</p>
+<p>The Modern Data Science with R <strong>textbook</strong> is accessible on the navigational bar of this webpage as well as via <a href="https://mdsr-book.github.io/mdsr2e/">this link</a>. Students will use a local install or RStudio workbench to do computations in R find it <a href="https://rstudio.smith.edu">here</a>.</p>
 </section>
 <section id="policies" class="level1">
 <h1>Class norms</h1>
@@ -287,29 +302,37 @@ h1{font-weight: 400;}
 </section>
 <section id="readings" class="level1">
 <h1>Readings</h1>
-<p>We’ll be reading chapters 1-6,8,15,and 17 of Modern Data Science with R.</p>
+<p>We’ll be reading chapters 1-6,8,15,and 17 of Modern Data Science with R. Probably other texts.</p>
 </section>
 <section id="evaluation" class="level1">
 <h1>Evaluation</h1>
-<p>All due dates can be found on the <a href="https://nics-github.github.io/MTH_190_Intro_to_DS/">main page</a> of this course webpage.</p>
+<p>All due dates can be found on the <a href="../index.html">main page</a> of this course webpage.</p>
 <p>This class is project based. As such your evaluations will be based on projects you create.</p>
 <section id="projects-40" class="level2">
 <h2 class="anchored" data-anchor-id="projects-40">Projects 40%</h2>
-<p>There are four projects to complete during the semester.</p>
+<p>There are four projects to complete during the semester. They will be completed collaboratively with a team of students using SCRUM.</p>
 </section>
 <section id="final-project-20" class="level2">
 <h2 class="anchored" data-anchor-id="final-project-20">Final project 20%</h2>
-<p>There will be a final project due the last day of classes. You’ll do this final project in groups of 2-3 where you can choose your groupmates.</p>
+<p>There will be a final project due the last day of classes. You’ll complete this final project over the course of the semester using a process called SCRUM. The Final Project will also have in groups of 2-3 where you can choose your groupmates.</p>
 </section>
 <section id="problem-sets-25" class="level2">
 <h2 class="anchored" data-anchor-id="problem-sets-25">Problem sets 25%</h2>
-<p>Homework will be assigned weekly, its important to complete and stay on top of homework.</p>
+<p>Homework will be assigned regularly, its important to complete and stay on top of the problem sets. They will be graded on the following scale:</p>
+<ul>
+<li><p>5 points: Assignment is complete, mostly correct, rendered and submitted</p></li>
+<li><p>4 points: Assignment is nearly complete, mostly correct, rendered and submitted</p></li>
+<li><p>3 points: Assignment is around 50% of the problems have been completed, are correct, the assignment is rendered</p></li>
+<li><p>2 points: Assignment is at most 50% complete, the problems are incorrect and is not correctly rendered</p></li>
+<li><p>1 point : Assignment is largely unfinished and is not rendered</p></li>
+<li><p>0 points: No assignment is turned in.</p></li>
+</ul>
 </section>
 <section id="engagement" class="level2">
-<h2 class="anchored" data-anchor-id="engagement">Engagment 15%</h2>
+<h2 class="anchored" data-anchor-id="engagement">Engagement 15%</h2>
 <p>It is difficult to explicit codify what constitutes “an engaged student,” so instead I present the following rough principle I will follow: <em>you’ll only get out of this class as much as you put in</em>. That being said, here are multiple pathways for you to stay engaged in this class:</p>
 <ul>
-<li>In particular: Peer evaluations for all projects.</li>
+<li>In particular: Participation in all SCRUM Sprints</li>
 <li>Asking and answering questions in class.</li>
 <li>Working and staying focused in class.</li>
 <li>Coming to office hours.</li>
@@ -319,23 +342,123 @@ h1{font-weight: 400;}
 </section>
 <section id="tentative-assignment-schedule" class="level2">
 <h2 class="anchored" data-anchor-id="tentative-assignment-schedule">Tentative Assignment schedule</h2>
-<p>Homework Will be assigned weekly and due by midnight the following Monday.</p>
+<p>Homework will be assigned regularly and due by midnight the following Monday.</p>
 <p>Project 1- due after reading chapter 4 of MDSR roughly the 10th day of class</p>
 <p>Project 2- due after reading chapter 5 of MDSR roughly the 18th day of class</p>
 <p>Project 3- due after reading chapter 15 of MDSR roughly the 22nd day of class</p>
 <p>Project 4- due after reading chapter 17 of MDSR roughly the 26th day of class</p>
 <p>Final Project/ Presentation during our final time.</p>
-<p>For a more up to date schedule see the course’s <a href="https://nics-github.github.io/MTH_190_Intro_to_DS/">website</a>.</p>
+<p>For a more up to date schedule see the course’s <a href="../index.html">website</a>.</p>
 </section>
 <section id="policies-1" class="level2">
 <h2 class="anchored" data-anchor-id="policies-1">Policies</h2>
-<ol type="1">
-<li><strong>Collaboration</strong>: While I encourage you to work with your peers for problem sets, you must submit your own answers and not simple rewordings of another’s work. Furthermore, all collaborations must be explicitly acknowledged in your submissions.</li>
-</ol>
-<p><em>ACCESSIBILITY ACCOMMODATIONS</em>:</p>
-<p>Holyoke Community College values inclusion and equal access to its programs and activities and is committed to fostering an environment of mutual respect and full participation. Our goal is to create learning environments that are equitable, inclusive and welcoming. If you are an individual with a disability and require reasonable academic accommodations you are advised to contact the Office of Disability Services (ODS) at any time to discuss your accommodation needs and options. The ODS will work collaboratively with students with disabilities to develop effective accommodation plans for implementation in the classroom. The ODS is located in DON 147. For an appointment, please call 413-552- 2417. The Video Phone (VP) number is 413-650- 5502.</p>
+<section id="accommodation" class="level3">
+<h3 class="anchored" data-anchor-id="accommodation">Accommodation</h3>
+<p>Smith is committed to providing support services and reasonable accommodations to all students with disabilities. To request an accommodation, please register with the Disability Services Office at the beginning of the semester. To do so, call (413) 585-2071 to arrange an appointment with Laura Rauscher, Director of <a href="https://www.smith.edu/about-smith/disability-services">Disability Services</a>.</p>
+</section>
+</section>
+<section id="policies" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="policies">Policies</h2>
+<section id="inclusion" class="level3">
+<h3 class="anchored" data-anchor-id="inclusion">Inclusion</h3>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Inclusion policy
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>We are committed to fostering a classroom environment where all students thrive. We are committed to affirming the identities, realities and voices of all students, especially those from historically marginalized or underrepresented backgrounds. We are dedicated to creating a space where everyone in the class is respected, is free from discrimination based on race, ethnicity, sexual orientation, religion, gender identity, disability status, and other identities, and feel welcome and ready to learn at your highest potential.</p>
+<p>If you have any concerns or suggestions for how to make this class more inclusive, please reach out to your instructor.</p>
+<p><strong>We are here to support your learning and growth as data scientists and people!</strong></p>
+</div>
+</div>
+</section>
+<section id="attendance" class="level3">
+<h3 class="anchored" data-anchor-id="attendance">Attendance</h3>
+<p>We expect you attend class in person. If you choose to come to class, we expect your full attention. Please put your phone away during class unless otherwise directed.</p>
+<p>In keeping with Smith’s core identity and mission as an in-person, residential college, SDS affirms College policy (as per the Provost and Dean of the College) that students will attend class in person. SDS courses will not provide options for remote attendance. Students who have been determined to require a remote attendance accommodation by the Office of Disability Services will be the only exceptions to this policy. As with any other kind of ADA accommodations, please notify your instructor during the first week of classes to discuss how we can meet your accommodations.</p>
+<p>If you are unable to attend class for any reason, please follow the materials on the course website and check with another student about what happened in class.</p>
+</section>
+<section id="collaboration" class="level3">
+<h3 class="anchored" data-anchor-id="collaboration">Collaboration</h3>
+<div class="callout-warning callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Much of this course will operate on a collaborative basis, and you are expected and encouraged to work together with a partner or in small groups to study, complete labs, and prepare for exams. However, <strong>all work that you submit for credit must be your own</strong>. Copying and pasting sentences, paragraphs, or <em>blocks of code</em> from another student or from online sources is not acceptable and will receive no credit. No interaction with anyone but the instructors is allowed on any exams or quizzes.</p>
+</div>
+</div>
+</section>
+<section id="academic-honor-code-statement" class="level3">
+<h3 class="anchored" data-anchor-id="academic-honor-code-statement">Academic Honor Code Statement</h3>
+<p>All students, staff and faculty are bound by the Smith College Honor Code, which Smith has had since 1944.</p>
+<blockquote class="blockquote">
+<p>Smith College expects all students to be honest and committed to the principles of academic and intellectual integrity in their preparation and submission of course work and examinations. Students and faculty at Smith are part of an academic community defined by its commitment to scholarship, which depends on scrupulous and attentive acknowledgement of all sources of information, and honest and respectful use of college resources.</p>
+</blockquote>
+<p>Cases of dishonesty, plagiarism, etc., will be reported to the Academic Honor Board.</p>
+</section>
+<section id="conduct" class="level3">
+<h3 class="anchored" data-anchor-id="conduct">Code of Conduct</h3>
+<p>As the instructor and assistants for this course, we are committed to making participation in this course a harassment-free experience for everyone, regardless of level of experience, gender, gender identity and expression, sexual orientation, disability, personal appearance, body size, race, ethnicity, age, or religion. Examples of unacceptable behavior by participants in this course include the use of sexual language or imagery, derogatory comments or personal attacks, deliberate misgendering or use of “dead” names, trolling, public or private harassment, insults, or other unprofessional conduct.</p>
+<p>As the instructor and assistants we have the right and responsibility to point out and stop behavior that is not aligned to <a href="../../course-materials/syllabus/syllabus.html#conduct">this Code of Conduct</a>. Participants who do not follow the Code of Conduct may be reprimanded for such behavior. Instances of abusive, harassing, or otherwise unacceptable behavior may be reported by contacting the instructor.</p>
+<div class="callout-important callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>All students, the instructor, the lab instructor, and all assistants are expected to adhere to this Code of Conduct in all settings for this course: lectures, labs, office hours, tutoring hours, and over Slack.</p>
+</div>
+</div>
+<p>This Code of Conduct is adapted from the <a href="http://contributor-covenant.org/">Contributor Covenant</a>, version 1.0.0, available <a href="http://contributor-covenant.org/version/1/0/0/">here</a>.</p>
+</section>
+</section>
+<section id="resources" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="resources">Resources</h2>
+<section id="moodle-and-course-website" class="level3">
+<h3 class="anchored" data-anchor-id="moodle-and-course-website">Moodle and course website</h3>
+<p>The <a href="index.qmd">course website</a> and Moodle will be updated regularly with lecture handouts, project information, assignments, and other course resources. Grades will be recorded on Moodle. Please check both regularly.</p>
+</section>
+<section id="communication" class="level3">
+<h3 class="anchored" data-anchor-id="communication">Communication</h3>
+<ul>
+<li><svg aria-hidden="true" role="img" viewbox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M94.12 315.1c0 25.9-21.16 47.06-47.06 47.06S0 341 0 315.1c0-25.9 21.16-47.06 47.06-47.06h47.06v47.06zm23.72 0c0-25.9 21.16-47.06 47.06-47.06s47.06 21.16 47.06 47.06v117.8c0 25.9-21.16 47.06-47.06 47.06s-47.06-21.16-47.06-47.06V315.1zm47.06-188.1c-25.9 0-47.06-21.16-47.06-47.06S139 32 164.9 32s47.06 21.16 47.06 47.06v47.06H164.9zm0 23.72c25.9 0 47.06 21.16 47.06 47.06s-21.16 47.06-47.06 47.06H47.06C21.16 243.1 0 222.8 0 196.9s21.16-47.06 47.06-47.06H164.9zm188.1 47.06c0-25.9 21.16-47.06 47.06-47.06 25.9 0 47.06 21.16 47.06 47.06s-21.16 47.06-47.06 47.06h-47.06V196.9zm-23.72 0c0 25.9-21.16 47.06-47.06 47.06-25.9 0-47.06-21.16-47.06-47.06V79.06c0-25.9 21.16-47.06 47.06-47.06 25.9 0 47.06 21.16 47.06 47.06V196.9zM283.1 385.9c25.9 0 47.06 21.16 47.06 47.06 0 25.9-21.16 47.06-47.06 47.06-25.9 0-47.06-21.16-47.06-47.06v-47.06h47.06zm0-23.72c-25.9 0-47.06-21.16-47.06-47.06 0-25.9 21.16-47.06 47.06-47.06h117.8c25.9 0 47.06 21.16 47.06 47.06 0 25.9-21.16 47.06-47.06 47.06H283.1z"></path></svg> <a href="">Slack</a> is the primary mechanism for course-related discussions of all kinds. <em>Please do not email the course instructor with course-related questions!</em> Instead, post these on <code>#questions</code> on Slack. If discretion is absolutely necessary, private message the instructor on Slack.</li>
+</ul>
+</section>
+<section id="writing" class="level3">
+<h3 class="anchored" data-anchor-id="writing">Writing</h3>
+<p>Your ability to communicate results (which may be technical in nature) to your audience (which is likely to be non-technical) is critical to your success as a data analyst. The assignments in this class will place an emphasis on the clarity of your writing.</p>
+</section>
+<section id="writing-enriched-curriculum" class="level3">
+<h3 class="anchored" data-anchor-id="writing-enriched-curriculum">Writing Enriched Curriculum</h3>
+<p>This course is part of Smith College’s <a href="https://www.smith.edu/academics/jacobson-center/writing-enriched-curriculum">Writing Enriched Curriculum</a>. As such, the course supports the <a href="https://www.smith.edu/sites/default/files/media/Documents/Jacobson-Center/SDS-WritingPlan-accessible.pdf">Writing Plan of the Program in Statistical &amp; Data Sciences</a>.</p>
+<p>Please read the <a href="https://www.smith.edu/sites/default/files/media/Documents/Jacobson-Center/SDS-WritingPlan-accessible.pdf">SDS Writing Plan</a> for more information.</p>
+</section>
+<section id="the-spinelli-center" class="level3">
+<h3 class="anchored" data-anchor-id="the-spinelli-center">The Spinelli Center</h3>
+<p>The <a href="https://www.smith.edu/qlc/index.html">Spinelli Center</a> (now in Seelye 207) supports students doing quantitative work across the curriculum. In particular, they employ:</p>
+<ul>
+<li><a href="https://www.smith.edu/qlc/tutoring.html?colStats=open#PanelStats">SDS Tutors</a> available from 7:00–9:00pm on Sunday–Thursday evenings in Burton 301. These students are trained to help you with your statistics and R questions.</li>
+<li>A <a href="https://www.smith.edu/qlc/tutoring.html?colDataCnslr=open#PanelDataCnslr">Data Research and Statistics Counselor</a> (Osman Keshawarz) who keeps both <a href="http://www.smith.edu/qlc/tutoring.html#D1">drop-in hours</a> and appointments. Students are welcome to email <a href="mailto:qlctutor@smith.edu">qlctutor@smith.edu</a> to make an appointment.</li>
+</ul>
+<p>Your fellow students are also an excellent source for explanations, tips, etc.</p>
 
 
+</section>
 </section>
 </section>
 
@@ -381,7 +504,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
     button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
     setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
       button.setAttribute("title", currentTitle);
       button.classList.remove('code-copy-button-checked');
     }, 1000);
@@ -409,31 +549,50 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   for (var i=0; i<noterefs.length; i++) {
     const ref = noterefs[i];
     tippyHover(ref, function() {
-      let href = ref.getAttribute('href');
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
     });
   }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
   var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
   for (var i=0; i<bibliorefs.length; i++) {
     const ref = bibliorefs[i];
-    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
-    tippyHover(ref, function() {
-      var popup = window.document.createElement('div');
-      cites.forEach(function(cite) {
-        var citeDiv = window.document.createElement('div');
-        citeDiv.classList.add('hanging-indent');
-        citeDiv.classList.add('csl-entry');
-        var biblioDiv = window.document.getElementById('ref-' + cite);
-        if (biblioDiv) {
-          citeDiv.innerHTML = biblioDiv.innerHTML;
-        }
-        popup.appendChild(citeDiv);
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
       });
-      return popup.innerHTML;
-    });
+    }
   }
 });
 </script>

@@ -6,7 +6,7 @@ execute:
 
 ## Site Credit
 
-The format for this site was borrowed from \[Albert Kim's SDS 192 course\](https://bit.ly/sds192kim)
+The format for this site was borrowed from [Albert Kim's SDS 192 course](https://bit.ly/sds192kim)
 
 ## Activities, Projects, etc.
 

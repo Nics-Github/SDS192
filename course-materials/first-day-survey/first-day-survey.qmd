@@ -1,0 +1,19 @@
+---
+title: "1st Day Survey"
+format: html
+editor: visual
+---
+
+# Instructions:
+
+On piece of paper answer the following:
+
+## What is your name?
+
+## What are your preferred pronouns?
+
+## What is your major?
+
+## Do you know what SCRUM is?
+
+## How many times a day do you brush your teeth?

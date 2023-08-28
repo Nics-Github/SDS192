@@ -1,0 +1,23 @@
+---
+title: "No Computer Visualizations"
+format: html
+editor: visual
+---
+
+Hopefully I have summarized our survey data into a table.
+
+# Your assignment is to draw a graph representing this data. 
+
+-   Make the best one you can. Do not include your names.
+
+-   We will break into groups of four by convenience.
+
+-   Your group will select the favorite graph from another group.
+
+-   We will look at favorites as a class and discuss.
+
+## Q: What is the purpose of a visualization? 
+
+## Q: What makes a successful graph? 
+
+# 

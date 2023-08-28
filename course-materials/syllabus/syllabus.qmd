@@ -10,7 +10,7 @@ format:
     toc-location: left
     toc-title: "Class Days"
     df-print: kable
-
+    
 execute:
   freeze: auto  # re-render only when source changes    
 ---
@@ -39,27 +39,41 @@ h1{font-weight: 400;}
 # Basic information {#basicinfo}
 
 -   **Course title:** SDS 192: Introduction to Data Science
--   **Instructor:** \[Nicholas Schwab (he/him)\] - Visiting Lecturer. Please call me "Professor Schwab" or "Schwab".
+
+-   **Contact Info:**  
+  `r fontawesome::fa("at")` [nschwab@smith.edu](mailto:nschwab@smith.edu)  
+  `r fontawesome::fa("phone")` 413-585-3440  
+  `r fontawesome::fa("github")` [Nics-Github](http://www.github.com/Nics-Github)
+  `r fontawesome::fa("video")` [nschwab](https://smith.zoom.us/j/8227449694 )  
+
 -   **Office location:** McConnell 213
+
 -   **Email:** nschwab\@smith.edu
+
 -   **Meeting locations/times:**
-    Morning Section
-    -   MWF: 10:50 AM - 11:05 PM / Sabin-Reed 220
-    
-    Afternoon Section
-    -   M: 1:40 AM  - 11:55 / Sabin- Reed 301
-        WF: 1:20 AM - 12:35 / Sabin- Reed 301
-        
+
+Morning Section
+
+```         
+-   MWF: 10:50 AM - 11:05 PM / Sabin-Reed 220
+
+Afternoon Section
+
+-   M: 1:40 AM - 11:55 / Sabin- Reed 301 WF: 1:20 AM - 12:35 / Sabin- Reed 301
+```
+
 -   **Getting help**:
+
     -   For non personal/sensitive questions, ask on the `#questions` channel on Slack. For personal/sensitive matters, Slack DM Professor Schwab.
-    -   Prof. Schwab's office hours:
+
+    -   Prof. Schwab's student question hours:
 
         -   W 12:15 - 1:15 pm
 
         -   F 12:15 - 1:15 pm
 
-        -   FR 362 or [set up a zoom appointment.]
-    
+        -   Request a zoom appointment.
+
     -   [Spinelli Center](https://www.smith.edu/academics/spinelli-center/tutoring)
 
 ## Instructor work-life balance {#work-life-balance}
@@ -100,7 +114,7 @@ An introduction to data science using Python, R and SQL. Students learn how to s
 
 -   Introduction to Programming Language for Data Science (R or Python) and Computing Environment (RStudio, Jupyter Notebook, etc.)
 
--   Data Science Life Cycle 
+-   Data Science Life Cycle
 
 -   Grammar of Graphics
 
@@ -121,21 +135,22 @@ An introduction to data science using Python, R and SQL. Students learn how to s
 -   Introduction to Database Querying with SQL
 
 -   Further Topics based on time and student interest may include:
-    
 
     -   Dynamic and Customized Data Graphics
 
     -   Geospatial Data and Maps
 
+    -   Learning with AI
+
 # Student Learning outcomes
 
-Students who complete this course will be able to: 
+Students who complete this course will be able to:
 
 -   Develop skills in using modern technology to conduct data analysis.
 
--   Draw meaningful conclusions and insights from real world data. 
+-   Draw meaningful conclusions and insights from real world data.
 
--   Understand data collection from various sources and appropriate data management. 
+-   Understand data collection from various sources and appropriate data management.
 
 -   Effectively organize, clean, prepare data for analysis
 
@@ -149,7 +164,7 @@ The lecture schedule and associated readings can be found on the [main page](htt
 
 # Book and software
 
-The Modern Data Science with R **textbook** is accessible on the navigational bar of this webpage as well as via [this link](https://mdsr-book.github.io/mdsr2e/). Students will use the HCC RStudio workbench to do computations in R find it [here](http://hcc-rstudiosrv1.hcc.edu:8787/s/93126cfc78a31806f480a/auth-sign-in?appUri=%2F).
+The Modern Data Science with R **textbook** is accessible on the navigational bar of this webpage as well as via [this link](https://mdsr-book.github.io/mdsr2e/). Students will use a local install or RStudio workbench to do computations in R find it [here](https://rstudio.smith.edu).
 
 # Class norms {#policies}
 
@@ -158,19 +173,20 @@ The Modern Data Science with R **textbook** is accessible on the navigational ba
 -   Attendance will not be explicitly taken and occasional absences are excused. However, extended absences should be mentioned to me.
 
 ------------------------------------------------------------------------
+
 # Readings
 
-We'll be reading chapters 1-6,8,15,and 17 of Modern Data Science with R. 
+We'll be reading chapters 1-6,8,15,and 17 of Modern Data Science with R. Probably other texts.
 
 # Evaluation
 
-All due dates can be found on the [main page](https://nics-github.github.io/MTH_190_Intro_to_DS/) of this course webpage.
+All due dates can be found on the [main page](../index.html) of this course webpage.
 
 This class is project based. As such your evaluations will be based on projects you create.
 
 ## Projects 40%
 
-There are four projects to complete during the semester.
+There are four projects to complete during the semester. They will be completed collaboratively with a team of students using SCRUM.
 
 ## Final project 20%
 
@@ -178,13 +194,25 @@ There will be a final project due the last day of classes. You'll complete this 
 
 ## Problem sets 25%
 
-Homework will be assigned regularly, its important to complete and stay on top of homework.
+Homework will be assigned regularly, its important to complete and stay on top of the problem sets. They will be graded on the following scale:
 
-## Engagment 15% {#engagement}
+-   5 points: Assignment is complete, mostly correct, rendered and submitted
+
+-   4 points: Assignment is nearly complete, mostly correct, rendered and submitted
+
+-   3 points: Assignment is around 50% of the problems have been completed, are correct, the assignment is rendered
+
+-   2 points: Assignment is at most 50% complete, the problems are incorrect and is not correctly rendered
+
+-   1 point : Assignment is largely unfinished and is not rendered
+
+-   0 points: No assignment is turned in.
+
+## Engagement 15% {#engagement}
 
 It is difficult to explicit codify what constitutes "an engaged student," so instead I present the following rough principle I will follow: *you'll only get out of this class as much as you put in*. That being said, here are multiple pathways for you to stay engaged in this class:
 
--   In particular: Peer evaluations for all projects.
+-   In particular: Participation in all SCRUM Sprints
 -   Asking and answering questions in class.
 -   Working and staying focused in class.
 -   Coming to office hours.
@@ -193,7 +221,7 @@ It is difficult to explicit codify what constitutes "an engaged student," so ins
 
 ## Tentative Assignment schedule
 
-Homework Will be assigned weekly and due by midnight the following Monday.
+Homework will be assigned regularly and due by midnight the following Monday.
 
 Project 1- due after reading chapter 4 of MDSR roughly the 10th day of class
 
@@ -205,12 +233,109 @@ Project 4- due after reading chapter 17 of MDSR roughly the 26th day of class
 
 Final Project/ Presentation during our final time.
 
-For a more up to date schedule see the course's [website](https://nics-github.github.io/MTH_190_Intro_to_DS/).
+For a more up to date schedule see the course's [website](../index.html).
 
 ## Policies
 
-1.  **Collaboration**: While I encourage you to work with your peers for problem sets, you must submit your own answers and not simple rewordings of another's work. Furthermore, all collaborations must be explicitly acknowledged in your submissions.
+### Accommodation
 
-*ACCESSIBILITY ACCOMMODATIONS*:
+Smith is committed to providing support services and reasonable accommodations to all students with disabilities.
+To request an accommodation, please register with the Disability Services Office at the beginning of the semester.
+To do so, call (413) 585-2071 to arrange an appointment with Laura Rauscher, Director of [Disability Services](https://www.smith.edu/about-smith/disability-services).
 
-Holyoke Community College values inclusion and equal access to its programs and activities and is committed to fostering an environment of mutual respect and full participation. Our goal is to create learning environments that are equitable, inclusive and welcoming. If you are an individual with a disability and require reasonable academic accommodations you are advised to contact the Office of Disability Services (ODS) at any time to discuss your accommodation needs and options. The ODS will work collaboratively with students with disabilities to develop effective accommodation plans for implementation in the classroom. The ODS is located in DON 147. For an appointment, please call 413-552- 2417. The Video Phone (VP) number is 413-650- 5502.
+## Policies {#policies .unnumbered}
+
+### Inclusion
+
+::: {.callout-tip}
+### Inclusion policy
+We are committed to fostering a classroom environment where all students thrive.
+We are committed to affirming the identities, realities and voices of all students, especially those from historically marginalized or underrepresented backgrounds.
+We are dedicated to creating a space where everyone in the class is respected, is free from discrimination based on race, ethnicity, sexual orientation, religion, gender identity, disability status, and other identities, and feel welcome and ready to learn at your highest potential.
+
+If you have any concerns or suggestions for how to make this class more inclusive, please reach out to your instructor.
+
+**We are here to support your learning and growth as data scientists and people!**
+:::
+
+### Attendance
+
+We expect you attend class in person. 
+If you choose to come to class, we expect your full attention. 
+Please put your phone away during class unless otherwise directed. 
+
+In keeping with Smith’s core identity and mission as an in-person, residential college, SDS affirms College policy (as per the Provost and Dean of the College) that students will attend class in person. 
+SDS courses will not provide options for remote attendance. 
+Students who have been determined to require a remote attendance accommodation by the Office of Disability Services will be the only exceptions to this policy. 
+As with any other kind of ADA accommodations, please notify your instructor during the first week of classes to discuss how we can meet your accommodations. 
+
+If you are unable to attend class for any reason, please follow the materials on the course website and check with another student about what happened in class. 
+
+### Collaboration
+
+::: {.callout-warning}
+Much of this course will operate on a collaborative basis, and you are expected and encouraged to work together with a partner or in small groups to study, complete labs, and prepare for exams.
+However, **all work that you submit for credit must be your own**.
+Copying and pasting sentences, paragraphs, or *blocks of code* from another student or from online sources is not acceptable and will receive no credit.
+No interaction with anyone but the instructors is allowed on any exams or quizzes.
+:::
+
+### Academic Honor Code Statement
+
+All students, staff and faculty are bound by the Smith College Honor Code, which Smith has had since 1944.
+
+> Smith College expects all students to be honest and committed to the principles of academic and intellectual integrity in their preparation and submission of course work and examinations.
+> Students and faculty at Smith are part of an academic community defined by its commitment to scholarship, which depends on scrupulous and attentive acknowledgement of all sources of information, and honest and respectful use of college resources.
+
+Cases of dishonesty, plagiarism, etc., will be reported to the Academic Honor Board.
+
+### Code of Conduct {#conduct}
+
+As the instructor and assistants for this course, we are committed to making participation in this course a harassment-free experience for everyone, regardless of level of experience, gender, gender identity and expression, sexual orientation, disability, personal appearance, body size, race, ethnicity, age, or religion.
+Examples of unacceptable behavior by participants in this course include the use of sexual language or imagery, derogatory comments or personal attacks, deliberate misgendering or use of "dead" names, trolling, public or private harassment, insults, or other unprofessional conduct.
+
+As the instructor and assistants we have the right and responsibility to point out and stop behavior that is not aligned to [this Code of Conduct](syllabus.qmd#conduct).
+Participants who do not follow the Code of Conduct may be reprimanded for such behavior.
+Instances of abusive, harassing, or otherwise unacceptable behavior may be reported by contacting the instructor.
+
+::: {.callout-important}
+All students, the instructor, the lab instructor, and all assistants are expected to adhere to this Code of Conduct in all settings for this course: lectures, labs, office hours, tutoring hours, and over Slack.
+:::
+
+This Code of Conduct is adapted from the [Contributor Covenant](http://contributor-covenant.org/), version 1.0.0, available [here](http://contributor-covenant.org/version/1/0/0/).
+
+## Resources {#resources .unnumbered}
+
+### Moodle and course website
+
+The [course website](index.qmd) and Moodle will be updated regularly with lecture handouts, project information, assignments, and other course resources.
+Grades will be recorded on Moodle.
+Please check both regularly.
+
+### Communication
+
+-   `r fontawesome::fa("slack")` [Slack]() is the primary mechanism for course-related discussions of all kinds. *Please do not email the course instructor with course-related questions!* Instead, post these on `#questions` on Slack. If discretion is absolutely necessary, private message the instructor on Slack.
+
+### Writing
+
+Your ability to communicate results (which may be technical in nature) to your audience (which is likely to be non-technical) is critical to your success as a data analyst.
+The assignments in this class will place an emphasis on the clarity of your writing.
+
+### Writing Enriched Curriculum
+
+This course is part of Smith College's [Writing Enriched Curriculum](https://www.smith.edu/academics/jacobson-center/writing-enriched-curriculum). 
+As such, the course supports the [Writing Plan of the Program in Statistical & Data Sciences](https://www.smith.edu/sites/default/files/media/Documents/Jacobson-Center/SDS-WritingPlan-accessible.pdf). 
+
+Please read the [SDS Writing Plan](https://www.smith.edu/sites/default/files/media/Documents/Jacobson-Center/SDS-WritingPlan-accessible.pdf) for more information. 
+
+### The Spinelli Center
+
+The [Spinelli Center](https://www.smith.edu/qlc/index.html) (now in Seelye 207) supports students doing quantitative work across the curriculum.
+In particular, they employ:
+
+-   [SDS Tutors](https://www.smith.edu/qlc/tutoring.html?colStats=open#PanelStats) available from 7:00--9:00pm on Sunday--Thursday evenings in Burton 301. These students are trained to help you with your statistics and R questions.
+-   A [Data Research and Statistics Counselor](https://www.smith.edu/qlc/tutoring.html?colDataCnslr=open#PanelDataCnslr ) (Osman Keshawarz) who keeps both [drop-in hours](http://www.smith.edu/qlc/tutoring.html#D1) and appointments. Students are welcome to email [qlctutor\@smith.edu](mailto:qlctutor@smith.edu) to make an appointment.
+
+Your fellow students are also an excellent source for explanations, tips, etc.
+
+
