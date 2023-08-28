@@ -6,7 +6,7 @@ editor: visual
 
 Hopefully I have summarized our survey data into a table.
 
-# Your assignment is to draw a graph representing this data. 
+# Your assignment is to draw a graph representing this data.
 
 -   Make the best one you can. Do not include your names.
 
@@ -16,8 +16,8 @@ Hopefully I have summarized our survey data into a table.
 
 -   We will look at favorites as a class and discuss.
 
-## Q: What is the purpose of a visualization? 
+## Q: What is the purpose of a visualization?
 
-## Q: What makes a successful graph? 
+## Q: What makes a successful graph?
 
 # 

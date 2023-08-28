@@ -40,11 +40,10 @@ h1{font-weight: 400;}
 
 -   **Course title:** SDS 192: Introduction to Data Science
 
--   **Contact Info:**  
-  `r fontawesome::fa("at")` [nschwab@smith.edu](mailto:nschwab@smith.edu)  
-  `r fontawesome::fa("phone")` 413-585-3440  
-  `r fontawesome::fa("github")` [Nics-Github](http://www.github.com/Nics-Github)
-  `r fontawesome::fa("video")` [nschwab](https://smith.zoom.us/j/8227449694 )  
+-   **Contact Info:**\
+    `r fontawesome::fa("at")` [nschwab\@smith.edu](mailto:nschwab@smith.edu)\
+    `r fontawesome::fa("phone")` 413-585-3440\
+    `r fontawesome::fa("github")` [Nics-Github](http://www.github.com/Nics-Github) `r fontawesome::fa("video")` [nschwab](https://smith.zoom.us/j/8227449694)
 
 -   **Office location:** McConnell 213
 
@@ -239,19 +238,16 @@ For a more up to date schedule see the course's [website](../index.html).
 
 ### Accommodation
 
-Smith is committed to providing support services and reasonable accommodations to all students with disabilities.
-To request an accommodation, please register with the Disability Services Office at the beginning of the semester.
-To do so, call (413) 585-2071 to arrange an appointment with Laura Rauscher, Director of [Disability Services](https://www.smith.edu/about-smith/disability-services).
+Smith is committed to providing support services and reasonable accommodations to all students with disabilities. To request an accommodation, please register with the Disability Services Office at the beginning of the semester. To do so, call (413) 585-2071 to arrange an appointment with Laura Rauscher, Director of [Disability Services](https://www.smith.edu/about-smith/disability-services).
 
-## Policies {#policies .unnumbered}
+## Policies {.unnumbered}
 
 ### Inclusion
 
-::: {.callout-tip}
+::: callout-tip
 ### Inclusion policy
-We are committed to fostering a classroom environment where all students thrive.
-We are committed to affirming the identities, realities and voices of all students, especially those from historically marginalized or underrepresented backgrounds.
-We are dedicated to creating a space where everyone in the class is respected, is free from discrimination based on race, ethnicity, sexual orientation, religion, gender identity, disability status, and other identities, and feel welcome and ready to learn at your highest potential.
+
+We are committed to fostering a classroom environment where all students thrive. We are committed to affirming the identities, realities and voices of all students, especially those from historically marginalized or underrepresented backgrounds. We are dedicated to creating a space where everyone in the class is respected, is free from discrimination based on race, ethnicity, sexual orientation, religion, gender identity, disability status, and other identities, and feel welcome and ready to learn at your highest potential.
 
 If you have any concerns or suggestions for how to make this class more inclusive, please reach out to your instructor.
 
@@ -260,45 +256,33 @@ If you have any concerns or suggestions for how to make this class more inclusiv
 
 ### Attendance
 
-We expect you attend class in person. 
-If you choose to come to class, we expect your full attention. 
-Please put your phone away during class unless otherwise directed. 
+We expect you attend class in person. If you choose to come to class, we expect your full attention. Please put your phone away during class unless otherwise directed.
 
-In keeping with Smith’s core identity and mission as an in-person, residential college, SDS affirms College policy (as per the Provost and Dean of the College) that students will attend class in person. 
-SDS courses will not provide options for remote attendance. 
-Students who have been determined to require a remote attendance accommodation by the Office of Disability Services will be the only exceptions to this policy. 
-As with any other kind of ADA accommodations, please notify your instructor during the first week of classes to discuss how we can meet your accommodations. 
+In keeping with Smith's core identity and mission as an in-person, residential college, SDS affirms College policy (as per the Provost and Dean of the College) that students will attend class in person. SDS courses will not provide options for remote attendance. Students who have been determined to require a remote attendance accommodation by the Office of Disability Services will be the only exceptions to this policy. As with any other kind of ADA accommodations, please notify your instructor during the first week of classes to discuss how we can meet your accommodations.
 
-If you are unable to attend class for any reason, please follow the materials on the course website and check with another student about what happened in class. 
+If you are unable to attend class for any reason, please follow the materials on the course website and check with another student about what happened in class.
 
 ### Collaboration
 
-::: {.callout-warning}
-Much of this course will operate on a collaborative basis, and you are expected and encouraged to work together with a partner or in small groups to study, complete labs, and prepare for exams.
-However, **all work that you submit for credit must be your own**.
-Copying and pasting sentences, paragraphs, or *blocks of code* from another student or from online sources is not acceptable and will receive no credit.
-No interaction with anyone but the instructors is allowed on any exams or quizzes.
+::: callout-warning
+Much of this course will operate on a collaborative basis, and you are expected and encouraged to work together with a partner or in small groups to study, complete labs, and prepare for exams. However, **all work that you submit for credit must be your own**. Copying and pasting sentences, paragraphs, or *blocks of code* from another student or from online sources is not acceptable and will receive no credit. No interaction with anyone but the instructors is allowed on any exams or quizzes.
 :::
 
 ### Academic Honor Code Statement
 
 All students, staff and faculty are bound by the Smith College Honor Code, which Smith has had since 1944.
 
-> Smith College expects all students to be honest and committed to the principles of academic and intellectual integrity in their preparation and submission of course work and examinations.
-> Students and faculty at Smith are part of an academic community defined by its commitment to scholarship, which depends on scrupulous and attentive acknowledgement of all sources of information, and honest and respectful use of college resources.
+> Smith College expects all students to be honest and committed to the principles of academic and intellectual integrity in their preparation and submission of course work and examinations. Students and faculty at Smith are part of an academic community defined by its commitment to scholarship, which depends on scrupulous and attentive acknowledgement of all sources of information, and honest and respectful use of college resources.
 
 Cases of dishonesty, plagiarism, etc., will be reported to the Academic Honor Board.
 
 ### Code of Conduct {#conduct}
 
-As the instructor and assistants for this course, we are committed to making participation in this course a harassment-free experience for everyone, regardless of level of experience, gender, gender identity and expression, sexual orientation, disability, personal appearance, body size, race, ethnicity, age, or religion.
-Examples of unacceptable behavior by participants in this course include the use of sexual language or imagery, derogatory comments or personal attacks, deliberate misgendering or use of "dead" names, trolling, public or private harassment, insults, or other unprofessional conduct.
+As the instructor and assistants for this course, we are committed to making participation in this course a harassment-free experience for everyone, regardless of level of experience, gender, gender identity and expression, sexual orientation, disability, personal appearance, body size, race, ethnicity, age, or religion. Examples of unacceptable behavior by participants in this course include the use of sexual language or imagery, derogatory comments or personal attacks, deliberate misgendering or use of "dead" names, trolling, public or private harassment, insults, or other unprofessional conduct.
 
-As the instructor and assistants we have the right and responsibility to point out and stop behavior that is not aligned to [this Code of Conduct](syllabus.qmd#conduct).
-Participants who do not follow the Code of Conduct may be reprimanded for such behavior.
-Instances of abusive, harassing, or otherwise unacceptable behavior may be reported by contacting the instructor.
+As the instructor and assistants we have the right and responsibility to point out and stop behavior that is not aligned to [this Code of Conduct](syllabus.qmd#conduct). Participants who do not follow the Code of Conduct may be reprimanded for such behavior. Instances of abusive, harassing, or otherwise unacceptable behavior may be reported by contacting the instructor.
 
-::: {.callout-important}
+::: callout-important
 All students, the instructor, the lab instructor, and all assistants are expected to adhere to this Code of Conduct in all settings for this course: lectures, labs, office hours, tutoring hours, and over Slack.
 :::
 
@@ -308,9 +292,7 @@ This Code of Conduct is adapted from the [Contributor Covenant](http://contribut
 
 ### Moodle and course website
 
-The [course website](index.qmd) and Moodle will be updated regularly with lecture handouts, project information, assignments, and other course resources.
-Grades will be recorded on Moodle.
-Please check both regularly.
+The [course website](index.qmd) and Moodle will be updated regularly with lecture handouts, project information, assignments, and other course resources. Grades will be recorded on Moodle. Please check both regularly.
 
 ### Communication
 
@@ -318,24 +300,19 @@ Please check both regularly.
 
 ### Writing
 
-Your ability to communicate results (which may be technical in nature) to your audience (which is likely to be non-technical) is critical to your success as a data analyst.
-The assignments in this class will place an emphasis on the clarity of your writing.
+Your ability to communicate results (which may be technical in nature) to your audience (which is likely to be non-technical) is critical to your success as a data analyst. The assignments in this class will place an emphasis on the clarity of your writing.
 
 ### Writing Enriched Curriculum
 
-This course is part of Smith College's [Writing Enriched Curriculum](https://www.smith.edu/academics/jacobson-center/writing-enriched-curriculum). 
-As such, the course supports the [Writing Plan of the Program in Statistical & Data Sciences](https://www.smith.edu/sites/default/files/media/Documents/Jacobson-Center/SDS-WritingPlan-accessible.pdf). 
+This course is part of Smith College's [Writing Enriched Curriculum](https://www.smith.edu/academics/jacobson-center/writing-enriched-curriculum). As such, the course supports the [Writing Plan of the Program in Statistical & Data Sciences](https://www.smith.edu/sites/default/files/media/Documents/Jacobson-Center/SDS-WritingPlan-accessible.pdf).
 
-Please read the [SDS Writing Plan](https://www.smith.edu/sites/default/files/media/Documents/Jacobson-Center/SDS-WritingPlan-accessible.pdf) for more information. 
+Please read the [SDS Writing Plan](https://www.smith.edu/sites/default/files/media/Documents/Jacobson-Center/SDS-WritingPlan-accessible.pdf) for more information.
 
 ### The Spinelli Center
 
-The [Spinelli Center](https://www.smith.edu/qlc/index.html) (now in Seelye 207) supports students doing quantitative work across the curriculum.
-In particular, they employ:
+The [Spinelli Center](https://www.smith.edu/qlc/index.html) (now in Seelye 207) supports students doing quantitative work across the curriculum. In particular, they employ:
 
 -   [SDS Tutors](https://www.smith.edu/qlc/tutoring.html?colStats=open#PanelStats) available from 7:00--9:00pm on Sunday--Thursday evenings in Burton 301. These students are trained to help you with your statistics and R questions.
--   A [Data Research and Statistics Counselor](https://www.smith.edu/qlc/tutoring.html?colDataCnslr=open#PanelDataCnslr ) (Osman Keshawarz) who keeps both [drop-in hours](http://www.smith.edu/qlc/tutoring.html#D1) and appointments. Students are welcome to email [qlctutor\@smith.edu](mailto:qlctutor@smith.edu) to make an appointment.
+-   A [Data Research and Statistics Counselor](https://www.smith.edu/qlc/tutoring.html?colDataCnslr=open#PanelDataCnslr) (Osman Keshawarz) who keeps both [drop-in hours](http://www.smith.edu/qlc/tutoring.html#D1) and appointments. Students are welcome to email [qlctutor\@smith.edu](mailto:qlctutor@smith.edu) to make an appointment.
 
 Your fellow students are also an excellent source for explanations, tips, etc.
-
-
