@@ -1,0 +1,105 @@
+---
+title: "dbplyr-SQL"
+format: html
+---
+
+```{r setup}
+
+library(tidyverse)
+library(RMySQL)
+
+db <- dbConnect(
+  MySQL(),
+  host = "scidb.smith.edu",
+  user = "sds192",
+  password = "DSismfc@S",
+  dbname = "yelp"
+)
+knitr::opts_chunk$set(connection = db, max.print = 20)
+```
+
+```{r}
+class(db)
+```
+
+```{sql connection= db}
+
+SHOW DATABASES;
+
+```
+
+```{sql connection=db}
+USE yelp;
+
+```
+
+```{sql connection=db}
+
+SHOW TABLES;
+```
+
+```{sql connection=db}
+
+DESCRIBE users;
+```
+
+```{sql connection=db}
+
+DESCRIBE businesses;
+```
+
+```{sql connection=db}
+DESCRIBE reviews;
+```
+
+```{r bring-tables-to-r}
+
+#This creates a tbl_sql object in R called airports
+
+
+users <- db %>%
+  tbl("users")
+reviews <- db %>%
+  tbl("reviews")
+businesses <- db |>
+  tbl("businesses")
+# 
+# print(object.size(airports),units = "Kb")
+# class(airports)
+```
+
+```{r }
+#We can do joins too. 
+
+average_star_5 <- users |>
+  
+  inner_join(reviews,by ="user_id") |>
+  inner_join(businesses,by = c("business_id"="id"),suffix=c(".users",".business")) |>
+  filter(stars.business > 4.99) |>
+  
+  count(city,sort = TRUE)
+
+#The collect() function brings a tabl_sql into R as a tbl_df uses more space.
+  # collect()
+
+
+print(object.size(average_star_5),units="Kb")
+#tail(average_star_5)
+```
+
+```{r}
+city_with_tasty_food <- businesses |>
+  filter(stars > 4.99) |>
+  count(city,sort = TRUE)
+
+#show_query(city_with_tasty_food)
+```
+
+```{sql connection=db}
+SELECT city, COUNT(*) AS n
+FROM businesses
+WHERE stars > 4.99 
+GROUP BY city
+ORDER BY n DESC;
+
+```

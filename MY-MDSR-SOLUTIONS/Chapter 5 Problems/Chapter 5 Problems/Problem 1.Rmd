@@ -1,0 +1,40 @@
+---
+title: "Problem_1"
+author: "Schwab"
+date: "4/15/2022"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(mdsr)
+library(ggrepel)
+
+```
+
+```{r}
+#This is the setup from the problem
+
+statenames <- tibble(names = state.name, twoletter = state.abb)
+
+statedata <- tibble(
+  names = state.name, 
+  income = state.x77[, 2], 
+  illiteracy = state.x77[, 3]
+  )
+
+```
+
+```{r}
+#I feel like this didn't need to be a inner join, I could have made a tibble like I did above. 
+
+joined_state_tibbles <-inner_join(x=statenames,y=statedata,by="names")
+
+joined_state_tibbles %>%
+  ggplot(aes(x=illiteracy,y=income)) +
+  geom_point()+
+  geom_text_repel(aes(label=twoletter))+
+  geom_smooth(se=FALSE)
+
+```

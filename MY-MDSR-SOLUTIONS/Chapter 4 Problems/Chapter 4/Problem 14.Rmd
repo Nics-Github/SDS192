@@ -1,0 +1,41 @@
+---
+title: "Problem_14"
+author: "Schwab"
+date: "4/15/2022"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(mdsr)
+library(babynames)
+library(nycflights13)
+
+```
+
+Use the nycflights13 package and the flights data frame to answer the following question: What plane (specified by the tailnum variable) traveled the most times from New York City airports in 2013? Plot the number of trips per week over the year.
+
+```{r}
+#I think because count is grouping the flights by tailnum and group_by is also doing that they both does simultaniously work with slice_max()
+
+flights %>%
+  #group_by(tailnum)%>%
+  count(tailnum) %>%
+  slice_max(order_by = n,n=2)
+
+#Jan 1, 2013 was a Tuesday. It seems cool to start a week on Tuesday. The weeks are correct now, why does that tailnumber abruptly stop on Sept 30?
+N725MQ_by_weeks<- flights %>%
+  filter(tailnum== "N725MQ") %>%
+  #This line changed the format to weeks. 
+  mutate(
+    Week= format(time_hour, format= "%W"
+    )) %>%
+  #Here I'm just counting the number of flights by week. 
+  count(Week,name = "Number_of_Flights") 
+  
+
+N725MQ_by_weeks %>%
+  ggplot(aes(Week,Number_of_Flights))+
+  geom_point()
+```

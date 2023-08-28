@@ -1,0 +1,51 @@
+---
+title: "Problem_5"
+author: "Schwab"
+date: "4/22/2022"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(mdsr)
+library(mosaicData)
+library(Lahman)
+options(scipen = 1000)
+
+```
+
+```{r joining_tables}
+#I made this for problem 2
+
+joined_Batting_and_Master<- full_join(
+  x=Batting,
+  y=Master,
+  by="playerID"
+  )
+
+head(joined_Batting_and_Master)
+```
+
+```{r}
+joined_Batting_and_Master %>%
+  filter(yearID >=2000 & yearID <=2009) %>%
+  ggplot(aes(x=birthMonth)) +
+  geom_histogram() +
+  scale_x_continuous(breaks=c(1,2,3,4,5,6,7,8,9,10,11,12))
+
+#This is not the nicest graph, but it shows that kids born in Aug have a much better chance of playing MLB than those born in July
+  
+```
+
+```{r}
+head(Births78)
+```
+
+```{r}
+Births78 %>%
+  ggplot(aes(x=month,y=births))+
+  geom_col() +
+  scale_x_continuous(breaks=c(1,2,3,4,5,6,7,8,9,10,11,12))
+  
+```

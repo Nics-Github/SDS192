@@ -1,0 +1,225 @@
+---
+title: "Color"
+author: "Ben Baumer"
+format: 
+  revealjs:
+    controls: 
+      true
+
+editor: visual
+execute:
+  freeze: auto  # re-render only when source changes
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(fig.path = 'figures/', fig.height = 5)
+```
+
+------------------------------------------------------------------------
+
+# Color
+
+------------------------------------------------------------------------
+
+## Colors can be added to aestheitcs, or for the whole graph. 
+
+Type ?geom_point() to see which asthetics are allowed for the point plot
+
+## Three color schemes
+
+-   Sequential
+
+    -   Single hue
+    -   Multi-hue
+
+-   Diverging
+
+-   Categorical
+
+![](https://media.giphy.com/media/3oriO1VZF0t5PyQVlC/giphy.gif){.absolute top="80" right="50"}
+
+------------------------------------------------------------------------
+
+Big Idea: color **choices matter** and there are better and worse choices
+
+```{r get-data, include=FALSE}
+library(tidyverse)
+library(sf)
+library(tidycensus)
+#census_api_key("2c4b7b2488a6277854f4d4075fd50571f34882e9", install = TRUE)
+
+v15 <- load_variables(2016, "acs5", cache = TRUE)
+ca_counties <- get_acs(geography = "county", 
+                       variables = "B19013_001", 
+                       state = "CA", geometry = TRUE)
+ca_counties <- ca_counties %>%
+  mutate(estimate = ifelse(grepl("Lake", NAME), NA, estimate), 
+         income_relative = estimate / mean(estimate, na.rm = TRUE),
+         income_quintile = cut(estimate, 5),
+         spanish_word = str_extract(NAME, "(Santa|Los|San|Del|El)"))
+```
+
+------------------------------------------------------------------------
+
+## Sequential, single hue
+
+```{r cali_single_hue, echo=FALSE}
+
+    ggplot(ca_counties) +
+
+    geom_sf(aes(fill = estimate)) +
+
+    scale_fill_distiller(palette = "Purples", "Median\\nHousehold\\nIncome", direction = 1,
+
+    labels = scales::dollar) +
+
+    theme_minimal()
+```
+
+Map [**saturation**](https://en.wikipedia.org/wiki/Hue) to numeric variable
+
+No more than 5--6 levels
+
+People interpret high saturation as more
+
+------------------------------------------------------------------------
+
+## Sequential, double hue
+
+-   Map [**hue**](https://en.wikipedia.org/wiki/Hue) to numeric variable
+
+-   Generally, no more than 2 anchor colors
+
+-   People interpret darker hue as more
+
+```{r cali-multihue, echo=FALSE}
+ggplot(ca_counties) + 
+  geom_sf(aes(fill = estimate)) + 
+  scale_fill_distiller("Median\nHousehold\nIncome", palette = "YlGn", direction = 1, labels = scales::dollar) + 
+  theme_minimal()
+```
+
+------------------------------------------------------------------------
+
+## Diverging
+
+```{r cali-diverging, echo=FALSE}
+ggplot(ca_counties) + 
+  geom_sf(aes(fill = income_relative)) + 
+  scale_fill_gradient2("Median\nHousehold\nIncome\nAbove\nAverage", low = "red", high = "blue", midpoint = 1) + 
+  theme_minimal()
+```
+
+Two colors used to indicate extremes of a range
+
+Neutral color in the middle
+
+distinguish between zero and missing
+
+------------------------------------------------------------------------
+
+## Categorical
+
+Different color = different category
+
+choose colors that are - perceptually distant - roughly the same saturation
+
+```{r cali-categorical, echo=FALSE}
+ggplot(ca_counties) + 
+  geom_sf(aes(fill = factor(spanish_word))) + 
+  scale_fill_brewer("Spanish Word in\nCounty Name", palette = "Set3") + 
+  theme_minimal()
+```
+
+------------------------------------------------------------------------
+
+## Built-in color palettes
+
+-   [`Cynthia Brewer`](http://www.colorbrewer2.org)
+
+-   `RColorBrewer` package
+
+-   `scale_color_brewer()` function
+
+-   [`viridis`](https://cran.r-project.org/web/packages/viridis/vignettes/intro-to-viridis.html) palettes mimic `matplotlib` Python library
+
+------------------------------------------------------------------------
+
+## Sorry, no rainbows
+
+![](https://media.giphy.com/media/3o7aD0Meng5BT8IejK/giphy.gif)
+
+-   NO RAINBOWS!!
+
+-   [Why rainbow colors aren't the best option for data visualizations](https://www.poynter.org/archive/2013/why-rainbow-colors-arent-always-the-best-options-for-data-visualizations/)
+
+-   [How The Rainbow Color Map Misleads](https://eagereyes.org/basics/rainbow-color-map)
+
+[dataviz cheatsheet](https://policyviz.com/2018/08/07/dataviz-cheatsheet/)
+
+------------------------------------------------------------------------
+
+## `ggplot2` default color
+
+```{r norm_plot, message=FALSE}
+library(tidyverse)
+rand_data <- data.frame(x = rnorm(10000), y = rnorm(10000))
+norm_plot <- ggplot(rand_data, aes(x = x, y = y)) +
+  geom_hex() + coord_fixed()
+norm_plot
+```
+
+------------------------------------------------------------------------
+
+## ColorBrewer `Purples` palette
+
+```{r norm_plot_distiller}
+norm_plot + 
+  scale_fill_distiller(palette = "Purples")
+```
+
+------------------------------------------------------------------------
+
+## ColorBrewer `YlGn` palette
+
+```{r norm_plot_distiller2}
+norm_plot + 
+  scale_fill_distiller(palette = "YlGn")
+```
+
+## Viridis palette
+
+```{r norm_plot_viridis, message=FALSE}
+norm_plot +
+  scale_fill_viridis_c()
+```
+
+# Themes
+
+install.packages("ggthemes")
+
+------------------------------------------------------------------------
+
+## Take any ggplot...
+
+```{r gg1, message=FALSE}
+library(tidyverse)
+p1 <- ggplot(mtcars, 
+             aes(x = disp, y = mpg, color = factor(cyl))) + 
+  geom_point()
+p1
+```
+
+------------------------------------------------------------------------
+
+## ...and change themes with `ggthemes`
+
+```{r gg-theme}
+library(ggthemes)
+p1 + theme_wsj()
+```
+
+------------------------------------------------------------------------
+
+[More themes](https://ggplot2.tidyverse.org/reference/ggtheme.html)

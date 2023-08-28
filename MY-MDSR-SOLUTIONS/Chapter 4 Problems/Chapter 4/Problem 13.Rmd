@@ -1,0 +1,39 @@
+---
+title: "Problem_13"
+author: "Schwab"
+date: "4/15/2022"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(mdsr)
+library(babynames)
+library(Lahman)
+
+```
+
+```{r part_a_and_b}
+Teams %>%
+  #Filter by the teamIDs which are relevant to the Angels
+  filter(
+    teamID %in% c("CAL","ANA","LAA")
+    )%>%
+  #Add the success column, I imgine all the games are regular season, W=wins, G=games
+  mutate(
+    success= W/G
+      ) %>%
+  #select the required variables
+  select(success,yearID,teamID,lgID,W,L,WSWin) %>%
+  #slice th top 10
+  slice_max(order_by = success,n=10)
+
+Teams %>%
+  #Filter by the teamIDs which are relevant to the Angels
+  filter(
+    teamID %in% c("CAL","ANA","LAA") & WSWin =="Y")
+
+  
+
+```

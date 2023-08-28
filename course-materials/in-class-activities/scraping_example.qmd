@@ -1,0 +1,62 @@
+---
+title: "Seven sisters example 2022"
+author: "Schwab"
+date: "5/12/2022"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+
+library(mdsr)
+library(tidyverse)
+library(mosaic)
+library(chron)
+library(purrr)
+library(rvest) #I thought this loaded with the tidyverse, but I guess I need to load it separately. 
+library(janitor) #I use this to clean up the startrek table with #clean_names.
+
+```
+
+The following gives a graphic output for the first three placers from each category. 
+
+```{r}
+#I'm saving the url for the seven sisters 2022 run as a string
+
+seven_sisters_race <- "https://aratrace.com/7-sisters-trail-race-4/"
+
+#Here's I'm gathering the tables from that site, I'm surprised there are 27
+tables <- seven_sisters_race %>% 
+  read_html() %>% 
+  html_elements("table")
+```
+The graph below shows the first three runners for each female age group category. The first three runners of age 30-49 are faster than the third place from 20-29. Also those in their 60s are fast than their 50s.
+```{r seasons}
+#Here I'm just focusing on the second table. I have to "pluck" the second table from the list of tables. It took a guess or two to find it. 
+
+seven_sisters_race_2022 <- tables %>%
+  pluck(1) %>%
+  html_table() |>
+  clean_names() %>%
+  mutate(net_elapsed_hrs = as.numeric(times(net_elapsed)*24)) #This makes the time into an hour format. The library(chron) does this for me. 
+
+
+```
+
+```{r}
+seven_sisters_race_2022 %>%
+  filter(gender== "F", age_grp_pl %in% (1:3) )  |>
+  ggplot(aes(age,net_elapsed_hrs,color=age_grp))+
+  geom_point(size=1)+
+  geom_text(aes(label=state),nudge_x = 1.5) +
+  theme_classic()
+  
+ 
+  
+
+
+ # seven_sisters_race %>%
+ #   ggplot(aes(gender )) +
+ #      geom_bar()
+```

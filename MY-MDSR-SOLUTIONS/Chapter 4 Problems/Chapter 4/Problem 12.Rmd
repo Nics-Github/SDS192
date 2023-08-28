@@ -1,0 +1,100 @@
+---
+title: "Problem 12"
+author: "Schwab"
+date: "4/14/2022"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(mdsr)
+library(babynames)
+library(mdsr)
+library(nycflights13)
+```
+
+```{r}
+head(weather)
+```
+
+```{r part_a}
+#This is with a dot plot, I should probably use select instead of summarize. It shows the average temperature by day in July. Its hard to see the wind_speed outliers in the graph by color or shape. 
+weather %>%
+  group_by(
+    month,
+    day) %>%
+  summarise(
+    average_temp=mean(temp),
+    month,
+    day,
+    average_wind_speed=mean(wind_speed)) %>%
+  filter(month==7) %>%
+  distinct() %>%
+  ggplot(aes(day,average_temp,color=(average_wind_speed))) +
+    geom_point()
+
+  
+  
+```
+
+Find some wind speed outliers .
+```{r part_a_cont}
+weather %>%
+  group_by(
+    month,
+    day) %>%
+  
+  filter(
+    month==7) %>% 
+  
+  ggplot(aes(wind_speed)) +
+    geom_boxplot()
+#WindSpeed greater than 21 are outliers and they happen three times 
+weather %>%
+  group_by(month,day) %>%
+  filter(
+    month==7,
+    wind_speed>21)  #This is just to show the outliers
+
+```
+
+The relationship between dewp and humid is that they are positively correlated. 
+```{r part_b}
+#This is every hour
+weather %>%
+  #group_by(month,day) %>%
+  ggplot(aes(dewp,humid)) +
+  geom_point()
+
+#This shows the average dewpoint vs average humidity by day
+weather %>%
+  group_by(month,day) %>%
+  summarise(ave_dewp=mean(dewp),ave_humid=mean(humid))%>%
+  ggplot(aes(ave_dewp,ave_humid)) +
+  geom_point() +
+  geom_smooth(method=lm)
+
+#This shows the average dewpoint vs average humidity by month
+weather %>%
+  group_by(month) %>%
+  summarise(ave_dewp=mean(dewp),ave_humid=mean(humid))%>%
+  ggplot(aes(ave_dewp,ave_humid)) +
+  geom_point() +
+  geom_smooth(method=lm)
+```
+
+```{r part_c}
+#This is every hour. Its hard to see the relationship here
+weather %>%
+  #group_by(month,day) %>%
+  ggplot(aes(precip,visib)) +
+  geom_jitter()
+
+#It is easier to see the relationship by day. There is a big clump of points at 10 miles when the average precipitation is zero. I wonder if there is a better way to visulize this. 
+weather %>%
+  group_by(month,day) %>%
+  summarise(average_precip=mean(precip),average_visib=mean(visib)) %>%
+  ggplot(aes(average_visib,average_precip)) +
+  geom_count()
+```

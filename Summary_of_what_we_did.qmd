@@ -1,0 +1,282 @@
+---
+title: "What did we do in Intro to Data Science"
+subtitle: "Some student examples"
+author: "Fall 2022 students"
+format: revealjs
+---
+
+```{r setup, include=FALSE}
+
+#Below I've set it so all your code will output when you knit, because I want to be able to see it. 
+knitr::opts_chunk$set(echo = TRUE)
+
+#Here are our libraries
+library(tidyverse)
+library(readxl)
+library(RColorBrewer)
+library(RMySQL)
+library(leaflet)
+library(sf)
+library(tidygeocoder)
+library(mapproj)
+library(janitor)
+library(rvest)
+
+db <- dbConnect(
+  MySQL(),
+  host = "scidb.smith.edu",
+  user = "sds192",
+  password = "DSismfc@S",
+  dbname = "yelp"
+)
+knitr::opts_chunk$set(connection = db, max.print = 20)
+
+#This is how you import a spreadsheet. the excel file needs to be in the same folder as this .Rmd file
+HCC_DATA_19_21 <- read_excel("~/Documents/MTH_190_Intro_to_DS/course-materials/project-instructions/project-1/HCC-DATA-19-21.xlsx")
+
+#Below I am making my excel spreadsheet into a dataframe and saving it to R's environment
+HCC_DATA_19_21 <- as.data.frame(HCC_DATA_19_21)
+
+# This is just to make rounding bearable. 
+options(scipen=1)
+
+#Making DEGSEEK either yes or no. 
+HCC_DATA_19_21$DEGSEEK <- recode_factor(HCC_DATA_19_21$DEGSEEK,"0"="No","1"="Yes")
+
+#Below I am making TERM easier to read
+HCC_DATA_19_21$TERM <- recode_factor(HCC_DATA_19_21$TERM,"201930"="2019","202030"="2020","202130"="2021")
+
+#Below I rename RACE so they are easier to read and order. 
+HCC_DATA_19_21$RACE <- recode_factor(HCC_DATA_19_21$RACE, 
+                               "a_WHITE" = "White",
+                               "b_HISPANIC" = "Hispanic",
+                               "c_BLACK/NON-HISPANIC" = "Black/Non-Hispanic",
+                               "d_ASIAN" = "Asian",
+                               "e_AMERICAN IND/ALASKAN"="American Indian/Alaska Native",
+                               "f_NATIVE HAWAIIAN" = "Native Hawaiian",
+                               "g_CAPE VERDEAN" = "Cape Verdean",
+                               "h_TWO OR MORE RACES" = "Two or More Races",
+                               "i_UNKNOWN" = "Unknown",
+                               "j_NON-RESIDENT" = "Non-Resident"
+                               )
+
+#I am tempted to recode GENDER_DESC, but I've left it for you if you want to try it
+HCC_DATA_19_21$GENDER_DESC <- recode_factor(HCC_DATA_19_21$GENDER_DESC,
+                                     "1_MALE" = "Male", 
+                                     "2_FEMALE" = "Female",
+                                     "3_UNKNWN" = "Unknown"
+                                     )
+
+```
+
+# What we learned
+
+Students started with little or no coding experience and learned:
+
+::: columns
+::: {.column width="50%"}
+![](https://www.rstudio.com/wp-content/uploads/2018/10/RStudio-Logo.png){width="266"}
+:::
+
+::: {.column width="50%"}
+![](https://image.jimcdn.com/app/cms/image/transf/dimension=390x10000:format=jpg/path/sc907c1c4cc8c1f1e/image/i3129eb909b67b786/version/1617197006/image.jpg){width="287"}
+:::
+:::
+
+::: columns
+::: {.column width="50%"}
+![](https://1000logos.net/wp-content/uploads/2021/05/GitHub-logo-500x281.png){width="288"}
+:::
+
+::: {.column width="50%"}
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Sql_data_base_with_logo.png/800px-Sql_data_base_with_logo.png?20210130181641){width="340"}
+:::
+:::
+
+# We took HCC data
+
+```{r look, echo=FALSE, }
+head(HCC_DATA_19_21,3 )
+```
+
+```{r question_1, include=FALSE}
+HCC_DATA_19_21 |>
+  group_by(GENDER_DESC) |>
+  count(DEGSEEK)
+```
+
+```{r question_2, include=FALSE}
+townData19 <- HCC_DATA_19_21 |>
+                filter(TERM == "2019") |>
+                count(MA_TOWN_GRP) |>
+                mutate(Percent_From_Town = (n / sum(n) * 100)) |>
+                arrange(desc(n)) |>
+                slice_head(n = 5)
+townData19 |>
+  head(5)
+```
+
+```{r question_3, include=FALSE}
+townData19_21 <- HCC_DATA_19_21 |>
+                filter((MA_TOWN_GRP == "Springfield" | 
+                         MA_TOWN_GRP == "Holyoke" | 
+                         MA_TOWN_GRP == "Chicopee" |
+                         MA_TOWN_GRP == "Westfield" |
+                         MA_TOWN_GRP == "West Springfield"))
+```
+
+```{r include=FALSE}
+townData19_21 |>
+  ggplot(aes(x = MA_TOWN_GRP, fill = RACE))+
+  facet_wrap(~TERM) + 
+  geom_bar() +
+  theme_classic() +
+  scale_fill_brewer(palette = "Accent") +
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))
+```
+
+# to answer the question
+
+What happened to student enrollment during the pandemic?
+
+```{r question_4,  echo=FALSE,}
+
+topTowns <- HCC_DATA_19_21 |>
+                filter((MA_TOWN_GRP == "Springfield" | 
+                         MA_TOWN_GRP == "Holyoke" | 
+                         MA_TOWN_GRP == "Chicopee" |
+                         MA_TOWN_GRP == "Westfield" |
+                         MA_TOWN_GRP == "West Springfield"))
+
+topTowns |>
+  ggplot(aes(x = MA_TOWN_GRP, fill = DEGSEEK))+
+  facet_wrap(~TERM) +
+  geom_bar() +
+  theme_classic() +
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))
+
+```
+
+```{r message = FALSE, include=FALSE}
+library(tidyverse) 
+library(fec20)
+```
+
+# We learned to scrape data from the internet
+
+![](./warframe.png)
+
+```{r scrape-the-tables, echo=TRUE, include=FALSE}
+#I'm saving the url for warframe.wiki as a string
+wf_wiki_url <- "https://warframe.fandom.com/wiki/Warframes"
+#Here's I'm gathering the tables from that site, there are 8.
+wf_tables <- wf_wiki_url |> 
+  read_html() |> #read_html takes a URL and returns and XML object
+  html_elements("table")
+wf_tables
+```
+
+
+
+```{r pluck-the-table, auto-stretch , include=FALSE}
+wf_wiki_frames <- wf_tables %>%
+  pluck(3) %>% #Its the third table, but this takes some guessing
+  html_table()
+wf_wiki_frames
+```
+
+
+```{r clean names, include=FALSE}
+wf_wiki_frames <- wf_wiki_frames|>
+  clean_names()
+wf_wiki_frames
+```
+
+
+```{r fix-update , include=FALSE}
+#This will separate the update_version and put them back together without the extra dates or "update", it also adds a period for the seperation between the numbers in the update version. 
+wf_wiki_frames <- wf_wiki_frames |>
+  separate(col = update_version, into = c("update1", "update2",  "update3", "date1", "date2", "date3") ) |> 
+  unite(col = "update_version", c("update2", "update3"), sep=".")|>
+  select(!c("update1", "date1", "date2", "date3"))
+wf_wiki_frames
+```
+
+
+```{r Dates, include=FALSE}
+release_date_yyyy_mm_dd <- as.factor(wf_wiki_frames $ release_date_yyyy_mm_dd)
+stripped_dates <- strptime(release_date_yyyy_mm_dd, format = "%Y-%m-%d")
+#defining what is the original format of the date
+release_date <- as.Date(stripped_dates, format = "%Y-%m-%d")
+#defining what is the desired format of the date
+  wf_wiki_frames <- wf_wiki_frames %>%
+   mutate(
+     release_date_yyyy_mm_dd = release_date
+     )
+  
+  wf_wiki_frames
+```
+
+# And clean it up for analysis
+```{r}
+wf_wiki_frames <- wf_wiki_frames|>
+  rename(
+    "Warframe Name" = warframe_name, "Release Date" = release_date_yyyy_mm_dd, "Update Version" = update_version
+    )
+wf_wiki_frames
+```
+
+# Learned enough SQL
+
+to connect to a server at Smith and analyze yelp data:
+
+```{sql connection=db}
+SELECT city, COUNT(*) AS n
+FROM businesses
+WHERE stars > 4.99 
+GROUP BY city
+ORDER BY n DESC 
+Limit 3;
+```
+
+# We made some maps
+
+with geospacial data.
+
+```{r echo = FALSE}
+counties <- read_sf("~/Documents/MTH_190_Intro_to_DS/course-materials/cb_2021_us_county_5m") |>
+  st_transform('+proj=longlat +datum=WGS84')
+
+addresses<- tibble(address=c("Holyoke Community College, Holyoke,MA")) |>
+geocode(address, method="osm") |>
+  mutate(name = c("HCC"))
+
+ma_cities <- us.cities %>% 
+  filter(country.etc =="MA") |>
+  select(name, long, lat)
+
+Just_MA_counties <- counties |> filter(STUSPS == "MA")
+
+college <- makeAwesomeIcon(icon = "graduation-cap",
+                           library = "fa")
+
+leaflet() |>
+  addTiles() |>
+  addPolygons(data = Just_MA_counties) |>
+  addProviderTiles(providers$Stamen.Watercolor) |>
+  addAwesomeMarkers(data = addresses, lng=~long, lat=~lat, popup = ~name, icon=college ) |>
+  addCircleMarkers(data = ma_cities, lng=~long, lat=~lat, popup = ~name, color='black',clusterOptions = markerClusterOptions() ) 
+  
+  
+  
+```
+
+# Thanks to the first class
+
+Ajani Davila
+
+James Leclaric
+
+Kathrine Shevchuk
+
+Magdalena Mackowiak

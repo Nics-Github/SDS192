@@ -1,0 +1,75 @@
+---
+title: "Project-3-start"
+---
+
+```{r setup}
+
+library(tidyverse)
+library(RMySQL)
+
+db <- dbConnect(
+  MySQL(),
+  host = "scidb.smith.edu",
+  user = "sds192",
+  password = "DSismfc@S",
+  dbname = "yelp"
+)
+knitr::opts_chunk$set(connection = db, max.print = 20)
+```
+
+# My Project 3
+
+## Q: Is the average rating for chain hamburgers better than local hamburgers ?
+
+```{sql connection=db}
+
+SHOW TABLES;
+
+```
+
+```{sql connection=db}
+
+DESCRIBE businesses;
+
+```
+
+```{sql connection=db}
+
+SELECT  *
+FROM businesses
+ORDER BY name;
+```
+
+The average of 154 chain brands is 3.1
+
+```{sql connection=db}
+
+SELECT  AVG(stars)
+FROM businesses
+WHERE name  IN ('Burger King','Wendys','Wendy''s','McDonald''s','Mc Donalds','Mc Donald''s', 'McDonalds','Five Guys','FiveGuys','Wendy''s Old Fashioned Hamburgers','In-N-Out Burger','Five Guys Burgers & Fries','Five Guys Burgers and Fries','In N Out Burger','Five Guys Burger and Fries','Smashburger','Red Robin Gourmet Burgers');
+```
+
+Average of 86 locations that had the word burger in their name but were not chain brands was 3.8.
+
+```{sql connection=db}
+SELECT name, AVG(stars)
+FROM businesses
+WHERE name  LIKE '%burger%'
+GROUP BY name;
+```
+
+```{sql connection=db}
+SELECT city, AVG(stars)
+FROM businesses
+WHERE name  LIKE '%burger%' AND name NOT IN ('Burger King','Wendys','Wendy''s','McDonald''s','Mc Donalds','Mc Donald''s', 'McDonalds','Five Guys','FiveGuys','Wendy''s Old Fashioned Hamburgers','In-N-Out Burger','Five Guys Burgers & Fries','Five Guys Burgers and Fries','In N Out Burger','Five Guys Burger and Fries','Smashburger','Red Robin Gourmet Burgers') AND city LIKE 'phoenix'
+GROUP BY city
+ORDER BY city ;
+```
+
+```{sql connection=db}
+SELECT  city, AVG(stars)
+FROM businesses
+WHERE name  IN ('Burger King','Wendys','Wendy''s','McDonald''s','Mc Donalds','Mc Donald''s', 'McDonalds','Five Guys','FiveGuys','Wendy''s Old Fashioned Hamburgers','In-N-Out Burger','Five Guys Burgers & Fries','Five Guys Burgers and Fries','In N Out Burger','Five Guys Burger and Fries','Smashburger','Red Robin Gourmet Burgers') AND city LIKE 'phoenix'
+GROUP BY city
+ORDER BY city;
+```

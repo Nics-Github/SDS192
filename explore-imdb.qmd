@@ -1,0 +1,80 @@
+---
+title: "DataBase Querries"
+author: "Schwab"
+format: html
+editor: visual
+---
+
+```{r setup}
+library(tidyverse)
+library(RMySQL)
+library(dbplyr)
+db <- dbConnect(
+  MySQL(),
+  host = "scidb.smith.edu",
+  user = "sds192",
+  password = "DSismfc@S",
+  dbname = "imdb"  #change the database here
+)
+knitr::opts_chunk$set(connection = db, max.print = 20)
+```
+
+The SQL code below will show all the databases available on the server at Smith College
+
+```{sql connection=db}
+SHOW DATABASES;
+```
+
+If connected to a specific database in the setup chunk This will show the tables in that database
+
+```{sql connection=db}
+
+SHOW TABLES;
+```
+
+Describe shows about one table.
+
+```{sql connection=db}
+DESCRIBE movie_info;
+```
+
+```{sql connection=db}
+SELECT name
+FROM name
+```
+
+```{r}
+title <- db |>
+  tbl("title") 
+
+movie_info <- db |>
+  tbl("movie_info")
+
+cast_info <- db |>
+  tbl("cast_info")
+
+name <- db |>
+  tbl("name")
+
+
+
+```
+
+```{r}
+title |>
+  left_join(movie_info, by = "id") |>
+  filter(title == "Star Wars", kind_id==1) |>
+  left_join(cast_info, by= "movie_id") |>
+  left_join(name, by = c("person_id"="id")) |>
+  select(name) 
+  
+
+```
+
+```{r}
+Encanto <- title |>
+  filter(title =="") |>
+  arrange(production_year)
+
+show_query(Encanto)
+```

@@ -1,0 +1,44 @@
+---
+title: "Final Project"
+author: "Schwab"
+format: html
+---
+
+# Final Project/ Presentation
+
+Your final project will involve the data set of your choosing. You can explore what data is available to you in R by loading a library the running `data()` in the console. You can also visit 
+
+-   [Kaggle](https://www.kaggle.com/datasets/) for some timely and fun data.
+-   [Any of these recommended sites](https://www.freecodecamp.org/news/https-medium-freecodecamp-org-best-free-open-data-sources-anyone-can-use-a65b514b0f2d/)
+-   You can also scrape data from the web to analyse. I found it fun to scrape [Seven Sisters running data](https://7sisterstrailrace.com/results/)
+-   You can of course revisit the Smith Server Data... But not the yelp dataset on that server. 
+
+Don't spend too much time finding the "perfect dataset." Once you settle on a dataset upload it to github. 
+
+# What is the final Project?
+
+You will create a report on the data you have chosen. The report will include the following:
+
+-   At least one in depth question and its answer. 
+-   A demonstration of the many skills you've learned. 
+-   Tidy data set(s) <- This is mostly if you get your data from the internet.
+-   Correct implementation of the tidyverse [style guide](https://style.tidyverse.org/)
+-   At least two relevant well labelled graphics. Tables are nice too.  
+-   200 to 300 words explaining your report.
+-   A paragraph on wether your report/data is (ethical)[https://mdsr-book.github.io/mdsr2e/ch-ethics.html]. 
+
+In short I want to see what you can do with a new dataset. 
+
+# What is the presentation? When is it due?
+
+You will give a brief presentation on your report in class on finals day. To facilitate this your report should be knitted/rendered and pushed to github by Tuesday Dec 20 at midnight.
+
+Just walk us through your question and what you found. 
+
+# Help. 
+
+You can ask for help, that's fine. But to help me help you two things should happen:
+1. You should push your data to the final_project repo on git (unless its from a built in library). 
+2. You should constantly push your work to git so I can see it. 
+
+

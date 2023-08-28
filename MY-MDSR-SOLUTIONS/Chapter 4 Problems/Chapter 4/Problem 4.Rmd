@@ -1,0 +1,30 @@
+---
+title: "Problem 4"
+author: "Schwab"
+date: "4/1/2022"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(mdsr)
+library(babynames)
+library(Lahman)
+```
+
+```{r part_a_&_b}
+
+Teams_SLG <- Teams %>% mutate(BA= H/AB, TB= (R-X2B-X3B-HR)+2*X2B+3*X3B+4*HR,SLG=TB/AB)
+
+```
+
+```{r part_c}
+Teams_SLG %>% ggplot(aes(x=yearID,y=SLG))+
+  geom_smooth()
+```
+
+```{r part_d}
+Teams_SLG %>% ggplot(aes(x=yearID,y=BA))+
+  geom_smooth()
+```

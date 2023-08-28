@@ -1,0 +1,23 @@
+---
+title: "2_7_1"
+author: "Schwab"
+date: "2/21/2022"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(mdsr)
+```
+
+Problem 1 (Easy): Consider the following data graphic.
+
+Q: The am variable takes the value 0 if the car has automatic transmission and 1 if the car has manual transmission. How could you differentiate the cars in the graphic based on their transmission type?
+
+A: set color = am
+
+```{r}
+ggplot(mtcars, aes(disp,mpg,color=am)) +
+  geom_point()
+```

@@ -1,0 +1,136 @@
+---
+title: "Problem_3"
+author: "Schwab"
+date: "4/20/2022"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(mdsr)
+library(nycflights13)
+
+```
+
+I'm stuck on this problem. I need to think about it more. 
+
+```{r }
+head(flights)
+head(planes)
+
+joined_flights_planes <-left_join(flights,planes,by="tailnum", suffix = c(".flights",".planes"))
+joined_flights_planes
+```
+
+```{r part_a}
+
+
+#I'm trying to filter out the nas from the year variable
+#I'm using the apply function to apply is.na() to the table
+apply(X = is.na(planes), MARGIN = 2, FUN = sum)
+
+#Students might use these pipes instead. 
+planes %>%
+  count(is.na(year))
+
+planes %>%
+  filter(is.na(year))
+
+```
+
+```{r part_b}
+# I think this is a simpler solution. 
+
+planes %>%
+  count(manufacturer) %>%
+  slice_max(order_by = n,n=5)
+
+#The following table shows the most common manufacturer by counts. The case_when() checks to see if the count is larger or smaller than 121 and renames the manufacturer variable appropriately. 
+
+manufacturers <- planes |>
+  count(manufacturer) |>
+  slice_max(order_by = n, n=10)
+
+
+
+# manufactured_counts<- planes %>%
+#   count(manufacturer) %>%
+#   arrange(desc(n)) %>%
+#   mutate(
+#     manufacturer = 
+#       case_when(
+#         n >= 121 ~ as.character(manufacturer),
+#         n < 121 ~ "other" 
+#     )
+#   )%>%
+#   group_by(manufacturer) %>%
+#   summarise(manufacturer=manufacturer,n=sum(n)) %>%
+#   distinct()
+
+
+manufacturers
+
+
+```
+
+```{r part_c}
+
+top_five_manufactures <-planes %>%
+  count(manufacturer) %>%
+  slice_max(order_by = n,n=5) %>%
+  select(-n)
+
+top_five_manufactures <- as.vector(top_five_manufactures)
+
+joined_flights_planes |>
+  filter(manufacturer %in% unlist(top_five_manufactures)) |>
+  ggplot(aes(x= month,y=manufacturer))+
+  geom_count()
+  
+
+#I need to join manufactured_counts with joined_flights_planes 
+
+
+
+
+# #I had to group by month, you can also group by month,day 
+# joined_fl_pl_manufactured_counts<- inner_join(joined_flights_planes,manufactured_counts,by="manufacturer") %>%
+#   group_by(month) %>%
+#   count(manufacturer)
+# 
+# #This shows the number of flights from each type of carrier every month. I think this answers the question. 
+# 
+#I had to group by month, you can also group by month,day 
+manufacturer_counts<- joined_flights_planes %>%
+  mutate(
+    manufacturer =
+      case_when(
+        manufacturer == "AIRBUS INDUSTRIE" ~ "AIRBUS",
+        manufacturer == "MCDONNELL DOUGLAS AIRCRAFT CO"  ~ "MCDONNELL DOUGLAS",
+        manufacturer == "MCDONNELL DOUGLAS CORPORATION" ~ "MCDONNELL DOUGLAS",
+      TRUE ~ manufacturer
+  )
+) %>%
+  
+  select(manufacturer,tailnum,year.planes)%>%
+  unique() %>%
+  count(manufacturer) %>%
+  arrange(desc(n)) %>%
+  mutate(manufacturer = ifelse(n>100, manufacturer, "other" )) 
+
+manufacturer_counts |>
+  left_join(joined_flights_planes, by = c("manufacturer")) |>
+  
+  #select(manufacturer,year.planes) |>
+  group_by(manufacturer) |>
+  summarize(manu_ave= mean(year.planes,na.rm=TRUE)) |>
+  #select(- year.planes) |>
+  arrange(desc(manu_ave))
+
+
+```
+
+```{r part_c}
+
+```

@@ -1,0 +1,39 @@
+---
+title: "Problem 3.3"
+author: "Nic Schwab"
+date: "2/21/2022"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(mdsr)
+library(mosaicData)
+library(knitr)
+```
+
+Problem 3 (Medium): The following questions use the `r Marriage` data set from the mosaicData package. `r library(mosaicData)`
+-1 Create an informative and meaningful data graphic.
+-2 Identify each of the visual cues that you are using, and describe how they are related to each variable.
+-3 Create a data graphic with at least five variables (either quantitative or categorical). For the purposes of this exercise, do not worry about making your visualization meaningful—just try to encode five variables into one plot.
+
+
+The bar graph uses length to show the number of brides or grooms. It is using color to separate brides from grooms. 
+```{r Marriage_data_graphic}
+Marriage %>%
+  ggplot(aes(race,fill=person)) +
+  geom_bar()   #I don't think the students can group_by() yet this just shows the bride and grooms by race
+```
+
+```{r}
+#This is my attempt at 5 different variables. 
+
+# Got 5 its not pretty
+Marriage %>%
+  ggplot(aes(dayOfBirth, college,color=prevconc , shape=officialTitle)) + #The color is set to prevconc and the shape to the Offical Title of the person doing the marrying. 
+  geom_point()+    #Its a point plot
+  facet_grid(cols=vars(person))+   #This makes two plots, one for bide and one for groom. 
+  theme_classic()  #I just like how this theme cleans things up.  
+```
+

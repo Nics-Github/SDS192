@@ -1,0 +1,12 @@
+---
+title: "merge conflict practice"
+format: html
+---
+
+<<<<<<< HEAD
+In Rstudio I am writing a line
+=======
+Here I am writing a line. 
+
+Just trying to make another conflict
+>>>>>>> a63a56975d95fa1472639764c4d4d79406399047

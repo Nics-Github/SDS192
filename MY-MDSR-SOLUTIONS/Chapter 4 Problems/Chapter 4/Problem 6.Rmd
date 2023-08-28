@@ -1,0 +1,25 @@
+---
+title: "Problem 6"
+author: "Schwab"
+date: "4/8/2022"
+output: pdf_document
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(mdsr)
+library(babynames)
+library(Lahman)
+```
+
+a. summarise(average= mean(variable))
+b. mutate()
+c. arrange()
+d. filter()
+e. select()
+
+
+

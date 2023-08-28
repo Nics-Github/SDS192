@@ -1,0 +1,53 @@
+---
+title: "Problem_5"
+author: "Schwab"
+date: "5/4/2022"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+
+library(mdsr)
+library(tidyverse)
+library(mosaic)
+library(lubridate)
+library(purrr)
+library(rvest) #I thought this loaded with the tidyverse, but I guess I need to load it separately. 
+library(janitor) #I use this to clean up the startrek table with #clean_names.
+
+```
+Generate the code to convert the following data frame to wide format.
+```{r}
+#make the df from the problem 
+
+prob_5 <- data.frame( grp= c( "A","A","B","B"), 
+    sex = c("F","M","F","M"), 
+    meanL = c(0.225,0.47,0.325,0.547),
+    sdL = c(0.106,0.325,0.106, 0.308), 
+    meanR = c(0.34,0.57,0.4,0.647),
+    sdR = c(0.0849,0.325,0.0707,0.274)
+)
+ 
+prob_5
+
+```
+
+```{r}
+
+
+prob_5 %>%
+  #The line below takes all the numeric columns and puts them into a column called group. 
+  pivot_longer(cols=c("meanL","sdL","meanR","sdR"), names_to = "group",values_to = "stats" ) %>%
+  
+  #This line takes group apart by sex and reorders the stats
+  pivot_wider(names_from = c("sex","group"), values_from = "stats",names_sep = ".")
+  
+prob_5 %>%
+  #This one does the same thing, but it doesn't look like the book solution 
+  pivot_wider(names_from= sex, values_from= c("meanL","sdL","meanR","sdR"),names_sep = ".") 
+
+
+
+```

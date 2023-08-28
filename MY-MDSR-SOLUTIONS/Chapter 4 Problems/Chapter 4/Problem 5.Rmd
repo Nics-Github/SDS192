@@ -1,0 +1,26 @@
+---
+title: "Problem 5"
+author: "Schwab"
+date: "4/8/2022"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(mdsr)
+library(babynames)
+library(Lahman)
+```
+
+```{r}
+mtcars %>%
+  group_by(cyl) %>%
+  summarize(
+    N = n(),
+    avg_mpg = mean(mpg)
+  )
+```
+N is the number of cars with a given number of cylinders
+

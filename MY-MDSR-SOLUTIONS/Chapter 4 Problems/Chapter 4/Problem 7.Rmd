@@ -1,0 +1,39 @@
+---
+title: "Problem 7"
+author: "Schwab"
+date: "4/8/2022"
+output: pdf_document
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(tidyverse)
+library(mdsr)
+library(babynames)
+library(Lahman)
+```
+
+
+view()
+```{r making_the_SLG}
+#R is total runs. If you subtract doubles and triples and homeruns thats singles right? 
+Teams_SLG <- Teams %>% mutate(BA= H/AB, TB= (R-X2B-X3B-HR)+2*X2B+3*X3B+4*HR,SLG=TB/AB)
+
+#This give the top 5 SLG teams
+Teams_SLG %>%
+  #arrange(desc(SLG)) %>%
+  slice_max(order_by= SLG, n=5)
+
+
+
+```
+
+```{r since_1969}
+Teams_SLG %>%
+  filter(yearID>1968) %>%
+  slice_max(order_by= SLG, n=5)
+
+
+```

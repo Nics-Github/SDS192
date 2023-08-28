@@ -1,0 +1,31 @@
+---
+title: "Problem 9"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(mosaic)
+library(mdsr)
+library(palmerpenguins)
+```
+
+Problem 9 (Medium): Using the penguins data set from the palmerpenguins package:
+
+Create a scatterplot of bill_length_mm against bill_depth_mm where individual species are colored and a regression line is added to each species. Add regression lines to all of your facets. What do you observe about the association of bill depth and bill length?
+
+```{r}
+ggplot(data=penguins,aes(bill_length_mm,bill_depth_mm,color=species))+
+  geom_point()+
+  geom_smooth(method=lm)
+```
+
+
+Repeat the same scatterplot but now separate your plot into facets by species. How would you summarize the association between bill depth and bill length.
+
+```{r}
+ggplot(data=penguins,aes(bill_length_mm,bill_depth_mm))+
+  geom_point()+
+  facet_grid(cols = vars(species))+
+  geom_smooth(method=lm,se=FALSE)
+```

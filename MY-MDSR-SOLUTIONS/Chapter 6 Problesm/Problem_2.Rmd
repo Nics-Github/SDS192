@@ -1,0 +1,34 @@
+---
+title: "Problem_2"
+author: "Schwab"
+date: "`r Sys.Date()`"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+
+library(mdsr)
+library(tidyverse)
+library(mosaic)
+library(lubridate)
+
+```
+
+Rewrite this in nested form on a single line. Which set of commands do you prefer and why?
+
+```{r}
+#This is from the text: 
+
+mtcars %>%
+  filter(cyl == 4) %>%
+  select(mpg, cyl)
+
+```
+
+```{r}
+#I think the pipes are easier to read and think about. 
+select( filter( mtcars,cyl==4 ),mpg,cyl)
+
+```

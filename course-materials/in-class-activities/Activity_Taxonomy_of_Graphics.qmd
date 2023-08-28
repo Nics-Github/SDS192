@@ -1,0 +1,42 @@
+---
+title: "Taxonomy of Graphics"
+author: "Nic Schwab"
+format: html
+editor: visual
+---
+
+Use the vocabulary from the Taxonomy of data graphics.
+
+Group 1: Ida, James, and Magdalen
+
+Group 2: Ajani and Kathryn
+
+Discuss the
+
+-   Q: What is the graph showing?
+
+-   visual cues
+
+-   coordinate system
+
+-   scales
+
+-   context
+
+-   Q: How do you feel about this graph?
+
+NYTimes:
+
+-   [Serena Williams](https://www.nytimes.com/2022/09/08/learning/whats-going-on-in-this-graph-sept-14-2022.html?searchResultPosition=2)
+
+-   [Endangered Biodiversity](https://www.nytimes.com/2022/03/31/learning/whats-going-on-in-this-graph-april-6-2022.html?searchResultPosition=10)
+
+-   [Pandemic Stimulus](https://www.nytimes.com/2022/04/07/learning/whats-going-on-in-this-graph-april-13-2022.html?searchResultPosition=9)
+
+From Yougov:
+
+-   [Ice Cream](https://today.yougov.com/topics/lifestyle/articles-reports/2022/07/19/americas-favorite-ice-cream-vanilla-chocolate) (Just the first graph, there is a lot here).
+
+From Five Thirty Eight:
+
+-   [How Unpopular is Joe Biden](https://projects.fivethirtyeight.com/biden-approval-rating/)

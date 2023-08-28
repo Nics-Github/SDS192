@@ -1,0 +1,29 @@
+---
+title: "Problem 10"
+author: "Schwab"
+date: "4/13/2022"
+output: pdf_document
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(mdsr)
+library(babynames)
+library(Lahman)
+```
+
+```{r}
+#Creating a factor called election, can I do this with mod arithmetic
+
+
+Teams %>%
+  mutate(election=trunc((yearID-1788)/4)) %>% #The trunc() function drops the decimal, the first election is 1788
+  group_by(election) %>%
+  summarise(total_HR=sum(HR)) %>% #This summaries the homeruns
+  arrange(desc(total_HR)) #This arranges it by most to least. 
+
+  
+```
+

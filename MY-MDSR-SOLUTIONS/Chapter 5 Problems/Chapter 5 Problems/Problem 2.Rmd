@@ -1,0 +1,80 @@
+---
+title: "Problem_2"
+author: "Schwab"
+date: "4/20/2022"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(mdsr)
+library(Lahman)
+
+```
+
+```{r}
+view(Batting)
+view(Pitching)
+view(Master)
+```
+
+```{r joining_tables}
+joined_Batting_and_Master<- full_join(
+  x=Batting,
+  y=Master,
+  by="playerID"
+  )
+
+joined_Pitching_and_Master<- full_join(
+  x=Pitching,
+  y=Master,
+  by="playerID"
+  )
+
+```
+
+```{r problem_2a}
+
+#This was a tricky problem because I had to realize that one playerID went with multiple rows. 
+
+solution_2a <- joined_Batting_and_Master %>%
+  group_by(playerID) %>%
+  summarise(
+    nameFirst= nameFirst,
+    nameLast= nameLast, 
+    HR_Total = sum(HR), 
+    SB_Total = sum(SB)) %>%
+  filter(HR_Total >300 & SB_Total >300) %>%
+  distinct()
+
+view(solution_2a)
+```
+
+```{r problem_2b}
+
+
+
+solution_2b <- joined_Pitching_and_Master %>%
+  group_by(playerID) %>%
+  summarise(
+    nameFirst = nameFirst,
+    nameLast = nameLast, 
+    W_Total = sum(W), 
+    SO_Total = sum(SO)) %>%
+  filter(W_Total >300 & SO_Total >3000) %>%
+  distinct()
+
+view(solution_2b)
+```
+
+```{r problem_2c}
+solution_2c <- joined_Batting_and_Master %>%
+  group_by(yearID,playerID) %>%
+  filter(HR >50) %>%
+  mutate(Batting_Average = H/AB) 
+
+## Is the batting average the number of hits divided by at bats?
+
+view(solution_2c)
+```

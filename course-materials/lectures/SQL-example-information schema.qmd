@@ -1,0 +1,85 @@
+---
+title: "dbplyr-SQL"
+format: html
+---
+
+```{r setup}
+
+library(tidyverse)
+library(RMySQL)
+
+db <- dbConnect(
+  MySQL(),
+  host = "scidb.smith.edu",
+  user = "sds192",
+  password = "DSismfc@S",
+  dbname = "yelp"
+)
+knitr::opts_chunk$set(connection = db, max.print = 20)
+```
+
+```{r}
+class(db)
+```
+
+```{sql connection= db}
+
+SHOW DATABASES;
+
+```
+
+```{sql connection=db}
+USE yelp;
+
+```
+
+```{sql connection=db}
+
+SHOW TABLES;
+```
+
+```{sql connection=db}
+
+DESCRIBE users;
+```
+
+```{sql connection=db}
+
+DESCRIBE businesses;
+```
+
+```{sql connection=db}
+DESCRIBE reviews;
+```
+
+```{r bring-tables-to-r}
+
+#This creates a tbl_sql object in R called airports
+
+
+users <- db %>%
+  tbl("users")
+reviews <- db %>%
+  tbl("reviews")
+businesses <- db |>
+  tbl("businesses")
+# 
+# print(object.size(airports),units = "Kb")
+# class(airports)
+```
+
+```{r }
+average_star_5 <- users |>
+  filter(average_stars >4.99 ) |>
+  inner_join(reviews,by ="user_id") |>
+  inner_join(businesses,by = c("business_id"="id"),suffix=c(".users",".business")) |>
+  count(city,sort = TRUE) |>
+  collect()
+
+print(object.size(average_star_5),units="Kb")
+tail(average_star_5)
+```
+
+```{sql connection=db}
+
+```

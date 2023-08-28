@@ -1,0 +1,597 @@
+---
+title: "Data visualization"
+subtitle: "ggplot debugging"
+author: "Ben Baumer"
+format: revealjs
+---
+
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(fig.path = 'figures/', fig.height = 5,echo=TRUE)
+```
+
+## Function not found
+
+Problem: functions can't be found
+
+```{r, error=TRUE}
+glimpse(storms)
+my_storms <- storms %>%
+  filter(year == 1995)
+```
+
+
+## Function not found (cont'd)
+
+Solution: load packages that provide functions
+
+```{r, message=TRUE, error=TRUE}
+library(tidyverse)
+glimpse(storms)
+```
+
+
+## Package not found
+
+Problem: package is not installed
+
+```{r, error=TRUE}
+library(imadethisup)
+```
+
+
+## Package not found (cont'd)
+
+Solution: install package
+
+```{r, message=FALSE, error=TRUE, eval=FALSE}
+install.packages("imadethisup")
+library(imadethisup)
+```
+
+
+## Re-installing packages
+
+Problem: Unnecessary and will slow down knitting
+
+```{r, eval=FALSE}
+install.packages("nasaweather")
+```
+
+
+
+Solutions:
+    - delete that command
+    - comment out command with `#`
+    -  use `eval=FALSE`
+
+
+## Suppress code evaluation
+
+Problem: want to show code but not evaluate it
+
+```{r, eval=FALSE}
+install.packages("nasaweather")
+```
+
+Solution: use `eval=FALSE`
+
+
+    `r ''````{r, eval=FALSE}
+    install.packages("nasaweather")
+    ```
+
+
+
+## Suppressing messages
+
+Problem: unwanted messages in output
+
+```{r}
+library(mosaic)
+```
+
+
+## Suppressing messages (solution)
+
+Solution: use `message=FALSE` in chunk
+
+
+    `r ''````{r, message=FALSE}
+    library(mosaic)
+    ```
+
+```{r, message=FALSE}
+library(mosaic)
+```
+
+
+## Overwriting objects of different types
+
+Problem: overwriting object with different type fails on second attempt
+
+```{r}
+my_storms <- storms %>%
+  filter(year == 1995)
+class(my_storms)
+my_storms <- ggplot(my_storms, aes(x = long, y = lat)) +
+  geom_point()
+```
+
+
+## Overwriting objects of different types (cont'd)
+
+- Try to run it again...
+
+```{r, error=TRUE}
+class(my_storms)
+my_storms <- ggplot(my_storms, aes(x = long, y = lat)) +
+  geom_point()
+```
+
+
+## Overwriting objects (solution)
+
+```{r, include=FALSE}
+my_storms <- storms %>%
+  filter(year == 1995)
+```
+
+Solution: Give plots a different name
+
+```{r}
+my_storm_plot <- ggplot(my_storms, aes(x = long, y = lat)) +
+  geom_point()
+```
+
+
+
+## Continuous variable supplied to discrete scale
+
+Problem: `wind` is a continuous variable but `Greens` is a discrete palette
+
+:::: {.columns}
+
+::: {.column width="40%"}
+```{r storms-error, error=TRUE, fig.show='hide'}
+ggplot(
+  my_storms, 
+  aes(
+    x = long, 
+    y = lat, 
+    color = wind
+  )
+) +
+  geom_point() + 
+  scale_color_brewer(
+    "Greens"
+  )
+```
+:::
+
+::: {.column width="60%"}
+![](`r knitr::fig_chunk("storms-error", "png")`)
+:::
+
+::::
+
+
+
+
+## Continuous variable supplied to discrete scale
+- Solution: use `scale_color_distiller()`
+
+:::: {.columns}
+
+::: {.column width="40%"}
+
+```{r storms-blue, error=TRUE, fig.show='hide'}
+ggplot(
+  my_storms, 
+  aes(
+    x = long, 
+    y = lat, 
+    color = wind
+  )
+) +
+  geom_point() + 
+  scale_color_distiller( #<<
+    "Greens"
+  )
+```
+
+:::
+
+::: {.column width="60%"}
+![](`r knitr::fig_chunk("storms-blue", "png")`)
+:::
+
+::::
+
+
+
+## Argument name unspecified
+- Problem: no error, but always get blue
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+
+```{r storms-color, error=TRUE, fig.show='hide'}
+ggplot(
+  my_storms, 
+  aes(
+    x = long, 
+    y = lat, 
+    color = wind
+  )
+) +
+  geom_point() + 
+  scale_color_distiller(
+    "Greens"
+  )
+```
+
+:::
+
+::: {.column width="50%"}
+![](`r knitr::fig_chunk("storms-color", "png")`)
+:::
+
+::::
+
+
+## Argument name unspecified
+- Solution: specify `palette` argument name
+:::: {.columns}
+
+::: {.column width="50%"}
+```{r storms-green, error=TRUE, fig.show='hide'}
+ggplot(
+  my_storms, 
+  aes(
+    x = long, 
+    y = lat, 
+    color = wind
+  )
+) +
+  geom_point() + 
+  scale_color_distiller(
+    palette = "Greens"  #<<
+  )
+```
+
+:::
+
+::: {.column width="50%"}
+![](`r knitr::fig_chunk("storms-green", "png")`)
+:::
+
+::::
+
+## `color` / `fill` mismatch
+- Problem: legend shows up but colors on plot don't
+
+:::: {.columns}
+
+::: {.column width="50%"}
+```{r storms-black, error=TRUE, fig.show='hide'}
+ggplot(
+  my_storms, 
+  aes(
+    x = long, 
+    y = lat, 
+    fill = wind
+  )
+) +
+  geom_point() + 
+  scale_color_distiller(
+    palette = "Greens"
+  )
+```
+:::
+
+::: {.column width="50%"}
+![](`r knitr::fig_chunk("storms-black", "png")`)
+:::
+
+::::
+
+## `color` / `fill` mismatch
+- Solution: set `color` aesthetic instead of `fill`
+
+:::: {.columns}
+
+::: {.column width="50%"}
+```{r storms-green2, error=TRUE, fig.show='hide'}
+ggplot(
+  my_storms, 
+  aes(
+    x = long, 
+    y = lat, 
+    color = wind   #<<
+  )
+) + 
+  geom_point() + 
+  scale_color_distiller( #<<
+    palette = "Greens"
+  )
+```
+:::
+
+::: {.column width="50%"}
+![](`r knitr::fig_chunk("storms-green2", "png")`)
+:::
+
+:::::
+
+
+## Colors not mapped to variable
+Problem: colors don't show up
+
+:::: {.columns}
+::: {.column width="50%"}
+```{r storms-black2, error=TRUE, fig.show='hide'}
+ggplot(
+  my_storms, 
+  aes(
+    x = long, 
+    y = lat
+  ), 
+  color = wind
+) +
+  geom_point()
+```
+:::
+
+:::{.column width="50%"}
+![](`r knitr::fig_chunk("storms-black2", "png")`)
+::::
+
+
+## Colors not mapped to variable
+Solution: put color mapping inside `aes()`
+
+:::: {.columns}
+
+::: {.column width="50%"}
+```{r storms-blues, error=TRUE, fig.show='hide'}
+ggplot(
+  my_storms, 
+  aes(
+    x = long, 
+    y = lat, 
+    color = wind   #<<
+  )
+) +
+  geom_point()
+```
+:::
+
+::: {.column width="50%"}
+
+![](`r knitr::fig_chunk("storms-blues", "png")`)
+
+:::
+::::
+
+## Colors not set to value
+Problem: I said `blue` but R put black
+
+:::: {.columns}
+
+::: {.column width="50%"}
+```{r storms-black3, error=TRUE, fig.show='hide'}
+ggplot(
+  my_storms, 
+  aes(
+    x = long, 
+    y = lat
+  ), 
+  color = "blue"
+) +
+  geom_point()
+```
+:::
+
+:::{.column width="50%"}
+
+![](`r knitr::fig_chunk("storms-black3", "png")`)
+:::
+::::
+
+## Colors not set to value
+Solution: put value inside `geom_*()`
+
+:::: {.columns}
+
+::: {.column width="50%"}
+```{r storms-blue-solid, error=TRUE, fig.show='hide'}
+ggplot(
+  my_storms, 
+  aes(
+    x = long, 
+    y = lat
+  )
+) +
+  geom_point(color = "blue") #<<
+```
+:::
+
+::: {.column width="50%"}
+![](`r knitr::fig_chunk("storms-blue-solid", "png")`)
+:::
+
+::::
+
+
+## Colors don't vary
+- Problem: `"wind"` is different than `wind`
+
+:::: {.columns}
+::: {.column width="50%"}
+```{r storms-vermillion, error=TRUE, fig.show='hide'}
+ggplot(
+  my_storms, 
+  aes(
+    x = long, 
+    y = lat, 
+    color = "wind"
+  )
+) +
+  geom_point()
+```
+:::
+
+:::{.column width="50%"}
+![](`r knitr::fig_chunk("storms-vermillion", "png")`)
+:::
+
+::::
+
+
+## Colors don't vary
+- Solution: remove quotes
+
+:::: {.columns}
+
+::: {.column width="50%"}
+```{r storms-blues2, error=TRUE, fig.show='hide'}
+ggplot(
+  my_storms, 
+  aes(
+    x = long, 
+    y = lat, 
+    color = wind  #<<
+  )
+) +
+  geom_point()
+```
+:::
+
+:::{.column width="50%"}
+![](`r knitr::fig_chunk("storms-blues2", "png")`)
+:::
+
+::::
+
+## Object not found
+- Problem: `windspeed` does not exist
+
+:::: {.columns}
+
+::: {.column width="50%"}
+```{r storms-error2, error=TRUE, fig.show='hide'}
+ggplot(
+  my_storms, 
+  aes(
+    x = long, 
+    y = lat, 
+    color = windspeed
+  )
+) +
+  geom_point()
+```
+:::
+
+:::{.column width="50%"}
+![](`r knitr::fig_chunk("storms-error2", "png")`)
+:::
+
+::::
+
+## Object not found
+- Solution: spell the name of the variable correctly
+:::: {.columns}
+
+::: {.column width="50%"}
+```{r, storms-blues3, error=TRUE, fig.show='hide'}
+ggplot(
+  my_storms, 
+  aes(
+    x = long, 
+    y = lat, 
+    color = wind  #<<
+  )
+) +
+  geom_point()
+```
+:::
+
+:::{.column width="50%"}
+![](`r knitr::fig_chunk("storms-blues3", "png")`)
+:::
+
+::::
+
+```{r}
+names(my_storms)
+```
+
+
+
+## Cannot add ggproto object together
+
+Problem: `+` operator has to be at end of line
+
+```{r storms-blank, error=TRUE, fig.show='hide'}
+ggplot(
+  my_storms, 
+  aes(
+    x = long, 
+    y = lat, 
+    color = wind
+  )
+)
++ geom_point()
+```
+
+
+
+
+
+
+## Cannot add ggproto object together
+
+- Solution: move `+` operator to end of line
+
+:::: {.columns}
+
+::: {.column width="50%"}
+```{r storms-blues4, error=TRUE, fig.show='hide'}
+ggplot(
+  my_storms, 
+  aes(
+    x = long, 
+    y = lat, 
+    color = wind
+  )
+) +   #<<
+  geom_point()
+```
+:::
+
+:::{.column width="50%"}
+
+![](`r knitr::fig_chunk("storms-blues4", "png")`)
+:::
+::::
+
+## Unexpected SPECIAL
+- Problem: pipe operator has to be at end of line
+```{r, error=TRUE}
+my_storms <- storms 
+  %>% filter(year == 1995)
+```
+
+---
+## Unexpected SPECIAL
+
+- Solution: move pipe operator to end of line
+
+```{r}
+my_storms <- storms %>% 
+  filter(year == 1995)
+```

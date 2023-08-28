@@ -1,0 +1,72 @@
+---
+title: "Activity - ggplot 2"
+subtitle: "Meet ggplot"
+output: 
+  tufte::tufte_html:
+    css: ../hw.css
+    tufte_variant: "envisioned"
+    highlight: pygments
+link-citations: yes
+---
+
+```{r include = FALSE}
+knitr::opts_chunk$set(
+  eval = FALSE,
+  out.width = "80%",
+  fig.asp = 0.618,
+  fig.width = 10
+)
+library(tidyverse)
+library(openintro)
+library(ggrepel)
+```
+
+We'll use the [mammls](https://www.openintro.org/data/index.php?data=mammals) dataset.
+
+Here's a quick rundown of how things work in ggplot. We'll learn more as we go. 
+
+Make a chunk just to look at the data. 
+```{r}
+mammals
+```
+Make another one to dotplot the data. You need:
+- a pipe |>
+- ggplot() with some aesthetics
+- a **+**, 
+- geom_point()
+```{r}
+mammals |>
+  ggplot(aes(x=total_sleep, y =brain_wt)) +
+  geom_point()
+  
+```
+Lets add a color aesthetic.
+
+```{r}
+mammals |>
+  ggplot(aes(x=total_sleep, y =brain_wt, color = exposure)) +
+  geom_point()
+  
+```
+
+Let's add a facet()
+
+```{r}
+
+mammals |>
+  ggplot(aes(x=total_sleep, y =brain_wt, color = exposure)) +
+  geom_point() +
+  facet_wrap(~danger)
+  
+```
+
+How do you know which aesthetics can be added? 
+
+**?geom_point()**
+
+How do you choose a facet? 
+
+Choose something witih finite options. 
+
+Also see the ggplot cheatsheet under [Resources](./Resources.html)
+

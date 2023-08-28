@@ -1,0 +1,63 @@
+---
+title: "Problem_6"
+author: "Schwab"
+date: "5/5/2022"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+
+library(mdsr)
+library(tidyverse)
+library(mosaic)
+library(mosaicData)
+
+
+```
+
+```{r}
+
+head(HELPfull)
+
+```
+
+```{r Part_a}
+# Generate a table of the data for subjects (ID) 1, 2, and 3 that includes the ID variable, the TIME variable, and the DRUGRISK and SEXRISK variables (measures of drug and sex risk-taking behaviors, respectively).
+
+HELPfull %>%
+  filter(ID < 4 ) %>%
+  select(ID,TIME,DRUGRISK,SEXRISK) 
+  
+```
+
+part_b: It seems like at times 0, 6, and 24 subject 3 was deemed at risk. 
+
+
+```{r part_c}
+HELPfull %>%
+  filter(ID < 4 & TIME<7) %>%
+  select(ID,TIME,DRUGRISK,SEXRISK) %>%
+  pivot_wider(names_from = "TIME",values_from = c("DRUGRISK","SEXRISK"))
+
+```
+
+```{r part_d}
+prob_6_d <- HELPfull %>%
+  filter(TIME<7) %>%
+  select(ID,TIME,DRUGRISK,SEXRISK) %>%
+  pivot_wider(names_from = "TIME",values_from = c("DRUGRISK","SEXRISK")) 
+  
+prob_6_d %>%
+  ggplot(aes(x=DRUGRISK_0,y=DRUGRISK_6)) +
+    geom_point()
+
+#This is to find the correlation coefficent for Drug Risk between 0 and 6 month. 0.59911 They don't seem super correlated. 
+cor(prob_6_d$DRUGRISK_0,prob_6_d$DRUGRISK_6,use="complete.obs")
+
+#This is to find the correlation coefficent for SEX Risk between 0 and 6 month. 0.50766 They don't seem super correlated. 
+cor(prob_6_d$SEXRISK_0,prob_6_d$SEXRISK_6,use="complete.obs")
+
+
+```

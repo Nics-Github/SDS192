@@ -1,0 +1,19 @@
+---
+title: "Credits"
+execute:
+  freeze: auto  # re-render only when source changes
+---
+
+## Site Credit
+
+The format for this site was borrowed from \[Albert Kim's SDS 192 course\](https://bit.ly/sds192kim)
+
+## Activities, Projects, etc.
+
+If not created by me or referred to in some other way the activities and projects for this course are from:
+
+-   [The above mentioned website](https://bit.ly/sds192kim)
+
+-   [Data Science in a box.](https://datasciencebox.org/)
+
+-   [Ben Baumer's SDS 192 course page](https://beanumber.github.io/sds192/)

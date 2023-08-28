@@ -1,0 +1,87 @@
+---
+title: "Problem_11"
+author: "Schwab"
+date: "5/4/2022"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+
+library(mdsr)
+library(tidyverse)
+library(mosaic)
+library(lubridate)
+library(purrr)
+library(rvest) #I thought this loaded with the tidyverse, but I guess I need to load it separately. 
+library(janitor) #I use this to clean up the startrek table with #clean_names.
+
+```
+
+
+
+```{r}
+#I'm saving the url for the seven sisters run as a string
+
+seven_sisters_race <- "https://aratrace.com/7-sisters-trail-race-4/"
+
+#Here's I'm gathering the tables from that site, I'm surprised there are 27
+tables <- seven_sisters_race %>% 
+  read_html() %>% 
+  html_nodes("table")
+```
+The graph below shows the first three runners for each female age group category. The first three runners of age 30-49 are faster than the third place from 20-29. Also those in their 60s are fast than their 50s.
+```{r seasons}
+#Here I'm just focusing on the second table. I have to "pluck" the second table from the list of tables. It took a guess or two to find it. 
+
+seven_sisters_race <- tables %>%
+  purrr::pluck(1) %>%
+  html_table() %>% 
+  clean_names() %>%
+  select(-row_place,-details)  #I'm getting rid of extra variable
+
+seven_sisters_race  
+
+seven_sisters_race %>%
+  filter(gender== "F", age_grp_pl %in% (1:3) ) %>%
+  ggplot(aes(age,net_elapsed,shape=age_grp))+
+    geom_point() +
+  scale_shape_manual(values=1:7)+
+  labs(title = "Older does not mean slower",y="time",x="Age of runner",)+
+  theme_classic()
+  
+
+
+ # seven_sisters_race %>%
+ #   ggplot(aes(gender )) +
+ #      geom_bar()
+```
+
+The pattern is a bit different for men. But the three fastest men in their 30s and 40s will beat the second and third place runner in their 20s. 
+
+```{r seasons}
+#Here I'm just focusing on the second table. I have to "pluck" the second table from the list of tables. It took a guess or two to find it. 
+
+seven_sisters_race <- tables %>%
+  purrr::pluck(1) %>%
+  html_table() %>% 
+  clean_names() %>%
+  select(-row_place,-details)  #I'm getting rid of extra variable
+
+seven_sisters_race  
+
+seven_sisters_race %>%
+  filter(gender== "M"|first_name=="LIAM" &last_name=="CREGAN", age_grp_pl %in% (0:3) ) %>%
+  ggplot(aes(age,net_elapsed,shape=age_grp))+
+    geom_jitter() +
+  scale_shape_manual(values=1:7)+
+  labs(title = "Older does not mean slower",y="time",x="Age of runner",)+
+  theme_classic()
+  
+
+
+ # seven_sisters_race %>%
+ #   ggplot(aes(gender )) +
+ #      geom_bar()
+```

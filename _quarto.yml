@@ -1,0 +1,54 @@
+project:
+  type: website
+  output-dir: docs
+  
+output:
+  html_document:
+    toc: yes
+    toc_float: yes
+    toc_depth: 2
+    theme: cosmo
+    highlight: tango
+    df_print: paged
+    lib_dir: site_libs
+    self_contained: no
+    includes:
+     in_header: "favicon.html"
+# All icons were obtained from https://icons.getbootstrap.com/
+website:   
+  page-navigation: true
+  title: "MTH_190"
+  
+  navbar:
+ 
+    left:
+    - text: Resources
+      href: Resources.qmd
+    - icon: book 
+      href: https://mdsr-book.github.io/mdsr2e/
+    - text: T & T
+      href: https://moderndive.com/C-appendixC.html
+    - icon: slack
+      href: https://www.slack.com
+    - text: R
+      href: http://hcc-rstudiosrv1.hcc.edu:8787/auth-sign-in
+    
+    right:
+    - icon: github
+      href: https://github.com/
+  # - text: Problem Sets
+  #   href: PS.html
+  #  - text: Mini-Projects
+  #    href: projects.Rmd
+  # - text: Midterms
+  #   href: midterms.html
+    - text: Syllabus
+      href: ./course-materials/syllabus/syllabus.html
+  #  - icon: fa-github fa-lg
+  #    href: https://github.com/rudeboybert/SDS192
+  
+  page-footer:
+    right: 
+    - text: credits
+      href: credits.qmd
+      

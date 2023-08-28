@@ -1,0 +1,21 @@
+---
+title: "Problem 8"
+author: "Schwab"
+date: "3/2/2022"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(mosaic)
+library(mdsr)
+library(nasaweather)
+```
+
+Problem 8 (Medium): Using data from the nasaweather package, use the geom_path function to plot the path of each tropical storm in the storms data table. Use color to distinguish the storms from one another, and use faceting to plot each year in its own panel.
+
+```{r}
+ggplot(data=storms,aes(long,lat,color=name))+
+  facet_grid(cols  = vars(year))+
+  geom_path(show.legend = FALSE) # I turned the legend off so I could see the image better. 3
+```

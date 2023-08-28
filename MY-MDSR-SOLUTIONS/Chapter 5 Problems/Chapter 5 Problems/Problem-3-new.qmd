@@ -1,0 +1,83 @@
+---
+title: "Problem-3"
+author: "Schwab"
+format: html
+---
+
+```{r setup, include=FALSE,echo=FALSE}
+library(tidyverse)
+library(nycflights13)
+
+```
+
+```{r problem_a}
+planes |>
+  filter(is.na(year)) |>
+  summarise(missing.years=n())
+```
+
+```{r part_b}
+#I've redone the problem below. It has a much simler solution. 
+flights |>
+  inner_join(planes, by="tailnum") |>
+  #group_by(manufacturer) |>
+  distinct(tailnum,.keep_all = TRUE)|>
+  count(manufacturer) |>
+  slice_max(order_by=n,n=10)
+```
+
+```{r part_b_again}
+planes |>
+  count(manufacturer) |>
+  slice_max(order_by = n,n=10)
+```
+
+```{r part_c}
+## In the dataframe below I am using a case_when to clump all of the manufacturers with counts less than 100 together in other. 
+
+planes_other <- planes |>
+  group_by(manufacturer) |>
+  mutate(count= n()) |>
+  mutate(manufacturer = 
+           case_when(
+             count < 100 ~ "other",
+             TRUE ~ manufacturer
+        )
+  )
+
+#I'm putting all the different spellings of the same companies here. No joins are needed for this problem. These two data frames can be put together. 
+
+planes_other |>
+  mutate(manufacturer = 
+           case_when(
+             manufacturer == "AIRBUS INDUSTRIE" ~ "AIRBUS",
+             manufacturer == "MCDONNELL DOUGLAS AIRCRAFT CO" ~ "MCDONNELL DOUGLAS",
+             manufacturer == "MCDONNELL DOUGLAS CORPORATION" ~ "MCDONNELL DOUGLAS",
+             TRUE ~ manufacturer
+           )
+         ) |>
+  group_by(manufacturer) 
+```
+
+
+```{r kathrines_answer}
+planes |>
+  mutate(manufacturer=
+           case_when(manufacturer=="AIRBUS INDUSTRIE"~"AIRBUS",
+                     manufacturer=="MCDONNELL DOUGLAS AIRCRAFT CO" ~"MCDONNELL DOUGLAS",
+                     manufacturer=="MCDONNELL DOUGLAS CORPORATION" ~"MCDONNELL DOUGLAS",
+                     TRUE~manufacturer)) |>
+  mutate(manufacturer=
+           case_when((manufacturer!="AIRBUS" &
+                      manufacturer!="BOEING" &
+                      manufacturer!="BOMBARDIER INC" &
+                      manufacturer!="EMBRAER" &
+                      manufacturer!="MCDONNELL DOUGLAS")~"OTHER",
+                     TRUE~manufacturer)) |>
+  filter(year > "2000") |>
+  ggplot(aes(x=year,fill=manufacturer)) +
+  geom_bar(position= "dodge")
+#facet_wrap(~manufacturer)
+
+```
+

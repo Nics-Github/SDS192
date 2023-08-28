@@ -1,0 +1,40 @@
+---
+title: "Problem_1"
+author: "Schwab"
+date: "`r Sys.Date()`"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(mdsr)
+library(tidyverse)
+library(mosaic)
+library(lubridate)
+
+```
+
+Problem 1 (Easy): In the Marriage data set included in mosaic, the appdate, ceremonydate, and dob variables are encoded as factors, even though they are dates. Use lubridate to convert those three columns into a date format.
+
+```{r}
+#This is from the texbook
+
+Marriage %>%
+  select(appdate, ceremonydate, dob) %>%
+  glimpse(width = 50)
+
+```
+
+#I am alittle confused by this problem. It seems like the appdate , ceremonydate, etc. are already dates. Also the years for the dob must be wrong. 
+
+```{r}
+
+Marriage %>%
+  mutate(
+    appdate_date = ymd(appdate),
+    ceremonydate_date = ymd(ceremonydate),
+    dob_date = ymd(dob)
+  )
+
+```

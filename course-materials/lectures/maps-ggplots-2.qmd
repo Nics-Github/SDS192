@@ -1,0 +1,111 @@
+---
+title: "maps-leaflet-2"
+author: "Schwab"
+format: revealjs
+editor: visual
+---
+
+```{r}
+dsn <- fs::path("~","Documents","MTH_190_Intro_to_DS","course-materials", "SnowGIS_SHP")
+list.files(dsn)
+```
+
+```{r}
+st_layers(dsn
+          )
+```
+
+```{r}
+CholeraDeaths <- st_read(dsn, layer = "Cholera_Deaths")
+```
+
+```{r}
+class(CholeraDeaths)
+```
+
+```{r}
+CholeraDeaths
+```
+
+```{r}
+CholeraDeaths_Book<- mdsr::CholeraDeaths
+```
+
+```{r}
+
+ggplot((CholeraDeaths_Book)) +
+  geom_sf(  )
+```
+
+```{r}
+ggplot(CholeraDeaths) + 
+  annotation_map_tile(type = "osm", zoomin = 0) + 
+  geom_sf(aes(size = Count), alpha = 0.7)
+```
+
+```{r}
+library(mapproj)
+library(maps)
+map("world", projection = "mercator", wrap = TRUE)
+map("world", projection = "cylequalarea", param = 45, wrap = TRUE)
+```
+
+```{r}
+map(
+  "state", projection = "lambert", 
+  parameters = c(lat0 = 20, lat1 = 50), wrap = TRUE
+)
+map(
+  "state", projection = "albers", 
+  parameters = c(lat0 = 20, lat1 = 50), wrap = TRUE
+)
+```
+
+```{r}
+st_crs(CholeraDeaths )
+```
+
+There are many CRSs, but a few are most common. A set of EPSG ([*European Petroleum Survey Group*](https://en.wikipedia.org/w/index.php?search=European%20Petroleum%20Survey%20Group)) codes provides a shorthand for the full descriptions (like the one shown above). The most commonly-used are:
+
+[EPSG:4326](https://epsg.io/4326) - Also known as [WGS84](https://en.wikipedia.org/wiki/World_Geodetic_System#WGS84), this is the standard for GPS systems and Google Earth.
+
+[EPSG:3857](https://epsg.io/3857) - A Mercator projection used in maps tiles^[33](https://mdsr-book.github.io/mdsr2e/ch-spatial.html#fn33)^ by Google Maps, Open Street Maps, etc.
+
+[EPSG:27700](https://epsg.io/27700) - Also known as OSGB 1936, or the British National Grid: United Kingdom Ordnance Survey. It is commonly used in Britain.
+
+```{r}
+cholera_4326 <- CholeraDeaths_Book %>% 
+  st_transform(4326)
+```
+
+```{r}
+st_bbox(cholera_4326
+        )
+st_bbox(CholeraDeaths_Book)
+```
+
+```{r}
+ggplot(cholera_4326) + 
+  annotation_map_tile(type = "osm", zoomin = 0) + 
+  geom_sf(aes(size = Count), alpha = 0.7)
+```
+
+```{r}
+cholera_latlong <- CholeraDeaths %>%
+  st_set_crs(27700) %>%
+  st_transform(4326)
+snow <- ggplot(cholera_latlong) + 
+  annotation_map_tile(type = "osm", zoomin = 0) + 
+  geom_sf(aes(size = Count))
+
+pumps <- st_read(dsn,layer = "Pumps")
+
+pumps_latlong <- pumps %>% 
+  st_set_crs(27700) %>%
+  st_transform(4326)
+snow +
+  geom_sf(data = pumps_latlong, size = 3, color = "red")
+```
+
+Exercise 1
+

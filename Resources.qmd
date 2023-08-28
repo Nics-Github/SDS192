@@ -1,0 +1,53 @@
+---
+title: "Resources"
+
+output: html
+
+format:
+  html:
+    toc: true
+    toc-depth: 2
+    toc-float: true
+    toc-location: left
+    toc-title: "Class Days"
+    df-print: kable
+    
+execute:
+  freeze: auto  # re-render only when source changes    
+---
+
+# [6 fixes to common issues](https://docs.google.com/document/d/1P7IyZ4On9OlrCOhygFxjC7XhQqyw8OludwChz-uFd_o/edit)
+
+------------------------------------------------------------------------
+
+# **Other Books:**
+
+## ModernDive
+
+[![](images/ModernDive.png){width="369"}](https://moderndive.com/index.html)
+
+## Data Science in a box
+
+[![](images/dsbox.png){width="200"}](https://datasciencebox.org/content.html)
+
+# **Cheatsheets:**
+
+## Data Visualization: [ggplot2](https://raw.githubusercontent.com/rstudio/cheatsheets/main/data-visualization.pdf)
+
+[![](images/ggplot2.png){width="360"}](https://raw.githubusercontent.com/rstudio/cheatsheets/main/data-visualization.pdf)
+
+## Data transformation: dplyr
+
+[![](images/dplyr.png){width="360"}](https://raw.githubusercontent.com/rstudio/cheatsheets/main/data-transformation.pdf)
+
+## Data Import: tidyr
+
+[![](images/tidyr.png){width="360"}](https://posit.co/wp-content/uploads/2022/10/tidyr.pdf)
+
+## RMarkdown Cheat sheet
+
+[![](images/rmarkdown.png){width="360"}](https://raw.githubusercontent.com/rstudio/cheatsheets/main/rmarkdown.pdf)
+
+## Style Guide
+
+[The Tidyverse Style Guide](https://style.tidyverse.org/index.html)

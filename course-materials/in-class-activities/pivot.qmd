@@ -1,0 +1,74 @@
+---
+title: Pivot Practice
+author: Nic Schwab 
+---
+
+```{r setup,  message=FALSE}
+knitr::opts_chunk$set(message = FALSE,echo=FALSE)
+
+library(fivethirtyeight)
+library(tidyverse)
+#When you get to problem 3 uncomment this library.
+#library(countrycode) 
+options(scipen = 10 )
+
+```
+
+We'll tidy up the `drinks` data frame from `fivethirtyeight` and the `billboard` dataframe from `tidyr`. Then we'll join the codelist data frame to the world_bank_pop to show how the world population has changed over time.
+
+## Problem 1: Heavy Drinkers
+
+Goal: Pivot longer the `drinks` dataframe. Make a bar plot of the top four most intoxicated countries (I ended up using geom_col). 
+
+-   `rename()` the columns to drop the "*servings".*
+
+-   Drop the `total_litres_column`.
+
+-   Pivot and save the new data frame. 
+
+```{r pivot_drinks}
+
+  
+```
+
+-   Plot a bar graph for the top 4 alcohol drinking countries and set position = "dodge" in the atheistic.
+
+```{r graph_top_4}
+
+```
+
+
+## Problem 2: Toping the charts. 
+
+Goal: Find out which artist topped the charts longest in the year 2000. 
+
+Take the `billboard` data frame and tell me which song was in the one spot of the charts for longest. 
+
+Hint: If you tell R cols= wk1:wk76 it'll know you mean all columns between those weeks.
+
+```{r topping_the_charts}
+
+
+```
+
+
+
+## Problem 3: Populations are growing. 
+
+Goal: We'll use the `codelist` dataframe and `world_bank_pop` dataframe to make a point plot of each continents populations by year. You will need to install the country code  run install.packages("countrycode") in the console (not in the markdown file) to install the `countrycode` package.
+
+
+Using both an inner_join(), a pivot_longer(), and a few verbs make a point plot showing how the total population of each continent changes between 2000 and 2017.
+
+```{r codelist}
+# This will limit the codelist dataframe to just three easy to read rows. 
+
+codelist_subset <- codelist |> 
+  select(continent,country.name.en, cowc)
+```
+
+```{r population_growth_by_continents}
+#This will get you started with the point plot. 
+
+
+```
