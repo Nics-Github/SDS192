@@ -43,7 +43,8 @@ h1{font-weight: 400;}
 -   **Contact Info:**\
     `r fontawesome::fa("at")` [nschwab\@smith.edu](mailto:nschwab@smith.edu)\
     `r fontawesome::fa("phone")` 413-585-3440\
-    `r fontawesome::fa("github")` [Nics-Github](http://www.github.com/Nics-Github) `r fontawesome::fa("video")` [nschwab](https://smith.zoom.us/j/8227449694)
+    `r fontawesome::fa("github")` [Nics-Github](http://www.github.com/Nics-Github) 
+    `r fontawesome::fa("video")` [nschwab](https://smith.zoom.us/j/8227449694)
 
 -   **Office location:** McConnell 213
 
@@ -58,20 +59,15 @@ Morning Section
 
 Afternoon Section
 
--   M: 1:40 AM - 11:55 / Sabin- Reed 301 WF: 1:20 AM - 12:35 / Sabin- Reed 301
+-   M: 1:40 AM - 11:55 / Sabin- Reed 301 
+-   WF: 1:20 AM - 12:35 / Sabin- Reed 301
 ```
 
 -   **Getting help**:
 
     -   For non personal/sensitive questions, ask on the `#questions` channel on Slack. For personal/sensitive matters, Slack DM Professor Schwab.
 
-    -   Prof. Schwab's student question hours:
-
-        -   W 12:15 - 1:15 pm
-
-        -   F 12:15 - 1:15 pm
-
-        -   Request a zoom appointment.
+    -   [Student hours](/course-materials/schwab.html)
 
     -   [Spinelli Center](https://www.smith.edu/academics/spinelli-center/tutoring)
 

@@ -45,7 +45,7 @@ website:
     - text: Syllabus
       href: ./course-materials/syllabus/syllabus.html
     - text: Schwab
-      href: course-materials/schwab.qmd
+      href: ./schwab.qmd
   #  - icon: fa-github fa-lg
   #    href: https://github.com/rudeboybert/SDS192
   

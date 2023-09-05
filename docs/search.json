@@ -37,9 +37,9 @@
   {
     "objectID": "readme.html",
     "href": "readme.html",
-    "title": "SDS 192 Fall '23",
+    "title": "MTH 190",
     "section": "",
-    "text": "Source code to generate the course webpage for Holyoke Community College HCC 190: Introduction to Data Science https://nics-github.github.io/MTH_190/. Most of the content is in either:\n\n_quarto.yml: Set theme of webpage along with links in navigational bar.\nindex.qmd: A single Moodle-style page that lists all announcements and lectures notes in reverse-chronological order.\nPS.qmd: All problem sets/homeworks.\nprojects.qmd: Details on the mini-projects and term project.\nsyllabus.qmd: Course info/description, topics, materials, evaluation, and expectations.\n\n\n\nThis webpage is built/compiled using R Markdown Websites. To compile this webpage for yourself, do the following:\n\nGet the contents of this directory/repository:\n\nIf you are not familiar with GitHub, click the green “Clone or download” button on the top-right -> Download ZIP -> Unzip SDS192-master.zip.\nIf you are familiar with GitHub, clone this repository.\n\nDouble-click the SDS192.Rproj to open RStudio.\nIf you haven’t already, install the following R packages:\n\nrmarkdown and devtools\nAt the top of index.Rmd: all CRAN R packages listed .\nAt the top of index.Rmd: the emo and patchwork packages must be installed from GitHub using the devtools::install_github() function.\n\nGo to the “Build” pane of RStudio -> More -> Configure Build Tools… -> Ensure that “Project build tools” is set to “Webpage”.\nClick “Build Website”.\nThe website will display in the Viewer pane. The resulting index.html file and all other files for the webpage will be saved in the docs/ folder.\n\n\n\n\nTo publish/deploy this webpage and make it viewable on the web, you need to either:\n\nCopy the contents of the docs/ folder to your personal webpage or whatever domain hosting service you use.\nUse GitHub pages as I do. RStudio’s R Markdown Websites page gives instructions on how.\n\n\n\n\nThe format for this site was borrowed from Albert Kim’s SDS 192 course\nIf not created by me or referred to in some other way the activities and projects for this course are from:\n\nThe above mentioned website\nData Science in a box.\nBen Baumer’s SDS 192 course page"
+    "text": "Source code to generate the course webpage for Holyoke Community College HCC 190: Introduction to Data Science https://nics-github.github.io/MTH_190/. Most of the content is in either:\n\n_quarto.yml: Set theme of webpage along with links in navigational bar.\nindex.qmd: A single Moodle-style page that lists all announcements and lectures notes in reverse-chronological order.\nPS.qmd: All problem sets/homeworks.\nprojects.qmd: Details on the mini-projects and term project.\nsyllabus.qmd: Course info/description, topics, materials, evaluation, and expectations.\n\n\n\nThis webpage is built/compiled using R Markdown Websites. To compile this webpage for yourself, do the following:\n\nGet the contents of this directory/repository:\n\nIf you are not familiar with GitHub, click the green “Clone or download” button on the top-right -&gt; Download ZIP -&gt; Unzip SDS192-master.zip.\nIf you are familiar with GitHub, clone this repository.\n\nDouble-click the SDS192.Rproj to open RStudio.\nIf you haven’t already, install the following R packages:\n\nrmarkdown and devtools\nAt the top of index.Rmd: all CRAN R packages listed .\nAt the top of index.Rmd: the emo and patchwork packages must be installed from GitHub using the devtools::install_github() function.\n\nGo to the “Build” pane of RStudio -&gt; More -&gt; Configure Build Tools… -&gt; Ensure that “Project build tools” is set to “Webpage”.\nClick “Build Website”.\nThe website will display in the Viewer pane. The resulting index.html file and all other files for the webpage will be saved in the docs/ folder.\n\n\n\n\nTo publish/deploy this webpage and make it viewable on the web, you need to either:\n\nCopy the contents of the docs/ folder to your personal webpage or whatever domain hosting service you use.\nUse GitHub pages as I do. RStudio’s R Markdown Websites page gives instructions on how.\n\n\n\n\nThe format for this site was borrowed from Albert Kim’s SDS 192 course\nIf not created by me or referred to in some other way the activities and projects for this course are from:\n\nThe above mentioned website\nData Science in a box.\nBen Baumer’s SDS 192 course page"
   },
   {
     "objectID": "about.html",
@@ -67,7 +67,7 @@
     "href": "course-materials/syllabus/syllabus.html",
     "title": "Syllabus",
     "section": "",
-    "text": "Course title: SDS 192: Introduction to Data Science\nContact Info:\n nschwab@smith.edu\n 413-585-3440\n Nics-Github  nschwab\nOffice location: McConnell 213\nEmail: nschwab@smith.edu\nMeeting locations/times:\n\nMorning Section\n-   MWF: 10:50 AM - 11:05 PM / Sabin-Reed 220\n\nAfternoon Section\n\n-   M: 1:40 AM - 11:55 / Sabin- Reed 301 WF: 1:20 AM - 12:35 / Sabin- Reed 301\n\nGetting help:\n\nFor non personal/sensitive questions, ask on the #questions channel on Slack. For personal/sensitive matters, Slack DM Professor Schwab.\nProf. Schwab’s student question hours:\n\nW 12:15 - 1:15 pm\nF 12:15 - 1:15 pm\nRequest a zoom appointment.\n\nSpinelli Center\n\n\n\n\n\nI will respond to Slack messages sent during the week within 24h. I will respond to Slack messages sent during the weekend at my own discretion.\nIf possible, please only Slack me with briefer and administrative questions; I prefer having more substantive conversations in person as it takes me less energy to understand where you are at.\nI will do my best to return all grading as promptly as possible."
+    "text": "Course title: SDS 192: Introduction to Data Science\nContact Info:\n nschwab@smith.edu\n 413-585-3440\n Nics-Github  nschwab\nOffice location: McConnell 213\nEmail: nschwab@smith.edu\nMeeting locations/times:\n\nMorning Section\n-   MWF: 10:50 AM - 11:05 PM / Sabin-Reed 220\n\nAfternoon Section\n\n-   M: 1:40 AM - 11:55 / Sabin- Reed 301 \n-   WF: 1:20 AM - 12:35 / Sabin- Reed 301\n\nGetting help:\n\nFor non personal/sensitive questions, ask on the #questions channel on Slack. For personal/sensitive matters, Slack DM Professor Schwab.\nStudent hours\nSpinelli Center\n\n\n\n\n\nI will respond to Slack messages sent during the week within 24h. I will respond to Slack messages sent during the weekend at my own discretion.\nIf possible, please only Slack me with briefer and administrative questions; I prefer having more substantive conversations in person as it takes me less energy to understand where you are at.\nI will do my best to return all grading as promptly as possible."
   },
   {
     "objectID": "course-materials/syllabus/syllabus.html#projects-40",
@@ -214,7 +214,7 @@
     "href": "course-materials/schwab.html#student-hours",
     "title": "Nic Schwab",
     "section": "Student Hours",
-    "text": "Student Hours\n\nWednesdays from 12:15 pm – 1:15 pm ET in McConnell 213\nFridays from 12:15 pm – 1:15 pm ET in McConnell 213\nby appointment (either in McConnell 213 or via Zoom)"
+    "text": "Student Hours\nDrop into the office: Wednesdays and Friday from 12:15 – 1:15 pm in McConnell 213\nBy Appointment (schedule between 12 hours and 7 days in advance) Tuesday and Thursday 9:00 – 10:15 am\nPlease let me know if the above times do not work for your schedule and we can coordinate another time."
   },
   {
     "objectID": "course-materials/schwab.html#education",
@@ -236,5 +236,68 @@
     "title": "Syllabus",
     "section": "Policies",
     "text": "Policies\n\nInclusion\n\n\n\n\n\n\nInclusion policy\n\n\n\nWe are committed to fostering a classroom environment where all students thrive. We are committed to affirming the identities, realities and voices of all students, especially those from historically marginalized or underrepresented backgrounds. We are dedicated to creating a space where everyone in the class is respected, is free from discrimination based on race, ethnicity, sexual orientation, religion, gender identity, disability status, and other identities, and feel welcome and ready to learn at your highest potential.\nIf you have any concerns or suggestions for how to make this class more inclusive, please reach out to your instructor.\nWe are here to support your learning and growth as data scientists and people!\n\n\n\n\nAttendance\nWe expect you attend class in person. If you choose to come to class, we expect your full attention. Please put your phone away during class unless otherwise directed.\nIn keeping with Smith’s core identity and mission as an in-person, residential college, SDS affirms College policy (as per the Provost and Dean of the College) that students will attend class in person. SDS courses will not provide options for remote attendance. Students who have been determined to require a remote attendance accommodation by the Office of Disability Services will be the only exceptions to this policy. As with any other kind of ADA accommodations, please notify your instructor during the first week of classes to discuss how we can meet your accommodations.\nIf you are unable to attend class for any reason, please follow the materials on the course website and check with another student about what happened in class.\n\n\nCollaboration\n\n\n\n\n\n\nWarning\n\n\n\nMuch of this course will operate on a collaborative basis, and you are expected and encouraged to work together with a partner or in small groups to study, complete labs, and prepare for exams. However, all work that you submit for credit must be your own. Copying and pasting sentences, paragraphs, or blocks of code from another student or from online sources is not acceptable and will receive no credit. No interaction with anyone but the instructors is allowed on any exams or quizzes.\n\n\n\n\nAcademic Honor Code Statement\nAll students, staff and faculty are bound by the Smith College Honor Code, which Smith has had since 1944.\n\nSmith College expects all students to be honest and committed to the principles of academic and intellectual integrity in their preparation and submission of course work and examinations. Students and faculty at Smith are part of an academic community defined by its commitment to scholarship, which depends on scrupulous and attentive acknowledgement of all sources of information, and honest and respectful use of college resources.\n\nCases of dishonesty, plagiarism, etc., will be reported to the Academic Honor Board.\n\n\nCode of Conduct\nAs the instructor and assistants for this course, we are committed to making participation in this course a harassment-free experience for everyone, regardless of level of experience, gender, gender identity and expression, sexual orientation, disability, personal appearance, body size, race, ethnicity, age, or religion. Examples of unacceptable behavior by participants in this course include the use of sexual language or imagery, derogatory comments or personal attacks, deliberate misgendering or use of “dead” names, trolling, public or private harassment, insults, or other unprofessional conduct.\nAs the instructor and assistants we have the right and responsibility to point out and stop behavior that is not aligned to this Code of Conduct. Participants who do not follow the Code of Conduct may be reprimanded for such behavior. Instances of abusive, harassing, or otherwise unacceptable behavior may be reported by contacting the instructor.\n\n\n\n\n\n\nImportant\n\n\n\nAll students, the instructor, the lab instructor, and all assistants are expected to adhere to this Code of Conduct in all settings for this course: lectures, labs, office hours, tutoring hours, and over Slack.\n\n\nThis Code of Conduct is adapted from the Contributor Covenant, version 1.0.0, available here."
+  },
+  {
+    "objectID": "course-materials/syllabus/syllabus.html#work-life-balance",
+    "href": "course-materials/syllabus/syllabus.html#work-life-balance",
+    "title": "Syllabus",
+    "section": "",
+    "text": "I will respond to Slack messages sent during the week within 24h. I will respond to Slack messages sent during the weekend at my own discretion.\nIf possible, please only Slack me with briefer and administrative questions; I prefer having more substantive conversations in person as it takes me less energy to understand where you are at.\nI will do my best to return all grading as promptly as possible."
+  },
+  {
+    "objectID": "index.html#footnotes",
+    "href": "index.html#footnotes",
+    "title": "SDS 192: Intro to Data Science",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nThis come from Chris Malone out of Winona State University. Link for more.↩︎"
+  },
+  {
+    "objectID": "readme.html#how-to-build-this-webpage",
+    "href": "readme.html#how-to-build-this-webpage",
+    "title": "MTH 190",
+    "section": "",
+    "text": "This webpage is built/compiled using R Markdown Websites. To compile this webpage for yourself, do the following:\n\nGet the contents of this directory/repository:\n\nIf you are not familiar with GitHub, click the green “Clone or download” button on the top-right -&gt; Download ZIP -&gt; Unzip SDS192-master.zip.\nIf you are familiar with GitHub, clone this repository.\n\nDouble-click the SDS192.Rproj to open RStudio.\nIf you haven’t already, install the following R packages:\n\nrmarkdown and devtools\nAt the top of index.Rmd: all CRAN R packages listed .\nAt the top of index.Rmd: the emo and patchwork packages must be installed from GitHub using the devtools::install_github() function.\n\nGo to the “Build” pane of RStudio -&gt; More -&gt; Configure Build Tools… -&gt; Ensure that “Project build tools” is set to “Webpage”.\nClick “Build Website”.\nThe website will display in the Viewer pane. The resulting index.html file and all other files for the webpage will be saved in the docs/ folder."
+  },
+  {
+    "objectID": "readme.html#how-to-publish-this-webpage",
+    "href": "readme.html#how-to-publish-this-webpage",
+    "title": "MTH 190",
+    "section": "",
+    "text": "To publish/deploy this webpage and make it viewable on the web, you need to either:\n\nCopy the contents of the docs/ folder to your personal webpage or whatever domain hosting service you use.\nUse GitHub pages as I do. RStudio’s R Markdown Websites page gives instructions on how."
+  },
+  {
+    "objectID": "readme.html#credit",
+    "href": "readme.html#credit",
+    "title": "MTH 190",
+    "section": "",
+    "text": "The format for this site was borrowed from Albert Kim’s SDS 192 course\nIf not created by me or referred to in some other way the activities and projects for this course are from:\n\nThe above mentioned website\nData Science in a box.\nBen Baumer’s SDS 192 course page"
+  },
+  {
+    "objectID": "schwab.html",
+    "href": "schwab.html",
+    "title": "Nic Schwab",
+    "section": "",
+    "text": "Nicholas Schwab is a visiting lecturer in Statistical and Data Sciences. He is a tenured professor at Holyoke Community College. When not teaching data science, he enjoys rock climbing, running, and reading children’s books to his kids."
+  },
+  {
+    "objectID": "schwab.html#student-hours",
+    "href": "schwab.html#student-hours",
+    "title": "Nic Schwab",
+    "section": "Student Hours",
+    "text": "Student Hours\nDrop into the office: Wednesdays and Friday from 12:15 – 1:15 pm in McConnell 213\nBy Appointment (schedule between 12 hours and 7 days in advance) Tuesday and Thursday 9:00 – 10:15 am\nPlease let me know if the above times do not work for your schedule and we can coordinate another time."
+  },
+  {
+    "objectID": "schwab.html#education",
+    "href": "schwab.html#education",
+    "title": "Nic Schwab",
+    "section": "Education",
+    "text": "Education\n\nMS in Data Science (~2026)\nUniversity of Texas at Austin\nAustin, Texas\nMA in Mathematics (2009)\nAppalchain State University\nBoone, NC\nBA in Mathematics (2007)\nUC Santa Cruz\nSanta Cruz, CA"
+  },
+  {
+    "objectID": "schwab.html#experience",
+    "href": "schwab.html#experience",
+    "title": "Nic Schwab",
+    "section": "Experience",
+    "text": "Experience\n\nProfessor of Mathematics\nHolyoke Community College\nHolyoke, MA 2014–2023"
   }
 ]

@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Nicholas Schwab">
-<meta name="dcterms.date" content="2023-09-05">
 
-<title>SDS 192 Fall ’23 - SDS 192: Intro to Data Science</title>
+<title>SDS 192 Fall ’23 - Nic Schwab</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -35,7 +33,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
@@ -60,12 +57,11 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Submit"
   }
 }</script>
-<style>html{ scroll-behavior: smooth; }</style>
 
 
 </head>
 
-<body class="floating nav-fixed">
+<body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -116,7 +112,7 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Syllabus</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./schwab.html" rel="" target="">
+    <a class="nav-link active" href="./schwab.html" rel="" target="" aria-current="page">
  <span class="menu-text">Schwab</span></a>
   </li>  
 </ul>
@@ -129,251 +125,82 @@ ul.task-list li input[type="checkbox"] {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
-    <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#schedule" id="toc-schedule" class="nav-link active" data-scroll-target="#schedule">Schedule</a></li>
-  <li><a href="#day-1-first-day-of-class" id="toc-day-1-first-day-of-class" class="nav-link" data-scroll-target="#day-1-first-day-of-class">Day 1: First Day of Class</a></li>
-  </ul>
-</nav>
-</nav>
-<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-    </div>
+    
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
+<div class="quarto-about-trestles">
+  <div class="about-entity">
+    <img src="./images/self.jpg" class="about-image
+  rounded " style="width: 20em;">
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">SDS 192: Intro to Data Science</h1>
+<h1 class="title">Nic Schwab</h1>
 </div>
-
-
-
 <div class="quarto-title-meta">
-
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Nicholas Schwab </p>
-          </div>
   </div>
-    
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">September 5, 2023</p>
-    </div>
-  </div>
-  
-    
-  </div>
-  
-
 </header>
-
-<style>
-h1{font-weight: 400;}
-</style>
-<style>
-h1{font-weight: 400;}
-</style>
-<section id="schedule" class="level1">
-<h1>Schedule</h1>
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRK1_TZx6LCqC0Wfddr2T0Sb7sX0R1zuoAesmj-TYpXtMpikenrIqQz4LHmk83PFYF1Yk4MjQB14aec/pubhtml?gid=0&amp;single=false&amp;widget=true&amp;headers=false&amp;gid=0&amp;range=A1:D2" width="100%" height="200">
-</iframe>
-<!-- # Day 26: Final project work. -->
-<!-- Just working the final project today.  -->
-<!-- # Day 25: More maps with leaflet.  -->
-<!-- UMass $10,000 dollar/year scholarship to study Informatics, let me know if you want more info. -->
-<!-- -   more maps -->
-<!-- -   provider tiles -->
-<!-- -   slides  -->
-<!-- [Final Project](./course-materials/project-instructions/final-project.html) due Tuesday Dec 20 at midnight. Presentation of project is Wednesday Dec 21 at 10:30am.  -->
-<!-- # Day 24: Maps with ggplot2 and leaflet.  -->
-<!-- We'll be working from [this site](./course-materials/lectures/maps-ggplot.html) today.  -->
-<!-- # Day 23: SQL Project Day  -->
-<!-- Time to work on Project 3 -->
-<!-- # Day 22: More SQL  -->
-<!-- -   Review problems 1,2,3 and 5 from chapter 15 -->
-<!-- -   Short Lecture?  -->
-<!-- -   [Project 3](./course-materials/project-instructions/project-3/project3.html) -->
-<!-- # Day 21: Intro to SQL and dbplyr() -->
-<!-- -   [Example](./course-materials/lectures/SQL-example-yelp.html) -->
-<!-- -   Try Problems 1,2,3 and 5 from chapter 15 with dbplyr and SQL -->
-<!-- -   A [Cheatsheet](https://s3.amazonaws.com/assets.datacamp.com/email/other/SQL+for+Data+Science.pdf) and here's [another one](https://intellipaat.com/blog/wp-content/uploads/2022/10/SQL-Commands-Cheat-Sheet-2022.jpg) -->
-<!-- # Day 20: Scraping Data -->
-<!-- -   Discuss Pivot Practice. -->
-<!-- -   [Scraping from website example](./course-materials/lectures/scrape-data.html)  -->
-<!-- -   MDSR Chapter 6 Problem 3 and 4 for homework 6 due Monday. -->
-<!-- # Day 19: Tidy Data Pivot Practice -->
-<!-- [Just Pivot practice with this assignment](https://github.com/MTH190/Pivot_practice) -->
-<!-- Clone the assignment by visiting the link above.  -->
-<!-- # Day 18: Tidy Data -->
-<!-- -   45 minutes on tidy data with [hw-05](https://github.com/MTH190/hw-05) -->
-<!-- -   30 minutes on project  -->
-<!-- -   No class on Friday Nov 11th or Nov 23rd -->
-<!-- # Day 17: Continue working on Project 2 -->
-<!-- -   Comment your data with `#` -->
-<!-- -   Use pull to save data to avoid retyping.  -->
-<!-- -   I'll continue to check slack and github to give feedback. -->
-<!-- # Day 16: Project 2 -->
-<!-- Github: -->
-<!-- -   Together: Push to github HW-03, HW-04, and Project-1. -->
-<!-- Remember: -->
-<!-- -   **pull** new changes -->
-<!-- -   make edits on your computer -->
-<!-- -   **commit** your local changes -->
-<!--     -   this step may be repeated -->
-<!-- -   **pull** again to avoid merge conflicts -->
-<!-- -   **push** your commit(s) to GitHub -->
-<!-- [FEC Data Lecture](./course-materials/lectures/mdsr-wrangling-fec20.html) -->
-<!-- [Project 2](./course-materials/project-instructions/project-2/project-2-fec-20.html) -->
-<!-- Project 2 teams: -->
-<!-- -   Ajani, Ida, Magdalena -->
-<!-- -   James & Kathrine -->
-<!-- # Day 15: Work on HW 4. -->
-<!-- Questions on HW 4 -->
-<!-- Point out the tidyverse [Coding Style Guide](https://style.tidyverse.org/) -->
-<!-- -   [Files](https://style.tidyverse.org/files.html) -->
-<!-- -   [Syntax](https://style.tidyverse.org/syntax.html) -->
-<!-- -   [Pipes](https://style.tidyverse.org/pipes.html) -->
-<!-- -   [ggplot2](https://style.tidyverse.org/ggplot2.html) -->
-<!-- Practice: Merge Conflicts with github together -->
-<!-- In preparation for Project 2: `install.packages("remotes")` `remotes::install_github("baumer-lab/fec20")` -->
-<!-- # Day 14: Ok Really Start HW 4 -->
-<!-- Discuss Problems 1 and 3 from Chapter 5 -->
-<!-- Start work on HW 4 -->
-<!-- [Problem 3 solution](./MY-MDSR-SOLUTIONS/Chapter%205%20Problems/Chapter%205%20Problems/Problem-3-new.html) -->
-<!-- # Day 13: More Practice -->
-<!-- Push HW 3 to Github -->
-<!-- Discuss Problems 1 and 3 from Chapter 5 -->
-<!-- # Day 12: Joins -->
-<!-- ## [The Joins](./course-materials/lectures/mdsr-the-joins.html) -->
-<!-- Try [Chapter 5 problems 1, 3 and 4](https://mdsr-book.github.io/mdsr2e/ch-join.html#join-exercises) start in class continue for homework we'll discuss Friday -->
-<!-- # Day 11: Project 1 workday and group_by() -->
-<!-- ## [group_by() (and rename)](./course-materials/lectures/mdsr-group_by-and-rename.html) -->
-<!-- ## Project_time -->
-<!-- # Day 10: Project 1 -->
-<!-- Discuss exercises 1,2,3,5 and 6 from chapter 4. -->
-<!-- ## On Coding -->
-<!-- [learning to code](./course-materials/lectures/mdsr-learning-to-code.html) -->
-<!-- ## Project 1 -->
-<!-- Copy it from github. [Here's the outline](./course-materials/project-instructions/project-1/project-1-hcc-data-outline.html) -->
-<!-- # Day 9: The verbs -->
-<!-- [The Verbs](./docs/course-materials/lectures/mdsr-the-verbs.html) [The Verbs](./course-materials/lectures/mdsr-the-verbs.html) -->
-<!-- Discuss exercises 1,2,3 from chapter 4. -->
-<!-- Problem 5 and 6 for Classwork -->
-<!-- [Chapter 3: Problem 3 and 7](https://mdsr-book.github.io/mdsr2e/ch-vizII.html#datavizII-exercises) -->
-<!-- # Day 8: Class is cancelled but... -->
-<!-- ## I expect you to do the reading and try problem 1,2, and 3 from chapter 4. -->
-<!-- I made you the dataframe for exercise 4.4 number 1 so you can play with the code. You can copy it from [here.](./course-materials/in-class-activities/chapter-4-problem-1.html) We'll discuss this problem, number 2 and also 3 on Friday. -->
-<!-- # Day 7: Discuss Homework -->
-<!-- ## Go over interesting bits from the homework: -->
-<!-- -   HW2 -->
-<!--     -   load(), inline code, nrow()\ -->
-<!--     -   question 4 and 5 -->
-<!-- -   HW3 -->
-<!--     -   brief analysis of code -->
-<!--     -   stuck anywhere? -->
-<!-- ### Practice: -->
-<!-- [Chapter 3: Problem 3 and 7](https://mdsr-book.github.io/mdsr2e/ch-vizII.html#datavizII-exercises) -->
-<!-- # Day 6: Color and Grammar of Graphics -->
-<!-- ## [Color lecture](./course-materials/lectures/mdsr_color.html) -->
-<!-- ## [Grammar of graphics](./course-materials/lectures/mdsr-grammar-of-graphics.html) -->
-<!-- ## Activity -->
-<!-- -   [We'll do problems 3.1 #1 and 3 in class](https://mdsr-book.github.io/mdsr2e/ch-vizII.html#datavizII-exercises) -->
-<!-- # Day 5: Digestion Day -->
-<!-- ## Let us talk about these -->
-<!-- -   [Chapter 2 Take Aways](https://docs.google.com/document/d/184nd7HdObXgeyuq7TUHYXjThkHWc0O45GDD1BG1m40E/edit?usp=sharing) -->
-<!-- -   Discuss [Problems 1 & 6 & 3](https://mdsr-book.github.io/mdsr2e/ch-vizI.html#datavizI-exercises) -->
-<!-- -   Discuss [Lab_01](./course-materials/lab-instructions/lab-01/lab-01-plastic-waste.html) -->
-<!-- -   Quick check in [HW 02](./course-materials/hw-instructions/hw-02/hw-02-airbnb-edi.html) -->
-<!-- ## [Color exercise](./course-materials/in-class-activities/Color_exercises.html) -->
-<!-- # Day 4: Using GGplot -->
-<!-- ## Activity: [Intro to ggplot2](./course-materials/in-class-activities/Activity-ggplot2.html) -->
-<!-- ## [Lab_01](./course-materials/lab-instructions/lab-01/lab-01-plastic-waste.html) -->
-<!-- # Day 3: Check in and Taxonomy -->
-<!-- ## Updates: -->
-<!-- -   Issues with some packages installing on Server: 'coronavirus', 'ggimage', 'dsbox' -->
-<!-- -   What times of the day do you do your homework. When would AJ's office hours work for you? -->
-<!-- ## Check in on HW 1 -->
-<!-- [HW 1 Take Aways](https://docs.google.com/document/d/1jtF58XftxCVLf8DMDsrDLyxKY752puwckm1d6db-CYo/edit?usp=sharing) -->
-<!-- HW 1 due by midnight tonight. -->
-<!-- ## Taxonomy -->
-<!-- [Lecture on Taxonomy](./course-materials/lectures/mdsr_viz_1_taxonomy.html) -->
-<!-- [Activity on Taxonomy](./course-materials/in-class-activities/Activity_Taxonomy_of_Graphics.html) -->
-<!-- ## Let's look at HW 2 -->
-<!-- [HW 02](./course-materials/hw-instructions/hw-02/hw-02-airbnb-edi.html) should be shared with you through github You have to clone the repo and use your token as a password. -->
-<!-- ## Get a NYTimes account -->
-<!-- [You get this free through HCC](https://www.hcc.edu/library/find-resources/databases-and-journals/nyt-login) -->
-<!-- # Day 2: Practicing with github and Rstudio -->
-<!-- ## The Knit-ty Gritty -->
-<!-- ### When you come to class: -->
-<!-- -   Log into HCC email account -->
-<!-- -   Go to course website -->
-<!-- -   Log into RStudio -->
-<!-- -   Open Slack -->
-<!-- ### Share with me your github username if you have not already. -->
-<!-- ## Summarize Reading -->
-<!-- [Preface to 1.4 document](https://docs.google.com/document/d/1HzpH8hSvPvoO7IvorYEl2jq3c4vaGTViWi-qdwexpxg/edit?usp=sharing) -->
-<!-- ## See Tips & Tricks -->
-<!-- [The six-fixes](https://docs.google.com/document/d/1P7IyZ4On9OlrCOhygFxjC7XhQqyw8OludwChz-uFd_o/edit) -->
-<!-- Help us help you: take screenshots of your screen and post them to Slack. -->
-<!-- -   macOS: Command+Shift+3 to take shot of whole screen, Command+Shift+4 to take subportion -->
-<!-- -   Windows: Shift-Windows Key-S and Snip & Sketch -->
-<!-- ## Activity -->
-<!-- [UNvotes](./course-materials/application-exercises/ae-01a-un-votes/unvotes.html) -->
-<!-- or -->
-<!-- [COVID-19](./course-materials/application-exercises/ae-01b-covid/covid.html) -->
-<!-- ## HW 1 should be shared with you via github. -->
-<!-- -   Check your email. -->
-<!-- -   I'd like to start this in class so we're on the same page. -->
-<!-- -   [Here's a link just in case, but don't click it](./course-materials/hw-instructions/hw-01/hw-01-pet-names.html) -->
+    <div class="about-links">
+  <a href="https://github.com/Nics-Github" class="about-link" rel="" target="">
+    <i class="bi bi-github"></i>
+     <span class="about-link-text">GitHub</span>
+  </a>
+  <a href="https://www.smith.edu/academics/faculty/nicholas-schwab" class="about-link" rel="" target="">
+    <i class="bi bi-bookmark"></i>
+     <span class="about-link-text">Smith</span>
+  </a>
+</div>
+  </div>
+  <div class="about-contents"><main class="content" id="quarto-document-content">
+<p><strong>Nicholas Schwab</strong> is a visiting lecturer in Statistical and Data Sciences. He is a tenured professor at Holyoke Community College. When not teaching data science, he enjoys rock climbing, running, and reading children’s books to his kids.</p>
+<section id="student-hours" class="level2">
+<h2 data-anchor-id="student-hours">Student Hours</h2>
+<p><strong>Drop into the office:</strong> Wednesdays and Friday from 12:15 – 1:15 pm in McConnell 213</p>
+<p><strong>By Appointment</strong> (schedule between 12 hours and 7 days in advance) Tuesday and Thursday 9:00 – 10:15 am</p>
+<p>Please let me know if the above times do not work for your schedule and we can coordinate another time.<br>
+<!-- Google Calendar Appointment Scheduling begin --> <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet"></p>
+<script src="https://calendar.google.com/calendar/scheduling-button-script.js" async=""></script>
+<script>
+(function() {
+  var target = document.currentScript;
+  window.addEventListener('load', function() {
+    calendar.schedulingButton.load({
+      url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ1iIHImPBba_fFowl9qbN1tFoRCcEGTpc1nzat2Hys-0tM-MPbMsMIQQwqtBxSMRV2dcFZ9KIZ2?gv=true',
+      color: '#039BE5',
+      label: 'Book an appointment',
+      target,
+    });
+  });
+})();
+</script>
+<!-- end Google Calendar Appointment Scheduling -->
 </section>
-<section id="day-1-first-day-of-class" class="level1">
-<h1>Day 1: First Day of Class</h1>
-<section id="syllabus" class="level2">
-<h2 class="anchored" data-anchor-id="syllabus">Syllabus</h2>
-<p>There is a link at the top of the page for the syllabus. <a href="./course-materials/syllabus/syllabus.html">It is also here.</a></p>
-</section>
-<section id="slack" class="level2">
-<h2 class="anchored" data-anchor-id="slack">Slack</h2>
-<p><a href="">This class has a Slack channel</a>. Its invite only. Check your e-mail I invited you to the channel on Monday. If you’ve got questions post them to Slack. I’ve introduced myself on Slack, your first assignment is to do that too.</p>
-</section>
-<section id="names-and-surveys" class="level2">
-<h2 class="anchored" data-anchor-id="names-and-surveys">Names and Surveys</h2>
-<p><a href="./course-materials/first-day-survey/first-day-survey.html">Survey Questions</a></p>
-</section>
-<section id="no-computer-data-science" class="level2">
-<h2 class="anchored" data-anchor-id="no-computer-data-science">No computer data science</h2>
-<ol type="1">
-<li><p><a href="https://statsclass.org/dsci210/Dataverbs/DataVerb_Activity.pdf">Snowshoes</a><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> Hint: Don’t open this yet.</p></li>
-<li><p>Hand drawn graphs of survey questions.</p></li>
-</ol>
-</section>
-<section id="general-questions-and-comments" class="level2">
-<h2 class="anchored" data-anchor-id="general-questions-and-comments">General Questions and Comments</h2>
-<p>Homework:</p>
+<section id="education" class="level2">
+<h2 data-anchor-id="education">Education</h2>
 <ul>
-<li><p>In slack- post about yourself (check your email for a slack invitation). Include somethings you want to tell people and your github username. sign up for <a href="https://github.com/">github here</a>, if you haven’t already.</p></li>
-<li><p>Start reading the prolouge of MDSR.</p></li>
+<li>MS in Data Science (~2026)<br>
+<a href="https://cdso.utexas.edu/msds">University of Texas at Austin</a><br>
+Austin, Texas</li>
+<li>MA in Mathematics (2009)<br>
+<a href="https://mathsci.appstate.edu/">Appalchain State University</a><br>
+Boone, NC</li>
+<li>BA in Mathematics (2007)<br>
+<a href="https://www.math.ucsc.edu/">UC Santa Cruz</a><br>
+Santa Cruz, CA</li>
+</ul>
+</section>
+<section id="experience" class="level2">
+<h2 data-anchor-id="experience">Experience</h2>
+<ul>
+<li>Professor of Mathematics<br>
+<a href="https://www.hcc.edu">Holyoke Community College</a><br>
+Holyoke, MA 2014–2023</li>
 </ul>
 
 
 </section>
-</section>
-
-
-<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
-
-<ol>
-<li id="fn1"><p>This come from Chris Malone out of Winona State University. <a href="http://www.statsclass.org/uscots2023/">Link for more.</a><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section></div></main> <!-- /main -->
+</main></div>
+</div>
+ <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -394,13 +221,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
-  const icon = "";
-  const anchorJS = new window.AnchorJS();
-  anchorJS.options = {
-    placement: 'right',
-    icon: icon
-  };
-  anchorJS.add('.anchored');
   const isCodeAnnotation = (el) => {
     for (const clz of el.classList) {
       if (clz.startsWith('code-annotation-')) {                     
@@ -628,5 +448,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-<script src="site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>
