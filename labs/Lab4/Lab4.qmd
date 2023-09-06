@@ -1,0 +1,165 @@
+---
+title: "SDS192 Lab 4"
+author: Section WRITE YOUR SECTION NUMBER HERE - WRITE YOUR NAME HERE
+output:
+  html_document
+---
+
+```{r, include=FALSE}
+# Do not edit this code block/chunk
+knitr::opts_chunk$set(echo = TRUE, message=FALSE, warning = FALSE)
+```
+
+# Step 1: Install and Load Packages
+
+In your console install the `babynames` package and the `fivethirtyeight` package:
+
+`install.packages("babynames")`
+`install.packages("fivethirtyeight")`
+
+Then load the packages for this lab by running the code below. 
+
+```{r}
+library(tidyverse)
+library(babynames)
+library(fivethirtyeight)
+```
+
+# `babynames`
+
+The `babynames` dataset contains for each year from 1880 to 2017 the number of children of each sex given each name (as recorded by the US Social Security Administration). All names with more than 5 uses are given.
+
+For this lab, we’ll restrict consideration to only the names “Riley” and “Casey”. Consider the following visualization:
+
+(Full size image in the images folder.)
+
+![](images/Lab4_babynames.png)
+
+# Step 2: Recreate the Given Image Above
+
+## Part a)
+
+Perform the data wrangling necessary to transform the `babynames` data frame included in the `babynames` package into a new data frame called `babynames_riley_casey` that will allow us to create the visualization.
+
+**Hint**: I recommend you first draw on a piece of paper what the data frame should look like; that way you'll know what your target looks like and when you've hit it.
+
+Write your data wrangling pseudocode first.
+
+
+
+
+
+```{r}
+# Write your code below
+
+```
+
+## Part b)
+
+Recreate the image above *exactly* including all the labels.
+
+```{r}
+# Write your code below
+
+```
+
+# Step 3: Recreate the Given Image Above but Limit It to Years 1960 and Later
+
+## Part a)
+
+Perform the data wrangling necessary to transform the `babynames` data frame included in the `babynames` package into a new data frame `babynames_riley_casey_1960_later` that only has data for 1960 or later.
+
+Write your data wrangling pseudocode first.
+
+
+
+
+
+```{r}
+# Write your code below
+
+```
+
+## Part b)
+
+Create the same version of the visualization as in Step 2 Part b), but for the `babynames_riley_casey_1960_later` data frame and with `"forestgreen"` and `"orange"` lines for female and male respectively. This time, the x-axis should only be for years 1960 and later, as saved in the `babynames_riley_casey_1960_later` data frame.
+
+```{r}
+# Write your code below
+
+```
+
+# `fivethirtyeight`
+
+In this lab, you'll be analyzing the age of members of the United States congress over the years. The data of interest is saved in the `congress_age` data frame included in the `fivethirtyeight` package. To understand the data's context, first read:
+
+* The original FiveThirtyEight [article](https://fivethirtyeight.com/features/both-republicans-and-democrats-have-an-age-problem/) the data was used in. In particular the first visualization titled "Average Age of Members of Congress"
+* The help file for the `congress_age` data frame by running `??congress_age` in the console.
+
+# Step 4: Data Wrangling 1
+
+Take the `congress_age` data frame and perform the data wrangling necessary to create the first visualization in the article. Save the output in a data frame called `avg_congress_age`. Hint: `avg_congress_age` should have 68 rows and 3 variables: `termstart`, `party`, and `mean_age`.
+
+Write your data wrangling pseudocode first.
+
+
+
+
+
+```{r}
+# Write your code below
+
+```
+
+# Step 5: Data Wrangling 2
+
+Take the `avg_congress_age` data frame and perform the data wrangling necessary to create a new variable `mean_age_months` that has the mean age of congress members in months. Overwrite the original `avg_congress_age` data frame that had 68 rows and 3 variables with this new data frame that has 68 rows and 4 variables. 
+
+Write your data wrangling pseudocode first.
+
+
+
+
+
+```{r}
+# Write your code below
+
+```
+
+# Step 6: Data Visualization
+
+Using the `avg_congress_age` data frame, use `ggplot2` to recreate the first visualization in the article as follows:
+
+* The values and colors of the lines should match. The legend should be the standard ggplot2 legend.
+* The title and subtitle should match. Add the appropriate axes labels.
+* Make the y-axis start at 40 and end at 60. Hint: Use the [ggplot2 cheatsheet](https://github.com/rstudio/cheatsheets/blob/main/data-visualization-2.1.pdf).
+
+In other words, your plot should look like:
+
+(Full size image in the images folder.)
+
+![](images/Lab4_congress.png)
+
+```{r}
+# Write your code below
+
+```
+
+# Step 7: Data Wrangling 3
+
+In what percentage of congress members were the individuals aged 25-55? (Some congress members are counted multiple times in the `congress_age` data frame, but we're interested in the age when they started each term, so you can count the number of congress members as it is.)
+
+Write your data wrangling pseudocode first.
+
+
+
+
+
+```{r}
+# Write your code below
+
+```
+
+# Step 8: Weekly Reflections
+
+Fill out this week's reflections Google form to receive credit.
