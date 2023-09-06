@@ -3,7 +3,7 @@ title: "Nic Schwab"
 about:
   id: schwab
   template: trestles
-  image: "/images/self.jpg"
+  image: "self.jpg"
   links:
 
     - icon: github

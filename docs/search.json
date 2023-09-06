@@ -11,7 +11,7 @@
     "href": "index.html#slack",
     "title": "SDS 192: Intro to Data Science",
     "section": "Slack",
-    "text": "Slack\nThis class has a Slack channel. Its invite only. Check your e-mail I invited you to the channel on Monday. If you’ve got questions post them to Slack. I’ve introduced myself on Slack, your first assignment is to do that too."
+    "text": "Slack\nThis class has a Slack channel. Check your e-mail I invited you to the channel on Monday. If you’ve got questions post them to Slack. I’ve introduced myself on Slack, your first assignment is to do that too."
   },
   {
     "objectID": "index.html#names-and-surveys",
@@ -32,7 +32,7 @@
     "href": "index.html#general-questions-and-comments",
     "title": "SDS 192: Intro to Data Science",
     "section": "General Questions and Comments",
-    "text": "General Questions and Comments\nHomework:\n\nIn slack- post about yourself (check your email for a slack invitation). Include somethings you want to tell people and your github username. sign up for github here, if you haven’t already.\nStart reading the prolouge of MDSR."
+    "text": "General Questions and Comments\nHomework:\n\nIn slack- post about yourself (check your email for a slack invitation). Include somethings you want to tell people and your github username. sign up for github here, if you haven’t already.\nStart reading the prolouge we’re ."
   },
   {
     "objectID": "readme.html",
@@ -299,5 +299,131 @@
     "title": "Nic Schwab",
     "section": "Experience",
     "text": "Experience\n\nProfessor of Mathematics\nHolyoke Community College\nHolyoke, MA 2014–2023"
+  },
+  {
+    "objectID": "course-materials/first-day-survey/Data-Viz-No-Graphs.html#names-and-surveys",
+    "href": "course-materials/first-day-survey/Data-Viz-No-Graphs.html#names-and-surveys",
+    "title": "No computers Data Viz",
+    "section": "Names and Surveys",
+    "text": "Names and Surveys\nSurvey Questions"
+  },
+  {
+    "objectID": "course-materials/first-day-survey/Data-Viz-No-Graphs.html#data-viz-no-computers",
+    "href": "course-materials/first-day-survey/Data-Viz-No-Graphs.html#data-viz-no-computers",
+    "title": "No computers Data Viz",
+    "section": "Data Viz no computers",
+    "text": "Data Viz no computers\nSheets data\n\nData Frame\nObservations\nTidy Data\nVariables\nVariable Types"
+  },
+  {
+    "objectID": "course-materials/first-day-survey/Data-Viz-No-Graphs.html#take-1-hand-drawn-graphs-of-survey-questions.",
+    "href": "course-materials/first-day-survey/Data-Viz-No-Graphs.html#take-1-hand-drawn-graphs-of-survey-questions.",
+    "title": "No computers Data Viz",
+    "section": "Take 1: Hand drawn graphs of survey questions.",
+    "text": "Take 1: Hand drawn graphs of survey questions.\nDraw a graph of a variable. Do not write your name.\n\nIt does not need to be perfect.\nTry to make it correct.\n\nIt is fine if its not correct."
+  },
+  {
+    "objectID": "course-materials/first-day-survey/Data-Viz-No-Graphs.html#form-small-groups-of-4",
+    "href": "course-materials/first-day-survey/Data-Viz-No-Graphs.html#form-small-groups-of-4",
+    "title": "No computers Data Viz",
+    "section": "Form small groups of 4",
+    "text": "Form small groups of 4\nAnswer these questions:\n\nIs the graph’s message or story clear?\nWhat is missing from each graph?\nWhat is distracting from the graph?\nWhat does the graph do well?"
+  },
+  {
+    "objectID": "course-materials/first-day-survey/Data-Viz-No-Graphs.html#what-makes-a-clear-graph",
+    "href": "course-materials/first-day-survey/Data-Viz-No-Graphs.html#what-makes-a-clear-graph",
+    "title": "No computers Data Viz",
+    "section": "What makes a clear graph?",
+    "text": "What makes a clear graph?\nClass discussion."
+  },
+  {
+    "objectID": "course-materials/first-day-survey/Data-Viz-No-Graphs.html#take-2-hand-drawn-graphs-again",
+    "href": "course-materials/first-day-survey/Data-Viz-No-Graphs.html#take-2-hand-drawn-graphs-again",
+    "title": "No computers Data Viz",
+    "section": "Take 2: Hand Drawn Graphs again",
+    "text": "Take 2: Hand Drawn Graphs again\nChoose your favorite of the four graphs and as a group redraw it."
+  },
+  {
+    "objectID": "course-materials/first-day-survey/Data-Viz-No-Graphs.html#other-people-have-thought-about-this",
+    "href": "course-materials/first-day-survey/Data-Viz-No-Graphs.html#other-people-have-thought-about-this",
+    "title": "No computers Data Viz",
+    "section": "Other people have thought about this",
+    "text": "Other people have thought about this\nDo’s and Don’t\nTufte’s Data to Ink Ratio\nFlowing Data"
+  },
+  {
+    "objectID": "course-materials/first-day-survey/Data-Viz-No-Graphs.html#some-graphs-to-discuss-in-groups",
+    "href": "course-materials/first-day-survey/Data-Viz-No-Graphs.html#some-graphs-to-discuss-in-groups",
+    "title": "No computers Data Viz",
+    "section": "Some Graphs to discuss in groups",
+    "text": "Some Graphs to discuss in groups\nThe Economist’s Graph detail\nGraphs from the NYTimes"
+  },
+  {
+    "objectID": "index.html#data-viz-no-computers",
+    "href": "index.html#data-viz-no-computers",
+    "title": "SDS 192: Intro to Data Science",
+    "section": "Data Viz No Computers",
+    "text": "Data Viz No Computers"
+  },
+  {
+    "objectID": "course-materials/first-day-survey/Data-Viz-No-Computers.html#names-and-surveys",
+    "href": "course-materials/first-day-survey/Data-Viz-No-Computers.html#names-and-surveys",
+    "title": "No computers Data Viz",
+    "section": "Names and Surveys",
+    "text": "Names and Surveys\nSurvey Questions"
+  },
+  {
+    "objectID": "course-materials/first-day-survey/Data-Viz-No-Computers.html#data-viz-no-computers",
+    "href": "course-materials/first-day-survey/Data-Viz-No-Computers.html#data-viz-no-computers",
+    "title": "No computers Data Viz",
+    "section": "Data Viz no computers",
+    "text": "Data Viz no computers\nSheets data\n\nData Frame\nObservations\nTidy Data\nVariables\nVariable Types"
+  },
+  {
+    "objectID": "course-materials/first-day-survey/Data-Viz-No-Computers.html#take-1-hand-drawn-graphs-of-survey-questions.",
+    "href": "course-materials/first-day-survey/Data-Viz-No-Computers.html#take-1-hand-drawn-graphs-of-survey-questions.",
+    "title": "No computers Data Viz",
+    "section": "Take 1: Hand drawn graphs of survey questions.",
+    "text": "Take 1: Hand drawn graphs of survey questions.\nDraw a graph of a variable. Do not write your name.\n\nIt does not need to be perfect.\nTry to make it correct.\n\nIt is fine if its not correct."
+  },
+  {
+    "objectID": "course-materials/first-day-survey/Data-Viz-No-Computers.html#form-small-groups-of-4",
+    "href": "course-materials/first-day-survey/Data-Viz-No-Computers.html#form-small-groups-of-4",
+    "title": "No computers Data Viz",
+    "section": "Form small groups of 4",
+    "text": "Form small groups of 4\nAnswer these questions:\n\nIs the graph’s message or story clear?\nWhat is missing from each graph?\nWhat is distracting from the graph?\nWhat does the graph do well?"
+  },
+  {
+    "objectID": "course-materials/first-day-survey/Data-Viz-No-Computers.html#what-makes-a-clear-graph",
+    "href": "course-materials/first-day-survey/Data-Viz-No-Computers.html#what-makes-a-clear-graph",
+    "title": "No computers Data Viz",
+    "section": "What makes a clear graph?",
+    "text": "What makes a clear graph?\nClass discussion."
+  },
+  {
+    "objectID": "course-materials/first-day-survey/Data-Viz-No-Computers.html#take-2-hand-drawn-graphs-again",
+    "href": "course-materials/first-day-survey/Data-Viz-No-Computers.html#take-2-hand-drawn-graphs-again",
+    "title": "No computers Data Viz",
+    "section": "Take 2: Hand Drawn Graphs again",
+    "text": "Take 2: Hand Drawn Graphs again\nChoose your favorite of the four graphs and as a group redraw it."
+  },
+  {
+    "objectID": "course-materials/first-day-survey/Data-Viz-No-Computers.html#other-people-have-thought-about-this",
+    "href": "course-materials/first-day-survey/Data-Viz-No-Computers.html#other-people-have-thought-about-this",
+    "title": "No computers Data Viz",
+    "section": "Other people have thought about this",
+    "text": "Other people have thought about this\nDo’s and Don’t\nTufte’s Data to Ink Ratio\nFlowing Data"
+  },
+  {
+    "objectID": "course-materials/first-day-survey/Data-Viz-No-Computers.html#some-graphs-to-discuss-in-groups",
+    "href": "course-materials/first-day-survey/Data-Viz-No-Computers.html#some-graphs-to-discuss-in-groups",
+    "title": "No computers Data Viz",
+    "section": "Some Graphs to discuss in groups",
+    "text": "Some Graphs to discuss in groups\nThe Economist’s Graph detail\nGraphs from the NYTimes"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "SDS 192: Intro to Data Science",
+    "section": "",
+    "text": "“"
   }
 ]

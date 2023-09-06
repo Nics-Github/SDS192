@@ -64,9 +64,7 @@ h1{font-weight: 400;}
 ```
 # Schedule
 
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRK1_TZx6LCqC0Wfddr2T0Sb7sX0R1zuoAesmj-TYpXtMpikenrIqQz4LHmk83PFYF1Yk4MjQB14aec/pubhtml?gid=0&amp;single=false&amp;widget=true&amp;headers=false&amp;gid=0&amp;range=A1:D2" width="100%" height="200">
-
-</iframe>
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTG_b6upDZcPxXB92LHYIhV1uAXgeVGaMsZ3sDRPuSQN74JdhkKhZQVjw6T68I3zsP8KGYzDSVTZW64/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false&amp;gid=0&amp;range=A1:D2" width="100%" height="200"></iframe>
 
 <!-- # Day 26: Final project work. -->
 
@@ -372,19 +370,9 @@ There is a link at the top of the page for the syllabus. [It is also here.](./co
 
 ## Slack
 
-[This class has a Slack channel](). Its invite only. Check your e-mail I invited you to the channel on Monday. If you've got questions post them to Slack. I've introduced myself on Slack, your first assignment is to do that too.
+[This class has a Slack channel](). Check your e-mail I invited you to the channel on Monday. If you've got questions post them to Slack. I've introduced myself on Slack, your first assignment is to do that too.
 
-## Names and Surveys
-
-[Survey Questions](./course-materials/first-day-survey/first-day-survey.html)
-
-## No computer data science
-
-1.  [Snowshoes](https://statsclass.org/dsci210/Dataverbs/DataVerb_Activity.pdf)[^1] Hint: Don't open this yet.
-
-2.  Hand drawn graphs of survey questions.
-
-[^1]: This come from Chris Malone out of Winona State University. [Link for more.](http://www.statsclass.org/uscots2023/)
+## [Data Viz No Computers](./course-materials/first-day-survey/Data-Viz-No-Computers.qmd)
 
 ## General Questions and Comments
 
@@ -392,6 +380,4 @@ Homework:
 
 -   In slack- post about yourself (check your email for a slack invitation). Include somethings you want to tell people and your github username. sign up for [github here](https://github.com/), if you haven't already.
 
--   Start reading the prolouge of MDSR.
-
-
+-   Start reading the prolouge we're .

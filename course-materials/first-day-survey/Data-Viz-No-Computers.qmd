@@ -1,0 +1,68 @@
+---
+title: "No computers Data Viz"
+author: "Schwab"
+format: revealjs
+editor: visual
+---
+
+## Names and Surveys
+
+[Survey Questions](https://docs.google.com/forms/d/e/1FAIpQLSfYrVhaMo9BCVSTRZ8EhOnfxZbkdzjek9AB2EV11qFDDXgo9Q/viewform?usp=sf_link)
+
+## Data Viz no computers
+
+[Sheets data](https://docs.google.com/spreadsheets/d/1x9srZXDoYzKGew1f-y4brMbN8dl4QM66pc-dmCBWHQY/edit?usp=sharing)
+
+-   Data Frame
+
+-   Observations
+
+-   Tidy Data
+
+-   Variables
+
+-   Variable Types
+
+## Take 1: Hand drawn graphs of survey questions.
+
+Draw a graph of a variable. **Do not write your name.**
+
+-   It does not need to be perfect.
+
+-   Try to make it correct.
+
+    -   It is fine if its not correct.
+
+## Form small groups of 4
+
+Answer these questions:
+
+1.  Is the graph's message or story clear?
+
+2.  What is missing from each graph?
+
+3.  What is distracting from the graph?
+
+4.  What does the graph do well?
+
+## What makes a clear graph?
+
+Class discussion.
+
+## Take 2: Hand Drawn Graphs again
+
+Choose your favorite of the four graphs and as a group redraw it.
+
+## Other people have thought about this
+
+[Do's and Don't](https://guides.library.duke.edu/datavis/topten)
+
+[Tufte's Data to Ink Ratio](https://infovis-wiki.net/wiki/Data-Ink_Ratio)
+
+[Flowing Data](https://flowingdata.com/2015/08/11/real-chart-rules-to-follow/)
+
+## Some Graphs to discuss in groups
+
+[The Economist's Graph detail](https://www.economist.com/graphic-detail)
+
+[Graphs from the NYTimes](https://www.nytimes.com/2023/07/26/learning/over-75-new-york-times-graphs-for-students-to-analyze.html)
