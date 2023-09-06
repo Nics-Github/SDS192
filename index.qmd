@@ -64,7 +64,9 @@ h1{font-weight: 400;}
 ```
 # Schedule
 
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTG_b6upDZcPxXB92LHYIhV1uAXgeVGaMsZ3sDRPuSQN74JdhkKhZQVjw6T68I3zsP8KGYzDSVTZW64/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false&amp;gid=0&amp;range=A1:D2" width="100%" height="200"></iframe>
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTG_b6upDZcPxXB92LHYIhV1uAXgeVGaMsZ3sDRPuSQN74JdhkKhZQVjw6T68I3zsP8KGYzDSVTZW64/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false&amp;gid=0&amp;range=A1:D3" width="100%" height="200">
+
+</iframe>
 
 <!-- # Day 26: Final project work. -->
 
@@ -316,35 +318,25 @@ h1{font-weight: 400;}
 
 <!-- [You get this free through HCC](https://www.hcc.edu/library/find-resources/databases-and-journals/nyt-login) -->
 
-<!-- # Day 2: Practicing with github and Rstudio -->
+# Day 2: Practicing with github and Rstudio
 
-<!-- ## The Knit-ty Gritty -->
+Please complete [this survey](https://smithcollege.qualtrics.com/jfe/form/SV_bmy8BNkIp4SpzXo) for Prof. Cao's study
 
-<!-- ### When you come to class: -->
+[Prologue to 1.4 document](https://docs.google.com/document/d/1EJ389lsPzAutfq1HEspdTNyyVAk8AJDItQPXgI58dus/edit?usp=sharing)
 
-<!-- -   Log into HCC email account -->
+## See Tips & Tricks
 
-<!-- -   Go to course website -->
+[The six-fixes](https://docs.google.com/document/d/1P7IyZ4On9OlrCOhygFxjC7XhQqyw8OludwChz-uFd_o/edit)
 
-<!-- -   Log into RStudio -->
+Help us help you: take screenshots of your screen and post them to Slack.
 
-<!-- -   Open Slack -->
+-   macOS: Command+Shift+3 to take shot of whole screen, Command+Shift+4 to take subportion
 
-<!-- ### Share with me your github username if you have not already. -->
+-   Windows: Shift-Windows Key-S and Snip & Sketch
 
-<!-- ## Summarize Reading -->
+-   Linux: Print screen
 
-<!-- [Preface to 1.4 document](https://docs.google.com/document/d/1HzpH8hSvPvoO7IvorYEl2jq3c4vaGTViWi-qdwexpxg/edit?usp=sharing) -->
-
-<!-- ## See Tips & Tricks -->
-
-<!-- [The six-fixes](https://docs.google.com/document/d/1P7IyZ4On9OlrCOhygFxjC7XhQqyw8OludwChz-uFd_o/edit) -->
-
-<!-- Help us help you: take screenshots of your screen and post them to Slack. -->
-
-<!-- -   macOS: Command+Shift+3 to take shot of whole screen, Command+Shift+4 to take subportion -->
-
-<!-- -   Windows: Shift-Windows Key-S and Snip & Sketch -->
+-   Chromebook: Shift + Ctrl + Show windows
 
 <!-- ## Activity -->
 
@@ -370,7 +362,7 @@ There is a link at the top of the page for the syllabus. [It is also here.](./co
 
 ## Slack
 
-[This class has a Slack channel](). Check your e-mail I invited you to the channel on Monday. If you've got questions post them to Slack. I've introduced myself on Slack, your first assignment is to do that too.
+[This class has a Slack channel](https://sds-192-ns-202401.slack.com). You should be able to log in with your Smith email. If you've got questions post them to Slack. I've introduced myself on Slack, your first assignment is to do that too.
 
 ## [Data Viz No Computers](./course-materials/first-day-survey/Data-Viz-No-Computers.qmd)
 
@@ -378,6 +370,8 @@ There is a link at the top of the page for the syllabus. [It is also here.](./co
 
 Homework:
 
--   In slack- post about yourself (check your email for a slack invitation). Include somethings you want to tell people and your github username. sign up for [github here](https://github.com/), if you haven't already.
+-   In slack- post about yourself (check your email for a slack invitation). Include somethings you want to tell people and your github username.
 
--   Start reading the prolouge we're .
+-   Sign up for [github here](https://github.com/), if you don't already have an account.
+
+-   Read the prologue to chapter 1.4 of MDSR. [Add some notes to our summary.](https://docs.google.com/document/d/1EJ389lsPzAutfq1HEspdTNyyVAk8AJDItQPXgI58dus/edit?usp=sharing)

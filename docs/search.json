@@ -11,7 +11,7 @@
     "href": "index.html#slack",
     "title": "SDS 192: Intro to Data Science",
     "section": "Slack",
-    "text": "Slack\nThis class has a Slack channel. Check your e-mail I invited you to the channel on Monday. If you’ve got questions post them to Slack. I’ve introduced myself on Slack, your first assignment is to do that too."
+    "text": "Slack\nThis class has a Slack channel. You should be able to log in with your Smith email. If you’ve got questions post them to Slack. I’ve introduced myself on Slack, your first assignment is to do that too."
   },
   {
     "objectID": "index.html#names-and-surveys",
@@ -32,7 +32,7 @@
     "href": "index.html#general-questions-and-comments",
     "title": "SDS 192: Intro to Data Science",
     "section": "General Questions and Comments",
-    "text": "General Questions and Comments\nHomework:\n\nIn slack- post about yourself (check your email for a slack invitation). Include somethings you want to tell people and your github username. sign up for github here, if you haven’t already.\nStart reading the prolouge we’re ."
+    "text": "General Questions and Comments\nHomework:\n\nIn slack- post about yourself (check your email for a slack invitation). Include somethings you want to tell people and your github username.\nSign up for github here, if you don’t already have an account.\nRead the prologue to chapter 1.4 of MDSR. Add some notes to our summary."
   },
   {
     "objectID": "readme.html",
@@ -81,7 +81,7 @@
     "href": "course-materials/syllabus/syllabus.html#final-project-20",
     "title": "Syllabus",
     "section": "Final project 20%",
-    "text": "Final project 20%\nThere will be a final project due the last day of classes. You’ll complete this final project over the course of the semester using a process called SCRUM. The Final Project will also have in groups of 2-3 where you can choose your groupmates."
+    "text": "Final project 20%\nThere will be a final project due the last day of classes. These will be completed in groups during the last few weeks of class."
   },
   {
     "objectID": "course-materials/syllabus/syllabus.html#problem-sets-25",
@@ -95,14 +95,14 @@
     "href": "course-materials/syllabus/syllabus.html#engagement",
     "title": "Syllabus",
     "section": "Engagement 15%",
-    "text": "Engagement 15%\nIt is difficult to explicit codify what constitutes “an engaged student,” so instead I present the following rough principle I will follow: you’ll only get out of this class as much as you put in. That being said, here are multiple pathways for you to stay engaged in this class:\n\nIn particular: Participation in all SCRUM Sprints\nAsking and answering questions in class.\nWorking and staying focused in class.\nComing to office hours.\nPosting questions on Slack.\nEven better: Responding to questions on Slack."
+    "text": "Engagement 15%\nIt is difficult to explicit codify what constitutes “an engaged student,” so instead I present the following rough principle I will follow: you’ll only get out of this class as much as you put in. That being said, here are multiple pathways for you to stay engaged in this class:\n\nParticipation in all SCRUM Sprints\nAsking and answering questions in class.\nWorking and staying focused in class.\nComing to office hours.\nPosting questions on Slack.\nEven better: Responding to questions on Slack.\nComplete Classwork problems"
   },
   {
     "objectID": "course-materials/syllabus/syllabus.html#tentative-assignment-schedule",
     "href": "course-materials/syllabus/syllabus.html#tentative-assignment-schedule",
     "title": "Syllabus",
     "section": "Tentative Assignment schedule",
-    "text": "Tentative Assignment schedule\nHomework will be assigned regularly and due by midnight the following Monday.\nProject 1- due after reading chapter 4 of MDSR roughly the 10th day of class\nProject 2- due after reading chapter 5 of MDSR roughly the 18th day of class\nProject 3- due after reading chapter 15 of MDSR roughly the 22nd day of class\nProject 4- due after reading chapter 17 of MDSR roughly the 26th day of class\nFinal Project/ Presentation during our final time.\nFor a more up to date schedule see the course’s website."
+    "text": "Tentative Assignment schedule\nLabs will be assigned regularly and due by midnight the following Monday.\nProject 1- due after reading chapter 4 of MDSR\nProject 2- due after reading chapter 5 of MDSR\nProject 3- due after reading chapter 15 of MDSR\nProject 4- due after reading chapter 17 of MDSR\nFinal Project/ Presentation during our final time.\nFor a more up to date schedule see the course’s website."
   },
   {
     "objectID": "course-materials/syllabus/syllabus.html#policies-1",
@@ -425,5 +425,19 @@
     "title": "SDS 192: Intro to Data Science",
     "section": "",
     "text": "“"
+  },
+  {
+    "objectID": "course-materials/syllabus/syllabus.html#labs-25",
+    "href": "course-materials/syllabus/syllabus.html#labs-25",
+    "title": "Syllabus",
+    "section": "Labs 25%",
+    "text": "Labs 25%\nMany Fridays there will be in class labs. You will have until the following Wednesday to complete the lab. Its important to complete and stay on top of the problem sets. They will be graded on the following scale:\n\n5 points: Assignment is complete, mostly correct, rendered and submitted\n4 points: Assignment is nearly complete, mostly correct, rendered and submitted\n3 points: Assignment is around 50% of the problems have been completed, are correct, the assignment is rendered\n2 points: Assignment is at most 50% complete, the problems are incorrect and is not correctly rendered\n1 point : Assignment is largely unfinished and is not rendered\n0 points: No assignment is turned in."
+  },
+  {
+    "objectID": "index.html#see-tips-tricks",
+    "href": "index.html#see-tips-tricks",
+    "title": "SDS 192: Intro to Data Science",
+    "section": "See Tips & Tricks",
+    "text": "See Tips & Tricks\nThe six-fixes\nHelp us help you: take screenshots of your screen and post them to Slack.\n\nmacOS: Command+Shift+3 to take shot of whole screen, Command+Shift+4 to take subportion\nWindows: Shift-Windows Key-S and Snip & Sketch\nLinux: Print screen\nChromebook: Shift + Ctrl + Show windows"
   }
 ]

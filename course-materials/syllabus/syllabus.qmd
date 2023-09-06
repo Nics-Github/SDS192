@@ -171,7 +171,7 @@ The Modern Data Science with R **textbook** is accessible on the navigational ba
 
 # Readings
 
-We'll be reading chapters 1-6,8,15,and 17 of Modern Data Science with R. Probably other texts.
+We'll be reading chapters 1-6,8,15,and 17 of Modern Data Science with R. And some Chapters from Modern Dive. 
 
 # Evaluation
 
@@ -185,11 +185,11 @@ There are four projects to complete during the semester. They will be completed 
 
 ## Final project 20%
 
-There will be a final project due the last day of classes. You'll complete this final project over the course of the semester using a process called SCRUM. The Final Project will also have in groups of 2-3 where you can choose your groupmates.
+There will be a final project due the last day of classes. These will be completed in groups during the last few weeks of class. 
 
-## Problem sets 25%
+## Labs 25%
 
-Homework will be assigned regularly, its important to complete and stay on top of the problem sets. They will be graded on the following scale:
+Many Fridays there will be in class labs. You will have until the following Wednesday to complete the lab. Its important to complete and stay on top of the problem sets. They will be graded on the following scale:
 
 -   5 points: Assignment is complete, mostly correct, rendered and submitted
 
@@ -207,24 +207,25 @@ Homework will be assigned regularly, its important to complete and stay on top o
 
 It is difficult to explicit codify what constitutes "an engaged student," so instead I present the following rough principle I will follow: *you'll only get out of this class as much as you put in*. That being said, here are multiple pathways for you to stay engaged in this class:
 
--   In particular: Participation in all SCRUM Sprints
+-   Participation in all SCRUM Sprints
 -   Asking and answering questions in class.
 -   Working and staying focused in class.
 -   Coming to office hours.
 -   Posting questions on Slack.
 -   Even better: Responding to questions on Slack.
+-   Complete Classwork problems
 
 ## Tentative Assignment schedule
 
-Homework will be assigned regularly and due by midnight the following Monday.
+Labs will be assigned regularly and due by midnight the following Monday.
 
-Project 1- due after reading chapter 4 of MDSR roughly the 10th day of class
+Project 1- due after reading chapter 4 of MDSR 
 
-Project 2- due after reading chapter 5 of MDSR roughly the 18th day of class
+Project 2- due after reading chapter 5 of MDSR 
 
-Project 3- due after reading chapter 15 of MDSR roughly the 22nd day of class
+Project 3- due after reading chapter 15 of MDSR 
 
-Project 4- due after reading chapter 17 of MDSR roughly the 26th day of class
+Project 4- due after reading chapter 17 of MDSR 
 
 Final Project/ Presentation during our final time.
 
