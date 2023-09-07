@@ -318,15 +318,18 @@ h1{font-weight: 400;}
 
 <!-- [You get this free through HCC](https://www.hcc.edu/library/find-resources/databases-and-journals/nyt-login) -->
 
-# Day 2: Practicing with github and Rstudio
+# Day 2.
 
 Please complete [this survey](https://smithcollege.qualtrics.com/jfe/form/SV_bmy8BNkIp4SpzXo) for Prof. Cao's study
 
 [Prologue to 1.4 document](https://docs.google.com/document/d/1EJ389lsPzAutfq1HEspdTNyyVAk8AJDItQPXgI58dus/edit?usp=sharing)
 
-## See Tips & Tricks
+## For Help
 
 [The six-fixes](https://docs.google.com/document/d/1P7IyZ4On9OlrCOhygFxjC7XhQqyw8OludwChz-uFd_o/edit)
+
+::: {.callout-tip collapse="true"}
+## Screenshots Help
 
 Help us help you: take screenshots of your screen and post them to Slack.
 
@@ -337,6 +340,8 @@ Help us help you: take screenshots of your screen and post them to Slack.
 -   Linux: Print screen
 
 -   Chromebook: Shift + Ctrl + Show windows
+:::
+
 
 <!-- ## Activity -->
 
@@ -356,22 +361,22 @@ Help us help you: take screenshots of your screen and post them to Slack.
 
 # Day 1: First Day of Class
 
-## Syllabus
+## [Syllabus](./course-materials/syllabus/syllabus.html)
 
-There is a link at the top of the page for the syllabus. [It is also here.](./course-materials/syllabus/syllabus.html)
 
-## Slack
+## [Slack](https://sds-192-ns-202401.slack.com)
 
-[This class has a Slack channel](https://sds-192-ns-202401.slack.com). You should be able to log in with your Smith email. If you've got questions post them to Slack. I've introduced myself on Slack, your first assignment is to do that too.
 
 ## [Data Viz No Computers](./course-materials/first-day-survey/Data-Viz-No-Computers.qmd)
 
 ## General Questions and Comments
 
-Homework:
+::: {.callout-note collapse="true"}
+## Homework:
 
 -   In slack- post about yourself (check your email for a slack invitation). Include somethings you want to tell people and your github username.
 
--   Sign up for [github here](https://github.com/), if you don't already have an account.
+-   Sign up for [github here](https://github.com/), if you don't already have an account. We will very carefully link your github account to our github classroom account.
 
 -   Read the prologue to chapter 1.4 of MDSR. [Add some notes to our summary.](https://docs.google.com/document/d/1EJ389lsPzAutfq1HEspdTNyyVAk8AJDItQPXgI58dus/edit?usp=sharing)
+:::

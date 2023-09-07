@@ -4,14 +4,14 @@
     "href": "index.html#syllabus",
     "title": "SDS 192: Intro to Data Science",
     "section": "Syllabus",
-    "text": "Syllabus\nThere is a link at the top of the page for the syllabus. It is also here."
+    "text": "Syllabus"
   },
   {
     "objectID": "index.html#slack",
     "href": "index.html#slack",
     "title": "SDS 192: Intro to Data Science",
     "section": "Slack",
-    "text": "Slack\nThis class has a Slack channel. You should be able to log in with your Smith email. If you’ve got questions post them to Slack. I’ve introduced myself on Slack, your first assignment is to do that too."
+    "text": "Slack"
   },
   {
     "objectID": "index.html#names-and-surveys",
@@ -32,7 +32,7 @@
     "href": "index.html#general-questions-and-comments",
     "title": "SDS 192: Intro to Data Science",
     "section": "General Questions and Comments",
-    "text": "General Questions and Comments\nHomework:\n\nIn slack- post about yourself (check your email for a slack invitation). Include somethings you want to tell people and your github username.\nSign up for github here, if you don’t already have an account.\nRead the prologue to chapter 1.4 of MDSR. Add some notes to our summary."
+    "text": "General Questions and Comments\n\n\n\n\n\n\nHomework:\n\n\n\n\n\n\nIn slack- post about yourself (check your email for a slack invitation). Include somethings you want to tell people and your github username.\nSign up for github here, if you don’t already have an account. We will very carefully link your github account to our github classroom account.\nRead the prologue to chapter 1.4 of MDSR. Add some notes to our summary."
   },
   {
     "objectID": "readme.html",
@@ -446,5 +446,12 @@
     "title": "No computers Data Viz",
     "section": "",
     "text": "Survey Questions"
+  },
+  {
+    "objectID": "index.html#for-help",
+    "href": "index.html#for-help",
+    "title": "SDS 192: Intro to Data Science",
+    "section": "For Help",
+    "text": "For Help\nThe six-fixes\n\n\n\n\n\n\nScreenshots Help\n\n\n\n\n\nHelp us help you: take screenshots of your screen and post them to Slack.\n\nmacOS: Command+Shift+3 to take shot of whole screen, Command+Shift+4 to take subportion\nWindows: Shift-Windows Key-S and Snip & Sketch\nLinux: Print screen\nChromebook: Shift + Ctrl + Show windows"
   }
 ]
