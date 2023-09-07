@@ -439,5 +439,12 @@
     "title": "SDS 192: Intro to Data Science",
     "section": "See Tips & Tricks",
     "text": "See Tips & Tricks\nThe six-fixes\nHelp us help you: take screenshots of your screen and post them to Slack.\n\nmacOS: Command+Shift+3 to take shot of whole screen, Command+Shift+4 to take subportion\nWindows: Shift-Windows Key-S and Snip & Sketch\nLinux: Print screen\nChromebook: Shift + Ctrl + Show windows"
+  },
+  {
+    "objectID": "course-materials/first-day-survey/Data-Viz-No-Computers.html",
+    "href": "course-materials/first-day-survey/Data-Viz-No-Computers.html",
+    "title": "No computers Data Viz",
+    "section": "",
+    "text": "Survey Questions"
   }
 ]

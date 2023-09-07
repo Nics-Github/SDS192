@@ -12,15 +12,20 @@ output:
     df_print: paged
     lib_dir: site_libs
     self_contained: no
-    includes:
-     in_header: "favicon.html"
 # All icons were obtained from https://icons.getbootstrap.com/
+
+format:
+  html:
+    theme: Materia
+
 website:   
   page-navigation: true
+  favicon: /images/192.png
   title: "SDS 192 Fall '23"
   
+  
   navbar:
- 
+    logo: bi-graph-up
     left:
     - text: Resources
       href: Resources.qmd
@@ -35,7 +40,7 @@ website:
     
     right:
     - icon: github
-      href: https://github.com/
+      href: https://classroom.github.com/classrooms/144164606-sds-192-f23-sections-02-03
   # - text: Problem Sets
   #   href: PS.html
   #  - text: Mini-Projects
@@ -53,4 +58,5 @@ website:
     right: 
     - text: credits
       href: credits.qmd
+
       
