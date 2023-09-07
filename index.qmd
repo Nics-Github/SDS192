@@ -318,7 +318,7 @@ h1{font-weight: 400;}
 
 <!-- [You get this free through HCC](https://www.hcc.edu/library/find-resources/databases-and-journals/nyt-login) -->
 
-# Day 2.
+# Day 2 Taxonomy
 
 Please complete [this survey](https://smithcollege.qualtrics.com/jfe/form/SV_bmy8BNkIp4SpzXo) for Prof. Cao's study
 
@@ -342,6 +342,11 @@ Help us help you: take screenshots of your screen and post them to Slack.
 -   Chromebook: Shift + Ctrl + Show windows
 :::
 
+## Lecture 
+[Taxonomy of graphs](course-materials/lectures/mdsr_viz_1_taxonomy.qmd)
+
+## Classwork
+
 
 <!-- ## Activity -->
 
@@ -361,13 +366,13 @@ Help us help you: take screenshots of your screen and post them to Slack.
 
 # Day 1: First Day of Class
 
-## [Syllabus](./course-materials/syllabus/syllabus.html)
+Course Materials
+[Syllabus](./course-materials/syllabus/syllabus.html)
+[Slack](https://sds-192-ns-202401.slack.com)
 
 
-## [Slack](https://sds-192-ns-202401.slack.com)
-
-
-## [Data Viz No Computers](./course-materials/first-day-survey/Data-Viz-No-Computers.qmd)
+## Lecture 
+[Data Viz No Computers](./course-materials/first-day-survey/Data-Viz-No-Computers.qmd)
 
 ## General Questions and Comments
 

@@ -1,0 +1,14 @@
+{
+  "hash": "7c6f2560b055b264bbfdae3a652bf3b1",
+  "result": {
+    "markdown": "---\ntitle: \"Vizualization_Taxonomy\"\nauthor: \"Ben Baumer\"\nformat: \n  revealjs:\n    controls: \n      true\n\neditor: visual\nexecute:\n  freeze: auto  # re-render only when source changes\n---\n\n\n\n\n\n------------------------------------------------------------------------\n\n## [Borrowing heavily from Nathan Yau](https://flowingdata.com/data-points/)\n\n![](https://images-na.ssl-images-amazon.com/images/I/514aUwRUhmL._UX250_.jpg){fig-align=\"center\"}\n\n## Elements of data graphics\n\n-   Visual cues\n    -   position, length, area, etc.\n-   Coordinate system\n    -   how are the data points organized?\n-   Scale\n    -   how does distance translate into meaning?\n-   Context\n    -   in relation to what?\n-   Faceting / small multiples\n\n##  {background-image=\"https://s-media-cache-ak0.pinimg.com/originals/c2/46/92/c24692fd95dbfb89f772613a316a5405.png\" background-size=\"contain\"}\n\n##  {background-image=\"https://i.pinimg.com/736x/90/8f/12/908f129be5844828110233b84056d9f2--data-visualization-points.jpg\" background-size=\"contain\"}\n\n##  {background-image=\"https://i.pinimg.com/736x/86/a4/93/86a49342761ca36aeca5f8ee03c64867--data-visualization-points.jpg\" background-size=\"contain\"}\n\n##  {background-image=\"https://i.pinimg.com/736x/62/c6/ee/62c6ee636c47dccad00e7e56c268c3bf--data-visualization-points.jpg\" background-size=\"contain\"}\n\n##  {background-image=\"https://i.pinimg.com/736x/16/06/da/1606dafa2bccb6a99d74b19844b0db60--data-visualization-points.jpg\" background-size=\"contain\"}\n\n## Big idea\n\nMapping variables to visual cues\n\n![](https://raw.githubusercontent.com/tidyverse/ggplot2/master/man/figures/logo.png){fig-align=\"left\"}\n\n##  {background-image=\"https://s-media-cache-ak0.pinimg.com/originals/6d/09/3a/6d093a70e7d772a5e90178b8d609462e.png\" background-size=\"contain\"}\n\n## Do's and don'ts\n\n-   **Do**: mind the perceptual heirarchy\n\n    -   **Don't** use color when length will suffice\n    -   **Don't** use pie charts!\n\n-   **Don't** use redundant mappings unless you have a reason\n\n-   **Do** use context!\n\n-   **Do** match data dimensions to visual dimensions\n\n    -   **Don't** map area to a 1D quantity\n\n## Read more about this!\n\n::: {layout-ncol=\"2\"}\n![](https://images-na.ssl-images-amazon.com/images/I/41IXJO4Mk6L.jpg){fig-align=\"left\"}\n\n![](https://images-na.ssl-images-amazon.com/images/I/51lfTMyZ8GL._SX399_BO1,204,203,200_.jpg){fig-align=\"right\"}\n:::\n\n## Tufte's mantra\n\n![](https://image.slidesharecdn.com/presentingviztoclients1-150120165529-conversion-gate02/95/presenting-data-visualizations-to-clients-34-638.jpg?cb=1421773366){fig-align=\"center\"}\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

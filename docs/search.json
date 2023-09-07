@@ -453,5 +453,173 @@
     "title": "SDS 192: Intro to Data Science",
     "section": "For Help",
     "text": "For Help\nThe six-fixes\n\n\n\n\n\n\nScreenshots Help\n\n\n\n\n\nHelp us help you: take screenshots of your screen and post them to Slack.\n\nmacOS: Command+Shift+3 to take shot of whole screen, Command+Shift+4 to take subportion\nWindows: Shift-Windows Key-S and Snip & Sketch\nLinux: Print screen\nChromebook: Shift + Ctrl + Show windows"
+  },
+  {
+    "objectID": "index.html#lecture",
+    "href": "index.html#lecture",
+    "title": "SDS 192: Intro to Data Science",
+    "section": "Lecture",
+    "text": "Lecture\nTaxonomy of graphs"
+  },
+  {
+    "objectID": "course-materials/in-class-activies/Activity_Taxonomy_of_Graphics.html",
+    "href": "course-materials/in-class-activies/Activity_Taxonomy_of_Graphics.html",
+    "title": "Taxonomy of Graphics",
+    "section": "",
+    "text": "Use the vocabulary from the Taxonomy of data graphics.\nGroup 1: Ida, James, and Magdalen\nGroup 2: Ajani and Kathryn\nDiscuss the\n\nQ: What is the graph showing?\nvisual cues\ncoordinate system\nscales\ncontext\nQ: How do you feel about this graph?\n\nNYTimes:\n\nSerena Williams\nEndangered Biodiversity\nPandemic Stimulus\n\nFrom Yougov:\n\nIce Cream (Just the first graph, there is a lot here).\n\nFrom Five Thirty Eight:\n\nHow Unpopular is Joe Biden"
+  },
+  {
+    "objectID": "course-materials/lectures/mdsr_viz_1_taxonomy.html#borrowing-heavily-from-nathan-yau",
+    "href": "course-materials/lectures/mdsr_viz_1_taxonomy.html#borrowing-heavily-from-nathan-yau",
+    "title": "Vizualization_Taxonomy",
+    "section": "Borrowing heavily from Nathan Yau",
+    "text": "Borrowing heavily from Nathan Yau"
+  },
+  {
+    "objectID": "course-materials/lectures/mdsr_viz_1_taxonomy.html#elements-of-data-graphics",
+    "href": "course-materials/lectures/mdsr_viz_1_taxonomy.html#elements-of-data-graphics",
+    "title": "Vizualization_Taxonomy",
+    "section": "Elements of data graphics",
+    "text": "Elements of data graphics\n\nVisual cues\n\nposition, length, area, etc.\n\nCoordinate system\n\nhow are the data points organized?\n\nScale\n\nhow does distance translate into meaning?\n\nContext\n\nin relation to what?\n\nFaceting / small multiples"
+  },
+  {
+    "objectID": "course-materials/lectures/mdsr_viz_1_taxonomy.html#big-idea",
+    "href": "course-materials/lectures/mdsr_viz_1_taxonomy.html#big-idea",
+    "title": "Vizualization_Taxonomy",
+    "section": "Big idea",
+    "text": "Big idea\nMapping variables to visual cues"
+  },
+  {
+    "objectID": "course-materials/lectures/mdsr_viz_1_taxonomy.html#dos-and-donts",
+    "href": "course-materials/lectures/mdsr_viz_1_taxonomy.html#dos-and-donts",
+    "title": "Vizualization_Taxonomy",
+    "section": "Do’s and don’ts",
+    "text": "Do’s and don’ts\n\nDo: mind the perceptual heirarchy\n\nDon’t use color when length will suffice\nDon’t use pie charts!\n\nDon’t use redundant mappings unless you have a reason\nDo use context!\nDo match data dimensions to visual dimensions\n\nDon’t map area to a 1D quantity"
+  },
+  {
+    "objectID": "course-materials/lectures/mdsr_viz_1_taxonomy.html#read-more-about-this",
+    "href": "course-materials/lectures/mdsr_viz_1_taxonomy.html#read-more-about-this",
+    "title": "Vizualization_Taxonomy",
+    "section": "Read more about this!",
+    "text": "Read more about this!"
+  },
+  {
+    "objectID": "course-materials/lectures/mdsr_viz_1_taxonomy.html#tuftes-mantra",
+    "href": "course-materials/lectures/mdsr_viz_1_taxonomy.html#tuftes-mantra",
+    "title": "Vizualization_Taxonomy",
+    "section": "Tufte’s mantra",
+    "text": "Tufte’s mantra"
+  },
+  {
+    "objectID": "index.html#lecture-1",
+    "href": "index.html#lecture-1",
+    "title": "SDS 192: Intro to Data Science",
+    "section": "Lecture",
+    "text": "Lecture\nData Viz No Computers"
+  },
+  {
+    "objectID": "index.html#classwork",
+    "href": "index.html#classwork",
+    "title": "SDS 192: Intro to Data Science",
+    "section": "Classwork",
+    "text": "Classwork"
+  },
+  {
+    "objectID": "course-materials/in-class-activies/Activity_Taxonomy_of_Graphics.html#discuss-the-following",
+    "href": "course-materials/in-class-activies/Activity_Taxonomy_of_Graphics.html#discuss-the-following",
+    "title": "Taxonomy of Graphics",
+    "section": "Discuss the Following",
+    "text": "Discuss the Following\nUse the vocabulary from the Taxonomy of data graphics.\n\n\nvisual cues\ncoordinate system\nscales\ncontext\nWhat is the graph showing?\nYour feelings"
+  },
+  {
+    "objectID": "course-materials/in-class-activies/Activity_Taxonomy_of_Graphics.html#ny-times-graphs",
+    "href": "course-materials/in-class-activies/Activity_Taxonomy_of_Graphics.html#ny-times-graphs",
+    "title": "Taxonomy of Graphics",
+    "section": "NY Times Graphs:",
+    "text": "NY Times Graphs:\n\nSerena Williams\nEndangered Biodiversity\nPandemic Stimulus"
+  },
+  {
+    "objectID": "course-materials/in-class-activies/Activity_Taxonomy_of_Graphics.html#yougov",
+    "href": "course-materials/in-class-activies/Activity_Taxonomy_of_Graphics.html#yougov",
+    "title": "Taxonomy of Graphics",
+    "section": "Yougov:",
+    "text": "Yougov:\n\nIce Cream (Just the first graph, there is a lot here)."
+  },
+  {
+    "objectID": "course-materials/in-class-activies/Activity_Taxonomy_of_Graphics.html#from-five-thirty-eight",
+    "href": "course-materials/in-class-activies/Activity_Taxonomy_of_Graphics.html#from-five-thirty-eight",
+    "title": "Taxonomy of Graphics",
+    "section": "From Five Thirty Eight:",
+    "text": "From Five Thirty Eight:\nPresident Biden’s Approval Rating"
+  },
+  {
+    "objectID": "course-materials/in-class-activies/Activity_Taxonomy_of_Graphics.html#data-ethics",
+    "href": "course-materials/in-class-activies/Activity_Taxonomy_of_Graphics.html#data-ethics",
+    "title": "Taxonomy of Graphics",
+    "section": "Data Ethics:",
+    "text": "Data Ethics:"
+  },
+  {
+    "objectID": "course-materials/in-class-activies/Activity_Taxonomy_of_Graphics.html#corrected",
+    "href": "course-materials/in-class-activies/Activity_Taxonomy_of_Graphics.html#corrected",
+    "title": "Taxonomy of Graphics",
+    "section": "Corrected",
+    "text": "Corrected"
+  },
+  {
+    "objectID": "course-materials/in-class-activies/Activity_Taxonomy_of_Graphics.html#plan-parenthood",
+    "href": "course-materials/in-class-activies/Activity_Taxonomy_of_Graphics.html#plan-parenthood",
+    "title": "Taxonomy of Graphics",
+    "section": "Plan Parenthood:",
+    "text": "Plan Parenthood:"
+  },
+  {
+    "objectID": "course-materials/in-class-activies/Activity_Taxonomy_of_Graphics.html#corrected-again",
+    "href": "course-materials/in-class-activies/Activity_Taxonomy_of_Graphics.html#corrected-again",
+    "title": "Taxonomy of Graphics",
+    "section": "Corrected again",
+    "text": "Corrected again"
+  },
+  {
+    "objectID": "course-materials/in-class-activies/Activity_Taxonomy_of_Graphics.html#fox-polling",
+    "href": "course-materials/in-class-activies/Activity_Taxonomy_of_Graphics.html#fox-polling",
+    "title": "Taxonomy of Graphics",
+    "section": "Fox Polling",
+    "text": "Fox Polling"
+  },
+  {
+    "objectID": "course-materials/in-class-activies/Activity_Taxonomy_of_Graphics.html#global-warming",
+    "href": "course-materials/in-class-activies/Activity_Taxonomy_of_Graphics.html#global-warming",
+    "title": "Taxonomy of Graphics",
+    "section": "Global warming",
+    "text": "Global warming"
+  },
+  {
+    "objectID": "course-materials/in-class-activies/Activity_Taxonomy_of_Graphics.html#global-warming-2",
+    "href": "course-materials/in-class-activies/Activity_Taxonomy_of_Graphics.html#global-warming-2",
+    "title": "Taxonomy of Graphics",
+    "section": "Global warming 2",
+    "text": "Global warming 2"
+  },
+  {
+    "objectID": "course-materials/in-class-activies/Activity_Taxonomy_of_Graphics.html#global-warming-3",
+    "href": "course-materials/in-class-activies/Activity_Taxonomy_of_Graphics.html#global-warming-3",
+    "title": "Taxonomy of Graphics",
+    "section": "Global Warming 3",
+    "text": "Global Warming 3"
+  },
+  {
+    "objectID": "course-materials/in-class-activies/Activity_Taxonomy_of_Graphics.html#global-warming-4",
+    "href": "course-materials/in-class-activies/Activity_Taxonomy_of_Graphics.html#global-warming-4",
+    "title": "Taxonomy of Graphics",
+    "section": "Global Warming 4",
+    "text": "Global Warming 4\n ## Gun Deaths Florida"
+  },
+  {
+    "objectID": "course-materials/in-class-activies/Activity_Taxonomy_of_Graphics.html#citations",
+    "href": "course-materials/in-class-activies/Activity_Taxonomy_of_Graphics.html#citations",
+    "title": "Taxonomy of Graphics",
+    "section": "Citations",
+    "text": "Citations\nAll graph originated else where.\nBelow are secondary sources.\nMost the the graphs were grabed from: datapipeline\nThe last graph was grabbed from The Washington Post"
   }
 ]
