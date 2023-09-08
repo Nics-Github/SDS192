@@ -25,7 +25,7 @@ website:
   
   
   navbar:
-    logo: bi-graph-up
+    
     left:
     - text: Resources
       href: Resources.qmd
@@ -36,7 +36,9 @@ website:
     - icon: slack
       href: https://www.slack.com
     - text: R
-      href: http://hcc-rstudiosrv1.hcc.edu:8787/auth-sign-in
+      href: rstudio.smith.edu
+    - text: m
+      href: https://moodle.smith.edu/
     
     right:
     - icon: github
