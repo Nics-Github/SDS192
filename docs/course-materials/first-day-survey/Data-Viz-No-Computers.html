@@ -381,6 +381,98 @@ Schwab
 <h2>Take 2: Hand Drawn Graphs again</h2>
 <p>Choose your favorite of the four graphs and as a group redraw it.</p>
 </section>
+<section id="baumers-thoughts" class="slide level2">
+<h2>Baumer’s Thoughts</h2>
+<p>Some of the following slides were hyjacked by the text’s author.</p>
+</section>
+<section id="a-misleading-chart-from-apple" class="slide level2">
+<h2><a href="https://qz.com/122921/the-chart-tim-cook-doesnt-want-you-to-see/">A misleading chart from Apple</a></h2>
+
+<img data-src="https://cms.qz.com/wp-content/uploads/2013/09/iphone-sales.jpg?quality=75&amp;strip=all&amp;w=620&amp;h=413&amp;crop=1" class="r-stretch"></section>
+<section id="pie-charts-just-dont" class="slide level2">
+<h2>Pie charts (just don’t)</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="figures/mtcars-stacked-bar-1.png" width="960"></p>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="figures/mtcars-pie-chart-1.png" width="960"></p>
+</div>
+</div>
+</div>
+</div>
+<p>Are 6-cylinder engines more common among manuals or automatics?</p>
+<p><sup>1</sup></p>
+<aside><ol class="aside-footnotes"><li id="fn1"><p>https://en.wikipedia.org/wiki/Misleading_graph#Improper_scaling</p></li></ol></aside></section>
+<section id="unclear-scales" class="slide level2">
+<h2>Unclear Scales</h2>
+
+<img data-src="https://infovis-wiki.net/w/images/0/05/Lie_factor_example1_image.jpg" style="width:200.0%" class="r-stretch quarto-figure-center"><ul>
+<li>Often not very clearly defined</li>
+<li>Easy to lie by manipulating scales</li>
+<li>Why perspective?</li>
+<li>Width of lines?</li>
+</ul>
+</section>
+<section id="clearer-scales" class="slide level2">
+<h2>Clearer Scales</h2>
+
+<img data-src="http://images.slideplayer.com/14/4403460/slides/slide_21.jpg" class="r-stretch quarto-figure-center"><ul>
+<li>Good graphics have clear scales
+<ul>
+<li>Remember iPhone sales graphic</li>
+</ul></li>
+</ul>
+</section>
+<section id="section" class="slide level2">
+<h2></h2>
+<p><sup>1</sup></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="https://image.slidesharecdn.com/tufte-slides-150224020553-conversion-gate02/95/lessons-from-edward-tufte-5-638.jpg?cb=1424765239" width="800"></p>
+</figure>
+</div>
+<aside><ol class="aside-footnotes"><li id="fn2"><p>https://en.wikipedia.org/wiki/Misleading_graph#Improper_scaling</p></li></ol></aside></section>
+<section id="section-1" class="slide level2">
+<h2></h2>
+<p><img data-src="https://image.slidesharecdn.com/tufte-slides-150224020553-conversion-gate02/95/lessons-from-edward-tufte-9-638.jpg?cb=1424765239" width="800"></p>
+<p><sup>1</sup></p>
+<aside><ol class="aside-footnotes"><li id="fn3"><p>https://en.wikipedia.org/wiki/Misleading_graph#3D</p></li></ol></aside></section>
+<section id="section-2" class="slide level2">
+<h2></h2>
+<p><img data-src="https://image.slidesharecdn.com/tufte-slides-150224020553-conversion-gate02/95/lessons-from-edward-tufte-16-638.jpg?cb=1424765239" width="800"></p>
+<p><sup>1</sup></p>
+<aside><ol class="aside-footnotes"><li id="fn4"><p>https://en.wikipedia.org/wiki/Chartjunk</p></li></ol></aside></section>
+<section id="balance-of-art-vs.-science" class="slide level2">
+<h2>Balance of art vs.&nbsp;science</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>Data graphics:</p>
+<ul>
+<li><p>purpose is to convey meaning</p></li>
+<li><p>scientific, rigorous</p></li>
+<li><p>peer-reviewed</p></li>
+<li><p>clear</p></li>
+<li><p><strong>creative!</strong></p></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><a href="https://en.wikipedia.org/wiki/Infographic">Infographics</a>:</p>
+<ul>
+<li><p>purpose might be to draw eyeballs</p></li>
+<li><p>entertaining?</p></li>
+<li><p>sales or marketing?</p></li>
+<li><p>public sphere</p></li>
+<li><p>creative</p></li>
+</ul>
+</div>
+</div>
+<p>We’re only interested in the former</p>
+</section>
 <section id="other-people-have-thought-about-this" class="slide level2">
 <h2>Other people have thought about this</h2>
 <p><a href="https://guides.library.duke.edu/datavis/topten">Do’s and Don’t</a></p>
@@ -396,6 +488,7 @@ Schwab
 
 </div>
 </section>
+
     </div>
   </div>
 
@@ -607,6 +700,44 @@ Schwab
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {

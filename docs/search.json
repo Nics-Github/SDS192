@@ -424,7 +424,7 @@
     "href": "index.html",
     "title": "SDS 192: Intro to Data Science",
     "section": "",
-    "text": "Schedule\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDay 2 Taxonomy\n\nPlease complete this survey for Prof. Cao’s study\n\nFor Help\nThe six-fixes Student hours Spennlli center\n\n\n\n\n\n\nScreenshots Help\n\n\n\n\n\nHelp us help you: take screenshots of your screen and post them to Slack.\n\nmacOS: Command+Shift+3 to take shot of whole screen, Command+Shift+4 to take subportion\nWindows: Shift-Windows Key-S and Snip & Sketch\nLinux: Print screen\nChromebook: Shift + Ctrl + Show windows\n\n\n\n\nPrologue to 1.4 document\n\n\nLecture\nTaxonomy of graphs\n\n\nClasswork\n\n\n\n\n\n\n\n\n\n\n\nDay 1: No Computer Data Viz\n\nSyllabus Log into Slack Website tour Bring Computers to Class\n\nLecture\nData Viz No Computers\n\n\nGeneral Questions and Comments\n\n\n\n\n\n\nHomework:\n\n\n\n\n\n\nIn slack- post about yourself (check your email for a slack invitation). Include somethings you want to tell people and your github username.\nSign up for github here, if you don’t already have an account. We will very carefully link your github account to our github classroom account.\nRead the prologue to chapter 1.4 of MDSR. Add some notes to our summary.\n\n\n\n\n\n\nWalk to MCConnell 213 and 214\nMy office and group study room."
+    "text": "Please complete this survey for Prof. Cao’s study\n\n\nThe six-fixes Student hours Spennlli center\n\n\n\n\n\n\nScreenshots Help\n\n\n\n\n\nHelp us help you: take screenshots of your screen and post them to Slack.\n\nmacOS: Command+Shift+3 to take shot of whole screen, Command+Shift+4 to take subportion\nWindows: Shift-Windows Key-S and Snip & Sketch\nLinux: Print screen\nChromebook: Shift + Ctrl + Show windows\n\n\n\n\nPrologue to 1.4 document\n\n\n\n\n\n\nNote\n\n\n\n\n\n##Anouncement-Google\nGoogle will be on campus.\n\nBuilding a Tech Career, Sept 13 6:30-8:30pm, Campus Center room 103/104\nResume Building and the Technical Interview, Sept 14 6-8pm, Campus Center room 103/104\nSelf-Advocacy in Tech, Sept 15 12:15-1:15pm, Campus Center room 204\n\n\n\n\n\n\n\nTaxonomy of graphs\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSyllabus Log into Slack Website tour Bring Computers to Class\n\n\nData Viz No Computers\n\n\n\n\n\n\n\n\n\nHomework:\n\n\n\n\n\n\nIn slack- post about yourself (check your email for a slack invitation). Include somethings you want to tell people and your github username.\nSign up for github here, if you don’t already have an account. We will very carefully link your github account to our github classroom account.\nRead the prologue to chapter 1.4 of MDSR. Add some notes to our summary.\n\n\n\n\n\n\n\nMy office and group study room."
   },
   {
     "objectID": "course-materials/syllabus/syllabus.html#labs-25",
@@ -621,5 +621,117 @@
     "title": "Taxonomy of Graphics",
     "section": "Citations",
     "text": "Citations\nAll graph originated else where.\nBelow are secondary sources.\nMost the the graphs were grabed from: datapipeline\nThe last graph was grabbed from The Washington Post"
+  },
+  {
+    "objectID": "course-materials/first-day-survey/Data-Viz-No-Computers.html#baumers-thoughts",
+    "href": "course-materials/first-day-survey/Data-Viz-No-Computers.html#baumers-thoughts",
+    "title": "No computers Data Viz",
+    "section": "Baumer’s Thoughts",
+    "text": "Baumer’s Thoughts\nSome of the following slides were hyjacked by the text’s author."
+  },
+  {
+    "objectID": "course-materials/first-day-survey/Data-Viz-No-Computers.html#a-misleading-chart-from-apple",
+    "href": "course-materials/first-day-survey/Data-Viz-No-Computers.html#a-misleading-chart-from-apple",
+    "title": "No computers Data Viz",
+    "section": "A misleading chart from Apple",
+    "text": "A misleading chart from Apple"
+  },
+  {
+    "objectID": "course-materials/first-day-survey/Data-Viz-No-Computers.html#pie-charts-just-dont",
+    "href": "course-materials/first-day-survey/Data-Viz-No-Computers.html#pie-charts-just-dont",
+    "title": "No computers Data Viz",
+    "section": "Pie charts (just don’t)",
+    "text": "Pie charts (just don’t)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAre 6-cylinder engines more common among manuals or automatics?\n1\nhttps://en.wikipedia.org/wiki/Misleading_graph#Improper_scaling"
+  },
+  {
+    "objectID": "course-materials/first-day-survey/Data-Viz-No-Computers.html#scales",
+    "href": "course-materials/first-day-survey/Data-Viz-No-Computers.html#scales",
+    "title": "No computers Data Viz",
+    "section": "Scales",
+    "text": "Scales\n\n\n\n\nOften not very clearly defined\nEasy to lie by manipulating scales\nWhy perspective?\nWidth of lines?\n\n\n\n\nGood graphics have clear scales\n\nRemember iPhone sales graphic"
+  },
+  {
+    "objectID": "course-materials/first-day-survey/Data-Viz-No-Computers.html#a",
+    "href": "course-materials/first-day-survey/Data-Viz-No-Computers.html#a",
+    "title": "No computers Data Viz",
+    "section": "A",
+    "text": "A\n.footnote[https://en.wikipedia.org/wiki/Misleading_graph#Improper_scaling]\n.center[]"
+  },
+  {
+    "objectID": "course-materials/first-day-survey/Data-Viz-No-Computers.html#b",
+    "href": "course-materials/first-day-survey/Data-Viz-No-Computers.html#b",
+    "title": "No computers Data Viz",
+    "section": "B",
+    "text": "B\n https://en.wikipedia.org/wiki/Misleading_graph#3D"
+  },
+  {
+    "objectID": "course-materials/first-day-survey/Data-Viz-No-Computers.html#balance-of-art-vs.-science",
+    "href": "course-materials/first-day-survey/Data-Viz-No-Computers.html#balance-of-art-vs.-science",
+    "title": "No computers Data Viz",
+    "section": "Balance of art vs. science",
+    "text": "Balance of art vs. science\n\n\nData graphics:\n\npurpose is to convey meaning\nscientific, rigorous\npeer-reviewed\nclear\ncreative!\n\n\nInfographics:\n\npurpose might be to draw eyeballs\nentertaining?\nsales or marketing?\npublic sphere\ncreative\n\n\n\nWe’re only interested in the former"
+  },
+  {
+    "objectID": "course-materials/first-day-survey/Data-Viz-No-Computers.html#unclear-scales",
+    "href": "course-materials/first-day-survey/Data-Viz-No-Computers.html#unclear-scales",
+    "title": "No computers Data Viz",
+    "section": "Unclear Scales",
+    "text": "Unclear Scales\n\n\nOften not very clearly defined\nEasy to lie by manipulating scales\nWhy perspective?\nWidth of lines?"
+  },
+  {
+    "objectID": "course-materials/first-day-survey/Data-Viz-No-Computers.html#cleaer-scales",
+    "href": "course-materials/first-day-survey/Data-Viz-No-Computers.html#cleaer-scales",
+    "title": "No computers Data Viz",
+    "section": "Cleaer Scales",
+    "text": "Cleaer Scales\n\n\nGood graphics have clear scales\n\nRemember iPhone sales graphic"
+  },
+  {
+    "objectID": "course-materials/first-day-survey/Data-Viz-No-Computers.html#clearer-scales",
+    "href": "course-materials/first-day-survey/Data-Viz-No-Computers.html#clearer-scales",
+    "title": "No computers Data Viz",
+    "section": "Clearer Scales",
+    "text": "Clearer Scales\n\n\nGood graphics have clear scales\n\nRemember iPhone sales graphic"
+  },
+  {
+    "objectID": "course-materials/first-day-survey/Data-Viz-No-Computers.html#section",
+    "href": "course-materials/first-day-survey/Data-Viz-No-Computers.html#section",
+    "title": "No computers Data Viz",
+    "section": "",
+    "text": "1\n\n\n\n\n\nhttps://en.wikipedia.org/wiki/Misleading_graph#Improper_scaling"
+  },
+  {
+    "objectID": "course-materials/first-day-survey/Data-Viz-No-Computers.html#c",
+    "href": "course-materials/first-day-survey/Data-Viz-No-Computers.html#c",
+    "title": "No computers Data Viz",
+    "section": "C",
+    "text": "C\n.footnote[https://en.wikipedia.org/wiki/Chartjunk]\n.center[]"
+  },
+  {
+    "objectID": "course-materials/first-day-survey/Data-Viz-No-Computers.html#section-1",
+    "href": "course-materials/first-day-survey/Data-Viz-No-Computers.html#section-1",
+    "title": "No computers Data Viz",
+    "section": "",
+    "text": "1\nhttps://en.wikipedia.org/wiki/Misleading_graph#3D"
+  },
+  {
+    "objectID": "course-materials/first-day-survey/Data-Viz-No-Computers.html#section-2",
+    "href": "course-materials/first-day-survey/Data-Viz-No-Computers.html#section-2",
+    "title": "No computers Data Viz",
+    "section": "",
+    "text": "1\nhttps://en.wikipedia.org/wiki/Chartjunk"
+  },
+  {
+    "objectID": "index.html#day-2-taxonomy",
+    "href": "index.html#day-2-taxonomy",
+    "title": "SDS 192: Intro to Data Science",
+    "section": "",
+    "text": "Please complete this survey for Prof. Cao’s study\n\n\nThe six-fixes Student hours Spennlli center\n\n\n\n\n\n\nScreenshots Help\n\n\n\n\n\nHelp us help you: take screenshots of your screen and post them to Slack.\n\nmacOS: Command+Shift+3 to take shot of whole screen, Command+Shift+4 to take subportion\nWindows: Shift-Windows Key-S and Snip & Sketch\nLinux: Print screen\nChromebook: Shift + Ctrl + Show windows\n\n\n\n\nPrologue to 1.4 document\n\n\n\n\n\n\nNote\n\n\n\n\n\n##Anouncement-Google\nGoogle will be on campus.\n\nBuilding a Tech Career, Sept 13 6:30-8:30pm, Campus Center room 103/104\nResume Building and the Technical Interview, Sept 14 6-8pm, Campus Center room 103/104\nSelf-Advocacy in Tech, Sept 15 12:15-1:15pm, Campus Center room 204\n\n\n\n\n\n\n\nTaxonomy of graphs"
+  },
+  {
+    "objectID": "index.html#day-1-no-computer-data-viz",
+    "href": "index.html#day-1-no-computer-data-viz",
+    "title": "SDS 192: Intro to Data Science",
+    "section": "",
+    "text": "Syllabus Log into Slack Website tour Bring Computers to Class\n\n\nData Viz No Computers\n\n\n\n\n\n\n\n\n\nHomework:\n\n\n\n\n\n\nIn slack- post about yourself (check your email for a slack invitation). Include somethings you want to tell people and your github username.\nSign up for github here, if you don’t already have an account. We will very carefully link your github account to our github classroom account.\nRead the prologue to chapter 1.4 of MDSR. Add some notes to our summary.\n\n\n\n\n\n\n\nMy office and group study room."
   }
 ]

@@ -5,6 +5,12 @@ format: revealjs
 editor: visual
 ---
 
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(fig.path = 'figures/')
+library(tidyverse)
+```
+
 ## Names and Surveys
 
 [Survey Questions](https://docs.google.com/forms/d/e/1FAIpQLSfYrVhaMo9BCVSTRZ8EhOnfxZbkdzjek9AB2EV11qFDDXgo9Q/viewform?usp=sf_link)
@@ -52,6 +58,123 @@ Class discussion.
 ## Take 2: Hand Drawn Graphs again
 
 Choose your favorite of the four graphs and as a group redraw it.
+
+## Baumer's Thoughts
+
+Some of the following slides were hyjacked by the text's author.
+
+## [A misleading chart from Apple](https://qz.com/122921/the-chart-tim-cook-doesnt-want-you-to-see/)
+
+![](https://cms.qz.com/wp-content/uploads/2013/09/iphone-sales.jpg?quality=75&strip=all&w=620&h=413&crop=1)
+
+## Pie charts (just don't)
+
+::: columns
+::: {.column width="50%"}
+```{r mtcars-stacked-bar, echo=FALSE, fig.height=5}
+g <- ggplot(mtcars, aes(x = am, fill = factor(cyl))) +
+geom_bar(position = "fill") +
+coord_flip() +
+xlab("Percentage of Cars") +
+ylab("Transmission Type (manual or automatic)") +
+scale_fill_discrete("Cylinders")
+g
+
+```
+:::
+
+::: {.column width="50%"}
+```{r mtcars-pie-chart, echo=FALSE, message=FALSE, fig.height=5}
+
+g + 
+ aes(x = factor(1)) + 
+ coord_polar(theta = "y") + 
+ scale_x_discrete(NULL) + 
+ facet_wrap(~am)
+
+```
+:::
+:::
+
+Are 6-cylinder engines more common among manuals or automatics?
+
+[^1]
+
+[^1]: https://en.wikipedia.org/wiki/Misleading_graph#Improper_scaling
+
+## Unclear Scales
+
+![](https://infovis-wiki.net/w/images/0/05/Lie_factor_example1_image.jpg){fig-align="center" width="200%"}
+
+-   Often not very clearly defined
+-   Easy to lie by manipulating scales
+-   Why perspective?
+-   Width of lines?
+
+## Clearer Scales
+
+![](http://images.slideplayer.com/14/4403460/slides/slide_21.jpg){fig-align="center"}
+
+-   Good graphics have clear scales
+    -   Remember iPhone sales graphic
+
+## 
+
+[^2]
+
+[^2]: https://en.wikipedia.org/wiki/Misleading_graph#Improper_scaling
+
+![](https://image.slidesharecdn.com/tufte-slides-150224020553-conversion-gate02/95/lessons-from-edward-tufte-5-638.jpg?cb=1424765239){fig-align="center" width="800"}
+
+## 
+
+![](https://image.slidesharecdn.com/tufte-slides-150224020553-conversion-gate02/95/lessons-from-edward-tufte-9-638.jpg?cb=1424765239){width="800"}
+
+[^3]
+
+[^3]: https://en.wikipedia.org/wiki/Misleading_graph#3D
+
+## 
+
+![](https://image.slidesharecdn.com/tufte-slides-150224020553-conversion-gate02/95/lessons-from-edward-tufte-16-638.jpg?cb=1424765239){width="800"}
+
+[^4]
+
+[^4]: https://en.wikipedia.org/wiki/Chartjunk
+
+## Balance of art vs. science
+
+::: columns
+::: {.column width="50%"}
+Data graphics:
+
+-   purpose is to convey meaning
+
+-   scientific, rigorous
+
+-   peer-reviewed
+
+-   clear
+
+-   **creative!**
+:::
+
+::: {.column width="50%"}
+[Infographics](https://en.wikipedia.org/wiki/Infographic):
+
+-   purpose might be to draw eyeballs
+
+-   entertaining?
+
+-   sales or marketing?
+
+-   public sphere
+
+-   creative
+:::
+:::
+
+We're only interested in the former
 
 ## Other people have thought about this
 
