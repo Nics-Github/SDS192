@@ -1,6 +1,6 @@
 ---
 title: "Syllabus"
-output: pdf_document
+output: pdf
 
 format:
   html:
@@ -10,6 +10,7 @@ format:
     toc-location: left
     toc-title: "Class Days"
     df-print: kable
+    
     
 execute:
   freeze: auto  # re-render only when source changes    
@@ -65,7 +66,7 @@ Afternoon Section
 
     -   For non personal/sensitive questions, ask on the `#questions` channel on Slack. For personal/sensitive matters, Slack DM Professor Schwab.
 
-    -   Prof. Schwab's student question hours:
+    -   Prof. Schwab's student hours:
 
         -   W 12:15 - 1:15 pm
 
