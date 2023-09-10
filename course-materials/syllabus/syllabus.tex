@@ -1,0 +1,723 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+%
+\documentclass[
+  letterpaper,
+  DIV=11,
+  numbers=noendperiod]{scrartcl}
+
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+% Make \paragraph and \subparagraph free-standing
+\ifx\paragraph\undefined\else
+  \let\oldparagraph\paragraph
+  \renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+  \let\oldsubparagraph\subparagraph
+  \renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+
+\KOMAoption{captions}{tableheading}
+\makeatletter
+\@ifpackageloaded{tcolorbox}{}{\usepackage[many]{tcolorbox}}
+\@ifpackageloaded{fontawesome5}{}{\usepackage{fontawesome5}}
+\definecolor{quarto-callout-color}{HTML}{909090}
+\definecolor{quarto-callout-note-color}{HTML}{0758E5}
+\definecolor{quarto-callout-important-color}{HTML}{CC1914}
+\definecolor{quarto-callout-warning-color}{HTML}{EB9113}
+\definecolor{quarto-callout-tip-color}{HTML}{00A047}
+\definecolor{quarto-callout-caution-color}{HTML}{FC5300}
+\definecolor{quarto-callout-color-frame}{HTML}{acacac}
+\definecolor{quarto-callout-note-color-frame}{HTML}{4582ec}
+\definecolor{quarto-callout-important-color-frame}{HTML}{d9534f}
+\definecolor{quarto-callout-warning-color-frame}{HTML}{f0ad4e}
+\definecolor{quarto-callout-tip-color-frame}{HTML}{02b875}
+\definecolor{quarto-callout-caution-color-frame}{HTML}{fd7e14}
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\AtBeginDocument{%
+\ifdefined\contentsname
+  \renewcommand*\contentsname{Table of contents}
+\else
+  \newcommand\contentsname{Table of contents}
+\fi
+\ifdefined\listfigurename
+  \renewcommand*\listfigurename{List of Figures}
+\else
+  \newcommand\listfigurename{List of Figures}
+\fi
+\ifdefined\listtablename
+  \renewcommand*\listtablename{List of Tables}
+\else
+  \newcommand\listtablename{List of Tables}
+\fi
+\ifdefined\figurename
+  \renewcommand*\figurename{Figure}
+\else
+  \newcommand\figurename{Figure}
+\fi
+\ifdefined\tablename
+  \renewcommand*\tablename{Table}
+\else
+  \newcommand\tablename{Table}
+\fi
+}
+\@ifpackageloaded{float}{}{\usepackage{float}}
+\floatstyle{ruled}
+\@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
+\floatname{codelisting}{Listing}
+\newcommand*\listoflistings{\listof{codelisting}{List of Listings}}
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
+\makeatother
+\makeatletter
+\@ifpackageloaded{tcolorbox}{}{\usepackage[many]{tcolorbox}}
+\makeatother
+\makeatletter
+\@ifundefined{shadecolor}{\definecolor{shadecolor}{rgb}{.97, .97, .97}}
+\makeatother
+\makeatletter
+\makeatother
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  colorlinks=true,
+  linkcolor={blue},
+  filecolor={Maroon},
+  citecolor={Blue},
+  urlcolor={Blue},
+  pdfcreator={LaTeX via pandoc}}
+
+\author{}
+\date{}
+
+\begin{document}
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[interior hidden, boxrule=0pt, sharp corners, frame hidden, breakable, borderline west={3pt}{0pt}{shadecolor}, enhanced]}{\end{tcolorbox}}\fi
+
+\hypertarget{basicinfo}{%
+\section{Basic information}\label{basicinfo}}
+
+\begin{itemize}
+\item
+  \textbf{Course title:} SDS 192: Introduction to Data Science
+\item
+  \textbf{Contact Info:}\\
+  \includegraphics[width=1em,height=1em]{syllabus_files/figure-pdf/fa-icon-0472185263d085cbc13489893c2b12dc.pdf}
+  \href{mailto:nschwab@smith.edu}{\nolinkurl{nschwab@smith.edu}}\\
+  \includegraphics[width=1em,height=1em]{syllabus_files/figure-pdf/fa-icon-b3972e612af455525f0cfa1d7df4456b.pdf}
+  413-585-3440\\
+  \includegraphics[width=0.97em,height=1em]{syllabus_files/figure-pdf/fa-icon-ac3e0ebe428856e650dbf4ee59e7ca91.pdf}
+  \href{http://www.github.com/Nics-Github}{Nics-Github}
+  \includegraphics[width=1.12em,height=1em]{syllabus_files/figure-pdf/fa-icon-9642841101846e4ce46f143199382cb4.pdf}
+  \href{https://smith.zoom.us/j/8227449694}{nschwab}
+\item
+  \textbf{Office location:} McConnell 213
+\item
+  \textbf{Email:} nschwab@smith.edu
+\item
+  \textbf{Meeting locations/times:}
+\end{itemize}
+
+Morning Section
+
+\begin{verbatim}
+-   MWF: 10:50 AM - 11:05 PM / Sabin-Reed 220
+
+Afternoon Section
+
+-   M: 1:40 AM - 11:55 / Sabin- Reed 301 WF: 1:20 AM - 12:35 / Sabin- Reed 301
+\end{verbatim}
+
+\begin{itemize}
+\item
+  \textbf{Getting help}:
+
+  \begin{itemize}
+  \item
+    For non personal/sensitive questions, ask on the
+    \texttt{\#questions} channel on Slack. For personal/sensitive
+    matters, Slack DM Professor Schwab.
+  \item
+    Prof.~Schwab's student question hours:
+
+    \begin{itemize}
+    \item
+      W 12:15 - 1:15 pm
+    \item
+      F 12:15 - 1:15 pm
+    \item
+      Request a zoom appointment.
+    \end{itemize}
+  \item
+    \href{https://www.smith.edu/academics/spinelli-center/tutoring}{Spinelli
+    Center}
+  \end{itemize}
+\end{itemize}
+
+\hypertarget{work-life-balance}{%
+\subsection{Instructor work-life balance}\label{work-life-balance}}
+
+\begin{itemize}
+\tightlist
+\item
+  I will respond to Slack messages sent during the week within 24h. I
+  will respond to Slack messages sent during the weekend at my own
+  discretion.
+\item
+  If possible, please only Slack me with briefer and administrative
+  questions; I prefer having more substantive conversations in person as
+  it takes me less energy to understand where you are at.
+\item
+  I will do my best to return all grading as promptly as possible.
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{how-can-i-succeed-in-this-class}{%
+\section{How can I succeed in this
+class?}\label{how-can-i-succeed-in-this-class}}
+
+Ask yourself:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{When I have questions or don't understand something:}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \emph{``Am I asking questions in class?''}
+  \item
+    \emph{``Am I asking questions on Slack in the \texttt{\#questions}
+    channel?''} Even better: \emph{``Am I answering my peers' questions
+    on Slack?''}
+  \item
+    \emph{``Having I been going to the Spinelli tutoring center for help
+    on R and the tidyverse?''}
+  \item
+    \emph{``Have I been coming to office hours?''}
+  \end{itemize}
+\item
+  \textbf{Lectures and readings:}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \emph{``Am I staying on top Slack notifications sent between
+    lectures?''} If you need help developing a notification strategy
+    that best suits your lifestyle, please speak to me.
+  \item
+    \emph{``Am I attending lectures consistently?''}
+  \item
+    \emph{``During in-class activities, am I actually running code
+    line-by-line and studying the outputs, or am I just going through
+    the motions?''}
+  \item
+    \emph{``During in-class exercises, am I taking full advantage that
+    I'm in the same place at the same time with the instructor, the lab
+    assistants, and most importantly your peers, or am I browsing the
+    web/texting the whole time?''}
+  \item
+    \emph{``Have I been doing the associated readings for each
+    lecture?''}
+  \end{itemize}
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{course-description-objectives}{%
+\section{Course Description \&
+Objectives}\label{course-description-objectives}}
+
+An introduction to data science using Python, R and SQL. Students learn
+how to scrape, process and clean data from the web; manipulate data in a
+variety of formats; contextualize variation in data; construct point and
+interval estimates using resampling techniques; visualize
+multidimensional data; design accurate, clear and appropriate data
+graphics; create data maps and perform basic spatial analysis; and query
+large relational databases. SDS 100 is required for students who have
+not previously completed SDS 201, SDS 220, SDS 290 or SDS 291.
+
+\textbf{4 Class Hours 4 Credits}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{basic-outline-of-course-content}{%
+\section{BASIC OUTLINE OF COURSE
+CONTENT:}\label{basic-outline-of-course-content}}
+
+\begin{itemize}
+\item
+  Introduction to Programming Language for Data Science (R or Python)
+  and Computing Environment (RStudio, Jupyter Notebook, etc.)
+\item
+  Data Science Life Cycle
+\item
+  Grammar of Graphics
+\item
+  Data Visualization
+\item
+  Data Wrangling
+\item
+  Data Collection
+\item
+  Web Scraping and Importing Data
+\item
+  Data Management
+\item
+  Data Ethics
+\item
+  Iteration
+\item
+  Introduction to Database Querying with SQL
+\item
+  Further Topics based on time and student interest may include:
+
+  \begin{itemize}
+  \item
+    Dynamic and Customized Data Graphics
+  \item
+    Geospatial Data and Maps
+  \item
+    Learning with AI
+  \end{itemize}
+\end{itemize}
+
+\hypertarget{student-learning-outcomes}{%
+\section{Student Learning outcomes}\label{student-learning-outcomes}}
+
+Students who complete this course will be able to:
+
+\begin{itemize}
+\item
+  Develop skills in using modern technology to conduct data analysis.
+\item
+  Draw meaningful conclusions and insights from real world data.
+\item
+  Understand data collection from various sources and appropriate data
+  management.
+\item
+  Effectively organize, clean, prepare data for analysis
+\item
+  Communicate clear, meaningful data visualizations.
+\item
+  Develop understanding and appreciation of ethics in Data Science.
+\end{itemize}
+
+\hypertarget{lecture-schedule}{%
+\section{Lecture schedule}\label{lecture-schedule}}
+
+The lecture schedule and associated readings can be found on the
+\href{https://nics-github.github.io/MTH_190_Intro_to_DS/}{main page} of
+this course webpage.
+
+\hypertarget{book-and-software}{%
+\section{Book and software}\label{book-and-software}}
+
+The Modern Data Science with R \textbf{textbook} is accessible on the
+navigational bar of this webpage as well as via
+\href{https://mdsr-book.github.io/mdsr2e/}{this link}. Students will use
+a local install or RStudio workbench to do computations in R find it
+\href{https://rstudio.smith.edu}{here}.
+
+\hypertarget{policies}{%
+\section{Class norms}\label{policies}}
+
+\begin{itemize}
+\tightlist
+\item
+  You are expected to stay until the end of lecture. If you need to
+  leave early, please confirm with me at the beginning of lecture and
+  sit somewhere where your departure will be minimally disruptive.
+\item
+  \emph{Attendance policy.} You may be dropped from the course for
+  missing 3 or more days of class.
+\item
+  Attendance will not be explicitly taken and occasional absences are
+  excused. However, extended absences should be mentioned to me.
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{readings}{%
+\section{Readings}\label{readings}}
+
+We'll be reading chapters 1-6,8,15,and 17 of Modern Data Science with R.
+Probably other texts.
+
+\hypertarget{evaluation}{%
+\section{Evaluation}\label{evaluation}}
+
+All due dates can be found on the \href{../index.html}{main page} of
+this course webpage.
+
+This class is project based. As such your evaluations will be based on
+projects you create.
+
+\hypertarget{projects-40}{%
+\subsection{Projects 40\%}\label{projects-40}}
+
+There are four projects to complete during the semester. They will be
+completed collaboratively with a team of students using SCRUM.
+
+\hypertarget{final-project-20}{%
+\subsection{Final project 20\%}\label{final-project-20}}
+
+There will be a final project due the last day of classes. You'll
+complete this final project over the course of the semester using a
+process called SCRUM. The Final Project will also have in groups of 2-3
+where you can choose your groupmates.
+
+\hypertarget{problem-sets-25}{%
+\subsection{Problem sets 25\%}\label{problem-sets-25}}
+
+Homework will be assigned regularly, its important to complete and stay
+on top of the problem sets. They will be graded on the following scale:
+
+\begin{itemize}
+\item
+  5 points: Assignment is complete, mostly correct, rendered and
+  submitted
+\item
+  4 points: Assignment is nearly complete, mostly correct, rendered and
+  submitted
+\item
+  3 points: Assignment is around 50\% of the problems have been
+  completed, are correct, the assignment is rendered
+\item
+  2 points: Assignment is at most 50\% complete, the problems are
+  incorrect and is not correctly rendered
+\item
+  1 point : Assignment is largely unfinished and is not rendered
+\item
+  0 points: No assignment is turned in.
+\end{itemize}
+
+\hypertarget{engagement}{%
+\subsection{Engagement 15\%}\label{engagement}}
+
+It is difficult to explicit codify what constitutes ``an engaged
+student,'' so instead I present the following rough principle I will
+follow: \emph{you'll only get out of this class as much as you put in}.
+That being said, here are multiple pathways for you to stay engaged in
+this class:
+
+\begin{itemize}
+\tightlist
+\item
+  In particular: Participation in all SCRUM Sprints
+\item
+  Asking and answering questions in class.
+\item
+  Working and staying focused in class.
+\item
+  Coming to office hours.
+\item
+  Posting questions on Slack.
+\item
+  Even better: Responding to questions on Slack.
+\end{itemize}
+
+\hypertarget{tentative-assignment-schedule}{%
+\subsection{Tentative Assignment
+schedule}\label{tentative-assignment-schedule}}
+
+Homework will be assigned regularly and due by midnight the following
+Monday.
+
+Project 1- due after reading chapter 4 of MDSR roughly the 10th day of
+class
+
+Project 2- due after reading chapter 5 of MDSR roughly the 18th day of
+class
+
+Project 3- due after reading chapter 15 of MDSR roughly the 22nd day of
+class
+
+Project 4- due after reading chapter 17 of MDSR roughly the 26th day of
+class
+
+Final Project/ Presentation during our final time.
+
+For a more up to date schedule see the course's
+\href{../index.html}{website}.
+
+\hypertarget{policies-1}{%
+\subsection{Policies}\label{policies-1}}
+
+\hypertarget{accommodation}{%
+\subsubsection{Accommodation}\label{accommodation}}
+
+Smith is committed to providing support services and reasonable
+accommodations to all students with disabilities. To request an
+accommodation, please register with the Disability Services Office at
+the beginning of the semester. To do so, call (413) 585-2071 to arrange
+an appointment with Laura Rauscher, Director of
+\href{https://www.smith.edu/about-smith/disability-services}{Disability
+Services}.
+
+\hypertarget{policies-2}{%
+\subsection*{Policies}\label{policies-2}}
+\addcontentsline{toc}{subsection}{Policies}
+
+\hypertarget{inclusion}{%
+\subsubsection{Inclusion}\label{inclusion}}
+
+\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, toprule=.15mm, colframe=quarto-callout-tip-color-frame, colback=white, breakable, opacityback=0, opacitybacktitle=0.6, coltitle=black, rightrule=.15mm, bottomrule=.15mm, titlerule=0mm, leftrule=.75mm, colbacktitle=quarto-callout-tip-color!10!white, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Inclusion policy}, left=2mm, arc=.35mm, bottomtitle=1mm]
+
+We are committed to fostering a classroom environment where all students
+thrive. We are committed to affirming the identities, realities and
+voices of all students, especially those from historically marginalized
+or underrepresented backgrounds. We are dedicated to creating a space
+where everyone in the class is respected, is free from discrimination
+based on race, ethnicity, sexual orientation, religion, gender identity,
+disability status, and other identities, and feel welcome and ready to
+learn at your highest potential.
+
+If you have any concerns or suggestions for how to make this class more
+inclusive, please reach out to your instructor.
+
+\textbf{We are here to support your learning and growth as data
+scientists and people!}
+
+\end{tcolorbox}
+
+\hypertarget{attendance}{%
+\subsubsection{Attendance}\label{attendance}}
+
+We expect you attend class in person. If you choose to come to class, we
+expect your full attention. Please put your phone away during class
+unless otherwise directed.
+
+In keeping with Smith's core identity and mission as an in-person,
+residential college, SDS affirms College policy (as per the Provost and
+Dean of the College) that students will attend class in person. SDS
+courses will not provide options for remote attendance. Students who
+have been determined to require a remote attendance accommodation by the
+Office of Disability Services will be the only exceptions to this
+policy. As with any other kind of ADA accommodations, please notify your
+instructor during the first week of classes to discuss how we can meet
+your accommodations.
+
+If you are unable to attend class for any reason, please follow the
+materials on the course website and check with another student about
+what happened in class.
+
+\hypertarget{collaboration}{%
+\subsubsection{Collaboration}\label{collaboration}}
+
+\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, toprule=.15mm, colframe=quarto-callout-warning-color-frame, colback=white, breakable, opacityback=0, opacitybacktitle=0.6, coltitle=black, rightrule=.15mm, bottomrule=.15mm, titlerule=0mm, leftrule=.75mm, colbacktitle=quarto-callout-warning-color!10!white, title=\textcolor{quarto-callout-warning-color}{\faExclamationTriangle}\hspace{0.5em}{Warning}, left=2mm, arc=.35mm, bottomtitle=1mm]
+
+Much of this course will operate on a collaborative basis, and you are
+expected and encouraged to work together with a partner or in small
+groups to study, complete labs, and prepare for exams. However,
+\textbf{all work that you submit for credit must be your own}. Copying
+and pasting sentences, paragraphs, or \emph{blocks of code} from another
+student or from online sources is not acceptable and will receive no
+credit. No interaction with anyone but the instructors is allowed on any
+exams or quizzes.
+
+\end{tcolorbox}
+
+\hypertarget{academic-honor-code-statement}{%
+\subsubsection{Academic Honor Code
+Statement}\label{academic-honor-code-statement}}
+
+All students, staff and faculty are bound by the Smith College Honor
+Code, which Smith has had since 1944.
+
+\begin{quote}
+Smith College expects all students to be honest and committed to the
+principles of academic and intellectual integrity in their preparation
+and submission of course work and examinations. Students and faculty at
+Smith are part of an academic community defined by its commitment to
+scholarship, which depends on scrupulous and attentive acknowledgement
+of all sources of information, and honest and respectful use of college
+resources.
+\end{quote}
+
+Cases of dishonesty, plagiarism, etc., will be reported to the Academic
+Honor Board.
+
+\hypertarget{conduct}{%
+\subsubsection{Code of Conduct}\label{conduct}}
+
+As the instructor and assistants for this course, we are committed to
+making participation in this course a harassment-free experience for
+everyone, regardless of level of experience, gender, gender identity and
+expression, sexual orientation, disability, personal appearance, body
+size, race, ethnicity, age, or religion. Examples of unacceptable
+behavior by participants in this course include the use of sexual
+language or imagery, derogatory comments or personal attacks, deliberate
+misgendering or use of ``dead'' names, trolling, public or private
+harassment, insults, or other unprofessional conduct.
+
+As the instructor and assistants we have the right and responsibility to
+point out and stop behavior that is not aligned to
+\href{syllabus.qmd\#conduct}{this Code of Conduct}. Participants who do
+not follow the Code of Conduct may be reprimanded for such behavior.
+Instances of abusive, harassing, or otherwise unacceptable behavior may
+be reported by contacting the instructor.
+
+\begin{tcolorbox}[enhanced jigsaw, toptitle=1mm, toprule=.15mm, colframe=quarto-callout-important-color-frame, colback=white, breakable, opacityback=0, opacitybacktitle=0.6, coltitle=black, rightrule=.15mm, bottomrule=.15mm, titlerule=0mm, leftrule=.75mm, colbacktitle=quarto-callout-important-color!10!white, title=\textcolor{quarto-callout-important-color}{\faExclamation}\hspace{0.5em}{Important}, left=2mm, arc=.35mm, bottomtitle=1mm]
+
+All students, the instructor, the lab instructor, and all assistants are
+expected to adhere to this Code of Conduct in all settings for this
+course: lectures, labs, office hours, tutoring hours, and over Slack.
+
+\end{tcolorbox}
+
+This Code of Conduct is adapted from the
+\href{http://contributor-covenant.org/}{Contributor Covenant}, version
+1.0.0, available
+\href{http://contributor-covenant.org/version/1/0/0/}{here}.
+
+\hypertarget{resources}{%
+\subsection*{Resources}\label{resources}}
+\addcontentsline{toc}{subsection}{Resources}
+
+\hypertarget{moodle-and-course-website}{%
+\subsubsection{Moodle and course
+website}\label{moodle-and-course-website}}
+
+The \href{index.qmd}{course website} and Moodle will be updated
+regularly with lecture handouts, project information, assignments, and
+other course resources. Grades will be recorded on Moodle. Please check
+both regularly.
+
+\hypertarget{communication}{%
+\subsubsection{Communication}\label{communication}}
+
+\begin{itemize}
+\tightlist
+\item
+  \includegraphics[width=0.88em,height=1em]{syllabus_files/figure-pdf/fa-icon-4f6d0df4e3bb3843b0bd155ace73ff01.pdf}
+  \href{}{Slack} is the primary mechanism for course-related discussions
+  of all kinds. \emph{Please do not email the course instructor with
+  course-related questions!} Instead, post these on \texttt{\#questions}
+  on Slack. If discretion is absolutely necessary, private message the
+  instructor on Slack.
+\end{itemize}
+
+\hypertarget{writing}{%
+\subsubsection{Writing}\label{writing}}
+
+Your ability to communicate results (which may be technical in nature)
+to your audience (which is likely to be non-technical) is critical to
+your success as a data analyst. The assignments in this class will place
+an emphasis on the clarity of your writing.
+
+\hypertarget{writing-enriched-curriculum}{%
+\subsubsection{Writing Enriched
+Curriculum}\label{writing-enriched-curriculum}}
+
+This course is part of Smith College's
+\href{https://www.smith.edu/academics/jacobson-center/writing-enriched-curriculum}{Writing
+Enriched Curriculum}. As such, the course supports the
+\href{https://www.smith.edu/sites/default/files/media/Documents/Jacobson-Center/SDS-WritingPlan-accessible.pdf}{Writing
+Plan of the Program in Statistical \& Data Sciences}.
+
+Please read the
+\href{https://www.smith.edu/sites/default/files/media/Documents/Jacobson-Center/SDS-WritingPlan-accessible.pdf}{SDS
+Writing Plan} for more information.
+
+\hypertarget{the-spinelli-center}{%
+\subsubsection{The Spinelli Center}\label{the-spinelli-center}}
+
+The \href{https://www.smith.edu/qlc/index.html}{Spinelli Center} (now in
+Seelye 207) supports students doing quantitative work across the
+curriculum. In particular, they employ:
+
+\begin{itemize}
+\tightlist
+\item
+  \href{https://www.smith.edu/qlc/tutoring.html?colStats=open\#PanelStats}{SDS
+  Tutors} available from 7:00--9:00pm on Sunday--Thursday evenings in
+  Burton 301. These students are trained to help you with your
+  statistics and R questions.
+\item
+  A
+  \href{https://www.smith.edu/qlc/tutoring.html?colDataCnslr=open\#PanelDataCnslr}{Data
+  Research and Statistics Counselor} (Osman Keshawarz) who keeps both
+  \href{http://www.smith.edu/qlc/tutoring.html\#D1}{drop-in hours} and
+  appointments. Students are welcome to email
+  \href{mailto:qlctutor@smith.edu}{\nolinkurl{qlctutor@smith.edu}} to
+  make an appointment.
+\end{itemize}
+
+Your fellow students are also an excellent source for explanations,
+tips, etc.
+
+
+
+\end{document}

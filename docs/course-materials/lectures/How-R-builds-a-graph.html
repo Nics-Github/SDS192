@@ -12,7 +12,7 @@
   <meta name="generator" content="quarto-1.3.353">
 
   <meta name="author" content="Schwab">
-  <title>SDS 192 Fall ’23 - No computers Data Viz</title>
+  <title>SDS 192 Fall ’23 - How R builds a graph</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -30,6 +30,71 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto.css">
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -326,7 +391,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">No computers Data Viz</h1>
+  <h1 class="title">How R builds a graph</h1>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -337,158 +402,33 @@ Schwab
 </div>
 
 </section>
-<section id="names-and-surveys" class="slide level2">
-<h2>Names and Surveys</h2>
-<p><a href="https://docs.google.com/forms/d/e/1FAIpQLSfYrVhaMo9BCVSTRZ8EhOnfxZbkdzjek9AB2EV11qFDDXgo9Q/viewform?usp=sf_link">Survey Questions</a></p>
-</section>
-<section id="data-viz-no-computers" class="slide level2">
-<h2>Data Viz no computers</h2>
-<p><a href="https://docs.google.com/spreadsheets/d/1x9srZXDoYzKGew1f-y4brMbN8dl4QM66pc-dmCBWHQY/edit?usp=sharing">Sheets data</a></p>
-<ul>
-<li><p>Data Frame</p></li>
-<li><p>Observations</p></li>
-<li><p>Tidy Data</p></li>
-<li><p>Variables</p></li>
-<li><p>Variable Types</p></li>
-</ul>
-</section>
-<section id="take-1-hand-drawn-graphs-of-survey-questions." class="slide level2">
-<h2>Take 1: Hand drawn graphs of survey questions.</h2>
-<p>Draw a graph of a variable. <strong>Do not write your name.</strong></p>
-<ul>
-<li><p>It does not need to be perfect.</p></li>
-<li><p>Try to make it correct.</p>
-<ul>
-<li>It is fine if its not correct.</li>
-</ul></li>
-</ul>
-</section>
-<section id="form-small-groups-of-4" class="slide level2">
-<h2>Form small groups of 4</h2>
-<p>Answer these questions:</p>
-<ol type="1">
-<li><p>Is the graph’s message or story clear?</p></li>
-<li><p>What is missing from each graph?</p></li>
-<li><p>What is distracting from the graph?</p></li>
-<li><p>What does the graph do well?</p></li>
-</ol>
-</section>
-<section id="what-makes-a-clear-graph" class="slide level2">
-<h2>What makes a clear graph?</h2>
-<p>Class discussion.</p>
-</section>
-<section id="take-2-hand-drawn-graphs-again" class="slide level2">
-<h2>Take 2: Hand Drawn Graphs again</h2>
-<p>Choose your favorite of the four graphs and as a group redraw it.</p>
-</section>
-<section id="baumers-thoughts" class="slide level2">
-<h2>Baumer’s Thoughts</h2>
-<p>Some of the following slides were hyjacked by the text’s author.</p>
-</section>
-<section id="a-misleading-chart-from-apple" class="slide level2">
-<h2><a href="https://qz.com/122921/the-chart-tim-cook-doesnt-want-you-to-see/">A misleading chart from Apple</a></h2>
+<section id="heights" class="slide level2">
+<h2>Heights</h2>
 
-<img data-src="https://cms.qz.com/wp-content/uploads/2013/09/iphone-sales.jpg?quality=75&amp;strip=all&amp;w=620&amp;h=413&amp;crop=1" class="r-stretch"></section>
-<section id="pie-charts-just-dont" class="slide level2">
-<h2>Pie charts (just don’t)</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
+<img data-src="How-R-builds-a-graph_files/figure-revealjs/heights-1.png" width="960" class="r-stretch"></section>
+<section id="code" class="slide level2">
+<h2>Code</h2>
 <div class="cell">
-<div class="cell-output-display">
-<p><img data-src="figures/mtcars-stacked-bar-1.png" width="960"></p>
-</div>
-</div>
-</div><div class="column" style="width:50%;">
-<div class="cell">
-<div class="cell-output-display">
-<p><img data-src="figures/mtcars-pie-chart-1.png" width="960"></p>
-</div>
-</div>
-</div>
-</div>
-<p>Are 6-cylinder engines more common among manuals or automatics?</p>
-<p><sup>1</sup></p>
-<aside><ol class="aside-footnotes"><li id="fn1"><p>https://en.wikipedia.org/wiki/Misleading_graph#Improper_scaling</p></li></ol></aside></section>
-<section id="unclear-scales" class="slide level2">
-<h2>Unclear Scales</h2>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>heights,<span class="fu">aes</span>(<span class="at">x=</span>heights)) <span class="sc">+</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a>  <span class="fu">geom_histogram</span>()<span class="sc">+</span></span>
+<span id="cb1-3"><a href="#cb1-3"></a>  <span class="fu">xlab</span>(<span class="st">"Heights (inches)"</span>)<span class="sc">+</span></span>
+<span id="cb1-4"><a href="#cb1-4"></a>  <span class="fu">ylab</span>(<span class="st">"Number of students"</span>)<span class="sc">+</span></span>
+<span id="cb1-5"><a href="#cb1-5"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"The heights of Fall 2023 SDS students taught by Schwab"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
-<img data-src="https://infovis-wiki.net/w/images/0/05/Lie_factor_example1_image.jpg" style="width:200.0%" class="r-stretch quarto-figure-center"><ul>
-<li>Often not very clearly defined</li>
-<li>Easy to lie by manipulating scales</li>
-<li>Why perspective?</li>
-<li>Width of lines?</li>
-</ul>
-</section>
-<section id="clearer-scales" class="slide level2">
-<h2>Clearer Scales</h2>
-
-<img data-src="http://images.slideplayer.com/14/4403460/slides/slide_21.jpg" class="r-stretch quarto-figure-center"><ul>
-<li>Good graphics have clear scales
-<ul>
-<li>Remember iPhone sales graphic</li>
-</ul></li>
-</ul>
-</section>
-<section id="section" class="slide level2">
-<h2></h2>
-<p><sup>1</sup></p>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="https://image.slidesharecdn.com/tufte-slides-150224020553-conversion-gate02/95/lessons-from-edward-tufte-5-638.jpg?cb=1424765239" width="800"></p>
-</figure>
 </div>
-<aside><ol class="aside-footnotes"><li id="fn2"><p>https://en.wikipedia.org/wiki/Misleading_graph#Improper_scaling</p></li></ol></aside></section>
-<section id="section-1" class="slide level2">
-<h2></h2>
-<p><img data-src="https://image.slidesharecdn.com/tufte-slides-150224020553-conversion-gate02/95/lessons-from-edward-tufte-9-638.jpg?cb=1424765239" width="800"></p>
-<p><sup>1</sup></p>
-<aside><ol class="aside-footnotes"><li id="fn3"><p>https://en.wikipedia.org/wiki/Misleading_graph#3D</p></li></ol></aside></section>
-<section id="section-2" class="slide level2">
-<h2></h2>
-<p><img data-src="https://image.slidesharecdn.com/tufte-slides-150224020553-conversion-gate02/95/lessons-from-edward-tufte-16-638.jpg?cb=1424765239" width="800"></p>
-<p><sup>1</sup></p>
-<aside><ol class="aside-footnotes"><li id="fn4"><p>https://en.wikipedia.org/wiki/Chartjunk</p></li></ol></aside></section>
-<section id="balance-of-art-vs.-science" class="slide level2">
-<h2>Balance of art vs.&nbsp;science</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p>Data graphics:</p>
+<img data-src="How-R-builds-a-graph_files/figure-revealjs/unnamed-chunk-2-1.png" width="960" class="r-stretch"></section>
+<section id="be-a-computer" class="slide level2">
+<h2>Be a computer</h2>
 <ul>
-<li><p>purpose is to convey meaning</p></li>
-<li><p>scientific, rigorous</p></li>
-<li><p>peer-reviewed</p></li>
-<li><p>clear</p></li>
-<li><p><strong>creative!</strong></p></li>
+<li><p>Revisit the old graphs that some responsible person held onto and choose your favorite as a group.</p></li>
+<li><p>As a group come up with the code that could reproduce that graph. Write it on the same paper and upload a photo to slack channel #classwork.</p></li>
+<li><p>We’ll discuss as a class</p></li>
 </ul>
-</div><div class="column" style="width:50%;">
-<p><a href="https://en.wikipedia.org/wiki/Infographic">Infographics</a>:</p>
-<ul>
-<li><p>purpose might be to draw eyeballs</p></li>
-<li><p>entertaining?</p></li>
-<li><p>sales or marketing?</p></li>
-<li><p>public sphere</p></li>
-<li><p>creative</p></li>
-</ul>
-</div>
-</div>
-<p>We’re only interested in the former</p>
-</section>
-<section id="other-people-have-thought-about-this" class="slide level2">
-<h2>Other people have thought about this</h2>
-<p><a href="https://guides.library.duke.edu/datavis/topten">Do’s and Don’t</a></p>
-<p><a href="https://infovis-wiki.net/wiki/Data-Ink_Ratio">Tufte’s Data to Ink Ratio</a></p>
-<p><a href="https://flowingdata.com/2015/08/11/real-chart-rules-to-follow/">Flowing Data</a></p>
-</section>
-<section id="some-graphs-to-discuss-in-groups" class="slide level2">
-<h2>Some Graphs to discuss in groups</h2>
-<p><a href="https://www.economist.com/graphic-detail">The Economist’s Graph detail</a></p>
-<p><a href="https://www.nytimes.com/2023/07/26/learning/over-75-new-york-times-graphs-for-students-to-analyze.html">Graphs from the NYTimes</a></p>
 
 <div class="footer footer-default">
 
 </div>
 </section>
-
     </div>
   </div>
 
