@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.475">
+<meta name="generator" content="quarto-1.3.353">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Nicholas Schwab">
-<meta name="dcterms.date" content="2023-08-28">
+<meta name="dcterms.date" content="2023-09-08">
 
 <title>SDS 192 Fall ’23 - SDS 192: Intro to Data Science</title>
 <style>
@@ -19,7 +19,7 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
 </style>
@@ -32,6 +32,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<link href=".//images/192.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -76,50 +77,56 @@ ul.task-list li input[type="checkbox"] {
     <span class="navbar-title">SDS 192 Fall ’23</span>
     </a>
   </div>
+            <div id="quarto-search" class="" title="Search"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./Resources.html">
+    <a class="nav-link" href="./Resources.html" rel="" target="">
  <span class="menu-text">Resources</span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://mdsr-book.github.io/mdsr2e/"><i class="bi bi-book" role="img">
+    <a class="nav-link" href="https://mdsr-book.github.io/mdsr2e/" rel="" target=""><i class="bi bi-book" role="img">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="https://moderndive.com/C-appendixC.html">
+    <a class="nav-link" href="https://moderndive.com/C-appendixC.html" rel="" target="">
  <span class="menu-text">T &amp; T</span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://www.slack.com"><i class="bi bi-slack" role="img">
+    <a class="nav-link" href="https://www.slack.com" rel="" target=""><i class="bi bi-slack" role="img">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="http://hcc-rstudiosrv1.hcc.edu:8787/auth-sign-in">
+    <a class="nav-link" href="./rstudio.smith.edu" rel="" target="">
  <span class="menu-text">R</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://moodle.smith.edu/" rel="" target="">
+ <span class="menu-text">m</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/"><i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://classroom.github.com/classrooms/144164606-sds-192-f23-sections-02-03" rel="" target=""><i class="bi bi-github" role="img">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="././course-materials/syllabus/syllabus.html">
+    <a class="nav-link" href="././course-materials/syllabus/syllabus.html" rel="" target="">
  <span class="menu-text">Syllabus</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./course-materials/schwab.html">
+    <a class="nav-link" href="./schwab.html" rel="" target="">
  <span class="menu-text">Schwab</span></a>
   </li>  
 </ul>
-              <div id="quarto-search" class="" title="Search"></div>
+            <div class="quarto-navbar-tools">
+</div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
@@ -127,16 +134,16 @@ ul.task-list li input[type="checkbox"] {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
     <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
    
   <ul>
   <li><a href="#schedule" id="toc-schedule" class="nav-link active" data-scroll-target="#schedule">Schedule</a></li>
-  <li><a href="#day-1-first-day-of-class" id="toc-day-1-first-day-of-class" class="nav-link" data-scroll-target="#day-1-first-day-of-class">Day 1: First Day of Class</a></li>
   </ul>
 </nav>
 </nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
     </div>
@@ -162,7 +169,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">August 28, 2023</p>
+      <p class="date">September 8, 2023</p>
     </div>
   </div>
   
@@ -180,7 +187,7 @@ h1{font-weight: 400;}
 </style>
 <section id="schedule" class="level1">
 <h1>Schedule</h1>
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRK1_TZx6LCqC0Wfddr2T0Sb7sX0R1zuoAesmj-TYpXtMpikenrIqQz4LHmk83PFYF1Yk4MjQB14aec/pubhtml?gid=0&amp;single=false&amp;widget=true&amp;headers=false&amp;gid=0&amp;range=A1:D2" width="100%" height="200">
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTG_b6upDZcPxXB92LHYIhV1uAXgeVGaMsZ3sDRPuSQN74JdhkKhZQVjw6T68I3zsP8KGYzDSVTZW64/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false&amp;gid=0&amp;range=A1:D3" width="100%" height="200">
 </iframe>
 <!-- # Day 26: Final project work. -->
 <!-- Just working the final project today.  -->
@@ -307,21 +314,64 @@ h1{font-weight: 400;}
 <!-- [HW 02](./course-materials/hw-instructions/hw-02/hw-02-airbnb-edi.html) should be shared with you through github You have to clone the repo and use your token as a password. -->
 <!-- ## Get a NYTimes account -->
 <!-- [You get this free through HCC](https://www.hcc.edu/library/find-resources/databases-and-journals/nyt-login) -->
-<!-- # Day 2: Practicing with github and Rstudio -->
-<!-- ## The Knit-ty Gritty -->
-<!-- ### When you come to class: -->
-<!-- -   Log into HCC email account -->
-<!-- -   Go to course website -->
-<!-- -   Log into RStudio -->
-<!-- -   Open Slack -->
-<!-- ### Share with me your github username if you have not already. -->
-<!-- ## Summarize Reading -->
-<!-- [Preface to 1.4 document](https://docs.google.com/document/d/1HzpH8hSvPvoO7IvorYEl2jq3c4vaGTViWi-qdwexpxg/edit?usp=sharing) -->
-<!-- ## See Tips & Tricks -->
-<!-- [The six-fixes](https://docs.google.com/document/d/1P7IyZ4On9OlrCOhygFxjC7XhQqyw8OludwChz-uFd_o/edit) -->
-<!-- Help us help you: take screenshots of your screen and post them to Slack. -->
-<!-- -   macOS: Command+Shift+3 to take shot of whole screen, Command+Shift+4 to take subportion -->
-<!-- -   Windows: Shift-Windows Key-S and Snip & Sketch -->
+<section id="day-2-taxonomy" class="level2">
+<h2 class="anchored" data-anchor-id="day-2-taxonomy"># Day 2 Taxonomy</h2>
+<p>Please complete <a href="https://smithcollege.qualtrics.com/jfe/form/SV_bmy8BNkIp4SpzXo">this survey</a> for Prof.&nbsp;Cao’s study</p>
+<section id="for-help" class="level3">
+<h3 class="anchored" data-anchor-id="for-help">For Help</h3>
+<p><a href="https://docs.google.com/document/d/1P7IyZ4On9OlrCOhygFxjC7XhQqyw8OludwChz-uFd_o/edit">The six-fixes</a> <a href="./course-materials/syllabus/syllabus.html">Student hours</a> <a href="https://www.smith.edu/academics/spinelli-center/tutoring#disciplines">Spennlli center</a></p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Screenshots Help
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Help us help you: take screenshots of your screen and post them to Slack.</p>
+<ul>
+<li><p>macOS: Command+Shift+3 to take shot of whole screen, Command+Shift+4 to take subportion</p></li>
+<li><p>Windows: Shift-Windows Key-S and Snip &amp; Sketch</p></li>
+<li><p>Linux: Print screen</p></li>
+<li><p>Chromebook: Shift + Ctrl + Show windows</p></li>
+</ul>
+</div>
+</div>
+</div>
+<p><a href="https://docs.google.com/document/d/1EJ389lsPzAutfq1HEspdTNyyVAk8AJDItQPXgI58dus/edit?usp=sharing">Prologue to 1.4 document</a></p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>##<em>Anouncement-Google</em></p>
+<p><a href="https://rsvp.withgoogle.com/events/fall-2023-cap-outreach_3b5b3d/forms/registration">Google will be on campus.</a></p>
+<ul>
+<li><p>Building a Tech Career, Sept 13 6:30-8:30pm, Campus Center room 103/104</p></li>
+<li><p>Resume Building and the Technical Interview, Sept 14 6-8pm, Campus Center room 103/104</p></li>
+<li><p>Self-Advocacy in Tech, Sept 15 12:15-1:15pm, Campus Center room 204</p></li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="lecture" class="level3">
+<h3 class="anchored" data-anchor-id="lecture">Lecture</h3>
+<p><a href="./course-materials/lectures/mdsr_viz_1_taxonomy.html">Taxonomy of graphs</a></p>
+</section>
+<section id="classwork" class="level3">
+<h3 class="anchored" data-anchor-id="classwork">Classwork</h3>
 <!-- ## Activity -->
 <!-- [UNvotes](./course-materials/application-exercises/ae-01a-un-votes/unvotes.html) -->
 <!-- or -->
@@ -331,46 +381,47 @@ h1{font-weight: 400;}
 <!-- -   I'd like to start this in class so we're on the same page. -->
 <!-- -   [Here's a link just in case, but don't click it](./course-materials/hw-instructions/hw-01/hw-01-pet-names.html) -->
 </section>
-<section id="day-1-first-day-of-class" class="level1">
-<h1>Day 1: First Day of Class</h1>
-<section id="syllabus" class="level2">
-<h2 class="anchored" data-anchor-id="syllabus">Syllabus</h2>
-<p>There is a link at the top of the page for the syllabus. <a href="./course-materials/syllabus/syllabus.html">It is also here.</a></p>
 </section>
-<section id="slack" class="level2">
-<h2 class="anchored" data-anchor-id="slack">Slack</h2>
-<p><a href="">This class has a Slack channel</a>. Its invite only. Check your e-mail I invited you to the channel on Monday. If you’ve got questions post them to Slack. I’ve introduced myself on Slack, your first assignment is to do that too.</p>
+<section id="day-1-no-computer-data-viz" class="level2">
+<h2 class="anchored" data-anchor-id="day-1-no-computer-data-viz"># Day 1: No Computer Data Viz</h2>
+<p><a href="./course-materials/syllabus/syllabus.html">Syllabus</a> Log into <a href="https://sds-192-ns-202401.slack.com">Slack</a> Website tour Bring Computers to Class</p>
+<section id="lecture-1" class="level3">
+<h3 class="anchored" data-anchor-id="lecture-1">Lecture</h3>
+<p><a href="./course-materials/first-day-survey/Data-Viz-No-Computers.html">Data Viz No Computers</a></p>
 </section>
-<section id="names-and-surveys" class="level2">
-<h2 class="anchored" data-anchor-id="names-and-surveys">Names and Surveys</h2>
-<p><a href="./course-materials/first-day-survey/first-day-survey.html">Survey Questions</a></p>
-</section>
-<section id="no-computer-data-science" class="level2">
-<h2 class="anchored" data-anchor-id="no-computer-data-science">No computer data science</h2>
-<ol type="1">
-<li><p><a href="https://statsclass.org/dsci210/Dataverbs/DataVerb_Activity.pdf">Snowshoes</a><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> Hint: Don’t open this yet.</p></li>
-<li><p>Hand drawn graphs of survey questions.</p></li>
-</ol>
-</section>
-<section id="general-questions-and-comments" class="level2">
-<h2 class="anchored" data-anchor-id="general-questions-and-comments">General Questions and Comments</h2>
-<p>Homework:</p>
+<section id="general-questions-and-comments" class="level3">
+<h3 class="anchored" data-anchor-id="general-questions-and-comments">General Questions and Comments</h3>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Homework:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
 <ul>
-<li><p>In slack- post about yourself (check your email for a slack invitation). Include somethings you want to tell people and your github username. sign up for <a href="https://github.com/">github here</a>, if you haven’t already.</p></li>
-<li><p>Start reading the prolouge of MDSR.</p></li>
+<li><p>In slack- post about yourself (check your email for a slack invitation). Include somethings you want to tell people and your github username.</p></li>
+<li><p>Sign up for <a href="https://github.com/">github here</a>, if you don’t already have an account. We will very carefully link your github account to our github classroom account.</p></li>
+<li><p>Read the prologue to chapter 1.4 of MDSR. <a href="https://docs.google.com/document/d/1EJ389lsPzAutfq1HEspdTNyyVAk8AJDItQPXgI58dus/edit?usp=sharing">Add some notes to our summary.</a></p></li>
 </ul>
+</div>
+</div>
+</div>
+</section>
+<section id="walk-to-mcconnell-213-and-214" class="level3">
+<h3 class="anchored" data-anchor-id="walk-to-mcconnell-213-and-214">Walk to MCConnell 213 and 214</h3>
+<p>My office and group study room.</p>
 
 
 </section>
 </section>
+</section>
 
-
-<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
-
-<ol>
-<li id="fn1"><p>This come from Chris Malone out of Winona State University. <a href="http://www.statsclass.org/uscots2023/">Link for more.</a><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section></div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -398,9 +449,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
     }
   });
   clipboard.on('success', function(e) {
@@ -465,6 +530,92 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
   const findCites = (el) => {
     const parentEl = el.parentElement;
     if (parentEl) {
@@ -507,6 +658,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">

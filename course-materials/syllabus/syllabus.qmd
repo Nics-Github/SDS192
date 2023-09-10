@@ -44,7 +44,8 @@ h1{font-weight: 400;}
 -   **Contact Info:**\
     `r fontawesome::fa("at")` [nschwab\@smith.edu](mailto:nschwab@smith.edu)\
     `r fontawesome::fa("phone")` 413-585-3440\
-    `r fontawesome::fa("github")` [Nics-Github](http://www.github.com/Nics-Github) `r fontawesome::fa("video")` [nschwab](https://smith.zoom.us/j/8227449694)
+    `r fontawesome::fa("github")` [Nics-Github](http://www.github.com/Nics-Github) 
+    `r fontawesome::fa("video")` [nschwab](https://smith.zoom.us/j/8227449694)
 
 -   **Office location:** McConnell 213
 
@@ -59,13 +60,15 @@ Morning Section
 
 Afternoon Section
 
--   M: 1:40 AM - 11:55 / Sabin- Reed 301 WF: 1:20 AM - 12:35 / Sabin- Reed 301
+-   M: 1:40 AM - 11:55 / Sabin- Reed 301 
+-   WF: 1:20 AM - 12:35 / Sabin- Reed 301
 ```
 
 -   **Getting help**:
 
     -   For non personal/sensitive questions, ask on the `#questions` channel on Slack. For personal/sensitive matters, Slack DM Professor Schwab.
 
+<<<<<<< HEAD
     -   Prof. Schwab's student hours:
 
         -   W 12:15 - 1:15 pm
@@ -73,6 +76,9 @@ Afternoon Section
         -   F 12:15 - 1:15 pm
 
         -   Request a zoom appointment.
+=======
+    -   [Student hours](/course-materials/schwab.html)
+>>>>>>> 7dae963f6b8f4cfb4faf375b180ab96359f9ef26
 
     -   [Spinelli Center](https://www.smith.edu/academics/spinelli-center/tutoring)
 
@@ -176,7 +182,7 @@ The Modern Data Science with R **textbook** is accessible on the navigational ba
 
 # Readings
 
-We'll be reading chapters 1-6,8,15,and 17 of Modern Data Science with R. Probably other texts.
+We'll be reading chapters 1-6,8,15,and 17 of Modern Data Science with R. And some Chapters from Modern Dive. 
 
 # Evaluation
 
@@ -190,11 +196,11 @@ There are four projects to complete during the semester. They will be completed 
 
 ## Final project 20%
 
-There will be a final project due the last day of classes. You'll complete this final project over the course of the semester using a process called SCRUM. The Final Project will also have in groups of 2-3 where you can choose your groupmates.
+There will be a final project due the last day of classes. These will be completed in groups during the last few weeks of class. 
 
-## Problem sets 25%
+## Labs 25%
 
-Homework will be assigned regularly, its important to complete and stay on top of the problem sets. They will be graded on the following scale:
+Many Fridays there will be in class labs. You will have until the following Wednesday to complete the lab. Its important to complete and stay on top of the problem sets. They will be graded on the following scale:
 
 -   5 points: Assignment is complete, mostly correct, rendered and submitted
 
@@ -212,24 +218,25 @@ Homework will be assigned regularly, its important to complete and stay on top o
 
 It is difficult to explicit codify what constitutes "an engaged student," so instead I present the following rough principle I will follow: *you'll only get out of this class as much as you put in*. That being said, here are multiple pathways for you to stay engaged in this class:
 
--   In particular: Participation in all SCRUM Sprints
+-   Participation in all SCRUM Sprints
 -   Asking and answering questions in class.
 -   Working and staying focused in class.
 -   Coming to office hours.
 -   Posting questions on Slack.
 -   Even better: Responding to questions on Slack.
+-   Complete Classwork problems
 
 ## Tentative Assignment schedule
 
-Homework will be assigned regularly and due by midnight the following Monday.
+Labs will be assigned regularly and due by midnight the following Monday.
 
-Project 1- due after reading chapter 4 of MDSR roughly the 10th day of class
+Project 1- due after reading chapter 4 of MDSR 
 
-Project 2- due after reading chapter 5 of MDSR roughly the 18th day of class
+Project 2- due after reading chapter 5 of MDSR 
 
-Project 3- due after reading chapter 15 of MDSR roughly the 22nd day of class
+Project 3- due after reading chapter 15 of MDSR 
 
-Project 4- due after reading chapter 17 of MDSR roughly the 26th day of class
+Project 4- due after reading chapter 17 of MDSR 
 
 Final Project/ Presentation during our final time.
 

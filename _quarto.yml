@@ -12,15 +12,20 @@ output:
     df_print: paged
     lib_dir: site_libs
     self_contained: no
-    includes:
-     in_header: "favicon.html"
 # All icons were obtained from https://icons.getbootstrap.com/
+
+format:
+  html:
+    theme: Materia
+
 website:   
   page-navigation: true
+  favicon: /images/192.png
   title: "SDS 192 Fall '23"
   
+  
   navbar:
- 
+    
     left:
     - text: Resources
       href: Resources.qmd
@@ -31,11 +36,13 @@ website:
     - icon: slack
       href: https://www.slack.com
     - text: R
-      href: http://hcc-rstudiosrv1.hcc.edu:8787/auth-sign-in
+      href: rstudio.smith.edu
+    - text: m
+      href: https://moodle.smith.edu/
     
     right:
     - icon: github
-      href: https://github.com/
+      href: https://classroom.github.com/classrooms/144164606-sds-192-f23-sections-02-03
   # - text: Problem Sets
   #   href: PS.html
   #  - text: Mini-Projects
@@ -45,7 +52,7 @@ website:
     - text: Syllabus
       href: ./course-materials/syllabus/syllabus.html
     - text: Schwab
-      href: course-materials/schwab.qmd
+      href: schwab.qmd
   #  - icon: fa-github fa-lg
   #    href: https://github.com/rudeboybert/SDS192
   
@@ -53,4 +60,5 @@ website:
     right: 
     - text: credits
       href: credits.qmd
+
       
