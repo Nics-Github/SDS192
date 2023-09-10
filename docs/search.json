@@ -424,7 +424,7 @@
     "href": "index.html",
     "title": "SDS 192: Intro to Data Science",
     "section": "",
-    "text": "Schedule\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDay 2 Taxonomy\n\nPlease complete this survey for Prof. Cao’s study\n\nFor Help\nThe six-fixes Student hours Spennlli center\n\n\n\n\n\n\nScreenshots Help\n\n\n\n\n\nHelp us help you: take screenshots of your screen and post them to Slack.\n\nmacOS: Command+Shift+3 to take shot of whole screen, Command+Shift+4 to take subportion\nWindows: Shift-Windows Key-S and Snip & Sketch\nLinux: Print screen\nChromebook: Shift + Ctrl + Show windows\n\n\n\n\nPrologue to 1.4 document\n\n\nLecture\nTaxonomy of graphs\n\n\nClasswork\n\n\n\n\n\n\n\n\n\n\n\nDay 1: No Computer Data Viz\n\nSyllabus Log into Slack Website tour Bring Computers to Class\n\nLecture\nData Viz No Computers\n\n\nGeneral Questions and Comments\n\n\n\n\n\n\nHomework:\n\n\n\n\n\n\nIn slack- post about yourself (check your email for a slack invitation). Include somethings you want to tell people and your github username.\nSign up for github here, if you don’t already have an account. We will very carefully link your github account to our github classroom account.\nRead the prologue to chapter 1.4 of MDSR. Add some notes to our summary.\n\n\n\n\n\n\nWalk to MCConnell 213 and 214\nMy office and group study room."
+    "text": "Schedule\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDay 2 Taxonomy\nPlease complete this survey for Prof. Cao’s study\n\nFor Help\nThe six-fixes Student hours Spennlli center\n\n\n\n\n\n\nScreenshots Help\n\n\n\n\n\nHelp us help you: take screenshots of your screen and post them to Slack.\n\nmacOS: Command+Shift+3 to take shot of whole screen, Command+Shift+4 to take subportion\nWindows: Shift-Windows Key-S and Snip & Sketch\nLinux: Print screen\nChromebook: Shift + Ctrl + Show windows\n\n\n\n\nPrologue to 1.4 document\n\n\nLecture\nTaxonomy of graphs\n\n\nFinish Lecture from Day 1\n\n\nHow R builds a Graph\n\n\n\n\n\n\n\n\n\n\n\nDay 1: No Computer Data Viz\nSyllabus Log into Slack Website tour Bring Computers to Class\n\nLecture\nData Viz No Computers\n\n\nGeneral Questions and Comments\n\n\n\n\n\n\nHomework:\n\n\n\n\n\n\nIn slack- post about yourself (check your email for a slack invitation). Include somethings you want to tell people and your github username.\nSign up for github here, if you don’t already have an account. We will very carefully link your github account to our github classroom account.\nRead the prologue to chapter 1.4 of MDSR. Add some notes to our summary.\n\n\n\n\n\n\nWalk to MCConnell 213 and 214\nMy office and group study room."
   },
   {
     "objectID": "course-materials/syllabus/syllabus.html#labs-25",
@@ -621,5 +621,26 @@
     "title": "Taxonomy of Graphics",
     "section": "Citations",
     "text": "Citations\nAll graph originated else where.\nBelow are secondary sources.\nMost the the graphs were grabed from: datapipeline\nThe last graph was grabbed from The Washington Post"
+  },
+  {
+    "objectID": "course-materials/lectures/How R builds a graph.html#heights",
+    "href": "course-materials/lectures/How R builds a graph.html#heights",
+    "title": "How R builds a graph",
+    "section": "Heights",
+    "text": "Heights"
+  },
+  {
+    "objectID": "course-materials/lectures/How R builds a graph.html#code",
+    "href": "course-materials/lectures/How R builds a graph.html#code",
+    "title": "How R builds a graph",
+    "section": "Code",
+    "text": "Code\n\nggplot(data=heights,aes(x=heights)) +\n  geom_histogram()+\n  xlab(\"Heights (inches)\")+\n  ylab(\"Number of students\")+\n  labs(title = \"The heights of Fall 2023 SDS students taught by Schwab\")"
+  },
+  {
+    "objectID": "course-materials/lectures/How R builds a graph.html#be-a-computer",
+    "href": "course-materials/lectures/How R builds a graph.html#be-a-computer",
+    "title": "How R builds a graph",
+    "section": "Be a computer",
+    "text": "Be a computer\nRevisit the old graphs and choose your favorite as a group"
   }
 ]

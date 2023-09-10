@@ -47,7 +47,7 @@ library(gapminder)
 library(babynames)
 library(scales)
 library(moderndive)
-library(leaflet)
+
 library(maps)
 library(mapproj)
 library(patchwork)
@@ -319,7 +319,7 @@ h1{font-weight: 400;}
 <!-- [You get this free through HCC](https://www.hcc.edu/library/find-resources/databases-and-journals/nyt-login) -->
 
 # Day 2 Taxonomy
----
+
 
 Please complete [this survey](https://smithcollege.qualtrics.com/jfe/form/SV_bmy8BNkIp4SpzXo) for Prof. Cao's study
 
@@ -350,7 +350,10 @@ Help us help you: take screenshots of your screen and post them to Slack.
 ### Lecture 
 [Taxonomy of graphs](course-materials/lectures/mdsr_viz_1_taxonomy.qmd)
 
-### Classwork
+### Finish Lecture from Day 1
+
+### [How R builds a Graph](./course-materials/lectures/)
+
 
 
 <!-- ## Activity -->
@@ -370,7 +373,7 @@ Help us help you: take screenshots of your screen and post them to Slack.
 <!-- -   [Here's a link just in case, but don't click it](./course-materials/hw-instructions/hw-01/hw-01-pet-names.html) -->
 
 # Day 1: No Computer Data Viz
----
+
 
 [Syllabus](./course-materials/syllabus/syllabus.html)
 Log into [Slack](https://sds-192-ns-202401.slack.com)
