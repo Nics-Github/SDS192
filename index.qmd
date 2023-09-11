@@ -321,11 +321,12 @@ h1{font-weight: 400;}
 # Day 3 
 
 [Chapter 2 document section 2](https://docs.google.com/document/d/1c_PKo9QUNQFdmoQCo63Fb9wfqO9Fp6JOxuvQjB12m1c/edit?usp=sharing)
+
 [Chapter 2 document section 3](https://docs.google.com/document/d/1lxxZzwkexSQ8njWs3e4JBX5KVcjww3O2_DZt6Tfx_1k/edit?usp=sharing)
 
 Carefully link github account to github classroom
 
-
+[Finally Finish Slides from Day 1](./course-materials/first-day-survey/Data-Viz-No-Computers.qmd)
 
 # Day 2 Taxonomy
 
@@ -352,7 +353,7 @@ Help us help you: take screenshots of your screen and post them to Slack.
 [Prologue to 1.4 document](https://docs.google.com/document/d/1EJ389lsPzAutfq1HEspdTNyyVAk8AJDItQPXgI58dus/edit?usp=sharing) section 2
 
 ::: {.callout-note collapse="true"}
-\##*Announcement-Google*
+## Announcement-Google
 
 [Google will be on campus.](https://rsvp.withgoogle.com/events/fall-2023-cap-outreach_3b5b3d/forms/registration)
 
@@ -369,7 +370,7 @@ Help us help you: take screenshots of your screen and post them to Slack.
 
 ### Finish Lecture from Day 1
 
-[How R builds a Graph](/course-materials/lectures/How-R-Builds-a-graph.qmd)
+[How R builds a Graph](course-materials/lectures/How-R-builds-a-graph.qmd)
 
 <!-- ## Activity -->
 
