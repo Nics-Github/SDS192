@@ -68,17 +68,7 @@ Afternoon Section
 
     -   For non personal/sensitive questions, ask on the `#questions` channel on Slack. For personal/sensitive matters, Slack DM Professor Schwab.
 
-
-    -   Prof. Schwab's student hours:
-
-        -   W 12:15 - 1:15 pm
-
-        -   F 12:15 - 1:15 pm
-
-        -   Request a zoom appointment.
-        -   [Student hours](/course-materials/schwab.html)
-
-
+    -   [Student hours](/schwab.qmd)
     -   [Spinelli Center](https://www.smith.edu/academics/spinelli-center/tutoring)
 
 ## Instructor work-life balance {#work-life-balance}
