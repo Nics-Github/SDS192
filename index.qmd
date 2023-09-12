@@ -290,33 +290,20 @@ h1{font-weight: 400;}
 
 <!-- ## [Lab_01](./course-materials/lab-instructions/lab-01/lab-01-plastic-waste.html) -->
 
-<!-- # Day 3: Check in and Taxonomy -->
+# Day 4 
 
-<!-- ## Updates: -->
+::: {.callout-note collapse="true"}
+## Sign into githubclassroom
 
-<!-- -   Issues with some packages installing on Server: 'coronavirus', 'ggimage', 'dsbox' -->
+Link github account to github classroom
+-   sign into github
 
-<!-- -   What times of the day do you do your homework. When would AJ's office hours work for you? -->
+-   (click this link)[https://classroom.github.com/a/8iT0HvNJ] for lab 1
 
-<!-- ## Check in on HW 1 -->
+-   find your name in the roster and click it. 
 
-<!-- [HW 1 Take Aways](https://docs.google.com/document/d/1jtF58XftxCVLf8DMDsrDLyxKY752puwckm1d6db-CYo/edit?usp=sharing) -->
-
-<!-- HW 1 due by midnight tonight. -->
-
-<!-- ## Taxonomy -->
-
-<!-- [Lecture on Taxonomy](./course-materials/lectures/mdsr_viz_1_taxonomy.html) -->
-
-<!-- [Activity on Taxonomy](./course-materials/in-class-activities/Activity_Taxonomy_of_Graphics.html) -->
-
-<!-- ## Let's look at HW 2 -->
-
-<!-- [HW 02](./course-materials/hw-instructions/hw-02/hw-02-airbnb-edi.html) should be shared with you through github You have to clone the repo and use your token as a password. -->
-
-<!-- ## Get a NYTimes account -->
-
-<!-- [You get this free through HCC](https://www.hcc.edu/library/find-resources/databases-and-journals/nyt-login) -->
+-   You should see lab 1, which we will discuss on Friday. 
+:::
 
 # Day 3 
 
@@ -324,9 +311,16 @@ h1{font-weight: 400;}
 
 [Chapter 2 document section 3](https://docs.google.com/document/d/1lxxZzwkexSQ8njWs3e4JBX5KVcjww3O2_DZt6Tfx_1k/edit?usp=sharing)
 
-Carefully link github account to github classroom
-
 [Finally Finish Slides from Day 1](./course-materials/first-day-survey/Data-Viz-No-Computers.qmd)
+
+[tidyverse style guide](https://style.tidyverse.org/ggplot2.html)
+
+Note on file organization in RStudio
+
+Two graphs. 
+1 [scatter plot](./course-materials/in-class-activies/Lec02In-classExercise-Scatterplots.zip)
+2 [linegraph](./course-materials/in-class-activies/Lec03In-classExercise-Linegraphs(1).qmd)
+<li><a href="course-materials/in-class-activies/Lec03In-classExercise-Linegraphs(1).qmd" download>Create linegraphs using ggplot2 </a></li>
 
 # Day 2 Taxonomy
 
