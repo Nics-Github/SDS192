@@ -290,37 +290,39 @@ h1{font-weight: 400;}
 
 <!-- ## [Lab_01](./course-materials/lab-instructions/lab-01/lab-01-plastic-waste.html) -->
 
-# Day 4 
+# Day 4
 
 ::: {.callout-note collapse="true"}
 ## Sign into githubclassroom
 
-Link github account to github classroom
--   sign into github
+Link github account to github classroom - sign into github
 
 -   (click this link)[https://classroom.github.com/a/8iT0HvNJ] for lab 1
 
--   find your name in the roster and click it. 
+-   find your name in the roster and click it.
 
--   You should see lab 1, which we will discuss on Friday. 
+-   You should see lab 1, which we will discuss on Friday.
 :::
 
-# Day 3 
+Lab 1 on github classroom
+
+# Day 3
 
 [Chapter 2 document section 2](https://docs.google.com/document/d/1c_PKo9QUNQFdmoQCo63Fb9wfqO9Fp6JOxuvQjB12m1c/edit?usp=sharing)
 
 [Chapter 2 document section 3](https://docs.google.com/document/d/1lxxZzwkexSQ8njWs3e4JBX5KVcjww3O2_DZt6Tfx_1k/edit?usp=sharing)
 
-[Finally Finish Slides from Day 1](./course-materials/first-day-survey/Data-Viz-No-Computers.qmd)
+[Finally Finish Slides from Day 1](./course-materials/first-day-survey/Data-Viz-No-Computers.qmd) (maybe)
 
 [tidyverse style guide](https://style.tidyverse.org/ggplot2.html)
 
 Note on file organization in RStudio
 
-Two graphs. 
-1 [scatter plot](./course-materials/in-class-activies/Lec02In-classExercise-Scatterplots.zip)
-2 [linegraph](./course-materials/in-class-activies/Lec03In-classExercise-Linegraphs(1).qmd)
-<li><a href="course-materials/in-class-activies/Lec03In-classExercise-Linegraphs(1).qmd" download>Create linegraphs using ggplot2 </a></li>
+Two graphs.
+
+1.  [scatter plot](./course-materials/in-class-activies/Lec02In-classExercise-Scatterplots.zip)
+
+2.  [linegraph](./course-materials/in-class-activies/Lec03In-classExercise-Linegraphs(1).qmd)
 
 # Day 2 Taxonomy
 
