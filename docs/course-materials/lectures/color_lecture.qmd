@@ -1,0 +1,98 @@
+---
+title: "color demo"
+author: "schwab"
+editor: visual
+---
+
+Delete the space in line 1
+
+```{r install_penguins}
+#Uncomment the line below and install the palmer penguins package
+#install.packages("palmerpenguins")
+#Recomment it after you are done. 
+```
+
+```{r libraries}
+library(tidyverse)
+library(palmerpenguins)
+library(viridis)
+```
+
+Let's consider some penguins today.
+
+```{r look}
+penguins
+?penguins
+```
+
+There are other arguments for aesthetics: color and fill (and shape and size)
+
+```{r penguins-scatter}
+penguins |>
+  ggplot(data=penguins, mapping = aes(x=bill_length_mm,y=flipper_length_mm)) + 
+  geom_point()
+```
+
+Lets add a color aesthetic.
+
+```{r some-color}
+penguins |>
+  ggplot(data=penguins, mapping = aes(x=bill_length_mm,y=flipper_length_mm)) + 
+  geom_point(aes(color=species))
+
+# After you marvel at the plot, change color to fill. 
+```
+
+```{r color-palette}
+penguins |>
+  ggplot(data=penguins, mapping = aes(x=bill_length_mm,y=flipper_length_mm)) + 
+  geom_point(aes(color=species)) +
+  scale_color_brewer(palette="Dark2")
+
+# Type ?scale_color_distiller() for a quick list of palette
+```
+
+![Color Palettes](https://mdsr-book.github.io/mdsr2e/02-datavizI_files/figure-html/brewer-1.png)
+
+Since we are using the color aesthetic we use scale_color_brewer(palette="Dark2").
+
+If we used the fill aesthetic we'd use scale_fill_brewer(palette="Dark2")
+
+Note: That when mapping categorical variables we use scale\_\*\_brewer(). For numeric we use scale\_\*\_distiller().
+
+```{r distiller}
+#Change the color palette below
+
+penguins |>
+  ggplot(mapping = aes(x=sex,fill=island)) + 
+  geom_bar() 
+
+  
+```
+
+We can also set the colors manually with scale\_\*\_manual(values = c("Color code/name 1, color code/name2,...)
+
+```{r manual}
+
+penguins |>
+  ggplot(mapping = aes(x=sex,fill=island)) + 
+  geom_bar() +
+  scale_fill_manual(values = c("black","purple","yellow"))
+
+#type colors() into the console
+# Go to https://www.color-hex.com/# to make your own palettes
+```
+
+There is also the viridis package that works mostly the same way
+
+```{r viridis}
+?viridis
+```
+
+```{r }
+ggplot(penguins, aes(x = bill_length_mm, y = body_mass_g)) +
+  geom_point(aes(color=island)) +
+  scale_color_viridis(option = "plasma",discrete = TRUE)
+
+#Note that island is not discrete. It is categorical, but setting discrete= TRUE works.
+```

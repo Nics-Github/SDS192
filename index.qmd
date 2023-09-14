@@ -64,7 +64,7 @@ h1{font-weight: 400;}
 ```
 # Schedule
 
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTG_b6upDZcPxXB92LHYIhV1uAXgeVGaMsZ3sDRPuSQN74JdhkKhZQVjw6T68I3zsP8KGYzDSVTZW64/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false&amp;gid=0&amp;range=A1:D3" width="100%" height="200">
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTG_b6upDZcPxXB92LHYIhV1uAXgeVGaMsZ3sDRPuSQN74JdhkKhZQVjw6T68I3zsP8KGYzDSVTZW64/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false&amp;gid=0&amp;range=A1:D7" width="100%" height="200">
 
 </iframe>
 
@@ -270,25 +270,13 @@ h1{font-weight: 400;}
 
 <!-- -   [We'll do problems 3.1 #1 and 3 in class](https://mdsr-book.github.io/mdsr2e/ch-vizII.html#datavizII-exercises) -->
 
-<!-- # Day 5: Digestion Day -->
+# Day 5
 
-<!-- ## Let us talk about these -->
+## Colors
+- [live_demo](/course-materials/lectures/color_lecture.qmd) 
+- [Prof. Cao's Lecture on Frequency Plots and Facets](https://scao53.github.io/sds192spring2023/slides/Lec4-FrequencyPlots.html#11)
 
-<!-- -   [Chapter 2 Take Aways](https://docs.google.com/document/d/184nd7HdObXgeyuq7TUHYXjThkHWc0O45GDD1BG1m40E/edit?usp=sharing) -->
 
-<!-- -   Discuss [Problems 1 & 6 & 3](https://mdsr-book.github.io/mdsr2e/ch-vizI.html#datavizI-exercises) -->
-
-<!-- -   Discuss [Lab_01](./course-materials/lab-instructions/lab-01/lab-01-plastic-waste.html) -->
-
-<!-- -   Quick check in [HW 02](./course-materials/hw-instructions/hw-02/hw-02-airbnb-edi.html) -->
-
-<!-- ## [Color exercise](./course-materials/in-class-activities/Color_exercises.html) -->
-
-<!-- # Day 4: Using GGplot -->
-
-<!-- ## Activity: [Intro to ggplot2](./course-materials/in-class-activities/Activity-ggplot2.html) -->
-
-<!-- ## [Lab_01](./course-materials/lab-instructions/lab-01/lab-01-plastic-waste.html) -->
 
 # Day 4
 
@@ -297,7 +285,7 @@ h1{font-weight: 400;}
 
 Link github account to github classroom - sign into github
 
--   (click this link)[https://classroom.github.com/a/8iT0HvNJ] for lab 1
+-   https://classroom.github.com/a/8iT0HvNJ for lab 1
 
 -   find your name in the roster and click it.
 
