@@ -318,7 +318,7 @@ h1{font-weight: 400;}
 
 <!-- [You get this free through HCC](https://www.hcc.edu/library/find-resources/databases-and-journals/nyt-login) -->
 
-## \# Day 2 Taxonomy
+# Day 2 Taxonomy
 
 Please complete [this survey](https://smithcollege.qualtrics.com/jfe/form/SV_bmy8BNkIp4SpzXo) for Prof. Cao's study
 
@@ -343,7 +343,7 @@ Help us help you: take screenshots of your screen and post them to Slack.
 [Prologue to 1.4 document](https://docs.google.com/document/d/1EJ389lsPzAutfq1HEspdTNyyVAk8AJDItQPXgI58dus/edit?usp=sharing)
 
 ::: {.callout-note collapse="true"}
-\##*Anouncement-Google*
+##*Anouncement-Google*
 
 [Google will be on campus.](https://rsvp.withgoogle.com/events/fall-2023-cap-outreach_3b5b3d/forms/registration)
 
@@ -376,7 +376,7 @@ Help us help you: take screenshots of your screen and post them to Slack.
 
 <!-- -   [Here's a link just in case, but don't click it](./course-materials/hw-instructions/hw-01/hw-01-pet-names.html) -->
 
-## \# Day 1: No Computer Data Viz
+# Day 1: No Computer Data Viz
 
 [Syllabus](./course-materials/syllabus/syllabus.html) Log into [Slack](https://sds-192-ns-202401.slack.com) Website tour Bring Computers to Class
 
