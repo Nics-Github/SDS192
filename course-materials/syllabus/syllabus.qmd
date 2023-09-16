@@ -60,26 +60,15 @@ Morning Section
 
 Afternoon Section
 
--   M: 1:40 AM - 11:55 / Sabin- Reed 301 
--   WF: 1:20 AM - 12:35 / Sabin- Reed 301
+-   M: 1:40 PM - 2:55 / Sabin- Reed 301 
+-   WF: 1:20 PM - 2:35 / Sabin- Reed 301
 ```
 
 -   **Getting help**:
 
     -   For non personal/sensitive questions, ask on the `#questions` channel on Slack. For personal/sensitive matters, Slack DM Professor Schwab.
 
-<<<<<<< HEAD
-    -   Prof. Schwab's student hours:
-
-        -   W 12:15 - 1:15 pm
-
-        -   F 12:15 - 1:15 pm
-
-        -   Request a zoom appointment.
-=======
-    -   [Student hours](/course-materials/schwab.html)
->>>>>>> 7dae963f6b8f4cfb4faf375b180ab96359f9ef26
-
+    -   [Student hours](/schwab.qmd)
     -   [Spinelli Center](https://www.smith.edu/academics/spinelli-center/tutoring)
 
 ## Instructor work-life balance {#work-life-balance}
