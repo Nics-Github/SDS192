@@ -129,5 +129,21 @@ ggplot(data = flights,
        aes(x = carrier, 
            fill = origin)) +
   geom_bar(position = position_dodge(preserve = "single"))
+ 
 
 ```
+
+Finally just because we mentioned it in the Facet lecture. Add a facet_wrap(facets=~origin) layer to the bottom of your code
+
+```{r}
+
+# Add your code
+ggplot(data = flights, 
+       aes(x = carrier, 
+           fill = origin)) +
+  geom_bar(position = position_dodge(preserve = "single"))
+ 
+
+```
+
+If you are able to render the file as a html or pdf your code is all correct!

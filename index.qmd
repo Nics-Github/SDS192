@@ -270,13 +270,16 @@ h1{font-weight: 400;}
 
 <!-- -   [We'll do problems 3.1 #1 and 3 in class](https://mdsr-book.github.io/mdsr2e/ch-vizII.html#datavizII-exercises) -->
 
+# Day 6
+
 # Day 5
 
 ## Colors
 - [live_demo](/course-materials/lectures/color_lecture.qmd) 
+
 - [Prof. Cao's Lecture on Frequency Plots and Facets](https://scao53.github.io/sds192spring2023/slides/Lec4-FrequencyPlots.html#11)
 
-
+- [In class exercise](./course-materials/in-class-activies/Lec05In-classExercise-ColorTheory.qmd)
 
 # Day 4
 
