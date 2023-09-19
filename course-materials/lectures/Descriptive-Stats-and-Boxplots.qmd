@@ -1,0 +1,80 @@
+---
+title: "Descriptive Stats and Boxplots"
+author: "Schwab"
+format: revealjs
+editor: visual
+execute: 
+  echo: true
+---
+
+```{r libraries}
+#| echo: false
+library(palmerpenguins)
+library(tidyverse)
+```
+
+# Descriptive Stats
+
+-   mean - mean()
+
+-   median - median()
+
+-   standard deviation - sd()
+
+-   IQR - IQR()
+
+-   Range - max() - min()
+
+-   Max
+
+-   Min
+
+# Example mass
+
+```{r summary-stats}
+# Putting inside of summarize is helpful
+penguins |> 
+  summarize(
+    body_mass = mean( body_mass_g, na.rm=TRUE)
+)
+```
+
+```{r old-school-mean}
+# But not necessary
+
+mean(penguins$body_mass_g, na.rm = TRUE)
+```
+
+# Try one:
+
+Find the medium flipper length.
+
+# Boxplots{.smaller}
+
+Boxplots are helpful for finding outliers.
+
+Try to make a boxplot of the penguins `bill_depth_mm` color it by `island`
+
+```{r boxplot}
+#| echo: False
+penguins |>
+  ggplot(aes(x = bill_depth_mm, color = island))+
+  geom_boxplot()
+
+```
+
+# geom_vline(){.smaller} 
+
+```{r means-on-boxes}
+
+penguins |>
+  ggplot(aes(x = bill_depth_mm, color = island))+
+  geom_boxplot()+
+  geom_vline(
+    xintercept = mean(
+      penguins$bill_depth_mm, na.rm = TRUE),
+    color="brown",
+    linetype="dashed")
+  
+
+```

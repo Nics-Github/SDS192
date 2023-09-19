@@ -64,7 +64,7 @@ h1{font-weight: 400;}
 ```
 # Schedule
 
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTG_b6upDZcPxXB92LHYIhV1uAXgeVGaMsZ3sDRPuSQN74JdhkKhZQVjw6T68I3zsP8KGYzDSVTZW64/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false&amp;gid=0&amp;range=A1:D7" width="100%" height="200">
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTG_b6upDZcPxXB92LHYIhV1uAXgeVGaMsZ3sDRPuSQN74JdhkKhZQVjw6T68I3zsP8KGYzDSVTZW64/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false&amp;gid=0&amp;range=A1:D8" width="100%" height="300">
 
 </iframe>
 
@@ -270,9 +270,29 @@ h1{font-weight: 400;}
 
 <!-- -   [We'll do problems 3.1 #1 and 3 in class](https://mdsr-book.github.io/mdsr2e/ch-vizII.html#datavizII-exercises) -->
 
-# Day 6
+# Day 6 Stats and Boxplots
 
 [Document for chapter 3](https://docs.google.com/document/d/1lTkYFcdE2OpwLKV5rTLLx5ZKCRdeN31Lh50hC1cRixs/edit?usp=sharing)
+
+## Other things 
+
+-   the c() function
+-   [typing math](https://nics-github.github.io/sds220/latex-in-quarto-template.html)
+-   and [tibbles](http://statseducation.com/Introduction-to-R/modules/getting%20data/tibbles/)
+-   [ggplot cheatsheet](resources.qmd)
+-   The visual editor
+-   [Short History of R](/course-materials/lectures/Brief-R-History.qmd)
+
+
+## Lecture: [Descriptive stats and boxplots](/course-materials/lectures/Descriptive-Stats-and-Boxplots.qmd)
+
+### Classwork: MDSR [Chapter 3.5](https://mdsr-book.github.io/mdsr2e/ch-vizII.html#datavizII-exercises) problem 3 and 7
+
+Hints: 
+
+-   you might need to install `mosaicdata`
+
+-   look for the correct graph for 7c on the cheat sheet
 
 # Day 5 Color theory
 
