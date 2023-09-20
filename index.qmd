@@ -288,9 +288,9 @@ If that doesn't work, [maybe its a bug?](https://github.com/rstudio/rstudio/issu
 -   the c() function
 -   [typing math](https://nics-github.github.io/sds220/latex-in-quarto-template.html)
 -   and [tibbles](http://statseducation.com/Introduction-to-R/modules/getting%20data/tibbles/)
--   [ggplot cheatsheet](resources.qmd)
+-   [ggplot cheatsheet](./resources.qmd)
 -   The visual editor
--   [Short History of R](/course-materials/lectures/Brief-R-History.qmd)
+-   [Short History of R](./course-materials/lectures/Brief-R-history.qmd)
 
 
 ## Lecture: [Descriptive stats and boxplots](/course-materials/lectures/Descriptive-Stats-and-Boxplots.qmd)
