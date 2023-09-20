@@ -276,6 +276,15 @@ h1{font-weight: 400;}
 
 ## Other things 
 
+::: {.callout-note collapse="true"}
+# To activate colors
+Some students are not getting "red" to be red.
+Try this: 
+Tools menu > global options > code > display > "enable preview of named and  hex colors
+
+If that doesn't work, [maybe its a bug?](https://github.com/rstudio/rstudio/issues/13118) 
+:::
+
 -   the c() function
 -   [typing math](https://nics-github.github.io/sds220/latex-in-quarto-template.html)
 -   and [tibbles](http://statseducation.com/Introduction-to-R/modules/getting%20data/tibbles/)

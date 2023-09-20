@@ -32,7 +32,7 @@
     "href": "index.html#other-things",
     "title": "SDS 192: Intro to Data Science",
     "section": "Other things",
-    "text": "Other things\n\nthe c() function\ntyping math\nand tibbles\nggplot cheatsheet\nThe visual editor\nShort History of R"
+    "text": "Other things\n\n\n\n\n\n\nTo activate colors\n\n\n\n\n\nSome students are not getting “red” to be red. Try this: Tools menu &gt; global options &gt; code &gt; display &gt; “enable preview of named and hex colors\nIf that doesn’t work, maybe its a bug?\n\n\n\n\nthe c() function\ntyping math\nand tibbles\nggplot cheatsheet\nThe visual editor\nShort History of R"
   },
   {
     "objectID": "Resources.html#moderndive",
