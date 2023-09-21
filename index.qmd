@@ -270,6 +270,10 @@ h1{font-weight: 400;}
 
 <!-- -   [We'll do problems 3.1 #1 and 3 in class](https://mdsr-book.github.io/mdsr2e/ch-vizII.html#datavizII-exercises) -->
 
+# Day 7 Lab 2
+
+Click [this link](https://classroom.github.com/a/CK3DZp9J) to accept lab 2.
+
 # Day 6 Stats and Boxplots
 
 [Document for chapter 3](https://docs.google.com/document/d/1lTkYFcdE2OpwLKV5rTLLx5ZKCRdeN31Lh50hC1cRixs/edit?usp=sharing)
