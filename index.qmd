@@ -270,6 +270,24 @@ h1{font-weight: 400;}
 
 <!-- -   [We'll do problems 3.1 #1 and 3 in class](https://mdsr-book.github.io/mdsr2e/ch-vizII.html#datavizII-exercises) -->
 
+# Day 8 
+
+Data Fundamentals
+
+-   vector creation
+-   unique()
+-   class()
+-   data.frame()
+-   viewing data frames
+-   naming columns of a data frame
+-   obs vs variables vs values
+-   metadata on data sets
+
+
+Create Trendlines
+
+Github Practice
+
 # Day 7 Lab 2
 
 Click [this link](https://classroom.github.com/a/CK3DZp9J) to accept lab 2.
