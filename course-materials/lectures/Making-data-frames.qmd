@@ -49,8 +49,7 @@ Week_in_sept
 
 -   names(): returns the coloumn names
 
--   
-nrow(): returns the number of rows
+-   nrow(): returns the number of rows
 
 -   ncol(): returns the number of columns
 
@@ -62,7 +61,7 @@ Weekdays \<- c("Sunday","Monday","Tuesday","Wednesday"....)
 
 names(Week_in_sept) \<- Weekdays
 
-# Columns 
+# Columns
 
 We can use the \$ to access columns as vectors `Week_in_sept$Monday`
 
