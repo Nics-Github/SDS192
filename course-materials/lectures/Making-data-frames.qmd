@@ -96,4 +96,6 @@ Let's consider `ChickWeight` and its metadata
 
 # Credits
 
-Grolemund, Garrett, and Hadley Wickham. n.d. R for Data Science. Accessed March 31, 2019. <https://r4ds.had.co.nz/>.
+Weather map- https://weather.com/forecast/news/2014-10-31-national-forecast-20141009
+
+Data Frame Image- Grolemund, Garrett, and Hadley Wickham. n.d. R for Data Science. Accessed March 31, 2019. <https://r4ds.had.co.nz/>.
