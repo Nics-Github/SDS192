@@ -1,0 +1,99 @@
+---
+title: "Making Data Frames"
+author: "Schwab"
+editor: visual
+execute: 
+  eval: false
+  echo: true
+---
+
+# Weather
+
+![](https://s.w-x.co/staticmaps/acttemp_1280x720.jpg?crop=16:9&width=980&format=pjpg&auto=webp&quality=60)
+
+# Vectors
+
+Make three vectors with the day of the month, the weather and temperature.
+
+```{r}
+day <- c(9, 10,11,12,13,14,15)
+weather <- c()
+temperature <- c()
+```
+
+# Uniqueness
+
+```{r}
+unique()
+unique(weather)
+```
+
+# Make a dataframe
+
+```{r}
+Week_in_sept <- data.frame(day,weather,temperature)
+```
+
+# Let's take a look
+
+```{r}
+Week_in_sept
+
+```
+
+-   glimpse(Week_in_sept)
+
+-   head(): returns first 6 rows
+
+-   tails(): returns last 6 rows
+
+-   names(): returns the coloumn names
+
+-   
+nrow(): returns the number of rows
+
+-   ncol(): returns the number of columns
+
+# Renaming columns
+
+Save the new column names as a vector and use the names() function.
+
+Weekdays \<- c("Sunday","Monday","Tuesday","Wednesday"....)
+
+names(Week_in_sept) \<- Weekdays
+
+# Columns 
+
+We can use the \$ to access columns as vectors `Week_in_sept$Monday`
+
+Let's do `table()` on Monday
+
+# A dataset
+
+![](https://d33wubrfki0l68.cloudfront.net/6f1ddb544fc5c69a2478e444ab8112fb0eea23f8/91adc/images/tidy-1.png)
+
+Columns are variables
+
+Rows are observations
+
+Individual entries are called values
+
+The data we will deal with in this course is rectangular.
+
+# Metadata
+
+This is the data about our data.
+
+Sometimes a data dictionary comes with our data.
+
+When data comes in a package we can use the `?` operator.
+
+Metadata deals with provenance.
+
+Descriptive Data deals with the contents of the data.
+
+Let's consider `ChickWeight` and its metadata
+
+# Credits
+
+Grolemund, Garrett, and Hadley Wickham. n.d. R for Data Science. Accessed March 31, 2019. <https://r4ds.had.co.nz/>.

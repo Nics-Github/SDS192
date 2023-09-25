@@ -272,19 +272,12 @@ h1{font-weight: 400;}
 
 # Day 8 
 
-Data Fundamentals
-
--   vector creation
--   unique()
--   class()
--   data.frame()
--   viewing data frames
--   naming columns of a data frame
--   obs vs variables vs values
--   metadata on data sets
+[Data Fundamentals](./course-materials/lectures/Making-data-frames.qmd)
 
 
-Create Trendlines
+
+[Create Trendlines](course-materials/Lec08In-classExercise-TrendLines.qmd)
+
 
 Github Practice
 
