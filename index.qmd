@@ -272,11 +272,22 @@ h1{font-weight: 400;}
 
 # Day 8 
 
-Trend Lines
+Data Fundamentals
 
-Data, DF, and vectors
+-   vector creation
+-   unique()
+-   class()
+-   data.frame()
+-   viewing data frames
+-   naming columns of a data frame
+-   obs vs variables vs values
+-   metadata on data sets
 
-In class exercise. 
+
+Create Trendlines
+
+Github Practice
+
 
 # Day 7 Lab 2
 
