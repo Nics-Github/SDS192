@@ -270,7 +270,7 @@ h1{font-weight: 400;}
 
 <!-- -   [We'll do problems 3.1 #1 and 3 in class](https://mdsr-book.github.io/mdsr2e/ch-vizII.html#datavizII-exercises) -->
 
-# Day 8
+# Day 8 Trend Lines and Data.Frames
 
 [Data Fundamentals](./course-materials/lectures/Making-data-frames.qmd)
 
