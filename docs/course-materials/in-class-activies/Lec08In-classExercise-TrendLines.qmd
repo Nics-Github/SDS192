@@ -1,0 +1,79 @@
+
+---
+title: "Lec 8: In-class Exercise: Trend Lines"
+output:
+  html_document
+---
+
+```{r, include=FALSE}
+# Do not edit this code block/chunk
+knitr::opts_chunk$set(echo = TRUE, message=FALSE, warning = FALSE)
+```
+
+# Step 1: Load Packages
+
+Load the package and the dataset we need to work on our analysis today.
+
+```{r}
+library(tidyverse)
+library(gapminder)
+```
+
+# Step 2: View the Data Frames
+
+The `gapminder` package includes a data frame called `gapminder`, containing information about different countries from 1952 to 2007. 
+
+```{r}
+# Write your code below
+
+```
+
+We're going to only focus on data for 2007 and save this in a new data frame `gapminder_2007`. We use data wrangling code from the `tidyverse` package. Don't worry if this doesn't make sense for now, we'll cover data wrangling later in this course. For now, run the following code:
+
+```{r}
+gapminder_2007 <- gapminder |> 
+  filter(year == 2007)
+```
+
+An alternative method for exploring a data frame is by using the `glipmse()` function:
+
+```{r}
+glimpse(gapminder_2007)
+```
+
+This data is in fact the same data as in Table 2.1 of ModernDive.
+
+# Step 3: Recreate Figure 2.1 in ModernDive but with No Color and No Size
+
+```{r}
+# Write your code below
+
+```
+
+# Step 4: Add LOESS Smoother Layer with `geom_smooth()`
+
+```{r}
+# Paste the code below and adjust it
+
+``` 
+
+# Step 5: Remove Standard Error Bars by Setting `se = FALSE`
+
+```{r}
+# Paste the code below and adjust it
+
+``` 
+
+# Step 6: Change Span of "smoothing" Window by Changing the Value of Span
+
+```{r}
+# Paste the code below and adjust it
+
+``` 
+
+# Step 7: Force Line to Be Straight. i.e. Linear Regression
+
+```{r}
+# Paste the code below and adjust it
+
+``` 

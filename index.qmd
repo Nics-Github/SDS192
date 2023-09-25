@@ -272,6 +272,7 @@ h1{font-weight: 400;}
 
 # Day 8 
 
+
 Data Fundamentals
 
 -   vector creation
@@ -287,6 +288,7 @@ Data Fundamentals
 Create Trendlines
 
 Github Practice
+
 
 # Day 7 Lab 2
 
