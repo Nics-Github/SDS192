@@ -271,6 +271,53 @@ h1{font-weight: 400;}
 
 <!-- -   [We'll do problems 3.1 #1 and 3 in class](https://mdsr-book.github.io/mdsr2e/ch-vizII.html#datavizII-exercises) -->
 
+# Day 10
+
+[Lab 3](https://classroom.github.com/a/ypNBYwsR)
+
+# Day 9 
+
+[Authoring Markdown](https://scao53.github.io/sds192spring2023/slides/Lec28-Markdown.html#1)
+
+::: {.callout-warning collapse="true"}
+# Lab 2 is Due
+
+Check comments for Lab 1. Grades on moodle shortly
+
+Due tonight by midnight.
+
+Let's clean up our lab 2 code. This will make it easier for the grader to read. 
+
+Let's consider how we view the coude. Maybe use `glimpse()` of `head()` instead of just typing `ne_county_health_2021`
+
+:::
+
+[Reading on Git and RStudio](https://r-bio.github.io/intro-git-rstudio/)
+
+Class Git [Practice](https://classroom.github.com/a/MkGODhPw) 
+
+::: {.callout collapse="true"}
+# Project 1
+
+The files for the project are on slack under the #project-1 channel
+
+Your groups are listed there also.
+
+The instructions for making a repo are there as well. 
+
+:::
+
+[Polishing Figures](/course-materials/in-class-activies/Lec09In-classExercise-PolishingFigures.zip)
+
+::: {.callout-tip collapse="true"}
+# working directory
+
+You may need to set your working directory. 
+
+The easiest way to do this is to find your Lec09-...zip in the file pane and go gear-icon > "Set As Working Directory"
+:::
+
+
 # Day 8 Trend Lines and Data.Frames
 
 Announcements: No drop in Office hours on Thursday. 
