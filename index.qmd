@@ -301,7 +301,7 @@ Class Git [Practice](https://classroom.github.com/a/MkGODhPw)
 
 # [Project 1](https://moodle.smith.edu/course/view.php?id=48189#section-2)
 
-
+Project 1 Data Dictionary
 
 [Polishing Figures](/course-materials/in-class-activies/Lec09In-classExercise-PolishingFigures.zip)
 
