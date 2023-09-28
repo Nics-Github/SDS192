@@ -271,13 +271,35 @@ h1{font-weight: 400;}
 
 <!-- -   [We'll do problems 3.1 #1 and 3 in class](https://mdsr-book.github.io/mdsr2e/ch-vizII.html#datavizII-exercises) -->
 
+# Day 11 Github and Ethics
+
+[Data Ethics]()
+
+[Github Practice]()
+
+
+
 # Day 10 Lab 3
 
 Lab 3 is due next Wednesday by midnight.
 
 [Lab 3](https://moodle.smith.edu/course/view.php?id=48189#section-1)
 
-**You will be asked for a URI** enter this: `http://localhost:1410/` 
+::: {.callout-warning collapse="true"}
+# Lab 3 pitfalls
+
+**You will be asked for a URI** enter this: `http://localhost:1410/`
+
+Step 5: part 3. To set the line color do color="green"
+
+For some notes on skew: https://en.wikipedia.org/wiki/Skewness
+
+Remember geom_bar() counts whatever variable you give it for x.
+
+reorder(categorical_var, numeric variable, function for reordering)
+
+We'll discuss ethics Monday, read chapter 8. 
+:::
 
 # Day 9 Markdown and Github
 
