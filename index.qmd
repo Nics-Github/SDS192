@@ -277,6 +277,8 @@ Lab 3 is due next Wednesday by midnight.
 
 [Lab 3](https://moodle.smith.edu/course/view.php?id=48189#section-1)
 
+**You will be asked for a URI** enter this: `http://localhost:1410/` 
+
 # Day 9 Markdown and Github
 
 [Authoring Markdown](https://scao53.github.io/sds192spring2023/slides/Lec28-Markdown.html#1)
