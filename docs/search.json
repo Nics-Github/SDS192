@@ -103,5 +103,26 @@
     "title": "Making Data Frames",
     "section": "",
     "text": "Weather\n\n\n\nVectors\nMake three vectors with the day of the month, the weather and temperature.\n\nday &lt;- c(9, 10,11,12,13,14,15)\nweather &lt;- c()\ntemperature &lt;- c()\n\n\n\nUniqueness\n\nunique()\nunique(weather)\n\n\n\nMake a dataframe\n\nWeek_in_sept &lt;- data.frame(day,weather,temperature)\n\n\n\nLet’s take a look\n\nWeek_in_sept\n\n\nglimpse(Week_in_sept)\nhead(): returns first 6 rows\ntails(): returns last 6 rows\nnames(): returns the coloumn names\nnrow(): returns the number of rows\nncol(): returns the number of columns\n\n\n\nRenaming columns\nSave the new column names as a vector and use the names() function.\nWeekdays &lt;- c(“Sunday”,“Monday”,“Tuesday”,“Wednesday”….)\nnames(Week_in_sept) &lt;- Weekdays\n\n\nColumns\nWe can use the $ to access columns as vectors Week_in_sept$Monday\nLet’s do table() on Monday\n\n\nA dataset\n\nColumns are variables\nRows are observations\nIndividual entries are called values\nThe data we will deal with in this course is rectangular.\n\n\nMetadata\nThis is the data about our data.\nSometimes a data dictionary comes with our data.\nWhen data comes in a package we can use the ? operator.\nMetadata deals with provenance.\nDescriptive Data deals with the contents of the data.\nLet’s consider ChickWeight and its metadata\n\n\nCredits\nWeather map- https://weather.com/forecast/news/2014-10-31-national-forecast-20141009\nData Frame Image- Grolemund, Garrett, and Hadley Wickham. n.d. R for Data Science. Accessed March 31, 2019. https://r4ds.had.co.nz/."
+  },
+  {
+    "objectID": "course-materials/lectures/ethics.html#algorithms-reflect-the-bais-of-their-creator",
+    "href": "course-materials/lectures/ethics.html#algorithms-reflect-the-bais-of-their-creator",
+    "title": "Data Ethics",
+    "section": "Algorithms Reflect the bais of their creator",
+    "text": "Algorithms Reflect the bais of their creator\n\nA piece of data itself has no positive or negative moral value, but the way we manipulate it does. It’s hard to imagine a more contentious project than programing ethics into our algorithms; to do otherwise, however, and allow algorithms to monitor themselves, is to invite the quicksand of moral equivalence."
+  },
+  {
+    "objectID": "course-materials/lectures/ethics.html#books",
+    "href": "course-materials/lectures/ethics.html#books",
+    "title": "Data Ethics",
+    "section": "Books",
+    "text": "Books\nWeapons of Math Destruction by Cathy O’Neil"
+  },
+  {
+    "objectID": "course-materials/lectures/ethics.html#last-slide",
+    "href": "course-materials/lectures/ethics.html#last-slide",
+    "title": "Data Ethics",
+    "section": "Last Slide",
+    "text": "Last Slide\nChistopher Wylie https://www.nytimes.com/2018/03/17/us/politics/cambridge-analytica-trump-campaign.html Michal Kosinski and Yilun Wang https://www.nytimes.com/2017/10/09/science/stanford-sexual-orientation-study.html New Yorker https://www.newyorker.com/news/daily-comment/the-ai-gaydar-study-and-the-real-dangers-of-big-data"
   }
 ]

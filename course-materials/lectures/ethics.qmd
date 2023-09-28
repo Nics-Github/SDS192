@@ -1,0 +1,65 @@
+---
+title: "Data Ethics"
+author: "Schwab"
+format: revealjs
+editor: visual
+---
+
+# Data Ethics
+
+This is a squish area.
+
+I like to think of it this way:
+
+[*Do no harm with Data.*]{.smallcaps}
+
+# Christopher Wylie
+
+::: columns
+::: {.column width="60%"}
+![](https://static01.nyt.com/images/2018/03/18/autossell/18Cambridge1/merlin_135596256_2eaf14bd-c577-441b-ac87-b5d54199d1b4-superJumbo.jpg?quality=75&auto=webp){fig-align="left" width="400"}
+:::
+
+::: {.column width="40%"}
+::: columns
+Manipulation of Facebook users\[\^1\]
+
+Can it do harm?
+:::
+:::
+:::
+
+# Prediction of Race
+
+Github user solivella made an [r package](https://github.com/kosukeimai/wru) to predict race based on surname and location.
+
+API from the US Census Bureau.
+
+Can it do harm?
+
+# Gaydar
+
+![](https://static01.nyt.com/images/2017/10/10/science/10SCI-GAYDAR1/00GAYDAR1-superJumbo.jpg?quality=75&auto=webp){fig-align="center" width="1500"}
+
+Michal Kosinski and Yilun Wang create a gaydar.
+
+Can it do harm?
+
+## Algorithms Reflect the bais of their creator
+
+> A piece of data itself has no positive or negative moral value, but the way we manipulate it does. It's hard to imagine a more contentious project than programing **ethics into our algorithms**; to do otherwise, however, and allow algorithms to monitor themselves, is to invite the quicksand of **moral equivalence**.
+
+## Books
+
+Weapons of Math Destruction by Cathy O'Neil
+
+![](https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1456091964i/28186015.jpg){fig-align="center"}
+
+---
+class: center, middle, inverse
+# This feels big
+---
+
+## Last Slide
+
+Chistopher Wylie https://www.nytimes.com/2018/03/17/us/politics/cambridge-analytica-trump-campaign.html Michal Kosinski and Yilun Wang https://www.nytimes.com/2017/10/09/science/stanford-sexual-orientation-study.html New Yorker https://www.newyorker.com/news/daily-comment/the-ai-gaydar-study-and-the-real-dangers-of-big-data
