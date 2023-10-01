@@ -51,14 +51,37 @@ Can it do harm?
 
 ## Books
 
-Weapons of Math Destruction by Cathy O'Neil
-
+::: columns
+::: {.column width="58%"}
 ![](https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1456091964i/28186015.jpg){fig-align="center"}
+:::
 
----
-class: center, middle, inverse
-# This feels big
----
+::: {.column width="42%"}
+![](https://miro.medium.com/v2/resize:fit:640/format:webp/1*iVjxpIdWRGcf0SHthnkwqA.jpeg)
+:::
+:::
+
+------------------------------------------------------------------------
+
+class: center, middle, inverse \# This feels big
+
+------------------------------------------------------------------------
+
+# We're just making Data Visualizations.
+
+Charts can be manipulated either intentionally or unintentionally.
+
+Here are [some lesson's learned from Lying With Statistics.](https://towardsdatascience.com/lessons-from-how-to-lie-with-statistics-57060c0d2f19) by Darrell Huff.
+
+Here is a [site I wanted to show you forever ago.](https://www.statisticshowto.com/probability-and-statistics/descriptive-statistics/misleading-graphs/)
+
+Here's another, [if we have time.](https://www.buzzfeednews.com/article/katienotopoulos/graphs-that-lied-to-us)
+
+# Telling a story
+
+Data Visualizations are just telling a story.
+
+Try to make it an honest one.
 
 ## Last Slide
 
