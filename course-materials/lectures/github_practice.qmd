@@ -21,34 +21,64 @@ What if two people were working on the same line of code at the same time and pu
 
 Github doesn't know which to take and you get a tricky merge conflict.
 
-# Step 1: Create a fresh project 1 .rproj file. 
+# Step 1: Create a fresh project 1 .rproj file.
 
 You can save your .qmd if you've been working on it.
 
 We'll get it it later.
 
-# Step 2: Create a new branch. 
+# Step 2: Create a new branch.
 
 ![](images/new_branch.png)
 
 Pay attention to the website for pull requests.
 
-### Give it a good name. 
+### Give it a good name.
 
 Your partner is doing the same thing.
 
-# Step 3: Change a small thing. 
+# Step 3: Change a small thing.
 
 We will change the author's name in our project.
 
 Work out with your partner who is author 1 and 2. Reverse Alphabetical is my fav.
 
-# Step 4: Save and commit. 
+# Step 4: Save and commit.
 
 Your partners are doing the same thing.
 
-# Step 5: Pull then Push your branch to github. 
+# Step 5: Pull then Push your branch to github.
 
 In general its a good idea to pull first to get any new changes before you push.
 
-# Step 6: Go to that website from step 2. 
+# Step 6: Go to that website from step 2.
+
+It is just go to github
+
+# Step 7: Create a pull request for your branch
+
+You are pulling your files to main.
+
+# Step 8: Merge Branches
+
+You can delete the old branch.
+
+You'll make a new one.
+
+# Step 9: Switch back to main and pull
+
+All your files should be updated
+
+Make a new branch.
+
+# Merge Conflicts
+
+-   New Branch - Good Name
+
+-   You and your partner should change the title of your project.
+
+    -   Choose different names
+
+-   Commit and push to github.
+
+-   Go to github to fix the merge conflict.

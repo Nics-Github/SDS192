@@ -273,7 +273,7 @@ h1{font-weight: 400;}
 
 # Day 11 Github and Ethics
 
-[Data Ethics]()
+[Data Ethics](/course-materials/ethics.qmd)
 
 [Github Practice]()
 
