@@ -29,13 +29,13 @@ We'll get it it later.
 
 # Step 2: Create a new branch.
 
-![](images/new_branch.png)
+![](./images/new_branch.png)
 
-Pay attention to the website for pull requests.
+-   Pay attention to the website for pull requests.
 
-### Give it a good name.
+-   Give it a good name.
 
-Your partner is doing the same thing.
+-   Your partner is doing the same thing.
 
 # Step 3: Change a small thing.
 
@@ -49,15 +49,19 @@ Your partners are doing the same thing.
 
 # Step 5: Pull then Push your branch to github.
 
-In general its a good idea to pull first to get any new changes before you push.
+In general it is a good idea to pull first to get any new changes before you push.
 
 # Step 6: Go to that website from step 2.
 
-It is just go to github
+Or just go to your project repo in github.
 
 # Step 7: Create a pull request for your branch
 
 You are pulling your files to main.
+
+Both you and your partner will do this. 
+
+Hopefully you'll be able to do an auto merge.
 
 # Step 8: Merge Branches
 
@@ -67,18 +71,32 @@ You'll make a new one.
 
 # Step 9: Switch back to main and pull
 
-All your files should be updated
+All your files should be updated with both names. 
 
 Make a new branch.
 
-# Merge Conflicts
+# Merge Conflict practice
 
 -   New Branch - Good Name
 
 -   You and your partner should change the title of your project.
 
-    -   Choose different names
+    -   Choose different titles
 
 -   Commit and push to github.
 
 -   Go to github to fix the merge conflict.
+
+-   Sometimes github will tell you go to the command line
+
+    -   Open the Terminal and type what it says.
+    
+#  Sometimes 
+
+head >>>>>>>>>>>
+
+make changes in your file and delete the excess. 
+
+
+<<<<<<<<<<<
+    
