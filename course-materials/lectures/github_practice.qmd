@@ -53,4 +53,32 @@ In general its a good idea to pull first to get any new changes before you push.
 
 # Step 6: Go to that website from step 2.
 
-Step 8
+It is just go to github
+
+# Step 7: Create a pull request for your branch
+
+You are pulling your files to main.
+
+# Step 8: Merge Branches
+
+You can delete the old branch.
+
+You'll make a new one.
+
+# Step 9: Switch back to main and pull
+
+All your files should be updated
+
+Make a new branch.
+
+# Merge Conflicts
+
+-   New Branch - Good Name
+
+-   You and your partner should change the title of your project.
+
+    -   Choose different names
+
+-   Commit and push to github.
+
+-   Go to github to fix the merge conflict.
