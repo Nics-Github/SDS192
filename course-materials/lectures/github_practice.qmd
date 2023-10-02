@@ -37,7 +37,7 @@ We'll get to it later.
 
 ![](/docs/images/new_branch.png)
 
--   Give it a good name.
+-   Give it a good name. No spaces.
 
 -   Your partner should give a different branch name.
 
