@@ -271,11 +271,22 @@ h1{font-weight: 400;}
 
 <!-- -   [We'll do problems 3.1 #1 and 3 in class](https://mdsr-book.github.io/mdsr2e/ch-vizII.html#datavizII-exercises) -->
 
+# Day 13 Project 1
+
+Today we are working on project 1. 
+
+# Day 12 Project 1
+
+Today we are working on project 1. 
+
+(We will not normally have this tmuch time to work on projects in class).
+
+
 # Day 11 Github and Ethics
 
-[Data Ethics](/course-materials/ethics.qmd)
+[Data Ethics](/course-materials/lectures/ethics.qmd)
 
-[Github Practice]()
+[Github Practice](/course-materials/lectures/github_practice.qmd)
 
 
 

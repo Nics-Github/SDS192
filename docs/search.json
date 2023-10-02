@@ -32,7 +32,7 @@
     "href": "index.html#other-things",
     "title": "SDS 192: Intro to Data Science",
     "section": "Other things",
-    "text": "Other things\n\n\n\n\n\n\nTo activate colors\n\n\n\n\n\nSome students are not getting “red” to be red. Try this: Tools menu > global options > code > display > “enable preview of named and hex colors\nIf that doesn’t work, maybe its a bug?\n\n\n\n\nthe c() function\ntyping math\nand tibbles\nggplot cheatsheet\nThe visual editor\nShort History of R"
+    "text": "Other things\n\n\n\n\n\n\nTo activate colors\n\n\n\n\n\nSome students are not getting “red” to be red. Try this: Tools menu &gt; global options &gt; code &gt; display &gt; “enable preview of named and hex colors\nIf that doesn’t work, maybe its a bug?\n\n\n\n\nthe c() function\ntyping math\nand tibbles\nggplot cheatsheet\nThe visual editor\nShort History of R"
   },
   {
     "objectID": "Resources.html#moderndive",
@@ -123,7 +123,7 @@
     "href": "course-materials/lectures/ethics.html#last-slide",
     "title": "Data Ethics",
     "section": "Last Slide",
-    "text": "Last Slide\nChistopher Wylie https://www.nytimes.com/2018/03/17/us/politics/cambridge-analytica-trump-campaign.html Michal Kosinski and Yilun Wang https://www.nytimes.com/2017/10/09/science/stanford-sexual-orientation-study.html New Yorker https://www.newyorker.com/news/daily-comment/the-ai-gaydar-study-and-the-real-dangers-of-big-data"
+    "text": "Last Slide\n\nChistopher Wylie https://www.nytimes.com/2018/03/17/us/politics/cambridge-analytica-trump-campaign.html\nMichal Kosinski and Yilun Wang https://www.nytimes.com/2017/10/09/science/stanford-sexual-orientation-study.html\nNew Yorker https://www.newyorker.com/news/daily-comment/the-ai-gaydar-study-and-the-real-dangers-of-big-data"
   },
   {
     "objectID": "schwab.html",
@@ -159,5 +159,12 @@
     "title": "Real Github Practice",
     "section": "",
     "text": "Pushing to Main\nWe’ve seen how messy this can get.\nYou can push to main when you are working one (and always on one computer).\n\n\nBranches\nWhen working with other people create branches.\nBranches allow you to work without mucking up other’s work.\nWhat if two people were working on the same line of code at the same time and pushed to main?\nGithub doesn’t know which to take and you get a tricky merge conflict.\n\n\nStep 1: Create a fresh project 1 .rproj file.\nYou can save your .qmd if you’ve been working on it.\nWe’ll get it it later.\n\n\nStep 2: Create a new branch.\n\nPay attention to the website for pull requests.\n\nGive it a good name.\nYour partner is doing the same thing.\n\n\n\nStep 3: Change a small thing.\nWe will change the author’s name in our project.\nWork out with your partner who is author 1 and 2. Reverse Alphabetical is my fav.\n\n\nStep 4: Save and commit.\nYour partners are doing the same thing.\n\n\nStep 5: Pull then Push your branch to github.\nIn general its a good idea to pull first to get any new changes before you push.\n\n\nStep 6: Go to that website from step 2.\nIt is just go to github\n\n\nStep 7: Create a pull request for your branch\nYou are pulling your files to main.\n\n\nStep 8: Merge Branches\nYou can delete the old branch.\nYou’ll make a new one.\n\n\nStep 9: Switch back to main and pull\nAll your files should be updated\nMake a new branch.\n\n\nMerge Conflicts\n\nNew Branch - Good Name\nYou and your partner should change the title of your project.\n\nChoose different names\n\nCommit and push to github.\nGo to github to fix the merge conflict."
+  },
+  {
+    "objectID": "course-materials/lectures/ethics.html#credits",
+    "href": "course-materials/lectures/ethics.html#credits",
+    "title": "Data Ethics",
+    "section": "Credits",
+    "text": "Credits\n\nSome Content was taken from Ben Baumer’s Lecture on Ethics\nChistopher Wylie https://www.nytimes.com/2018/03/17/us/politics/cambridge-analytica-trump-campaign.html\nMichal Kosinski and Yilun Wang https://www.nytimes.com/2017/10/09/science/stanford-sexual-orientation-study.html\nNew Yorker https://www.newyorker.com/news/daily-comment/the-ai-gaydar-study-and-the-real-dangers-of-big-data"
   }
 ]
