@@ -281,6 +281,7 @@ Today we are working on project 1.
 
 (We will not normally have this tmuch time to work on projects in class).
 
+
 # Day 11 Github and Ethics
 
 [Data Ethics](/course-materials/lectures/ethics.qmd)
