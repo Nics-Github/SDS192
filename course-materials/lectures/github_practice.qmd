@@ -5,11 +5,17 @@ format: revealjs
 editor: visual
 ---
 
-# Pushing to Main
+# Pushing to `Main`
 
 We've seen how messy this can get.
 
-You can push to main when you are working one (and always on one computer).
+You can push to `main` when you are working alone (and always on one computer).
+
+Directed Acyclic Graph (DAG) picture.
+
+-   A node is a commit
+
+-   Edges point to the parent
 
 # Branches
 
@@ -17,66 +23,77 @@ When working with other people create branches.
 
 Branches allow you to work without mucking up other's work.
 
-What if two people were working on the same line of code at the same time and pushed to main?
+If two people edit the same line of code at the same time and pushed to `main`?
 
 Github doesn't know which to take and you get a tricky merge conflict.
 
 # Step 1: Create a fresh project 1 .rproj file.
 
-You can save your .qmd if you've been working on it.
+Don't delete your .qmd if you've been working on it.
 
-We'll get it it later.
+We'll get to it later.
 
 # Step 2: Create a new branch.
 
-![](./images/new_branch.png)
-
--   Pay attention to the website for pull requests.
+![](/docs/images/new_branch.png)
 
 -   Give it a good name.
 
--   Your partner is doing the same thing.
+-   Your partner should give a different branch name.
 
 # Step 3: Change a small thing.
 
-We will change the author's name in our project.
+We will change the authors' names in our project.
 
-Work out with your partner who is author 1 and 2. Reverse Alphabetical is my fav.
+Work out with your partner who is author 1 and 2 (and 3).
 
 # Step 4: Save and commit.
 
 Your partners are doing the same thing.
 
+Note: When you commit your branch gets a new node.
+
+Directed Acyclic Graph (DAG) picture.
+
 # Step 5: Pull then Push your branch to github.
 
 In general it is a good idea to pull first to get any new changes before you push.
 
-# Step 6: Go to that website from step 2.
+![](https://gcapes.github.io/swc-pr-tutorial/fig/push-pull.svg){width="600"}
 
-Or just go to your project repo in github.
+# Step 6: Go to github. 
+
+![You should see something like this. Except with your branch name instead of practice.](/images/pull_request_note.png)
 
 # Step 7: Create a pull request for your branch
 
-You are pulling your files to main.
+You are pulling your files to the `main` branch.
 
-Both you and your partner will do this. 
+Both you and your partner will do this.
 
 Hopefully you'll be able to do an auto merge.
 
+![](/images/merge_pull_request.png)
+
+Give your pull request a good message too.
+
 # Step 8: Merge Branches
 
-You can delete the old branch.
+-   Do this one at a time.
 
-You'll make a new one.
+-   You can delete the old branch.
+
+    -   You'll make a new one.
 
 # Step 9: Switch back to main and pull
 
-All your files should be updated with both names. 
+![](/images/switch_to_main.png){width="528"}
 
-Make a new branch.
+Check your files are updated with both names.
 
 # Merge Conflict practice
 
+::: incremental
 -   New Branch - Good Name
 
 -   You and your partner should change the title of your project.
@@ -90,13 +107,26 @@ Make a new branch.
 -   Sometimes github will tell you go to the command line
 
     -   Open the Terminal and type what it says.
-    
-#  Sometimes 
+:::
 
-head >>>>>>>>>>>
+# Sometimes a file changes. 
 
-make changes in your file and delete the excess. 
+head \>\>\>\>\>\>\>\>\>\>\>
 
+make changes in your file and delete the excess.
 
-<<<<<<<<<<<
-    
+\<\<\<\<\<\<\<\<\<\<\<
+
+# Explore 
+
+-   history
+
+-   branches
+
+-   pull requests
+
+# Project work
+
+Make a simple graph and push to github.
+
+Always work in separate branches not on `main`.
