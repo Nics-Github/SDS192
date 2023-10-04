@@ -275,12 +275,41 @@ h1{font-weight: 400;}
 
 Today we are working on project 1. 
 
+::: {.callout-tip collapse="true"}
+# notes on rendering
+
+-   Don't forget to render
+
+-   The hash-pipe `#|`
+
+  -   echo, include, execute, R markdown cheat sheet.  
+
+-   More here Friday.
+
+:::
+
 # Day 12 Project 1
 
 Today we are working on project 1. 
 
-(We will not normally have this tmuch time to work on projects in class).
+(We will not normally have this much time to work on projects in class).
 
+::: {.callout-tip collapse="true"}
+# Think about Project 1
+
+-   Consider the ethics.
+
+-   Consider code layout. Lots of space and arguments on different lines.
+
+-   Do at least one push on the project in class today. 
+
+  -   In general lots of little pushes. 
+
+-   Make your graph legible to the lay person (title, labels, source, captions).
+
+-   You might realize you are sharing an API key. Consider what that means. 
+
+:::
 
 # Day 11 Github and Ethics
 
