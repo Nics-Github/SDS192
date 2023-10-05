@@ -284,7 +284,27 @@ Today we are working on project 1.
 
   -   echo, include, execute, R markdown cheat sheet.  
 
--   More here Friday.
+:::
+
+::: {.callout-tip collapse="true"}
+# terminal work
+
+-   Some times you get "you have divergent branches and need to specify how to reconcile them"
+
+-   In terminal: `git config pull.ff only`
+
+-   Sometimes fast forwarding is fatal.Try Merge Commit:
+
+-   In terminal: `git checkout branch-name` then
+`git merge --no-ff -m "commit name" branch-name`
+  
+-   You can also try following the instructions git gives. 
+
+-   Nothing wrong with saving your code and deleting the branch. Branches are disposable. 
+
+-   Once you delete a branch on github don't work in it any more.  do: `git fetch --prune` to remove the old remote branches from rstudio.Or `git branch -d branch_name` to delete your old branch 
+
+-   You can work in an old branch with lots of commmits before you push. But for now try to do a new branch for each change. 
 
 :::
 

@@ -61,7 +61,7 @@ In general it is a good idea to pull first to get any new changes before you pus
 
 ![](https://gcapes.github.io/swc-pr-tutorial/fig/push-pull.svg){width="600"}
 
-# Step 6: Go to github. 
+# Step 6: Go to github.
 
 ![You should see something like this. Except with your branch name instead of practice.](/images/pull_request_note.png)
 
@@ -109,7 +109,7 @@ Check your files are updated with both names.
     -   Open the Terminal and type what it says.
 :::
 
-# Sometimes a file changes. 
+# Sometimes a file changes.
 
 head \>\>\>\>\>\>\>\>\>\>\>
 
@@ -117,7 +117,7 @@ make changes in your file and delete the excess.
 
 \<\<\<\<\<\<\<\<\<\<\<
 
-# Explore 
+# Explore
 
 -   history
 
