@@ -22,7 +22,9 @@ I like to think of it this way:
 
 ::: {.column width="40%"}
 ::: columns
-Manipulation of Facebook users\[\^1\]
+Cambridge Analytica
+
+Manipulation of Facebook users for votes
 
 Can it do harm?
 :::
@@ -37,7 +39,7 @@ API from the US Census Bureau.
 
 Can it do harm?
 
-# Gaydar
+# Making Gaydar
 
 ![](https://static01.nyt.com/images/2017/10/10/science/10SCI-GAYDAR1/00GAYDAR1-superJumbo.jpg?quality=75&auto=webp){fig-align="center" width="1500"}
 
@@ -63,10 +65,6 @@ Can it do harm?
 
 ------------------------------------------------------------------------
 
-class: center, middle, inverse \# This feels big
-
-------------------------------------------------------------------------
-
 # We're just making Data Visualizations.
 
 Charts can be manipulated either intentionally or unintentionally.
@@ -83,6 +81,12 @@ Data Visualizations are just telling a story.
 
 Try to make it an honest one.
 
-## Last Slide
+## Credits
 
-Chistopher Wylie https://www.nytimes.com/2018/03/17/us/politics/cambridge-analytica-trump-campaign.html Michal Kosinski and Yilun Wang https://www.nytimes.com/2017/10/09/science/stanford-sexual-orientation-study.html New Yorker https://www.newyorker.com/news/daily-comment/the-ai-gaydar-study-and-the-real-dangers-of-big-data
+-   Some Content was taken from Ben Baumer's Lecture on Ethics
+
+-   Chistopher Wylie https://www.nytimes.com/2018/03/17/us/politics/cambridge-analytica-trump-campaign.html
+
+-   Michal Kosinski and Yilun Wang https://www.nytimes.com/2017/10/09/science/stanford-sexual-orientation-study.html
+
+-   New Yorker https://www.newyorker.com/news/daily-comment/the-ai-gaydar-study-and-the-real-dangers-of-big-data
