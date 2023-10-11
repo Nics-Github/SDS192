@@ -1,5 +1,5 @@
 ---
-title: "Presentation"
+title: "Stop Question Frisk "
 author: "Schwab"
 format: revealjs
 editor: visual
@@ -179,7 +179,7 @@ Old funtions:
 
 names(), recode(), count()
 
-# Let's compare to 2011. 
+# Let's compare to 2011.
 
 Make a new r project.
 
@@ -194,4 +194,3 @@ Make a new document and put this in a chunk.
 > Are Black, Hispanic, groups more likely to be stopped by police officers than other groups in 2011? Does this change as the total counts of stops decreases to 2021 levels?
 
 # What other questions do you have about the data?
-

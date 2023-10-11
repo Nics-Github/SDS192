@@ -277,9 +277,21 @@ Reminder: Rendered Project 1 due today.
 
 [Stop and Frisk Wrangling](/course-materials/lectures/Wrangling_1_SQF.qmd)
 
-[In class MDSR Problem 2](https://mdsr-book.github.io/mdsr2e/ch-dataI.html#dataI-exercises)
+[In class MDSR Problems 1 and 2](https://mdsr-book.github.io/mdsr2e/ch-dataI.html#dataI-exercises)
 
+```{r code}
+#| code-fold: true
+#| echo: true
+#| eval: false
 
+library(tidyverse)
+library(mdsr)
+library(babynames)
+
+#This makes the Random_subset
+Random_subset <- babynames %>%
+  filter(year=="2003" & name=="Bilal" & sex =="M" |year=="1999" & name=="Terria" & sex =="F" |year=="2010" & name=="Naziyah" & sex =="F" |year=="1989" & name=="Shawana" & sex =="F" |year=="1989" & name=="Jessi" & sex =="F" |year=="1928" & name=="Tillman" & sex =="M"|year=="1981" & name=="Leslee" & sex =="F" |year=="1981" & name=="Sherise" & sex =="F"|year=="1920" & name=="Marquerite" & sex =="F" |year=="1941" & name=="Lorraine" & sex =="M") 
+```
 
 Read Chapter 4.1
 
