@@ -32,7 +32,7 @@
     "href": "index.html#other-things",
     "title": "SDS 192: Intro to Data Science",
     "section": "Other things",
-    "text": "Other things\n\n\n\n\n\n\nTo activate colors\n\n\n\n\n\nSome students are not getting “red” to be red. Try this: Tools menu > global options > code > display > “enable preview of named and hex colors\nIf that doesn’t work, maybe its a bug?\n\n\n\n\nthe c() function\ntyping math\nand tibbles\nggplot cheatsheet\nThe visual editor\nShort History of R"
+    "text": "Other things\n\n\n\n\n\n\nTo activate colors\n\n\n\n\n\nSome students are not getting “red” to be red. Try this: Tools menu &gt; global options &gt; code &gt; display &gt; “enable preview of named and hex colors\nIf that doesn’t work, maybe its a bug?\n\n\n\n\nthe c() function\ntyping math\nand tibbles\nggplot cheatsheet\nThe visual editor\nShort History of R"
   },
   {
     "objectID": "Resources.html#moderndive",
@@ -173,5 +173,166 @@
     "title": "Presentation",
     "section": "",
     "text": "Stop, Question, Frisk\n\nNew York City Police Practice\nMany articles about the targeting of Black and Latio young men.\nStudies have shown that this has led to mistrust in the police.\n\n\n\nA bit about me\nI’m not Black.\nI’m am Hispanic.\nI am not from New York City.\n\n\n\n\n\nRace Exists\nLet’s acknowledge that Race exists and plays a part in the way human being interact with each other.\nWe might get a bit uncomfortable.\n\n\nSchedule:\n\n\nIntroduce you to the data.\nPose a question that I have about stop and frisk.\nGive you Data Frames with data to answer the question one way.\n\nYou’ll order them with a partner.\nYou’ll make up puesdo code to explain data transformations.\nI’ll give you the real code arrows.\n\nWe’ll repeat the process of data transformation with the real code.\nTime for questions.\n\n\n\n\nQuestions so far?\n\n\nThe Data\nHere’s NYC’s website with the stop and frisk data.\n\n\nEach column is a variable\nand each row is a stop\n\n\nData Dictionaries exist for older data.\nNew Data variables are more clear.\nThe variable names are inconsistent across years.\n\n\nA Question\n\nAre Black, Hispanic, groups more likely to be stopped by police officers than other groups in 2011? Does this change as the total counts of stops decreases to 2021 levels?\n\n\n\nMotivation for question\nThis Stop and Frisk policing strategy came into force under Michael Bloomberg governor from 2003 to 2013.\nDuring the end of Michael Bloomberg’s tenure as governor there was a public out cry of the ____ of this policy.\nThe policy’s discrimination leads to distrust in police.\n\n\nStops in a year\n\n# Read in each csv file. This is a lot \n\n# With purr csv\n\nfile_paths_csv <- fs::dir_ls(\"../data/2003_2015_csv_files\")\n\nfile_contents_csv<- file_paths_csv |>\n  map(function (path){\n    read_csv(path)\n  })\n\n# with purr excel\n\nfile_paths_xl <- fs::dir_ls(\"../data/2016_2022_xl_files\")\n\nfile_contents_xl<- file_paths_xl |>\n  map(function (path){\n    read_excel(path)\n  })\n\n# https://www.youtube.com/watch?v=An1bUIg-nVM\n\n#See the number of rows i.e stops in each year\npre_2016 <- sapply(file_contents_csv, nrow)\npost_2016 <- sapply(file_contents_xl, nrow)\n\n\nyears <- c(2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022 )\nstops_frisks <- c(160851, 313523, 398191, 506491, 472096, 540302, 581168,  601285, 685724, 532911,  191851, 45787, 22563, 12405, 11629,  11008,   13459,9544 , 8947,  15102)  \n\nsqf <- as.data.frame(years,stops_frisks)\n\nWarning in as.data.frame.numeric(years, stops_frisks): 'row.names' is not a\ncharacter vector of length 20 -- omitting it. Will be an error!\n\nsqf |> \n  ggplot(aes(years,stops_frisks)) +\n  geom_line()+\n  xlab(\"Year\")+\n  ylab(\"Citizens Stopped ('000s)\")+\n  labs(title=\"\")+\n  theme_minimal()+\n  scale_y_continuous(breaks = c(0,350000,700000), labels = c(\"0\",\"350\",\"700\"))+\n  scale_x_continuous(breaks = c(2003,2013,2022))\n\n\n\n\n\n\nLet’s take a look at the data frame together.\n\n\nHere are your data frames\nLittle envelopes Data 2021\nLittle envelopes Functions\n\n\nConclusions from 2021 data\n\n\nFor comparison:\nHere’s the demographics of NYC1:\n\nBlack: 23.4 %\nLatino: 28.9%\nWhite: 39.8%\n\n\n\nSummarize functions:\nNew functions:\nselect(), mutate(), arrange(), rename()\nOld funtions:\nnames(), recode(), count()\n\n\nLet’s compare to 2011.\nMake a new r project.\nDownload 2011 csv from this site. Extract it to the same folder as your rproj.\nMake a new document and put this in a chunk.\nread_csv(\"2011.csv\")\n\n\nAnswer the question.\n\nAre Black, Hispanic, groups more likely to be stopped by police officers than other groups in 2011? Does this change as the total counts of stops decreases to 2021 levels?\n\n\n\nWhat other questions do you have about the data?\n\n\n\n\n\nFootnotes\n\n\nhttps://www.census.gov/quickfacts/fact/table/newyorkcitynewyork/PST045222↩︎"
+  },
+  {
+    "objectID": "course-materials/lectures/mdsr-the-verbs.html#dplyr-lives-in-the-tidyverse",
+    "href": "course-materials/lectures/mdsr-the-verbs.html#dplyr-lives-in-the-tidyverse",
+    "title": "The Verbs",
+    "section": "dplyr lives in the tidyverse",
+    "text": "dplyr lives in the tidyverse"
+  },
+  {
+    "objectID": "course-materials/lectures/mdsr-the-verbs.html#dplyr-highlights",
+    "href": "course-materials/lectures/mdsr-the-verbs.html#dplyr-highlights",
+    "title": "The Verbs",
+    "section": "dplyr highlights",
+    "text": "dplyr highlights\n\n\nThe Five Verbs:\n\nselect()\nfilter()\nmutate()\narrange()\nsummarize()\n\n\nPlus:\n\ngroup_by()\nrename()\ninner_join()\nleft_join()\n\n\n\nRead more"
+  },
+  {
+    "objectID": "course-materials/lectures/mdsr-the-verbs.html#philosophy",
+    "href": "course-materials/lectures/mdsr-the-verbs.html#philosophy",
+    "title": "The Verbs",
+    "section": "Philosophy",
+    "text": "Philosophy\n\nEach verb takes a data frame and returns a data frame\n\nactually a tbl_df (more on that later)\nallows chaining with %&gt;% or |&gt;\n\nIdea:\n\nmaster a few simple commands\nuse your creativity to combine them\n\nCheat Sheet:\n\nResources tab"
+  },
+  {
+    "objectID": "course-materials/lectures/mdsr-the-verbs.html#what-is-a-tibble",
+    "href": "course-materials/lectures/mdsr-the-verbs.html#what-is-a-tibble",
+    "title": "The Verbs",
+    "section": "What is a tibble?",
+    "text": "What is a tibble?\n\n\n\n\n\nobject of class tbl\na re-imagining of a data.frame\nit looks and acts like a data.frame\nbut it’s even better…\ntidyverse works with tibbles\n\n\n\nfootnote"
+  },
+  {
+    "objectID": "course-materials/lectures/mdsr-the-verbs.html#select-take-a-subset-of-the-columns",
+    "href": "course-materials/lectures/mdsr-the-verbs.html#select-take-a-subset-of-the-columns",
+    "title": "The Verbs",
+    "section": "select(): take a subset of the columns",
+    "text": "select(): take a subset of the columns"
+  },
+  {
+    "objectID": "course-materials/lectures/mdsr-the-verbs.html#filter-take-a-subset-of-the-rows",
+    "href": "course-materials/lectures/mdsr-the-verbs.html#filter-take-a-subset-of-the-rows",
+    "title": "The Verbs",
+    "section": "filter(): take a subset of the rows",
+    "text": "filter(): take a subset of the rows"
+  },
+  {
+    "objectID": "course-materials/lectures/mdsr-the-verbs.html#mutate-add-or-modify-a-column",
+    "href": "course-materials/lectures/mdsr-the-verbs.html#mutate-add-or-modify-a-column",
+    "title": "The Verbs",
+    "section": "mutate(): add or modify a column",
+    "text": "mutate(): add or modify a column"
+  },
+  {
+    "objectID": "course-materials/lectures/mdsr-the-verbs.html#arrange-sort-the-rows",
+    "href": "course-materials/lectures/mdsr-the-verbs.html#arrange-sort-the-rows",
+    "title": "The Verbs",
+    "section": "arrange(): sort the rows",
+    "text": "arrange(): sort the rows"
+  },
+  {
+    "objectID": "course-materials/lectures/mdsr-the-verbs.html#summarize-collapse-to-a-single-row",
+    "href": "course-materials/lectures/mdsr-the-verbs.html#summarize-collapse-to-a-single-row",
+    "title": "The Verbs",
+    "section": "summarize(): collapse to a single row",
+    "text": "summarize(): collapse to a single row"
+  },
+  {
+    "objectID": "course-materials/in-class-activies/Activity_Taxonomy_of_Graphics.html",
+    "href": "course-materials/in-class-activies/Activity_Taxonomy_of_Graphics.html",
+    "title": "Taxonomy of Graphics",
+    "section": "",
+    "text": "Use the vocabulary from the Taxonomy of data graphics.\n\n\nvisual cues\ncoordinate system\nscales\ncontext\nWhat is the graph showing?\nYour feelings"
+  },
+  {
+    "objectID": "course-materials/in-class-activies/Activity_Taxonomy_of_Graphics.html#discuss-the-following",
+    "href": "course-materials/in-class-activies/Activity_Taxonomy_of_Graphics.html#discuss-the-following",
+    "title": "Taxonomy of Graphics",
+    "section": "",
+    "text": "Use the vocabulary from the Taxonomy of data graphics.\n\n\nvisual cues\ncoordinate system\nscales\ncontext\nWhat is the graph showing?\nYour feelings"
+  },
+  {
+    "objectID": "course-materials/in-class-activies/Activity_Taxonomy_of_Graphics.html#ny-times-graphs",
+    "href": "course-materials/in-class-activies/Activity_Taxonomy_of_Graphics.html#ny-times-graphs",
+    "title": "Taxonomy of Graphics",
+    "section": "NY Times Graphs:",
+    "text": "NY Times Graphs:\n\nSerena Williams\nEndangered Biodiversity\nPandemic Stimulus"
+  },
+  {
+    "objectID": "course-materials/in-class-activies/Activity_Taxonomy_of_Graphics.html#yougov",
+    "href": "course-materials/in-class-activies/Activity_Taxonomy_of_Graphics.html#yougov",
+    "title": "Taxonomy of Graphics",
+    "section": "Yougov:",
+    "text": "Yougov:\n\nIce Cream (Just the first graph, there is a lot here)."
+  },
+  {
+    "objectID": "course-materials/in-class-activies/Activity_Taxonomy_of_Graphics.html#from-five-thirty-eight",
+    "href": "course-materials/in-class-activies/Activity_Taxonomy_of_Graphics.html#from-five-thirty-eight",
+    "title": "Taxonomy of Graphics",
+    "section": "From Five Thirty Eight:",
+    "text": "From Five Thirty Eight:\nPresident Biden’s Approval Rating"
+  },
+  {
+    "objectID": "course-materials/in-class-activies/Activity_Taxonomy_of_Graphics.html#plan-parenthood",
+    "href": "course-materials/in-class-activies/Activity_Taxonomy_of_Graphics.html#plan-parenthood",
+    "title": "Taxonomy of Graphics",
+    "section": "Plan Parenthood:",
+    "text": "Plan Parenthood:"
+  },
+  {
+    "objectID": "course-materials/in-class-activies/Activity_Taxonomy_of_Graphics.html#corrected",
+    "href": "course-materials/in-class-activies/Activity_Taxonomy_of_Graphics.html#corrected",
+    "title": "Taxonomy of Graphics",
+    "section": "Corrected",
+    "text": "Corrected"
+  },
+  {
+    "objectID": "course-materials/in-class-activies/Activity_Taxonomy_of_Graphics.html#corrected-again",
+    "href": "course-materials/in-class-activies/Activity_Taxonomy_of_Graphics.html#corrected-again",
+    "title": "Taxonomy of Graphics",
+    "section": "Corrected again",
+    "text": "Corrected again"
+  },
+  {
+    "objectID": "course-materials/in-class-activies/Activity_Taxonomy_of_Graphics.html#fox-polling",
+    "href": "course-materials/in-class-activies/Activity_Taxonomy_of_Graphics.html#fox-polling",
+    "title": "Taxonomy of Graphics",
+    "section": "Fox Polling",
+    "text": "Fox Polling"
+  },
+  {
+    "objectID": "course-materials/in-class-activies/Activity_Taxonomy_of_Graphics.html#global-warming",
+    "href": "course-materials/in-class-activies/Activity_Taxonomy_of_Graphics.html#global-warming",
+    "title": "Taxonomy of Graphics",
+    "section": "Global warming",
+    "text": "Global warming"
+  },
+  {
+    "objectID": "course-materials/in-class-activies/Activity_Taxonomy_of_Graphics.html#global-warming-2",
+    "href": "course-materials/in-class-activies/Activity_Taxonomy_of_Graphics.html#global-warming-2",
+    "title": "Taxonomy of Graphics",
+    "section": "Global warming 2",
+    "text": "Global warming 2"
+  },
+  {
+    "objectID": "course-materials/in-class-activies/Activity_Taxonomy_of_Graphics.html#global-warming-3",
+    "href": "course-materials/in-class-activies/Activity_Taxonomy_of_Graphics.html#global-warming-3",
+    "title": "Taxonomy of Graphics",
+    "section": "Global Warming 3",
+    "text": "Global Warming 3"
+  },
+  {
+    "objectID": "course-materials/in-class-activies/Activity_Taxonomy_of_Graphics.html#global-warming-4",
+    "href": "course-materials/in-class-activies/Activity_Taxonomy_of_Graphics.html#global-warming-4",
+    "title": "Taxonomy of Graphics",
+    "section": "Global Warming 4",
+    "text": "Global Warming 4\n ## Gun Deaths Florida"
+  },
+  {
+    "objectID": "course-materials/in-class-activies/Activity_Taxonomy_of_Graphics.html#citations",
+    "href": "course-materials/in-class-activies/Activity_Taxonomy_of_Graphics.html#citations",
+    "title": "Taxonomy of Graphics",
+    "section": "Citations",
+    "text": "Citations\nAll graph originated else where.\nBelow are secondary sources.\nMost the the graphs were grabed from: datapipeline\nThe last graph was grabbed from The Washington Post"
   }
 ]

@@ -1,0 +1,108 @@
+---
+title: "The Verbs"
+author: "Ben Baumer"
+format: revealjs
+editor: visual
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(fig.path = 'figures/', fig.height = 5)
+```
+
+## dplyr lives in the tidyverse
+
+![](https://raw.githubusercontent.com/tidyverse/dplyr/master/man/figures/logo.png){fig-align="center"}
+
+## `dplyr` highlights
+
+::: columns
+::: {.column width="50%"}
+The Five Verbs:
+
+-   `select()`
+
+-   `filter()`
+
+-   `mutate()`
+
+-   `arrange()`
+
+-   `summarize()`
+:::
+
+::: {.column width="50%"}
+Plus:
+
+-   `group_by()`
+
+-   `rename()`
+
+-   `inner_join()`
+
+-   `left_join()`
+:::
+:::
+
+[Read more](https://r4ds.had.co.nz/transform.html)
+
+## Philosophy
+
+-   Each *verb* takes a data frame and returns a data frame
+    -   actually a `tbl_df` (more on that later)
+    -   allows chaining with `%>%` or `|>`
+-   Idea:
+    -   master a few simple commands
+    -   use your creativity to combine them
+-   Cheat Sheet:
+    -   Resources [tab](/Resources.html)
+
+```{r, eval=FALSE, include=FALSE}
+download.file("https://github.com/rstudio/cheatsheets/raw/master/data-transformation.pdf", destfile = "/tmp/dplyr.pdf")
+```
+
+```{bash, eval=FALSE, echo=FALSE}
+pdftoppm /tmp/dplyr.pdf ../gfx/dplyr_cheatsheet -png -f 1 -singlefile
+```
+
+## What is a tibble?
+
+::: columns
+::: {.column width="50%"}
+![](http://hexb.in/hexagons/tibble.png){width="90%"}
+:::
+
+::: {.column width="50%"}
+-   object of class `tbl`
+
+-   a re-imagining of a `data.frame`
+
+-   it looks and acts like a `data.frame`
+
+-   but it's even better...
+
+-   `tidyverse` works with tibbles
+:::
+:::
+
+[footnote](https://r4ds.had.co.nz/tibbles.html)
+
+## `select()`: take a subset of the **columns**
+
+![](/images/select.png)
+
+## `filter()`: take a subset of the **rows**
+
+![](/images/filter.png)
+
+## `mutate()`: add or modify a **column**
+
+![](/images/mutate.png)
+
+## `arrange()`: sort the **rows**
+
+![](/images/arrange.png)
+
+## `summarize()`: collapse to **a single row**
+
+![](/images/summarise.png)

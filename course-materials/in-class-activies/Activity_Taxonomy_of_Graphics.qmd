@@ -75,11 +75,10 @@ Use the vocabulary from the Taxonomy of data graphics.
 
 ## Citations
 
-All graph originated else where. 
+All graph originated else where.
 
-Below are secondary sources. 
+Below are secondary sources.
 
 Most the the graphs were grabed from: [datapipeline](https://www.datapine.com/blog/misleading-statistics-and-data/)
 
 The last graph was grabbed from [The Washington Post](https://www.washingtonpost.com/news/the-fix/wp/2015/12/14/why-the-national-reviews-global-temperature-graph-is-so-misleading/)
-

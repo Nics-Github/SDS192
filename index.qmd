@@ -271,11 +271,13 @@ h1{font-weight: 400;}
 
 <!-- -   [We'll do problems 3.1 #1 and 3 in class](https://mdsr-book.github.io/mdsr2e/ch-vizII.html#datavizII-exercises) -->
 
-# Day 14 Wrangling
+# Day 15 Wrangling with Filter
 
-Reminder: Rendered Project 1 due today. 
+Wrangle sqf_2011 data together
 
-[Stop and Frisk Wrangling](/course-materials/lectures/Wrangling_1_SQF.qmd)
+[Lecture on the five verbs](course-materials/lectures/mdsr-the-verbs.qmd)
+
+Wrangle babynames?
 
 [In class MDSR Problems 1 and 2](https://mdsr-book.github.io/mdsr2e/ch-dataI.html#dataI-exercises)
 
@@ -295,6 +297,13 @@ Random_subset <- babynames %>%
 
 Read Chapter 4.1
 
+
+
+# Day 14 Wrangling
+
+Reminder: Rendered Project 1 due today. 
+
+[Stop and Frisk Wrangling](/course-materials/lectures/Wrangling_1_SQF.qmd)
 
 
 # Day 13 Project 1
