@@ -277,7 +277,16 @@ Wrangle sqf_2011 data together
 
 [Lecture on the five verbs](course-materials/lectures/mdsr-the-verbs.qmd)
 
-Wrangle babynames?
+[Wrangle babynames](/course-materials/in-class-activies/Wrangling_Baby_Names.qmd)
+
+```{r}
+#| code-fold: true
+#| echo: true
+#| eval: false
+
+install.packages("babynames")
+
+```
 
 [In class MDSR Problems 1 and 2](https://mdsr-book.github.io/mdsr2e/ch-dataI.html#dataI-exercises)
 

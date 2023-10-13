@@ -1,0 +1,46 @@
+---
+title: "Wrangle Babynamnes"
+author: "Schwab"
+editor: visual
+---
+
+## This is not a lab
+
+We will work with the five verbs to wrangle and graph babynames.
+
+You should check out the [dplyr cheatsheet](https://nics-github.github.io/SDS192/Resources.html).
+
+There are three parts to today's classwork. 
+
+-   Part 1. make a narcissistic graph
+
+-   Part 2. 5 most popular names in the US since 1880
+
+-   Part 3. Do presidents' names influence babies' names? 
+
+
+# Part 1 make a narcissistic graph
+
+## 1. Wrangle your name out of babynames
+
+You will want to `filter()` your name. I would make a vector of names c("Nic","Nicholas", "Nick")
+
+Consider if you want both the sex= M and F.
+
+## 2. Create a line graph 
+
+Show the proportion of children with the same names as you over time.
+
+# Part 2. 5 most popular names in the US since 1880
+
+Do some wrangling to tell me the five most popular names separated by sex.
+
+# Part 3. Do presidents' names influence babies' names? 
+
+Wrangle the data to show how president's first names effect newborn babies' names. [Former Presidents](https://www.whitehouse.gov/about-the-white-house/presidents/)
+
+-   Choose three recent presidents (Donald Trump and Joe Biden might be too recent).  
+
+-   Make one graph that shows all three president's names. Use `geom_vline()` to show the year they entered office.
+
+

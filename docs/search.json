@@ -334,5 +334,33 @@
     "title": "Taxonomy of Graphics",
     "section": "Citations",
     "text": "Citations\nAll graph originated else where.\nBelow are secondary sources.\nMost the the graphs were grabed from: datapipeline\nThe last graph was grabbed from The Washington Post"
+  },
+  {
+    "objectID": "course-materials/in-class-activies/Wrangling_Baby_Names.html",
+    "href": "course-materials/in-class-activies/Wrangling_Baby_Names.html",
+    "title": "Wrangle Babynamnes",
+    "section": "",
+    "text": "We will work with the five verbs to wrangle and graph babynames.\nYou should check out the dplyr cheatsheet.\nThere are three parts to today’s classwork.\n\nPart 1. make a narcissistic graph\nPart 2. 5 most popular names in the US since 1880\nPart 3. Do presidents’ names influence babies’ names?"
+  },
+  {
+    "objectID": "course-materials/in-class-activies/Wrangling_Baby_Names.html#this-is-not-a-lab",
+    "href": "course-materials/in-class-activies/Wrangling_Baby_Names.html#this-is-not-a-lab",
+    "title": "Wrangle Babynamnes",
+    "section": "",
+    "text": "We will work with the five verbs to wrangle and graph babynames.\nYou should check out the dplyr cheatsheet.\nThere are three parts to today’s classwork.\n\nPart 1. make a narcissistic graph\nPart 2. 5 most popular names in the US since 1880\nPart 3. Do presidents’ names influence babies’ names?"
+  },
+  {
+    "objectID": "course-materials/in-class-activies/Wrangling_Baby_Names.html#wrangle-your-name-out-of-babynames",
+    "href": "course-materials/in-class-activies/Wrangling_Baby_Names.html#wrangle-your-name-out-of-babynames",
+    "title": "Wrangle Babynamnes",
+    "section": "1. Wrangle your name out of babynames",
+    "text": "1. Wrangle your name out of babynames\nYou will want to filter() your name. I would make a vector of names c(“Nic”,“Nicholas”, “Nick”)\nConsider if you want both the sex= M and F."
+  },
+  {
+    "objectID": "course-materials/in-class-activies/Wrangling_Baby_Names.html#create-a-line-graph",
+    "href": "course-materials/in-class-activies/Wrangling_Baby_Names.html#create-a-line-graph",
+    "title": "Wrangle Babynamnes",
+    "section": "2. Create a line graph",
+    "text": "2. Create a line graph\nShow the proportion of children with the same names as you over time."
   }
 ]
