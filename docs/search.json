@@ -32,7 +32,7 @@
     "href": "index.html#other-things",
     "title": "SDS 192: Intro to Data Science",
     "section": "Other things",
-    "text": "Other things\n\n\n\n\n\n\nTo activate colors\n\n\n\n\n\nSome students are not getting “red” to be red. Try this: Tools menu &gt; global options &gt; code &gt; display &gt; “enable preview of named and hex colors\nIf that doesn’t work, maybe its a bug?\n\n\n\n\nthe c() function\ntyping math\nand tibbles\nggplot cheatsheet\nThe visual editor\nShort History of R"
+    "text": "Other things\n\n\n\n\n\n\nTo activate colors\n\n\n\n\n\nSome students are not getting “red” to be red. Try this: Tools menu > global options > code > display > “enable preview of named and hex colors\nIf that doesn’t work, maybe its a bug?\n\n\n\n\nthe c() function\ntyping math\nand tibbles\nggplot cheatsheet\nThe visual editor\nShort History of R"
   },
   {
     "objectID": "Resources.html#moderndive",
@@ -362,5 +362,12 @@
     "title": "Wrangle Babynamnes",
     "section": "2. Create a line graph",
     "text": "2. Create a line graph\nShow the proportion of children with the same names as you over time."
+  },
+  {
+    "objectID": "index.html#project-1",
+    "href": "index.html#project-1",
+    "title": "SDS 192: Intro to Data Science",
+    "section": "Project 1",
+    "text": "Project 1\nProject 1 Data Dictionary\nPolishing Figures\n\n\n\n\n\n\nworking directory\n\n\n\n\n\nYou may need to set your working directory.\nThe easiest way to do this is to find your Lec09-…zip in the file pane and go gear-icon > “Set As Working Directory”"
   }
 ]

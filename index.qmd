@@ -64,7 +64,7 @@ h1{font-weight: 400;}
 ```
 # Schedule
 
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTG_b6upDZcPxXB92LHYIhV1uAXgeVGaMsZ3sDRPuSQN74JdhkKhZQVjw6T68I3zsP8KGYzDSVTZW64/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false&amp;gid=0&amp;range=A1:D11
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTG_b6upDZcPxXB92LHYIhV1uAXgeVGaMsZ3sDRPuSQN74JdhkKhZQVjw6T68I3zsP8KGYzDSVTZW64/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false&amp;gid=0&amp;range=A1:D20
 " width="100%" height="400">
 
 </iframe>
@@ -271,6 +271,12 @@ h1{font-weight: 400;}
 
 <!-- -   [We'll do problems 3.1 #1 and 3 in class](https://mdsr-book.github.io/mdsr2e/ch-vizII.html#datavizII-exercises) -->
 
+# Day 16 Lab 4
+
+[Here is the link](https://classroom.github.com/a/lx2O7eFi) for Lab 4. 
+
+Lab 4 will be due Friday by midnight. 
+
 # Day 15 Wrangling with Filter
 
 Wrangle sqf_2011 data together
@@ -431,7 +437,7 @@ Let's consider how we view the code. Maybe use `glimpse()` or `head()` instead o
 Class Git [Practice](https://classroom.github.com/a/MkGODhPw) 
 
 
-# [Project 1](https://moodle.smith.edu/course/view.php?id=48189#section-2)
+## [Project 1](https://moodle.smith.edu/course/view.php?id=48189#section-2)
 
 Project 1 Data Dictionary
 
