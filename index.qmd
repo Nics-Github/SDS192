@@ -271,6 +271,26 @@ h1{font-weight: 400;}
 
 <!-- -   [We'll do problems 3.1 #1 and 3 in class](https://mdsr-book.github.io/mdsr2e/ch-vizII.html#datavizII-exercises) -->
 
+# Day 17 Wrangling Practice 
+
+[In class MDSR Problems 1 and 2](https://mdsr-book.github.io/mdsr2e/ch-dataI.html#dataI-exercises)
+
+```{r code-baby-names}
+#| code-fold: true
+#| echo: true
+#| eval: false
+
+library(tidyverse)
+library(mdsr)
+library(babynames)
+
+#This makes the Random_subset for problem 1
+Random_subset <- babynames %>%
+  filter(year=="2003" & name=="Bilal" & sex =="M" |year=="1999" & name=="Terria" & sex =="F" |year=="2010" & name=="Naziyah" & sex =="F" |year=="1989" & name=="Shawana" & sex =="F" |year=="1989" & name=="Jessi" & sex =="F" |year=="1928" & name=="Tillman" & sex =="M"|year=="1981" & name=="Leslee" & sex =="F" |year=="1981" & name=="Sherise" & sex =="F"|year=="1920" & name=="Marquerite" & sex =="F" |year=="1941" & name=="Lorraine" & sex =="M") 
+```
+
+We'll do Problems 3,5,9,(12) in class today.  
+
 # Day 16 Lab 4
 
 [Here is the link](https://classroom.github.com/a/lx2O7eFi) for Lab 4. 
@@ -295,20 +315,6 @@ install.packages("babynames")
 ```
 
 [In class MDSR Problems 1 and 2](https://mdsr-book.github.io/mdsr2e/ch-dataI.html#dataI-exercises)
-
-```{r code}
-#| code-fold: true
-#| echo: true
-#| eval: false
-
-library(tidyverse)
-library(mdsr)
-library(babynames)
-
-#This makes the Random_subset
-Random_subset <- babynames %>%
-  filter(year=="2003" & name=="Bilal" & sex =="M" |year=="1999" & name=="Terria" & sex =="F" |year=="2010" & name=="Naziyah" & sex =="F" |year=="1989" & name=="Shawana" & sex =="F" |year=="1989" & name=="Jessi" & sex =="F" |year=="1928" & name=="Tillman" & sex =="M"|year=="1981" & name=="Leslee" & sex =="F" |year=="1981" & name=="Sherise" & sex =="F"|year=="1920" & name=="Marquerite" & sex =="F" |year=="1941" & name=="Lorraine" & sex =="M") 
-```
 
 Read Chapter 4.1
 
