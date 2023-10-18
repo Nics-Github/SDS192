@@ -306,11 +306,11 @@ Open `.gitignore` and add `sqf_2011.csv` to it.
 
 :::
 
-Exploration how to join tables? 
+Exploration: how to join tables? 
 
 [Joining two tables in class exercise](https://scao53.github.io/sds192spring2023/in-class_exercises/Lec17In-classExercise-JoinTables.zip)
 
-Problems 1, 3
+[Problems 1, 3](https://mdsr-book.github.io/mdsr3e/05-joins.html#join-exercises)
 
 # Day 16 Lab 4
 
