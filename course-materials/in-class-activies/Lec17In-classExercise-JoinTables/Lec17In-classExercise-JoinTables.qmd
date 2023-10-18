@@ -1,0 +1,150 @@
+
+---
+title: "Lec 17: In-class Exercise: Join Two Tables"
+output:
+  html_document
+---
+
+```{r, include=FALSE}
+# Do not edit this code chunk
+knitr::opts_chunk$set(echo = TRUE, message=FALSE, warning = FALSE)
+```
+
+
+The `ct_school_attendance` dataset documents school attendance in 2019-2020 and 2020-2021 by Connecticut school district. Certain rows documents attendance rates for "All students", while others report the data for certain student groups including:
+
+Students experiencing homelessness
+Students with disabilities
+Students who qualify for free/reduced lunch
+English learners
+All high needs students
+Non-high needs students
+Students by race/ethnicity (Hispanic/Latino of any race, Black or African American, White, All other races)
+
+Finally, there is a series of rows in the dataset that document attendance rates for all of Connecticut. 
+
+To standardize the observations under consideration, we will start by reading in the data and filtering to rows documenting attendance rates for all students and rows not documenting attendance rates for all of Connecticut.
+
+```{r}
+library(tidyverse)
+
+ct_school_attendance <- read_csv("data/ct_school_attendance.csv") |>
+  filter(studentgroup == "All Students" & reportingdistrictname != "Connecticut") 
+```
+
+
+The `ct_school_learning_model` dataset documents information about the percentage of students engaged in remote learning during each week of the year by Connecticut school district. We will only consider the remote learning percentages in the first week of most schools' 2020-2021 school year: September 7, 2020 - September 11, 2020. 
+
+```{r}
+ct_school_learning_model <-
+  read_csv("data/ct_school_learning_model.csv")
+```
+
+# Step 1: Inner Join
+
+* Join `ct_school_attendance` by `ct_school_learning_model` with an inner join. 
+* `select()` the district code, the district name, the 2020-2021 attendance rate, and the percent of students that are fully remote in the first week of the 2020-2021 school year.
+
+```{r}
+# Write your code below
+
+```
+
+**Question**: How many rows are in the resulting table? 
+
+**Answer**:
+
+
+# Step 2a: Left Join
+
+* Copy your code above into the chunk below, and change it to a left join.
+
+```{r}
+# Paste the code below and adjust it
+
+```
+
+**Question**: How many rows are in the resulting table? 
+
+**Answer**:
+
+
+# Step 2b
+
+* Copy the code above into the chunk below, and filter to the rows where `percent_students_fully_remote` is `NA`.
+
+
+```{r}
+# Paste the code below and adjust it
+
+```
+
+**Question**: Why is there missing data in these rows?
+
+**Answer**:
+
+
+# Step 3a: Right Join
+
+* Copy your code above into the chunk below, and change it to a right join.
+
+```{r}
+# Paste the code below and adjust it
+
+```
+
+**Question**: How many rows are in the resulting table? 
+
+**Answer**:
+
+
+# Step 3b 
+
+* Copy the code above into the chunk below, and filter to the rows where `reportingdistrictname` is `NA`.
+
+```{r}
+# Paste the code below and adjust it
+
+```
+
+**Question**: Why is there missing data in these rows?
+
+**Answer**:
+
+
+# Step 4a: Full Join
+
+* Copy your code above into the chunk below, and change it to a full join.
+
+```{r}
+# Paste the code below and adjust it
+
+```
+
+**Question**: How many rows are in the resulting table? 
+
+**Answer**:
+
+
+# Step 4b 
+
+* Copy the code above into the chunk below, and filter to the rows where `reportingdistrictname` OR `percent_students_fully_remote` is `NA`.
+
+```{r}
+# Paste the code below and adjust it
+
+```
+
+**Question**: Why is there missing data in these rows?
+
+**Answer**:
+
+
+# Bonus! Is there a correlation between the percent of students fully remote in the first week of the 2020-2021 CT school year and the 2020-2021 attendance rate? Create a scatterplot to visualize this. 
+
+> Hint: You are going to have to clean up the `percent_students_fully_remote` by converting asterisks to `NA`, removing the percentage sign, converting to integer, and dividing the number by 100. 
+
+```{r}
+# Write your code below
+
+```

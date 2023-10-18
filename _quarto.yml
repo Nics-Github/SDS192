@@ -30,7 +30,7 @@ website:
     - text: Resources
       href: Resources.qmd
     - icon: book 
-      href: https://mdsr-book.github.io/mdsr2e/
+      href: https://mdsr-book.github.io/mdsr3e/
     - text: T & T
       href: https://moderndive.com/C-appendixC.html
     - icon: slack

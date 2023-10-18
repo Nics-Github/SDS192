@@ -271,7 +271,7 @@ h1{font-weight: 400;}
 
 <!-- -   [We'll do problems 3.1 #1 and 3 in class](https://mdsr-book.github.io/mdsr2e/ch-vizII.html#datavizII-exercises) -->
 
-# Day 17 Wrangling Practice 
+# Day 18 Wrangling Practice 
 
 [In class MDSR Problems 1 and 2](https://mdsr-book.github.io/mdsr2e/ch-dataI.html#dataI-exercises)
 
@@ -290,6 +290,27 @@ Random_subset <- babynames %>%
 ```
 
 We'll do Problems 3,5,9,(12) in class today.  
+
+# Day 17 Joining tables
+
+::: {.callout-tip collapse="true"}
+# lab 4 submission issues
+
+If you tried to push the `sqf_2011.csv` to github you probably got an error. 
+
+First uncommit your commit with `git reset --hard HEAD^` or `git reset --hard HEAD~2`
+
+You may need to add a `.gitignore` file. 
+
+Open `.gitignore` and add `sqf_2011.csv` to it. 
+
+:::
+
+Exploration how to join tables? 
+
+[Joining two tables in class exercise](https://scao53.github.io/sds192spring2023/in-class_exercises/Lec17In-classExercise-JoinTables.zip)
+
+Problems 1, 3
 
 # Day 16 Lab 4
 
