@@ -298,7 +298,9 @@ We'll do Problems 3,5,9,(12) in class today.
 
 If you tried to push the `sqf_2011.csv` to github you probably got an error. 
 
-First uncommit your commit with `git reset --hard HEAD^` or `git reset --hard HEAD~2`
+First save your qmd somewhere.
+
+Uncommit your commit with `git reset --hard HEAD^` or `git reset --hard HEAD~2`
 
 You may need to add a `.gitignore` file. 
 
