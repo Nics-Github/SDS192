@@ -64,9 +64,10 @@ h1{font-weight: 400;}
 ```
 # Schedule
 
+```{=html}
 <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTG_b6upDZcPxXB92LHYIhV1uAXgeVGaMsZ3sDRPuSQN74JdhkKhZQVjw6T68I3zsP8KGYzDSVTZW64/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false&amp;gid=0&amp;range=A1:D20
 " width="100%" height="400">
-
+```
 </iframe>
 
 <!-- # Day 26: Final project work. -->
@@ -271,7 +272,11 @@ h1{font-weight: 400;}
 
 <!-- -   [We'll do problems 3.1 #1 and 3 in class](https://mdsr-book.github.io/mdsr2e/ch-vizII.html#datavizII-exercises) -->
 
-# Day 18 Wrangling Practice 
+Announcement: Presentation of the major
+
+![](images/pom.png)
+
+# Day 18 Wrangling Practice
 
 [In class MDSR Problems 1 and 2](https://mdsr-book.github.io/mdsr2e/ch-dataI.html#dataI-exercises)
 
@@ -296,19 +301,18 @@ We'll do Problems [Chapter 4: 1,2,5,9,(12)](https://mdsr-book.github.io/mdsr3e/0
 ::: {.callout-tip collapse="true"}
 # lab 4 submission issues
 
-If you tried to push the `sqf_2011.csv` to github you probably got an error. 
+If you tried to push the `sqf_2011.csv` to github you probably got an error.
 
 First save your qmd somewhere.
 
 Uncommit your commit with `git reset --hard HEAD^` or `git reset --hard HEAD~2`
 
-You may need to add a `.gitignore` file. 
+You may need to add a `.gitignore` file.
 
-Open `.gitignore` and add `sqf_2011.csv` to it. 
-
+Open `.gitignore` and add `sqf_2011.csv` to it.
 :::
 
-Exploration: how to join tables? 
+Exploration: how to join tables?
 
 [Joining two tables in class exercise](https://scao53.github.io/sds192spring2023/in-class_exercises/Lec17In-classExercise-JoinTables.zip)
 
@@ -316,9 +320,9 @@ Exploration: how to join tables?
 
 # Day 16 Lab 4
 
-[Here is the link](https://classroom.github.com/a/lx2O7eFi) for Lab 4. 
+[Here is the link](https://classroom.github.com/a/lx2O7eFi) for Lab 4.
 
-Lab 4 will be due Friday by midnight. 
+Lab 4 will be due Friday by midnight.
 
 # Day 15 Wrangling with Filter
 
@@ -341,18 +345,15 @@ install.packages("babynames")
 
 Read Chapter 4.1
 
-
-
 # Day 14 Wrangling
 
-Reminder: Rendered Project 1 due today. 
+Reminder: Rendered Project 1 due today.
 
 [Stop and Frisk Wrangling](/course-materials/lectures/Wrangling_1_SQF.qmd)
 
-
 # Day 13 Project 1
 
-Today we are working on project 1. 
+Today we are working on project 1.
 
 ::: {.callout-tip collapse="true"}
 # notes on rendering
@@ -361,8 +362,7 @@ Today we are working on project 1.
 
 -   The hash-pipe `#|`
 
-  -   echo, include, execute, R markdown cheat sheet.  
-
+-   echo, include, execute, R markdown cheat sheet.
 :::
 
 ::: {.callout-tip collapse="true"}
@@ -376,24 +376,20 @@ Today we are working on project 1.
 
 -   Sometimes fast forwarding is fatal.Try Merge Commit:
 
--   In terminal: `git checkout branch-name` then
-`git merge --no-ff -m "commit name" branch-name`
-  
--   You can also try following the instructions git gives. 
+-   In terminal: `git checkout branch-name` then `git merge --no-ff -m "commit name" branch-name`
 
--   Nothing wrong with saving your code and deleting the branch. Branches are disposable. 
+-   You can also try following the instructions git gives.
 
--   You can work in a branch with lots of commmits before you push. Once you merge a pull request  delete the branch. 
+-   Nothing wrong with saving your code and deleting the branch. Branches are disposable.
 
--   Once you delete a branch on github don't work in it any more.  do: `git fetch --prune` to remove the old remote branches from rstudio.Or `git branch -d branch_name` to delete your old branch 
+-   You can work in a branch with lots of commmits before you push. Once you merge a pull request delete the branch.
 
-
-
+-   Once you delete a branch on github don't work in it any more. do: `git fetch --prune` to remove the old remote branches from rstudio.Or `git branch -d branch_name` to delete your old branch
 :::
 
 # Day 12 Project 1
 
-Today we are working on project 1. 
+Today we are working on project 1.
 
 (We will not normally have this much time to work on projects in class).
 
@@ -404,14 +400,13 @@ Today we are working on project 1.
 
 -   Consider code layout. Lots of space and arguments on different lines.
 
--   Do at least one push on the project in class today. 
+-   Do at least one push on the project in class today.
 
-  -   In general lots of little pushes. 
+-   In general lots of little pushes.
 
 -   Make your graph legible to the lay person (title, labels, source, captions).
 
--   You might realize you are sharing an API key. Consider what that means. 
-
+-   You might realize you are sharing an API key. Consider what that means.
 :::
 
 # Day 11 Github and Ethics
@@ -419,8 +414,6 @@ Today we are working on project 1.
 [Data Ethics](/course-materials/lectures/ethics.qmd)
 
 [Github Practice](/course-materials/lectures/github_practice.qmd)
-
-
 
 # Day 10 Lab 3
 
@@ -441,7 +434,7 @@ Remember geom_bar() counts whatever variable you give it for x.
 
 reorder(categorical_var, numeric variable, function for reordering)
 
-We'll discuss ethics Monday, read chapter 8. 
+We'll discuss ethics Monday, read chapter 8.
 :::
 
 # Day 9 Markdown and Github
@@ -455,16 +448,14 @@ Check comments for Lab 1. Grades on moodle shortly
 
 Due tonight by midnight.
 
-Let's clean up our lab 2 code. This will make it easier for the grader to read. 
+Let's clean up our lab 2 code. This will make it easier for the grader to read.
 
 Let's consider how we view the code. Maybe use `glimpse()` or `head()` instead of just typing `ne_county_health_2021`
-
 :::
 
 [Reading on Git and RStudio](https://r-bio.github.io/intro-git-rstudio/)
 
-Class Git [Practice](https://classroom.github.com/a/MkGODhPw) 
-
+Class Git [Practice](https://classroom.github.com/a/MkGODhPw)
 
 ## [Project 1](https://moodle.smith.edu/course/view.php?id=48189#section-2)
 
@@ -475,15 +466,14 @@ Project 1 Data Dictionary
 ::: {.callout-tip collapse="true"}
 # working directory
 
-You may need to set your working directory. 
+You may need to set your working directory.
 
-The easiest way to do this is to find your Lec09-...zip in the file pane and go gear-icon > "Set As Working Directory"
+The easiest way to do this is to find your Lec09-...zip in the file pane and go gear-icon \> "Set As Working Directory"
 :::
-
 
 # Day 8 Trend Lines and Data.Frames
 
-Announcements: No drop in Office hours on Thursday. 
+Announcements: No drop in Office hours on Thursday.
 
 [Data Fundamentals](./course-materials/lectures/Making-data-frames.qmd)
 
