@@ -289,7 +289,7 @@ Random_subset <- babynames %>%
   filter(year=="2003" & name=="Bilal" & sex =="M" |year=="1999" & name=="Terria" & sex =="F" |year=="2010" & name=="Naziyah" & sex =="F" |year=="1989" & name=="Shawana" & sex =="F" |year=="1989" & name=="Jessi" & sex =="F" |year=="1928" & name=="Tillman" & sex =="M"|year=="1981" & name=="Leslee" & sex =="F" |year=="1981" & name=="Sherise" & sex =="F"|year=="1920" & name=="Marquerite" & sex =="F" |year=="1941" & name=="Lorraine" & sex =="M") 
 ```
 
-We'll do Problems 3,5,9,(12) in class today.  
+We'll do Problems [Chapter 4: 1,2,5,9,(12)](https://mdsr-book.github.io/mdsr3e/04-dataI.html#dataI-exercises) in class today. [Chapter 5: 3,4](https://mdsr-book.github.io/mdsr3e/05-joins.html#join-exercises)
 
 # Day 17 Joining tables
 

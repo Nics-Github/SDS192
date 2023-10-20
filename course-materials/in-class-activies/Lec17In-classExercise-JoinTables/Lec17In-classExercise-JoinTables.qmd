@@ -1,4 +1,3 @@
-
 ---
 title: "Lec 17: In-class Exercise: Join Two Tables"
 output:
@@ -47,12 +46,13 @@ ct_school_learning_model <-
 
 ```{r}
 # Write your code below
-
+ct_school_attendance |>
+inner_join( ct_school_learning_model, by= c("reportingdistrictcode"="district_code") )
 ```
 
 **Question**: How many rows are in the resulting table? 
 
-**Answer**:
+**Answer**: 197
 
 
 # Step 2a: Left Join
@@ -61,12 +61,14 @@ ct_school_learning_model <-
 
 ```{r}
 # Paste the code below and adjust it
+ct_school_attendance |>
+left_join( ct_school_learning_model, by= c("reportingdistrictcode"="district_code") )
 
 ```
 
 **Question**: How many rows are in the resulting table? 
 
-**Answer**:
+**Answer**: 200
 
 
 # Step 2b
@@ -76,7 +78,9 @@ ct_school_learning_model <-
 
 ```{r}
 # Paste the code below and adjust it
-
+ct_school_attendance |>
+left_join( ct_school_learning_model, by= c("reportingdistrictcode"="district_code") ) |>
+  filter(is.na(percent_students_fully_remote))
 ```
 
 **Question**: Why is there missing data in these rows?
@@ -90,12 +94,15 @@ ct_school_learning_model <-
 
 ```{r}
 # Paste the code below and adjust it
+ct_school_attendance |>
+right_join( ct_school_learning_model, by= c("reportingdistrictcode"="district_code") ) |>
+  filter(is.na(percent_students_fully_remote))
 
 ```
 
 **Question**: How many rows are in the resulting table? 
 
-**Answer**:
+**Answer**: 5
 
 
 # Step 3b 
@@ -104,6 +111,9 @@ ct_school_learning_model <-
 
 ```{r}
 # Paste the code below and adjust it
+ct_school_attendance |>
+right_join( ct_school_learning_model, by= c("reportingdistrictcode"="district_code") ) |>
+  filter(is.na(reportingdistrictname))
 
 ```
 
