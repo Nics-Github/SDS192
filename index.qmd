@@ -100,6 +100,8 @@ planes |> inner_join(flights, by = "tailnum") |>
 
 ```
 
+[Pivots](course-materials/lectures/Day18_pivots.qmd)
+
 # Day 18 Wrangling Practice
 
 [In class MDSR Problems 1 and 2](https://mdsr-book.github.io/mdsr2e/ch-dataI.html#dataI-exercises)

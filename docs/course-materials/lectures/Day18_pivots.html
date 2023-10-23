@@ -414,8 +414,8 @@ Schwab
 <p>What do these functions do?</p>
 </section>
 
-<section id="min-pivot_longer" class="title-slide slide level1 center">
-<h1>10 min <code>pivot_longer()</code></h1>
+<section id="pivot_longer" class="title-slide slide level1 center">
+<h1><code>pivot_longer()</code></h1>
 <p>This data is not tidy how can we make it longer for computers?</p>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
@@ -430,8 +430,8 @@ Schwab
 <p>Write down how you think we could do that with <code>pivot_longer()</code></p>
 </section>
 
-<section id="min-pivot_wider" class="title-slide slide level1 center">
-<h1>10 min <code>pivot_wider()</code></h1>
+<section id="pivot_wider" class="title-slide slide level1 center">
+<h1><code>pivot_wider()</code></h1>
 <p>This data is tidy how could we make it wider for humans?</p>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
@@ -489,7 +489,7 @@ Schwab
 </div>
 </section>
 
-<section id="pivot_wider" class="title-slide slide level1 center">
+<section id="pivot_wider-1" class="title-slide slide level1 center">
 <h1><code>pivot_wider()</code></h1>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">library</span>(babynames)</span>
@@ -512,10 +512,64 @@ Schwab
 </div>
 </section>
 
+<section id="try-this-one" class="title-slide slide level1 center">
+<h1>Try this one</h1>
+<p>This table is not tidy can you make it so?</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 3
+  country         `1999`     `2000`
+  &lt;chr&gt;            &lt;dbl&gt;      &lt;dbl&gt;
+1 Afghanistan   19987071   20595360
+2 Brazil       172006362  174504898
+3 China       1272915272 1280428583</code></pre>
+</div>
+</div>
+</section>
+
+<section id="more-practice" class="title-slide slide level1 center">
+<h1>More practice</h1>
+<p>This dataframe is tidy but can you make it easier for a human to read?</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 19 × 12
+   fish  Release I80_1 Lisbon  Rstr Base_TD   BCE   BCW  BCE2  BCW2   MAE   MAW
+   &lt;fct&gt;   &lt;int&gt; &lt;int&gt;  &lt;int&gt; &lt;int&gt;   &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt;
+ 1 4842        1     1      1     1       1     1     1     1     1     1     1
+ 2 4843        1     1      1     1       1     1     1     1     1     1     1
+ 3 4844        1     1      1     1       1     1     1     1     1     1     1
+ 4 4845        1     1      1     1       1    NA    NA    NA    NA    NA    NA
+ 5 4847        1     1      1    NA      NA    NA    NA    NA    NA    NA    NA
+ 6 4848        1     1      1     1      NA    NA    NA    NA    NA    NA    NA
+ 7 4849        1     1     NA    NA      NA    NA    NA    NA    NA    NA    NA
+ 8 4850        1     1     NA     1       1     1     1    NA    NA    NA    NA
+ 9 4851        1     1     NA    NA      NA    NA    NA    NA    NA    NA    NA
+10 4854        1     1     NA    NA      NA    NA    NA    NA    NA    NA    NA
+11 4855        1     1      1     1       1    NA    NA    NA    NA    NA    NA
+12 4857        1     1      1     1       1     1     1     1     1    NA    NA
+13 4858        1     1      1     1       1     1     1     1     1     1     1
+14 4859        1     1      1     1       1    NA    NA    NA    NA    NA    NA
+15 4861        1     1      1     1       1     1     1     1     1     1     1
+16 4862        1     1      1     1       1     1     1     1     1    NA    NA
+17 4863        1     1     NA    NA      NA    NA    NA    NA    NA    NA    NA
+18 4864        1     1     NA    NA      NA    NA    NA    NA    NA    NA    NA
+19 4865        1     1      1    NA      NA    NA    NA    NA    NA    NA    NA</code></pre>
+</div>
+</div>
+</section>
+
+<section id="one-more" class="title-slide slide level1 center">
+<h1>One more</h1>
+<p><code>world_bank_pop</code> is loaded with the tidyverse. Make it tidy. Use <code>all.csv</code> to add the country names.</p>
+<p>You can download the country codes here:</p>
+<p><a href="https://github.com/Nics-Github/SDS192/blob/main/docs/course-materials/lectures/data/countrycodes.csv">https://github.com/Nics-Github/SDS192/blob/main/docs/course-materials/lectures/data/countrycodes.csv</a> Put them in the same folder as your rproject file you are currently working in.</p>
+<p>They are also available in other places.</p>
+</section>
+
 <section id="further-reading" class="title-slide slide level1 center">
 <h1>Further Reading</h1>
+<p><a href="https://mdsr-book.github.io/mdsr3e/06-dataII.html">Read Chapter 6.</a></p>
 <p>[Futher reading on tidy data](https://r4ds.had.co.nz/tidy-data.html)</p>
-<p>[H]</p>
 
 <div class="footer footer-default">
 

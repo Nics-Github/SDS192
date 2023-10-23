@@ -27,7 +27,7 @@ library(googlesheets4)
 
 What do these functions do?
 
-# 10 min `pivot_longer()`
+# `pivot_longer()`
 
 This data is not tidy how can we make it longer for computers?
 
@@ -50,7 +50,7 @@ hiv
 
 Write down how you think we could do that with `pivot_longer()`
 
-# 10 min `pivot_wider()`
+# `pivot_wider()`
 
 This data is tidy how could we make it wider for humans?
 
@@ -90,6 +90,7 @@ hiv <- read_sheet(hiv_key) |>
   unnest(cols = c(`2009`)) |>
   mutate(across(matches("[0-9]"), as.double))
 hiv
+
 ```
 
 # `pivot_wider()`
@@ -103,8 +104,39 @@ babynames |>
      summarize(total = sum(n))
 ```
 
+# Try this one
+
+This table is not tidy can you make it so?
+
+```{r}
+#|echo: true
+#|
+table4b 
+```
+
+# More practice
+
+This dataframe is tidy but can you make it easier for a human to read?
+
+```{r}
+fish_encounters |>
+  pivot_wider(names_from = station,values_from = "seen")
+```
+# One more  
+
+`world_bank_pop` is loaded with the tidyverse. Make it tidy. Use `all.csv` to add the country names. 
+
+You can download the country codes here: 
+
+[https://github.com/Nics-Github/SDS192/blob/main/docs/course-materials/lectures/data/countrycodes.csv](https://github.com/Nics-Github/SDS192/blob/main/docs/course-materials/lectures/data/countrycodes.csv) Put them in the same folder as your rproject file you are currently working in. 
+
+They are also available in other places. 
+
 # Further Reading
+
+[Read Chapter 6.](https://mdsr-book.github.io/mdsr3e/06-dataII.html) 
 
 \[Futher reading on tidy data\](https://r4ds.had.co.nz/tidy-data.html)
 
-\[H\]
+
+
