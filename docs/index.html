@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Nicholas Schwab">
-<meta name="dcterms.date" content="2023-10-20">
+<meta name="dcterms.date" content="2023-10-23">
 
 <title>SDS 192 Fall ’23 - SDS 192: Intro to Data Science</title>
 <style>
@@ -174,6 +174,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul>
   <li><a href="#schedule" id="toc-schedule" class="nav-link active" data-scroll-target="#schedule">Schedule</a></li>
+  <li><a href="#day-19-tidy-data" id="toc-day-19-tidy-data" class="nav-link" data-scroll-target="#day-19-tidy-data">Day 19 Tidy Data</a></li>
   <li><a href="#day-18-wrangling-practice" id="toc-day-18-wrangling-practice" class="nav-link" data-scroll-target="#day-18-wrangling-practice">Day 18 Wrangling Practice</a></li>
   <li><a href="#day-17-joining-tables" id="toc-day-17-joining-tables" class="nav-link" data-scroll-target="#day-17-joining-tables">Day 17 Joining tables</a></li>
   <li><a href="#day-16-lab-4" id="toc-day-16-lab-4" class="nav-link" data-scroll-target="#day-16-lab-4">Day 16 Lab 4</a></li>
@@ -221,7 +222,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">October 20, 2023</p>
+      <p class="date">October 23, 2023</p>
     </div>
   </div>
   
@@ -242,109 +243,41 @@ h1{font-weight: 400;}
 <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTG_b6upDZcPxXB92LHYIhV1uAXgeVGaMsZ3sDRPuSQN74JdhkKhZQVjw6T68I3zsP8KGYzDSVTZW64/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false&amp;gid=0&amp;range=A1:D20
 " width="100%" height="400">
 </iframe>
-<!-- # Day 26: Final project work. -->
-<!-- Just working the final project today.  -->
-<!-- # Day 25: More maps with leaflet.  -->
-<!-- UMass $10,000 dollar/year scholarship to study Informatics, let me know if you want more info. -->
-<!-- -   more maps -->
-<!-- -   provider tiles -->
-<!-- -   slides  -->
-<!-- [Final Project](./course-materials/project-instructions/final-project.html) due Tuesday Dec 20 at midnight. Presentation of project is Wednesday Dec 21 at 10:30am.  -->
-<!-- # Day 24: Maps with ggplot2 and leaflet.  -->
-<!-- We'll be working from [this site](./course-materials/lectures/maps-ggplot.html) today.  -->
-<!-- # Day 23: SQL Project Day  -->
-<!-- Time to work on Project 3 -->
-<!-- # Day 22: More SQL  -->
-<!-- -   Review problems 1,2,3 and 5 from chapter 15 -->
-<!-- -   Short Lecture?  -->
-<!-- -   [Project 3](./course-materials/project-instructions/project-3/project3.html) -->
-<!-- # Day 21: Intro to SQL and dbplyr() -->
-<!-- -   [Example](./course-materials/lectures/SQL-example-yelp.html) -->
-<!-- -   Try Problems 1,2,3 and 5 from chapter 15 with dbplyr and SQL -->
-<!-- -   A [Cheatsheet](https://s3.amazonaws.com/assets.datacamp.com/email/other/SQL+for+Data+Science.pdf) and here's [another one](https://intellipaat.com/blog/wp-content/uploads/2022/10/SQL-Commands-Cheat-Sheet-2022.jpg) -->
-<!-- # Day 20: Scraping Data -->
-<!-- -   Discuss Pivot Practice. -->
-<!-- -   [Scraping from website example](./course-materials/lectures/scrape-data.html)  -->
-<!-- -   MDSR Chapter 6 Problem 3 and 4 for homework 6 due Monday. -->
-<!-- # Day 19: Tidy Data Pivot Practice -->
-<!-- [Just Pivot practice with this assignment](https://github.com/MTH190/Pivot_practice) -->
-<!-- Clone the assignment by visiting the link above.  -->
-<!-- # Day 18: Tidy Data -->
-<!-- -   45 minutes on tidy data with [hw-05](https://github.com/MTH190/hw-05) -->
-<!-- -   30 minutes on project  -->
-<!-- -   No class on Friday Nov 11th or Nov 23rd -->
-<!-- # Day 17: Continue working on Project 2 -->
-<!-- -   Comment your data with `#` -->
-<!-- -   Use pull to save data to avoid retyping.  -->
-<!-- -   I'll continue to check slack and github to give feedback. -->
-<!-- # Day 16: Project 2 -->
-<!-- Github: -->
-<!-- -   Together: Push to github HW-03, HW-04, and Project-1. -->
-<!-- Remember: -->
-<!-- -   **pull** new changes -->
-<!-- -   make edits on your computer -->
-<!-- -   **commit** your local changes -->
-<!--     -   this step may be repeated -->
-<!-- -   **pull** again to avoid merge conflicts -->
-<!-- -   **push** your commit(s) to GitHub -->
-<!-- [FEC Data Lecture](./course-materials/lectures/mdsr-wrangling-fec20.html) -->
-<!-- [Project 2](./course-materials/project-instructions/project-2/project-2-fec-20.html) -->
-<!-- Project 2 teams: -->
-<!-- -   Ajani, Ida, Magdalena -->
-<!-- -   James & Kathrine -->
-<!-- # Day 15: Work on HW 4. -->
-<!-- Questions on HW 4 -->
-<!-- Point out the tidyverse [Coding Style Guide](https://style.tidyverse.org/) -->
-<!-- -   [Files](https://style.tidyverse.org/files.html) -->
-<!-- -   [Syntax](https://style.tidyverse.org/syntax.html) -->
-<!-- -   [Pipes](https://style.tidyverse.org/pipes.html) -->
-<!-- -   [ggplot2](https://style.tidyverse.org/ggplot2.html) -->
-<!-- Practice: Merge Conflicts with github together -->
-<!-- In preparation for Project 2: `install.packages("remotes")` `remotes::install_github("baumer-lab/fec20")` -->
-<!-- # Day 14: Ok Really Start HW 4 -->
-<!-- Discuss Problems 1 and 3 from Chapter 5 -->
-<!-- Start work on HW 4 -->
-<!-- [Problem 3 solution](./MY-MDSR-SOLUTIONS/Chapter%205%20Problems/Chapter%205%20Problems/Problem-3-new.html) -->
-<!-- # Day 13: More Practice -->
-<!-- Push HW 3 to Github -->
-<!-- Discuss Problems 1 and 3 from Chapter 5 -->
-<!-- # Day 12: Joins -->
-<!-- ## [The Joins](./course-materials/lectures/mdsr-the-joins.html) -->
-<!-- Try [Chapter 5 problems 1, 3 and 4](https://mdsr-book.github.io/mdsr2e/ch-join.html#join-exercises) start in class continue for homework we'll discuss Friday -->
-<!-- # Day 11: Project 1 workday and group_by() -->
-<!-- ## [group_by() (and rename)](./course-materials/lectures/mdsr-group_by-and-rename.html) -->
-<!-- ## Project_time -->
-<!-- # Day 10: Project 1 -->
-<!-- Discuss exercises 1,2,3,5 and 6 from chapter 4. -->
-<!-- ## On Coding -->
-<!-- [learning to code](./course-materials/lectures/mdsr-learning-to-code.html) -->
-<!-- ## Project 1 -->
-<!-- Copy it from github. [Here's the outline](./course-materials/project-instructions/project-1/project-1-hcc-data-outline.html) -->
-<!-- # Day 9: The verbs -->
-<!-- [The Verbs](./docs/course-materials/lectures/mdsr-the-verbs.html) [The Verbs](./course-materials/lectures/mdsr-the-verbs.html) -->
-<!-- Discuss exercises 1,2,3 from chapter 4. -->
-<!-- Problem 5 and 6 for Classwork -->
-<!-- [Chapter 3: Problem 3 and 7](https://mdsr-book.github.io/mdsr2e/ch-vizII.html#datavizII-exercises) -->
-<!-- # Day 8: Class is cancelled but... -->
-<!-- ## I expect you to do the reading and try problem 1,2, and 3 from chapter 4. -->
-<!-- I made you the dataframe for exercise 4.4 number 1 so you can play with the code. You can copy it from [here.](./course-materials/in-class-activities/chapter-4-problem-1.html) We'll discuss this problem, number 2 and also 3 on Friday. -->
-<!-- # Day 7: Discuss Homework -->
-<!-- ## Go over interesting bits from the homework: -->
-<!-- -   HW2 -->
-<!--     -   load(), inline code, nrow()\ -->
-<!--     -   question 4 and 5 -->
-<!-- -   HW3 -->
-<!--     -   brief analysis of code -->
-<!--     -   stuck anywhere? -->
-<!-- ### Practice: -->
-<!-- [Chapter 3: Problem 3 and 7](https://mdsr-book.github.io/mdsr2e/ch-vizII.html#datavizII-exercises) -->
-<!-- # Day 6: Color and Grammar of Graphics -->
-<!-- ## [Color lecture](./course-materials/lectures/mdsr_color.html) -->
-<!-- ## [Grammar of graphics](./course-materials/lectures/mdsr-grammar-of-graphics.html) -->
-<!-- ## Activity -->
-<!-- -   [We'll do problems 3.1 #1 and 3 in class](https://mdsr-book.github.io/mdsr2e/ch-vizII.html#datavizII-exercises) -->
 <p>Announcement: Presentation of the major</p>
 <p><img src="images/pom.png" class="img-fluid"></p>
+</section>
+<section id="day-19-tidy-data" class="level1">
+<h1>Day 19 Tidy Data</h1>
+<p>Chapter 5 problem 4 solutions</p>
+<section id="a-the-oldest-plane-to-fly-from-nyc-is-a-douglas-with-tailnum" class="level4">
+<h4 class="anchored" data-anchor-id="a-the-oldest-plane-to-fly-from-nyc-is-a-douglas-with-tailnum">4a The oldest plane to fly from NYC is a Douglas with tailnum:</h4>
+<div class="cell">
+<div class="cell-output-display">
+<div class="kable-table">
+<table class="table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: left;">tailnum</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">N381AA</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<section id="b-the-number-of-planes-included-in-planes-that-flew-from-nyc-is" class="level4">
+<h4 class="anchored" data-anchor-id="b-the-number-of-planes-included-in-planes-that-flew-from-nyc-is">4b The number of planes included in planes that flew from NYC is:</h4>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 3322</code></pre>
+</div>
+</div>
+</section>
 </section>
 <section id="day-18-wrangling-practice" class="level1">
 <h1>Day 18 Wrangling Practice</h1>
@@ -352,13 +285,11 @@ h1{font-weight: 400;}
 <div class="cell">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(mdsr)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(babynames)</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">#This makes the Random_subset for problem 1</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>Random_subset <span class="ot">&lt;-</span> babynames <span class="sc">%&gt;%</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(year<span class="sc">==</span><span class="st">"2003"</span> <span class="sc">&amp;</span> name<span class="sc">==</span><span class="st">"Bilal"</span> <span class="sc">&amp;</span> sex <span class="sc">==</span><span class="st">"M"</span> <span class="sc">|</span>year<span class="sc">==</span><span class="st">"1999"</span> <span class="sc">&amp;</span> name<span class="sc">==</span><span class="st">"Terria"</span> <span class="sc">&amp;</span> sex <span class="sc">==</span><span class="st">"F"</span> <span class="sc">|</span>year<span class="sc">==</span><span class="st">"2010"</span> <span class="sc">&amp;</span> name<span class="sc">==</span><span class="st">"Naziyah"</span> <span class="sc">&amp;</span> sex <span class="sc">==</span><span class="st">"F"</span> <span class="sc">|</span>year<span class="sc">==</span><span class="st">"1989"</span> <span class="sc">&amp;</span> name<span class="sc">==</span><span class="st">"Shawana"</span> <span class="sc">&amp;</span> sex <span class="sc">==</span><span class="st">"F"</span> <span class="sc">|</span>year<span class="sc">==</span><span class="st">"1989"</span> <span class="sc">&amp;</span> name<span class="sc">==</span><span class="st">"Jessi"</span> <span class="sc">&amp;</span> sex <span class="sc">==</span><span class="st">"F"</span> <span class="sc">|</span>year<span class="sc">==</span><span class="st">"1928"</span> <span class="sc">&amp;</span> name<span class="sc">==</span><span class="st">"Tillman"</span> <span class="sc">&amp;</span> sex <span class="sc">==</span><span class="st">"M"</span><span class="sc">|</span>year<span class="sc">==</span><span class="st">"1981"</span> <span class="sc">&amp;</span> name<span class="sc">==</span><span class="st">"Leslee"</span> <span class="sc">&amp;</span> sex <span class="sc">==</span><span class="st">"F"</span> <span class="sc">|</span>year<span class="sc">==</span><span class="st">"1981"</span> <span class="sc">&amp;</span> name<span class="sc">==</span><span class="st">"Sherise"</span> <span class="sc">&amp;</span> sex <span class="sc">==</span><span class="st">"F"</span><span class="sc">|</span>year<span class="sc">==</span><span class="st">"1920"</span> <span class="sc">&amp;</span> name<span class="sc">==</span><span class="st">"Marquerite"</span> <span class="sc">&amp;</span> sex <span class="sc">==</span><span class="st">"F"</span> <span class="sc">|</span>year<span class="sc">==</span><span class="st">"1941"</span> <span class="sc">&amp;</span> name<span class="sc">==</span><span class="st">"Lorraine"</span> <span class="sc">&amp;</span> sex <span class="sc">==</span><span class="st">"M"</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(babynames)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co">#This makes the Random_subset for problem 1</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>Random_subset <span class="ot">&lt;-</span> babynames <span class="sc">%&gt;%</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(year<span class="sc">==</span><span class="st">"2003"</span> <span class="sc">&amp;</span> name<span class="sc">==</span><span class="st">"Bilal"</span> <span class="sc">&amp;</span> sex <span class="sc">==</span><span class="st">"M"</span> <span class="sc">|</span>year<span class="sc">==</span><span class="st">"1999"</span> <span class="sc">&amp;</span> name<span class="sc">==</span><span class="st">"Terria"</span> <span class="sc">&amp;</span> sex <span class="sc">==</span><span class="st">"F"</span> <span class="sc">|</span>year<span class="sc">==</span><span class="st">"2010"</span> <span class="sc">&amp;</span> name<span class="sc">==</span><span class="st">"Naziyah"</span> <span class="sc">&amp;</span> sex <span class="sc">==</span><span class="st">"F"</span> <span class="sc">|</span>year<span class="sc">==</span><span class="st">"1989"</span> <span class="sc">&amp;</span> name<span class="sc">==</span><span class="st">"Shawana"</span> <span class="sc">&amp;</span> sex <span class="sc">==</span><span class="st">"F"</span> <span class="sc">|</span>year<span class="sc">==</span><span class="st">"1989"</span> <span class="sc">&amp;</span> name<span class="sc">==</span><span class="st">"Jessi"</span> <span class="sc">&amp;</span> sex <span class="sc">==</span><span class="st">"F"</span> <span class="sc">|</span>year<span class="sc">==</span><span class="st">"1928"</span> <span class="sc">&amp;</span> name<span class="sc">==</span><span class="st">"Tillman"</span> <span class="sc">&amp;</span> sex <span class="sc">==</span><span class="st">"M"</span><span class="sc">|</span>year<span class="sc">==</span><span class="st">"1981"</span> <span class="sc">&amp;</span> name<span class="sc">==</span><span class="st">"Leslee"</span> <span class="sc">&amp;</span> sex <span class="sc">==</span><span class="st">"F"</span> <span class="sc">|</span>year<span class="sc">==</span><span class="st">"1981"</span> <span class="sc">&amp;</span> name<span class="sc">==</span><span class="st">"Sherise"</span> <span class="sc">&amp;</span> sex <span class="sc">==</span><span class="st">"F"</span><span class="sc">|</span>year<span class="sc">==</span><span class="st">"1920"</span> <span class="sc">&amp;</span> name<span class="sc">==</span><span class="st">"Marquerite"</span> <span class="sc">&amp;</span> sex <span class="sc">==</span><span class="st">"F"</span> <span class="sc">|</span>year<span class="sc">==</span><span class="st">"1941"</span> <span class="sc">&amp;</span> name<span class="sc">==</span><span class="st">"Lorraine"</span> <span class="sc">&amp;</span> sex <span class="sc">==</span><span class="st">"M"</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <p>We’ll do Problems <a href="https://mdsr-book.github.io/mdsr3e/04-dataI.html#dataI-exercises">Chapter 4: 1,2,5,9,(12)</a> in class today. <a href="https://mdsr-book.github.io/mdsr3e/05-joins.html#join-exercises">Chapter 5: 3,4</a></p>
@@ -402,7 +333,7 @@ lab 4 submission issues
 <div class="cell">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"babynames"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"babynames"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <p><a href="https://mdsr-book.github.io/mdsr2e/ch-dataI.html#dataI-exercises">In class MDSR Problems 1 and 2</a></p>
