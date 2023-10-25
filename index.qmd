@@ -70,7 +70,7 @@ Announcement: Presentation of the major
 
 Warm up: table2
 
-[](course-materials/lectures/Day_20_tidying.qmd)
+[Cleaning Data](course-materials/lectures/Day_20_tidying.qmd)
 
 Let's clean up `billboard`
 
