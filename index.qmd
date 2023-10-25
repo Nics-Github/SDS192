@@ -66,6 +66,14 @@ Announcement: Presentation of the major
 
 ![](images/pom.png)
 
+# Day 20 Cleaning
+
+Warm up: table2
+
+[](course-materials/lectures/Day_20_tidying.qmd)
+
+Let's clean up `billboard`
+
 # Day 19 Tidy Data
 
 Chapter 5 problem 4 solutions

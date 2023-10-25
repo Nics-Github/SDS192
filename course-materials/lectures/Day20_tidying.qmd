@@ -1,0 +1,206 @@
+---
+title: "Cleaning Data"
+author: "Schwab"
+format: revealjs
+editor: visual
+execute: 
+  echo: true
+---
+
+# Data is Messy.
+
+We have to clean other people's data.
+
+# Lubridate
+
+Cleans dates for us. [cheat-sheet](https://rstudio.github.io/cheatsheets/html/lubridate.html?_gl=1*xfzpf5*_ga*MTY5NTk3OTI4Mi4xNjk0NTM1MDIy*_ga_2C0WZ1JHG0*MTY5ODE1OTY1NS43LjAuMTY5ODE1OTY1NS4wLjAuMA..)
+
+`ymd()`,`mdy()`
+
+```{r}
+
+library(tidyverse)
+library(lubridate)
+
+head(lakers$date,3)
+```
+
+# `lakers$date`
+
+```{r}
+typeof(lakers$date)
+```
+
+```{r}
+#This makes no sense
+sum(lakers$date)
+```
+
+```{r}
+# Let's make this into a time object.
+lakers$date <-ymd(lakers$date)
+typeof(lakers$date)
+
+```
+
+# Now they are dates
+
+```{r}
+
+lakers_date <- lakers |>
+  select(date)
+head(lakers_date, 3)
+```
+
+# Add time
+
+```{r}
+lakers$date[1]
+lakers$date[1] + days(x=12)
+```
+
+# You try: 
+
+How would we make the time column into a time not a
+
+```{r}
+typeof(lakers$time)
+```
+
+# Tidyr
+
+[cheatsheet](https://rstudio.github.io/cheatsheets/html/tidyr.html?_gl=1*1x5ka6y*_ga*MTY5NTk3OTI4Mi4xNjk0NTM1MDIy*_ga_2C0WZ1JHG0*MTY5ODE1OTY1NS43LjAuMTY5ODE1OTY1NS4wLjAuMA..)
+
+```{r}
+lakers_date <- lakers |>
+  select(date)
+head(lakers_date, 3)
+```
+
+# separate dates
+
+Formally `separate()` but is now `separate_wider_delim().`
+
+```{r}
+lakers_date |>
+  separate_wider_delim(
+    cols = date, 
+    delim = "-", 
+    names = c("year","month","day") )    |>
+  head(3)
+```
+
+# More Separate
+
+You can use
+
+-   `separate_wider_position()`
+
+-   `separate_wider_regex()`
+
+```{r}
+lakers_date |>
+  separate_wider_position(cols = "date", widths = c(year=4,1,month=2,1,day=2)
+                          )|>
+  head(3)
+
+```
+
+# Unite
+
+You can also `unite()` columns into a new column.
+
+See cheat sheet.
+
+# Oh the NAs
+
+-   You can throw out rows NAs with `drop_na()`
+
+-   You can use `fill()` to overwrite them with previous values
+
+-   `replace_na()` to specify a replacement.
+
+```{r}
+lakers_types <- lakers |>
+  select(type,x,y)
+lakers_types 
+```
+
+# `drop_na()`
+
+Caution! This drops all rows with na. You may want to use a `filter()` instead
+
+```{r}
+lakers_types |>
+  drop_na() |>
+  head(3)
+
+```
+
+# Setting NA
+
+```{r}
+library(openintro)
+
+yrbss <- yrbss |>
+  mutate(text_while_driving_30d = na_if(text_while_driving_30d, "did not drive" ))
+glimpse(yrbss)
+```
+
+# You try
+
+Set "did not ride" to NA for the `helment_12m` variable.
+
+# `str_replace()`
+
+You can replace strings within columns.
+
+Consider: the `hours_tv_per_day` variable from yrbss:
+
+```{r}
+head(yrbss$hours_tv_per_school_day)
+```
+
+We probably want to get rid of the `+` symbols in the DF.
+
+```{r}
+str_replace(string = yrbss$hours_tv_per_school_day,
+            #Note that the plus is special so we must escapse it
+            pattern = "\\+",
+            replacement = ""
+            )
+```
+
+# Remove multiple strings
+
+```{r}
+yrbss$hours_tv_per_school_day<- str_replace_all(
+  string = yrbss$hours_tv_per_school_day,
+  pattern = c(
+    "\\+" = "" , 
+    "\\<" = "",
+    "do not watch" = NA_character_)
+)
+```
+
+```{r}
+glimpse(yrbss)
+
+yrbss$hours_tv_per_school_day <- as.numeric(yrbss$hours_tv_per_school_day)
+
+glimpse(yrbss)
+```
+
+# Summary
+
+New functions:
+
+| function               | what is does                         |
+|------------------------|--------------------------------------|
+| ymd(), mdy(),...       | function to change levels into dates |
+| drop_na()              | remove entire rows with nas          |
+| separate_wider_delim() | separates cells by a delimiter       |
+| str_replace()          | changes one string                   |
+| str_replace_all()      | replaces many strings                |
+
+# 
