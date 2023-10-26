@@ -64,7 +64,11 @@ h1{font-weight: 400;}
 
 Announcement: Presentation of the major
 
-![](images/pom.png)
+<!-- ![](images/pom.png) -->
+
+# Day 21 Lab 5 Cleaning
+
+You can find lab 5 by way of [moodle](https://moodle.smith.edu/). 
 
 # Day 20 Cleaning
 
@@ -153,7 +157,7 @@ Exploration: how to join tables?
 
 # Day 16 Lab 4
 
-[Here is the link](https://classroom.github.com/a/lx2O7eFi) for Lab 4.
+[Here is the link](https://moodle.smith.edu/) for Lab 4.
 
 Lab 4 will be due Friday by midnight.
 

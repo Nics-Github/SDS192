@@ -59,7 +59,7 @@ lakers$date[1]
 lakers$date[1] + days(x=12)
 ```
 
-# You try: 
+# You try:
 
 How would we make the time column into a time not a
 
