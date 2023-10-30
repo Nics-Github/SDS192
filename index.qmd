@@ -66,6 +66,14 @@ Announcement: Presentation of the major
 
 <!-- ![](images/pom.png) -->
 
+# Day 22 Project 2 
+
+Reminder lab-5 is due Wednesday. 
+
+[Introduce Project 2](https://moodle.smith.edu/)
+
+Time to get familiar with `fec20`
+
 # Day 21 Lab 5 Cleaning
 
 You can find lab 5 by way of [moodle](https://moodle.smith.edu/). 
