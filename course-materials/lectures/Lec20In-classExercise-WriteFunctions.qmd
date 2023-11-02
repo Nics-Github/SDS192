@@ -1,0 +1,101 @@
+
+---
+title: "Lec 20: In-class Exercise: Write Functions"
+output:
+  html_document
+---
+
+```{r, include=FALSE}
+# Do not edit this code chunk
+knitr::opts_chunk$set(echo = TRUE, message=FALSE, warning = FALSE)
+```
+
+# Datasets
+
+We will use the `babynames` dataset and the `congress_age` dataset included in the `fivethirtyeight` package we used in Lab 4.
+
+The `babynames` dataset contains for each year from 1880 to 2017 the number of children of each sex given each name (as recorded by the US Social Security Administration). All names with more than 5 uses are given.
+
+The `congress_age` dataset contains the age of members of the United States congress over the years.
+
+# User-defined Functions
+
+```{r}
+library(tidyverse)
+library(babynames)
+
+view(babynames)
+```
+
+## Exercise 1
+
+Write a function called `count_name` that, when given a name (e.g.,`Angelica`, `Ezekiel`, or `Riley`) as an argument, returns the total number of births by year from the `babynames` data frame in the `babynames` package that match that name. 
+
+```{r}
+# Write your code below
+count_name <- function(nombre = "Nicholas"){
+  a<- babynames |>
+    filter(name ==  {{nombre}} ) |>
+    group_by(name,year) |>
+    summarise(year= year, n = sum(n)) |>
+    unique() 
+  
+  stopifnot( nrow(a) > 1 )
+  return(a)
+}
+count_name()
+```
+
+## Bonus!
+
+The `count_name` function should return one row per year that matches (and generate an error message if there are no matches). Run the function once with the argument `Ezekiel` and once with `Ezze`.
+
+```{r}
+# Paste the code from Exercise 1 below and adjust it
+count_name("Ezze")
+
+```
+
+## Exercise 2
+
+Write a function called `grab_name` that, when given a name and a year as an argument, returns the rows from the `babynames` data frame in the `babynames` package that match that name for that year (and returns an error if that name and year combination does not match any rows). Run the function once with the arguments `Ezekiel` and `1883` and once with `Ezekiel` and `1983`.
+
+```{r}
+# Write your code below
+grab_name <- function(nombre ="Nicholas",ano = 1984){
+  a <- babynames |>
+    filter(name == {{nombre}} & year == {{ano}}) |>
+    pull(name,year)
+  stopifnot(nrow(a) > 0 )
+  return(a)
+}
+grab_name(nombre = "Ezze", ano = 1883)
+```
+
+# Writing Functions to Create Plots
+
+## Exercise 3
+
+Write a function called `linegraph` that will plot a basic line graph with a color legend and a facet. Run the function with the `babynames_riley_casey` data we used in Lab 4 Part a) and to re-create the line graph in Lab 4 Part b).
+
+```{r}
+# Write your code below
+grab_name()
+```
+
+# Generalizing Functions for Data Frames
+
+```{r}
+library(fivethirtyeight)
+
+view(congress_age)
+```
+
+## Exercise 4
+
+Write a function called `summary_prop` that will take a data frame as an argument, filter to a condition, and compute the proportion of that condition. Run the function with the arguments `congress_age` and `age >= 25 & age <= 55` (Lab 4 Step 7).
+
+```{r}
+# Write your code below
+
+```

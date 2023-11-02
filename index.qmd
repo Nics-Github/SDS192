@@ -62,11 +62,10 @@ h1{font-weight: 400;}
 ```
 </iframe>
 
-Announcement: Presentation of the major
 
-<!-- ![](images/pom.png) -->
+# Day 24 Project 2
 
-# Day 23 Iteration in R
+# Day 23 Project 2
 
 # Day 22 Project 2 
 

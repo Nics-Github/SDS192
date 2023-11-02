@@ -1,0 +1,63 @@
+---
+title: "Making Functions practice"
+author: "Schwab"
+
+editor: visual
+---
+
+Making functions
+
+# This function will add
+
+```{r}
+adding <- function(x,y){
+  total <- sum(c(x,y))
+  return(total)
+}
+```
+
+# Filtering a lot
+
+```{r}
+auto_filter <- function(data, variable, value){
+  library(tidyverse)
+  data |>
+    filter({{variable}} == value)
+}
+```
+
+```{r}
+auto_filter(data=mtcars, variable = am, value = 0 )
+```
+
+```{r}
+auto_filter_defaults <- function(data = mtcars, variable = am, value = 1){
+  library(tidyverse)
+  data |>
+    filter({{variable}} == value)
+}
+```
+
+```{r}
+auto_filter_defaults()
+
+```
+
+```{r}
+auto_filter_defaults(variable = vs, value= 0)
+
+```
+
+`stopifnot()`
+
+```{r}
+load_libraries <- function(){
+  library(tidyverse)
+  library(janitor)
+  library(stringr)
+  library()
+}
+
+```
+
+## 
