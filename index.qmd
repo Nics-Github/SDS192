@@ -62,6 +62,11 @@ h1{font-weight: 400;}
 ```
 </iframe>
 
+# Day 25 Function Writing
+
+[lecture]()
+
+[in class activity](./course-materials/in-class-activies/day_25_writing_functions.qmd)
 
 # Day 24 Project 2
 

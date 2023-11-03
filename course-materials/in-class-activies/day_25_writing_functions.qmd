@@ -1,0 +1,94 @@
+
+---
+title: "writing functions"
+author: "Schwab"
+editor: visual
+---
+
+Note: Some of this material was lifter from Shiya Cao's Lec 20 file [here](https://scao53.github.io/sds192spring2023/in-class_exercises/Lec20In-classExercise-WriteFunctions.qmd). 
+
+```{r, include=FALSE}
+# Do not edit this code chunk
+knitr::opts_chunk$set(echo = TRUE, message=FALSE, warning = FALSE)
+```
+
+# Datasets
+
+We will use the `babynames` dataset and the `congress_age` dataset included in the `fivethirtyeight` package we used in Lab 4.
+
+The `babynames` dataset contains for each year from 1880 to 2017 the number of children of each sex given each name (as recorded by the US Social Security Administration). All names with more than 5 uses are given.
+
+The `congress_age` dataset contains the age of members of the United States congress over the years.
+
+# User-defined Functions
+
+```{r}
+library(tidyverse)
+library(babynames)
+
+view(babynames)
+```
+
+## Exercise 1
+
+Write a function called `count_name` that, when given a name (e.g.,`Angelica`, `Ezekiel`, or `Riley`) as an argument, returns the total number of births by year from the `babynames` data frame in the `babynames` package that match that name. 
+
+```{r}
+# Write your code below
+
+
+
+```
+
+## Bonus!
+
+The `count_name` function should return one row per year that matches (and generate an error message if there are no matches). Run the function once with the argument `Ezekiel` and once with `Ezze`.
+
+```{r}
+# Paste the code from Exercise 1 below and adjust it
+
+```
+
+## Exercise 2
+
+Write a function called `grab_name` that, when given a name and a year as an argument, returns the rows from the `babynames` data frame in the `babynames` package that match that name for that year (and returns an error if that name and year combination does not match any rows). Run the function once with the arguments `Ezekiel` and `1883` and once with `Ezze` and `1883`. 
+
+Challenge: Add an `else if` after your `if` and before your `else` to catch an error if people choose a year less than 1880 (outside of the range of our data). 
+
+```{r}
+# Write your code below
+
+
+```
+
+# Writing Functions to Create Plots
+
+## Exercise 3
+
+Write a function called `count_name_graph()` that will use the function `countname()` to make a line graph that plots the year and the number of babies in a given year. The graph's title should be "the "Babies Named (name of baby)" . The `paste()` function in r will help with your title, use it to put two strings together. Label your x and y axes. 
+
+```{r}
+# Write your code below
+
+```
+
+# Generalizing Functions for Data Frames
+
+```{r}
+library(fivethirtyeight)
+
+view(congress_age)
+```
+
+## Exercise 4
+
+Write a function called `summary_prop` that will take a data frame as an argument, filter to a condition, and compute the proportion of that condition. 
+
+Run the function with the arguments `congress_age` and `age >= 25 & age <= 55` . 
+
+You can use your function on `count_name("Ezekiel")`, `n>100`. (Note: You probably used summarize() for the code for exercise 1, that sometimes returns grouped data. This code will work better if you add a pipe to an `ungroup()`. Alternatively you can just use `reframe()` instead of `summarize()`).
+
+```{r}
+# Write your code below
+
+```

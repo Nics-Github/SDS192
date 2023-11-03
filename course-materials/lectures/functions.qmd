@@ -16,6 +16,42 @@ adding <- function(x,y){
 }
 ```
 
+# This function will multiply
+
+```{r}
+multiplying <- function(x,y){
+  total <- x*y
+  return(total)
+}
+```
+
+```{r}
+multiplying(2,4)
+```
+
+This function will multiply or add
+
+Depending in an argument
+
+```{r}
+boring_calculator <-function(x,y,operation="add"){
+  if(operation %in% "add"){
+    total <- x + y
+  }
+  else if(operation %in% "multiply"){
+    total <- x * y
+  }
+  else{
+    stop("Please choose a valid operation")
+  }
+  return(total)
+}
+```
+
+```{r}
+boring_calculator(1,6, operation="blue")
+```
+
 # Filtering a lot
 
 ```{r}
@@ -47,8 +83,6 @@ auto_filter_defaults()
 auto_filter_defaults(variable = vs, value= 0)
 
 ```
-
-`stopifnot()`
 
 ```{r}
 load_libraries <- function(){
