@@ -3,95 +3,146 @@ title: "Making Functions practice"
 author: "Schwab"
 
 editor: visual
+execute: 
+  echo: true
 ---
 
-Making functions
+# Functions
+
+-   Inputs and outputs
+
+-   Can set defaults arguements
+
+-   Can be general or specific to a package.
+
+    -   `n()` vs. `read_all_contributions()`
+    
+-   Save time in the long run. 
+
+# Function outline 
+
+```{r}
+Greeting <- function(arg1 = "Hello" ){
+  print(arg1)
+}
+Greeting()
+Greeting("Hiya")
+```
 
 # This function will add
 
 ```{r}
 adding <- function(x,y){
-  total <- sum(c(x,y))
+  
+  total <- sum( c( x , y ))
+  
   return(total)
 }
+
+adding(2,4)
+adding()
+
 ```
 
 # This function will multiply
 
 ```{r}
-multiplying <- function(x,y){
+multiplying <- function(x = 1, y = 1){
   total <- x*y
   return(total)
 }
+
+multiplying()
+multiplying(2,4)
+
 ```
+
+# if, else if, else
+
+The computer can run a logical check. 
+
+Consider this function:
 
 ```{r}
-multiplying(2,4)
+umbrella <- function(weather = "no precipitation"){
+
+if(weather == "no precipitation"){
+  
+    print("leave umbrella at home")
+    }
+    
+else if(weather == "snow"){
+
+    print("You don't need an umbrella")
+}
+  
+else{
+    print("bring an umbrella")
+    
+    }
+}
+umbrella(weather = "snow")
 ```
 
-This function will multiply or add
+# This is a composite function
 
 Depending in an argument
 
 ```{r}
-boring_calculator <-function(x,y,operation="add"){
+my_1st_calculator <-function(x,y,operation="add"){
+  
   if(operation %in% "add"){
-    total <- x + y
+    total <- adding(x,y)
   }
+  
   else if(operation %in% "multiply"){
-    total <- x * y
+    total <- multiplying(x,y)
   }
+  
   else{
-    stop("Please choose a valid operation")
+    stop("Please choose `add` or `multiply` for the operation argument")
   }
+  
   return(total)
 }
 ```
 
 ```{r}
-boring_calculator(1,6, operation="blue")
+my_1st_calculator(1,6, operation="multiply")
 ```
+
+# Note on data masking
+
+No masking :  data$variable
+
+With masking : data |>
+                filter(variable)
+                
+Data masking is super convenient for learning the tidyverse. 
+
+Not so great when making functions. 
+
+If using a tidyverse verb with a variable use `{{}}` around the variable. 
+
+[Read more](https://rlang.r-lib.org/reference/topic-data-mask.html)
 
 # Filtering a lot
 
 ```{r}
+library(tidyverse)
+
 auto_filter <- function(data, variable, value){
-  library(tidyverse)
+  
   data |>
-    filter({{variable}} == value)
+    filter({{variable}} == {{value}})
 }
 ```
 
 ```{r}
-auto_filter(data=mtcars, variable = am, value = 0 )
+auto_filter(data = mtcars, variable = am, value = 0 )
 ```
 
-```{r}
-auto_filter_defaults <- function(data = mtcars, variable = am, value = 1){
-  library(tidyverse)
-  data |>
-    filter({{variable}} == value)
-}
-```
 
-```{r}
-auto_filter_defaults()
+# Classwork
 
-```
 
-```{r}
-auto_filter_defaults(variable = vs, value= 0)
-
-```
-
-```{r}
-load_libraries <- function(){
-  library(tidyverse)
-  library(janitor)
-  library(stringr)
-  library()
-}
-
-```
-
-## 

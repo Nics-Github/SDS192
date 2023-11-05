@@ -64,7 +64,7 @@ h1{font-weight: 400;}
 
 # Day 25 Function Writing
 
-[lecture]()
+[lecture](course-materials/lectures/functions.qmd)
 
 [in class activity](./course-materials/in-class-activies/day_25_writing_functions.qmd)
 
