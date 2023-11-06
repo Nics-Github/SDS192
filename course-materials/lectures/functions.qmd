@@ -16,10 +16,10 @@ execute:
 -   Can be general or specific to a package.
 
     -   `n()` vs. `read_all_contributions()`
-    
--   Save time in the long run. 
 
-# Function outline 
+-   Save time in the long run.
+
+# Function outline
 
 ```{r}
 Greeting <- function(arg1 = "Hello" ){
@@ -32,6 +32,8 @@ Greeting("Hiya")
 # This function will add
 
 ```{r}
+
+
 adding <- function(x,y){
   
   total <- sum( c( x , y ))
@@ -40,7 +42,7 @@ adding <- function(x,y){
 }
 
 adding(2,4)
-adding()
+#adding()
 
 ```
 
@@ -59,7 +61,7 @@ multiplying(2,4)
 
 # if, else if, else
 
-The computer can run a logical check. 
+The computer can run a logical check.
 
 Consider this function:
 
@@ -113,16 +115,15 @@ my_1st_calculator(1,6, operation="multiply")
 
 # Note on data masking
 
-No masking :  data$variable
+No masking : data\$variable
 
-With masking : data |>
-                filter(variable)
-                
-Data masking is super convenient for learning the tidyverse. 
+With masking : data \|\> filter(variable)
 
-Not so great when making functions. 
+Data masking is super convenient for learning the tidyverse.
 
-If using a tidyverse verb with a variable use `{{}}` around the variable. 
+Not so great when making functions.
+
+If using a tidyverse verb with a variable use `{{}}` around the variable.
 
 [Read more](https://rlang.r-lib.org/reference/topic-data-mask.html)
 
@@ -142,7 +143,4 @@ auto_filter <- function(data, variable, value){
 auto_filter(data = mtcars, variable = am, value = 0 )
 ```
 
-
 # Classwork
-
-
