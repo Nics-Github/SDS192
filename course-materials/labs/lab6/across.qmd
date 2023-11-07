@@ -21,7 +21,7 @@ In this lab, we will study the financial relationships between medical drug and 
 
 # Setting Up Your Environment
 
-1. Run the code below to load today’s data frame into your environment.
+1.  Run the code below to load today's data frame into your environment.
 
 ```{r}
 library(tidyverse)
@@ -48,7 +48,7 @@ open_payments_original <- read_csv("https://raw.githubusercontent.com/sds-192-in
   filter(!is.na(covered_recipient_npi))
 ```
 
-2. Run the code below to clean up this data frame
+2.  Run the code below to clean up this data frame
 
 ```{r}
 open_payments_cleaned <- open_payments_original |>
@@ -59,15 +59,15 @@ open_payments_cleaned <- open_payments_original |>
   mutate(covered_recipient_full_name = toupper(covered_recipient_full_name))
 ```
 
-It’s important to note that the unit of observation in this dataset is a transaction (not a medical practitioner or manufacturer!). That means that a medical practitioner can appear multiple times in the dataset if they’ve received multiple payments, and a medical drug or device manufacturer can appear multiple times in the dataset if they’ve disbursed multiple payments. We can identify medical practitioners with the `covered_recipient_npi` column and manufacturers with the `applicable_manufacturer_or_applicable_gpo_making_payment_id` column.
+It's important to note that the unit of observation in this dataset is a transaction (not a medical practitioner or manufacturer!). That means that a medical practitioner can appear multiple times in the dataset if they've received multiple payments, and a medical drug or device manufacturer can appear multiple times in the dataset if they've disbursed multiple payments. We can identify medical practitioners with the `covered_recipient_npi` column and manufacturers with the `applicable_manufacturer_or_applicable_gpo_making_payment_id` column.
 
-Now that we’ve standardized the formatting of these names, there ideally should be one full name associated with every `covered_recipient_npi`. Let’s compare the length of unique `covered_recipient_npi` values to the length of unique `covered_recipient_full_name` values to check whether this is the case.
+Now that we've standardized the formatting of these names, there ideally should be one full name associated with every `covered_recipient_npi`. Let's compare the length of unique `covered_recipient_npi` values to the length of unique `covered_recipient_full_name` values to check whether this is the case.
 
 ## Ex 1: Unique Values
 
-I've written a function below called `num_unique`. The function calculates the length of unique values in the vector passed to the argument `x`. 
+I've written a function below called `num_unique`. The function calculates the length of unique values in the vector passed to the argument `x`.
 
-Below, I’ve selected the two columns in `open_payments_cleaned` that we want to iterate this function over. Determine which `map()` function to use in order to return a numeric vector that indicates the length of unique values in each of these columns. If you’ve done everything correctly, you should get the output below.
+Below, I've selected the two columns in `open_payments_cleaned` that we want to iterate this function over. Determine which `map()` function to use in order to return a numeric vector that indicates the length of unique values in each of these columns. If you've done everything correctly, you should get the output below.
 
 > Hint: You can refer to Lec 21 Slides Page 5-9 and its in-class exercise Ex2 to determine which `map()` function to use.
 
@@ -81,10 +81,9 @@ open_payments_cleaned |>
   map_int(num_unique) # Determine which map function to call here
 ```
 
-covered_recipient_npi     covered_recipient_full_name
-                11837                           11858
+covered_recipient_npi covered_recipient_full_name 11837 11858
 
-Notice that there are still more full names than `covered_recipient_npi`s, which means that certain doctors have multiple names in this dataset. Below I’ve written some code to calculate the number unique full names listed for each `covered_recipient_npi` and filter to the rows with more than one name. Can you identify some reasons why we might have multiple names listed for this same medical practitioner in this data frame?
+Notice that there are still more full names than `covered_recipient_npi`s, which means that certain doctors have multiple names in this dataset. Below I've written some code to calculate the number unique full names listed for each `covered_recipient_npi` and filter to the rows with more than one name. Can you identify some reasons why we might have multiple names listed for this same medical practitioner in this data frame?
 
 ```{r}
 open_payments_cleaned |>
@@ -97,7 +96,7 @@ open_payments_cleaned |>
   arrange(desc(covered_recipient_npi))
 ```
 
-It could be a doctor’s maiden name that they have since changed. It could also be a misspelling or hypocorism. Because of these issues, it is important that we use the `covered_recipient_npi` to identify doctors vs. the full name.
+It could be a doctor's maiden name that they have since changed. It could also be a misspelling or hypocorism. Because of these issues, it is important that we use the `covered_recipient_npi` to identify doctors vs. the full name.
 
 # Data Analysis
 
@@ -112,11 +111,11 @@ Write code to determine the 10 medical practitioners that received the most mone
 ```{r}
 # Uncomment below and write data wrangling code
 
-top_10_doctors <- open_payments_cleaned |>
+#top_10_doctors <- open_payments_cleaned |>
   
 ```
 
-Right now the values that we will eventually want to iterate over in our analysis are stored as columns in a data frame. …but the family of `purrr` functions allows us to apply a function to each element of a vector or list. We want to create a series of vectors from these columns that we can iterate over. We will use the `pull()` function to do this.
+Right now the values that we will eventually want to iterate over in our analysis are stored as columns in a data frame. ...but the family of `purrr` functions allows us to apply a function to each element of a vector or list. We want to create a series of vectors from these columns that we can iterate over. We will use the `pull()` function to do this.
 
 ## Ex 3: Top 10 Doctors IDs
 
@@ -128,16 +127,16 @@ Create a vector of `top_10_doctors_ids` from `top_10_doctors`, using the `pull()
 # top_10_doctors_ids <- top_10_doctors |>
 ```
 
-We also want a vector of doctor names associated with each of these IDs, but remember that there can be multiple names for a single doctor in this dataset. With this in mind, we are going to create a vector of the **first listed name** for a given `covered_recipient_npi` in the dataset. Taking the first listed name as the doctor’s name is an imperfect solution. The first listed name could be a misspelling. It could be a doctor’s maiden name that they have since changed. This is a temporary solution, and we would want to confirm that we have the correct name for each doctor before publishing any of these findings.
+We also want a vector of doctor names associated with each of these IDs, but remember that there can be multiple names for a single doctor in this dataset. With this in mind, we are going to create a vector of the **first listed name** for a given `covered_recipient_npi` in the dataset. Taking the first listed name as the doctor's name is an imperfect solution. The first listed name could be a misspelling. It could be a doctor's maiden name that they have since changed. This is a temporary solution, and we would want to confirm that we have the correct name for each doctor before publishing any of these findings.
 
 ## Ex 4: Top 10 Doctors Names
 
 Create a vector containing the names of the doctors associated with the IDs in `top_10_doctors_ids`. First, define the function `get_doctor_name`. This function will:
 
-1. Take a `doctor_id` as an argument
-2. Filter `open_payments_cleaned` to that ID
-3. Summarize the `first() covered_recipient_full_name` listed for that ID
-4. `pull()` the name value
+1.  Take a `doctor_id` as an argument
+2.  Filter `open_payments_cleaned` to that ID
+3.  Summarize the `first() covered_recipient_full_name` listed for that ID
+4.  `pull()` the name value
 
 > Hint: You can refer to Lec 20 Slides Page 5-10 and Lec 20 in-class exercise Exercise 1-3 for all the functions that you're going to write in this lab, meaning that you don't need to use embracing for all the functions that you're going to write in this lab.
 
@@ -157,7 +156,7 @@ Now that we have the vectors we want to iterate over, we are ready to start defi
 
 ## Ex 5: What Kind of Payments did MA-based Doctors Receive in 2021?
 
-To get started, let’s define a function that filters open_payments_cleaned to a given doctor ID, and then calculates how much of each kind of payment has been paid to that doctor. Here is an example of what that data wrangling code would look like for a specific `covered_recipient_npi`:
+To get started, let's define a function that filters open_payments_cleaned to a given doctor ID, and then calculates how much of each kind of payment has been paid to that doctor. Here is an example of what that data wrangling code would look like for a specific `covered_recipient_npi`:
 
 ```{r}
 open_payments_cleaned |>
@@ -168,9 +167,9 @@ open_payments_cleaned |>
             total_payments = sum(total_amount_of_payment_usdollars))
 ```
 
-1. Wrap the above code in a function named `calculate_payment_type_amts`. Rather than filtering to 1194763482, filter based on the value passed to an argument named `doctor_id`
-2. Then, use the `map()` function to apply `calculate_payment_type_amts` to each element in the `top_10_doctors_ids` vector. Running this code should return a list of 10 data frames
-3. Finally, pipe in `set_names(top_10_doctors_names)` to set the names for each data frame in the list to the doctor’s name
+1.  Wrap the above code in a function named `calculate_payment_type_amts`. Rather than filtering to 1194763482, filter based on the value passed to an argument named `doctor_id`
+2.  Then, use the `map()` function to apply `calculate_payment_type_amts` to each element in the `top_10_doctors_ids` vector. Running this code should return a list of 10 data frames
+3.  Finally, pipe in `set_names(top_10_doctors_names)` to set the names for each data frame in the list to the doctor's name
 
 ```{r}
 # Write calculate_payment_type_amts function here
@@ -181,7 +180,7 @@ open_payments_cleaned |>
 
 ## Ex 6: When were Payments Made to Each of These Doctors in 2021?
 
-Here’s an example of a plot we could create to answer this question for one doctor.
+Here's an example of a plot we could create to answer this question for one doctor.
 
 ```{r}
 open_payments_cleaned |>
@@ -202,12 +201,12 @@ open_payments_cleaned |>
 
 Write a function named `payments_calendar`. The function should:
 
-1. Take a `doctor_id` and `doctor_name` as arguments
-2. Filter `open_payments_cleaned` to the doctor’s ID
-3. Create payment calendar plot modeled after the one above
-4. Set the title of the plot to the doctor’s name
+1.  Take a `doctor_id` and `doctor_name` as arguments
+2.  Filter `open_payments_cleaned` to the doctor's ID
+3.  Create payment calendar plot modeled after the one above
+4.  Set the title of the plot to the doctor's name
 
-After you’ve written this function, use the `map2()` function to apply `payments_calendar` to each element in the `top_10_doctors_ids` vector and `top_10_doctors_names` vector.
+After you've written this function, use the `map2()` function to apply `payments_calendar` to each element in the `top_10_doctors_ids` vector and `top_10_doctors_names` vector.
 
 ```{r}
 # Write payments_calendar function here
@@ -218,17 +217,17 @@ After you’ve written this function, use the `map2()` function to apply `paymen
 
 ## Ex 7: Which Manufacturers Paid MA-based Doctors in 2021, and through What Forms of Payment?
 
-Finally, let’s define a function that filters `open_payments_cleaned` to a given doctor ID and determines how much the doctor received in compensation from different manufacturers, along with the forms of payment from each manufacturer. To do so, we will need to aggregate the data by `covered_recipient_npi`, `applicable_manufacturer_or_applicable_gpo_making_payment_name`, and `form_of_payment_or_transfer_of_value` and calculate the total payments associated with each grouping.
+Finally, let's define a function that filters `open_payments_cleaned` to a given doctor ID and determines how much the doctor received in compensation from different manufacturers, along with the forms of payment from each manufacturer. To do so, we will need to aggregate the data by `covered_recipient_npi`, `applicable_manufacturer_or_applicable_gpo_making_payment_name`, and `form_of_payment_or_transfer_of_value` and calculate the total payments associated with each grouping.
 
 Write a function named `calculate_manufacturer_payments`. The function should:
 
-1. Take a `doctor_id` as an argument
-2. Filter `open_payments_cleaned` to that ID
-3. Aggregate the filtered data by `covered_recipient_npi`, `applicable_manufacturer_or_applicable_gpo_making_payment_name`, and `form_of_payment_or_transfer_of_value`
-4. Calculate the total amount of payments for each grouping
-5. Sort the resulting data frame in descending order by the total amount of payments
+1.  Take a `doctor_id` as an argument
+2.  Filter `open_payments_cleaned` to that ID
+3.  Aggregate the filtered data by `covered_recipient_npi`, `applicable_manufacturer_or_applicable_gpo_making_payment_name`, and `form_of_payment_or_transfer_of_value`
+4.  Calculate the total amount of payments for each grouping
+5.  Sort the resulting data frame in descending order by the total amount of payments
 
-After you’ve written this function, use the `map_df()` function to apply `calculate_manufacturer_payments` to each element in the `top_10_doctors_ids` vector. Note how this returns one data frame rather than a list of 10 data frames.
+After you've written this function, use the `map_df()` function to apply `calculate_manufacturer_payments` to each element in the `top_10_doctors_ids` vector. Note how this returns one data frame rather than a list of 10 data frames.
 
 Plot your resulting data frame as a column plot, attempting (to the best of your ability) to match the formatting of the plot below.
 

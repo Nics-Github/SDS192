@@ -1,7 +1,7 @@
 ---
 title: "Making Functions practice"
 author: "Schwab"
-
+output: revealjs
 editor: visual
 execute: 
   echo: true

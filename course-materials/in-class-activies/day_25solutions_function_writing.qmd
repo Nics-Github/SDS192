@@ -56,7 +56,7 @@ The `count_name` function should return one row per year that matches (and gener
 ```{r}
 # Paste the code from Exercise 1 below and adjust it
 count_name("Ezekiel")
-count_name("Ezze")
+#count_name("Ezze")
 ```
 
 ## Exercise 2
