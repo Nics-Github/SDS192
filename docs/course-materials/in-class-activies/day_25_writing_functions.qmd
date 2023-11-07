@@ -4,7 +4,7 @@ author: "Schwab"
 editor: visual
 ---
 
-Note: Some of this material was lifter from Shiya Cao's Lec 20 file here.
+Note: Some of this material was lifter from Shiya Cao's Lec 20 file [here](https://scao53.github.io/sds192spring2023/in-class_exercises/Lec20In-classExercise-WriteFunctions.qmd).
 
 ```{r, include=FALSE}
 # Do not edit this code chunk
@@ -34,18 +34,7 @@ Write a function called `count_name` that, when given a name (e.g.,`Angelica`, `
 
 ```{r}
 # Write your code below
-count_name <- function(nombre = "Nicholas"){
-  if(is.element(nombre, babynames$name)) {
-    babynames |>
-    filter(name ==  {{nombre}} ) |>
-    group_by(name,year) |>
-    reframe(year= year, n = sum(n)) 
-      
-  }
-  else{
-    stop("Name not found")
-  }
-}
+
 
 
 ```
@@ -56,8 +45,7 @@ The `count_name` function should return one row per year that matches (and gener
 
 ```{r}
 # Paste the code from Exercise 1 below and adjust it
-count_name("Ezekiel")
-#count_name("Ezze")
+
 ```
 
 ## Exercise 2
@@ -68,21 +56,7 @@ Challenge: Add an `else if` after your `if` and before your `else` to catch an e
 
 ```{r}
 # Write your code below
-grab_name <- function(nombre ="Nicholas",ano = 1984){
 
-  if(is.element(nombre,babynames$name))  {
-    babynames |>
-    filter(name == {{nombre}} & year == {{ano}}) |>
-    pull(name,year)
-  }
-  else if(ano < 1880){
-    stop("Choose a year after 1880")
-  }
-  else{
-    stop("Name and year not found")
-  }
-}
-grab_name()
 
 ```
 
@@ -94,13 +68,7 @@ Write a function called `count_name_graph()` that will use the function `countna
 
 ```{r}
 # Write your code below
-count_name_graph <- function(nombre = "Nicholas"){
-  count_name( nombre )|>
-    ggplot(aes(x=year, y=n))+
-    geom_line()+
-    labs(title = paste("Babies named", nombre))
-}
-count_name_graph("Nicholas")
+
 ```
 
 # Generalizing Functions for Data Frames
@@ -121,16 +89,5 @@ You can use your function on `count_name("Ezekiel")`, `n>100`. (Note: You probab
 
 ```{r}
 # Write your code below
-summary_prop <- function(data, condition){
-  data |> 
-    filter( {{condition}} )|>
-    summarise(
-      number_with_condition = n(),
-      prop_w_condition = number_with_condition/nrow(data)
-    )
-}
-  
-summary_prop(data=congress_age, condition = age >= 25 & age <= 55)
 
-summary_prop(data=count_name(), condition = n>100)
 ```
