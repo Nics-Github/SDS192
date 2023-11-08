@@ -64,6 +64,8 @@ h1{font-weight: 400;}
 
 # Day 26 Iteration
 
+[Do we need more class time](https://forms.gle/239mzry4vtcMCfsv9)
+
 ::: {.callout-tip collapse="true"}
 # Reminder Project 2 due Friday
 
@@ -84,6 +86,9 @@ Project 2 notes:
 
 [Lecture: `across()` and `map()`](course-materials/lectures/Day_26_across_maps.qmd)
 
+[In class activity](./course-materials/in-class-activies/day_26_In-classExercise-Iteration.qmd)
+
+[More on masking](https://rlang.r-lib.org/reference/topic-data-mask.html)
 
 
 # Day 25 Function Writing
