@@ -24,7 +24,7 @@ The `congress_age` dataset contains the age of members of the United States cong
 library(tidyverse)
 library(babynames)
 
-view(babynames)
+#view(babynames)
 ```
 
 ## Exercise 1
@@ -33,10 +33,10 @@ Write a function called `count_name` that, when given a name (e.g.,`Angelica`, `
 
 ```{r}
 # Write your code below
-count_name <- function(nombre = "Nicholas"){
+count_name <- function(data = babynames , nombre = "Nicholas"){
   if(is.element(nombre, babynames$name)) {
-    babynames |>
-    filter(name ==  nombre ) |>
+    data |>
+    filter(name == nombre) |>
     group_by(name,year) |>
     reframe(year= year, n = sum(n)) 
       
@@ -49,13 +49,14 @@ count_name <- function(nombre = "Nicholas"){
 
 ```
 
+
 ## Bonus!
 
 The `count_name` function should return one row per year that matches (and generate an error message if there are no matches). Run the function once with the argument `Ezekiel` and once with `Ezze`.
 
 ```{r}
 # Paste the code from Exercise 1 below and adjust it
-count_name("Ezekiel")
+count_name(data=babynames, nombre = "Ezekiel")
 #count_name("Ezze")
 ```
 
@@ -67,10 +68,14 @@ Challenge: Add an `else if` after your `if` and before your `else` to catch an e
 
 ```{r}
 # Write your code below
-grab_name <- function(nombre ="Nicholas",ano = 1984){
+
+library(tidyverse)
+library(babynames)
+
+grab_name <- function(data = babynames, nombre ,ano ){
 
   if(is.element(nombre,babynames$name))  {
-    babynames |>
+    data |>
     filter(name == nombre & year == ano) |>
     pull(name,year)
   }
@@ -81,7 +86,7 @@ grab_name <- function(nombre ="Nicholas",ano = 1984){
     stop("Name and year not found")
   }
 }
-grab_name()
+grab_name( nombre = "Samantha", ano = 1950)
 
 ```
 
@@ -93,13 +98,13 @@ Write a function called `count_name_graph()` that will use the function `countna
 
 ```{r}
 # Write your code below
-count_name_graph <- function(nombre = "Nicholas"){
-  count_name( nombre )|>
+count_name_graph <- function(data, nombre = "Nicholas"){
+  count_name(data, nombre )|>
     ggplot(aes(x=year, y=n))+
     geom_line()+
     labs(title = paste("Babies named", nombre))
 }
-count_name_graph("Nicholas")
+count_name_graph(data=babynames, nombre = "Nicholas")
 ```
 
 # Generalizing Functions for Data Frames
@@ -131,5 +136,5 @@ summary_prop <- function(data, condition){
   
 summary_prop(data=congress_age, condition = age >= 25 & age <= 55)
 
-summary_prop(data=count_name(), condition = n>100)
+summary_prop(data=count_name(data = babynames, nombre = "Ezekiel"), condition = n>100)
 ```

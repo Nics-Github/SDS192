@@ -64,32 +64,31 @@ h1{font-weight: 400;}
 
 # Day 26 Iteration
 
-[Do we need more class time](https://forms.gle/239mzry4vtcMCfsv9)
+[Do we need more class time](https://forms.gle/239mzry4vtcMCfsv9)?
 
 ::: {.callout-tip collapse="true"}
 # Reminder Project 2 due Friday
 
-Project 2 notes: 
+Project 2 notes:
 
--   Project 2 due Friday 
+-   Project 2 due Friday
 
--   Render your project
+-   **Render** your project
 
--   Comment your code in fec_analysis.qmd
+-   **Comment** your code in `fec_analysis.qmd`
 
 -   Make your code readable with spaces and short lines
 
--   filter( == ) vs filter( %in% )
+-   `filter( == )` vs `filter( %in% )`
 :::
 
-[Solution to Monday's in class activity](./course-materials/in-class-activies/day_25solutions_writing_functions.qmd)
+[Solution to Monday's in class activity](./course-materials/in-class-activies/day_25solutions_writing_functions.html)
 
 [Lecture: `across()` and `map()`](course-materials/lectures/Day_26_across_maps.qmd)
 
 [In class activity](./course-materials/in-class-activies/day_26_In-classExercise-Iteration.qmd)
 
 [More on masking](https://rlang.r-lib.org/reference/topic-data-mask.html)
-
 
 # Day 25 Function Writing
 
@@ -101,9 +100,9 @@ Project 2 notes:
 
 # Day 23 Project 2
 
-# Day 22 Project 2 
+# Day 22 Project 2
 
-Reminder lab-5 is due Wednesday. 
+Reminder lab-5 is due Wednesday.
 
 [Introduce Project 2](https://moodle.smith.edu/)
 
@@ -111,7 +110,7 @@ Time to get familiar with `fec20`
 
 # Day 21 Lab 5 Cleaning
 
-You can find lab 5 by way of [moodle](https://moodle.smith.edu/). 
+You can find lab 5 by way of [moodle](https://moodle.smith.edu/).
 
 # Day 20 Cleaning
 
@@ -141,7 +140,7 @@ planes |> inner_join(flights, by = "tailnum") |>
 
 ```
 
-#### 4b The number of planes included in planes that flew from NYC is: 
+#### 4b The number of planes included in planes that flew from NYC is:
 
 ```{r solution-to-4b}
 #| echo: false
