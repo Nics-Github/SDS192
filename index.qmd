@@ -62,6 +62,14 @@ h1{font-weight: 400;}
 ```
 </iframe>
 
+# Day 26 Iteration
+
+Go over Function classwork. 
+
+[Lecture: `across()` and `map()`](course-materials/lectures/Day_26_across_maps.qmd)
+
+
+
 # Day 25 Function Writing
 
 [lecture](course-materials/lectures/functions.qmd)
