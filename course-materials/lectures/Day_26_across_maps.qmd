@@ -1,0 +1,97 @@
+---
+title: "iteration"
+author: "Schwab"
+format: revealjs
+editor: visual
+execute: 
+  echo: true
+---
+
+## `across()` and `map()`
+
+```{r}
+#| include: false
+
+
+library(tidyverse)
+```
+
+These functions allow us to preform the same operation across multiple rows.
+
+`map()` comes from the `purr` package.
+
+`across()` comes from the `dplyr` package.
+
+## Example: `iris`
+
+```{r}
+head(iris)
+```
+
+## Average
+
+Let's find the average of each column that ends with `.Length` by species.
+
+```{r}
+iris %>%
+  group_by(Species) %>%
+  summarise(
+    across(.cols = ends_with("Length"), 
+           .fns = list(mean = mean)))
+```
+
+## Rounding with `across()`
+
+```{r}
+iris %>%
+  group_by(Species) %>%
+  summarise(across(
+    .cols = Sepal.Length:Petal.Width, 
+    .fns = round))
+```
+
+## Rounding without `across()`
+
+```{r}
+iris %>%
+  group_by(Species) %>%
+  summarise(Sepal.Length = round(Sepal.Length),
+            Sepal.Width = round(Sepal.Width),
+            Petal.Length = round(Petal.Length),
+            Petal.Width = round(Petal.Width))
+```
+
+## Rounding 
+
+```{r}
+iris %>%
+  group_by(Species) %>%
+  reframe(across(
+    .cols = starts_with("Sepal"), 
+    .fns = ~ round(. , digits = 2)))
+```
+
+## `map()` is similar to `across()`
+
+It performs some operation on a data frame, vector or list.
+
+```{r}
+
+iris |>
+  map(.f = mean)
+```
+
+## Different maps()
+
+`map()` returns a list.
+
+`map_dfc()` returns a dataframe with columns
+
+`map_dfr()` returns a dataframe with rows.
+
+## `map_dfc()`
+
+```{r}
+iris |>
+  map_dfc(.f = mean)
+```

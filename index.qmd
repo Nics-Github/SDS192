@@ -80,10 +80,11 @@ Project 2 notes:
 -   filter( == ) vs filter( %in% )
 :::
 
+[Solution to Monday's in class activity](./course-materials/in-class-activies/day_25solutions_writing_functions.qmd)
 
-[Solution to Wednesday's in class activity](./course-materials/in-class-activies/day_25solutions_writing_functions.qmd)
+[Lecture: `across()` and `map()`](course-materials/lectures/Day_26_across_maps.qmd)
 
-[Lecture Using across() and map()]()
+
 
 # Day 25 Function Writing
 
