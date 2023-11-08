@@ -62,6 +62,29 @@ h1{font-weight: 400;}
 ```
 </iframe>
 
+# Day 26 Iteration
+
+::: {.callout-tip collapse="true"}
+# Reminder Project 2 due Friday
+
+Project 2 notes: 
+
+-   Project 2 due Friday 
+
+-   Render your project
+
+-   Comment your code in fec_analysis.qmd
+
+-   Make your code readable with spaces and short lines
+
+-   filter( == ) vs filter( %in% )
+:::
+
+
+[Solution to Wednesday's in class activity](./course-materials/in-class-activies/day_25solutions_writing_functions.qmd)
+
+[Lecture Using across() and map()]()
+
 # Day 25 Function Writing
 
 [lecture](course-materials/lectures/functions.qmd)
