@@ -1,9 +1,10 @@
-
 ---
-title: "Lec 20: In-class Exercise: Write Functions"
+title: "Write Functions"
 output:
   html_document
 ---
+
+This in class activity was 
 
 ```{r, include=FALSE}
 # Do not edit this code chunk
