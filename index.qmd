@@ -62,6 +62,12 @@ h1{font-weight: 400;}
 ```
 </iframe>
 
+# Day 27 `map()` and `across()` practice
+
+[In class activity](./course-materials/in-class-activies/day_26_In-classExercise-Iteration.qmd)
+
+Project time
+
 # Day 26 Iteration
 
 [Do we need more class time](https://forms.gle/239mzry4vtcMCfsv9)?
@@ -86,7 +92,7 @@ Project 2 notes:
 
 [Lecture: `across()` and `map()`](course-materials/lectures/Day_26_across_maps.qmd)
 
-[In class activity](./course-materials/in-class-activies/day_26_In-classExercise-Iteration.qmd)
+
 
 [More on masking](https://rlang.r-lib.org/reference/topic-data-mask.html)
 

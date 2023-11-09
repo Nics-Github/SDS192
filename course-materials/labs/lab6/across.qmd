@@ -1,9 +1,4 @@
 ---
-title: "lab6"
-editor: visual
----
-
----
 title: "SDS192 Lab 6"
 author: Section WRITE YOUR SECTION NUMBER HERE - WRITE YOUR NAME HERE
 output:
@@ -69,8 +64,6 @@ I've written a function below called `num_unique`. The function calculates the l
 
 Below, I've selected the two columns in `open_payments_cleaned` that we want to iterate this function over. Determine which `map()` function to use in order to return a numeric vector that indicates the length of unique values in each of these columns. If you've done everything correctly, you should get the output below.
 
-> Hint: You can refer to Lec 21 Slides Page 5-9 and its in-class exercise Ex2 to determine which `map()` function to use.
-
 ```{r}
 num_unique <- function(x) {
  length(unique(x))
@@ -81,7 +74,9 @@ open_payments_cleaned |>
   map_int(num_unique) # Determine which map function to call here
 ```
 
-covered_recipient_npi covered_recipient_full_name 11837 11858
+covered_recipient_npi covered_recipient_full_name
+
+11837 11858
 
 Notice that there are still more full names than `covered_recipient_npi`s, which means that certain doctors have multiple names in this dataset. Below I've written some code to calculate the number unique full names listed for each `covered_recipient_npi` and filter to the rows with more than one name. Can you identify some reasons why we might have multiple names listed for this same medical practitioner in this data frame?
 
@@ -106,12 +101,16 @@ Our aim is to produce a number of tables and plots for each of the ten MA-based 
 
 Write code to determine the 10 medical practitioners that received the most money from drug and device manufacturers in 2021, and store your results in `top_10_doctors`. Your final data frame should have 10 rows and columns for `covered_recipient_npi` and `sum_total_payments`.
 
-> Hint: This is about single table analysis. You can refer to Lec 15 slides and its in-class exercise.
-
 ```{r}
 # Uncomment below and write data wrangling code
 
-#top_10_doctors <- open_payments_cleaned |>
+top_10_doctors <- open_payments_cleaned |>
+  group_by(covered_recipient_npi) |>
+  summarise(sum_total_payments = sum(total_amount_of_payment_usdollars)) |>
+  arrange(desc(sum_total_payments))|>
+  slice_max(order_by = sum_total_payments, n = 10)
+
+top_10_doctors
   
 ```
 
@@ -124,7 +123,8 @@ Create a vector of `top_10_doctors_ids` from `top_10_doctors`, using the `pull()
 ```{r}
 # Uncomment and write code below to pull the top 10 doctor IDs into a vector
 
-# top_10_doctors_ids <- top_10_doctors |>
+top_10_doctors_ids <- top_10_doctors |>
+  pull(covered_recipient_npi)
 ```
 
 We also want a vector of doctor names associated with each of these IDs, but remember that there can be multiple names for a single doctor in this dataset. With this in mind, we are going to create a vector of the **first listed name** for a given `covered_recipient_npi` in the dataset. Taking the first listed name as the doctor's name is an imperfect solution. The first listed name could be a misspelling. It could be a doctor's maiden name that they have since changed. This is a temporary solution, and we would want to confirm that we have the correct name for each doctor before publishing any of these findings.
@@ -134,22 +134,30 @@ We also want a vector of doctor names associated with each of these IDs, but rem
 Create a vector containing the names of the doctors associated with the IDs in `top_10_doctors_ids`. First, define the function `get_doctor_name`. This function will:
 
 1.  Take a `doctor_id` as an argument
-2.  Filter `open_payments_cleaned` to that ID
-3.  Summarize the `first() covered_recipient_full_name` listed for that ID
-4.  `pull()` the name value
 
-> Hint: You can refer to Lec 20 Slides Page 5-10 and Lec 20 in-class exercise Exercise 1-3 for all the functions that you're going to write in this lab, meaning that you don't need to use embracing for all the functions that you're going to write in this lab.
+2.  Filter `open_payments_cleaned` to that ID
+
+3.  Summarize the `first() covered_recipient_full_name` listed for that ID
+
+4.  `pull()` the name value
 
 Once this function has been defined, select the appropriate `map()` function to iterate `top_10_doctors_ids` through `get_doctor_name` and store the resulting character vector in `top_10_doctors_names`.
 
 ```{r}
 get_doctor_name <- function(doctor_id) {
-  # Write function code here
+  open_payments_cleaned |>
+    filter(covered_recipient_npi == {{doctor_id}})|>
+    first()|>
+    pull(covered_recipient_full_name)
+    
 }
 
 # Iterate the top_10_doctors_ids vector through get_doctor_name and store the results in a character vector
-
-# top_10_doctors_names <- 
+top_10_doctors_names <-
+  map_chr(
+    .x = top_10_doctors_ids,
+    .f = get_doctor_name
+  )
 ```
 
 Now that we have the vectors we want to iterate over, we are ready to start defining our functions.
@@ -173,8 +181,23 @@ open_payments_cleaned |>
 
 ```{r}
 # Write calculate_payment_type_amts function here
+calculate_payment_type_amts <- function(doctor_id){
+
+open_payments_cleaned |>
+  filter(covered_recipient_npi == {{doctor_id}}) |>
+  group_by(nature_of_payment_or_transfer_of_value) |>
+  summarize(num_payments = 
+              sum(number_of_payments_included_in_total_amount),
+            total_payments = sum(total_amount_of_payment_usdollars))
+}
 
 # Iterate calculate_payment_type_amts over top_10_doctors_ids and set names to top_10_doctors_names
+doctor_list <- map(
+  .x = top_10_doctors_ids,
+  .f = calculate_payment_type_amts
+) 
+doctor_list<- doctor_list |> set_names(top_10_doctors_names)
+
 
 ```
 
@@ -210,8 +233,29 @@ After you've written this function, use the `map2()` function to apply `payments
 
 ```{r}
 # Write payments_calendar function here
-
+payments_calendar <- function(doctor_id , doctor_name){
+  open_payments_cleaned |>
+    filter(covered_recipient_npi == {{doctor_id}}) |>
+    ggplot(aes(x = day(date_of_payment), 
+               y = "", 
+               fill = total_amount_of_payment_usdollars)) +
+    geom_jitter(pch = 21, size = 2, color = "black") +
+    theme_minimal() +
+    labs(title = doctor_name, 
+         y = "", 
+         x = "Day",
+         fill = "Payment Amount") +
+    scale_y_discrete(limits = rev) +
+    scale_fill_distiller(palette = "BuPu", direction = 1, labels = scales::comma) +
+    facet_wrap(~month(date_of_payment, label = TRUE), nrow = 4) 
+}
 # Iterate payments_calendar over top_10_doctors_ids and top_10_doctors_ids to create 10 plots
+
+map2(
+  .x = top_10_doctors_ids,
+  .y = top_10_doctors_names,
+  .f = payments_calendar
+)
 
 ```
 
@@ -234,14 +278,39 @@ Plot your resulting data frame as a column plot, attempting (to the best of your
 ```{r}
 # Write calculate_manufacturer_payments function here
 
+calculate_manufacturer_payments <- function(doctor_id){
+  open_payments_cleaned |>
+  filter(covered_recipient_npi == {{doctor_id}})|>
+  group_by(
+    covered_recipient_npi,
+    applicable_manufacturer_or_applicable_gpo_making_payment_name,
+    form_of_payment_or_transfer_of_value)|>
+  reframe(total = sum(total_amount_of_payment_usdollars))
+}
+
+
 # Iterate calculate_manufacturer_payments over top_10_doctors_ids here
 
+df<- map_df(
+  .x = top_10_doctors_ids,
+  .f = calculate_manufacturer_payments
+)
+
 # Plot resulting data frame here
+df |>
+  ggplot(aes(
+    x = applicable_manufacturer_or_applicable_gpo_making_payment_name, 
+    y = total,
+    fill = form_of_payment_or_transfer_of_value)
+    ) +
+  geom_col()+
+  facet_wrap(facets = ~covered_recipient_npi ,ncol = 2, scales = "free")+
+  coord_flip()+
+  theme_minimal()+
+  theme(text = element_text(size=5))+
+  scale_y_continuous(labels = scales::comma)
+df
 
 ```
 
 ![](images/Lab6_picture.png)
-
-## Ex 8: Weekly Reflections
-
-Fill out this week's reflections Google form to receive credit.
