@@ -275,7 +275,7 @@ After you've written this function, use the `map_df()` function to apply `calcul
 
 Plot your resulting data frame as a column plot, attempting (to the best of your ability) to match the formatting of the plot below.
 
-```{r}
+```{r }
 # Write calculate_manufacturer_payments function here
 
 calculate_manufacturer_payments <- function(doctor_id){
