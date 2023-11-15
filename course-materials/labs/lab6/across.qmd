@@ -1,8 +1,7 @@
 ---
 title: "SDS192 Lab 6"
-author: Section WRITE YOUR SECTION NUMBER HERE - WRITE YOUR NAME HERE
-output:
-  html_document
+author: Solutions
+format: pdf
 ---
 
 ```{r, include=FALSE}
@@ -307,7 +306,16 @@ df |>
   facet_wrap(facets = ~covered_recipient_npi ,ncol = 2, scales = "free")+
   coord_flip()+
   theme_minimal()+
-  theme(text = element_text(size=5))+
+  theme(title = element_text(size = 5),
+        axis.title = element_text(size = 4),
+        axis.text = element_text(size = 2),
+        strip.text = element_text(size = 4),
+        legend.title = element_text(size = 4),
+        legend.text = element_text(size = 4)
+        ) +
+  labs(title="Total Amount of Medical Drug/Device Payments to 10 MA-based Doctors,2021", 
+         x="Name of Manufacturer",
+         y="Total Amount of Payments ($)")
   scale_y_continuous(labels = scales::comma)
 df
 

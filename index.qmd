@@ -62,6 +62,20 @@ h1{font-weight: 400;}
 ```
 </iframe>
 
+# Day 29 The other Mapping
+
+
+
+One more group project and one final project. 
+
+[Becky Sweger](https://www.linkedin.com/in/beckysweger/) to talk on Monday Nov 27. 
+
+[Questions for Becky](https://forms.gle/pXGRTJBx1UovvY8G6)
+
+[Lecture: static maps](./course-materials/maps-ggplot.qmd)
+
+[Activity: Maps](./course-materials/in-class-activies/Lec30-32In-classExercises-Mapping.zip)
+
 # Day 28 Lab 6- map()
 
 The Lab-6 link is on [moodle](moodle.smith.edu). It is due Friday at midnight. 
