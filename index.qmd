@@ -72,7 +72,7 @@ One more group project and one final project.
 
 [Questions for Becky](https://forms.gle/pXGRTJBx1UovvY8G6)
 
-[Lecture: static maps](./course-materials/maps-ggplot.qmd)
+[Lecture: static maps](./course-materials/maps-ggplot.html)
 
 [Activity: Maps](./course-materials/in-class-activies/Lec30-32In-classExercises-Mapping.zip)
 
