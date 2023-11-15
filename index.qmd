@@ -72,9 +72,32 @@ One more group project and one final project.
 
 [Questions for Becky](https://forms.gle/pXGRTJBx1UovvY8G6)
 
-[Lecture: static maps](./course-materials/lectures/maps-ggplot.qmd)
 
-[Activity: Maps](./course-materials/in-class-activies/Lec30-32In-classExercises-Mapping.zip)
+::: {.callout-note collapse="true"}
+# Libraries
+
+You will need to install the libraries below. 
+
+-   (fivethirtyeight)
+
+-   (leaflet)
+
+-   (sf)
+
+-   (maps)
+
+-   (tidycensus)
+
+-   (tmaptools)
+
+-   (macleish)
+:::
+
+[West Wing](https://www.youtube.com/watch?v=vVX-PrBRtTY)
+
+[Example: static maps](./course-materials/lectures/maps-ggplot.qmd)
+
+[Activity: Maps](./course-materials/in-class-activies/Mapping.zip)
 
 # Day 28 Lab 6- map()
 
