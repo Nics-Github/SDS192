@@ -62,6 +62,20 @@ h1{font-weight: 400;}
 ```
 </iframe>
 
+# Day 30 More Maps
+
+Lab 6 Due Tonight
+
+Lab 7 on Mapping is Monday
+
+[Solutions to first few problems](/docs/course-materials/in-class-activies/Mapping/Lec30-32In-classExercises-Mapping.qmd)
+
+Intro to leaflet
+
+[More leaflet tiles](https://leaflet-extras.github.io/leaflet-providers/preview/)
+
+
+
 # Day 29 The other Mapping
 
 
