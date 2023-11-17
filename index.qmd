@@ -70,7 +70,7 @@ Lab 7 on Mapping is Monday
 
 [Solutions to first few problems](/docs/course-materials/in-class-activies/Mapping/Lec30-32In-classExercises-Mapping.qmd)
 
-Intro to leaflet
+[Intro to leaflet](/course-materials/lectures/day-30-leaflet.qmd)
 
 [More leaflet tiles](https://leaflet-extras.github.io/leaflet-providers/preview/)
 

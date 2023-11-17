@@ -1,27 +1,36 @@
 ---
-title: "maps-ggplot"
+title: "maps-leaflet"
 author: "Schwab"
 format: revealjs
 editor: visual
+execute:
+  echo: true
 ---
+# Libraries
 
 ```{r setup}
 library(tidyverse)
 library(leaflet)
 library(tidygeocoder)
 library(maps)
-
-CholeraDeaths_Book <-mdsr::CholeraDeaths
-st_crs(CholeraDeaths_Book) = st_crs(CholeraDeaths_Book) 
+library(mapdata)
+library(tmaptools)
+library(sf)
 ```
 
 <!-- Let's find the latitude and longitude for a couple of places. -->
 
+# Leaflet
+
+[Here is the leaflet vignette.](https://rstudio.github.io/leaflet/)
+
+# geocode some addresses
+
 ```{r}
 
-addresses<- tibble(address=c("50 Payson Ave, Easthampton, MA","Holyoke Community College, Holyoke,MA")) |>
+addresses<- tibble(address=c("Smith College", "2 Tyler Ct, Northampton, MA 01060", "Holyoke Community College")) |>
 geocode(address, method="osm") |>
-  mutate(name = c("City Hall","HCC"))
+  mutate(name = c("Smith College","McConnell Hall","Holyoke Community College"))
 
 addresses
 ```
@@ -29,10 +38,12 @@ addresses
 <!-- Let's plot those with ggplot. -->
 
 <!-- ```{r} -->
-<!-- ggplot(addresses) + -->
-<!--   geom_point(aes(long,lat))  -->
-<!--   #coord_quickmap() -->
 
+<!-- ggplot(addresses) + -->
+
+<!--   geom_point(aes(long,lat))  -->
+
+<!--   #coord_quickmap() -->
 
 <!-- ``` -->
 
@@ -41,7 +52,9 @@ addresses
 <!-- Let's build a map of Massachusetts with the map_data() function -->
 
 <!-- ```{r} -->
+
 <!-- ma_counties <- map_data("county", "massachusetts") %>%  -->
+
 <!--   select( long, lat, group, id = subregion) -->
 
 <!-- head(ma_counties) -->
@@ -51,35 +64,51 @@ addresses
 <!-- Notice there are a lot of points for barnstable. Those are the vertices of a polygon. Let's draw the polygon with the points. -->
 
 <!-- ```{r} -->
+
 <!-- ma_counties |> ggplot(aes(long,lat,group=group))+ -->
+
 <!--   geom_polygon(fill = "white", colour = "grey50")+ -->
+
 <!--   geom_point()+ -->
+
 <!--   coord_quickmap() -->
+
 <!-- ``` -->
 
 <!-- Let's grab just Massachusetts cities from the data frame us.cities. -->
 
 <!-- ```{r} -->
+
 <!-- ma_cities <- us.cities %>%  -->
+
 <!--   filter(country.etc =="MA") |> -->
+
 <!--   select(name, long, lat) -->
 
 <!-- head(ma_cities) -->
+
 <!-- ``` -->
 
 <!-- Exercise: Plot MA cities onto our county map. -->
 
 <!-- ```{r} -->
+
 <!-- ma_counties |> ggplot(aes(long,lat))+ -->
+
 <!--   geom_polygon(fill = "white", colour = "grey50",aes(group=group)) + -->
+
 <!--   #geom_point(data=ma_cities,.......) -->
 
 <!--   coord_quickmap() -->
+
 <!-- ``` -->
 
 <!-- ```{r} -->
+
 <!-- class(ma_counties) -->
+
 <!-- class(ma_cities) -->
+
 <!-- ``` -->
 
 <!-- Let's get some more accurate government data. -->
@@ -89,25 +118,30 @@ addresses
 <!-- Saving them will be a bit of work. First we need to find those files. -->
 
 <!-- ```{r} -->
+
 <!-- states <- read_sf("~/Documents/MTH_190_Intro_to_DS/course-materials/cb_2021_us_state_500k") |> -->
+
 <!--   sf::st_transform('+proj=longlat +datum=WGS84') -->
 
 <!-- counties <- read_sf("~/Documents/MTH_190_Intro_to_DS/course-materials/cb_2021_us_county_5m") |> -->
+
 <!--   st_transform('+proj=longlat +datum=WGS84') -->
+
 <!-- ``` -->
 
 # Leaflet
 
-Leaflet is a package for interactive maps. Note: leftlet is not ggplot() add functions with the `|>`
+Leaflet is a package for interactive maps.
+
+Leaflet is tidy, the first argument a Leaflet funtion takes is a `map` object.
+
+Note: leftlet is not ggplot() add functions with the `|>.`
+
+# World Map
+
+The `addTiles()` function just adds a map.
 
 ```{r}
-mass_pop_orig <- 
-  tidycensus::get_acs(
-    geography = "county", 
-    variables = "B01003_001", 
-    state = "MA",
-    geometry = TRUE
-  ) 
 
 leaflet() |>
   addTiles() 
@@ -115,21 +149,39 @@ leaflet() |>
 
 # Polygons
 
+Then leaflet needs to `addPolygons()` to show boundary lines.
+
 ```{r}
+#Here I use the tidycensus package to get some boundary lines
+#| warnings: FALSE
+
+
 mass_pop_orig <- 
   tidycensus::get_acs(
     geography = "county", 
     variables = "B01003_001", 
     state = "MA",
     geometry = TRUE
-  ) 
+  ) |>
+  # Most of the maps we are duing use datum WGS84 so we need to tranform to that. See the datnum wikipedia page.
+  
+  st_transform('+proj=longlat +datum=WGS84')
 
+```
+# Polygons
+
+```{r}
 leaflet(mass_pop_orig) |>
   addTiles() |>
   addPolygons()
 ```
 
+
 # Little markers
+
+Leftlet can add markers they're more dynamic geom_point.
+
+Give the marker a pop up name
 
 ```{r}
 
@@ -143,7 +195,8 @@ leaflet() |>
 # Adding Circle Markers
 
 ```{r}
-ma_cities <- map.cities(country = "USA")
+ma_cities <- us.cities |>
+  filter(country.etc =='MA')
 
 leaflet() |>
   addTiles() |>
@@ -153,16 +206,45 @@ leaflet() |>
   
 ```
 
-# 
+# You can also change your map type. 
+
+[Here is your list of tiles](http://leaflet-extras.github.io/leaflet-providers/preview/index.html)
 
 ```{r}
-"new england city and town area"
+#| include: false
 
 leaflet() |>
-  addTiles(urlTemplate = "Stadia.StamenWatercolor") |>
-  addPolygons(data = Just_MA_counties) |>
+  #addTiles() |>
+  addProviderTiles("Esri.WorldGrayCanvas") |>
+  addPolygons(data = mass_pop_orig) |>
   addMarkers(data = addresses, lng=~long, lat=~lat, popup = ~name, ) |>
   addCircleMarkers(data = ma_cities, lng=~long, lat=~lat, popup = ~name, color='black',clusterOptions = markerClusterOptions() ) 
 ```
 
+# You can also change your map type.
 
+```{r}
+#| echo: false
+
+leaflet() |>
+  #addTiles() |>
+  addProviderTiles("Esri.WorldGrayCanvas") |>
+  addPolygons(data = mass_pop_orig) |>
+  addMarkers(data = addresses, lng=~long, lat=~lat, popup = ~name, ) |>
+  addCircleMarkers(data = ma_cities, lng=~long, lat=~lat, popup = ~name, color='black',clusterOptions = markerClusterOptions() ) 
+```
+```
+
+# More Tiles
+
+-   [Most of these work:]( http://leaflet-extras.github.io/leaflet-providers/preview/index.html)
+
+-   Nasa: `NASAGIBS.ViirsEarthAtNight2012`
+
+-   Google map: `Esri.WorldImagery`
+
+-   Gray: `Esri.WorldGrayCanvas`
+
+-   Terrain: `Esri.WorldTerrain`
+
+-   Topo Map: `Esri.WorldTopoMap`
