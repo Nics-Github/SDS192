@@ -68,7 +68,7 @@ Lab 6 Due Tonight
 
 Lab 7 on Mapping is Monday
 
-[Solutions to first few problems](/docs/course-materials/in-class-activies/Mapping/Lec30-32In-classExercises-Mapping.qmd)
+[discuss first few problems](/docs/course-materials/in-class-activies/Mapping/Lec30-32In-classExercises-Mapping.qmd)
 
 [Intro to leaflet](/course-materials/lectures/day-30-leaflet.qmd)
 
