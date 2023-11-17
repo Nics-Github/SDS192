@@ -109,6 +109,8 @@ You will need to install the libraries below.
 
 [West Wing](https://www.youtube.com/watch?v=vVX-PrBRtTY)
 
+<!-- Fix the file below -->
+
 [Example: static maps](./course-materials/lectures/maps-ggplot.qmd)
 
 [Activity: Maps](./course-materials/in-class-activies/Mapping.zip)
