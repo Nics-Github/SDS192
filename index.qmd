@@ -57,10 +57,27 @@ h1{font-weight: 400;}
 # Schedule
 
 ```{=html}
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTG_b6upDZcPxXB92LHYIhV1uAXgeVGaMsZ3sDRPuSQN74JdhkKhZQVjw6T68I3zsP8KGYzDSVTZW64/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false&amp;gid=0&amp;range=A1:D28
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTG_b6upDZcPxXB92LHYIhV1uAXgeVGaMsZ3sDRPuSQN74JdhkKhZQVjw6T68I3zsP8KGYzDSVTZW64/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false&amp;gid=0&amp;range=A1:D43
 " width="100%" height="400">
 ```
 </iframe>
+
+# Day 31 Lab 7 
+
+[Intro to Project 3](https://moodle.smith.edu/). 
+
+::: {.callout-note collapse="false"}
+# Project 3 
+
+Partner and data set due next Monday. 
+
+If you want help finding a partner let me know. 
+
+:::
+
+Outline for the rest of the course. 
+
+[Lab 7](https://moodle.smith.edu)
 
 # Day 30 More Maps
 
