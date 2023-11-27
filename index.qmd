@@ -69,7 +69,7 @@ h1{font-weight: 400;}
 ::: {.callout-note collapse="true"}
 # Project 3 
 
-Partner and data set due Today. 
+Partner and data set due today at midnight. 
 
 If you want help finding a partner still fill out form.
 
@@ -86,13 +86,9 @@ I'm making partners tomorrow.
 Courtesy notes before talk with Becky. 
 
 Introduce Becky Sweger.
- 
-Links to share.
 
 ::: {.callout-note collapse="false"}
 # Becky's links
-
-[About Becky](https://beckysweger.com/about/)
 
 [DS links](https://docs.google.com/document/d/1VoeRatxdytSHQoY24LtGRpw0kjc0W9sfh1V4Bq8rfkw/edit)
 
