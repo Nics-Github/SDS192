@@ -663,5 +663,26 @@
     "title": "SDS 192 Fall '23",
     "section": "Reflection",
     "text": "Reflection\nYou will write a short reflection piece describing what you learned from working on this project and how well you and your group navigated the collaborative learning process.\nDetails coming soon!"
+  },
+  {
+    "objectID": "data_for_mapping.html",
+    "href": "data_for_mapping.html",
+    "title": "Ideas for Mapping Data",
+    "section": "",
+    "text": "There is a lot of data in the world, pick a set that you are comfortable with by the end of the first project day. You can go down a rabbit hole after the semester is over."
+  },
+  {
+    "objectID": "data_for_mapping.html#caution",
+    "href": "data_for_mapping.html#caution",
+    "title": "Ideas for Mapping Data",
+    "section": "",
+    "text": "There is a lot of data in the world, pick a set that you are comfortable with by the end of the first project day. You can go down a rabbit hole after the semester is over."
+  },
+  {
+    "objectID": "data_for_mapping.html#map-data-ideas-for-project-3",
+    "href": "data_for_mapping.html#map-data-ideas-for-project-3",
+    "title": "Ideas for Mapping Data",
+    "section": "Map data ideas for project 3",
+    "text": "Map data ideas for project 3\n\nEPA Toxic Release Inventory (TRI)\nhttps://www.epa.gov/toxics-release-inventory-tri-program/tri-basic-data-files-calendar-years-1987-present\n\n\nCDC Flu View Interactive.\nhttps://gis.cdc.gov/grasp/fluview/fluportaldashboard.html\n\n\nMassachusetts GIS Data\nhttps://www.mass.gov/info-details/massgis-data-layers\nOther states also have GIS Data\n\n\nSearch Geo Spatial Analysis on Kaggle\nhttps://www.kaggle.com/datasets?sort=usability&tags=13206-Geospatial+Analysis\n(Sort by usability)"
   }
 ]

@@ -1,0 +1,32 @@
+---
+title: "Ideas for Mapping Data"
+author: "Schwab"
+format: html
+editor: visual
+---
+
+## Caution!
+
+There is a lot of data in the world, pick a set that you are comfortable with by the end of the first project day. You can go down a rabbit hole after the semester is over.
+
+## Map data ideas for project 3
+
+### EPA Toxic Release Inventory (TRI)
+
+<https://www.epa.gov/toxics-release-inventory-tri-program/tri-basic-data-files-calendar-years-1987-present>
+
+### CDC Flu View Interactive.
+
+https://gis.cdc.gov/grasp/fluview/fluportaldashboard.html
+
+### Massachusetts GIS Data
+
+https://www.mass.gov/info-details/massgis-data-layers
+
+Other states also have GIS Data
+
+### Search Geo Spatial Analysis on Kaggle
+
+<https://www.kaggle.com/datasets?sort=usability&tags=13206-Geospatial+Analysis>
+
+(Sort by usability)
