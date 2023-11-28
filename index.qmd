@@ -62,6 +62,35 @@ h1{font-weight: 400;}
 ```
 </iframe>
 
+# Day 33 SQL
+
+Read Chapter 15 in [MDSR](https://mdsr-book.github.io/mdsr3e/15-sqlI.html)
+
+::: {.callout-note collapse="true"}
+# Final Project
+
+Basic Outline:
+
+-   Develop a question about database on Smith's SQL server.
+
+-   Make at least one 5 (or more) line query in SQL to help answer that question.
+
+-   Other wrangling in R. Must join, iterate, or create a function. 
+
+-   Produce one well put together graph/ map.
+
+-   Short write up (200-300 words). 
+
+-   Working alone
+
+Due Dec 14 by midnight 
+
+:::
+
+[Intro to SQL](course-materials/lectures/SQL-example-information-schema.qmd)
+
+SDS 261 SQL for Data Science 
+
 # Day 32 Talk with Becky
 
 [Project 3 partnership](https://forms.gle/Ltn9E2ChG8w2fGcw9)
