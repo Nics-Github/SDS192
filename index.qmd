@@ -64,6 +64,10 @@ h1{font-weight: 400;}
 
 # Day 33 SQL
 
+![](JC_promo_slide_updated.png)
+
+[Fill out this survey](https://smithcollege.qualtrics.com/jfe/form/SV_bf6ZnwCkNwM8xfM)
+
 Read Chapter 15 in [MDSR](https://mdsr-book.github.io/mdsr3e/15-sqlI.html)
 
 ::: {.callout-note collapse="true"}
@@ -75,44 +79,42 @@ Basic Outline:
 
 -   Make at least one 5 (or more) line query in SQL to help answer that question.
 
--   Other wrangling in R. Must join, iterate, or create a function. 
+-   Other wrangling in R. Must join, iterate, or create a function.
 
 -   Produce one well put together graph/ map.
 
--   Short write up (200-300 words). 
+-   Short write up (200-300 words).
 
 -   Working alone
 
-Due Dec 14 by midnight 
-
+Due Dec 14 by midnight
 :::
 
 [Intro to SQL](course-materials/lectures/SQL-example-information-schema.qmd)
 
-SDS 261 SQL for Data Science 
+SDS 261 SQL for Data Science
 
 # Day 32 Talk with Becky
 
 [Project 3 partnership](https://forms.gle/Ltn9E2ChG8w2fGcw9)
 
 ::: {.callout-note collapse="true"}
-# Project 3 
+# Project 3
 
-Partner and data set due today at midnight. 
+Partner and data set due today at midnight.
 
 If you want help finding a partner still fill out form.
 
-If you have a partner fill out form. 
+If you have a partner fill out form.
 
-[Here is the partner form ](https://forms.gle/Ltn9E2ChG8w2fGcw9)
+[Here is the partner form](https://forms.gle/Ltn9E2ChG8w2fGcw9)
 
-I'm making partners tomorrow. 
+I'm making partners tomorrow.
 
 [Here are some possible data examples](data_for_mapping.qmd)
-
 :::
 
-Courtesy notes before talk with Becky. 
+Courtesy notes before talk with Becky.
 
 Introduce Becky Sweger.
 
@@ -120,25 +122,23 @@ Introduce Becky Sweger.
 # Becky's links
 
 [DS links](https://docs.google.com/document/d/1VoeRatxdytSHQoY24LtGRpw0kjc0W9sfh1V4Bq8rfkw/edit)
-
 :::
 
-# Day 31 Lab 7 
+# Day 31 Lab 7
 
-[Intro to Project 3](https://moodle.smith.edu/). 
+[Intro to Project 3](https://moodle.smith.edu/).
 
 ::: {.callout-note collapse="false"}
-# Project 3 
+# Project 3
 
-Partner and data set due next Monday. 
+Partner and data set due next Monday.
 
-If you want help finding a partner let me know. 
+If you want help finding a partner let me know.
 
-[Here is the partner form ](https://forms.gle/Ltn9E2ChG8w2fGcw9)
-
+[Here is the partner form](https://forms.gle/Ltn9E2ChG8w2fGcw9)
 :::
 
-Outline for the rest of the course. 
+Outline for the rest of the course.
 
 [Lab 7](https://moodle.smith.edu)
 
@@ -154,23 +154,18 @@ Lab 7 on Mapping is Monday
 
 [More leaflet tiles](https://leaflet-extras.github.io/leaflet-providers/preview/)
 
-
-
 # Day 29 The other Mapping
 
+One more group project and one final project.
 
-
-One more group project and one final project. 
-
-[Becky Sweger](https://www.linkedin.com/in/beckysweger/) to talk on Monday Nov 27. 
+[Becky Sweger](https://www.linkedin.com/in/beckysweger/) to talk on Monday Nov 27.
 
 [Questions for Becky](https://forms.gle/pXGRTJBx1UovvY8G6)
-
 
 ::: {.callout-note collapse="true"}
 # Libraries
 
-You will need to install the libraries below. 
+You will need to install the libraries below.
 
 -   (fivethirtyeight)
 
@@ -197,7 +192,7 @@ You will need to install the libraries below.
 
 # Day 28 Lab 6- map()
 
-The Lab-6 link is on [moodle](moodle.smith.edu). It is due Friday at midnight. 
+The Lab-6 link is on [moodle](moodle.smith.edu). It is due Friday at midnight.
 
 # Day 27 `map()` and `across()` practice
 
@@ -228,8 +223,6 @@ Project 2 notes:
 [Solution to Monday's in class activity](/course-materials/in-class-activies/day_25solutions_function_writing.html)
 
 [Lecture: `across()` and `map()`](course-materials/lectures/Day_26_across_maps.qmd)
-
-
 
 [More on masking](https://rlang.r-lib.org/reference/topic-data-mask.html)
 
