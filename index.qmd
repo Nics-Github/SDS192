@@ -62,13 +62,21 @@ h1{font-weight: 400;}
 ```
 </iframe>
 
+# Day 35 SAL guests
+
+[Jon Caris and Kala'i Ellis](https://docs.google.com/presentation/d/1yxMAglQLNAWok3_xqPgMCqxa2g1IlsPHXeu04iT9BZs/edit?usp=sharing)
+
+
+
 # Day 34 Final Project work Day 1
 
 [Here's the link to the final project via moodle](https://moodle.smith.edu/mod/url/view.php?id=1116437)
 
 You will have Dec 13 to work on this in class as well. 
 
-Monday we will have [Jon Caris and Kala'i Ellis](https://www.science.smith.edu/sal/people-of-sal/) from Smith's [Spatial Analysis Lab](https://www.science.smith.edu/sal/) talk about mapping. 
+Monday we will have [Jon Caris and Kala'i Ellis](https://www.science.smith.edu/sal/people-of-sal/) from Smith's [Spatial Analysis Lab](https://www.science.smith.edu/sal/) talk about mapping.
+
+[Spenlli Center wants some feedback on tutoring](https://docs.google.com/forms/d/e/1FAIpQLScaFw8W2yCrmK5KVyDbEtBzbA8-rHFFj-2PxqK557RyKlpwhg/viewform)
 
 # Day 33 SQL
 
