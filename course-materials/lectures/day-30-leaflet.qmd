@@ -6,6 +6,7 @@ editor: visual
 execute:
   echo: true
 ---
+
 # Libraries
 
 ```{r setup}
@@ -168,6 +169,7 @@ mass_pop_orig <-
   st_transform('+proj=longlat +datum=WGS84')
 
 ```
+
 # Polygons
 
 ```{r}
@@ -175,7 +177,6 @@ leaflet(mass_pop_orig) |>
   addTiles() |>
   addPolygons()
 ```
-
 
 # Little markers
 
@@ -206,7 +207,7 @@ leaflet() |>
   
 ```
 
-# You can also change your map type. 
+# You can also change your map type.
 
 [Here is your list of tiles](http://leaflet-extras.github.io/leaflet-providers/preview/index.html)
 
@@ -233,11 +234,12 @@ leaflet() |>
   addMarkers(data = addresses, lng=~long, lat=~lat, popup = ~name, ) |>
   addCircleMarkers(data = ma_cities, lng=~long, lat=~lat, popup = ~name, color='black',clusterOptions = markerClusterOptions() ) 
 ```
-```
+
+\`\`\`
 
 # More Tiles
 
--   [Most of these work:]( http://leaflet-extras.github.io/leaflet-providers/preview/index.html)
+-   [Most of these work:](http://leaflet-extras.github.io/leaflet-providers/preview/index.html)
 
 -   Nasa: `NASAGIBS.ViirsEarthAtNight2012`
 

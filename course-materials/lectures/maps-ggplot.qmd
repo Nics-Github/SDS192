@@ -109,4 +109,3 @@ states <- read_sf("") |>
 counties <- read_sf("") |>
   st_transform('+proj=longlat +datum=WGS84')
 ```
-

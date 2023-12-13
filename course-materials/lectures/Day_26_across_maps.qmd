@@ -61,7 +61,7 @@ iris %>%
             Petal.Width = round(Petal.Width))
 ```
 
-## Rounding 
+## Rounding
 
 ```{r}
 iris %>%
