@@ -137,7 +137,7 @@
     "href": "schwab.html#student-hours",
     "title": "Nic Schwab",
     "section": "Student Hours",
-    "text": "Student Hours\nDrop into the office: Wednesdays and Friday from 9:45am - 10:45am in McConnell 213\nBy Appointment (schedule between 12 hours and 7 days in advance) Tuesday and Thursday 9:00 – 10:15 am\nPlease let me know if the above times do not work for your schedule and we can coordinate another time."
+    "text": "Student Hours\nDrop into the office: Monday: 1:35-2:35 pm, Friday: 12:45 pm -1:45pm or by appointment. in McConnell 213\nPlease let me know if the above times do not work for your schedule and we can coordinate another time."
   },
   {
     "objectID": "schwab.html#education",
@@ -375,7 +375,7 @@
     "href": "index.html",
     "title": "SDS 192: Intro to Data Science",
     "section": "",
-    "text": "Announcement: Presentation of the major"
+    "text": "Schedule\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n–&gt;\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDay 1: No Computer Data Viz\n\nSyllabus\nLog into Slack\nWebsite tour\nBring Computers to Class\n\n\nLecture\nData Viz No Computers\n\n\nGeneral Questions and Comments\n\n\n\n\n\n\nHomework:\n\n\n\n\n\n\nSign up for github here, if you don’t already have an account. We will very carefully link your github account to our github classroom account.\nRead the prologue to chapter 1.4 of MDSR.\n\n\n\n\n\n\nWalk to MCConnell 213 and 214\nMy office and group study room."
   },
   {
     "objectID": "course-materials/lectures/Day18_pivots.html",
@@ -705,5 +705,194 @@
     "title": "iteration",
     "section": "",
     "text": "These functions allow us to preform the same operation across multiple rows.\nmap() comes from the purr package.\nacross() comes from the dplyr package."
+  },
+  {
+    "objectID": "course-materials/first-day-survey/Data-Viz-No-Computers.html#names-and-surveys",
+    "href": "course-materials/first-day-survey/Data-Viz-No-Computers.html#names-and-surveys",
+    "title": "No Computers Data Viz",
+    "section": "Names and Surveys",
+    "text": "Names and Surveys\nSurvey Questions"
+  },
+  {
+    "objectID": "course-materials/first-day-survey/Data-Viz-No-Computers.html#data-viz-no-computers",
+    "href": "course-materials/first-day-survey/Data-Viz-No-Computers.html#data-viz-no-computers",
+    "title": "No Computers Data Viz",
+    "section": "Data Viz no computers",
+    "text": "Data Viz no computers\nSheets data\n\nData Frame\nObservations\nTidy Data\nVariables\nVariable Types"
+  },
+  {
+    "objectID": "course-materials/first-day-survey/Data-Viz-No-Computers.html#take-1-hand-drawn-graphs-of-survey-questions.",
+    "href": "course-materials/first-day-survey/Data-Viz-No-Computers.html#take-1-hand-drawn-graphs-of-survey-questions.",
+    "title": "No Computers Data Viz",
+    "section": "Take 1: Hand drawn graphs of survey questions.",
+    "text": "Take 1: Hand drawn graphs of survey questions.\nDraw a graph of a variable. Do not write your name.\n\nIt does not need to be perfect.\nTry to make it correct.\n\nIt is fine if its not correct."
+  },
+  {
+    "objectID": "course-materials/first-day-survey/Data-Viz-No-Computers.html#talk-to-someone-close-to-you.",
+    "href": "course-materials/first-day-survey/Data-Viz-No-Computers.html#talk-to-someone-close-to-you.",
+    "title": "No Computers Data Viz",
+    "section": "Talk to someone close to you.",
+    "text": "Talk to someone close to you.\nAnswer these questions:\n\nIs the graph’s message or story clear?\nWhat is missing from each graph?\nWhat is distracting from the graph?\nWhat does the graph do well?"
+  },
+  {
+    "objectID": "course-materials/first-day-survey/Data-Viz-No-Computers.html#what-makes-a-clear-graph",
+    "href": "course-materials/first-day-survey/Data-Viz-No-Computers.html#what-makes-a-clear-graph",
+    "title": "No Computers Data Viz",
+    "section": "What makes a clear graph?",
+    "text": "What makes a clear graph?\nClass discussion."
+  },
+  {
+    "objectID": "course-materials/first-day-survey/Data-Viz-No-Computers.html#baumers-thoughts",
+    "href": "course-materials/first-day-survey/Data-Viz-No-Computers.html#baumers-thoughts",
+    "title": "No Computers Data Viz",
+    "section": "Baumer’s Thoughts",
+    "text": "Baumer’s Thoughts\nSome of the following slides were borrowed by the text’s author."
+  },
+  {
+    "objectID": "course-materials/first-day-survey/Data-Viz-No-Computers.html#a-misleading-chart-from-apple",
+    "href": "course-materials/first-day-survey/Data-Viz-No-Computers.html#a-misleading-chart-from-apple",
+    "title": "No Computers Data Viz",
+    "section": "A misleading chart from Apple",
+    "text": "A misleading chart from Apple"
+  },
+  {
+    "objectID": "course-materials/first-day-survey/Data-Viz-No-Computers.html#pie-charts",
+    "href": "course-materials/first-day-survey/Data-Viz-No-Computers.html#pie-charts",
+    "title": "No Computers Data Viz",
+    "section": "Pie charts",
+    "text": "Pie charts\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAre 6-cylinder engines more common among manuals or automatics?"
+  },
+  {
+    "objectID": "course-materials/first-day-survey/Data-Viz-No-Computers.html#unclear-scales",
+    "href": "course-materials/first-day-survey/Data-Viz-No-Computers.html#unclear-scales",
+    "title": "No Computers Data Viz",
+    "section": "Unclear Scales",
+    "text": "Unclear Scales\n\n\nOften not very clearly defined\nEasy to lie by manipulating scales\nWhy perspective?\nWidth of lines?"
+  },
+  {
+    "objectID": "course-materials/first-day-survey/Data-Viz-No-Computers.html#clearer-scales",
+    "href": "course-materials/first-day-survey/Data-Viz-No-Computers.html#clearer-scales",
+    "title": "No Computers Data Viz",
+    "section": "Clearer Scales",
+    "text": "Clearer Scales\n\n\nGood graphics have clear scales\n\nRemember iPhone sales graphic"
+  },
+  {
+    "objectID": "course-materials/first-day-survey/Data-Viz-No-Computers.html#section",
+    "href": "course-materials/first-day-survey/Data-Viz-No-Computers.html#section",
+    "title": "No Computers Data Viz",
+    "section": "",
+    "text": "1\n\n\n\n\n\nhttps://en.wikipedia.org/wiki/Misleading_graph#Improper_scaling"
+  },
+  {
+    "objectID": "course-materials/first-day-survey/Data-Viz-No-Computers.html#section-1",
+    "href": "course-materials/first-day-survey/Data-Viz-No-Computers.html#section-1",
+    "title": "No Computers Data Viz",
+    "section": "",
+    "text": "1\nhttps://en.wikipedia.org/wiki/Misleading_graph#3D"
+  },
+  {
+    "objectID": "course-materials/first-day-survey/Data-Viz-No-Computers.html#section-2",
+    "href": "course-materials/first-day-survey/Data-Viz-No-Computers.html#section-2",
+    "title": "No Computers Data Viz",
+    "section": "",
+    "text": "1\nhttps://en.wikipedia.org/wiki/Chartjunk"
+  },
+  {
+    "objectID": "course-materials/first-day-survey/Data-Viz-No-Computers.html#balance-of-art-vs.-science",
+    "href": "course-materials/first-day-survey/Data-Viz-No-Computers.html#balance-of-art-vs.-science",
+    "title": "No Computers Data Viz",
+    "section": "Balance of art vs. science",
+    "text": "Balance of art vs. science\n\n\nData graphics:\n\npurpose is to convey meaning\nscientific, rigorous\npeer-reviewed\nclear\ncreative!\n\n\nInfographics:\n\npurpose might be to draw eyeballs\nentertaining?\nsales or marketing?\npublic sphere\ncreative\n\n\n\nWe’re only interested in the former"
+  },
+  {
+    "objectID": "course-materials/first-day-survey/Data-Viz-No-Computers.html#other-people-have-thought-about-this",
+    "href": "course-materials/first-day-survey/Data-Viz-No-Computers.html#other-people-have-thought-about-this",
+    "title": "No Computers Data Viz",
+    "section": "Other people have thought about this",
+    "text": "Other people have thought about this\nDo’s and Don’t\nTufte’s Data to Ink Ratio\nFlowing Data"
+  },
+  {
+    "objectID": "course-materials/first-day-survey/Data-Viz-No-Computers.html#some-graphs-to-discuss-in-groups",
+    "href": "course-materials/first-day-survey/Data-Viz-No-Computers.html#some-graphs-to-discuss-in-groups",
+    "title": "No Computers Data Viz",
+    "section": "Some Graphs to discuss in groups",
+    "text": "Some Graphs to discuss in groups\nThe Economist’s Graph detail\nGraphs from the NYTimes"
+  },
+  {
+    "objectID": "course-materials/syllabus/syllabus.html",
+    "href": "course-materials/syllabus/syllabus.html",
+    "title": "Basic information",
+    "section": "",
+    "text": "Course title: SDS 192: Introduction to Data Science\nContact Info:\n nschwab@smith.edu\n 413-585-3440\n Nics-Github\nOffice location: McConnell 213\nEmail: nschwab@smith.edu\nMeeting locations/times:\n\nMorning Section\n-   MWF: 10:50 AM - 12:05 PM / Sabin-Reed 220\n\n\nGetting help:\n\nFor non personal/sensitive questions, ask on the #questions channel on Slack. For personal/sensitive matters, Slack DM Professor Schwab.\nStudent hours\nSpinelli Center\n\n\n\n\n\nI will respond to Slack messages sent during the week within 24h. I will respond to Slack messages sent during the weekend at my own discretion.\nIf possible, please only Slack me with briefer and administrative questions; I prefer having more substantive conversations in person as it takes me less energy to understand where you are at.\nI will do my best to return all grading as promptly as possible."
+  },
+  {
+    "objectID": "course-materials/syllabus/syllabus.html#work-life-balance",
+    "href": "course-materials/syllabus/syllabus.html#work-life-balance",
+    "title": "Basic information",
+    "section": "",
+    "text": "I will respond to Slack messages sent during the week within 24h. I will respond to Slack messages sent during the weekend at my own discretion.\nIf possible, please only Slack me with briefer and administrative questions; I prefer having more substantive conversations in person as it takes me less energy to understand where you are at.\nI will do my best to return all grading as promptly as possible."
+  },
+  {
+    "objectID": "course-materials/syllabus/syllabus.html#projects-30",
+    "href": "course-materials/syllabus/syllabus.html#projects-30",
+    "title": "Basic information",
+    "section": "Projects 30%",
+    "text": "Projects 30%\nThere are four projects to complete during the semester. They will be completed collaboratively with a team of students using SCRUM."
+  },
+  {
+    "objectID": "course-materials/syllabus/syllabus.html#final-project-20",
+    "href": "course-materials/syllabus/syllabus.html#final-project-20",
+    "title": "Basic information",
+    "section": "Final project 20%",
+    "text": "Final project 20%\nThere will be a final project due the last day of classes. These will be completed in groups during the last few weeks of class."
+  },
+  {
+    "objectID": "course-materials/syllabus/syllabus.html#quizzes-20",
+    "href": "course-materials/syllabus/syllabus.html#quizzes-20",
+    "title": "Basic information",
+    "section": "Quizzes 20%",
+    "text": "Quizzes 20%\nThere are 3 or 4 self schedules quizzes this semester."
+  },
+  {
+    "objectID": "course-materials/syllabus/syllabus.html#labs-20",
+    "href": "course-materials/syllabus/syllabus.html#labs-20",
+    "title": "Basic information",
+    "section": "Labs 20%",
+    "text": "Labs 20%\nMany Fridays there will be in class labs. You will have until the following Wednesday to complete the lab. Its important to complete and stay on top of the problem sets. They will be graded on the following scale:\n\n5 points: Assignment is complete, mostly correct, rendered and submitted\n4 points: Assignment is nearly complete, mostly correct, rendered and submitted\n3 points: Assignment is around 50% of the problems have been completed, are correct, the assignment is rendered\n2 points: Assignment is at most 50% complete, the problems are incorrect and is not correctly rendered\n1 point : Assignment is largely unfinished and is not rendered\n0 points: No assignment is turned in."
+  },
+  {
+    "objectID": "course-materials/syllabus/syllabus.html#engagement",
+    "href": "course-materials/syllabus/syllabus.html#engagement",
+    "title": "Basic information",
+    "section": "Engagement 10%",
+    "text": "Engagement 10%\nIt is difficult to explicit codify what constitutes “an engaged student,” so instead I present the following rough principle I will follow: you’ll only get out of this class as much as you put in. That being said, here are multiple pathways for you to stay engaged in this class:\n\nParticipation in all SCRUM Sprints\nAsking and answering questions in class.\nWorking and staying focused in class.\nComing to office hours.\nPosting questions on Slack.\nEven better: Responding to questions on Slack.\nComplete Classwork problems"
+  },
+  {
+    "objectID": "course-materials/syllabus/syllabus.html#tentative-assignment-schedule",
+    "href": "course-materials/syllabus/syllabus.html#tentative-assignment-schedule",
+    "title": "Basic information",
+    "section": "Tentative Assignment schedule",
+    "text": "Tentative Assignment schedule\nLabs will be assigned regularly and due by midnight the following Monday.\nProject 1- due after reading chapter 4 of MDSR\nProject 2- due after reading chapter 5 of MDSR\nProject 3- due after reading chapter 17 of MDSR\nFinal Project/ Presentation during our final time.\nFor a more up to date schedule see the course’s website."
+  },
+  {
+    "objectID": "course-materials/syllabus/syllabus.html#policies-1",
+    "href": "course-materials/syllabus/syllabus.html#policies-1",
+    "title": "Basic information",
+    "section": "Policies",
+    "text": "Policies\n\nAccommodation\nSmith is committed to providing support services and reasonable accommodations to all students with disabilities. To request an accommodation, please register with the Disability Services Office at the beginning of the semester. To do so, call (413) 585-2071 to arrange an appointment with Laura Rauscher, Director of Disability Services."
+  },
+  {
+    "objectID": "course-materials/syllabus/syllabus.html#policies-2",
+    "href": "course-materials/syllabus/syllabus.html#policies-2",
+    "title": "Basic information",
+    "section": "Policies",
+    "text": "Policies\n\nInclusion\n\n\n\n\n\n\nInclusion policy\n\n\n\nWe are committed to fostering a classroom environment where all students thrive. We are committed to affirming the identities, realities and voices of all students, especially those from historically marginalized or underrepresented backgrounds. We are dedicated to creating a space where everyone in the class is respected, is free from discrimination based on race, ethnicity, sexual orientation, religion, gender identity, disability status, and other identities, and feel welcome and ready to learn at your highest potential.\nIf you have any concerns or suggestions for how to make this class more inclusive, please reach out to your instructor.\nWe are here to support your learning and growth as data scientists and people!\n\n\n\n\nAttendance\nWe expect you attend class in person. If you choose to come to class, we expect your full attention. Please put your phone away during class unless otherwise directed.\nIn keeping with Smith’s core identity and mission as an in-person, residential college, SDS affirms College policy (as per the Provost and Dean of the College) that students will attend class in person. SDS courses will not provide options for remote attendance. Students who have been determined to require a remote attendance accommodation by the Office of Disability Services will be the only exceptions to this policy. As with any other kind of ADA accommodations, please notify your instructor during the first week of classes to discuss how we can meet your accommodations.\nIf you are unable to attend class for any reason, please follow the materials on the course website and check with another student about what happened in class.\n\n\nCollaboration\n\n\n\n\n\n\nWarning\n\n\n\nMuch of this course will operate on a collaborative basis, and you are expected and encouraged to work together with a partner or in small groups to study, complete labs, and prepare for exams. However, all work that you submit for credit must be your own. Copying and pasting sentences, paragraphs, or blocks of code from another student or from online sources is not acceptable and will receive no credit. No interaction with anyone but the instructors is allowed on any exams or quizzes.\n\n\n\n\nAcademic Honor Code Statement\nAll students, staff and faculty are bound by the Smith College Honor Code, which Smith has had since 1944.\n\nSmith College expects all students to be honest and committed to the principles of academic and intellectual integrity in their preparation and submission of course work and examinations. Students and faculty at Smith are part of an academic community defined by its commitment to scholarship, which depends on scrupulous and attentive acknowledgement of all sources of information, and honest and respectful use of college resources.\n\nCases of dishonesty, plagiarism, etc., will be reported to the Academic Honor Board.\n\n\nCode of Conduct\nAs the instructor and assistants for this course, we are committed to making participation in this course a harassment-free experience for everyone, regardless of level of experience, gender, gender identity and expression, sexual orientation, disability, personal appearance, body size, race, ethnicity, age, or religion. Examples of unacceptable behavior by participants in this course include the use of sexual language or imagery, derogatory comments or personal attacks, deliberate misgendering or use of “dead” names, trolling, public or private harassment, insults, or other unprofessional conduct.\nAs the instructor and assistants we have the right and responsibility to point out and stop behavior that is not aligned to this Code of Conduct. Participants who do not follow the Code of Conduct may be reprimanded for such behavior. Instances of abusive, harassing, or otherwise unacceptable behavior may be reported by contacting the instructor.\n\n\n\n\n\n\nImportant\n\n\n\nAll students, the instructor, the lab instructor, and all assistants are expected to adhere to this Code of Conduct in all settings for this course: lectures, labs, office hours, tutoring hours, and over Slack.\n\n\nThis Code of Conduct is adapted from the Contributor Covenant, version 1.0.0, available here."
+  },
+  {
+    "objectID": "course-materials/syllabus/syllabus.html#resources",
+    "href": "course-materials/syllabus/syllabus.html#resources",
+    "title": "Basic information",
+    "section": "Resources",
+    "text": "Resources\n\nMoodle and course website\nThe course website and Moodle will be updated regularly with lecture handouts, project information, assignments, and other course resources. Grades will be recorded on Moodle. Please check both regularly.\n\n\nCommunication\n\n Slack is the primary mechanism for course-related discussions of all kinds. Please do not email the course instructor with course-related questions! Instead, post these on #questions on Slack. If discretion is absolutely necessary, private message the instructor on Slack.\n\n\n\nWriting\nYour ability to communicate results (which may be technical in nature) to your audience (which is likely to be non-technical) is critical to your success as a data analyst. The assignments in this class will place an emphasis on the clarity of your writing.\n\n\nWriting Enriched Curriculum\nThis course is part of Smith College’s Writing Enriched Curriculum. As such, the course supports the Writing Plan of the Program in Statistical & Data Sciences.\nPlease read the SDS Writing Plan for more information.\n\n\nThe Spinelli Center\nThe Spinelli Center (now in Seelye 207) supports students doing quantitative work across the curriculum. In particular, they employ:\n\nSDS Tutors available from 7:00–9:00pm on Sunday–Thursday evenings in Burton 301. These students are trained to help you with your statistics and R questions.\nA Data Research and Statistics Counselor (Osman Keshawarz) who keeps both drop-in hours and appointments. Students are welcome to email qlctutor@smith.edu to make an appointment.\n\nYour fellow students are also an excellent source for explanations, tips, etc."
   }
 ]
