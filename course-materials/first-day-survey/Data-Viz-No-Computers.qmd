@@ -1,7 +1,9 @@
 ---
-title: "No computers Data Viz"
+title: "No Computers Data Viz"
 author: "Schwab"
-format: revealjs
+format: 
+  revealjs:
+    theme: beige
 editor: visual
 ---
 
@@ -39,7 +41,7 @@ Draw a graph of a variable. **Do not write your name.**
 
     -   It is fine if its not correct.
 
-## Form small groups of 4
+## Talk to someone close to you.
 
 Answer these questions:
 
@@ -55,19 +57,15 @@ Answer these questions:
 
 Class discussion.
 
-## Take 2: Hand Drawn Graphs again
-
-Choose your favorite of the four graphs and as a group redraw it.
-
 ## Baumer's Thoughts
 
-Some of the following slides were hyjacked by the text's author.
+Some of the following slides were borrowed by the text's author.
 
 ## [A misleading chart from Apple](https://qz.com/122921/the-chart-tim-cook-doesnt-want-you-to-see/)
 
 ![](https://cms.qz.com/wp-content/uploads/2013/09/iphone-sales.jpg?quality=75&strip=all&w=620&h=413&crop=1)
 
-## Pie charts (just don't)
+## Pie charts
 
 ::: columns
 ::: {.column width="50%"}
@@ -98,10 +96,6 @@ g +
 
 Are 6-cylinder engines more common among manuals or automatics?
 
-[^1]
-
-[^1]: https://en.wikipedia.org/wiki/Misleading_graph#Improper_scaling
-
 ## Unclear Scales
 
 ![](https://infovis-wiki.net/w/images/0/05/Lie_factor_example1_image.jpg){fig-align="center" width="200%"}
@@ -120,9 +114,9 @@ Are 6-cylinder engines more common among manuals or automatics?
 
 ## 
 
-[^2]
+[^1]
 
-[^2]: https://en.wikipedia.org/wiki/Misleading_graph#Improper_scaling
+[^1]: https://en.wikipedia.org/wiki/Misleading_graph#Improper_scaling
 
 ![](https://image.slidesharecdn.com/tufte-slides-150224020553-conversion-gate02/95/lessons-from-edward-tufte-5-638.jpg?cb=1424765239){fig-align="center" width="800"}
 
@@ -130,17 +124,17 @@ Are 6-cylinder engines more common among manuals or automatics?
 
 ![](https://image.slidesharecdn.com/tufte-slides-150224020553-conversion-gate02/95/lessons-from-edward-tufte-9-638.jpg?cb=1424765239){width="800"}
 
-[^3]
+[^2]
 
-[^3]: https://en.wikipedia.org/wiki/Misleading_graph#3D
+[^2]: https://en.wikipedia.org/wiki/Misleading_graph#3D
 
 ## 
 
 ![](https://image.slidesharecdn.com/tufte-slides-150224020553-conversion-gate02/95/lessons-from-edward-tufte-16-638.jpg?cb=1424765239){width="800"}
 
-[^4]
+[^3]
 
-[^4]: https://en.wikipedia.org/wiki/Chartjunk
+[^3]: https://en.wikipedia.org/wiki/Chartjunk
 
 ## Balance of art vs. science
 

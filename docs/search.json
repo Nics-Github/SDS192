@@ -137,7 +137,7 @@
     "href": "schwab.html#student-hours",
     "title": "Nic Schwab",
     "section": "Student Hours",
-    "text": "Student Hours\nDrop into the office: Wednesdays and Friday from 9:45am - 10:45am in McConnell 213\nBy Appointment (schedule between 12 hours and 7 days in advance) Tuesday and Thursday 9:00 – 10:15 am\nPlease let me know if the above times do not work for your schedule and we can coordinate another time."
+    "text": "Student Hours\nDrop into the office: Monday: 1:35-2:35 pm, Friday: 12:45 pm -1:45pm or by appointment. in McConnell 213\nPlease let me know if the above times do not work for your schedule and we can coordinate another time."
   },
   {
     "objectID": "schwab.html#education",
@@ -375,7 +375,7 @@
     "href": "index.html",
     "title": "SDS 192: Intro to Data Science",
     "section": "",
-    "text": "Announcement: Presentation of the major"
+    "text": "Schedule\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n–&gt;\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDay 1: No Computer Data Viz\n\nSyllabus\nLog into Slack\nWebsite tour\nBring Computers to Class\n\n\nLecture\nData Viz No Computers\n\n\nGeneral Questions and Comments\n\n\n\n\n\n\nHomework:\n\n\n\n\n\n\nSign up for github here, if you don’t already have an account. We will very carefully link your github account to our github classroom account.\nRead the prologue to chapter 1.4 of MDSR.\n\n\n\n\n\n\nWalk to MCConnell 213 and 214\nMy office and group study room."
   },
   {
     "objectID": "course-materials/lectures/Day18_pivots.html",
@@ -707,10 +707,200 @@
     "text": "These functions allow us to preform the same operation across multiple rows.\nmap() comes from the purr package.\nacross() comes from the dplyr package."
   },
   {
+<<<<<<< HEAD
     "objectID": "course-materials/lectures/throw_away_SQL-example-information-schema.html",
     "href": "course-materials/lectures/throw_away_SQL-example-information-schema.html",
     "title": "dbplyr-SQL",
     "section": "",
     "text": "Setup\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.3     ✔ readr     2.1.4\n✔ forcats   1.0.0     ✔ stringr   1.5.0\n✔ ggplot2   3.4.4     ✔ tibble    3.2.1\n✔ lubridate 1.9.2     ✔ tidyr     1.3.0\n✔ purrr     1.0.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nlibrary(RMySQL)\n\nLoading required package: DBI\n\nlibrary(leaflet)\nlibrary(dbplyr)\n\n\nAttaching package: 'dbplyr'\n\nThe following objects are masked from 'package:dplyr':\n\n    ident, sql\n\ndb &lt;- dbConnect(\n  MySQL(),\n  host = \"scidb.smith.edu\",\n  user = \"sds192\",\n  password = \"DSismfc@S\"\n)\nknitr::opts_chunk$set(connection = db, max.print = 20)\n\n\n\nBig Idea\nData can live in a flat file (.csv) or relational database.\nIf the flat file is too big it’ll crash R (think of fec20).\nWe store large quantities in a database on a server and call up what we need.\nWe use the Structured Query Language (SQL) to do this.\n\n\nDifferent dialects of SQL\nWe’ll be using MySQL.\nThe server is in Bass Hall. It is a physical computer.\nNon efficient queries slow it down for everyone.\n\n\ndb?\n\nclass(db)\n\n[1] \"MySQLConnection\"\nattr(,\"package\")\n[1] \"RMySQL\"\n\n\n\n\nTake a look at the databases\n\n\nSHOW DATABASES;\n\n\n8 records\n\n\nDatabase\n\n\n\n\nairlines\n\n\ncitibike\n\n\nfec\n\n\nimdb\n\n\ninformation_schema\n\n\nlahman\n\n\nperformance_schema\n\n\nyelp\n\n\n\n\n\n\n\nChoose a database\n\nUSE citibike;\n\n\n\nLook at the tables\n\nSHOW TABLES;\n\n\n4 records\n\n\nTables_in_citibike\n\n\n\n\nstation_months\n\n\nstation_summary\n\n\ntrip_summary\n\n\ntrips\n\n\n\n\n\n\n\nDescribe a table\nThis shows what each variable (field) is and its type.\n\n\nDESCRIBE trips;\n\n\n9 records\n\n\nField\nType\nNull\nKey\nDefault\nExtra\n\n\n\n\nduration\nsmallint\nYES\n\nNA\n\n\n\nstart_time\ndatetime\nNO\nMUL\nNA\n\n\n\nstop_time\ndatetime\nNO\nMUL\nNA\n\n\n\nstart_station_id\nsmallint\nYES\nMUL\nNA\n\n\n\nend_station_id\nsmallint\nYES\nMUL\nNA\n\n\n\nbike_id\nsmallint\nYES\nMUL\nNA\n\n\n\nuser_type\ntext\nYES\n\nNA\n\n\n\nbirth_year\nsmallint\nYES\n\nNA\n\n\n\ngender\nsmallint\nYES\n\nNA\n\n\n\n\n\n\n\nSELECT station_id, num_stops\n\nFROM station_summary\n\nWHERE num_stops IS NOT NULL\n\nORDER BY num_stops\n\nLimit 10;\n\n\n10 records\n\n\nstation_id\nnum_stops\n\n\n\n\n3215\n0\n\n\n3633\n1\n\n\n3220\n1\n\n\n3268\n1\n\n\n3188\n1\n\n\n3645\n1\n\n\n3272\n1\n\n\n3209\n1\n\n\n3278\n1\n\n\n3277\n1\n\n\n\n\n\n\n\nSQL to dplyr\n\n\n\nSQL\ndplyr\n\n\n\n\nSELECT\nselect(), mutate(), summarise()\n\n\nFROM\nthe data frame. data=\n\n\nWHERE\nfilter()\n\n\nGROUP BY\ngroup_by\n\n\nHAVING\nfilter() use after group_by()\n\n\nORDER BY\narrange()\n\n\nLIMIT\nhead()\n\n\n\n\n\nQuestion\nWhich station had the most bikes rented from it?\nProbably consider num_starts from station_summary.\n\n\nSELECT station_id, num_starts \n\nFROM station_summary \n\nLIMIT 10;\n\n\n10 records\n\n\nstation_id\nnum_starts\n\n\n\n\n72\n38308\n\n\n79\n26373\n\n\n82\n9588\n\n\n83\n14866\n\n\n116\n38377\n\n\n119\n3035\n\n\n120\n9173\n\n\n127\n58446\n\n\n128\n63044\n\n\n143\n22234\n\n\n\n\n\n\n\nORDER BY\n\n\nSELECT station_id, num_starts \n\nFROM station_summary \n\nORDER BY num_starts\n\nLIMIT 10;\n\n\n10 records\n\n\nstation_id\nnum_starts\n\n\n\n\n3278\n0\n\n\n3275\n0\n\n\n3276\n0\n\n\n3277\n0\n\n\n3213\n0\n\n\n3279\n0\n\n\n3202\n0\n\n\n3471\n0\n\n\n3273\n0\n\n\n3639\n0\n\n\n\n\n\n\n\nORDER BY DESC\n\n\nSELECT station_id, num_starts \n\nFROM station_summary \n\nORDER BY  num_starts DESC\n\nLIMIT 10;\n\n\n10 records\n\n\nstation_id\nnum_starts\n\n\n\n\n519\n162716\n\n\n497\n112218\n\n\n402\n108590\n\n\n435\n107133\n\n\n426\n105610\n\n\n3255\n97083\n\n\n490\n94872\n\n\n459\n90718\n\n\n514\n86833\n\n\n477\n85082\n\n\n\n\n\n\n\nWhere are the top 10 stations?\n\n\nSELECT station_id, num_starts, lat, lon \n\nFROM station_summary \n\nORDER BY  num_starts DESC\n\nLIMIT 10;\n\n\n10 records\n\n\nstation_id\nnum_starts\nlat\nlon\n\n\n\n\n519\n162716\n40.75187\n-73.97771\n\n\n497\n112218\n40.73705\n-73.99009\n\n\n402\n108590\n40.74034\n-73.98955\n\n\n435\n107133\n40.74174\n-73.99416\n\n\n426\n105610\n40.71755\n-74.01322\n\n\n3255\n97083\n40.75059\n-73.99468\n\n\n490\n94872\n40.75155\n-73.99393\n\n\n459\n90718\n40.74674\n-74.00776\n\n\n514\n86833\n40.76087\n-74.00278\n\n\n477\n85082\n40.75641\n-73.99003\n\n\n\n\n\n\n\nHow to bring an SQL query into R\n\ntop_10_data &lt;- dbGetQuery(conn = db, \n\n\"SELECT station_id, num_starts, lat, lon \n\nFROM station_summary \n\nORDER BY  num_starts DESC\n\nLIMIT 10;\")\n\nWarning in .local(conn, statement, ...): Decimal MySQL column 1 imported as\nnumeric\n\n\n\n\nPut points on map\n\nlibrary(leaflet)\n\nleaflet() |&gt;\n  addTiles()|&gt;\n  addMarkers(lat= ~lat, lng = ~lon, data=top_10_data)\n\n\n\n\n\n\n\nWrangling in SQL\nWhat is the average age of people leaving from each location?\n\n\nSELECT start_station_id, AVG(2023-birth_year) AS avg_age \n\nFROM trips \n\nWHERE 2023-birth_year &lt; 100\n\nGROUP BY start_station_id \n\nORDER BY start_station_id DESC\n\nLIMIT 10;\n\n\n10 records\n\n\nstart_station_id\navg_age\n\n\n\n\n3654\n43.8261\n\n\n3653\n40.1600\n\n\n3650\n36.2462\n\n\n3649\n44.4194\n\n\n3648\n41.1166\n\n\n3647\n43.8048\n\n\n3646\n38.8705\n\n\n3644\n46.5960\n\n\n3643\n44.7412\n\n\n3642\n42.5606\n\n\n\n\n\n\n\nJOIN\nThis query take a while, don’t execute it now.\n\n\nSELECT start_station_id, \n  AVG(2023-birth_year) AS age , \n  lat, \n  lon\n\nFROM trips \n\nJOIN station_summary ON trips.start_station_id = station_summary.station_id \n\nGROUP BY start_station_id\n\nORDER BY age DESC;\n\n\nDisplaying records 1 - 20\n\n\nstart_station_id\nage\nlat\nlon\n\n\n\n\n3237\n402.7122\n40.75383\n-73.94268\n\n\n298\n233.7158\n40.68683\n-73.97968\n\n\n225\n216.8843\n40.74195\n-74.00803\n\n\n3036\n189.7692\n40.79018\n-73.93029\n\n\n3282\n173.8735\n40.78307\n-73.95939\n\n\n3143\n172.2901\n40.77645\n-73.96418\n\n\n3160\n165.6663\n40.77897\n-73.97375\n\n\n2006\n159.9212\n40.76591\n-73.97634\n\n\n3040\n157.6471\n40.66402\n-74.00030\n\n\n2004\n154.1392\n40.72440\n-74.00470\n\n\n3374\n153.8073\n40.79948\n-73.95561\n\n\n3180\n147.0312\n40.69878\n-73.99712\n\n\n493\n144.9925\n40.75680\n-73.98291\n\n\n232\n143.2358\n40.69598\n-73.99015\n\n\n3114\n141.0478\n40.73165\n-73.96162\n\n\n3137\n137.6360\n40.77283\n-73.96685\n\n\n3136\n134.5695\n40.76637\n-73.97152\n\n\n217\n131.6999\n40.70277\n-73.99384\n\n\n224\n129.1457\n40.71146\n-74.00552\n\n\n3165\n128.8369\n40.77579\n-73.97621\n\n\n\n\n\n\n\nBring this into R\nUse the dbGetQuery() function. The first argument is the connection the second is the query as a character.\n\nage_by_station_data &lt;- dbGetQuery(conn = db, \n                          \"SELECT start_station_id, \n                          AVG(2023-birth_year) AS age , \n                          lat,\n                          lon\n                          \n                          FROM trips \n                          \n                          JOIN station_summary ON trips.start_station_id = station_summary.station_id \n                          \n                          GROUP BY start_station_id\n                          \n                          ORDER BY age DESC;\")\n\nWarning in .local(conn, statement, ...): Decimal MySQL column 1 imported as\nnumeric\n\n\n\n\nMake a map\n\nlibrary(leaflet)\n\nleaflet() |&gt;\n  addTiles()|&gt;\n  addMarkers(lat= ~lat, lng = ~lon, popup= ~as.character(age), data=age_by_station_data)\n\n\n\n\n\n\n\nTry some SQL with yelp\n\nSHOW the databases\nUSE yelp\nSHOW Tables\nDESCRIBE one of them\nMake a simple query\nFilter with WHERE or HAVING\n\n\n\nPart 2\n\n\nTwo magical verbs\nThese two functions will be helpful and are in the dbplyr library.\n\nshow_query()\ncollect()\n\n\n\nThis makes table connection with the server\n\n#This creates a tbl_sql object in R \n\n trips &lt;- db |&gt;\n   tbl(\"trips\")\n\n station_summary &lt;- db |&gt;\n   tbl(\"station_summary\")\n\nWarning in .local(conn, statement, ...): Decimal MySQL column 4 imported as\nnumeric\n\n\nWarning in .local(conn, statement, ...): Decimal MySQL column 7 imported as\nnumeric\n\n\nWarning in .local(conn, statement, ...): Decimal MySQL column 8 imported as\nnumeric\n\n\n\n\nWe can see the query\n\n# Do the average age wrangling again in R\n\n# The data still lives on the server\n\nstation_summary |&gt;\n\ninner_join( y= trips, by = c(\"station_id\"=\"start_station_id\")) |&gt;\n  \n  select(station_id, birth_year , lat, lon) |&gt;\n  \n  mutate(age= 2023-birth_year) |&gt;\n  \n  group_by(station_id)|&gt;\n  \n  summarise(average_age = mean(age, na.rm=TRUE)) |&gt;\n  \n  show_query()\n\n&lt;SQL&gt;\nSELECT `station_id`, AVG(`age`) AS `average_age`\nFROM (\n  SELECT *, 2023.0 - `birth_year` AS `age`\n  FROM (\n    SELECT `station_id`, `birth_year`, `lat`, `lon`\n    FROM `station_summary`\n    INNER JOIN `trips`\n      ON (`station_summary`.`station_id` = `trips`.`start_station_id`)\n  ) `q01`\n) `q02`\nGROUP BY `station_id`\n\n\n\n\nData on Server\nIf we run this, the data still live on the server\n\nstation_summary |&gt;\n\ninner_join( y= trips, by = c(\"station_id\"=\"start_station_id\")) |&gt;\n  \n  select(station_id, birth_year , lat, lon) |&gt;\n  \n  mutate(age= 2023-birth_year) |&gt;\n  \n  group_by(station_id)|&gt;\n  \n  summarise(lat,lon,average_age = mean(age, na.rm=TRUE)) \n\n\n\nUse collect() to bring data into R.\n\nage_by_station_R &lt;-\n  \n  station_summary |&gt;\n  \n  inner_join( y= trips, by = c(\"station_id\"=\"start_station_id\")) |&gt;\n  \n  select(station_id, birth_year , lat, lon) |&gt;\n  \n  mutate(age= 2023-birth_year) |&gt;\n  \n  group_by(station_id)|&gt;\n  \n  summarise(lat,lon,average_age = mean(age, na.rm=TRUE)) |&gt;\n  \n  collect()\n\nWarning in .local(conn, statement, ...): Decimal MySQL column 3 imported as\nnumeric\n\n\n\n\nMap"
+=======
+    "objectID": "course-materials/first-day-survey/Data-Viz-No-Computers.html#names-and-surveys",
+    "href": "course-materials/first-day-survey/Data-Viz-No-Computers.html#names-and-surveys",
+    "title": "No Computers Data Viz",
+    "section": "Names and Surveys",
+    "text": "Names and Surveys\nSurvey Questions"
+  },
+  {
+    "objectID": "course-materials/first-day-survey/Data-Viz-No-Computers.html#data-viz-no-computers",
+    "href": "course-materials/first-day-survey/Data-Viz-No-Computers.html#data-viz-no-computers",
+    "title": "No Computers Data Viz",
+    "section": "Data Viz no computers",
+    "text": "Data Viz no computers\nSheets data\n\nData Frame\nObservations\nTidy Data\nVariables\nVariable Types"
+  },
+  {
+    "objectID": "course-materials/first-day-survey/Data-Viz-No-Computers.html#take-1-hand-drawn-graphs-of-survey-questions.",
+    "href": "course-materials/first-day-survey/Data-Viz-No-Computers.html#take-1-hand-drawn-graphs-of-survey-questions.",
+    "title": "No Computers Data Viz",
+    "section": "Take 1: Hand drawn graphs of survey questions.",
+    "text": "Take 1: Hand drawn graphs of survey questions.\nDraw a graph of a variable. Do not write your name.\n\nIt does not need to be perfect.\nTry to make it correct.\n\nIt is fine if its not correct."
+  },
+  {
+    "objectID": "course-materials/first-day-survey/Data-Viz-No-Computers.html#talk-to-someone-close-to-you.",
+    "href": "course-materials/first-day-survey/Data-Viz-No-Computers.html#talk-to-someone-close-to-you.",
+    "title": "No Computers Data Viz",
+    "section": "Talk to someone close to you.",
+    "text": "Talk to someone close to you.\nAnswer these questions:\n\nIs the graph’s message or story clear?\nWhat is missing from each graph?\nWhat is distracting from the graph?\nWhat does the graph do well?"
+  },
+  {
+    "objectID": "course-materials/first-day-survey/Data-Viz-No-Computers.html#what-makes-a-clear-graph",
+    "href": "course-materials/first-day-survey/Data-Viz-No-Computers.html#what-makes-a-clear-graph",
+    "title": "No Computers Data Viz",
+    "section": "What makes a clear graph?",
+    "text": "What makes a clear graph?\nClass discussion."
+  },
+  {
+    "objectID": "course-materials/first-day-survey/Data-Viz-No-Computers.html#baumers-thoughts",
+    "href": "course-materials/first-day-survey/Data-Viz-No-Computers.html#baumers-thoughts",
+    "title": "No Computers Data Viz",
+    "section": "Baumer’s Thoughts",
+    "text": "Baumer’s Thoughts\nSome of the following slides were borrowed by the text’s author."
+  },
+  {
+    "objectID": "course-materials/first-day-survey/Data-Viz-No-Computers.html#a-misleading-chart-from-apple",
+    "href": "course-materials/first-day-survey/Data-Viz-No-Computers.html#a-misleading-chart-from-apple",
+    "title": "No Computers Data Viz",
+    "section": "A misleading chart from Apple",
+    "text": "A misleading chart from Apple"
+  },
+  {
+    "objectID": "course-materials/first-day-survey/Data-Viz-No-Computers.html#pie-charts",
+    "href": "course-materials/first-day-survey/Data-Viz-No-Computers.html#pie-charts",
+    "title": "No Computers Data Viz",
+    "section": "Pie charts",
+    "text": "Pie charts\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAre 6-cylinder engines more common among manuals or automatics?"
+  },
+  {
+    "objectID": "course-materials/first-day-survey/Data-Viz-No-Computers.html#unclear-scales",
+    "href": "course-materials/first-day-survey/Data-Viz-No-Computers.html#unclear-scales",
+    "title": "No Computers Data Viz",
+    "section": "Unclear Scales",
+    "text": "Unclear Scales\n\n\nOften not very clearly defined\nEasy to lie by manipulating scales\nWhy perspective?\nWidth of lines?"
+  },
+  {
+    "objectID": "course-materials/first-day-survey/Data-Viz-No-Computers.html#clearer-scales",
+    "href": "course-materials/first-day-survey/Data-Viz-No-Computers.html#clearer-scales",
+    "title": "No Computers Data Viz",
+    "section": "Clearer Scales",
+    "text": "Clearer Scales\n\n\nGood graphics have clear scales\n\nRemember iPhone sales graphic"
+  },
+  {
+    "objectID": "course-materials/first-day-survey/Data-Viz-No-Computers.html#section",
+    "href": "course-materials/first-day-survey/Data-Viz-No-Computers.html#section",
+    "title": "No Computers Data Viz",
+    "section": "",
+    "text": "1\n\n\n\n\n\nhttps://en.wikipedia.org/wiki/Misleading_graph#Improper_scaling"
+  },
+  {
+    "objectID": "course-materials/first-day-survey/Data-Viz-No-Computers.html#section-1",
+    "href": "course-materials/first-day-survey/Data-Viz-No-Computers.html#section-1",
+    "title": "No Computers Data Viz",
+    "section": "",
+    "text": "1\nhttps://en.wikipedia.org/wiki/Misleading_graph#3D"
+  },
+  {
+    "objectID": "course-materials/first-day-survey/Data-Viz-No-Computers.html#section-2",
+    "href": "course-materials/first-day-survey/Data-Viz-No-Computers.html#section-2",
+    "title": "No Computers Data Viz",
+    "section": "",
+    "text": "1\nhttps://en.wikipedia.org/wiki/Chartjunk"
+  },
+  {
+    "objectID": "course-materials/first-day-survey/Data-Viz-No-Computers.html#balance-of-art-vs.-science",
+    "href": "course-materials/first-day-survey/Data-Viz-No-Computers.html#balance-of-art-vs.-science",
+    "title": "No Computers Data Viz",
+    "section": "Balance of art vs. science",
+    "text": "Balance of art vs. science\n\n\nData graphics:\n\npurpose is to convey meaning\nscientific, rigorous\npeer-reviewed\nclear\ncreative!\n\n\nInfographics:\n\npurpose might be to draw eyeballs\nentertaining?\nsales or marketing?\npublic sphere\ncreative\n\n\n\nWe’re only interested in the former"
+  },
+  {
+    "objectID": "course-materials/first-day-survey/Data-Viz-No-Computers.html#other-people-have-thought-about-this",
+    "href": "course-materials/first-day-survey/Data-Viz-No-Computers.html#other-people-have-thought-about-this",
+    "title": "No Computers Data Viz",
+    "section": "Other people have thought about this",
+    "text": "Other people have thought about this\nDo’s and Don’t\nTufte’s Data to Ink Ratio\nFlowing Data"
+  },
+  {
+    "objectID": "course-materials/first-day-survey/Data-Viz-No-Computers.html#some-graphs-to-discuss-in-groups",
+    "href": "course-materials/first-day-survey/Data-Viz-No-Computers.html#some-graphs-to-discuss-in-groups",
+    "title": "No Computers Data Viz",
+    "section": "Some Graphs to discuss in groups",
+    "text": "Some Graphs to discuss in groups\nThe Economist’s Graph detail\nGraphs from the NYTimes"
+  },
+  {
+    "objectID": "course-materials/syllabus/syllabus.html",
+    "href": "course-materials/syllabus/syllabus.html",
+    "title": "Basic information",
+    "section": "",
+    "text": "Course title: SDS 192: Introduction to Data Science\nContact Info:\n nschwab@smith.edu\n 413-585-3440\n Nics-Github\nOffice location: McConnell 213\nEmail: nschwab@smith.edu\nMeeting locations/times:\n\nMorning Section\n-   MWF: 10:50 AM - 12:05 PM / Sabin-Reed 220\n\n\nGetting help:\n\nFor non personal/sensitive questions, ask on the #questions channel on Slack. For personal/sensitive matters, Slack DM Professor Schwab.\nStudent hours\nSpinelli Center\n\n\n\n\n\nI will respond to Slack messages sent during the week within 24h. I will respond to Slack messages sent during the weekend at my own discretion.\nIf possible, please only Slack me with briefer and administrative questions; I prefer having more substantive conversations in person as it takes me less energy to understand where you are at.\nI will do my best to return all grading as promptly as possible."
+  },
+  {
+    "objectID": "course-materials/syllabus/syllabus.html#work-life-balance",
+    "href": "course-materials/syllabus/syllabus.html#work-life-balance",
+    "title": "Basic information",
+    "section": "",
+    "text": "I will respond to Slack messages sent during the week within 24h. I will respond to Slack messages sent during the weekend at my own discretion.\nIf possible, please only Slack me with briefer and administrative questions; I prefer having more substantive conversations in person as it takes me less energy to understand where you are at.\nI will do my best to return all grading as promptly as possible."
+  },
+  {
+    "objectID": "course-materials/syllabus/syllabus.html#projects-30",
+    "href": "course-materials/syllabus/syllabus.html#projects-30",
+    "title": "Basic information",
+    "section": "Projects 30%",
+    "text": "Projects 30%\nThere are four projects to complete during the semester. They will be completed collaboratively with a team of students using SCRUM."
+  },
+  {
+    "objectID": "course-materials/syllabus/syllabus.html#final-project-20",
+    "href": "course-materials/syllabus/syllabus.html#final-project-20",
+    "title": "Basic information",
+    "section": "Final project 20%",
+    "text": "Final project 20%\nThere will be a final project due the last day of classes. These will be completed in groups during the last few weeks of class."
+  },
+  {
+    "objectID": "course-materials/syllabus/syllabus.html#quizzes-20",
+    "href": "course-materials/syllabus/syllabus.html#quizzes-20",
+    "title": "Basic information",
+    "section": "Quizzes 20%",
+    "text": "Quizzes 20%\nThere are 3 or 4 self schedules quizzes this semester."
+  },
+  {
+    "objectID": "course-materials/syllabus/syllabus.html#labs-20",
+    "href": "course-materials/syllabus/syllabus.html#labs-20",
+    "title": "Basic information",
+    "section": "Labs 20%",
+    "text": "Labs 20%\nMany Fridays there will be in class labs. You will have until the following Wednesday to complete the lab. Its important to complete and stay on top of the problem sets. They will be graded on the following scale:\n\n5 points: Assignment is complete, mostly correct, rendered and submitted\n4 points: Assignment is nearly complete, mostly correct, rendered and submitted\n3 points: Assignment is around 50% of the problems have been completed, are correct, the assignment is rendered\n2 points: Assignment is at most 50% complete, the problems are incorrect and is not correctly rendered\n1 point : Assignment is largely unfinished and is not rendered\n0 points: No assignment is turned in."
+  },
+  {
+    "objectID": "course-materials/syllabus/syllabus.html#engagement",
+    "href": "course-materials/syllabus/syllabus.html#engagement",
+    "title": "Basic information",
+    "section": "Engagement 10%",
+    "text": "Engagement 10%\nIt is difficult to explicit codify what constitutes “an engaged student,” so instead I present the following rough principle I will follow: you’ll only get out of this class as much as you put in. That being said, here are multiple pathways for you to stay engaged in this class:\n\nParticipation in all SCRUM Sprints\nAsking and answering questions in class.\nWorking and staying focused in class.\nComing to office hours.\nPosting questions on Slack.\nEven better: Responding to questions on Slack.\nComplete Classwork problems"
+  },
+  {
+    "objectID": "course-materials/syllabus/syllabus.html#tentative-assignment-schedule",
+    "href": "course-materials/syllabus/syllabus.html#tentative-assignment-schedule",
+    "title": "Basic information",
+    "section": "Tentative Assignment schedule",
+    "text": "Tentative Assignment schedule\nLabs will be assigned regularly and due by midnight the following Monday.\nProject 1- due after reading chapter 4 of MDSR\nProject 2- due after reading chapter 5 of MDSR\nProject 3- due after reading chapter 17 of MDSR\nFinal Project/ Presentation during our final time.\nFor a more up to date schedule see the course’s website."
+  },
+  {
+    "objectID": "course-materials/syllabus/syllabus.html#policies-1",
+    "href": "course-materials/syllabus/syllabus.html#policies-1",
+    "title": "Basic information",
+    "section": "Policies",
+    "text": "Policies\n\nAccommodation\nSmith is committed to providing support services and reasonable accommodations to all students with disabilities. To request an accommodation, please register with the Disability Services Office at the beginning of the semester. To do so, call (413) 585-2071 to arrange an appointment with Laura Rauscher, Director of Disability Services."
+  },
+  {
+    "objectID": "course-materials/syllabus/syllabus.html#policies-2",
+    "href": "course-materials/syllabus/syllabus.html#policies-2",
+    "title": "Basic information",
+    "section": "Policies",
+    "text": "Policies\n\nInclusion\n\n\n\n\n\n\nInclusion policy\n\n\n\nWe are committed to fostering a classroom environment where all students thrive. We are committed to affirming the identities, realities and voices of all students, especially those from historically marginalized or underrepresented backgrounds. We are dedicated to creating a space where everyone in the class is respected, is free from discrimination based on race, ethnicity, sexual orientation, religion, gender identity, disability status, and other identities, and feel welcome and ready to learn at your highest potential.\nIf you have any concerns or suggestions for how to make this class more inclusive, please reach out to your instructor.\nWe are here to support your learning and growth as data scientists and people!\n\n\n\n\nAttendance\nWe expect you attend class in person. If you choose to come to class, we expect your full attention. Please put your phone away during class unless otherwise directed.\nIn keeping with Smith’s core identity and mission as an in-person, residential college, SDS affirms College policy (as per the Provost and Dean of the College) that students will attend class in person. SDS courses will not provide options for remote attendance. Students who have been determined to require a remote attendance accommodation by the Office of Disability Services will be the only exceptions to this policy. As with any other kind of ADA accommodations, please notify your instructor during the first week of classes to discuss how we can meet your accommodations.\nIf you are unable to attend class for any reason, please follow the materials on the course website and check with another student about what happened in class.\n\n\nCollaboration\n\n\n\n\n\n\nWarning\n\n\n\nMuch of this course will operate on a collaborative basis, and you are expected and encouraged to work together with a partner or in small groups to study, complete labs, and prepare for exams. However, all work that you submit for credit must be your own. Copying and pasting sentences, paragraphs, or blocks of code from another student or from online sources is not acceptable and will receive no credit. No interaction with anyone but the instructors is allowed on any exams or quizzes.\n\n\n\n\nAcademic Honor Code Statement\nAll students, staff and faculty are bound by the Smith College Honor Code, which Smith has had since 1944.\n\nSmith College expects all students to be honest and committed to the principles of academic and intellectual integrity in their preparation and submission of course work and examinations. Students and faculty at Smith are part of an academic community defined by its commitment to scholarship, which depends on scrupulous and attentive acknowledgement of all sources of information, and honest and respectful use of college resources.\n\nCases of dishonesty, plagiarism, etc., will be reported to the Academic Honor Board.\n\n\nCode of Conduct\nAs the instructor and assistants for this course, we are committed to making participation in this course a harassment-free experience for everyone, regardless of level of experience, gender, gender identity and expression, sexual orientation, disability, personal appearance, body size, race, ethnicity, age, or religion. Examples of unacceptable behavior by participants in this course include the use of sexual language or imagery, derogatory comments or personal attacks, deliberate misgendering or use of “dead” names, trolling, public or private harassment, insults, or other unprofessional conduct.\nAs the instructor and assistants we have the right and responsibility to point out and stop behavior that is not aligned to this Code of Conduct. Participants who do not follow the Code of Conduct may be reprimanded for such behavior. Instances of abusive, harassing, or otherwise unacceptable behavior may be reported by contacting the instructor.\n\n\n\n\n\n\nImportant\n\n\n\nAll students, the instructor, the lab instructor, and all assistants are expected to adhere to this Code of Conduct in all settings for this course: lectures, labs, office hours, tutoring hours, and over Slack.\n\n\nThis Code of Conduct is adapted from the Contributor Covenant, version 1.0.0, available here."
+  },
+  {
+    "objectID": "course-materials/syllabus/syllabus.html#resources",
+    "href": "course-materials/syllabus/syllabus.html#resources",
+    "title": "Basic information",
+    "section": "Resources",
+    "text": "Resources\n\nMoodle and course website\nThe course website and Moodle will be updated regularly with lecture handouts, project information, assignments, and other course resources. Grades will be recorded on Moodle. Please check both regularly.\n\n\nCommunication\n\n Slack is the primary mechanism for course-related discussions of all kinds. Please do not email the course instructor with course-related questions! Instead, post these on #questions on Slack. If discretion is absolutely necessary, private message the instructor on Slack.\n\n\n\nWriting\nYour ability to communicate results (which may be technical in nature) to your audience (which is likely to be non-technical) is critical to your success as a data analyst. The assignments in this class will place an emphasis on the clarity of your writing.\n\n\nWriting Enriched Curriculum\nThis course is part of Smith College’s Writing Enriched Curriculum. As such, the course supports the Writing Plan of the Program in Statistical & Data Sciences.\nPlease read the SDS Writing Plan for more information.\n\n\nThe Spinelli Center\nThe Spinelli Center (now in Seelye 207) supports students doing quantitative work across the curriculum. In particular, they employ:\n\nSDS Tutors available from 7:00–9:00pm on Sunday–Thursday evenings in Burton 301. These students are trained to help you with your statistics and R questions.\nA Data Research and Statistics Counselor (Osman Keshawarz) who keeps both drop-in hours and appointments. Students are welcome to email qlctutor@smith.edu to make an appointment.\n\nYour fellow students are also an excellent source for explanations, tips, etc."
+>>>>>>> refs/remotes/origin/main
   }
 ]

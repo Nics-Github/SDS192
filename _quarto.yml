@@ -7,16 +7,19 @@ output:
     toc: yes
     toc_float: yes
     toc_depth: 2
-    theme: cosmo
     highlight: tango
     df_print: paged
     lib_dir: site_libs
     self_contained: no
 # All icons were obtained from https://icons.getbootstrap.com/
 
+
+
 format:
   html:
-    theme: Materia
+    theme:
+      light: flatly
+      dark: darkly
 
 website:   
   page-navigation: true

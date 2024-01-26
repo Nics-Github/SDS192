@@ -45,7 +45,6 @@ h1{font-weight: 400;}
     `r fontawesome::fa("at")` [nschwab\@smith.edu](mailto:nschwab@smith.edu)\
     `r fontawesome::fa("phone")` 413-585-3440\
     `r fontawesome::fa("github")` [Nics-Github](http://www.github.com/Nics-Github) 
-    `r fontawesome::fa("video")` [nschwab](https://smith.zoom.us/j/8227449694)
 
 -   **Office location:** McConnell 213
 
@@ -56,12 +55,8 @@ h1{font-weight: 400;}
 Morning Section
 
 ```         
--   MWF: 10:50 AM - 11:05 PM / Sabin-Reed 220
+-   MWF: 10:50 AM - 12:05 PM / Sabin-Reed 220
 
-Afternoon Section
-
--   M: 1:40 PM - 2:55 / Sabin- Reed 301 
--   WF: 1:20 PM - 2:35 / Sabin- Reed 301
 ```
 
 -   **Getting help**:
@@ -179,7 +174,7 @@ All due dates can be found on the [main page](../index.html) of this course webp
 
 This class is project based. As such your evaluations will be based on projects you create.
 
-## Projects 40%
+## Projects 30%
 
 There are four projects to complete during the semester. They will be completed collaboratively with a team of students using SCRUM.
 
@@ -187,7 +182,11 @@ There are four projects to complete during the semester. They will be completed 
 
 There will be a final project due the last day of classes. These will be completed in groups during the last few weeks of class. 
 
-## Labs 25%
+## Quizzes 20%
+
+There are 3 or 4 self schedules quizzes this semester. 
+
+## Labs 20%
 
 Many Fridays there will be in class labs. You will have until the following Wednesday to complete the lab. Its important to complete and stay on top of the problem sets. They will be graded on the following scale:
 
@@ -203,7 +202,7 @@ Many Fridays there will be in class labs. You will have until the following Wedn
 
 -   0 points: No assignment is turned in.
 
-## Engagement 15% {#engagement}
+## Engagement 10% {#engagement}
 
 It is difficult to explicit codify what constitutes "an engaged student," so instead I present the following rough principle I will follow: *you'll only get out of this class as much as you put in*. That being said, here are multiple pathways for you to stay engaged in this class:
 
@@ -223,9 +222,7 @@ Project 1- due after reading chapter 4 of MDSR
 
 Project 2- due after reading chapter 5 of MDSR 
 
-Project 3- due after reading chapter 15 of MDSR 
-
-Project 4- due after reading chapter 17 of MDSR 
+Project 3- due after reading chapter 17 of MDSR 
 
 Final Project/ Presentation during our final time.
 
