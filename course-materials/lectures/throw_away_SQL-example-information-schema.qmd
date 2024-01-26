@@ -1,0 +1,366 @@
+---
+title: "dbplyr-SQL"
+format: html
+execute: 
+  echo: true
+---
+# Setup
+
+```{r setup}
+
+library(tidyverse)
+library(RMySQL)
+library(leaflet)
+library(dbplyr)
+
+db <- dbConnect(
+  MySQL(),
+  host = "scidb.smith.edu",
+  user = "sds192",
+  password = "DSismfc@S"
+)
+knitr::opts_chunk$set(connection = db, max.print = 20)
+```
+
+# Big Idea
+
+Data can live in a flat file (.csv) or relational database.
+
+If the flat file is too big it'll crash R (think of fec20).
+
+We store large quantities in a database on a server and call up what we need. 
+
+We use the Structured Query Language (SQL) to do this. 
+
+# Different dialects of SQL
+
+We'll be using MySQL. 
+
+The server is in Bass Hall. It is a physical computer. 
+
+Non efficient queries slow it down for everyone. 
+
+# db?
+
+```{r}
+class(db)
+```
+# Take a look at the databases
+```{sql connection= db}
+
+SHOW DATABASES;
+
+```
+
+# Choose a database
+
+```{sql connection=db}
+USE citibike;
+
+```
+
+# Look at the tables
+
+```{sql connection=db}
+SHOW TABLES;
+```
+# Describe a table
+
+This shows what each variable (field) is and its type. 
+```{sql connection=db}
+
+DESCRIBE trips;
+```
+
+
+```{sql connection=db}
+SELECT station_id, num_stops
+
+FROM station_summary
+
+WHERE num_stops IS NOT NULL
+
+ORDER BY num_stops
+
+Limit 10;
+
+```
+
+
+# SQL to dplyr
+
+| SQL       | dplyr                           |
+|-----------|---------------------------------|
+| SELECT    | select(), mutate(), summarise() |
+| FROM      | the data frame. data=           |
+| WHERE     | filter()                        |
+| GROUP BY  | group_by                        |
+| HAVING    | filter() use after group_by()   |
+| ORDER BY  | arrange()                       |
+| LIMIT     | head()                          |
+
+
+#  Question
+
+Which station had the most bikes rented from it? 
+
+Probably consider num_starts from station_summary. 
+
+```{sql connection=db}
+
+SELECT station_id, num_starts 
+
+FROM station_summary 
+
+LIMIT 10;
+```
+# ORDER BY
+
+```{sql connection=db}
+
+SELECT station_id, num_starts 
+
+FROM station_summary 
+
+ORDER BY num_starts
+
+LIMIT 10;
+```
+
+# ORDER BY DESC
+
+```{sql connection=db}
+
+SELECT station_id, num_starts 
+
+FROM station_summary 
+
+ORDER BY  num_starts DESC
+
+LIMIT 10;
+```
+
+# Where are the top 10 stations? 
+
+```{sql connection=db}
+
+SELECT station_id, num_starts, lat, lon 
+
+FROM station_summary 
+
+ORDER BY  num_starts DESC
+
+LIMIT 10;
+```
+
+
+# How to bring an SQL query into R
+
+```{r }
+top_10_data <- dbGetQuery(conn = db, 
+
+"SELECT station_id, num_starts, lat, lon 
+
+FROM station_summary 
+
+ORDER BY  num_starts DESC
+
+LIMIT 10;")
+```
+
+# Put points on map
+
+```{r}
+library(leaflet)
+
+leaflet() |>
+  addTiles()|>
+  addMarkers(lat= ~lat, lng = ~lon, data=top_10_data)
+```
+
+# Wrangling in SQL
+
+What is the average age of people leaving from each location? 
+
+```{sql connection = db}
+
+SELECT start_station_id, AVG(2023-birth_year) AS avg_age 
+
+FROM trips 
+
+WHERE 2023-birth_year < 100
+
+GROUP BY start_station_id 
+
+ORDER BY start_station_id DESC
+
+LIMIT 10;
+
+
+```
+
+# JOIN 
+
+This query take a while, don't execute it now. 
+
+```{sql connection = db}
+
+SELECT start_station_id, 
+  AVG(2023-birth_year) AS age , 
+  lat, 
+  lon
+
+FROM trips 
+
+JOIN station_summary ON trips.start_station_id = station_summary.station_id 
+
+GROUP BY start_station_id
+
+ORDER BY age DESC;
+
+```
+
+# Bring this into R
+
+Use the `dbGetQuery()` function. The first argument is the connection the second is the query as a character.
+
+```{r}
+age_by_station_data <- dbGetQuery(conn = db, 
+                          "SELECT start_station_id, 
+                          AVG(2023-birth_year) AS age , 
+                          lat,
+                          lon
+                          
+                          FROM trips 
+                          
+                          JOIN station_summary ON trips.start_station_id = station_summary.station_id 
+                          
+                          GROUP BY start_station_id
+                          
+                          ORDER BY age DESC;")
+
+                          
+```
+
+# Make a map
+
+```{r}
+library(leaflet)
+
+leaflet() |>
+  addTiles()|>
+  addMarkers(lat= ~lat, lng = ~lon, popup= ~as.character(age), data=age_by_station_data)
+```
+
+# Try some SQL with yelp
+
+1. SHOW the databases
+
+2. USE yelp
+
+3. SHOW Tables
+
+4. DESCRIBE one of them
+
+5. Make a simple query 
+
+6. Filter with WHERE or HAVING
+
+# Part 2
+
+# Two magical verbs
+
+
+
+These two functions will be helpful and are in the `dbplyr` library.
+
+1.    `show_query()`
+
+2.    `collect()`
+
+
+# This makes table connection with the server
+
+
+```{r bring-tables-to-r}
+
+#This creates a tbl_sql object in R 
+
+ trips <- db |>
+   tbl("trips")
+
+ station_summary <- db |>
+   tbl("station_summary")
+
+```
+
+# We can see the query
+
+```{r}
+# Do the average age wrangling again in R
+
+# The data still lives on the server
+
+station_summary |>
+
+inner_join( y= trips, by = c("station_id"="start_station_id")) |>
+  
+  select(station_id, birth_year , lat, lon) |>
+  
+  mutate(age= 2023-birth_year) |>
+  
+  group_by(station_id)|>
+  
+  summarise(average_age = mean(age, na.rm=TRUE)) |>
+  
+  show_query()
+```
+# Data on Server
+If we run this, the data still live on the server
+
+
+```{r}
+#| eval: FALSE
+
+station_summary |>
+
+inner_join( y= trips, by = c("station_id"="start_station_id")) |>
+  
+  select(station_id, birth_year , lat, lon) |>
+  
+  mutate(age= 2023-birth_year) |>
+  
+  group_by(station_id)|>
+  
+  summarise(lat,lon,average_age = mean(age, na.rm=TRUE)) 
+```
+
+# Use collect() to bring data into R. 
+
+```{r}
+age_by_station_R <-
+  
+  station_summary |>
+  
+  inner_join( y= trips, by = c("station_id"="start_station_id")) |>
+  
+  select(station_id, birth_year , lat, lon) |>
+  
+  mutate(age= 2023-birth_year) |>
+  
+  group_by(station_id)|>
+  
+  summarise(lat,lon,average_age = mean(age, na.rm=TRUE)) |>
+  
+  collect()
+```
+
+# Map
+
+<!-- # ```{r} -->
+<!-- #  -->
+<!-- # leaflet() |> -->
+<!-- #   addTiles()|> -->
+<!-- #   addMarkers(lat= ~lat, lng = ~lon, popup= ~as.character(average_age), data=age_by_station_R) -->
+<!-- #  -->
+<!-- # ``` -->
