@@ -22,9 +22,7 @@ knitr::opts_chunk$set(
   fig.width = 16/2, fig.height = 9/2
 )
 
-# Set seed value of random number generator to get "replicable" random numbers.
-# Why 76? Because of https://www.youtube.com/watch?v=xjJ7FheCkCU
-set.seed(76)
+
 ```
 
 ```{=html}

@@ -3,7 +3,7 @@ title: "Nic Schwab"
 about:
   id: schwab
   template: trestles
-  image: "./gfx/self.jpg"
+  image: "./self.jpg"
   links:
 
     - icon: github
@@ -19,7 +19,13 @@ about:
 ## Student Hours
 
 
-**Drop into the office:** Monday: 1:35-2:35 pm,  Friday: 12:45 pm -1:45pm or by appointment. in McConnell 213
+**Drop into the office:** 
+
+-   Monday: 1:35-2:35 pm
+
+-   Friday: 12:45 pm -1:45pm 
+
+-   By appointment in McConnell 213
 
     
 Please let me know if the above times do not work for your schedule and we can coordinate another time.   
