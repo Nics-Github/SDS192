@@ -1,8 +1,9 @@
 ---
-title: "Vizualization_Taxonomy"
+title: "Vizualization Taxonomy"
 author: "Ben Baumer"
 format: 
   revealjs:
+    theme: beige
     controls: 
       true
 

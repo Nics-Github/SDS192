@@ -39,7 +39,7 @@ website:
     - icon: slack
       href: https://www.slack.com
     - text: R
-      href: rstudio.smith.edu
+      href: https://rstudio.smith.edu/auth-sign-in?appUri=%2F
     - text: m
       href: https://moodle.smith.edu/
     

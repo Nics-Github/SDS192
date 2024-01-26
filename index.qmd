@@ -622,55 +622,50 @@ h1{font-weight: 400;}
 
 <!-- 2.  [linegraph](./course-materials/in-class-activies/Lec03In-classExercise-Linegraphs(1).qmd) -->
 
-<!-- # Day 2 Taxonomy -->
+# Day 2 Taxonomy
 
-<!-- Please complete [this survey](https://smithcollege.qualtrics.com/jfe/form/SV_bmy8BNkIp4SpzXo) for Prof. Cao's study. -->
+Please complete [this survey](https://smithcollege.qualtrics.com/jfe/form/SV_bJhVbkxf8LPzspw) for Prof. Cao's study.
 
-<!-- ### For Help -->
+::: {.callout-tip collapse="true"}
+## For Help
 
-<!-- [The six-fixes](https://docs.google.com/document/d/1P7IyZ4On9OlrCOhygFxjC7XhQqyw8OludwChz-uFd_o/edit) [Student hours](/course-materials/syllabus/syllabus.qmd) [Spennlli center](https://www.smith.edu/academics/spinelli-center/tutoring#disciplines) -->
+-   [The six-fixes](https://docs.google.com/document/d/1P7IyZ4On9OlrCOhygFxjC7XhQqyw8OludwChz-uFd_o/edit) 
 
-<!-- ::: {.callout-tip collapse="true"} -->
-<!-- ## Screenshots Help -->
+-   [Student hours](/course-materials/syllabus/schwab.qmd) 
 
-<!-- Help us help you: take screenshots of your screen and post them to Slack. -->
+-   [Spennlli center](https://www.smith.edu/academics/spinelli-center/tutoring#disciplines)
 
-<!-- -   macOS: Command+Shift+3 to take shot of whole screen, Command+Shift+4 to take subportion -->
+:::
 
-<!-- -   Windows: Shift-Windows Key-S and Snip & Sketch -->
+::: {.callout-tip collapse="true"}
+## Screenshots Help
 
-<!-- -   Linux: Print screen -->
+Help us help you: take screenshots of your screen and post them to Slack.
 
-<!-- -   Chromebook: Shift + Ctrl + Show windows -->
-<!-- ::: -->
+-   macOS: Command+Shift+3 to take shot of whole screen, Command+Shift+4 to take subportion
 
-<!-- [Prologue to 1.4 document](https://docs.google.com/document/d/1EJ389lsPzAutfq1HEspdTNyyVAk8AJDItQPXgI58dus/edit?usp=sharing) -->
+-   Windows: Shift-Windows Key-S and Snip & Sketch
 
-<!-- ::: {.callout-note collapse="true"} -->
-<!-- ## Announcement-Google -->
+-   Linux: Print screen
 
-<!-- [Google will be on campus.](https://rsvp.withgoogle.com/events/fall-2023-cap-outreach_3b5b3d/forms/registration) -->
+-   Chromebook: Shift + Ctrl + Show windows
+:::
 
-<!-- -   Building a Tech Career, Sept 13 6:30-8:30pm, Campus Center room 103/104 -->
 
-<!-- -   Resume Building and the Technical Interview, Sept 14 6-8pm, Campus Center room 103/104 -->
+### Lecture
 
-<!-- -   Self-Advocacy in Tech, Sept 15 12:15-1:15pm, Campus Center room 204 -->
-<!-- ::: -->
+-   [Taxonomy of graphs](course-materials/lectures/2mdsr_viz_1_taxonomy.qmd)
 
-<!-- ### Lecture -->
+-   [Some graph examples from Day 1](./course-materials/lectures/1first-day-survey/Data-Viz-No-Computers.qmd)
 
-<!-- [Taxonomy of graphs](course-materials/lectures/mdsr_viz_1_taxonomy.qmd) -->
+-   [How R builds a Graph](course-materials/lectures/How-R-builds-a-graph.qmd)
 
-<!-- ### Finish Lecture from Day 1 -->
-
-<!-- [How R builds a Graph](course-materials/lectures/How-R-builds-a-graph.qmd) -->
 
 # Day 1: No Computer Data Viz
 
 -   [Syllabus](./course-materials/syllabus/syllabus.html) 
 
--   Log into [Slack](https://sds-192-ns-202401.slack.com)
+-   Log into [Slack](https://www.slack.com)
 
 -   Website tour 
 
@@ -678,7 +673,7 @@ h1{font-weight: 400;}
 
 ### Lecture
 
-[Data Viz No Computers](./course-materials/lectures/first-day-survey/Data-Viz-No-Computers.qmd)
+[Data Viz No Computers](./course-materials/lectures/1first-day-survey/Data-Viz-No-Computers.qmd)
 
 ### General Questions and Comments
 
