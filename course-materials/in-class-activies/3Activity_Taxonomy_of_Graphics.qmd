@@ -1,15 +1,15 @@
 ---
-title: "Taxonomy of Graphics"
-author: "Nic Schwab"
-format: revealjs
+title: "Discussion: Taxonomy of Graphics"
+author: "Schwab"
+format: 
+  revealjs:
+    theme: beige
 editor: visual
 ---
 
 ## Discuss the Following
 
-Use the vocabulary from the Taxonomy of data graphics.
-
--   
+Use the vocabulary from [the taxonomy of data graphics.](course-materials/lectures/2_mdsr_viz_1_taxonomy.qmd)
 
 -   visual cues
 
@@ -21,15 +21,11 @@ Use the vocabulary from the Taxonomy of data graphics.
 
 -   What is the graph showing?
 
--   Your feelings
-
 ## NY Times Graphs:
 
 -   [Serena Williams](https://www.nytimes.com/2022/09/08/learning/whats-going-on-in-this-graph-sept-14-2022.html?searchResultPosition=2)
 
 -   [Endangered Biodiversity](https://www.nytimes.com/2022/03/31/learning/whats-going-on-in-this-graph-april-6-2022.html?searchResultPosition=10)
-
--   [Pandemic Stimulus](https://www.nytimes.com/2022/04/07/learning/whats-going-on-in-this-graph-april-13-2022.html?searchResultPosition=9)
 
 ## Yougov:
 

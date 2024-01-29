@@ -598,29 +598,25 @@ h1{font-weight: 400;}
 <!-- -   You should see lab 1, which we will discuss on Friday. -->
 <!-- ::: -->
 
-<!-- Lab 1 on github classroom -->
-
-<!-- # Day 3 Graph building -->
-
-<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/IRJ2Ac9vI5o?si=JMeZEIQQNGNBscno" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen> -->
-
-<!-- </iframe> -->
-
-<!-- [Chapter 2 document section 2](https://docs.google.com/document/d/1c_PKo9QUNQFdmoQCo63Fb9wfqO9Fp6JOxuvQjB12m1c/edit?usp=sharing) -->
-
-<!-- [Chapter 2 document section 3](https://docs.google.com/document/d/1lxxZzwkexSQ8njWs3e4JBX5KVcjww3O2_DZt6Tfx_1k/edit?usp=sharing) -->
-
-<!-- [Finally Finish Slides from Day 1](./course-materials/first-day-survey/Data-Viz-No-Computers.qmd) (maybe) -->
-
 <!-- [tidyverse style guide](https://style.tidyverse.org/ggplot2.html) -->
 
-<!-- Note on file organization in RStudio -->
+<!-- Lab 1 on github classroom -->
 
-<!-- Two graphs. -->
+# Day 3 Taxonomy part 2
 
-<!-- 1.  [scatter plot](./course-materials/in-class-activies/Lec02In-classExercise-Scatterplots.zip) -->
+<iframe width="560" height="315" src="https://www.youtube.com/embed/IRJ2Ac9vI5o?si=JMeZEIQQNGNBscno" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
 
-<!-- 2.  [linegraph](./course-materials/in-class-activies/Lec03In-classExercise-Linegraphs(1).qmd) -->
+</iframe>
+
+[Discussion: Taxonomy of Graphics](./course-materials/in-class-activies/3Activity_Taxonomy_of_Graphics.qmd)
+
+Chalk Talk: Working directories and file organization in RStudio. 
+
+Coding Example: 
+
+1.  [Together: scatter plot](./course-materials/in-class-activies/3_Scatterplots.zip)
+
+2.  [Solo: linegraph](./course-materials/in-class-activies/3_Line_Graph.qmd)
 
 # Day 2 Taxonomy
 
@@ -654,11 +650,11 @@ Help us help you: take screenshots of your screen and post them to Slack.
 
 ### Lecture
 
--   [Taxonomy of graphs](course-materials/lectures/2mdsr_viz_1_taxonomy.qmd)
+-   [Taxonomy of graphs](course-materials/lectures/2_mdsr_viz_1_taxonomy.qmd)
 
 -   [Some graph examples from Day 1](./course-materials/lectures/1first-day-survey/Data-Viz-No-Computers.qmd)
 
--   [How R builds a Graph](course-materials/lectures/How-R-builds-a-graph.qmd)
+-   [How R builds a Graph](course-materials/lectures/2How-R-builds-a-graph.qmd)
 
 
 # Day 1: No Computer Data Viz
