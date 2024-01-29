@@ -49,7 +49,7 @@ ggplot( data=heights , aes(x=heights) ) +
 
 ## Be a computer
 
-1.   Write the code to make a *bar graph* (why?)
+1.  Write the code to make a *bar graph* (why?)
 
 -   Consider the Class Year variable.
 
