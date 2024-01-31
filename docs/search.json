@@ -544,5 +544,54 @@
     "title": "iteration",
     "section": "map_dfc()",
     "text": "map_dfc()\n\niris |&gt;\n  map_dfc(.f = mean)\n\nWarning in mean.default(.x[[i]], ...): argument is not numeric or logical:\nreturning NA\n\n\n# A tibble: 1 × 5\n  Sepal.Length Sepal.Width Petal.Length Petal.Width Species\n         &lt;dbl&gt;       &lt;dbl&gt;        &lt;dbl&gt;       &lt;dbl&gt;   &lt;dbl&gt;\n1         5.84        3.06         3.76        1.20      NA"
+  },
+  {
+    "objectID": "course-materials/website/Resources.html#moderndive",
+    "href": "course-materials/website/Resources.html#moderndive",
+    "title": "Resources",
+    "section": "ModernDive",
+    "text": "ModernDive"
+  },
+  {
+    "objectID": "course-materials/website/Resources.html#data-science-in-a-box",
+    "href": "course-materials/website/Resources.html#data-science-in-a-box",
+    "title": "Resources",
+    "section": "Data Science in a box",
+    "text": "Data Science in a box"
+  },
+  {
+    "objectID": "course-materials/website/Resources.html#data-visualization-ggplot2",
+    "href": "course-materials/website/Resources.html#data-visualization-ggplot2",
+    "title": "Resources",
+    "section": "Data Visualization: ggplot2",
+    "text": "Data Visualization: ggplot2"
+  },
+  {
+    "objectID": "course-materials/website/Resources.html#data-transformation-dplyr",
+    "href": "course-materials/website/Resources.html#data-transformation-dplyr",
+    "title": "Resources",
+    "section": "Data transformation: dplyr",
+    "text": "Data transformation: dplyr"
+  },
+  {
+    "objectID": "course-materials/website/Resources.html#data-import-tidyr",
+    "href": "course-materials/website/Resources.html#data-import-tidyr",
+    "title": "Resources",
+    "section": "Data Import: tidyr",
+    "text": "Data Import: tidyr"
+  },
+  {
+    "objectID": "course-materials/website/Resources.html#rmarkdown-cheat-sheet",
+    "href": "course-materials/website/Resources.html#rmarkdown-cheat-sheet",
+    "title": "Resources",
+    "section": "RMarkdown Cheat sheet",
+    "text": "RMarkdown Cheat sheet"
+  },
+  {
+    "objectID": "course-materials/website/Resources.html#style-guide",
+    "href": "course-materials/website/Resources.html#style-guide",
+    "title": "Resources",
+    "section": "Style Guide",
+    "text": "Style Guide\nThe Tidyverse Style Guide"
   }
 ]
