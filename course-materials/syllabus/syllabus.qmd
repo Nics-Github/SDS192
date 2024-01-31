@@ -40,7 +40,7 @@ h1{font-weight: 400;}
 
 -   **Contact Info:**\
     `r fontawesome::fa("at")` [nschwab\@smith.edu](mailto:nschwab@smith.edu)\
-    `r fontawesome::fa("phone")` 413-585-3440\
+    `r fontawesome::fa("phone")` 413-585-5598\
     `r fontawesome::fa("github")` [Nics-Github](http://www.github.com/Nics-Github)
 
 -   **Office location:** McConnell 213

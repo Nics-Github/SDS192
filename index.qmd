@@ -598,7 +598,7 @@ h1{font-weight: 400;}
 <!-- -   You should see lab 1, which we will discuss on Friday. -->
 <!-- ::: -->
 
-<!-- [tidyverse style guide](https://style.tidyverse.org/ggplot2.html) -->
+[tidyverse style guide](https://style.tidyverse.org/ggplot2.html)
 
 <!-- Lab 1 on github classroom -->
 
@@ -608,7 +608,7 @@ h1{font-weight: 400;}
 
 </iframe>
 
-[Discussion: Taxonomy of Graphics](./course-materials/in-class-activies/3Activity_Taxonomy_of_Graphics.qmd)
+## [Discussion: Taxonomy of Graphics](./course-materials/in-class-activies/3Activity_Taxonomy_of_Graphics.qmd)
 
 Chalk Talk: Working directories and file organization in RStudio. 
 

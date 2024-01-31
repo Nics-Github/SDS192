@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Ben Baumer">
 
-<title>SDS 192 - The Verbs</title>
+<title>SDS 192 - Credits</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -66,7 +65,7 @@ ul.task-list li input[type="checkbox"] {
 
 </head>
 
-<body class="nav-fixed">
+<body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -136,27 +135,19 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="mdsr-the-verbs.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></div>
+    
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">The Verbs</h1>
+<h1 class="title">Credits</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Ben Baumer </p>
-          </div>
-  </div>
     
   
     
@@ -165,136 +156,23 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="dplyr-lives-in-the-tidyverse" class="level2">
-<h2 class="anchored" data-anchor-id="dplyr-lives-in-the-tidyverse">dplyr lives in the tidyverse</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://raw.githubusercontent.com/tidyverse/dplyr/master/man/figures/logo.png" class="img-fluid figure-img"></p>
-</figure>
-</div>
+<section id="site-credit" class="level2">
+<h2 class="anchored" data-anchor-id="site-credit">Site Credit</h2>
+<p>The format for this site was borrowed from <a href="https://bit.ly/sds192kim">Albert Kim’s SDS 192 course</a></p>
 </section>
-<section id="dplyr-highlights" class="level2">
-<h2 class="anchored" data-anchor-id="dplyr-highlights"><code>dplyr</code> highlights</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p>The Five Verbs:</p>
+<section id="activities-projects-etc." class="level2">
+<h2 class="anchored" data-anchor-id="activities-projects-etc.">Activities, Projects, etc.</h2>
+<p>If not created by me or referred to in some other way the activities and projects for this course are from:</p>
 <ul>
-<li><p><code>select()</code></p></li>
-<li><p><code>filter()</code></p></li>
-<li><p><code>mutate()</code></p></li>
-<li><p><code>arrange()</code></p></li>
-<li><p><code>summarize()</code></p></li>
+<li><p><a href="https://bit.ly/sds192kim">The above mentioned website</a></p></li>
+<li><p><a href="https://datasciencebox.org/">Data Science in a box.</a></p></li>
+<li><p><a href="https://beanumber.github.io/sds192/">Ben Baumer’s SDS 192 course page</a></p></li>
 </ul>
-</div><div class="column" style="width:50%;">
-<p>Plus:</p>
-<ul>
-<li><p><code>group_by()</code></p></li>
-<li><p><code>rename()</code></p></li>
-<li><p><code>inner_join()</code></p></li>
-<li><p><code>left_join()</code></p></li>
-</ul>
-</div>
-</div>
-<p><a href="https://r4ds.had.co.nz/transform.html">Read more</a></p>
-</section>
-<section id="philosophy" class="level2">
-<h2 class="anchored" data-anchor-id="philosophy">Philosophy</h2>
-<ul>
-<li>Each <em>verb</em> takes a data frame and returns a data frame
-<ul>
-<li>actually a <code>tbl_df</code> (more on that later)</li>
-<li>allows chaining with <code>%&gt;%</code> or <code>|&gt;</code></li>
-</ul></li>
-<li>Idea:
-<ul>
-<li>master a few simple commands</li>
-<li>use your creativity to combine them</li>
-</ul></li>
-<li>Cheat Sheet:
-<ul>
-<li>Resources <a href="../../Resources.html">tab</a></li>
-</ul></li>
-</ul>
-</section>
-<section id="what-is-a-tibble" class="level2">
-<h2 class="anchored" data-anchor-id="what-is-a-tibble">What is a tibble?</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p><img src="http://hexb.in/hexagons/tibble.png" class="img-fluid" style="width:90.0%"></p>
-</div><div class="column" style="width:50%;">
-<ul>
-<li><p>object of class <code>tbl</code></p></li>
-<li><p>a re-imagining of a <code>data.frame</code></p></li>
-<li><p>it looks and acts like a <code>data.frame</code></p></li>
-<li><p>but it’s even better…</p></li>
-<li><p><code>tidyverse</code> works with tibbles</p></li>
-</ul>
-</div>
-</div>
-<p><a href="https://r4ds.had.co.nz/tibbles.html">footnote</a></p>
-</section>
-<section id="select-take-a-subset-of-the-columns" class="level2">
-<h2 class="anchored" data-anchor-id="select-take-a-subset-of-the-columns"><code>select()</code>: take a subset of the <strong>columns</strong></h2>
-<p><img src="../../images/select.png" class="img-fluid"></p>
-</section>
-<section id="filter-take-a-subset-of-the-rows" class="level2">
-<h2 class="anchored" data-anchor-id="filter-take-a-subset-of-the-rows"><code>filter()</code>: take a subset of the <strong>rows</strong></h2>
-<p><img src="../../images/filter.png" class="img-fluid"></p>
-</section>
-<section id="mutate-add-or-modify-a-column" class="level2">
-<h2 class="anchored" data-anchor-id="mutate-add-or-modify-a-column"><code>mutate()</code>: add or modify a <strong>column</strong></h2>
-<p><img src="../../images/mutate.png" class="img-fluid"></p>
-</section>
-<section id="arrange-sort-the-rows" class="level2">
-<h2 class="anchored" data-anchor-id="arrange-sort-the-rows"><code>arrange()</code>: sort the <strong>rows</strong></h2>
-<p><img src="../../images/arrange.png" class="img-fluid"></p>
-</section>
-<section id="summarize-collapse-to-a-single-row" class="level2">
-<h2 class="anchored" data-anchor-id="summarize-collapse-to-a-single-row"><code>summarize()</code>: collapse to <strong>a single row</strong></h2>
-<p><img src="../../images/summarise.png" class="img-fluid"></p>
 
 
 </section>
 
 </main> <!-- /main -->
-
-<script>
-  // htmlwidgets need to know to resize themselves when slides are shown/hidden.
-  // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
-  // slide changes (different for each slide format).
-  (function () {
-    // dispatch for htmlwidgets
-    function fireSlideEnter() {
-      const event = window.document.createEvent("Event");
-      event.initEvent("slideenter", true, true);
-      window.document.dispatchEvent(event);
-    }
-
-    function fireSlideChanged(previousSlide, currentSlide) {
-      fireSlideEnter();
-
-      // dispatch for shiny
-      if (window.jQuery) {
-        if (previousSlide) {
-          window.jQuery(previousSlide).trigger("hidden");
-        }
-        if (currentSlide) {
-          window.jQuery(currentSlide).trigger("shown");
-        }
-      }
-    }
-
-    // hookup for slidy
-    if (window.w3c_slidy) {
-      window.w3c_slidy.add_observer(function (slide_num) {
-        // slide_num starts at position 1
-        fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
-      });
-    }
-
-  })();
-</script>
-
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
