@@ -24,7 +24,7 @@ format:
 website:   
   page-navigation: true
   favicon: /images/192.png
-  title: "SDS 192 Fall '23"
+  title: "SDS 192"
   
   
   navbar:

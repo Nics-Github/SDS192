@@ -1,6 +1,5 @@
 ---
 title: "Syllabus"
-output: pdf
 
 format:
   html:
@@ -42,9 +41,17 @@ h1{font-weight: 400;}
 -   **Contact Info:**\
     `r fontawesome::fa("at")` [nschwab\@smith.edu](mailto:nschwab@smith.edu)\
     `r fontawesome::fa("phone")` 413-585-3440\
-    `r fontawesome::fa("github")` [Nics-Github](http://www.github.com/Nics-Github) 
+    `r fontawesome::fa("github")` [Nics-Github](http://www.github.com/Nics-Github)
 
 -   **Office location:** McConnell 213
+
+    -   Office Hours:
+
+        -   Monday: 1:35-2:35 pm
+
+        -   Friday: 12:45 pm -1:45pm
+
+        -   By appointment
 
 -   **Email:** nschwab\@smith.edu
 
@@ -54,7 +61,6 @@ Morning Section
 
 ```         
 -   MWF: 10:50 AM - 12:05 PM / Sabin-Reed 220
-
 ```
 
 -   **Getting help**:
@@ -62,6 +68,7 @@ Morning Section
     -   For non personal/sensitive questions, ask on the `#questions` channel on Slack. For personal/sensitive matters, Slack DM Professor Schwab.
 
     -   [Student hours](/schwab.qmd)
+
     -   [Spinelli Center](https://www.smith.edu/academics/spinelli-center/tutoring)
 
 ## Instructor work-life balance {#work-life-balance}
@@ -164,7 +171,7 @@ The Modern Data Science with R **textbook** is accessible on the navigational ba
 
 # Readings
 
-We'll be reading chapters 1-6,8,15,and 17 of Modern Data Science with R. And some Chapters from Modern Dive. 
+We'll be reading chapters 1-6,8,15,and 17 of Modern Data Science with R. And some Chapters from Modern Dive.
 
 # Evaluation
 
@@ -178,11 +185,11 @@ There are four projects to complete during the semester. They will be completed 
 
 ## Final project 20%
 
-There will be a final project due the last day of classes. These will be completed in groups during the last few weeks of class. 
+There will be a final project due the last day of classes. These will be completed in groups during the last few weeks of class.
 
 ## Quizzes 20%
 
-There are 3 or 4 self schedules quizzes this semester. 
+There are 3 or 4 self schedules quizzes this semester.
 
 ## Labs 20%
 
@@ -216,11 +223,11 @@ It is difficult to explicit codify what constitutes "an engaged student," so ins
 
 Labs will be assigned regularly and due by midnight the following Monday.
 
-Project 1- due after reading chapter 4 of MDSR 
+Project 1- due after reading chapter 4 of MDSR
 
-Project 2- due after reading chapter 5 of MDSR 
+Project 2- due after reading chapter 5 of MDSR
 
-Project 3- due after reading chapter 17 of MDSR 
+Project 3- due after reading chapter 17 of MDSR
 
 Final Project/ Presentation during our final time.
 
