@@ -1,0 +1,80 @@
+---
+title: "Discussion: Taxonomy of Graphics"
+author: "Schwab"
+format: 
+  revealjs:
+    theme: beige
+editor: visual
+---
+
+## Discuss the Following
+
+Use the vocabulary from [the taxonomy of data graphics.](course-materials/lectures/2_mdsr_viz_1_taxonomy.qmd)
+
+-   visual cues
+
+-   coordinate system
+
+-   scales
+
+-   context
+
+-   What is the graph showing?
+
+## NY Times Graphs:
+
+-   [Serena Williams](https://www.nytimes.com/2022/09/08/learning/whats-going-on-in-this-graph-sept-14-2022.html?searchResultPosition=2)
+
+-   [Endangered Biodiversity](https://www.nytimes.com/2022/03/31/learning/whats-going-on-in-this-graph-april-6-2022.html?searchResultPosition=10)
+
+## Yougov:
+
+-   [Ice Cream](https://today.yougov.com/topics/lifestyle/articles-reports/2022/07/19/americas-favorite-ice-cream-vanilla-chocolate) (Just the first graph, there is a lot here).
+
+## From Five Thirty Eight:
+
+[President Biden's Approval Rating](https://projects.fivethirtyeight.com/biden-approval-rating/)
+
+## Plan Parenthood:
+
+![](https://www.datapine.com/blog/wp-content/uploads/2016/08/misleading-statistic-planned-parenthood.jpg)
+
+## Corrected
+
+![](https://www.datapine.com/blog/wp-content/uploads/2016/08/planned-parenthoood-right-scale.png)
+
+## Corrected again
+
+![](https://www.datapine.com/blog/wp-content/uploads/2016/08/planned-parenthoood-right-scale2.png)
+
+## Fox Polling
+
+![](https://www.datapine.com/blog/wp-content/uploads/2021/12/fox-news-misleading-pie-chart.jpg)
+
+## Global warming
+
+![](https://www.datapine.com/blog/wp-content/uploads/2016/08/global-air-warming-1998-2012.png)
+
+## Global warming 2
+
+![](https://www.datapine.com/blog/wp-content/uploads/2016/08/global-air-warming-1980-2012.jpg)
+
+## Global Warming 3
+
+![](https://www.datapine.com/blog/wp-content/uploads/2016/08/global-air-warming-1900-2012.jpg)
+
+## Global Warming 4
+
+![](https://www.washingtonpost.com/blogs/the-fix/files/2015/12/NRO_Temp_2.jpg) \## Gun Deaths Florida
+
+![]()
+
+## Citations
+
+All graph originated else where.
+
+Below are secondary sources.
+
+Most the the graphs were grabed from: [datapipeline](https://www.datapine.com/blog/misleading-statistics-and-data/)
+
+The last graph was grabbed from [The Washington Post](https://www.washingtonpost.com/news/the-fix/wp/2015/12/14/why-the-national-reviews-global-temperature-graph-is-so-misleading/)
