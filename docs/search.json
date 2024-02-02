@@ -81,7 +81,7 @@
     "href": "index.html",
     "title": "SDS 192: Intro to Data Science",
     "section": "",
-    "text": "–&gt;"
+    "text": "–&gt;\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ntidyverse style guide"
   },
   {
     "objectID": "index.html#discussion-taxonomy-of-graphics",
@@ -810,5 +810,12 @@
     "title": "Discussion: Taxonomy of Graphics",
     "section": "Citations",
     "text": "Citations\nAll graph originated else where.\nBelow are secondary sources.\nMost the the graphs were grabed from: datapipeline\nThe last graph was grabbed from The Washington Post"
+  },
+  {
+    "objectID": "index.html#colors",
+    "href": "index.html#colors",
+    "title": "SDS 192: Intro to Data Science",
+    "section": "Colors",
+    "text": "Colors\n\nProf. Baumer’s Color talk\nColor Brewer site\nProf. Cao’s Lecture on Frequency Plots and Facets\nIn class exercise"
   }
 ]

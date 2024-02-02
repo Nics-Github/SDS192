@@ -572,17 +572,37 @@ h1{font-weight: 400;}
 
 <!-- -   look for the correct graph for 7c on the cheat sheet -->
 
-<!-- # Day 5 Color theory -->
+[tidyverse style guide](https://style.tidyverse.org/ggplot2.html)
 
-<!-- ## Colors -->
+# Day 5 Finishing up and colors theory
 
-<!-- -   [live_demo](/course-materials/lectures/color_lecture.qmd) -->
 
-<!-- -   Color Brewer [site](https://colorbrewer2.org/#type=sequential&scheme=BuGn&n=3) -->
 
-<!-- -   [Prof. Cao's Lecture on Frequency Plots and Facets](https://scao53.github.io/sds192spring2023/slides/Lec4-FrequencyPlots.html#11) -->
 
-<!-- -   [In class exercise](./course-materials/in-class-activies/Lec05In-classExercise-ColorTheory.qmd) -->
+::: {.callout-note collapse="FALSE"}
+## Lab requirements
+
+-   All labs (after lab 1) must be rendered to a pdf.
+
+-   All code for labs must be well commented.
+
+:::
+
+**Finish work from Day 3. **
+
+[ggplot cheatsheet](https://github.com/rstudio/cheatsheets/blob/main/data-visualization-2.1.pdf)
+
+## Colors
+
+-   [Prof. Baumer's Color talk](https://beanumber.github.io/sds192/lectures/mdsr_viz_05-color.html)
+
+-   Color Brewer [site](https://colorbrewer2.org/#type=sequential&scheme=BuGn&n=3)
+
+-   [Prof. Cao's Lecture on Frequency Plots and Facets](https://scao53.github.io/sds192spring2023/slides/Lec4-FrequencyPlots.html)
+
+-   [In class exercise](./course-materials/in-class-activies/5_color_theory.qmd)
+
+
 
 # Day 4 Github lab 1
 
@@ -600,7 +620,7 @@ Link github account to github classroom - sign into github
 -   You should see lab 1, which we will discuss on Friday.
 :::
 
-[tidyverse style guide](https://style.tidyverse.org/ggplot2.html)
+
 
 
 
