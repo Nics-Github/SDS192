@@ -543,8 +543,6 @@ h1{font-weight: 400;}
 
 <!-- # Day 6 Stats and Boxplots -->
 
-<!-- [Document for chapter 3](https://docs.google.com/document/d/1lTkYFcdE2OpwLKV5rTLLx5ZKCRdeN31Lh50hC1cRixs/edit?usp=sharing) -->
-
 <!-- ## Other things -->
 
 <!-- ::: {.callout-note collapse="true"} -->
@@ -556,13 +554,14 @@ h1{font-weight: 400;}
 <!-- ::: -->
 
 <!-- -   the c() function -->
+<!-- -   [tidyverse style guide](https://style.tidyverse.org/ggplot2.html) -->
 <!-- -   [typing math](https://nics-github.github.io/sds220/latex-in-quarto-template.html) -->
 <!-- -   and [tibbles](http://statseducation.com/Introduction-to-R/modules/getting%20data/tibbles/) -->
 <!-- -   [ggplot cheatsheet](./resources.qmd) -->
 <!-- -   The visual editor -->
 <!-- -   [Short History of R](./course-materials/lectures/Brief-R-history.qmd) -->
 
-<!-- ## Lecture: [Descriptive stats and boxplots](/course-materials/lectures/Descriptive-Stats-and-Boxplots.qmd) -->
+<!-- ## Lecture: [Descriptive stats and boxplots](/course-materials/lectures/4-Descriptive-Stats-and-Boxplots.qmd) -->
 
 <!-- ### Classwork: MDSR [Chapter 3.5](https://mdsr-book.github.io/mdsr2e/ch-vizII.html#datavizII-exercises) problem 3 and 7 -->
 
@@ -570,13 +569,11 @@ h1{font-weight: 400;}
 
 <!-- -   you might need to install `mosaicdata` -->
 
-<!-- -   look for the correct graph for 7c on the cheat sheet -->
-
-[tidyverse style guide](https://style.tidyverse.org/ggplot2.html)
-
-# Day 5 Finishing up and color theory
+<!-- -   look for the correct graph type for 7c on the cheat sheet -->
 
 
+
+# Day 5 Color theory
 
 
 ::: {.callout-note collapse="FALSE"}

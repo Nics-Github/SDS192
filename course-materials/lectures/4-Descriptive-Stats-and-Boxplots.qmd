@@ -1,7 +1,9 @@
 ---
 title: "Descriptive Stats and Boxplots"
 author: "Schwab"
-format: revealjs
+format: 
+  revealjs:
+    theme: beige
 editor: visual
 execute: 
   echo: true
@@ -49,7 +51,7 @@ mean(penguins$body_mass_g, na.rm = TRUE)
 
 Find the medium flipper length.
 
-# Boxplots{.smaller}
+# Boxplots {.smaller}
 
 Boxplots are helpful for finding outliers.
 
@@ -63,7 +65,7 @@ penguins |>
 
 ```
 
-# geom_vline(){.smaller} 
+# geom_vline() {.smaller}
 
 ```{r means-on-boxes}
 
