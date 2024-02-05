@@ -574,7 +574,7 @@ h1{font-weight: 400;}
 
 [tidyverse style guide](https://style.tidyverse.org/ggplot2.html)
 
-# Day 5 Finishing up and colors theory
+# Day 5 Finishing up and color theory
 
 
 
