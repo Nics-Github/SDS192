@@ -573,7 +573,7 @@ h1{font-weight: 400;}
 
 
 
-# Day 5 Color theory
+# Day 6 Color theory
 
 
 ::: {.callout-note collapse="FALSE"}
@@ -585,7 +585,7 @@ h1{font-weight: 400;}
 
 :::
 
-**Finish work from Day 3. **
+
 
 [ggplot cheatsheet](https://github.com/rstudio/cheatsheets/blob/main/data-visualization-2.1.pdf)
 
@@ -599,7 +599,9 @@ h1{font-weight: 400;}
 
 -   [In class exercise](./course-materials/in-class-activies/5_color_theory.qmd)
 
+# Day 5 Catch up
 
+**Finish work from Day 3. **
 
 # Day 4 Github lab 1
 
