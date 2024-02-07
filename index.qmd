@@ -571,7 +571,9 @@ h1{font-weight: 400;}
 
 <!-- -   look for the correct graph type for 7c on the cheat sheet -->
 
+# Day 7 Lab 2
 
+[Link to lab 2](https://classroom.github.com/a/OQWAvHYK)
 
 # Day 6 Color theory
 
