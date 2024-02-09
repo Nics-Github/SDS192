@@ -537,10 +537,6 @@ h1{font-weight: 400;}
 
 <!-- Github Practice? -->
 
-<!-- # Day 7 Lab 2 -->
-
-<!-- Click [this link](https://classroom.github.com/a/CK3DZp9J) to accept lab 2. -->
-
 <!-- # Day 6 Stats and Boxplots -->
 
 <!-- ## Other things -->
