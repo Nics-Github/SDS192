@@ -7,10 +7,14 @@ format:
 editor: visual
 execute: 
   echo: true
+  warning: false
 ---
 
+## Libraries
+
 ```{r libraries}
-#| echo: false
+
+# install.packages("palmerpenguins")
 library(palmerpenguins)
 library(tidyverse)
 ```
@@ -27,9 +31,7 @@ library(tidyverse)
 
 -   Range - max() - min()
 
--   Max
-
--   Min
+-   summary()
 
 # Example mass
 
@@ -49,9 +51,9 @@ mean(penguins$body_mass_g, na.rm = TRUE)
 
 # Try one:
 
-Find the medium flipper length.
+Find the median flipper length.
 
-# Boxplots {.smaller}
+## Boxplots {.smaller}
 
 Boxplots are helpful for finding outliers.
 
@@ -65,9 +67,21 @@ penguins |>
 
 ```
 
-# geom_vline() {.smaller}
+## Code for graph
+
+```{r boxplot-code}
+
+## boxplot for bill depth, separated by island.
+
+penguins |>
+  ggplot(aes(x = bill_depth_mm, color = island))+
+  geom_boxplot()
+```
+
+## geom_vline() {.smaller}
 
 ```{r means-on-boxes}
+# Adding a brown line to show the mean billdepth. 
 
 penguins |>
   ggplot(aes(x = bill_depth_mm, color = island))+
@@ -79,4 +93,20 @@ penguins |>
     linetype="dashed")
   
 
+```
+
+## faceted
+
+```{r}
+# In the code below I am faceting by species
+
+penguins |>
+  ggplot(aes(x = bill_depth_mm, color = island))+
+  geom_boxplot()+
+  geom_vline(
+    xintercept = mean(
+      penguins$bill_depth_mm, na.rm = TRUE),
+    color="brown",
+    linetype="dashed")+
+  facet_grid(vars(species))
 ```

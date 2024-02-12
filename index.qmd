@@ -58,7 +58,7 @@ h1{font-weight: 400;}
 
 ```{=html}
 
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTG_b6upDZcPxXB92LHYIhV1uAXgeVGaMsZ3sDRPuSQN74JdhkKhZQVjw6T68I3zsP8KGYzDSVTZW64/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false&amp;gid=0&amp;range=A1:E8
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTG_b6upDZcPxXB92LHYIhV1uAXgeVGaMsZ3sDRPuSQN74JdhkKhZQVjw6T68I3zsP8KGYzDSVTZW64/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false&amp;gid=0&amp;range=A1:E10
 " width="100%" height="400">
 ```
 </iframe>
@@ -537,35 +537,39 @@ h1{font-weight: 400;}
 
 <!-- Github Practice? -->
 
-<!-- # Day 6 Stats and Boxplots -->
+# Day 8 Stats and Boxplots
 
-<!-- ## Other things -->
+Digest Lab 2
 
-<!-- ::: {.callout-note collapse="true"} -->
-<!-- # To activate colors -->
+## Other things
 
-<!-- Some students are not getting "red" to be red. Try this: Tools menu \> global options \> code \> display \> "enable preview of named and hex colors -->
+::: {.callout-note collapse="true"}
+# To activate colors
 
-<!-- If that doesn't work, [maybe its a bug?](https://github.com/rstudio/rstudio/issues/13118) -->
-<!-- ::: -->
+Some students are not getting "red" to be red. Try this: Tools menu \> global options \> code \> display \> "enable preview of named and hex colors
 
-<!-- -   the c() function -->
-<!-- -   [tidyverse style guide](https://style.tidyverse.org/ggplot2.html) -->
-<!-- -   [typing math](https://nics-github.github.io/sds220/latex-in-quarto-template.html) -->
-<!-- -   and [tibbles](http://statseducation.com/Introduction-to-R/modules/getting%20data/tibbles/) -->
-<!-- -   [ggplot cheatsheet](./resources.qmd) -->
-<!-- -   The visual editor -->
-<!-- -   [Short History of R](./course-materials/lectures/Brief-R-history.qmd) -->
+If that doesn't work, [maybe its a bug?](https://github.com/rstudio/rstudio/issues/13118)
+:::
 
-<!-- ## Lecture: [Descriptive stats and boxplots](/course-materials/lectures/4-Descriptive-Stats-and-Boxplots.qmd) -->
+-   the c() function
+-   [tidyverse style guide](https://style.tidyverse.org/ggplot2.html)
+-   [typing math](https://nics-github.github.io/sds220/latex-in-quarto-template.html)
+-   [ggplot cheatsheet](./resources.qmd)
+-   The visual editor vs source editor
+-   [Short History of R](./course-materials/lectures/Brief-R-history.qmd)
 
-<!-- ### Classwork: MDSR [Chapter 3.5](https://mdsr-book.github.io/mdsr2e/ch-vizII.html#datavizII-exercises) problem 3 and 7 -->
+## Lecture: [Descriptive stats and boxplots](/course-materials/lectures/8-Descriptive-Stats-and-Boxplots.qmd)
 
-<!-- Hints: -->
 
-<!-- -   you might need to install `mosaicdata` -->
+## Classwork: MDSR [Chapter 3.5](https://mdsr-book.github.io/mdsr2e/ch-vizII.html#datavizII-exercises) problem 3 and 7
 
-<!-- -   look for the correct graph type for 7c on the cheat sheet -->
+::: {.callout-tip collapse="true"}
+## Hints
+
+-   you might need to install `mosaicdata`
+
+-   look for the correct graph type for 7c on the cheat sheet
+:::
 
 # Day 7 Lab 2
 

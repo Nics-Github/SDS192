@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Nicholas Schwab">
-<meta name="dcterms.date" content="2024-02-09">
+<meta name="dcterms.date" content="2024-02-12">
 
 <title>SDS 192 - SDS 192: Intro to Data Science</title>
 <style>
@@ -143,6 +143,7 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#schedule" id="toc-schedule" class="nav-link active" data-scroll-target="#schedule">Schedule</a></li>
+  <li><a href="#day-8-stats-and-boxplots" id="toc-day-8-stats-and-boxplots" class="nav-link" data-scroll-target="#day-8-stats-and-boxplots">Day 8 Stats and Boxplots</a></li>
   <li><a href="#day-7-lab-2" id="toc-day-7-lab-2" class="nav-link" data-scroll-target="#day-7-lab-2">Day 7 Lab 2</a></li>
   <li><a href="#day-6-color-theory" id="toc-day-6-color-theory" class="nav-link" data-scroll-target="#day-6-color-theory">Day 6 Color theory</a></li>
   <li><a href="#day-5-catch-up" id="toc-day-5-catch-up" class="nav-link" data-scroll-target="#day-5-catch-up">Day 5 Catch up</a></li>
@@ -179,7 +180,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">February 9, 2024</p>
+      <p class="date">February 12, 2024</p>
     </div>
   </div>
   
@@ -198,7 +199,7 @@ h1{font-weight: 400;}
 <section id="schedule" class="level1">
 <h1>Schedule</h1>
 
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTG_b6upDZcPxXB92LHYIhV1uAXgeVGaMsZ3sDRPuSQN74JdhkKhZQVjw6T68I3zsP8KGYzDSVTZW64/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false&amp;gid=0&amp;range=A1:E8
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTG_b6upDZcPxXB92LHYIhV1uAXgeVGaMsZ3sDRPuSQN74JdhkKhZQVjw6T68I3zsP8KGYzDSVTZW64/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false&amp;gid=0&amp;range=A1:E10
 " width="100%" height="400">
 </iframe>
 <!-- # Day 39 Final project work day 2.  -->
@@ -461,25 +462,63 @@ h1{font-weight: 400;}
 <!-- Simple Linear Regression and [Lowess](https://www.statisticshowto.com/lowess-smoothing/) -->
 <!-- [Create Trendlines](course-materials/in-class-activies/Lec08In-classExercise-TrendLines.qmd) -->
 <!-- Github Practice? -->
-<!-- # Day 6 Stats and Boxplots -->
-<!-- ## Other things -->
-<!-- ::: {.callout-note collapse="true"} -->
-<!-- # To activate colors -->
-<!-- Some students are not getting "red" to be red. Try this: Tools menu \> global options \> code \> display \> "enable preview of named and hex colors -->
-<!-- If that doesn't work, [maybe its a bug?](https://github.com/rstudio/rstudio/issues/13118) -->
-<!-- ::: -->
-<!-- -   the c() function -->
-<!-- -   [tidyverse style guide](https://style.tidyverse.org/ggplot2.html) -->
-<!-- -   [typing math](https://nics-github.github.io/sds220/latex-in-quarto-template.html) -->
-<!-- -   and [tibbles](http://statseducation.com/Introduction-to-R/modules/getting%20data/tibbles/) -->
-<!-- -   [ggplot cheatsheet](./resources.qmd) -->
-<!-- -   The visual editor -->
-<!-- -   [Short History of R](./course-materials/lectures/Brief-R-history.qmd) -->
-<!-- ## Lecture: [Descriptive stats and boxplots](/course-materials/lectures/4-Descriptive-Stats-and-Boxplots.qmd) -->
-<!-- ### Classwork: MDSR [Chapter 3.5](https://mdsr-book.github.io/mdsr2e/ch-vizII.html#datavizII-exercises) problem 3 and 7 -->
-<!-- Hints: -->
-<!-- -   you might need to install `mosaicdata` -->
-<!-- -   look for the correct graph type for 7c on the cheat sheet -->
+</section>
+<section id="day-8-stats-and-boxplots" class="level1">
+<h1>Day 8 Stats and Boxplots</h1>
+<p>Digest Lab 2</p>
+<section id="other-things" class="level2">
+<h2 class="anchored" data-anchor-id="other-things">Other things</h2>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+To activate colors
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Some students are not getting “red” to be red. Try this: Tools menu &gt; global options &gt; code &gt; display &gt; “enable preview of named and hex colors</p>
+<p>If that doesn’t work, <a href="https://github.com/rstudio/rstudio/issues/13118">maybe its a bug?</a></p>
+</div>
+</div>
+</div>
+<ul>
+<li>the c() function</li>
+<li><a href="https://style.tidyverse.org/ggplot2.html">tidyverse style guide</a></li>
+<li><a href="https://nics-github.github.io/sds220/latex-in-quarto-template.html">typing math</a></li>
+<li><a href="./resources.qmd">ggplot cheatsheet</a></li>
+<li>The visual editor vs source editor</li>
+<li><a href="./course-materials/lectures/Brief-R-history.html">Short History of R</a></li>
+</ul>
+</section>
+<section id="lecture-descriptive-stats-and-boxplots" class="level2">
+<h2 class="anchored" data-anchor-id="lecture-descriptive-stats-and-boxplots">Lecture: <a href="./course-materials/lectures/8-Descriptive-Stats-and-Boxplots.html">Descriptive stats and boxplots</a></h2>
+</section>
+<section id="classwork-mdsr-chapter-3.5-problem-3-and-7" class="level2">
+<h2 class="anchored" data-anchor-id="classwork-mdsr-chapter-3.5-problem-3-and-7">Classwork: MDSR <a href="https://mdsr-book.github.io/mdsr2e/ch-vizII.html#datavizII-exercises">Chapter 3.5</a> problem 3 and 7</h2>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Hints
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li><p>you might need to install <code>mosaicdata</code></p></li>
+<li><p>look for the correct graph type for 7c on the cheat sheet</p></li>
+</ul>
+</div>
+</div>
+</div>
+</section>
 </section>
 <section id="day-7-lab-2" class="level1">
 <h1>Day 7 Lab 2</h1>
@@ -488,7 +527,7 @@ h1{font-weight: 400;}
 <section id="day-6-color-theory" class="level1">
 <h1>Day 6 Color theory</h1>
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -497,7 +536,7 @@ Lab requirements
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse show">
+<div id="callout-3" class="callout-3-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <ul>
 <li><p>All labs (after lab 1) must be rendered to a pdf.</p></li>
@@ -525,7 +564,7 @@ Lab requirements
 <h1>Day 4 Github lab 1</h1>
 <p>Finish our classwork from Wednesday</p>
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -534,7 +573,7 @@ Sign into githubclassroom
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Link github account to github classroom - sign into github</p>
 <ul>
@@ -565,7 +604,7 @@ Sign into githubclassroom
 <h1>Day 2 Taxonomy</h1>
 <p>Please complete <a href="https://smithcollege.qualtrics.com/jfe/form/SV_bJhVbkxf8LPzspw">this survey</a> for Prof.&nbsp;Cao’s study.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -574,7 +613,7 @@ For Help
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ul>
 <li><p><a href="https://docs.google.com/document/d/1P7IyZ4On9OlrCOhygFxjC7XhQqyw8OludwChz-uFd_o/edit">The six-fixes</a></p></li>
@@ -585,7 +624,7 @@ For Help
 </div>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -594,7 +633,7 @@ Screenshots Help
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Help us help you: take screenshots of your screen and post them to Slack.</p>
 <ul>
@@ -630,7 +669,7 @@ Screenshots Help
 <section id="general-questions-and-comments" class="level3">
 <h3 class="anchored" data-anchor-id="general-questions-and-comments">General Questions and Comments</h3>
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -639,7 +678,7 @@ Homework:
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ul>
 <li><p>Sign up for <a href="https://github.com/">github here</a>, if you don’t already have an account. We will very carefully link your github account to our github classroom account.</p></li>

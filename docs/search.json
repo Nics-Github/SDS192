@@ -817,5 +817,96 @@
     "title": "SDS 192: Intro to Data Science",
     "section": "Colors",
     "text": "Colors\n\nProf. Baumer’s Color talk\nColor Brewer site\nProf. Cao’s Lecture on Frequency Plots and Facets\nIn class exercise"
+  },
+  {
+    "objectID": "index.html#other-things",
+    "href": "index.html#other-things",
+    "title": "SDS 192: Intro to Data Science",
+    "section": "Other things",
+    "text": "Other things\n\n\n\n\n\n\nTo activate colors\n\n\n\n\n\nSome students are not getting “red” to be red. Try this: Tools menu &gt; global options &gt; code &gt; display &gt; “enable preview of named and hex colors\nIf that doesn’t work, maybe its a bug?\n\n\n\n\nthe c() function\ntidyverse style guide\ntyping math\nggplot cheatsheet\nThe visual editor vs source editor\nShort History of R"
+  },
+  {
+    "objectID": "index.html#lecture-descriptive-stats-and-boxplots",
+    "href": "index.html#lecture-descriptive-stats-and-boxplots",
+    "title": "SDS 192: Intro to Data Science",
+    "section": "Lecture: Descriptive stats and boxplots",
+    "text": "Lecture: Descriptive stats and boxplots"
+  },
+  {
+    "objectID": "index.html#classwork-mdsr-chapter-3.5-problem-3-and-7",
+    "href": "index.html#classwork-mdsr-chapter-3.5-problem-3-and-7",
+    "title": "SDS 192: Intro to Data Science",
+    "section": "Classwork: MDSR Chapter 3.5 problem 3 and 7",
+    "text": "Classwork: MDSR Chapter 3.5 problem 3 and 7\n\n\n\n\n\n\nHints\n\n\n\n\n\n\nyou might need to install mosaicdata\nlook for the correct graph type for 7c on the cheat sheet"
+  },
+  {
+    "objectID": "course-materials/lectures/4-Descriptive-Stats-and-Boxplots.html#libraries",
+    "href": "course-materials/lectures/4-Descriptive-Stats-and-Boxplots.html#libraries",
+    "title": "Descriptive Stats and Boxplots",
+    "section": "Libraries",
+    "text": "Libraries\n\n# install.packages(\"palmerpenguins\")\nlibrary(palmerpenguins)\nlibrary(tidyverse)"
+  },
+  {
+    "objectID": "course-materials/lectures/4-Descriptive-Stats-and-Boxplots.html#boxplots",
+    "href": "course-materials/lectures/4-Descriptive-Stats-and-Boxplots.html#boxplots",
+    "title": "Descriptive Stats and Boxplots",
+    "section": "Boxplots",
+    "text": "Boxplots\nBoxplots are helpful for finding outliers.\nTry to make a boxplot of the penguins bill_depth_mm color it by island"
+  },
+  {
+    "objectID": "course-materials/lectures/4-Descriptive-Stats-and-Boxplots.html#code-for-graph",
+    "href": "course-materials/lectures/4-Descriptive-Stats-and-Boxplots.html#code-for-graph",
+    "title": "Descriptive Stats and Boxplots",
+    "section": "Code for graph",
+    "text": "Code for graph\n\n## boxplot for bill depth, separated by island.\n\npenguins |&gt;\n  ggplot(aes(x = bill_depth_mm, color = island))+\n  geom_boxplot()"
+  },
+  {
+    "objectID": "course-materials/lectures/4-Descriptive-Stats-and-Boxplots.html#geom_vline",
+    "href": "course-materials/lectures/4-Descriptive-Stats-and-Boxplots.html#geom_vline",
+    "title": "Descriptive Stats and Boxplots",
+    "section": "geom_vline()",
+    "text": "geom_vline()\n\n# Adding a brown line to show the mean billdepth. \n\npenguins |&gt;\n  ggplot(aes(x = bill_depth_mm, color = island))+\n  geom_boxplot()+\n  geom_vline(\n    xintercept = mean(\n      penguins$bill_depth_mm, na.rm = TRUE),\n    color=\"brown\",\n    linetype=\"dashed\")"
+  },
+  {
+    "objectID": "course-materials/lectures/4-Descriptive-Stats-and-Boxplots.html#faceted",
+    "href": "course-materials/lectures/4-Descriptive-Stats-and-Boxplots.html#faceted",
+    "title": "Descriptive Stats and Boxplots",
+    "section": "faceted",
+    "text": "faceted\n\n# In the code below I am faceting by species\n\npenguins |&gt;\n  ggplot(aes(x = bill_depth_mm, color = island))+\n  geom_boxplot()+\n  geom_vline(\n    xintercept = mean(\n      penguins$bill_depth_mm, na.rm = TRUE),\n    color=\"brown\",\n    linetype=\"dashed\")+\n  facet_grid(vars(species))"
+  },
+  {
+    "objectID": "course-materials/lectures/8-Descriptive-Stats-and-Boxplots.html#libraries",
+    "href": "course-materials/lectures/8-Descriptive-Stats-and-Boxplots.html#libraries",
+    "title": "Descriptive Stats and Boxplots",
+    "section": "Libraries",
+    "text": "Libraries\n\n# install.packages(\"palmerpenguins\")\nlibrary(palmerpenguins)\nlibrary(tidyverse)"
+  },
+  {
+    "objectID": "course-materials/lectures/8-Descriptive-Stats-and-Boxplots.html#boxplots",
+    "href": "course-materials/lectures/8-Descriptive-Stats-and-Boxplots.html#boxplots",
+    "title": "Descriptive Stats and Boxplots",
+    "section": "Boxplots",
+    "text": "Boxplots\nBoxplots are helpful for finding outliers.\nTry to make a boxplot of the penguins bill_depth_mm color it by island"
+  },
+  {
+    "objectID": "course-materials/lectures/8-Descriptive-Stats-and-Boxplots.html#code-for-graph",
+    "href": "course-materials/lectures/8-Descriptive-Stats-and-Boxplots.html#code-for-graph",
+    "title": "Descriptive Stats and Boxplots",
+    "section": "Code for graph",
+    "text": "Code for graph\n\n## boxplot for bill depth, separated by island.\n\npenguins |&gt;\n  ggplot(aes(x = bill_depth_mm, color = island))+\n  geom_boxplot()"
+  },
+  {
+    "objectID": "course-materials/lectures/8-Descriptive-Stats-and-Boxplots.html#geom_vline",
+    "href": "course-materials/lectures/8-Descriptive-Stats-and-Boxplots.html#geom_vline",
+    "title": "Descriptive Stats and Boxplots",
+    "section": "geom_vline()",
+    "text": "geom_vline()\n\n# Adding a brown line to show the mean billdepth. \n\npenguins |&gt;\n  ggplot(aes(x = bill_depth_mm, color = island))+\n  geom_boxplot()+\n  geom_vline(\n    xintercept = mean(\n      penguins$bill_depth_mm, na.rm = TRUE),\n    color=\"brown\",\n    linetype=\"dashed\")"
+  },
+  {
+    "objectID": "course-materials/lectures/8-Descriptive-Stats-and-Boxplots.html#faceted",
+    "href": "course-materials/lectures/8-Descriptive-Stats-and-Boxplots.html#faceted",
+    "title": "Descriptive Stats and Boxplots",
+    "section": "faceted",
+    "text": "faceted\n\n# In the code below I am faceting by species\n\npenguins |&gt;\n  ggplot(aes(x = bill_depth_mm, color = island))+\n  geom_boxplot()+\n  geom_vline(\n    xintercept = mean(\n      penguins$bill_depth_mm, na.rm = TRUE),\n    color=\"brown\",\n    linetype=\"dashed\")+\n  facet_grid(vars(species))"
   }
 ]
