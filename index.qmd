@@ -469,53 +469,18 @@ h1{font-weight: 400;}
 
 <!-- [Github Practice](/course-materials/lectures/github_practice.qmd) -->
 
-<!-- # Day 10 Lab 3 -->
+<!-- # Day 11 Markdown and Github -->
 
-<!-- Lab 3 is due next Wednesday by midnight. -->
-
-<!-- [Lab 3](https://moodle.smith.edu/course/view.php?id=48189#section-1) -->
-
-<!-- ::: {.callout-warning collapse="true"} -->
-<!-- # Lab 3 pitfalls -->
-
-<!-- **You will be asked for a URI** enter this: `http://localhost:1410/` -->
-
-<!-- Step 5: part 3. To set the line color do color="green" -->
-
-<!-- For some notes on skew: https://en.wikipedia.org/wiki/Skewness -->
-
-<!-- Remember geom_bar() counts whatever variable you give it for x. -->
-
-<!-- reorder(categorical_var, numeric variable, function for reordering) -->
-
-<!-- We'll discuss ethics Monday, read chapter 8. -->
-<!-- ::: -->
-
-<!-- # Day 9 Markdown and Github -->
-
-<!-- [Authoring Markdown](https://scao53.github.io/sds192spring2023/slides/Lec28-Markdown.html#1) -->
-
-<!-- ::: {.callout-warning collapse="true"} -->
-<!-- # Lab 2 is Due -->
-
-<!-- Check comments for Lab 1. Grades on moodle shortly -->
-
-<!-- Due tonight by midnight. -->
-
-<!-- Let's clean up our lab 2 code. This will make it easier for the grader to read. -->
-
-<!-- Let's consider how we view the code. Maybe use `glimpse()` or `head()` instead of just typing `ne_county_health_2021` -->
-<!-- ::: -->
 
 <!-- [Reading on Git and RStudio](https://r-bio.github.io/intro-git-rstudio/) -->
 
-<!-- Class Git [Practice](https://classroom.github.com/a/MkGODhPw) -->
+<!-- Class Git [Practice](https://classroom.github.com/a/U8S5PFOe) -->
 
-<!-- ## [Project 1](https://moodle.smith.edu/course/view.php?id=48189#section-2) -->
+<!-- ## [Project 1](https://classroom.github.com/a/1riUqcQQ) -->
 
 <!-- Project 1 Data Dictionary -->
 
-<!-- [Polishing Figures](/course-materials/in-class-activies/Lec09In-classExercise-PolishingFigures.zip) -->
+<!-- Finish this: [Polishing Figures](/course-materials/in-class-activies/Lec09In-classExercise-PolishingFigures.zip) -->
 
 <!-- ::: {.callout-tip collapse="true"} -->
 <!-- # working directory -->
@@ -525,7 +490,32 @@ h1{font-weight: 400;}
 <!-- The easiest way to do this is to find your Lec09-...zip in the file pane and go gear-icon \> "Set As Working Directory" -->
 <!-- ::: -->
 
-# Day 9 Trend Lines and Data.Frames
+# Day 10 Lab 3
+
+Lab 3 is due next Wednesday by midnight.
+
+[Lab 3](https://classroom.github.com/a/WuMupoI-)
+
+::: {.callout-warning collapse="true"}
+# Lab 3 pitfalls
+
+**You will be asked for a URI** enter this: `http://localhost:1410/`
+
+Step 5: part 3. To set the line color do color="green"
+
+For some notes on skew: https://en.wikipedia.org/wiki/Skewness
+
+`geom_bar()` counts whatever variable you give it for x.
+
+reorder(categorical_var, numeric variable, function for reordering)
+
+We'll discuss ethics Monday, read chapter 8.
+:::
+
+
+
+
+# Day 9 Trend Lines, Data.Frames, and RMarkdown Rendering Options
 
 [Digest Lab 2](./course-materials/lectures/lab-solutions-for-discussion/Lab2_solution_digestion.pdf)
 
@@ -537,9 +527,7 @@ Simple Linear Regression and Lowess
 
 [Create Trendlines](course-materials/in-class-activies/Lec09In-classExercise-TrendLines.qmd)
 
-[Reading on Git and RStudio](https://r-bio.github.io/intro-git-rstudio/)
 
-[Githib practice](https://classroom.github.com/a/U8S5PFOe)
 
 
 # Day 8 Stats and Boxplots

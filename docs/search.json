@@ -908,5 +908,145 @@
     "title": "Descriptive Stats and Boxplots",
     "section": "faceted",
     "text": "faceted\n\n# In the code below I am faceting by species\n\npenguins |&gt;\n  ggplot(aes(x = bill_depth_mm, color = island))+\n  geom_boxplot()+\n  geom_vline(\n    xintercept = mean(\n      penguins$bill_depth_mm, na.rm = TRUE),\n    color=\"brown\",\n    linetype=\"dashed\")+\n  facet_grid(vars(species))"
+  },
+  {
+    "objectID": "course-materials/lectures/github_practice.html#step-1-make-a-file.",
+    "href": "course-materials/lectures/github_practice.html#step-1-make-a-file.",
+    "title": "Github Practice",
+    "section": "Step 1 Make a file.",
+    "text": "Step 1 Make a file.\nOnce you opened a project in RStudio make a new empty .qmd file with your name as the file name. (I would do nic-schwab.qmd)"
+  },
+  {
+    "objectID": "course-materials/lectures/github_practice.html#step-2-push-the-file-to-github.",
+    "href": "course-materials/lectures/github_practice.html#step-2-push-the-file-to-github.",
+    "title": "Github Practice",
+    "section": "Step 2 Push the file to github.",
+    "text": "Step 2 Push the file to github.\nCommit, pull then push the file to github. You and your partner should both do this."
+  },
+  {
+    "objectID": "course-materials/lectures/github_practice.html#step-3-pull-your-partners-file-from-github.",
+    "href": "course-materials/lectures/github_practice.html#step-3-pull-your-partners-file-from-github.",
+    "title": "Github Practice",
+    "section": "Step 3 Pull your partner’s file from github.",
+    "text": "Step 3 Pull your partner’s file from github.\nPull again."
+  },
+  {
+    "objectID": "course-materials/lectures/github_practice.html#complete.",
+    "href": "course-materials/lectures/github_practice.html#complete.",
+    "title": "Github Practice",
+    "section": "Complete.",
+    "text": "Complete.\nThis should have worked well for both you and your partner. You should have both files on your local computer."
+  },
+  {
+    "objectID": "course-materials/lectures/github_practice.html#we-just-pushed-to-the-main-branch",
+    "href": "course-materials/lectures/github_practice.html#we-just-pushed-to-the-main-branch",
+    "title": "Github Practice",
+    "section": "We just pushed to the main branch",
+    "text": "We just pushed to the main branch\nDo not push to the main branch."
+  },
+  {
+    "objectID": "course-materials/lectures/github_practice.html#do-not-push-to-main",
+    "href": "course-materials/lectures/github_practice.html#do-not-push-to-main",
+    "title": "Github Practice",
+    "section": "Do not push to Main",
+    "text": "Do not push to Main\nYou can push to main when you are working alone (and always on one computer).\nDirected Acyclic Graph (DAG) picture.\n\nA node is a commit\nEdges point to the parent"
+  },
+  {
+    "objectID": "course-materials/lectures/github_practice.html#branches",
+    "href": "course-materials/lectures/github_practice.html#branches",
+    "title": "Github Practice",
+    "section": "Branches",
+    "text": "Branches\nWhen working with other people create branches.\nIf two people edit the same line of code and push to main Github doesn’t know which to take and you get a merge conflict."
+  },
+  {
+    "objectID": "course-materials/lectures/github_practice.html#step-4-create-a-new-branch.",
+    "href": "course-materials/lectures/github_practice.html#step-4-create-a-new-branch.",
+    "title": "Github Practice",
+    "section": "Step 4: Create a new branch.",
+    "text": "Step 4: Create a new branch.\n\n\nGive it a good name. No spaces.\nYour partner should give a different branch name."
+  },
+  {
+    "objectID": "course-materials/lectures/github_practice.html#step-5-change-a-small-thing.",
+    "href": "course-materials/lectures/github_practice.html#step-5-change-a-small-thing.",
+    "title": "Github Practice",
+    "section": "Step 5: Change a small thing.",
+    "text": "Step 5: Change a small thing.\nYou and your partner should open the same .qmd file.\nAssuming the .qmd file is blank Go to line 10 in the source and add your favorite color."
+  },
+  {
+    "objectID": "course-materials/lectures/github_practice.html#step-6-save-and-commit.",
+    "href": "course-materials/lectures/github_practice.html#step-6-save-and-commit.",
+    "title": "Github Practice",
+    "section": "Step 6: Save and commit.",
+    "text": "Step 6: Save and commit.\nYour partner is doing the same thing.\nNote: When you commit your branch gets a new node.\nDirected Acyclic Graph (DAG) picture."
+  },
+  {
+    "objectID": "course-materials/lectures/github_practice.html#step-7-pull-then-push-your-branch-to-github.",
+    "href": "course-materials/lectures/github_practice.html#step-7-pull-then-push-your-branch-to-github.",
+    "title": "Github Practice",
+    "section": "Step 7: Pull then Push your branch to github.",
+    "text": "Step 7: Pull then Push your branch to github.\nIn general it is a good idea to pull first to get any new changes before you push."
+  },
+  {
+    "objectID": "course-materials/lectures/github_practice.html#step-8-go-to-github.",
+    "href": "course-materials/lectures/github_practice.html#step-8-go-to-github.",
+    "title": "Github Practice",
+    "section": "Step 8: Go to github.",
+    "text": "Step 8: Go to github.\nYou should see a banner that shows a pull request is being made."
+  },
+  {
+    "objectID": "course-materials/lectures/github_practice.html#step-9-create-a-pull-request-for-your-branch",
+    "href": "course-materials/lectures/github_practice.html#step-9-create-a-pull-request-for-your-branch",
+    "title": "Github Practice",
+    "section": "Step 9: Create a pull request for your branch",
+    "text": "Step 9: Create a pull request for your branch\nYou are pulling your files to the main branch.\nOne of you should go first while the other waits.\nHopefully you’ll be able to do an auto merge.\nThe second partner will have a merge conflict.\n\nGive your pull request a good message too."
+  },
+  {
+    "objectID": "course-materials/lectures/github_practice.html#step-10-merge-branches",
+    "href": "course-materials/lectures/github_practice.html#step-10-merge-branches",
+    "title": "Github Practice",
+    "section": "Step 10: Merge Branches",
+    "text": "Step 10: Merge Branches\n\nDo this one at a time.\nYou can delete the old branch.\n\nYou’ll make a new one."
+  },
+  {
+    "objectID": "course-materials/lectures/github_practice.html#step-11-switch-back-to-main-and-pull",
+    "href": "course-materials/lectures/github_practice.html#step-11-switch-back-to-main-and-pull",
+    "title": "Github Practice",
+    "section": "Step 11: Switch back to main and pull",
+    "text": "Step 11: Switch back to main and pull\n\nCheck your files are updated with both names."
+  },
+  {
+    "objectID": "course-materials/lectures/github_practice.html#merge-conflict-practice",
+    "href": "course-materials/lectures/github_practice.html#merge-conflict-practice",
+    "title": "Github Practice",
+    "section": "Merge Conflict practice",
+    "text": "Merge Conflict practice\n\n\nNew Branch - Good Name\nYou and your partner should make different graphs around the same line.\nCommit and push to github.\nGo to github to fix the merge conflict.\nSometimes github will tell you go to the command line\n\nOpen the Terminal and type what it says."
+  },
+  {
+    "objectID": "course-materials/lectures/github_practice.html#sometimes-a-file-changes.",
+    "href": "course-materials/lectures/github_practice.html#sometimes-a-file-changes.",
+    "title": "Github Practice",
+    "section": "Sometimes a file changes.",
+    "text": "Sometimes a file changes.\nhead &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;\nmake changes in your file and delete the excess.\n&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;"
+  },
+  {
+    "objectID": "course-materials/lectures/github_practice.html#explore",
+    "href": "course-materials/lectures/github_practice.html#explore",
+    "title": "Github Practice",
+    "section": "Explore",
+    "text": "Explore\n\nhistory\nbranches\npull requests"
+  },
+  {
+    "objectID": "course-materials/lectures/github_practice.html#practice-again.",
+    "href": "course-materials/lectures/github_practice.html#practice-again.",
+    "title": "Github Practice",
+    "section": "Practice again.",
+    "text": "Practice again.\nAlways work in separate branches not on main."
+  },
+  {
+    "objectID": "index.html#project-1",
+    "href": "index.html#project-1",
+    "title": "SDS 192: Intro to Data Science",
+    "section": "Project 1",
+    "text": "Project 1\nProject 1 Data Dictionary\nPolishing Figures\n\n\n\n\n\n\nworking directory\n\n\n\n\n\nYou may need to set your working directory.\nThe easiest way to do this is to find your Lec09-…zip in the file pane and go gear-icon &gt; “Set As Working Directory”"
   }
 ]

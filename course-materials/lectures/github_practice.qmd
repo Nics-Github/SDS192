@@ -1,13 +1,39 @@
 ---
-title: "Real Github Practice"
+title: "Github Practice"
 author: "Schwab"
-format: revealjs
+format: 
+  revealjs: 
+    theme: beige
 editor: visual
 ---
 
-# Pushing to `Main`
+We are going to practice collaborating on a file on github. 
 
-We've seen how messy this can get.
+# Part 1 FF merge
+
+The next three steps will take you through the easiest type of merge called fastforward. 
+
+## Step 1 Make a file.
+Once you opened a project in RStudio make a new empty .qmd file with your name as the file name. (I would do `nic-schwab.qmd`) 
+
+## Step 2 Push the file to github.
+Commit, pull then push the file to github. You and your partner should both do this. 
+
+## Step 3 Pull your partner's file from github. 
+Pull again.  
+
+## Complete. 
+This should have worked well for both you and your partner. You should have both files on your local computer. 
+
+# Part 2 a harder merge
+
+Now we will engineer a merge conflict. 
+
+## We just pushed to the main branch
+
+Do not push to the main branch. 
+
+## Do not push to `Main`
 
 You can push to `main` when you are working alone (and always on one computer).
 
@@ -17,67 +43,61 @@ Directed Acyclic Graph (DAG) picture.
 
 -   Edges point to the parent
 
-# Branches
+## Branches
 
 When working with other people create branches.
 
-Branches allow you to work without mucking up other's work.
+If two people edit the same line of code and push to `main` Github doesn't know which to take and you get a merge conflict.
 
-If two people edit the same line of code at the same time and pushed to `main`?
+## Step 4: Create a new branch.
 
-Github doesn't know which to take and you get a tricky merge conflict.
-
-# Step 1: Create a fresh project 1 .rproj file.
-
-Don't delete your .qmd if you've been working on it.
-
-We'll get to it later.
-
-# Step 2: Create a new branch.
-
-![](/docs/images/new_branch.png)
+![](images/new_branch.png)
 
 -   Give it a good name. No spaces.
 
 -   Your partner should give a different branch name.
 
-# Step 3: Change a small thing.
+## Step 5: Change a small thing.
 
-We will change the authors' names in our project.
+You and your partner should open the same `.qmd` file. 
 
-Work out with your partner who is author 1 and 2 (and 3).
+Assuming the .qmd file is blank Go to line 10 in the source and add your favorite color.
 
-# Step 4: Save and commit.
+## Step 6: Save and commit.
 
-Your partners are doing the same thing.
+Your partner is doing the same thing.
 
 Note: When you commit your branch gets a new node.
 
 Directed Acyclic Graph (DAG) picture.
 
-# Step 5: Pull then Push your branch to github.
+## Step 7: Pull then Push your branch to github.
 
 In general it is a good idea to pull first to get any new changes before you push.
 
 ![](https://gcapes.github.io/swc-pr-tutorial/fig/push-pull.svg){width="600"}
 
-# Step 6: Go to github.
+## Step 8: Go to github.
 
-![You should see something like this. Except with your branch name instead of practice.](/images/pull_request_note.png)
+You should see a banner that shows a pull request is being made. 
 
-# Step 7: Create a pull request for your branch
+![](images/pull_request_note.png)
+
+## Step 9: Create a pull request for your branch
 
 You are pulling your files to the `main` branch.
 
-Both you and your partner will do this.
+One of you should go first while the other waits. 
 
 Hopefully you'll be able to do an auto merge.
 
-![](/images/merge_pull_request.png)
+The second partner will have a merge conflict.
+
+![](images/merge_pull_request.png)
 
 Give your pull request a good message too.
 
-# Step 8: Merge Branches
+## Step 10: Merge Branches
 
 -   Do this one at a time.
 
@@ -85,20 +105,18 @@ Give your pull request a good message too.
 
     -   You'll make a new one.
 
-# Step 9: Switch back to main and pull
+## Step 11: Switch back to main and pull
 
-![](/images/switch_to_main.png){width="528"}
+![](images/switch_to_main.png){width="528"} 
 
 Check your files are updated with both names.
 
-# Merge Conflict practice
+## Merge Conflict practice
 
 ::: incremental
 -   New Branch - Good Name
 
--   You and your partner should change the title of your project.
-
-    -   Choose different titles
+-   You and your partner should make different graphs around the same line.
 
 -   Commit and push to github.
 
@@ -109,7 +127,7 @@ Check your files are updated with both names.
     -   Open the Terminal and type what it says.
 :::
 
-# Sometimes a file changes.
+## Sometimes a file changes.
 
 head \>\>\>\>\>\>\>\>\>\>\>
 
@@ -117,7 +135,7 @@ make changes in your file and delete the excess.
 
 \<\<\<\<\<\<\<\<\<\<\<
 
-# Explore
+## Explore
 
 -   history
 
@@ -125,8 +143,6 @@ make changes in your file and delete the excess.
 
 -   pull requests
 
-# Project work
-
-Make a simple graph and push to github.
+## Practice again.
 
 Always work in separate branches not on `main`.
