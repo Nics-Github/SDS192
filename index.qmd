@@ -525,21 +525,26 @@ h1{font-weight: 400;}
 <!-- The easiest way to do this is to find your Lec09-...zip in the file pane and go gear-icon \> "Set As Working Directory" -->
 <!-- ::: -->
 
-<!-- # Day 8 Trend Lines and Data.Frames -->
+# Day 9 Trend Lines and Data.Frames
 
-<!-- Announcements: No drop in Office hours on Thursday. -->
+[Digest Lab 2](./course-materials/lectures/lab-solutions-for-discussion/Lab2_solution_digestion.pdf)
 
-<!-- [Data Fundamentals](./course-materials/lectures/Making-data-frames.qmd) -->
+[Data Fundamentals](./course-materials/lectures/Making-data-frames.qmd)
 
-<!-- Simple Linear Regression and [Lowess](https://www.statisticshowto.com/lowess-smoothing/) -->
+[Rendering options](https://quarto.org/docs/computations/execution-options.html)
 
-<!-- [Create Trendlines](course-materials/in-class-activies/Lec08In-classExercise-TrendLines.qmd) -->
+Simple Linear Regression and Lowess
 
-<!-- Github Practice? -->
+[Create Trendlines](course-materials/in-class-activies/Lec09In-classExercise-TrendLines.qmd)
+
+[Reading on Git and RStudio](https://r-bio.github.io/intro-git-rstudio/)
+
+[Githib practice](https://classroom.github.com/a/U8S5PFOe)
+
 
 # Day 8 Stats and Boxplots
 
-Digest Lab 2
+
 
 ## Other things
 
@@ -554,7 +559,6 @@ If that doesn't work, [maybe its a bug?](https://github.com/rstudio/rstudio/issu
 -   the c() function
 -   [tidyverse style guide](https://style.tidyverse.org/ggplot2.html)
 -   [typing math](https://nics-github.github.io/sds220/latex-in-quarto-template.html)
--   [ggplot cheatsheet](./resources.qmd)
 -   The visual editor vs source editor
 -   [Short History of R](./course-materials/lectures/Brief-R-history.qmd)
 
