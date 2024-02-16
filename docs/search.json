@@ -81,7 +81,7 @@
     "href": "index.html",
     "title": "SDS 192: Intro to Data Science",
     "section": "",
-    "text": "–&gt;"
+    "text": "–>"
   },
   {
     "objectID": "index.html#discussion-taxonomy-of-graphics",
@@ -823,7 +823,7 @@
     "href": "index.html#other-things",
     "title": "SDS 192: Intro to Data Science",
     "section": "Other things",
-    "text": "Other things\n\n\n\n\n\n\nTo activate colors\n\n\n\n\n\nSome students are not getting “red” to be red. Try this: Tools menu &gt; global options &gt; code &gt; display &gt; “enable preview of named and hex colors\nIf that doesn’t work, maybe its a bug?\n\n\n\n\nthe c() function\ntidyverse style guide\ntyping math\nThe visual editor vs source editor\nShort History of R"
+    "text": "Other things\n\n\n\n\n\n\nTo activate colors\n\n\n\n\n\nSome students are not getting “red” to be red. Try this: Tools menu > global options > code > display > “enable preview of named and hex colors\nIf that doesn’t work, maybe its a bug?\n\n\n\n\nthe c() function\ntidyverse style guide\ntyping math\nThe visual editor vs source editor\nShort History of R"
   },
   {
     "objectID": "index.html#lecture-descriptive-stats-and-boxplots",
@@ -1047,6 +1047,13 @@
     "href": "index.html#project-1",
     "title": "SDS 192: Intro to Data Science",
     "section": "Project 1",
-    "text": "Project 1\nProject 1 Data Dictionary\nPolishing Figures\n\n\n\n\n\n\nworking directory\n\n\n\n\n\nYou may need to set your working directory.\nThe easiest way to do this is to find your Lec09-…zip in the file pane and go gear-icon &gt; “Set As Working Directory”"
+    "text": "Project 1\nProject 1 Data Dictionary\nSee moodle for project groups.\nEthics?"
+  },
+  {
+    "objectID": "readme.html",
+    "href": "readme.html",
+    "title": "SDS 192",
+    "section": "",
+    "text": "Source code to generate the course webpage for Smith College: Introduction to Data Science https://nics-github.github.io/SDS192/. Most of the content is in either:\n\n_quarto.yml: Set theme of webpage along with links in navigational bar.\nindex.qmd: A single Moodle-style page that lists all announcements and lectures notes in reverse-chronological order.\nPS.qmd: All problem sets/homeworks.\nprojects.qmd: Details on the mini-projects and term project.\nsyllabus.qmd: Course info/description, topics, materials, evaluation, and expectations.\n\n\n\nThis webpage is built/compiled using R Markdown Websites. To compile this webpage for yourself, do the following:\n\nGet the contents of this directory/repository:\n\nIf you are not familiar with GitHub, click the green “Clone or download” button on the top-right -> Download ZIP -> Unzip SDS192-master.zip.\nIf you are familiar with GitHub, clone this repository.\n\nDouble-click the SDS192.Rproj to open RStudio.\nIf you haven’t already, install the following R packages:\n\nrmarkdown and devtools\nAt the top of index.Rmd: all CRAN R packages listed .\nAt the top of index.Rmd: the emo and patchwork packages must be installed from GitHub using the devtools::install_github() function.\n\nGo to the “Build” pane of RStudio -> More -> Configure Build Tools… -> Ensure that “Project build tools” is set to “Webpage”.\nClick “Build Website”.\nThe website will display in the Viewer pane. The resulting index.html file and all other files for the webpage will be saved in the docs/ folder.\n\n\n\n\nTo publish/deploy this webpage and make it viewable on the web, you need to either:\n\nCopy the contents of the docs/ folder to your personal webpage or whatever domain hosting service you use.\nUse GitHub pages as I do. RStudio’s R Markdown Websites page gives instructions on how.\n\n\n\n\nThe format for this site was borrowed from Albert Kim’s SDS 192 course\nIf not created by me or referred to in some other way the activities and projects for this course are from:\n\nThe above mentioned website\nData Science in a box.\nBen Baumer’s SDS 192 course page"
   }
 ]

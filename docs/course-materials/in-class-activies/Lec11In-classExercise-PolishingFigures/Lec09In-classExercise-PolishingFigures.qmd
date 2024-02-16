@@ -1,0 +1,92 @@
+
+---
+title: "Lec 9: In-class Exercise: Polishing Figures"
+output:
+  html_document
+---
+
+```{r, include=FALSE}
+# Do not edit this code block/chunk
+knitr::opts_chunk$set(echo = TRUE, message=FALSE, warning = FALSE)
+```
+
+# Step 1: Load Packages
+
+Load the package and the dataset we need to work on our analysis today.
+
+```{r}
+library(tidyverse)
+
+schedule <- read_csv("data/schedule.csv")
+```
+
+# Step 2: View the Data Frames
+
+```{r}
+# Write your code below
+
+```
+
+# Step 3: Create a Barplot Visualizing the Frequency of Each Activity
+
+> How many times does each activity show up in the table?
+
+```{r}
+# Write your code below
+
+```
+
+# Step 4: Reorder the x-axis of Your Previous Plot
+
+I want to reorder my x-axis, so I will place the `reorder()` function around my x aesthetic, and assign the following arguments:
+
+* the values to be reordered: `activity`
+* the values will serve as the basis for reordering: `activity`
+* and a function to determine how values will be reordered: `length`
+
+```{r}
+# Paste the code below and adjust it
+
+``` 
+
+# Step 5: Create a Barplot Visualizing the Time Spent on Each Activity
+
+```{r}
+# Write your code below
+
+``` 
+
+# Step 6: Reorder the x-axis of Your Previous Plot
+
+I want to reorder my x-axis, so I will place the `reorder()` function around my x aesthetic, and assign the following arguments:
+
+* the values to be reordered: `activity`
+* the values will serve as the basis for reordering: `hours`
+* and a function to determine how values will be reordered: `sum`
+
+```{r}
+# Paste the code below and adjust it
+
+``` 
+
+# Step 7: Create Grouped Boxplots Visualizing the Time Spent on Each Activity
+
+Use the `coord_flip()` function to flip the x-axis and the y-axis. Also, be sure to add labels to your plot.
+
+```{r}
+# Write your code below
+
+``` 
+
+# Step 8: Reorder the x-axis of Your Previous Plot
+
+I want to reorder my x-axis, so I will place the `reorder()` function around my x aesthetic, and assign the following arguments:
+
+* the values to be reordered: `activity`
+* the values will serve as the basis for reordering: `hours`
+* and a function to determine how values will be reordered: `median`
+
+```{r}
+# Paste the code below and adjust it
+
+``` 
