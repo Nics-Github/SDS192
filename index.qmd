@@ -58,7 +58,7 @@ h1{font-weight: 400;}
 
 ```{=html}
 
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTG_b6upDZcPxXB92LHYIhV1uAXgeVGaMsZ3sDRPuSQN74JdhkKhZQVjw6T68I3zsP8KGYzDSVTZW64/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false&amp;gid=0&amp;range=A1:E10
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTG_b6upDZcPxXB92LHYIhV1uAXgeVGaMsZ3sDRPuSQN74JdhkKhZQVjw6T68I3zsP8KGYzDSVTZW64/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false&amp;gid=0&amp;range=A1:E14
 " width="100%" height="400">
 ```
 </iframe>
@@ -509,7 +509,7 @@ For some notes on skew: https://en.wikipedia.org/wiki/Skewness
 
 reorder(categorical_var, numeric variable, function for reordering)
 
-We'll discuss ethics Monday, read chapter 8.
+We'll discuss ethics Monday or Wednesday, read chapter 8.
 :::
 
 
