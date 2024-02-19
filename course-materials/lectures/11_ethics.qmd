@@ -7,7 +7,7 @@ editor: visual
 
 # Data Ethics
 
-This is a squish area.
+This is a squishy area.
 
 I like to think of it this way:
 
