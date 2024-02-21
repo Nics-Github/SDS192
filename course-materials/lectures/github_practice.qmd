@@ -7,31 +7,35 @@ format:
 editor: visual
 ---
 
-We are going to practice collaborating on a file on github. 
+We are going to practice collaborating on a file on github.
 
 # Part 1 FF merge
 
-The next three steps will take you through the easiest type of merge called fastforward. 
+The next three steps will take you through the easiest type of merge called fastforward.
 
 ## Step 1 Make a file.
-Once you opened a project in RStudio make a new empty .qmd file with your name as the file name. (I would do `nic-schwab.qmd`) 
+
+Once you opened a project in RStudio make a new empty .qmd file with your name as the file name. (I would do `nic-schwab.qmd`)
 
 ## Step 2 Push the file to github.
-Commit, pull then push the file to github. You and your partner should both do this. 
 
-## Step 3 Pull your partner's file from github. 
-Pull again.  
+Commit, pull then push the file to github. You and your partner should both do this.
 
-## Complete. 
-This should have worked well for both you and your partner. You should have both files on your local computer. 
+## Step 3 Pull your partner's file from github.
+
+Pull again.
+
+## Complete.
+
+This should have worked well for both you and your partner. You should have both files on your local computer.
 
 # Part 2 a harder merge
 
-Now we will engineer a merge conflict. 
+Now we will engineer a merge conflict.
 
 ## We just pushed to the main branch
 
-Do not push to the main branch. 
+Do not push to the main branch.
 
 ## Do not push to `Main`
 
@@ -59,7 +63,7 @@ If two people edit the same line of code and push to `main` Github doesn't know 
 
 ## Step 5: Change a small thing.
 
-You and your partner should open the same `.qmd` file. 
+You and your partner should open the same `.qmd` file.
 
 Assuming the .qmd file is blank Go to line 10 in the source and add your favorite color.
 
@@ -79,7 +83,7 @@ In general it is a good idea to pull first to get any new changes before you pus
 
 ## Step 8: Go to github.
 
-You should see a banner that shows a pull request is being made. 
+You should see a banner that shows a pull request is being made.
 
 ![](images/pull_request_note.png)
 
@@ -87,7 +91,7 @@ You should see a banner that shows a pull request is being made.
 
 You are pulling your files to the `main` branch.
 
-One of you should go first while the other waits. 
+One of you should go first while the other waits.
 
 Hopefully you'll be able to do an auto merge.
 
@@ -107,7 +111,7 @@ Give your pull request a good message too.
 
 ## Step 11: Switch back to main and pull
 
-![](images/switch_to_main.png){width="528"} 
+![](images/switch_to_main.png){width="528"}
 
 Check your files are updated with both names.
 

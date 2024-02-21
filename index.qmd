@@ -463,11 +463,11 @@ h1{font-weight: 400;}
 <!-- -   You might realize you are sharing an API key. Consider what that means. -->
 <!-- ::: -->
 
-<!-- # Day 11 Github and Ethics -->
+# Day 12 Ethics
 
-<!-- [Data Ethics](/course-materials/lectures/ethics.qmd) -->
+[Data Ethics](/course-materials/lectures/11_ethics.qmd)
 
-<!-- [Github Practice](/course-materials/lectures/github_practice.qmd) -->
+[Project 1](https://classroom.github.com/a/1riUqcQQ)
 
 # Day 11 Markdown and Github
 

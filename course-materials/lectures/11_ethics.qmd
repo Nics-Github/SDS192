@@ -1,7 +1,9 @@
 ---
 title: "Data Ethics"
 author: "Schwab"
-format: revealjs
+format: 
+  revealjs:
+    theme: beige
 editor: visual
 ---
 
@@ -9,43 +11,57 @@ editor: visual
 
 This is a squishy area.
 
-I like to think of it this way:
+[*Is the use of data causing harm?*]{.smallcaps}
 
-[*Do no harm with Data.*]{.smallcaps}
+## We'll look at two areas
 
-# Christopher Wylie
+1.  Data Ethics of Big Data.
+
+2.  Data Ethics of Visualization.
+
+## Copyright and Chat GPT
+
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/ChatGPT_logo.svg/1920px-ChatGPT_logo.svg.png)
+
+-   Sarah Silverman, Mona Awad and Paul Tremplay sue Open AI for direct infringement.
+
+-   Using copyrighted materials to train their models.
+
+-   [List of suits is getting longer.](https://originality.ai/blog/openai-chatgpt-lawsuit-list)
+
+## Christopher Wylie
 
 ::: columns
-::: {.column width="60%"}
+::: {.column width="50%"}
 ![](https://static01.nyt.com/images/2018/03/18/autossell/18Cambridge1/merlin_135596256_2eaf14bd-c577-441b-ac87-b5d54199d1b4-superJumbo.jpg?quality=75&auto=webp){fig-align="left" width="400"}
 :::
 
-::: {.column width="40%"}
-::: columns
-Cambridge Analytica
+::: {.column width="50%"}
+-   Cambridge Analytica improperly gets data on 50 million facebook users.
 
-Manipulation of Facebook users for votes
+-   Uses Data to manipulate users for votes in 2016 election.
 
-Can it do harm?
-:::
+-   Similar story with Brexit.
 :::
 :::
 
-# Prediction of Race
+## Prediction of Race
 
 Github user solivella made an [r package](https://github.com/kosukeimai/wru) to predict race based on surname and location.
 
 API from the US Census Bureau.
 
-Can it do harm?
-
-# Making Gaydar
+## Making Gaydar
 
 ![](https://static01.nyt.com/images/2017/10/10/science/10SCI-GAYDAR1/00GAYDAR1-superJumbo.jpg?quality=75&auto=webp){fig-align="center" width="1500"}
 
-Michal Kosinski and Yilun Wang create a gaydar.
+[Michal Kosinski and Yilun Wang create a gaydar.](https://www.nytimes.com/2017/10/09/science/stanford-sexual-orientation-study.html)
 
-Can it do harm?
+Want to show that is it possible to make something public with data that should be private to the individual.
+
+## Lab 3
+
+[Spotify](https://www.vox.com/culture/22814121/spotify-wrapped-2021-algorithm-data-privacy)
 
 ## Algorithms Reflect the bais of their creator
 
@@ -57,15 +73,9 @@ Can it do harm?
 ::: {.column width="58%"}
 ![](https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1456091964i/28186015.jpg){fig-align="center"}
 :::
-
-::: {.column width="42%"}
-![](https://miro.medium.com/v2/resize:fit:640/format:webp/1*iVjxpIdWRGcf0SHthnkwqA.jpeg)
-:::
 :::
 
-------------------------------------------------------------------------
-
-# We're just making Data Visualizations.
+## Data Visualizations.
 
 Charts can be manipulated either intentionally or unintentionally.
 
@@ -75,11 +85,23 @@ Here is a [site I wanted to show you forever ago.](https://www.statisticshowto.c
 
 Here's another, [if we have time.](https://www.buzzfeednews.com/article/katienotopoulos/graphs-that-lied-to-us)
 
-# Telling a story
+## Telling a story
 
 Data Visualizations are just telling a story.
 
 Try to make it an honest one.
+
+## How to lie with Statistics
+
+::: columns
+::: {.column width="50%"}
+![](https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1427665814i/51291.jpg)
+:::
+
+::: {.column width="50%"}
+![](https://timharford.com/wp-content/uploads/2020/11/data-detective.png)
+:::
+:::
 
 ## Credits
 
@@ -90,3 +112,5 @@ Try to make it an honest one.
 -   Michal Kosinski and Yilun Wang https://www.nytimes.com/2017/10/09/science/stanford-sexual-orientation-study.html
 
 -   New Yorker https://www.newyorker.com/news/daily-comment/the-ai-gaydar-study-and-the-real-dangers-of-big-data
+
+-   Suing Chat GPT https://www.theverge.com/2024/2/13/24072131/sarah-silverman-paul-tremblay-openai-chatgpt-copyright-lawsuit

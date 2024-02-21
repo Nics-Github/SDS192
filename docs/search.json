@@ -81,7 +81,7 @@
     "href": "index.html",
     "title": "SDS 192: Intro to Data Science",
     "section": "",
-    "text": "–>"
+    "text": "–&gt;"
   },
   {
     "objectID": "index.html#discussion-taxonomy-of-graphics",
@@ -107,9 +107,9 @@
   {
     "objectID": "course-materials/lectures/github_practice.html",
     "href": "course-materials/lectures/github_practice.html",
-    "title": "Real Github Practice",
+    "title": "Github Practice",
     "section": "",
-    "text": "Pushing to Main\nWe’ve seen how messy this can get.\nYou can push to main when you are working alone (and always on one computer).\nDirected Acyclic Graph (DAG) picture.\n\nA node is a commit\nEdges point to the parent\n\n\n\nBranches\nWhen working with other people create branches.\nBranches allow you to work without mucking up other’s work.\nIf two people edit the same line of code at the same time and pushed to main?\nGithub doesn’t know which to take and you get a tricky merge conflict.\n\n\nStep 1: Create a fresh project 1 .rproj file.\nDon’t delete your .qmd if you’ve been working on it.\nWe’ll get to it later.\n\n\nStep 2: Create a new branch.\n\n\nGive it a good name. No spaces.\nYour partner should give a different branch name.\n\n\n\nStep 3: Change a small thing.\nWe will change the authors’ names in our project.\nWork out with your partner who is author 1 and 2 (and 3).\n\n\nStep 4: Save and commit.\nYour partners are doing the same thing.\nNote: When you commit your branch gets a new node.\nDirected Acyclic Graph (DAG) picture.\n\n\nStep 5: Pull then Push your branch to github.\nIn general it is a good idea to pull first to get any new changes before you push.\n\n\n\nStep 6: Go to github.\n\n\n\nYou should see something like this. Except with your branch name instead of practice.\n\n\n\n\nStep 7: Create a pull request for your branch\nYou are pulling your files to the main branch.\nBoth you and your partner will do this.\nHopefully you’ll be able to do an auto merge.\n\nGive your pull request a good message too.\n\n\nStep 8: Merge Branches\n\nDo this one at a time.\nYou can delete the old branch.\n\nYou’ll make a new one.\n\n\n\n\nStep 9: Switch back to main and pull\n\nCheck your files are updated with both names.\n\n\nMerge Conflict practice\n\n\nNew Branch - Good Name\nYou and your partner should change the title of your project.\n\nChoose different titles\n\nCommit and push to github.\nGo to github to fix the merge conflict.\nSometimes github will tell you go to the command line\n\nOpen the Terminal and type what it says.\n\n\n\n\n\nSometimes a file changes.\nhead &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;\nmake changes in your file and delete the excess.\n&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;\n\n\nExplore\n\nhistory\nbranches\npull requests\n\n\n\nProject work\nMake a simple graph and push to github.\nAlways work in separate branches not on main."
+    "text": "We are going to practice collaborating on a file on github."
   },
   {
     "objectID": "course-materials/lectures/SQL-example-information-schema.html",
@@ -823,7 +823,7 @@
     "href": "index.html#other-things",
     "title": "SDS 192: Intro to Data Science",
     "section": "Other things",
-    "text": "Other things\n\n\n\n\n\n\nTo activate colors\n\n\n\n\n\nSome students are not getting “red” to be red. Try this: Tools menu > global options > code > display > “enable preview of named and hex colors\nIf that doesn’t work, maybe its a bug?\n\n\n\n\nthe c() function\ntidyverse style guide\ntyping math\nThe visual editor vs source editor\nShort History of R"
+    "text": "Other things\n\n\n\n\n\n\nTo activate colors\n\n\n\n\n\nSome students are not getting “red” to be red. Try this: Tools menu &gt; global options &gt; code &gt; display &gt; “enable preview of named and hex colors\nIf that doesn’t work, maybe its a bug?\n\n\n\n\nthe c() function\ntidyverse style guide\ntyping math\nThe visual editor vs source editor\nShort History of R"
   },
   {
     "objectID": "index.html#lecture-descriptive-stats-and-boxplots",
@@ -1047,7 +1047,7 @@
     "href": "index.html#project-1",
     "title": "SDS 192: Intro to Data Science",
     "section": "Project 1",
-    "text": "Project 1\nProject 1 Data Dictionary\nSee moodle for project groups.\nEthics?"
+    "text": "Project 1\nProject 1 Data Dictionary\nSee moodle for project groups.\nData Ethics"
   },
   {
     "objectID": "readme.html",
@@ -1075,6 +1075,69 @@
     "href": "course-materials/lectures/11_ethics.html#credits",
     "title": "Data Ethics",
     "section": "Credits",
-    "text": "Credits\n\nSome Content was taken from Ben Baumer’s Lecture on Ethics\nChistopher Wylie https://www.nytimes.com/2018/03/17/us/politics/cambridge-analytica-trump-campaign.html\nMichal Kosinski and Yilun Wang https://www.nytimes.com/2017/10/09/science/stanford-sexual-orientation-study.html\nNew Yorker https://www.newyorker.com/news/daily-comment/the-ai-gaydar-study-and-the-real-dangers-of-big-data"
+    "text": "Credits\n\nSome Content was taken from Ben Baumer’s Lecture on Ethics\nChistopher Wylie https://www.nytimes.com/2018/03/17/us/politics/cambridge-analytica-trump-campaign.html\nMichal Kosinski and Yilun Wang https://www.nytimes.com/2017/10/09/science/stanford-sexual-orientation-study.html\nNew Yorker https://www.newyorker.com/news/daily-comment/the-ai-gaydar-study-and-the-real-dangers-of-big-data\nSuing Chat GPT https://www.theverge.com/2024/2/13/24072131/sarah-silverman-paul-tremblay-openai-chatgpt-copyright-lawsuit"
+  },
+  {
+    "objectID": "course-materials/lectures/11_ethics.html#well-look-at-two-areas",
+    "href": "course-materials/lectures/11_ethics.html#well-look-at-two-areas",
+    "title": "Data Ethics",
+    "section": "We’ll look at two areas",
+    "text": "We’ll look at two areas\n\nData Ethics of Big Data.\nData Ethics of Visualization."
+  },
+  {
+    "objectID": "course-materials/lectures/11_ethics.html#copyright-and-chat-gpt",
+    "href": "course-materials/lectures/11_ethics.html#copyright-and-chat-gpt",
+    "title": "Data Ethics",
+    "section": "Copyright and Chat GPT",
+    "text": "Copyright and Chat GPT\n\n\nSarah Silverman, Mona Awad and Paul Tremplay sue Open AI for direct infringement.\nUsing copyrighted materials to train their models.\nList of suits is getting longer."
+  },
+  {
+    "objectID": "course-materials/lectures/11_ethics.html#christopher-wylie",
+    "href": "course-materials/lectures/11_ethics.html#christopher-wylie",
+    "title": "Data Ethics",
+    "section": "Christopher Wylie",
+    "text": "Christopher Wylie\n\n\n\n\n\n\n\n\n\nCambridge Analytica improperly gets data on 50 million facebook users.\nUses Data to manipulate users for votes in 2016 election.\nSimilar story with Brexit."
+  },
+  {
+    "objectID": "course-materials/lectures/11_ethics.html#prediction-of-race",
+    "href": "course-materials/lectures/11_ethics.html#prediction-of-race",
+    "title": "Data Ethics",
+    "section": "Prediction of Race",
+    "text": "Prediction of Race\nGithub user solivella made an r package to predict race based on surname and location.\nAPI from the US Census Bureau."
+  },
+  {
+    "objectID": "course-materials/lectures/11_ethics.html#making-gaydar",
+    "href": "course-materials/lectures/11_ethics.html#making-gaydar",
+    "title": "Data Ethics",
+    "section": "Making Gaydar",
+    "text": "Making Gaydar\n\nMichal Kosinski and Yilun Wang create a gaydar.\nWant to show that is it possible to make something public with data that should be private to the individual."
+  },
+  {
+    "objectID": "course-materials/lectures/11_ethics.html#data-visualizations.",
+    "href": "course-materials/lectures/11_ethics.html#data-visualizations.",
+    "title": "Data Ethics",
+    "section": "Data Visualizations.",
+    "text": "Data Visualizations.\nCharts can be manipulated either intentionally or unintentionally.\nHere are some lesson’s learned from Lying With Statistics. by Darrell Huff.\nHere is a site I wanted to show you forever ago.\nHere’s another, if we have time."
+  },
+  {
+    "objectID": "course-materials/lectures/11_ethics.html#telling-a-story",
+    "href": "course-materials/lectures/11_ethics.html#telling-a-story",
+    "title": "Data Ethics",
+    "section": "Telling a story",
+    "text": "Telling a story\nData Visualizations are just telling a story.\nTry to make it an honest one."
+  },
+  {
+    "objectID": "course-materials/lectures/11_ethics.html#how-to-lie-with-statistics",
+    "href": "course-materials/lectures/11_ethics.html#how-to-lie-with-statistics",
+    "title": "Data Ethics",
+    "section": "How to lie with Statistics",
+    "text": "How to lie with Statistics"
+  },
+  {
+    "objectID": "course-materials/lectures/11_ethics.html#lab-3",
+    "href": "course-materials/lectures/11_ethics.html#lab-3",
+    "title": "Data Ethics",
+    "section": "Lab 3",
+    "text": "Lab 3\nSpotify"
   }
 ]
