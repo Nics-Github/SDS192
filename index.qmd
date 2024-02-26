@@ -58,7 +58,7 @@ h1{font-weight: 400;}
 
 ```{=html}
 
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTG_b6upDZcPxXB92LHYIhV1uAXgeVGaMsZ3sDRPuSQN74JdhkKhZQVjw6T68I3zsP8KGYzDSVTZW64/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false&amp;gid=0&amp;range=A1:E14
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTG_b6upDZcPxXB92LHYIhV1uAXgeVGaMsZ3sDRPuSQN74JdhkKhZQVjw6T68I3zsP8KGYzDSVTZW64/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false&amp;gid=0&amp;range=A1:E21
 " width="100%" height="400">
 ```
 </iframe>
@@ -441,27 +441,33 @@ h1{font-weight: 400;}
 <!-- -   Once you delete a branch on github don't work in it any more. do: `git fetch --prune` to remove the old remote branches from rstudio.Or `git branch -d branch_name` to delete your old branch -->
 <!-- ::: -->
 
-<!-- # Day 12 Project 1 -->
+# Day 13 and 14 Project 1
 
-<!-- Today we are working on project 1. -->
+Today we are working on project 1.
 
-<!-- (We will not normally have this much time to work on projects in class). -->
+-   Project is due next Monday, March 4.
 
-<!-- ::: {.callout-tip collapse="true"} -->
-<!-- # Think about Project 1 -->
+-   This is the las in class day to work on Project 1
 
-<!-- -   Consider the ethics. -->
+-   We will have a lab this Friday. 
 
-<!-- -   Consider code layout. Lots of space and arguments on different lines. -->
+::: {.callout-tip collapse="true"}
+# Think about Project 1
 
-<!-- -   Do at least one push on the project in class today. -->
+-   Consider the ethics.
 
-<!-- -   In general lots of little pushes. -->
+-   Consider code layout. Lots of space and arguments on different lines.
 
-<!-- -   Make your graph legible to the lay person (title, labels, source, captions). -->
+-   Do at least one push on the project in class today.
 
-<!-- -   You might realize you are sharing an API key. Consider what that means. -->
-<!-- ::: -->
+-   In general lots of little pushes.
+
+-   Remember to comment your code, and follow tidyverse style guide.
+
+-   Make your graph legible to the lay person (title, labels, source, captions).
+
+-   You might realize you are sharing an API key. Consider what that means.
+:::
 
 # Day 12 Ethics
 
