@@ -395,29 +395,11 @@ h1{font-weight: 400;}
 
 <!-- ``` -->
 
-<!-- [In class MDSR Problems 1 and 2](https://mdsr-book.github.io/mdsr2e/ch-dataI.html#dataI-exercises) -->
+# Day 15 Wrangling
 
-<!-- Read Chapter 4.1 -->
+[Stop and Frisk Wrangling](/course-materials/lectures/Wrangling_1_SQF.qmd)
 
-<!-- # Day 14 Wrangling -->
-
-<!-- Reminder: Rendered Project 1 due today. -->
-
-<!-- [Stop and Frisk Wrangling](/course-materials/lectures/Wrangling_1_SQF.qmd) -->
-
-<!-- # Day 13 Project 1 -->
-
-<!-- Today we are working on project 1. -->
-
-<!-- ::: {.callout-tip collapse="true"} -->
-<!-- # notes on rendering -->
-
-<!-- -   Don't forget to render -->
-
-<!-- -   The hash-pipe `#|` -->
-
-<!-- -   echo, include, execute, R markdown cheat sheet. -->
-<!-- ::: -->
+[In class MDSR Problems 1 and 2](https://mdsr-book.github.io/mdsr2e/ch-dataI.html#dataI-exercises)
 
 <!-- ::: {.callout-tip collapse="true"} -->
 <!-- # terminal work -->

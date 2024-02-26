@@ -1139,5 +1139,12 @@
     "title": "Data Ethics",
     "section": "Lab 3",
     "text": "Lab 3\nSpotify"
+  },
+  {
+    "objectID": "course-materials/lectures/mdsr-the-verbs.html#dplyr-lives-in-the-tidyverse",
+    "href": "course-materials/lectures/mdsr-the-verbs.html#dplyr-lives-in-the-tidyverse",
+    "title": "The Verbs",
+    "section": "dplyr lives in the tidyverse",
+    "text": "dplyr lives in the tidyverse"
   }
 ]

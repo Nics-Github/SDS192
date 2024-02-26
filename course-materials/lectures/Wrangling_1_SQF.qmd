@@ -192,6 +192,10 @@ Make a new document and put this in a chunk.
 
 # Answer the question.
 
-> Are Black, Hispanic, groups more likely to be stopped by police officers than other groups in 2011? Does this change as the total counts of stops decreases to 2021 levels?
+> Are Black, and Hispanic groups more likely to be stopped by police officers than other groups in 2011? Does this change as the total counts of stops decreases to 2021 levels?
 
-# What other questions do you have about the data?
+# Two more verbs
+
+-   filter() - subsets the data based on requirements.
+
+-   mutate() - adds a new column.

@@ -1,7 +1,9 @@
 ---
 title: "The Verbs"
 author: "Ben Baumer"
-format: revealjs
+format: 
+  revealjs:
+    theme: beige
 editor: visual
 ---
 
@@ -89,20 +91,20 @@ pdftoppm /tmp/dplyr.pdf ../gfx/dplyr_cheatsheet -png -f 1 -singlefile
 
 ## `select()`: take a subset of the **columns**
 
-![](/images/select.png)
+![](images/select.png)
 
 ## `filter()`: take a subset of the **rows**
 
-![](/images/filter.png)
+![](images/filter.png)
 
 ## `mutate()`: add or modify a **column**
 
-![](/images/mutate.png)
+![](images/mutate.png)
 
 ## `arrange()`: sort the **rows**
 
-![](/images/arrange.png)
+![](images/arrange.png)
 
 ## `summarize()`: collapse to **a single row**
 
-![](/images/summarise.png)
+![](images/summarise.png)
