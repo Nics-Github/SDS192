@@ -443,6 +443,8 @@ h1{font-weight: 400;}
 
 # Day 13 and 14 Project 1
 
+Announcement: SAL on Feb 29 from 2:45-4pm. Mapping with Google Earth Engine by Mags MacLaughlin. 
+
 Today we are working on project 1.
 
 -   Project is due next Monday, March 4.
