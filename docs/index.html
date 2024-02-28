@@ -22,40 +22,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -177,6 +143,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul>
   <li><a href="#schedule" id="toc-schedule" class="nav-link active" data-scroll-target="#schedule">Schedule</a></li>
+  <li><a href="#day-16-lab-4" id="toc-day-16-lab-4" class="nav-link" data-scroll-target="#day-16-lab-4">Day 16 Lab 4</a></li>
   <li><a href="#day-15-wrangling" id="toc-day-15-wrangling" class="nav-link" data-scroll-target="#day-15-wrangling">Day 15 Wrangling</a></li>
   <li><a href="#day-13-and-14-project-1" id="toc-day-13-and-14-project-1" class="nav-link" data-scroll-target="#day-13-and-14-project-1">Day 13 and 14 Project 1</a></li>
   <li><a href="#day-12-ethics" id="toc-day-12-ethics" class="nav-link" data-scroll-target="#day-12-ethics">Day 12 Ethics</a></li>
@@ -412,9 +379,11 @@ h1{font-weight: 400;}
 <!-- Exploration: how to join tables? -->
 <!-- [Joining two tables in class exercise](https://scao53.github.io/sds192spring2023/in-class_exercises/Lec17In-classExercise-JoinTables.zip) -->
 <!-- [Problems 1, 3](https://mdsr-book.github.io/mdsr3e/05-joins.html#join-exercises) -->
-<!-- # Day 16 Lab 4 -->
-<!-- [Here is the link](https://moodle.smith.edu/) for Lab 4. -->
-<!-- Lab 4 will be due Friday by midnight. -->
+</section>
+<section id="day-16-lab-4" class="level1">
+<h1>Day 16 Lab 4</h1>
+<p><a href="https://classroom.github.com/a/J1JzkKjE">Here is the link</a> for Lab 4.</p>
+<p>Lab 4 will be due next Friday by midnight.</p>
 <!-- # Day 15 Wrangling with Filter -->
 <!-- Wrangle sqf_2011 data together -->
 <!-- [Lecture on the five verbs](course-materials/lectures/mdsr-the-verbs.qmd) -->
@@ -429,28 +398,28 @@ h1{font-weight: 400;}
 <section id="day-15-wrangling" class="level1">
 <h1>Day 15 Wrangling</h1>
 <p><a href="./course-materials/lectures/15_Wrangling_1_SQF.html">Stop and Frisk Wrangling</a></p>
-<p><a href="https://mdsr-book.github.io/mdsr2e/ch-dataI.html#dataI-exercises">In class MDSR Problems 1 and 2</a></p>
-<div class="cell">
-<details>
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Copy this code into a chunk in R to make the Random_subset data frame from problem 1 and 2. </span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Use the verbs we've discussed to make the subsets from the text. </span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>Random_subset <span class="ot">&lt;-</span>  tibble<span class="sc">::</span><span class="fu">tribble</span>(</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="sc">~</span>year,<span class="sc">~</span>sex,   <span class="sc">~</span>name,         <span class="sc">~</span>n, <span class="sc">~</span>prop,</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>     <span class="dv">2003</span>, <span class="st">"M"</span>,     <span class="st">"Bilal"</span>,        <span class="dv">146</span>, <span class="fl">0.0000695</span>,</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>     <span class="dv">1999</span>, <span class="st">"F"</span>,     <span class="st">"Terria"</span>,        <span class="dv">23</span>, <span class="fl">0.0000118</span>,</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>     <span class="dv">2010</span>, <span class="st">"F"</span>,     <span class="st">"Naziyah"</span>,       <span class="dv">45</span>, <span class="fl">0.0000230</span>,</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>     <span class="dv">1989</span>, <span class="st">"F"</span>,     <span class="st">"Shawana"</span>,       <span class="dv">41</span>, <span class="fl">0.0000206</span>,</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>     <span class="dv">1989</span>, <span class="st">"F"</span>,     <span class="st">"Jessi"</span>,        <span class="dv">210</span>, <span class="fl">0.000105</span>,</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>     <span class="dv">1928</span>, <span class="st">"M"</span>,     <span class="st">"Tillman"</span>,       <span class="dv">43</span>, <span class="fl">0.0000377</span>,</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>     <span class="dv">1981</span>, <span class="st">"F"</span>,     <span class="st">"Leslee"</span>,        <span class="dv">83</span>, <span class="fl">0.0000464</span>,</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>     <span class="dv">1981</span>, <span class="st">"F"</span>,     <span class="st">"Sherise"</span>,       <span class="dv">27</span>, <span class="fl">0.0000151</span>,</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>     <span class="dv">1920</span>, <span class="st">"F"</span>,     <span class="st">"Marquerite"</span>,    <span class="dv">26</span>, <span class="fl">0.0000209</span>,</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>     <span class="dv">1941</span>, <span class="st">"M"</span>,     <span class="st">"Lorraine"</span>,      <span class="dv">24</span>, <span class="fl">0.0000191</span></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</div>
+<!-- Didn't get to the code below. It would be good for wrangling practice.  -->
+<!-- [In class MDSR Problems 1 and 2](https://mdsr-book.github.io/mdsr2e/ch-dataI.html#dataI-exercises) -->
+<!-- ```{r, Random_subset } -->
+<!-- #| eval: FALSE -->
+<!-- #| echo: TRUE -->
+<!-- #| code-fold: true -->
+<!-- # Copy this code into a chunk in R to make the Random_subset data frame from problem 1 and 2.  -->
+<!-- # Use the verbs we've discussed to make the subsets from the text.  -->
+<!-- Random_subset <-  tibble::tribble( -->
+<!--     ~year,~sex,   ~name,         ~n, ~prop, -->
+<!--      2003, "M",     "Bilal",        146, 0.0000695, -->
+<!--      1999, "F",     "Terria",        23, 0.0000118, -->
+<!--      2010, "F",     "Naziyah",       45, 0.0000230, -->
+<!--      1989, "F",     "Shawana",       41, 0.0000206, -->
+<!--      1989, "F",     "Jessi",        210, 0.000105, -->
+<!--      1928, "M",     "Tillman",       43, 0.0000377, -->
+<!--      1981, "F",     "Leslee",        83, 0.0000464, -->
+<!--      1981, "F",     "Sherise",       27, 0.0000151, -->
+<!--      1920, "F",     "Marquerite",    26, 0.0000209, -->
+<!--      1941, "M",     "Lorraine",      24, 0.0000191 -->
+<!--   ) -->
+<!-- ``` -->
 <!-- ::: {.callout-tip collapse="true"} -->
 <!-- # terminal work -->
 <!-- -   This is a helpful website: `https://ioflood.com/blog/solved-git-error-you-have-divergent-branches-and-need-to-specify-how-to-reconcile-them/` -->
