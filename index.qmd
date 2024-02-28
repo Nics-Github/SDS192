@@ -397,7 +397,7 @@ h1{font-weight: 400;}
 
 # Day 15 Wrangling
 
-[Stop and Frisk Wrangling](/course-materials/lectures/Wrangling_1_SQF.qmd)
+[Stop and Frisk Wrangling](/course-materials/lectures/15_Wrangling_1_SQF.qmd)
 
 [In class MDSR Problems 1 and 2](https://mdsr-book.github.io/mdsr2e/ch-dataI.html#dataI-exercises)
 
