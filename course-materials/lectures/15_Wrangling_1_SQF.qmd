@@ -1,0 +1,260 @@
+---
+title: "Stop Question Frisk "
+subtitle: "An Introduction to Wrangling"
+author: "Schwab"
+format: 
+  revealjs:
+    theme: beige
+editor: visual
+---
+
+## Stop, Question, Frisk
+
+-   Started in the 1990s
+
+-   New York City Police Practice
+
+    -   Police need "[reasonable suspicion](https://supreme.justia.com/cases/federal/us/392/1/)."
+
+-   Leads to mistrust in the police by these groups.
+
+## More about about me
+
+I'm not Black.
+
+I am Hispanic.
+
+I look White.
+
+I am not from New York City.
+
+In this data analysis I will have limited perspective.
+
+## Race Exists
+
+This is an acknowledgement that the construct of race exists and plays a part in the way human being interact with each other.
+
+## Schedule
+
+::: incremental
+1.  Introduce you to the data.
+
+2.  Pose a question.
+
+3.  Give you [data frames]{.underline} with data to answer the question one way.
+
+    i.  You'll order them with a partner.
+
+    ii. You'll make up [pseudocode]{.underline} to explain data transformations.
+
+    iii. I'll give you the real code.
+
+4.  We'll repeat the process of for 2021 data in R.
+:::
+
+# Questions so far?
+
+## The Data
+
+[Here is](https://www.nyc.gov/site/nypd/stats/reports-analysis/stopfrisk.page) NYC's stop and frisk data.
+
+Let's consider 2011 data
+
+::: nonincremental
+-   Each column is a variable
+
+-   and each row is a stop
+:::
+
+*The variable names are inconsistent across years.*
+
+## SQF History
+
+```{r stop-frisk-years}
+#| echo: TRUE
+#| warning: FALSE
+#| include: FALSE
+
+library(tidyverse)
+library(readxl)
+options(scipen = 10)
+
+
+
+```
+
+```{r }
+#| eval: False
+
+# Read in each csv file. This is a lot 
+
+# With purr csv
+
+file_paths_csv <- fs::dir_ls("../data/2003_2015_csv_files")
+
+file_contents_csv<- file_paths_csv |>
+  map(function (path){
+    read_csv(path)
+  })
+
+# with purr excel
+
+file_paths_xl <- fs::dir_ls("../data/2016_2022_xl_files")
+
+file_contents_xl<- file_paths_xl |>
+  map(function (path){
+    read_excel(path)
+  })
+
+# https://www.youtube.com/watch?v=An1bUIg-nVM
+
+#See the number of rows i.e stops in each year
+pre_2016 <- sapply(file_contents_csv, nrow)
+post_2016 <- sapply(file_contents_xl, nrow)
+
+
+```
+
+```{r graph-of-stop}
+
+years <- c(2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022 )
+stops_frisks <- c(160851, 313523, 398191, 506491, 472096, 540302, 581168,  601285, 685724, 532911,  191851, 45787, 22563, 12405, 11629,  11008,   13459,9544 , 8947,  15102)  
+
+sqf <- data.frame(years,stops_frisks)
+
+
+
+sqf |> 
+  ggplot(aes(years,stops_frisks)) +
+  
+  #geom_rect(aes(xmin=2002,xmax=2014,ymin=0,ymax=Inf),fill="#003585",alpha=0.01)+
+  #geom_rect(aes(xmin=2014,xmax=2021,ymin=0,ymax=Inf),fill="#FFFFFF",alpha=0.01)+
+  #geom_rect(aes(xmin=2021,xmax=2022,ymin=0,ymax=Inf),fill="#FF6600",alpha=0.01)+
+  geom_line()+
+  xlab("Year")+
+  ylab("Citizens Stopped ('000s)")+
+  labs(title="")+
+  theme_minimal()+
+  scale_y_continuous(breaks = c(0,350000,700000), labels = c("0","350","700"))+
+  scale_x_continuous(breaks = c(2003,2013,2022))+
+  geom_text(label="Bloomberg", x = 2004.5, y = 40000, color="gray35" ) +
+  geom_text(label="de Blasio", x = 2016, y = 40000, color="gray35" ) +
+  geom_text(label="Adams", x = 2022, y = 40000, color="gray35" ) +
+  geom_text(label="NYCLU \n suit", x = 2013, y = 650000, color="gray35" ) +
+  geom_vline(xintercept=2012, linetype = 3 ) +
+  theme(
+    panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank(),
+    axis.line = element_line(color = "black"),
+    axis.text=element_text(size=12)
+  
+  )
+```
+
+## Questions
+
+::: incremental
+  1.  Which racial groups were most likely to be stopped by police officers in 2011?
+
+  2.  What percent of the stops resulted in an arrest by race in 2011?
+
+  3.  How do the answers to these questions change in 2021?
+
+  4.  You will likely have more questions as we analyze the data.
+  
+:::
+
+## Your data frames
+
+1.  Data envelopes for **2011 Data**
+
+-   Put the data frames in order.
+
+-   Be sure you can explain the process from one df to another. "psuedocode"
+
+-   Questions about the data?
+
+2.  Arrow envelopes **functions**
+
+-   After the frames are in order put the code arrows between each frame.
+
+-   Questions about the code?
+
+## Conclusions from 2021 data
+
+Here are our questions again 
+
+::: incremental
+  1.  Which racial groups were most likely to be stopped by police officers in 2011?
+
+  2.  What percent of the stops resulted in an arrest by race in 2011?
+
+  3.  How do the answers to these questions change in 2021?
+
+  4.  You will likely have more questions as we analyze the data.
+  
+:::
+
+## For comparison:
+
+Here's the demographics of NYC[^1]:
+
+[^1]: https://www.census.gov/quickfacts/fact/table/newyorkcitynewyork/PST045222
+
+-   Black: 23.4 %
+
+-   Latino: 28.9%
+
+-   White: 39.8%
+
+## Summarize functions:
+
+New functions:
+
+-   select(), mutate(), arrange(), rename()
+
+Old functions:
+
+-   names(), recode(), count()
+
+## Let's compare to 2011.
+
+Make a new r project.
+
+Download 2011 csv from [this site.](https://www.nyc.gov/site/nypd/stats/reports-analysis/stopfrisk.page) 
+
+Make a new document and put this in a chunk.
+
+```{r}
+#| eval: false
+#| echo: true
+#| code-fold: true
+
+# This code will read in the 2011 SQF data from the internet
+
+# makes a temp file
+temp <- tempfile()
+
+# downloads the file from the url and puts it in the temp location
+download.file("https://www.nyc.gov/assets/nypd/downloads/zip/analysis_and_planning/stop-question-frisk/sqf-2011-csv.zip",temp)
+
+# This makes a connection to the temp filea and reads the csv in the temp location 
+data <- read.csv(unz(temp, "2011.csv"))
+
+# This breaks the connection to the temp file (important if you are reading other files later. )
+unlink(temp)
+```
+
+## Answer the questions.
+
+Figure out the variable names and do a similar analysis.
+
+> Are Black, and Hispanic groups more likely to be stopped by police officers than other groups in 2011? 
+
+> Does this change as the total counts of stops decreases to 2021 levels?
+
+## Two more verbs
+
+-   filter() - subsets the data based on requirements.
+
+-   mutate() - adds a new column.

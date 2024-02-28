@@ -1146,5 +1146,215 @@
     "title": "The Verbs",
     "section": "dplyr lives in the tidyverse",
     "text": "dplyr lives in the tidyverse"
+  },
+  {
+    "objectID": "course-materials/lectures/Wrangling_1_SQF.html#stop-question-frisk",
+    "href": "course-materials/lectures/Wrangling_1_SQF.html#stop-question-frisk",
+    "title": "Stop Question Frisk",
+    "section": "Stop, Question, Frisk",
+    "text": "Stop, Question, Frisk\n\nStarted in the 1990s\nNew York City Police Practice\n\nPolice need “reasonable suspicion.”\n\nLeads to mistrust in the police by these groups."
+  },
+  {
+    "objectID": "course-materials/lectures/Wrangling_1_SQF.html#more-about-about-me",
+    "href": "course-materials/lectures/Wrangling_1_SQF.html#more-about-about-me",
+    "title": "Stop Question Frisk",
+    "section": "More about about me",
+    "text": "More about about me\nI’m not Black.\nI am Hispanic.\nI look White.\nI am not from New York City.\nIn this data analysis I will have limited perspective."
+  },
+  {
+    "objectID": "course-materials/lectures/Wrangling_1_SQF.html#race-exists",
+    "href": "course-materials/lectures/Wrangling_1_SQF.html#race-exists",
+    "title": "Stop Question Frisk",
+    "section": "Race Exists",
+    "text": "Race Exists\nThis is an acknowledgement that the construct of race exists and plays a part in the way human being interact with each other."
+  },
+  {
+    "objectID": "course-materials/lectures/Wrangling_1_SQF.html#schedule",
+    "href": "course-materials/lectures/Wrangling_1_SQF.html#schedule",
+    "title": "Stop Question Frisk",
+    "section": "Schedule",
+    "text": "Schedule\n\n\nIntroduce you to the data.\nPose a question.\nGive you data frames with data to answer the question one way.\n\nYou’ll order them with a partner.\nYou’ll make up pseudocode to explain data transformations.\nI’ll give you the real code.\n\nWe’ll repeat the process of for 2021 data in R."
+  },
+  {
+    "objectID": "course-materials/lectures/Wrangling_1_SQF.html#the-data",
+    "href": "course-materials/lectures/Wrangling_1_SQF.html#the-data",
+    "title": "Stop Question Frisk",
+    "section": "The Data",
+    "text": "The Data\nHere is NYC’s stop and frisk data.\nLet’s consider 2011 data\n\n\nEach column is a variable\nand each row is a stop\n\n\nThe variable names are inconsistent across years."
+  },
+  {
+    "objectID": "course-materials/lectures/Wrangling_1_SQF.html#sqf-history",
+    "href": "course-materials/lectures/Wrangling_1_SQF.html#sqf-history",
+    "title": "Stop Question Frisk",
+    "section": "SQF History",
+    "text": "SQF History"
+  },
+  {
+    "objectID": "course-materials/lectures/Wrangling_1_SQF.html#questions",
+    "href": "course-materials/lectures/Wrangling_1_SQF.html#questions",
+    "title": "Stop Question Frisk",
+    "section": "Questions",
+    "text": "Questions\n\n\nWhich racial groups were most likely to be stopped by police officers in 2011?\nWhat percent of the stops resulted in an arrest by race in 2011?\nHow do the answers to these questions change in 2021?\nYou will likely have more questions as we analyze the data."
+  },
+  {
+    "objectID": "course-materials/lectures/Wrangling_1_SQF.html#your-data-frames",
+    "href": "course-materials/lectures/Wrangling_1_SQF.html#your-data-frames",
+    "title": "Stop Question Frisk",
+    "section": "Your data frames",
+    "text": "Your data frames\n\nData envelopes for 2011 Data\n\n\nPut the data frames in order.\nBe sure you can explain the process from one df to another. “psuedocode”\nQuestions about the data?\n\n\nArrow envelopes functions\n\n\nAfter the frames are in order put the code arrows between each frame.\nQuestions about the code?"
+  },
+  {
+    "objectID": "course-materials/lectures/Wrangling_1_SQF.html#here-are-your-data-frames",
+    "href": "course-materials/lectures/Wrangling_1_SQF.html#here-are-your-data-frames",
+    "title": "Stop Question Frisk",
+    "section": "Here are your data frames",
+    "text": "Here are your data frames\nLittle envelopes Data 2021\nLittle envelopes Functions"
+  },
+  {
+    "objectID": "course-materials/lectures/Wrangling_1_SQF.html#conclusions-from-2021-data",
+    "href": "course-materials/lectures/Wrangling_1_SQF.html#conclusions-from-2021-data",
+    "title": "Stop Question Frisk",
+    "section": "Conclusions from 2021 data",
+    "text": "Conclusions from 2021 data\nHere are our questions again\n\n\nWhich racial groups were most likely to be stopped by police officers in 2011?\nWhat percent of the stops resulted in an arrest by race in 2011?\nHow do the answers to these questions change in 2021?\nYou will likely have more questions as we analyze the data."
+  },
+  {
+    "objectID": "course-materials/lectures/Wrangling_1_SQF.html#for-comparison",
+    "href": "course-materials/lectures/Wrangling_1_SQF.html#for-comparison",
+    "title": "Stop Question Frisk",
+    "section": "For comparison:",
+    "text": "For comparison:\nHere’s the demographics of NYC1:\n\nBlack: 23.4 %\nLatino: 28.9%\nWhite: 39.8%\n\nhttps://www.census.gov/quickfacts/fact/table/newyorkcitynewyork/PST045222"
+  },
+  {
+    "objectID": "course-materials/lectures/Wrangling_1_SQF.html#summarize-functions",
+    "href": "course-materials/lectures/Wrangling_1_SQF.html#summarize-functions",
+    "title": "Stop Question Frisk",
+    "section": "Summarize functions:",
+    "text": "Summarize functions:\nNew functions:\n\nselect(), mutate(), arrange(), rename()\n\nOld functions:\n\nnames(), recode(), count()"
+  },
+  {
+    "objectID": "course-materials/lectures/Wrangling_1_SQF.html#lets-compare-to-2011.",
+    "href": "course-materials/lectures/Wrangling_1_SQF.html#lets-compare-to-2011.",
+    "title": "Stop Question Frisk",
+    "section": "Let’s compare to 2011.",
+    "text": "Let’s compare to 2011.\nMake a new r project.\nDownload 2011 csv from this site.\nMake a new document and put this in a chunk.\n\n\nCode\n# This code will read in the 2011 SQF data from the internet\n\n# makes a temp file\ntemp &lt;- tempfile()\n\n# downloads the file from the url and puts it in the temp location\ndownload.file(\"https://www.nyc.gov/assets/nypd/downloads/zip/analysis_and_planning/stop-question-frisk/sqf-2011-csv.zip\",temp)\n\n# This makes a connection to the temp filea and reads the csv in the temp location \ndata &lt;- read.csv(unz(temp, \"2011.csv\"))\n\n# This breaks the connection to the temp file (important if you are reading other files later. )\nunlink(temp)"
+  },
+  {
+    "objectID": "course-materials/lectures/Wrangling_1_SQF.html#answer-the-question.",
+    "href": "course-materials/lectures/Wrangling_1_SQF.html#answer-the-question.",
+    "title": "Stop Question Frisk",
+    "section": "Answer the question.",
+    "text": "Answer the question.\n\nAre Black, and Hispanic groups more likely to be stopped by police officers than other groups in 2011? Does this change as the total counts of stops decreases to 2021 levels?"
+  },
+  {
+    "objectID": "course-materials/lectures/Wrangling_1_SQF.html#two-more-verbs",
+    "href": "course-materials/lectures/Wrangling_1_SQF.html#two-more-verbs",
+    "title": "Stop Question Frisk",
+    "section": "Two more verbs",
+    "text": "Two more verbs\n\nfilter() - subsets the data based on requirements.\nmutate() - adds a new column."
+  },
+  {
+    "objectID": "course-materials/lectures/Wrangling_1_SQF.html#answer-the-questions.",
+    "href": "course-materials/lectures/Wrangling_1_SQF.html#answer-the-questions.",
+    "title": "Stop Question Frisk",
+    "section": "Answer the questions.",
+    "text": "Answer the questions.\nFigure out the variable names and do a similar analysis.\n\nAre Black, and Hispanic groups more likely to be stopped by police officers than other groups in 2011?\n\n\nDoes this change as the total counts of stops decreases to 2021 levels?"
+  },
+  {
+    "objectID": "course-materials/lectures/15_Wrangling_1_SQF.html#stop-question-frisk",
+    "href": "course-materials/lectures/15_Wrangling_1_SQF.html#stop-question-frisk",
+    "title": "Stop Question Frisk",
+    "section": "Stop, Question, Frisk",
+    "text": "Stop, Question, Frisk\n\nStarted in the 1990s\nNew York City Police Practice\n\nPolice need “reasonable suspicion.”\n\nLeads to mistrust in the police by these groups."
+  },
+  {
+    "objectID": "course-materials/lectures/15_Wrangling_1_SQF.html#more-about-about-me",
+    "href": "course-materials/lectures/15_Wrangling_1_SQF.html#more-about-about-me",
+    "title": "Stop Question Frisk",
+    "section": "More about about me",
+    "text": "More about about me\nI’m not Black.\nI am Hispanic.\nI look White.\nI am not from New York City.\nIn this data analysis I will have limited perspective."
+  },
+  {
+    "objectID": "course-materials/lectures/15_Wrangling_1_SQF.html#race-exists",
+    "href": "course-materials/lectures/15_Wrangling_1_SQF.html#race-exists",
+    "title": "Stop Question Frisk",
+    "section": "Race Exists",
+    "text": "Race Exists\nThis is an acknowledgement that the construct of race exists and plays a part in the way human being interact with each other."
+  },
+  {
+    "objectID": "course-materials/lectures/15_Wrangling_1_SQF.html#schedule",
+    "href": "course-materials/lectures/15_Wrangling_1_SQF.html#schedule",
+    "title": "Stop Question Frisk",
+    "section": "Schedule",
+    "text": "Schedule\n\n\nIntroduce you to the data.\nPose a question.\nGive you data frames with data to answer the question one way.\n\nYou’ll order them with a partner.\nYou’ll make up pseudocode to explain data transformations.\nI’ll give you the real code.\n\nWe’ll repeat the process of for 2021 data in R."
+  },
+  {
+    "objectID": "course-materials/lectures/15_Wrangling_1_SQF.html#the-data",
+    "href": "course-materials/lectures/15_Wrangling_1_SQF.html#the-data",
+    "title": "Stop Question Frisk",
+    "section": "The Data",
+    "text": "The Data\nHere is NYC’s stop and frisk data.\nLet’s consider 2011 data\n\n\nEach column is a variable\nand each row is a stop\n\n\nThe variable names are inconsistent across years."
+  },
+  {
+    "objectID": "course-materials/lectures/15_Wrangling_1_SQF.html#sqf-history",
+    "href": "course-materials/lectures/15_Wrangling_1_SQF.html#sqf-history",
+    "title": "Stop Question Frisk",
+    "section": "SQF History",
+    "text": "SQF History"
+  },
+  {
+    "objectID": "course-materials/lectures/15_Wrangling_1_SQF.html#questions",
+    "href": "course-materials/lectures/15_Wrangling_1_SQF.html#questions",
+    "title": "Stop Question Frisk",
+    "section": "Questions",
+    "text": "Questions\n\n\nWhich racial groups were most likely to be stopped by police officers in 2011?\nWhat percent of the stops resulted in an arrest by race in 2011?\nHow do the answers to these questions change in 2021?\nYou will likely have more questions as we analyze the data."
+  },
+  {
+    "objectID": "course-materials/lectures/15_Wrangling_1_SQF.html#your-data-frames",
+    "href": "course-materials/lectures/15_Wrangling_1_SQF.html#your-data-frames",
+    "title": "Stop Question Frisk",
+    "section": "Your data frames",
+    "text": "Your data frames\n\nData envelopes for 2011 Data\n\n\nPut the data frames in order.\nBe sure you can explain the process from one df to another. “psuedocode”\nQuestions about the data?\n\n\nArrow envelopes functions\n\n\nAfter the frames are in order put the code arrows between each frame.\nQuestions about the code?"
+  },
+  {
+    "objectID": "course-materials/lectures/15_Wrangling_1_SQF.html#conclusions-from-2021-data",
+    "href": "course-materials/lectures/15_Wrangling_1_SQF.html#conclusions-from-2021-data",
+    "title": "Stop Question Frisk",
+    "section": "Conclusions from 2021 data",
+    "text": "Conclusions from 2021 data\nHere are our questions again\n\n\nWhich racial groups were most likely to be stopped by police officers in 2011?\nWhat percent of the stops resulted in an arrest by race in 2011?\nHow do the answers to these questions change in 2021?\nYou will likely have more questions as we analyze the data."
+  },
+  {
+    "objectID": "course-materials/lectures/15_Wrangling_1_SQF.html#for-comparison",
+    "href": "course-materials/lectures/15_Wrangling_1_SQF.html#for-comparison",
+    "title": "Stop Question Frisk",
+    "section": "For comparison:",
+    "text": "For comparison:\nHere’s the demographics of NYC1:\n\nBlack: 23.4 %\nLatino: 28.9%\nWhite: 39.8%\n\nhttps://www.census.gov/quickfacts/fact/table/newyorkcitynewyork/PST045222"
+  },
+  {
+    "objectID": "course-materials/lectures/15_Wrangling_1_SQF.html#summarize-functions",
+    "href": "course-materials/lectures/15_Wrangling_1_SQF.html#summarize-functions",
+    "title": "Stop Question Frisk",
+    "section": "Summarize functions:",
+    "text": "Summarize functions:\nNew functions:\n\nselect(), mutate(), arrange(), rename()\n\nOld functions:\n\nnames(), recode(), count()"
+  },
+  {
+    "objectID": "course-materials/lectures/15_Wrangling_1_SQF.html#lets-compare-to-2011.",
+    "href": "course-materials/lectures/15_Wrangling_1_SQF.html#lets-compare-to-2011.",
+    "title": "Stop Question Frisk",
+    "section": "Let’s compare to 2011.",
+    "text": "Let’s compare to 2011.\nMake a new r project.\nDownload 2011 csv from this site.\nMake a new document and put this in a chunk.\n\n\nCode\n# This code will read in the 2011 SQF data from the internet\n\n# makes a temp file\ntemp &lt;- tempfile()\n\n# downloads the file from the url and puts it in the temp location\ndownload.file(\"https://www.nyc.gov/assets/nypd/downloads/zip/analysis_and_planning/stop-question-frisk/sqf-2011-csv.zip\",temp)\n\n# This makes a connection to the temp filea and reads the csv in the temp location \ndata &lt;- read.csv(unz(temp, \"2011.csv\"))\n\n# This breaks the connection to the temp file (important if you are reading other files later. )\nunlink(temp)"
+  },
+  {
+    "objectID": "course-materials/lectures/15_Wrangling_1_SQF.html#answer-the-questions.",
+    "href": "course-materials/lectures/15_Wrangling_1_SQF.html#answer-the-questions.",
+    "title": "Stop Question Frisk",
+    "section": "Answer the questions.",
+    "text": "Answer the questions.\nFigure out the variable names and do a similar analysis.\n\nAre Black, and Hispanic groups more likely to be stopped by police officers than other groups in 2011?\n\n\nDoes this change as the total counts of stops decreases to 2021 levels?"
+  },
+  {
+    "objectID": "course-materials/lectures/15_Wrangling_1_SQF.html#two-more-verbs",
+    "href": "course-materials/lectures/15_Wrangling_1_SQF.html#two-more-verbs",
+    "title": "Stop Question Frisk",
+    "section": "Two more verbs",
+    "text": "Two more verbs\n\nfilter() - subsets the data based on requirements.\nmutate() - adds a new column."
   }
 ]

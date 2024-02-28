@@ -401,6 +401,32 @@ h1{font-weight: 400;}
 
 [In class MDSR Problems 1 and 2](https://mdsr-book.github.io/mdsr2e/ch-dataI.html#dataI-exercises)
 
+```{r, Random_subset }
+#| eval: FALSE
+#| echo: TRUE
+#| code-fold: true
+
+
+# Copy this code into a chunk in R to make the Random_subset data frame from problem 1 and 2. 
+# Use the verbs we've discussed to make the subsets from the text. 
+
+Random_subset <-  tibble::tribble(
+    ~year,~sex,   ~name,         ~n, ~prop,
+     2003, "M",     "Bilal",        146, 0.0000695,
+     1999, "F",     "Terria",        23, 0.0000118,
+     2010, "F",     "Naziyah",       45, 0.0000230,
+     1989, "F",     "Shawana",       41, 0.0000206,
+     1989, "F",     "Jessi",        210, 0.000105,
+     1928, "M",     "Tillman",       43, 0.0000377,
+     1981, "F",     "Leslee",        83, 0.0000464,
+     1981, "F",     "Sherise",       27, 0.0000151,
+     1920, "F",     "Marquerite",    26, 0.0000209,
+     1941, "M",     "Lorraine",      24, 0.0000191
+  )
+
+
+```
+
 <!-- ::: {.callout-tip collapse="true"} -->
 <!-- # terminal work -->
 
