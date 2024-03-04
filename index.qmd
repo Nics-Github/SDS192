@@ -331,46 +331,73 @@ h1{font-weight: 400;}
 
 <!-- [Pivots](course-materials/lectures/Day18_pivots.qmd) -->
 
-<!-- # Day 18 Wrangling Practice -->
-
-<!-- [In class MDSR Problems 1 and 2](https://mdsr-book.github.io/mdsr2e/ch-dataI.html#dataI-exercises) -->
-
-<!-- ```{r code-baby-names} -->
-<!-- #| code-fold: true -->
-<!-- #| echo: true -->
-<!-- #| eval: false -->
-
-
-<!-- library(babynames) -->
-
-<!-- #This makes the Random_subset for problem 1 -->
-<!-- Random_subset <- babynames %>% -->
-<!--   filter(year=="2003" & name=="Bilal" & sex =="M" |year=="1999" & name=="Terria" & sex =="F" |year=="2010" & name=="Naziyah" & sex =="F" |year=="1989" & name=="Shawana" & sex =="F" |year=="1989" & name=="Jessi" & sex =="F" |year=="1928" & name=="Tillman" & sex =="M"|year=="1981" & name=="Leslee" & sex =="F" |year=="1981" & name=="Sherise" & sex =="F"|year=="1920" & name=="Marquerite" & sex =="F" |year=="1941" & name=="Lorraine" & sex =="M")  -->
-<!-- ``` -->
 
 <!-- We'll do Problems [Chapter 4: 1,2,5,9,(12)](https://mdsr-book.github.io/mdsr3e/04-dataI.html#dataI-exercises) in class today. [Chapter 5: 3,4](https://mdsr-book.github.io/mdsr3e/05-joins.html#join-exercises) -->
 
-<!-- # Day 17 Joining tables -->
+# Day 17 Joining tables
 
-<!-- ::: {.callout-tip collapse="true"} -->
-<!-- # lab 4 submission issues -->
+Monday's office hours moved to Wednesday. 
 
-<!-- If you tried to push the `sqf_2011.csv` to github you probably got an error. -->
+::: {.callout-tip collapse="true"}
+# lab 4 rendering/submission issues
 
-<!-- First save your qmd somewhere. -->
+rendering: 
 
-<!-- Uncommit your commit with `git reset --hard HEAD^` or `git reset --hard HEAD~2` -->
+-   Note on `#| eval: FALSE` in lab 4 (due Friday)
 
-<!-- You may need to add a `.gitignore` file. -->
+gitignore: 
 
-<!-- Open `.gitignore` and add `sqf_2011.csv` to it. -->
-<!-- ::: -->
+If you tried to push the `sqf_2011.csv` to github you probably got an error.
 
-<!-- Exploration: how to join tables? -->
+-   First save your qmd somewhere.
 
-<!-- [Joining two tables in class exercise](https://scao53.github.io/sds192spring2023/in-class_exercises/Lec17In-classExercise-JoinTables.zip) -->
+-   Uncommit your commit with `git reset --hard HEAD^` or `git reset --hard HEAD~2`
 
-<!-- [Problems 1, 3](https://mdsr-book.github.io/mdsr3e/05-joins.html#join-exercises) -->
+-   You may need to add a `.gitignore` file.
+
+-   Open `.gitignore` and add `sqf_2011.csv` to it.
+
+:::
+
+[Wrangling Practice: MDSR Problems 1 and 2](https://mdsr-book.github.io/mdsr2e/ch-dataI.html#dataI-exercises)
+
+```{r, Random_subset }
+#| eval: FALSE
+#| echo: TRUE
+#| code-fold: true
+
+
+# Copy this code into a chunk in R to make the Random_subset data frame from problem 1 and 2.
+# Use the verbs we've discussed to make the subsets from the text.
+# The code below will install babynames, if we have not done it already. 
+#install.packages("babynames")
+
+library(babynames)
+
+Random_subset <-  tibble::tribble(
+    ~year,~sex,   ~name,         ~n, ~prop,
+     2003, "M",     "Bilal",        146, 0.0000695,
+     1999, "F",     "Terria",        23, 0.0000118,
+     2010, "F",     "Naziyah",       45, 0.0000230,
+     1989, "F",     "Shawana",       41, 0.0000206,
+     1989, "F",     "Jessi",        210, 0.000105,
+     1928, "M",     "Tillman",       43, 0.0000377,
+     1981, "F",     "Leslee",        83, 0.0000464,
+     1981, "F",     "Sherise",       27, 0.0000151,
+     1920, "F",     "Marquerite",    26, 0.0000209,
+     1941, "M",     "Lorraine",      24, 0.0000191
+  )
+
+
+```
+
+
+Exploration: How to join tables?
+
+[Problems 1, 3](https://mdsr-book.github.io/mdsr3e/05-joins.html#join-exercises)
+
+[Joining two tables in class exercise](https://scao53.github.io/sds192spring2023/in-class_exercises/Lec17In-classExercise-JoinTables.zip)
+
 
 # Day 16 Lab 4
 
