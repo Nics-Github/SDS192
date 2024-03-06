@@ -334,6 +334,14 @@ h1{font-weight: 400;}
 
 <!-- We'll do Problems [Chapter 4: 1,2,5,9,(12)](https://mdsr-book.github.io/mdsr3e/04-dataI.html#dataI-exercises) in class today. [Chapter 5: 3,4](https://mdsr-book.github.io/mdsr3e/05-joins.html#join-exercises) -->
 
+# Day 18 Joinging Tables cont.
+
+Continue our exploration of joining tables. 
+
+[Problems 1, 3](https://mdsr-book.github.io/mdsr3e/05-joins.html#join-exercises)
+
+[Joining two tables in class exercise](https://scao53.github.io/sds192spring2023/in-class_exercises/Lec17In-classExercise-JoinTables.zip)
+
 # Day 17 Joining tables
 
 Monday's office hours moved to Wednesday. 
@@ -394,9 +402,7 @@ Random_subset <-  tibble::tribble(
 
 Exploration: How to join tables?
 
-[Problems 1, 3](https://mdsr-book.github.io/mdsr3e/05-joins.html#join-exercises)
 
-[Joining two tables in class exercise](https://scao53.github.io/sds192spring2023/in-class_exercises/Lec17In-classExercise-JoinTables.zip)
 
 
 # Day 16 Lab 4
