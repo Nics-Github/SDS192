@@ -283,10 +283,6 @@ h1{font-weight: 400;}
 
 <!-- Time to get familiar with `fec20` -->
 
-<!-- # Day 21 Lab 5 Cleaning -->
-
-<!-- You can find lab 5 by way of [moodle](https://moodle.smith.edu/). -->
-
 <!-- # Day 20 Cleaning -->
 
 <!-- Warm up: table2 -->
@@ -334,7 +330,13 @@ h1{font-weight: 400;}
 
 <!-- We'll do Problems [Chapter 4: 1,2,5,9,(12)](https://mdsr-book.github.io/mdsr3e/04-dataI.html#dataI-exercises) in class today. [Chapter 5: 3,4](https://mdsr-book.github.io/mdsr3e/05-joins.html#join-exercises) -->
 
-# Day 18 Joinging Tables cont.
+# Day 19 Lab 5
+
+Quiz 2 is open and due the Sunday before break. (Do it after pivot tables next week).
+
+Here is [lab 5](https://classroom.github.com/a/BNYDfmiq) it is due next Wednesday
+
+# Day 18 Joining Tables cont.
 
 Continue our exploration of joining tables. 
 
