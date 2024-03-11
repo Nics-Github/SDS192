@@ -1356,5 +1356,89 @@
     "title": "Stop Question Frisk",
     "section": "Two more verbs",
     "text": "Two more verbs\n\nfilter() - subsets the data based on requirements.\nmutate() - adds a new column."
+  },
+  {
+    "objectID": "course-materials/lectures/18_pivots.html#tidydata",
+    "href": "course-materials/lectures/18_pivots.html#tidydata",
+    "title": "Tidy data and pivots",
+    "section": "Tidydata",
+    "text": "Tidydata"
+  },
+  {
+    "objectID": "course-materials/lectures/18_pivots.html#i-have-heard-about",
+    "href": "course-materials/lectures/18_pivots.html#i-have-heard-about",
+    "title": "Tidy data and pivots",
+    "section": "I have heard about",
+    "text": "I have heard about\npivot_longer()\npivot_wider()\nWhat do these functions do?"
+  },
+  {
+    "objectID": "course-materials/lectures/18_pivots.html#pivot_longer",
+    "href": "course-materials/lectures/18_pivots.html#pivot_longer",
+    "title": "Tidy data and pivots",
+    "section": "pivot_longer()",
+    "text": "pivot_longer()\nThis data is not tidy how can we make it longer for computers?\n\n\n# A tibble: 3 × 5\n  Country        `1979` `1989` `1999` `2009`\n  &lt;chr&gt;           &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;\n1 France        NA          NA    0.3    0.4\n2 South Africa  NA          NA   14.8   17.2\n3 United States  0.0318     NA    0.5    0.6\n\n\nWrite down how you think we could do that with pivot_longer()"
+  },
+  {
+    "objectID": "course-materials/lectures/18_pivots.html#pivot_wider",
+    "href": "course-materials/lectures/18_pivots.html#pivot_wider",
+    "title": "Tidy data and pivots",
+    "section": "pivot_wider()",
+    "text": "pivot_wider()\nThis data is tidy how could we make it wider for humans?\n\n\n# A tibble: 6 × 3\n# Groups:   name [3]\n  name   sex    total\n  &lt;chr&gt;  &lt;chr&gt;  &lt;int&gt;\n1 Leslie F     266474\n2 Leslie M     112689\n3 Robin  F     289395\n4 Robin  M      44616\n5 Sue    F     144465\n6 Sue    M        519\n\n\nWrite down how you think we could do that with pivot_wider()"
+  },
+  {
+    "objectID": "course-materials/lectures/18_pivots.html#just-kidding-pivot_longer",
+    "href": "course-materials/lectures/18_pivots.html#just-kidding-pivot_longer",
+    "title": "Tidy data and pivots",
+    "section": "Just kidding pivot_longer()",
+    "text": "Just kidding pivot_longer()\nLet’s try our code on the examples above. Pivot this longer.\n\nlibrary(tidyverse)\nlibrary(mdsr)\nlibrary(googlesheets4)\ngs4_deauth()\nhiv_key &lt;- \"1kWH_xdJDM4SMfT_Kzpkk-1yuxWChfurZuWYjfmv51EA\"\nhiv &lt;- read_sheet(hiv_key) |&gt;\n  rename(Country = 1) |&gt;\n  filter(\n    Country %in% c(\"United States\", \"France\", \"South Africa\")\n  ) |&gt;\n  select(Country, `1979`, `1989`, `1999`, `2009`) |&gt;\n  unnest(cols = c(`2009`)) |&gt;\n  mutate(across(matches(\"[0-9]\"), as.double))\nhiv\n\n# A tibble: 3 × 5\n  Country        `1979` `1989` `1999` `2009`\n  &lt;chr&gt;           &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;\n1 France        NA          NA    0.3    0.4\n2 South Africa  NA          NA   14.8   17.2\n3 United States  0.0318     NA    0.5    0.6"
+  },
+  {
+    "objectID": "course-materials/lectures/18_pivots.html#pivot_wider-1",
+    "href": "course-materials/lectures/18_pivots.html#pivot_wider-1",
+    "title": "Tidy data and pivots",
+    "section": "pivot_wider()",
+    "text": "pivot_wider()\n\nlibrary(babynames)\nbabynames |&gt;\n     filter(name %in% c(\"Sue\", \"Robin\", \"Leslie\")) |&gt;\n     group_by(name, sex) |&gt;\n     summarize(total = sum(n))\n\n# A tibble: 6 × 3\n# Groups:   name [3]\n  name   sex    total\n  &lt;chr&gt;  &lt;chr&gt;  &lt;int&gt;\n1 Leslie F     266474\n2 Leslie M     112689\n3 Robin  F     289395\n4 Robin  M      44616\n5 Sue    F     144465\n6 Sue    M        519"
+  },
+  {
+    "objectID": "course-materials/lectures/18_pivots.html#try-this-one",
+    "href": "course-materials/lectures/18_pivots.html#try-this-one",
+    "title": "Tidy data and pivots",
+    "section": "Try this one",
+    "text": "Try this one\nThis table is not tidy can you make it so?\n\n\n# A tibble: 3 × 3\n  country         `1999`     `2000`\n  &lt;chr&gt;            &lt;dbl&gt;      &lt;dbl&gt;\n1 Afghanistan   19987071   20595360\n2 Brazil       172006362  174504898\n3 China       1272915272 1280428583"
+  },
+  {
+    "objectID": "course-materials/lectures/18_pivots.html#more-practice",
+    "href": "course-materials/lectures/18_pivots.html#more-practice",
+    "title": "Tidy data and pivots",
+    "section": "More practice",
+    "text": "More practice\nThis dataframe is tidy but can you make it easier for a human to read?\n\n\n# A tibble: 19 × 12\n   fish  Release I80_1 Lisbon  Rstr Base_TD   BCE   BCW  BCE2  BCW2   MAE   MAW\n   &lt;fct&gt;   &lt;int&gt; &lt;int&gt;  &lt;int&gt; &lt;int&gt;   &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt;\n 1 4842        1     1      1     1       1     1     1     1     1     1     1\n 2 4843        1     1      1     1       1     1     1     1     1     1     1\n 3 4844        1     1      1     1       1     1     1     1     1     1     1\n 4 4845        1     1      1     1       1    NA    NA    NA    NA    NA    NA\n 5 4847        1     1      1    NA      NA    NA    NA    NA    NA    NA    NA\n 6 4848        1     1      1     1      NA    NA    NA    NA    NA    NA    NA\n 7 4849        1     1     NA    NA      NA    NA    NA    NA    NA    NA    NA\n 8 4850        1     1     NA     1       1     1     1    NA    NA    NA    NA\n 9 4851        1     1     NA    NA      NA    NA    NA    NA    NA    NA    NA\n10 4854        1     1     NA    NA      NA    NA    NA    NA    NA    NA    NA\n11 4855        1     1      1     1       1    NA    NA    NA    NA    NA    NA\n12 4857        1     1      1     1       1     1     1     1     1    NA    NA\n13 4858        1     1      1     1       1     1     1     1     1     1     1\n14 4859        1     1      1     1       1    NA    NA    NA    NA    NA    NA\n15 4861        1     1      1     1       1     1     1     1     1     1     1\n16 4862        1     1      1     1       1     1     1     1     1    NA    NA\n17 4863        1     1     NA    NA      NA    NA    NA    NA    NA    NA    NA\n18 4864        1     1     NA    NA      NA    NA    NA    NA    NA    NA    NA\n19 4865        1     1      1    NA      NA    NA    NA    NA    NA    NA    NA"
+  },
+  {
+    "objectID": "course-materials/lectures/18_pivots.html#tidy-clean-join.",
+    "href": "course-materials/lectures/18_pivots.html#tidy-clean-join.",
+    "title": "Tidy data and pivots",
+    "section": "tidy, clean, join.",
+    "text": "tidy, clean, join.\nworld_bank_pop is loaded with the tidyverse.\n\nMake world_bank_pop tidy.\nUse clean_names() to clean up country_info.\nJoin world_bank_pop with the country_info data (loaded below) to add names of countries. (Hint: You only need to country_codes and the english version of the name.)\n\n\ncountry_info &lt;- read_csv(\"https://raw.githubusercontent.com/datasets/country-codes/master/data/country-codes.csv\")"
+  },
+  {
+    "objectID": "course-materials/lectures/18_pivots.html#some-built-in-tables",
+    "href": "course-materials/lectures/18_pivots.html#some-built-in-tables",
+    "title": "Tidy data and pivots",
+    "section": "Some built in tables",
+    "text": "Some built in tables"
+  },
+  {
+    "objectID": "course-materials/lectures/18_pivots.html#pivot_longer-1",
+    "href": "course-materials/lectures/18_pivots.html#pivot_longer-1",
+    "title": "Tidy data and pivots",
+    "section": "pivot_longer()",
+    "text": "pivot_longer()\nLet’s try our code on the examples above. Pivot this longer.\n\nlibrary(tidyverse)\nlibrary(mdsr)\nlibrary(googlesheets4)\ngs4_deauth()\nhiv_key &lt;- \"1kWH_xdJDM4SMfT_Kzpkk-1yuxWChfurZuWYjfmv51EA\"\nhiv &lt;- read_sheet(hiv_key) |&gt;\n  rename(Country = 1) |&gt;\n  filter(\n    Country %in% c(\"United States\", \"France\", \"South Africa\")\n  ) |&gt;\n  select(Country, `1979`, `1989`, `1999`, `2009`) |&gt;\n  unnest(cols = c(`2009`)) |&gt;\n  mutate(across(matches(\"[0-9]\"), as.double))\nhiv\n\n# A tibble: 3 × 5\n  Country        `1979` `1989` `1999` `2009`\n  &lt;chr&gt;           &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;\n1 France        NA          NA    0.3    0.4\n2 South Africa  NA          NA   14.8   17.2\n3 United States  0.0318     NA    0.5    0.6"
+  },
+  {
+    "objectID": "course-materials/lectures/18_pivots.html#consider-some-tables",
+    "href": "course-materials/lectures/18_pivots.html#consider-some-tables",
+    "title": "Tidy data and pivots",
+    "section": "consider some tables",
+    "text": "consider some tables\nAre these tables tidy, do we need to pivot wider or longer?\n\ntable1,\ntable2,\ntable3,\ntable4a,\ntable4b,\ntable5\nProblem 5 from chapter 6"
   }
 ]

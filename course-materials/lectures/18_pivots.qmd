@@ -1,7 +1,9 @@
 ---
-title: "Tidydata and pivots"
+title: "Tidy data and pivots"
 author: "Schwab"
-format: revealjs
+format: 
+  revealjs:
+    theme: beige
 editor: visual
 ---
 
@@ -15,11 +17,11 @@ library(googlesheets4)
 
 ```
 
-# Tidydata
+## Tidydata
 
 ![](https://d33wubrfki0l68.cloudfront.net/6f1ddb544fc5c69a2478e444ab8112fb0eea23f8/91adc/images/tidy-1.png)
 
-# I have heard about
+## I have heard about
 
 `pivot_longer()`
 
@@ -27,7 +29,9 @@ library(googlesheets4)
 
 What do these functions do?
 
-# `pivot_longer()`
+## Some built in tables
+
+## `pivot_longer()`
 
 This data is not tidy how can we make it longer for computers?
 
@@ -50,7 +54,7 @@ hiv
 
 Write down how you think we could do that with `pivot_longer()`
 
-# `pivot_wider()`
+## `pivot_wider()`
 
 This data is tidy how could we make it wider for humans?
 
@@ -65,11 +69,7 @@ babynames |>
 
 Write down how you think we could do that with `pivot_wider()`
 
-# End of slides
-
-# Really End of Slides
-
-# Just kidding `pivot_longer()`
+## `pivot_longer()`
 
 Let's try our code on the examples above. Pivot this longer.
 
@@ -93,7 +93,7 @@ hiv
 
 ```
 
-# `pivot_wider()`
+## `pivot_wider()`
 
 ```{r}
 #| echo: true
@@ -104,7 +104,7 @@ babynames |>
      summarize(total = sum(n))
 ```
 
-# Try this one
+## Try this one
 
 This table is not tidy can you make it so?
 
@@ -114,7 +114,7 @@ This table is not tidy can you make it so?
 table4b 
 ```
 
-# More practice
+## More practice
 
 This dataframe is tidy but can you make it easier for a human to read?
 
@@ -122,21 +122,44 @@ This dataframe is tidy but can you make it easier for a human to read?
 fish_encounters |>
   pivot_wider(names_from = station,values_from = "seen")
 ```
-# One more  
 
-`world_bank_pop` is loaded with the tidyverse. Make it tidy. Use `all.csv` to add the country names. 
+## tidy, clean, join.
 
-You can download the country codes here: 
+`world_bank_pop` is loaded with the tidyverse.
 
-[https://github.com/Nics-Github/SDS192/blob/main/docs/course-materials/lectures/data/countrycodes.csv](https://github.com/Nics-Github/SDS192/blob/main/docs/course-materials/lectures/data/countrycodes.csv) Put them in the same folder as your rproject file you are currently working in. 
+1.  Make `world_bank_pop` tidy.
 
-They are also available in other places. 
+2.  Use `clean_names()` to clean up `country_info`.
 
-# Further Reading
+3.  Join `world_bank_pop` with the `country_info` data (loaded below) to add names of countries. (Hint: You only need to `country_codes` and the english version of the name.)
 
-[Read Chapter 6.](https://mdsr-book.github.io/mdsr3e/06-dataII.html) 
+```{r}
+#| echo: true
 
-\[Futher reading on tidy data\](https://r4ds.had.co.nz/tidy-data.html)
+country_info <- read_csv("https://raw.githubusercontent.com/datasets/country-codes/master/data/country-codes.csv")
 
+```
 
+## consider some tables
 
+Are these tables tidy, do we need to pivot wider or longer?
+
+-   table1,
+
+-   table2,
+
+-   table3,
+
+-   table4a,
+
+-   table4b,
+
+-    table5
+
+-   [Problem 5 from chapter 6](https://mdsr-book.github.io/mdsr3e/06-dataII.html#dataII-exercises)
+
+# Reading
+
+[Read Chapter 6.](https://mdsr-book.github.io/mdsr3e/06-dataII.html)
+
+[Futher reading on tidy data](https://r4ds.had.co.nz/tidy-data.html)
