@@ -325,7 +325,13 @@ h1{font-weight: 400;}
 
 <!-- ``` -->
 
+# Day 22 Project 2
 
+# Day 21 Project 2
+
+Here's the link to join [project 2](https://classroom.github.com/a/YUonEUOS)
+
+See your new groups on moodle. 
 
 # Day 20 Pivots
 

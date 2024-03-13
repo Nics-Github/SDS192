@@ -154,7 +154,7 @@ Are these tables tidy, do we need to pivot wider or longer?
 
 -   table4b,
 
--    table5
+-   table5
 
 -   [Problem 5 from chapter 6](https://mdsr-book.github.io/mdsr3e/06-dataII.html#dataII-exercises)
 
