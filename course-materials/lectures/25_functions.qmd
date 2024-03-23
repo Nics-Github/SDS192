@@ -1,13 +1,15 @@
 ---
 title: "Making Functions practice"
 author: "Schwab"
-output: revealjs
+format: 
+  revealjs:
+    theme: beige
 editor: visual
 execute: 
   echo: true
 ---
 
-# Functions
+## Functions
 
 -   Inputs and outputs
 
@@ -19,7 +21,7 @@ execute:
 
 -   Save time in the long run.
 
-# Function outline
+## Function outline
 
 ```{r}
 Greeting <- function(arg1 = "Hello" ){
@@ -29,7 +31,7 @@ Greeting()
 Greeting("Hiya")
 ```
 
-# This function will add
+## This function will add
 
 ```{r}
 
@@ -46,7 +48,7 @@ adding(2,4)
 
 ```
 
-# This function will multiply
+## This function will multiply
 
 ```{r}
 multiplying <- function(x = 1, y = 1){
@@ -59,7 +61,7 @@ multiplying(2,4)
 
 ```
 
-# if, else if, else
+## if, else if, else
 
 The computer can run a logical check.
 
@@ -86,7 +88,7 @@ else{
 umbrella(weather = "snow")
 ```
 
-# This is a composite function
+## This is a composite function
 
 Depending in an argument
 
@@ -113,7 +115,7 @@ my_1st_calculator <-function(x,y,operation="add"){
 my_1st_calculator(1,6, operation="multiply")
 ```
 
-# Note on data masking
+## Note on data masking
 
 No masking : data\$variable
 
@@ -127,7 +129,7 @@ If using a tidyverse verb with a variable use `{{}}` around the variable.
 
 [Read more](https://rlang.r-lib.org/reference/topic-data-mask.html)
 
-# Filtering a lot
+## Filtering a lot
 
 ```{r}
 library(tidyverse)
@@ -143,4 +145,32 @@ auto_filter <- function(data, variable, value){
 auto_filter(data = mtcars, variable = am, value = 0 )
 ```
 
-# Classwork
+## Classwork
+
+## Your turn
+
+Make a function that outputs a scatterplot and linear regression
+
+-   Call your function super grapher.
+
+    -   It should take an x and y variable.
+
+    -   It needs the data
+
+    -   It need a logical for the graph
+
+```{r}
+library(tidyverse)
+
+super_grapher <- function(variable1=NULL ,variable2=NULL , dat= NULL ,linear_regression = TRUE){
+  ggplot(mapping = aes(x= {{variable1}},  y= {{variable2}}), data = {{dat}})+
+    geom_point() +
+    if(linear_regression == TRUE){
+    geom_smooth(method = "lm" )
+    }
+    else{
+    labs(caption = "no regression required")
+    }
+}
+super_grapher(variable1 = mpg,variable2 = hp, dat = mtcars, linear_regression = FALSE)
+```

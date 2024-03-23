@@ -1440,5 +1440,152 @@
     "title": "Tidy data and pivots",
     "section": "consider some tables",
     "text": "consider some tables\nAre these tables tidy, do we need to pivot wider or longer?\n\ntable1,\ntable2,\ntable3,\ntable4a,\ntable4b,\ntable5\nProblem 5 from chapter 6"
+  },
+  {
+    "objectID": "course-materials/lectures/day_25_functions.html",
+    "href": "course-materials/lectures/day_25_functions.html",
+    "title": "Making Functions practice",
+    "section": "",
+    "text": "Inputs and outputs\nCan set defaults arguements\nCan be general or specific to a package.\n\nn() vs. read_all_contributions()\n\nSave time in the long run."
+  },
+  {
+    "objectID": "course-materials/lectures/day_25_functions.html#functions",
+    "href": "course-materials/lectures/day_25_functions.html#functions",
+    "title": "Making Functions practice",
+    "section": "Functions",
+    "text": "Functions\n\nInputs and outputs\nCan set defaults arguements\nCan be general or specific to a package.\n\nn() vs. read_all_contributions()\n\nSave time in the long run."
+  },
+  {
+    "objectID": "course-materials/lectures/day_25_functions.html#function-outline",
+    "href": "course-materials/lectures/day_25_functions.html#function-outline",
+    "title": "Making Functions practice",
+    "section": "Function outline",
+    "text": "Function outline\n\nGreeting &lt;- function(arg1 = \"Hello\" ){\n  print(arg1)\n}\nGreeting()\n\n[1] \"Hello\"\n\nGreeting(\"Hiya\")\n\n[1] \"Hiya\""
+  },
+  {
+    "objectID": "course-materials/lectures/day_25_functions.html#this-function-will-add",
+    "href": "course-materials/lectures/day_25_functions.html#this-function-will-add",
+    "title": "Making Functions practice",
+    "section": "This function will add",
+    "text": "This function will add\n\nadding &lt;- function(x,y){\n  \n  total &lt;- sum( c( x , y ))\n  \n  return(total)\n}\n\nadding(2,4)\n\n[1] 6\n\n#adding()"
+  },
+  {
+    "objectID": "course-materials/lectures/day_25_functions.html#this-function-will-multiply",
+    "href": "course-materials/lectures/day_25_functions.html#this-function-will-multiply",
+    "title": "Making Functions practice",
+    "section": "This function will multiply",
+    "text": "This function will multiply\n\nmultiplying &lt;- function(x = 1, y = 1){\n  total &lt;- x*y\n  return(total)\n}\n\nmultiplying()\n\n[1] 1\n\nmultiplying(2,4)\n\n[1] 8"
+  },
+  {
+    "objectID": "course-materials/lectures/day_25_functions.html#if-else-if-else",
+    "href": "course-materials/lectures/day_25_functions.html#if-else-if-else",
+    "title": "Making Functions practice",
+    "section": "if, else if, else",
+    "text": "if, else if, else\nThe computer can run a logical check.\nConsider this function:\n\numbrella &lt;- function(weather = \"no precipitation\"){\n\nif(weather == \"no precipitation\"){\n  \n    print(\"leave umbrella at home\")\n    }\n    \nelse if(weather == \"snow\"){\n\n    print(\"You don't need an umbrella\")\n}\n  \nelse{\n    print(\"bring an umbrella\")\n    \n    }\n}\numbrella(weather = \"snow\")\n\n[1] \"You don't need an umbrella\""
+  },
+  {
+    "objectID": "course-materials/lectures/day_25_functions.html#this-is-a-composite-function",
+    "href": "course-materials/lectures/day_25_functions.html#this-is-a-composite-function",
+    "title": "Making Functions practice",
+    "section": "This is a composite function",
+    "text": "This is a composite function\nDepending in an argument\n\nmy_1st_calculator &lt;-function(x,y,operation=\"add\"){\n  \n  if(operation %in% \"add\"){\n    total &lt;- adding(x,y)\n  }\n  \n  else if(operation %in% \"multiply\"){\n    total &lt;- multiplying(x,y)\n  }\n  \n  else{\n    stop(\"Please choose `add` or `multiply` for the operation argument\")\n  }\n  \n  return(total)\n}\n\n\nmy_1st_calculator(1,6, operation=\"multiply\")\n\n[1] 6"
+  },
+  {
+    "objectID": "course-materials/lectures/day_25_functions.html#note-on-data-masking",
+    "href": "course-materials/lectures/day_25_functions.html#note-on-data-masking",
+    "title": "Making Functions practice",
+    "section": "Note on data masking",
+    "text": "Note on data masking\nNo masking : data$variable\nWith masking : data |&gt; filter(variable)\nData masking is super convenient for learning the tidyverse.\nNot so great when making functions.\nIf using a tidyverse verb with a variable use {{}} around the variable.\nRead more"
+  },
+  {
+    "objectID": "course-materials/lectures/day_25_functions.html#filtering-a-lot",
+    "href": "course-materials/lectures/day_25_functions.html#filtering-a-lot",
+    "title": "Making Functions practice",
+    "section": "Filtering a lot",
+    "text": "Filtering a lot\n\nlibrary(tidyverse)\n\nauto_filter &lt;- function(data, variable, value){\n  \n  data |&gt;\n    filter({{variable}} == {{value}})\n}\n\n\nauto_filter(data = mtcars, variable = am, value = 0 )\n\n                     mpg cyl  disp  hp drat    wt  qsec vs am gear carb\nHornet 4 Drive      21.4   6 258.0 110 3.08 3.215 19.44  1  0    3    1\nHornet Sportabout   18.7   8 360.0 175 3.15 3.440 17.02  0  0    3    2\nValiant             18.1   6 225.0 105 2.76 3.460 20.22  1  0    3    1\nDuster 360          14.3   8 360.0 245 3.21 3.570 15.84  0  0    3    4\nMerc 240D           24.4   4 146.7  62 3.69 3.190 20.00  1  0    4    2\nMerc 230            22.8   4 140.8  95 3.92 3.150 22.90  1  0    4    2\nMerc 280            19.2   6 167.6 123 3.92 3.440 18.30  1  0    4    4\nMerc 280C           17.8   6 167.6 123 3.92 3.440 18.90  1  0    4    4\nMerc 450SE          16.4   8 275.8 180 3.07 4.070 17.40  0  0    3    3\nMerc 450SL          17.3   8 275.8 180 3.07 3.730 17.60  0  0    3    3\nMerc 450SLC         15.2   8 275.8 180 3.07 3.780 18.00  0  0    3    3\nCadillac Fleetwood  10.4   8 472.0 205 2.93 5.250 17.98  0  0    3    4\nLincoln Continental 10.4   8 460.0 215 3.00 5.424 17.82  0  0    3    4\nChrysler Imperial   14.7   8 440.0 230 3.23 5.345 17.42  0  0    3    4\nToyota Corona       21.5   4 120.1  97 3.70 2.465 20.01  1  0    3    1\nDodge Challenger    15.5   8 318.0 150 2.76 3.520 16.87  0  0    3    2\nAMC Javelin         15.2   8 304.0 150 3.15 3.435 17.30  0  0    3    2\nCamaro Z28          13.3   8 350.0 245 3.73 3.840 15.41  0  0    3    4\nPontiac Firebird    19.2   8 400.0 175 3.08 3.845 17.05  0  0    3    2"
+  },
+  {
+    "objectID": "course-materials/lectures/day_25_functions.html#classwork",
+    "href": "course-materials/lectures/day_25_functions.html#classwork",
+    "title": "Making Functions practice",
+    "section": "Classwork",
+    "text": "Classwork"
+  },
+  {
+    "objectID": "course-materials/lectures/day_25_functions.html#your-turn",
+    "href": "course-materials/lectures/day_25_functions.html#your-turn",
+    "title": "Making Functions practice",
+    "section": "Your turn",
+    "text": "Your turn\nMake a function that outputs a scatterplot and linear regression\n\nCall your function super grapher.\n\nIt should take an x and y variable.\nIt needs the data\nIt need a logical for the graph\n\n\n\nlibrary(tidyverse)\n\nsuper_grapher &lt;- function(variable1=NULL ,variable2=NULL , dat= NULL ,linear_regression = TRUE){\n  ggplot(mapping = aes(x= {{variable1}},  y= {{variable2}}), data = {{dat}})+\n    geom_point() +\n    if(linear_regression == TRUE){\n    geom_smooth(method = \"lm\" )\n    }\n    else{\n    labs(caption = \"no regression required\")\n    }\n}\nsuper_grapher(variable1 = mpg,variable2 = hp, dat = mtcars, linear_regression = FALSE)"
+  },
+  {
+    "objectID": "course-materials/lectures/25_functions.html#functions",
+    "href": "course-materials/lectures/25_functions.html#functions",
+    "title": "Making Functions practice",
+    "section": "Functions",
+    "text": "Functions\n\nInputs and outputs\nCan set defaults arguements\nCan be general or specific to a package.\n\nn() vs. read_all_contributions()\n\nSave time in the long run."
+  },
+  {
+    "objectID": "course-materials/lectures/25_functions.html#function-outline",
+    "href": "course-materials/lectures/25_functions.html#function-outline",
+    "title": "Making Functions practice",
+    "section": "Function outline",
+    "text": "Function outline\n\nGreeting &lt;- function(arg1 = \"Hello\" ){\n  print(arg1)\n}\nGreeting()\n\n[1] \"Hello\"\n\nGreeting(\"Hiya\")\n\n[1] \"Hiya\""
+  },
+  {
+    "objectID": "course-materials/lectures/25_functions.html#this-function-will-add",
+    "href": "course-materials/lectures/25_functions.html#this-function-will-add",
+    "title": "Making Functions practice",
+    "section": "This function will add",
+    "text": "This function will add\n\nadding &lt;- function(x,y){\n  \n  total &lt;- sum( c( x , y ))\n  \n  return(total)\n}\n\nadding(2,4)\n\n[1] 6\n\n#adding()"
+  },
+  {
+    "objectID": "course-materials/lectures/25_functions.html#this-function-will-multiply",
+    "href": "course-materials/lectures/25_functions.html#this-function-will-multiply",
+    "title": "Making Functions practice",
+    "section": "This function will multiply",
+    "text": "This function will multiply\n\nmultiplying &lt;- function(x = 1, y = 1){\n  total &lt;- x*y\n  return(total)\n}\n\nmultiplying()\n\n[1] 1\n\nmultiplying(2,4)\n\n[1] 8"
+  },
+  {
+    "objectID": "course-materials/lectures/25_functions.html#if-else-if-else",
+    "href": "course-materials/lectures/25_functions.html#if-else-if-else",
+    "title": "Making Functions practice",
+    "section": "if, else if, else",
+    "text": "if, else if, else\nThe computer can run a logical check.\nConsider this function:\n\numbrella &lt;- function(weather = \"no precipitation\"){\n\nif(weather == \"no precipitation\"){\n  \n    print(\"leave umbrella at home\")\n    }\n    \nelse if(weather == \"snow\"){\n\n    print(\"You don't need an umbrella\")\n}\n  \nelse{\n    print(\"bring an umbrella\")\n    \n    }\n}\numbrella(weather = \"snow\")\n\n[1] \"You don't need an umbrella\""
+  },
+  {
+    "objectID": "course-materials/lectures/25_functions.html#this-is-a-composite-function",
+    "href": "course-materials/lectures/25_functions.html#this-is-a-composite-function",
+    "title": "Making Functions practice",
+    "section": "This is a composite function",
+    "text": "This is a composite function\nDepending in an argument\n\nmy_1st_calculator &lt;-function(x,y,operation=\"add\"){\n  \n  if(operation %in% \"add\"){\n    total &lt;- adding(x,y)\n  }\n  \n  else if(operation %in% \"multiply\"){\n    total &lt;- multiplying(x,y)\n  }\n  \n  else{\n    stop(\"Please choose `add` or `multiply` for the operation argument\")\n  }\n  \n  return(total)\n}\n\n\nmy_1st_calculator(1,6, operation=\"multiply\")\n\n[1] 6"
+  },
+  {
+    "objectID": "course-materials/lectures/25_functions.html#note-on-data-masking",
+    "href": "course-materials/lectures/25_functions.html#note-on-data-masking",
+    "title": "Making Functions practice",
+    "section": "Note on data masking",
+    "text": "Note on data masking\nNo masking : data$variable\nWith masking : data |&gt; filter(variable)\nData masking is super convenient for learning the tidyverse.\nNot so great when making functions.\nIf using a tidyverse verb with a variable use {{}} around the variable.\nRead more"
+  },
+  {
+    "objectID": "course-materials/lectures/25_functions.html#filtering-a-lot",
+    "href": "course-materials/lectures/25_functions.html#filtering-a-lot",
+    "title": "Making Functions practice",
+    "section": "Filtering a lot",
+    "text": "Filtering a lot\n\nlibrary(tidyverse)\n\nauto_filter &lt;- function(data, variable, value){\n  \n  data |&gt;\n    filter({{variable}} == {{value}})\n}\n\n\nauto_filter(data = mtcars, variable = am, value = 0 )\n\n                     mpg cyl  disp  hp drat    wt  qsec vs am gear carb\nHornet 4 Drive      21.4   6 258.0 110 3.08 3.215 19.44  1  0    3    1\nHornet Sportabout   18.7   8 360.0 175 3.15 3.440 17.02  0  0    3    2\nValiant             18.1   6 225.0 105 2.76 3.460 20.22  1  0    3    1\nDuster 360          14.3   8 360.0 245 3.21 3.570 15.84  0  0    3    4\nMerc 240D           24.4   4 146.7  62 3.69 3.190 20.00  1  0    4    2\nMerc 230            22.8   4 140.8  95 3.92 3.150 22.90  1  0    4    2\nMerc 280            19.2   6 167.6 123 3.92 3.440 18.30  1  0    4    4\nMerc 280C           17.8   6 167.6 123 3.92 3.440 18.90  1  0    4    4\nMerc 450SE          16.4   8 275.8 180 3.07 4.070 17.40  0  0    3    3\nMerc 450SL          17.3   8 275.8 180 3.07 3.730 17.60  0  0    3    3\nMerc 450SLC         15.2   8 275.8 180 3.07 3.780 18.00  0  0    3    3\nCadillac Fleetwood  10.4   8 472.0 205 2.93 5.250 17.98  0  0    3    4\nLincoln Continental 10.4   8 460.0 215 3.00 5.424 17.82  0  0    3    4\nChrysler Imperial   14.7   8 440.0 230 3.23 5.345 17.42  0  0    3    4\nToyota Corona       21.5   4 120.1  97 3.70 2.465 20.01  1  0    3    1\nDodge Challenger    15.5   8 318.0 150 2.76 3.520 16.87  0  0    3    2\nAMC Javelin         15.2   8 304.0 150 3.15 3.435 17.30  0  0    3    2\nCamaro Z28          13.3   8 350.0 245 3.73 3.840 15.41  0  0    3    4\nPontiac Firebird    19.2   8 400.0 175 3.08 3.845 17.05  0  0    3    2"
+  },
+  {
+    "objectID": "course-materials/lectures/25_functions.html#classwork",
+    "href": "course-materials/lectures/25_functions.html#classwork",
+    "title": "Making Functions practice",
+    "section": "Classwork",
+    "text": "Classwork"
+  },
+  {
+    "objectID": "course-materials/lectures/25_functions.html#your-turn",
+    "href": "course-materials/lectures/25_functions.html#your-turn",
+    "title": "Making Functions practice",
+    "section": "Your turn",
+    "text": "Your turn\nMake a function that outputs a scatterplot and linear regression\n\nCall your function super grapher.\n\nIt should take an x and y variable.\nIt needs the data\nIt need a logical for the graph\n\n\n\nlibrary(tidyverse)\n\nsuper_grapher &lt;- function(variable1=NULL ,variable2=NULL , dat= NULL ,linear_regression = TRUE){\n  ggplot(mapping = aes(x= {{variable1}},  y= {{variable2}}), data = {{dat}})+\n    geom_point() +\n    if(linear_regression == TRUE){\n    geom_smooth(method = \"lm\" )\n    }\n    else{\n    labs(caption = \"no regression required\")\n    }\n}\nsuper_grapher(variable1 = mpg,variable2 = hp, dat = mtcars, linear_regression = FALSE)"
   }
 ]

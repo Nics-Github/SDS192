@@ -265,11 +265,11 @@ h1{font-weight: 400;}
 <!-- [More on masking](https://rlang.r-lib.org/reference/topic-data-mask.html) -->
 
 
-<!-- # Day 25 Function Writing -->
+# Day 25 Function Writing
 
-<!-- [lecture](course-materials/lectures/functions.qmd) -->
+[lecture](course-materials/lectures/25_functions.qmd)
 
-<!-- [in class activity](./course-materials/in-class-activies/day_25_writing_functions.qmd) -->
+[in class activity](./course-materials/in-class-activies/day_25_writing_functions.qmd)
 
 <!-- # Day 24 Project 2 -->
 
