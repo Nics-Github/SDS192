@@ -53,7 +53,7 @@ adding(2,4)
 ```{r}
 multiplying <- function(x = 1, y = 1){
   total <- x*y
-  return(total)
+  total
 }
 
 multiplying()

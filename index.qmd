@@ -58,7 +58,7 @@ h1{font-weight: 400;}
 
 ```{=html}
 
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTG_b6upDZcPxXB92LHYIhV1uAXgeVGaMsZ3sDRPuSQN74JdhkKhZQVjw6T68I3zsP8KGYzDSVTZW64/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false&amp;gid=0&amp;range=A1:E23
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTG_b6upDZcPxXB92LHYIhV1uAXgeVGaMsZ3sDRPuSQN74JdhkKhZQVjw6T68I3zsP8KGYzDSVTZW64/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false&amp;gid=0&amp;range=A1:E26
 " width="100%" height="400">
 ```
 </iframe>
@@ -265,17 +265,13 @@ h1{font-weight: 400;}
 <!-- [More on masking](https://rlang.r-lib.org/reference/topic-data-mask.html) -->
 
 
-# Day 25 Function Writing
+# Day 23 Function Writing
 
-[lecture](course-materials/lectures/25_functions.qmd)
+[Lecture: Intro to if, else and functions](course-materials/lectures/25_functions.qmd)
 
-[in class activity](./course-materials/in-class-activies/day_25_function_writing.qmd)
+[Function writing practice](./course-materials/in-class-activies/day_25_function_writing.qmd)
 
-<!-- # Day 24 Project 2 -->
 
-<!-- # Day 23 Project 2 -->
-
-<!-- # Day 22 Project 2 -->
 
 <!-- Reminder lab-5 is due Wednesday. -->
 

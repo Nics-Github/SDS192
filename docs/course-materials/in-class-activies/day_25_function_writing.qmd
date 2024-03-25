@@ -5,7 +5,6 @@ output:
   html_document
 ---
 
-This in class activity was 
 
 ```{r, include=FALSE}
 # Do not edit this code chunk
@@ -14,7 +13,7 @@ knitr::opts_chunk$set(echo = TRUE, message=FALSE, warning = FALSE)
 
 # Datasets
 
-We will use the `babynames` dataset and the `congress_age` dataset included in the `fivethirtyeight` package we used in Lab 4.
+We will use the `babynames` dataset and the `congress_age` dataset included in the `fivethirtyeight` package.
 
 The `babynames` dataset contains for each year from 1880 to 2017 the number of children of each sex given each name (as recorded by the US Social Security Administration). All names with more than 5 uses are given.
 
@@ -35,8 +34,8 @@ Write a function called `count_name` that, when given a name (e.g.,`Angelica`, `
 
 ```{r}
 # Write your code below
-count_name <- function(data = babynames , nombre = "Nicholas"){
-  if(is.element(nombre, babynames$name)) {
+count_name <- function(data = babynames , name = "Nicholas"){
+  if(is.element(name, babynames$name)) {
     # put your code here. 
       
   }
@@ -55,7 +54,7 @@ The `count_name` function should return one row per year that matches (and gener
 
 ```{r}
 # Paste the code from Exercise 1 below and adjust it
-count_name(data=babynames, nombre = "Ezekiel")
+count_name(data=babynames, name = "Ezekiel")
 #count_name("Ezze")
 ```
 

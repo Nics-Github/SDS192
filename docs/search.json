@@ -81,7 +81,7 @@
     "href": "index.html",
     "title": "SDS 192: Intro to Data Science",
     "section": "",
-    "text": "–>"
+    "text": "–&gt;"
   },
   {
     "objectID": "index.html#discussion-taxonomy-of-graphics",
@@ -823,7 +823,7 @@
     "href": "index.html#other-things",
     "title": "SDS 192: Intro to Data Science",
     "section": "Other things",
-    "text": "Other things\n\n\n\n\n\n\nTo activate colors\n\n\n\n\n\nSome students are not getting “red” to be red. Try this: Tools menu > global options > code > display > “enable preview of named and hex colors\nIf that doesn’t work, maybe its a bug?\n\n\n\n\nthe c() function\ntidyverse style guide\ntyping math\nThe visual editor vs source editor\nShort History of R"
+    "text": "Other things\n\n\n\n\n\n\nTo activate colors\n\n\n\n\n\nSome students are not getting “red” to be red. Try this: Tools menu &gt; global options &gt; code &gt; display &gt; “enable preview of named and hex colors\nIf that doesn’t work, maybe its a bug?\n\n\n\n\nthe c() function\ntidyverse style guide\ntyping math\nThe visual editor vs source editor\nShort History of R"
   },
   {
     "objectID": "index.html#lecture-descriptive-stats-and-boxplots",
