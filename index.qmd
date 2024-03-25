@@ -269,7 +269,7 @@ h1{font-weight: 400;}
 
 [lecture](course-materials/lectures/25_functions.qmd)
 
-[in class activity](./course-materials/in-class-activies/day_25_writing_functions.qmd)
+[in class activity](./course-materials/in-class-activies/day_25_function_writing.qmd)
 
 <!-- # Day 24 Project 2 -->
 

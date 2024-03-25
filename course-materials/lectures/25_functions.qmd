@@ -137,7 +137,7 @@ library(tidyverse)
 auto_filter <- function(data, variable, value){
   
   data |>
-    filter({{variable}} == {{value}})
+    filter({{variable}} == value)
 }
 ```
 
@@ -160,10 +160,12 @@ Make a function that outputs a scatterplot and linear regression
     -   It need a logical for the graph
 
 ```{r}
+#| echo: FALSE
+
 library(tidyverse)
 
 super_grapher <- function(variable1=NULL ,variable2=NULL , dat= NULL ,linear_regression = TRUE){
-  ggplot(mapping = aes(x= {{variable1}},  y= {{variable2}}), data = {{dat}})+
+  ggplot(mapping = aes(x= {{variable1}},  y= {{variable2}}), data = dat)+
     geom_point() +
     if(linear_regression == TRUE){
     geom_smooth(method = "lm" )

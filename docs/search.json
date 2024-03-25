@@ -81,7 +81,7 @@
     "href": "index.html",
     "title": "SDS 192: Intro to Data Science",
     "section": "",
-    "text": "–&gt;"
+    "text": "–>"
   },
   {
     "objectID": "index.html#discussion-taxonomy-of-graphics",
@@ -823,7 +823,7 @@
     "href": "index.html#other-things",
     "title": "SDS 192: Intro to Data Science",
     "section": "Other things",
-    "text": "Other things\n\n\n\n\n\n\nTo activate colors\n\n\n\n\n\nSome students are not getting “red” to be red. Try this: Tools menu &gt; global options &gt; code &gt; display &gt; “enable preview of named and hex colors\nIf that doesn’t work, maybe its a bug?\n\n\n\n\nthe c() function\ntidyverse style guide\ntyping math\nThe visual editor vs source editor\nShort History of R"
+    "text": "Other things\n\n\n\n\n\n\nTo activate colors\n\n\n\n\n\nSome students are not getting “red” to be red. Try this: Tools menu > global options > code > display > “enable preview of named and hex colors\nIf that doesn’t work, maybe its a bug?\n\n\n\n\nthe c() function\ntidyverse style guide\ntyping math\nThe visual editor vs source editor\nShort History of R"
   },
   {
     "objectID": "index.html#lecture-descriptive-stats-and-boxplots",
@@ -1530,49 +1530,49 @@
     "href": "course-materials/lectures/25_functions.html#function-outline",
     "title": "Making Functions practice",
     "section": "Function outline",
-    "text": "Function outline\n\nGreeting &lt;- function(arg1 = \"Hello\" ){\n  print(arg1)\n}\nGreeting()\n\n[1] \"Hello\"\n\nGreeting(\"Hiya\")\n\n[1] \"Hiya\""
+    "text": "Function outline\n\nGreeting <- function(arg1 = \"Hello\" ){\n  print(arg1)\n}\nGreeting()\n\n[1] \"Hello\"\n\nGreeting(\"Hiya\")\n\n[1] \"Hiya\""
   },
   {
     "objectID": "course-materials/lectures/25_functions.html#this-function-will-add",
     "href": "course-materials/lectures/25_functions.html#this-function-will-add",
     "title": "Making Functions practice",
     "section": "This function will add",
-    "text": "This function will add\n\nadding &lt;- function(x,y){\n  \n  total &lt;- sum( c( x , y ))\n  \n  return(total)\n}\n\nadding(2,4)\n\n[1] 6\n\n#adding()"
+    "text": "This function will add\n\nadding <- function(x,y){\n  \n  total <- sum( c( x , y ))\n  \n  return(total)\n}\n\nadding(2,4)\n\n[1] 6\n\n#adding()"
   },
   {
     "objectID": "course-materials/lectures/25_functions.html#this-function-will-multiply",
     "href": "course-materials/lectures/25_functions.html#this-function-will-multiply",
     "title": "Making Functions practice",
     "section": "This function will multiply",
-    "text": "This function will multiply\n\nmultiplying &lt;- function(x = 1, y = 1){\n  total &lt;- x*y\n  return(total)\n}\n\nmultiplying()\n\n[1] 1\n\nmultiplying(2,4)\n\n[1] 8"
+    "text": "This function will multiply\n\nmultiplying <- function(x = 1, y = 1){\n  total <- x*y\n  return(total)\n}\n\nmultiplying()\n\n[1] 1\n\nmultiplying(2,4)\n\n[1] 8"
   },
   {
     "objectID": "course-materials/lectures/25_functions.html#if-else-if-else",
     "href": "course-materials/lectures/25_functions.html#if-else-if-else",
     "title": "Making Functions practice",
     "section": "if, else if, else",
-    "text": "if, else if, else\nThe computer can run a logical check.\nConsider this function:\n\numbrella &lt;- function(weather = \"no precipitation\"){\n\nif(weather == \"no precipitation\"){\n  \n    print(\"leave umbrella at home\")\n    }\n    \nelse if(weather == \"snow\"){\n\n    print(\"You don't need an umbrella\")\n}\n  \nelse{\n    print(\"bring an umbrella\")\n    \n    }\n}\numbrella(weather = \"snow\")\n\n[1] \"You don't need an umbrella\""
+    "text": "if, else if, else\nThe computer can run a logical check.\nConsider this function:\n\numbrella <- function(weather = \"no precipitation\"){\n\nif(weather == \"no precipitation\"){\n  \n    print(\"leave umbrella at home\")\n    }\n    \nelse if(weather == \"snow\"){\n\n    print(\"You don't need an umbrella\")\n}\n  \nelse{\n    print(\"bring an umbrella\")\n    \n    }\n}\numbrella(weather = \"snow\")\n\n[1] \"You don't need an umbrella\""
   },
   {
     "objectID": "course-materials/lectures/25_functions.html#this-is-a-composite-function",
     "href": "course-materials/lectures/25_functions.html#this-is-a-composite-function",
     "title": "Making Functions practice",
     "section": "This is a composite function",
-    "text": "This is a composite function\nDepending in an argument\n\nmy_1st_calculator &lt;-function(x,y,operation=\"add\"){\n  \n  if(operation %in% \"add\"){\n    total &lt;- adding(x,y)\n  }\n  \n  else if(operation %in% \"multiply\"){\n    total &lt;- multiplying(x,y)\n  }\n  \n  else{\n    stop(\"Please choose `add` or `multiply` for the operation argument\")\n  }\n  \n  return(total)\n}\n\n\nmy_1st_calculator(1,6, operation=\"multiply\")\n\n[1] 6"
+    "text": "This is a composite function\nDepending in an argument\n\nmy_1st_calculator <-function(x,y,operation=\"add\"){\n  \n  if(operation %in% \"add\"){\n    total <- adding(x,y)\n  }\n  \n  else if(operation %in% \"multiply\"){\n    total <- multiplying(x,y)\n  }\n  \n  else{\n    stop(\"Please choose `add` or `multiply` for the operation argument\")\n  }\n  \n  return(total)\n}\n\n\nmy_1st_calculator(1,6, operation=\"multiply\")\n\n[1] 6"
   },
   {
     "objectID": "course-materials/lectures/25_functions.html#note-on-data-masking",
     "href": "course-materials/lectures/25_functions.html#note-on-data-masking",
     "title": "Making Functions practice",
     "section": "Note on data masking",
-    "text": "Note on data masking\nNo masking : data$variable\nWith masking : data |&gt; filter(variable)\nData masking is super convenient for learning the tidyverse.\nNot so great when making functions.\nIf using a tidyverse verb with a variable use {{}} around the variable.\nRead more"
+    "text": "Note on data masking\nNo masking : data$variable\nWith masking : data |> filter(variable)\nData masking is super convenient for learning the tidyverse.\nNot so great when making functions.\nIf using a tidyverse verb with a variable use {{}} around the variable.\nRead more"
   },
   {
     "objectID": "course-materials/lectures/25_functions.html#filtering-a-lot",
     "href": "course-materials/lectures/25_functions.html#filtering-a-lot",
     "title": "Making Functions practice",
     "section": "Filtering a lot",
-    "text": "Filtering a lot\n\nlibrary(tidyverse)\n\nauto_filter &lt;- function(data, variable, value){\n  \n  data |&gt;\n    filter({{variable}} == {{value}})\n}\n\n\nauto_filter(data = mtcars, variable = am, value = 0 )\n\n                     mpg cyl  disp  hp drat    wt  qsec vs am gear carb\nHornet 4 Drive      21.4   6 258.0 110 3.08 3.215 19.44  1  0    3    1\nHornet Sportabout   18.7   8 360.0 175 3.15 3.440 17.02  0  0    3    2\nValiant             18.1   6 225.0 105 2.76 3.460 20.22  1  0    3    1\nDuster 360          14.3   8 360.0 245 3.21 3.570 15.84  0  0    3    4\nMerc 240D           24.4   4 146.7  62 3.69 3.190 20.00  1  0    4    2\nMerc 230            22.8   4 140.8  95 3.92 3.150 22.90  1  0    4    2\nMerc 280            19.2   6 167.6 123 3.92 3.440 18.30  1  0    4    4\nMerc 280C           17.8   6 167.6 123 3.92 3.440 18.90  1  0    4    4\nMerc 450SE          16.4   8 275.8 180 3.07 4.070 17.40  0  0    3    3\nMerc 450SL          17.3   8 275.8 180 3.07 3.730 17.60  0  0    3    3\nMerc 450SLC         15.2   8 275.8 180 3.07 3.780 18.00  0  0    3    3\nCadillac Fleetwood  10.4   8 472.0 205 2.93 5.250 17.98  0  0    3    4\nLincoln Continental 10.4   8 460.0 215 3.00 5.424 17.82  0  0    3    4\nChrysler Imperial   14.7   8 440.0 230 3.23 5.345 17.42  0  0    3    4\nToyota Corona       21.5   4 120.1  97 3.70 2.465 20.01  1  0    3    1\nDodge Challenger    15.5   8 318.0 150 2.76 3.520 16.87  0  0    3    2\nAMC Javelin         15.2   8 304.0 150 3.15 3.435 17.30  0  0    3    2\nCamaro Z28          13.3   8 350.0 245 3.73 3.840 15.41  0  0    3    4\nPontiac Firebird    19.2   8 400.0 175 3.08 3.845 17.05  0  0    3    2"
+    "text": "Filtering a lot\n\nlibrary(tidyverse)\n\nauto_filter <- function(data, variable, value){\n  \n  data |>\n    filter({{variable}} == value)\n}\n\n\nauto_filter(data = mtcars, variable = am, value = 0 )\n\n                     mpg cyl  disp  hp drat    wt  qsec vs am gear carb\nHornet 4 Drive      21.4   6 258.0 110 3.08 3.215 19.44  1  0    3    1\nHornet Sportabout   18.7   8 360.0 175 3.15 3.440 17.02  0  0    3    2\nValiant             18.1   6 225.0 105 2.76 3.460 20.22  1  0    3    1\nDuster 360          14.3   8 360.0 245 3.21 3.570 15.84  0  0    3    4\nMerc 240D           24.4   4 146.7  62 3.69 3.190 20.00  1  0    4    2\nMerc 230            22.8   4 140.8  95 3.92 3.150 22.90  1  0    4    2\nMerc 280            19.2   6 167.6 123 3.92 3.440 18.30  1  0    4    4\nMerc 280C           17.8   6 167.6 123 3.92 3.440 18.90  1  0    4    4\nMerc 450SE          16.4   8 275.8 180 3.07 4.070 17.40  0  0    3    3\nMerc 450SL          17.3   8 275.8 180 3.07 3.730 17.60  0  0    3    3\nMerc 450SLC         15.2   8 275.8 180 3.07 3.780 18.00  0  0    3    3\nCadillac Fleetwood  10.4   8 472.0 205 2.93 5.250 17.98  0  0    3    4\nLincoln Continental 10.4   8 460.0 215 3.00 5.424 17.82  0  0    3    4\nChrysler Imperial   14.7   8 440.0 230 3.23 5.345 17.42  0  0    3    4\nToyota Corona       21.5   4 120.1  97 3.70 2.465 20.01  1  0    3    1\nDodge Challenger    15.5   8 318.0 150 2.76 3.520 16.87  0  0    3    2\nAMC Javelin         15.2   8 304.0 150 3.15 3.435 17.30  0  0    3    2\nCamaro Z28          13.3   8 350.0 245 3.73 3.840 15.41  0  0    3    4\nPontiac Firebird    19.2   8 400.0 175 3.08 3.845 17.05  0  0    3    2"
   },
   {
     "objectID": "course-materials/lectures/25_functions.html#classwork",
@@ -1586,6 +1586,48 @@
     "href": "course-materials/lectures/25_functions.html#your-turn",
     "title": "Making Functions practice",
     "section": "Your turn",
-    "text": "Your turn\nMake a function that outputs a scatterplot and linear regression\n\nCall your function super grapher.\n\nIt should take an x and y variable.\nIt needs the data\nIt need a logical for the graph\n\n\n\nlibrary(tidyverse)\n\nsuper_grapher &lt;- function(variable1=NULL ,variable2=NULL , dat= NULL ,linear_regression = TRUE){\n  ggplot(mapping = aes(x= {{variable1}},  y= {{variable2}}), data = {{dat}})+\n    geom_point() +\n    if(linear_regression == TRUE){\n    geom_smooth(method = \"lm\" )\n    }\n    else{\n    labs(caption = \"no regression required\")\n    }\n}\nsuper_grapher(variable1 = mpg,variable2 = hp, dat = mtcars, linear_regression = FALSE)"
+    "text": "Your turn\nMake a function that outputs a scatterplot and linear regression\n\nCall your function super grapher.\n\nIt should take an x and y variable.\nIt needs the data\nIt need a logical for the graph"
+  },
+  {
+    "objectID": "course-materials/in-class-activies/day_25solutions_function_writing.html",
+    "href": "course-materials/in-class-activies/day_25solutions_function_writing.html",
+    "title": "Write Functions",
+    "section": "",
+    "text": "This in class activity was"
+  },
+  {
+    "objectID": "course-materials/in-class-activies/day_25solutions_function_writing.html#exercise-1",
+    "href": "course-materials/in-class-activies/day_25solutions_function_writing.html#exercise-1",
+    "title": "Write Functions",
+    "section": "Exercise 1",
+    "text": "Exercise 1\nWrite a function called count_name that, when given a name (e.g.,Angelica, Ezekiel, or Riley) as an argument, returns the total number of births by year from the babynames data frame in the babynames package that match that name.\n\n# Write your code below\ncount_name <- function(data = babynames , nombre = \"Nicholas\"){\n  if(is.element(nombre, babynames$name)) {\n    data |>\n    filter(name == nombre) |>\n    group_by(name,year) |>\n    reframe(year= year, n = sum(n)) \n      \n  }\n  else{\n    stop(\"Name not found\")\n  }\n}"
+  },
+  {
+    "objectID": "course-materials/in-class-activies/day_25solutions_function_writing.html#bonus",
+    "href": "course-materials/in-class-activies/day_25solutions_function_writing.html#bonus",
+    "title": "Write Functions",
+    "section": "Bonus!",
+    "text": "Bonus!\nThe count_name function should return one row per year that matches (and generate an error message if there are no matches). Run the function once with the argument Ezekiel and once with Ezze.\n\n# Paste the code from Exercise 1 below and adjust it\ncount_name(data=babynames, nombre = \"Ezekiel\")\n\n# A tibble: 141 × 3\n   name     year     n\n   <chr>   <dbl> <int>\n 1 Ezekiel  1880    16\n 2 Ezekiel  1881    22\n 3 Ezekiel  1882    11\n 4 Ezekiel  1883    14\n 5 Ezekiel  1884    13\n 6 Ezekiel  1885    10\n 7 Ezekiel  1886    17\n 8 Ezekiel  1887    11\n 9 Ezekiel  1888    16\n10 Ezekiel  1889    14\n# ℹ 131 more rows\n\n#count_name(\"Ezze\")"
+  },
+  {
+    "objectID": "course-materials/in-class-activies/day_25solutions_function_writing.html#exercise-2",
+    "href": "course-materials/in-class-activies/day_25solutions_function_writing.html#exercise-2",
+    "title": "Write Functions",
+    "section": "Exercise 2",
+    "text": "Exercise 2\nWrite a function called grab_name that, when given a name and a year as an argument, returns the rows from the babynames data frame in the babynames package that match that name for that year (and returns an error if that name and year combination does not match any rows). Run the function once with the arguments Ezekiel and 1883 and once with Ezze and 1883.\nChallenge: Add an else if after your if and before your else to catch an error if people choose a year less than 1880 (outside of the range of our data).\n\n# Write your code below\n\nlibrary(tidyverse)\nlibrary(babynames)\n\ngrab_name <- function(data = babynames, nombre ,ano ){\n\n  if(is.element(nombre,babynames$name))  {\n    data |>\n    filter(name == nombre & year == ano) |>\n    pull(name,year)\n  }\n  else if(ano < 1880){\n    stop(\"Choose a year after 1880\")\n  }\n  else{\n    stop(\"Name and year not found\")\n  }\n}\ngrab_name( nombre = \"Samantha\", ano = 1950)\n\n      1950 \n\"Samantha\""
+  },
+  {
+    "objectID": "course-materials/in-class-activies/day_25solutions_function_writing.html#exercise-3",
+    "href": "course-materials/in-class-activies/day_25solutions_function_writing.html#exercise-3",
+    "title": "Write Functions",
+    "section": "Exercise 3",
+    "text": "Exercise 3\nWrite a function called count_name_graph() that will use the function countname() to make a line graph that plots the year and the number of babies in a given year. The graph’s title should be “the”Babies Named (name of baby)” . The paste() function in r will help with your title, use it to put two strings together. Label your x and y axes.\n\n# Write your code below\ncount_name_graph <- function(data, nombre = \"Nicholas\"){\n  count_name(data, nombre )|>\n    ggplot(aes(x=year, y=n))+\n    geom_line()+\n    labs(title = paste(\"Babies named\", nombre))\n}\ncount_name_graph(data=babynames, nombre = \"Nicholas\")"
+  },
+  {
+    "objectID": "course-materials/in-class-activies/day_25solutions_function_writing.html#exercise-4",
+    "href": "course-materials/in-class-activies/day_25solutions_function_writing.html#exercise-4",
+    "title": "Write Functions",
+    "section": "Exercise 4",
+    "text": "Exercise 4\nWrite a function called summary_prop that will take a data frame as an argument, filter to a condition, and compute the proportion of that condition.\nRun the function with the arguments congress_age and age >= 25 & age <= 55 .\nYou can use your function on count_name(\"Ezekiel\"), n>100. (Note: You probably used summarize() for the code for exercise 1, that sometimes returns grouped data. This code will work better if you add a pipe to an ungroup(). Alternatively you can just use reframe() instead of summarize()).\n\n# Write your code below\nsummary_prop <- function(data, condition){\n  data |> \n    filter( {{condition}} )|>\n    summarise(\n      number_with_condition = n(),\n      prop_w_condition = number_with_condition/nrow(data)\n    )\n}\n  \nsummary_prop(data=congress_age, condition = age >= 25 & age <= 55)\n\n# A tibble: 1 × 2\n  number_with_condition prop_w_condition\n                  <int>            <dbl>\n1                 10657            0.572\n\nsummary_prop(data=count_name(data = babynames, nombre = \"Ezekiel\"), condition = n>100)\n\n# A tibble: 1 × 2\n  number_with_condition prop_w_condition\n                  <int>            <dbl>\n1                    44            0.312"
   }
 ]
