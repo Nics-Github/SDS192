@@ -234,13 +234,11 @@ h1{font-weight: 400;}
 
 <!-- # Day 27 `map()` and `across()` practice -->
 
-<!-- [In class activity](./course-materials/in-class-activies/day_26_In-classExercise-Iteration.qmd) -->
+
 
 <!-- Project time -->
 
-<!-- # Day 26 Iteration -->
 
-<!-- [Do we need more class time](https://forms.gle/239mzry4vtcMCfsv9)? -->
 
 <!-- ::: {.callout-tip collapse="true"} -->
 <!-- # Reminder Project 2 due Friday -->
@@ -258,16 +256,22 @@ h1{font-weight: 400;}
 <!-- -   `filter( == )` vs `filter( %in% )` -->
 <!-- ::: -->
 
-<!-- [Solution to Monday's in class activity](/course-materials/in-class-activies/day_25solutions_function_writing.html) -->
 
-<!-- [Lecture: `across()` and `map()`](course-materials/lectures/Day_26_across_maps.qmd) -->
 
-<!-- [More on masking](https://rlang.r-lib.org/reference/topic-data-mask.html) -->
+# Day 24 Iteration
+
+[Solution to Monday's in class activity](/course-materials/in-class-activies/day_25solutions_function_writing.html) 
+
+[Lecture: `across()` and `map()`](course-materials/lectures/24_across_maps.qmd)
+
+[In class activity](./course-materials/in-class-activies/24_In-classExercise-Iteration.qmd)
+
+[More on masking](https://rlang.r-lib.org/reference/topic-data-mask.html)
 
 
 # Day 23 Function Writing
 
-[Lecture: Intro to if, else and functions](course-materials/lectures/25_functions.qmd)
+[Lecture: Intro to if, else and functions](course-materials/lectures/23_functions.qmd)
 
 [Function writing practice](./course-materials/in-class-activies/day_25_function_writing.qmd)
 

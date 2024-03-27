@@ -1629,5 +1629,152 @@
     "title": "Write Functions",
     "section": "Exercise 4",
     "text": "Exercise 4\nWrite a function called summary_prop that will take a data frame as an argument, filter to a condition, and compute the proportion of that condition.\nRun the function with the arguments congress_age and age >= 25 & age <= 55 .\nYou can use your function on count_name(\"Ezekiel\"), n>100. (Note: You probably used summarize() for the code for exercise 1, that sometimes returns grouped data. This code will work better if you add a pipe to an ungroup(). Alternatively you can just use reframe() instead of summarize()).\n\n# Write your code below\nsummary_prop <- function(data, condition){\n  data |> \n    filter( {{condition}} )|>\n    summarise(\n      number_with_condition = n(),\n      prop_w_condition = number_with_condition/nrow(data)\n    )\n}\n  \nsummary_prop(data=congress_age, condition = age >= 25 & age <= 55)\n\n# A tibble: 1 × 2\n  number_with_condition prop_w_condition\n                  <int>            <dbl>\n1                 10657            0.572\n\nsummary_prop(data=count_name(data = babynames, nombre = \"Ezekiel\"), condition = n>100)\n\n# A tibble: 1 × 2\n  number_with_condition prop_w_condition\n                  <int>            <dbl>\n1                    44            0.312"
+  },
+  {
+    "objectID": "course-materials/lectures/24_across_maps.html",
+    "href": "course-materials/lectures/24_across_maps.html",
+    "title": "iteration",
+    "section": "",
+    "text": "These functions allow us to preform the same operation across multiple rows.\nmap() comes from the purr package.\nacross() comes from the dplyr package."
+  },
+  {
+    "objectID": "course-materials/lectures/24_across_maps.html#across-and-map",
+    "href": "course-materials/lectures/24_across_maps.html#across-and-map",
+    "title": "iteration",
+    "section": "",
+    "text": "These functions allow us to preform the same operation across multiple rows.\nmap() comes from the purr package.\nacross() comes from the dplyr package."
+  },
+  {
+    "objectID": "course-materials/lectures/24_across_maps.html#example-iris",
+    "href": "course-materials/lectures/24_across_maps.html#example-iris",
+    "title": "iteration",
+    "section": "Example: iris",
+    "text": "Example: iris\n\nhead(iris)\n\n  Sepal.Length Sepal.Width Petal.Length Petal.Width Species\n1          5.1         3.5          1.4         0.2  setosa\n2          4.9         3.0          1.4         0.2  setosa\n3          4.7         3.2          1.3         0.2  setosa\n4          4.6         3.1          1.5         0.2  setosa\n5          5.0         3.6          1.4         0.2  setosa\n6          5.4         3.9          1.7         0.4  setosa"
+  },
+  {
+    "objectID": "course-materials/lectures/24_across_maps.html#average",
+    "href": "course-materials/lectures/24_across_maps.html#average",
+    "title": "iteration",
+    "section": "Average",
+    "text": "Average\nLet’s find the average of each column that ends with .Length by species.\n\niris %&gt;%\n  group_by(Species) %&gt;%\n  summarise(\n    across(.cols = ends_with(\"Length\"), \n           .fns = list(mean = mean)))\n\n# A tibble: 3 × 3\n  Species    Sepal.Length_mean Petal.Length_mean\n  &lt;fct&gt;                  &lt;dbl&gt;             &lt;dbl&gt;\n1 setosa                  5.01              1.46\n2 versicolor              5.94              4.26\n3 virginica               6.59              5.55"
+  },
+  {
+    "objectID": "course-materials/lectures/24_across_maps.html#rounding-with-across",
+    "href": "course-materials/lectures/24_across_maps.html#rounding-with-across",
+    "title": "iteration",
+    "section": "Rounding with across()",
+    "text": "Rounding with across()\n\niris %&gt;%\n  group_by(Species) %&gt;%\n  summarise(across(\n    .cols = Sepal.Length:Petal.Width, \n    .fns = round))\n\nWarning: Returning more (or less) than 1 row per `summarise()` group was deprecated in\ndplyr 1.1.0.\nℹ Please use `reframe()` instead.\nℹ When switching from `summarise()` to `reframe()`, remember that `reframe()`\n  always returns an ungrouped data frame and adjust accordingly.\n\n\n`summarise()` has grouped output by 'Species'. You can override using the\n`.groups` argument.\n\n\n# A tibble: 150 × 5\n# Groups:   Species [3]\n   Species Sepal.Length Sepal.Width Petal.Length Petal.Width\n   &lt;fct&gt;          &lt;dbl&gt;       &lt;dbl&gt;        &lt;dbl&gt;       &lt;dbl&gt;\n 1 setosa             5           4            1           0\n 2 setosa             5           3            1           0\n 3 setosa             5           3            1           0\n 4 setosa             5           3            2           0\n 5 setosa             5           4            1           0\n 6 setosa             5           4            2           0\n 7 setosa             5           3            1           0\n 8 setosa             5           3            2           0\n 9 setosa             4           3            1           0\n10 setosa             5           3            2           0\n# ℹ 140 more rows"
+  },
+  {
+    "objectID": "course-materials/lectures/24_across_maps.html#rounding-without-across",
+    "href": "course-materials/lectures/24_across_maps.html#rounding-without-across",
+    "title": "iteration",
+    "section": "Rounding without across()",
+    "text": "Rounding without across()\n\niris %&gt;%\n  group_by(Species) %&gt;%\n  summarise(Sepal.Length = round(Sepal.Length),\n            Sepal.Width = round(Sepal.Width),\n            Petal.Length = round(Petal.Length),\n            Petal.Width = round(Petal.Width))\n\nWarning: Returning more (or less) than 1 row per `summarise()` group was deprecated in\ndplyr 1.1.0.\nℹ Please use `reframe()` instead.\nℹ When switching from `summarise()` to `reframe()`, remember that `reframe()`\n  always returns an ungrouped data frame and adjust accordingly.\n\n\n`summarise()` has grouped output by 'Species'. You can override using the\n`.groups` argument.\n\n\n# A tibble: 150 × 5\n# Groups:   Species [3]\n   Species Sepal.Length Sepal.Width Petal.Length Petal.Width\n   &lt;fct&gt;          &lt;dbl&gt;       &lt;dbl&gt;        &lt;dbl&gt;       &lt;dbl&gt;\n 1 setosa             5           4            1           0\n 2 setosa             5           3            1           0\n 3 setosa             5           3            1           0\n 4 setosa             5           3            2           0\n 5 setosa             5           4            1           0\n 6 setosa             5           4            2           0\n 7 setosa             5           3            1           0\n 8 setosa             5           3            2           0\n 9 setosa             4           3            1           0\n10 setosa             5           3            2           0\n# ℹ 140 more rows"
+  },
+  {
+    "objectID": "course-materials/lectures/24_across_maps.html#rounding",
+    "href": "course-materials/lectures/24_across_maps.html#rounding",
+    "title": "iteration",
+    "section": "Rounding",
+    "text": "Rounding\n\niris %&gt;%\n  group_by(Species) %&gt;%\n  reframe(across(\n    .cols = starts_with(\"Sepal\"), \n    .fns = ~ round(. , digits = 2)))\n\n# A tibble: 150 × 3\n   Species Sepal.Length Sepal.Width\n   &lt;fct&gt;          &lt;dbl&gt;       &lt;dbl&gt;\n 1 setosa           5.1         3.5\n 2 setosa           4.9         3  \n 3 setosa           4.7         3.2\n 4 setosa           4.6         3.1\n 5 setosa           5           3.6\n 6 setosa           5.4         3.9\n 7 setosa           4.6         3.4\n 8 setosa           5           3.4\n 9 setosa           4.4         2.9\n10 setosa           4.9         3.1\n# ℹ 140 more rows"
+  },
+  {
+    "objectID": "course-materials/lectures/24_across_maps.html#map-is-similar-to-across",
+    "href": "course-materials/lectures/24_across_maps.html#map-is-similar-to-across",
+    "title": "iteration",
+    "section": "map() is similar to across()",
+    "text": "map() is similar to across()\nIt performs some operation on a data frame, vector or list.\n\niris |&gt;\n  map(.f = mean)\n\nWarning in mean.default(.x[[i]], ...): argument is not numeric or logical:\nreturning NA\n\n\n$Sepal.Length\n[1] 5.843333\n\n$Sepal.Width\n[1] 3.057333\n\n$Petal.Length\n[1] 3.758\n\n$Petal.Width\n[1] 1.199333\n\n$Species\n[1] NA"
+  },
+  {
+    "objectID": "course-materials/lectures/24_across_maps.html#different-maps",
+    "href": "course-materials/lectures/24_across_maps.html#different-maps",
+    "title": "iteration",
+    "section": "Different maps()",
+    "text": "Different maps()\nmap() returns a list.\nmap_dfc() returns a dataframe with columns\nmap_dfr() returns a dataframe with rows."
+  },
+  {
+    "objectID": "course-materials/lectures/24_across_maps.html#map_dfc",
+    "href": "course-materials/lectures/24_across_maps.html#map_dfc",
+    "title": "iteration",
+    "section": "map_dfc()",
+    "text": "map_dfc()\n\niris |&gt;\n  map_dfc(.f = mean)\n\nWarning in mean.default(.x[[i]], ...): argument is not numeric or logical:\nreturning NA\n\n\n# A tibble: 1 × 5\n  Sepal.Length Sepal.Width Petal.Length Petal.Width Species\n         &lt;dbl&gt;       &lt;dbl&gt;        &lt;dbl&gt;       &lt;dbl&gt;   &lt;dbl&gt;\n1         5.84        3.06         3.76        1.20      NA"
+  },
+  {
+    "objectID": "course-materials/lectures/23_functions.html",
+    "href": "course-materials/lectures/23_functions.html",
+    "title": "Making Functions practice",
+    "section": "",
+    "text": "Inputs and outputs\nCan set defaults arguements\nCan be general or specific to a package.\n\nn() vs. read_all_contributions()\n\nSave time in the long run."
+  },
+  {
+    "objectID": "course-materials/lectures/23_functions.html#functions",
+    "href": "course-materials/lectures/23_functions.html#functions",
+    "title": "Making Functions practice",
+    "section": "",
+    "text": "Inputs and outputs\nCan set defaults arguements\nCan be general or specific to a package.\n\nn() vs. read_all_contributions()\n\nSave time in the long run."
+  },
+  {
+    "objectID": "course-materials/lectures/23_functions.html#function-outline",
+    "href": "course-materials/lectures/23_functions.html#function-outline",
+    "title": "Making Functions practice",
+    "section": "Function outline",
+    "text": "Function outline\n\nGreeting &lt;- function(arg1 = \"Hello\" ){\n  print(arg1)\n}\nGreeting()\n\n[1] \"Hello\"\n\nGreeting(\"Hiya\")\n\n[1] \"Hiya\""
+  },
+  {
+    "objectID": "course-materials/lectures/23_functions.html#this-function-will-add",
+    "href": "course-materials/lectures/23_functions.html#this-function-will-add",
+    "title": "Making Functions practice",
+    "section": "This function will add",
+    "text": "This function will add\n\nadding &lt;- function(x,y){\n  \n  total &lt;- sum( c( x , y ))\n  \n  return(total)\n}\n\nadding(2,4)\n\n[1] 6\n\n#adding()"
+  },
+  {
+    "objectID": "course-materials/lectures/23_functions.html#this-function-will-multiply",
+    "href": "course-materials/lectures/23_functions.html#this-function-will-multiply",
+    "title": "Making Functions practice",
+    "section": "This function will multiply",
+    "text": "This function will multiply\n\nmultiplying &lt;- function(x = 1, y = 1){\n  total &lt;- x*y\n  total\n}\n\nmultiplying()\n\n[1] 1\n\nmultiplying(2,4)\n\n[1] 8"
+  },
+  {
+    "objectID": "course-materials/lectures/23_functions.html#if-else-if-else",
+    "href": "course-materials/lectures/23_functions.html#if-else-if-else",
+    "title": "Making Functions practice",
+    "section": "if, else if, else",
+    "text": "if, else if, else\nThe computer can run a logical check.\nConsider this function:\n\numbrella &lt;- function(weather = \"no precipitation\"){\n\nif(weather == \"no precipitation\"){\n  \n    print(\"leave umbrella at home\")\n    }\n    \nelse if(weather == \"snow\"){\n\n    print(\"You don't need an umbrella\")\n}\n  \nelse{\n    print(\"bring an umbrella\")\n    \n    }\n}\numbrella(weather = \"snow\")\n\n[1] \"You don't need an umbrella\""
+  },
+  {
+    "objectID": "course-materials/lectures/23_functions.html#this-is-a-composite-function",
+    "href": "course-materials/lectures/23_functions.html#this-is-a-composite-function",
+    "title": "Making Functions practice",
+    "section": "This is a composite function",
+    "text": "This is a composite function\nDepending in an argument\n\nmy_1st_calculator &lt;-function(x,y,operation=\"add\"){\n  \n  if(operation %in% \"add\"){\n    total &lt;- adding(x,y)\n  }\n  \n  else if(operation %in% \"multiply\"){\n    total &lt;- multiplying(x,y)\n  }\n  \n  else{\n    stop(\"Please choose `add` or `multiply` for the operation argument\")\n  }\n  \n  return(total)\n}\n\n\nmy_1st_calculator(1,6, operation=\"multiply\")\n\n[1] 6"
+  },
+  {
+    "objectID": "course-materials/lectures/23_functions.html#note-on-data-masking",
+    "href": "course-materials/lectures/23_functions.html#note-on-data-masking",
+    "title": "Making Functions practice",
+    "section": "Note on data masking",
+    "text": "Note on data masking\nNo masking : data$variable\nWith masking : data |&gt; filter(variable)\nData masking is super convenient for learning the tidyverse.\nNot so great when making functions.\nIf using a tidyverse verb with a variable use {{}} around the variable.\nRead more"
+  },
+  {
+    "objectID": "course-materials/lectures/23_functions.html#filtering-a-lot",
+    "href": "course-materials/lectures/23_functions.html#filtering-a-lot",
+    "title": "Making Functions practice",
+    "section": "Filtering a lot",
+    "text": "Filtering a lot\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.3     ✔ readr     2.1.4\n✔ forcats   1.0.0     ✔ stringr   1.5.0\n✔ ggplot2   3.4.4     ✔ tibble    3.2.1\n✔ lubridate 1.9.2     ✔ tidyr     1.3.0\n✔ purrr     1.0.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nauto_filter &lt;- function(data, variable, value){\n  \n  data |&gt;\n    filter({{variable}} == value)\n}\n\n\nauto_filter(data = mtcars, variable = am, value = 0 )\n\n                     mpg cyl  disp  hp drat    wt  qsec vs am gear carb\nHornet 4 Drive      21.4   6 258.0 110 3.08 3.215 19.44  1  0    3    1\nHornet Sportabout   18.7   8 360.0 175 3.15 3.440 17.02  0  0    3    2\nValiant             18.1   6 225.0 105 2.76 3.460 20.22  1  0    3    1\nDuster 360          14.3   8 360.0 245 3.21 3.570 15.84  0  0    3    4\nMerc 240D           24.4   4 146.7  62 3.69 3.190 20.00  1  0    4    2\nMerc 230            22.8   4 140.8  95 3.92 3.150 22.90  1  0    4    2\nMerc 280            19.2   6 167.6 123 3.92 3.440 18.30  1  0    4    4\nMerc 280C           17.8   6 167.6 123 3.92 3.440 18.90  1  0    4    4\nMerc 450SE          16.4   8 275.8 180 3.07 4.070 17.40  0  0    3    3\nMerc 450SL          17.3   8 275.8 180 3.07 3.730 17.60  0  0    3    3\nMerc 450SLC         15.2   8 275.8 180 3.07 3.780 18.00  0  0    3    3\nCadillac Fleetwood  10.4   8 472.0 205 2.93 5.250 17.98  0  0    3    4\nLincoln Continental 10.4   8 460.0 215 3.00 5.424 17.82  0  0    3    4\nChrysler Imperial   14.7   8 440.0 230 3.23 5.345 17.42  0  0    3    4\nToyota Corona       21.5   4 120.1  97 3.70 2.465 20.01  1  0    3    1\nDodge Challenger    15.5   8 318.0 150 2.76 3.520 16.87  0  0    3    2\nAMC Javelin         15.2   8 304.0 150 3.15 3.435 17.30  0  0    3    2\nCamaro Z28          13.3   8 350.0 245 3.73 3.840 15.41  0  0    3    4\nPontiac Firebird    19.2   8 400.0 175 3.08 3.845 17.05  0  0    3    2"
+  },
+  {
+    "objectID": "course-materials/lectures/23_functions.html#classwork",
+    "href": "course-materials/lectures/23_functions.html#classwork",
+    "title": "Making Functions practice",
+    "section": "Classwork",
+    "text": "Classwork"
+  },
+  {
+    "objectID": "course-materials/lectures/23_functions.html#your-turn",
+    "href": "course-materials/lectures/23_functions.html#your-turn",
+    "title": "Making Functions practice",
+    "section": "Your turn",
+    "text": "Your turn\nMake a function that outputs a scatterplot and linear regression\n\nCall your function super grapher.\n\nIt should take an x and y variable.\nIt needs the data\nIt need a logical for the graph"
   }
 ]
