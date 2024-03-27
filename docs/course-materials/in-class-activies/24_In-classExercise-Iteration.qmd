@@ -31,10 +31,6 @@ df <- data.frame(
 
 ```
 
-```{r}
-# group by name and summarize three numeric columns
-
-```
 
 # Ex2: `purrr` package `map()` function
 

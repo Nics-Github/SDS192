@@ -19,7 +19,7 @@ library(tidyverse)
 ```{r}
 # create a data frame
 df <- data.frame(
-  name = c("obs1", "obs2", "obs3", "obs1"),
+  name = c("obs1", "obs2", "obs3", "obs4"),
   a = c(2, 3, 4, 5),
   b = c(4, 7, 2, 1),
   c = c(4, 9, 3, 2)
@@ -28,12 +28,22 @@ df <- data.frame(
 
 ```{r}
 # summarize three numeric columns
-
+df |>
+  summarise(
+    across(.cols = a:c ,
+           .fns = mean)
+  )
 ```
 
 ```{r}
 # group by name and summarize three numeric columns
-
+df |>
+  group_by(name)|>
+  summarise(across(
+    .cols = a:c,
+    .fns = mean
+  )
+  )
 ```
 
 # Ex2: `purrr` package `map()` function
