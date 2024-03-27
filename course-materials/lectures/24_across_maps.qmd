@@ -1,7 +1,10 @@
 ---
 title: "iteration"
 author: "Schwab"
-format: revealjs
+format: 
+  revealjs:
+    theme: beige
+
 editor: visual
 execute: 
   echo: true

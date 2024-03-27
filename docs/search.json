@@ -1641,8 +1641,8 @@
     "objectID": "course-materials/lectures/24_across_maps.html#across-and-map",
     "href": "course-materials/lectures/24_across_maps.html#across-and-map",
     "title": "iteration",
-    "section": "",
-    "text": "These functions allow us to preform the same operation across multiple rows.\nmap() comes from the purr package.\nacross() comes from the dplyr package."
+    "section": "across() and map()",
+    "text": "across() and map()\nThese functions allow us to preform the same operation across multiple rows.\nmap() comes from the purr package.\nacross() comes from the dplyr package."
   },
   {
     "objectID": "course-materials/lectures/24_across_maps.html#example-iris",
@@ -1663,14 +1663,14 @@
     "href": "course-materials/lectures/24_across_maps.html#rounding-with-across",
     "title": "iteration",
     "section": "Rounding with across()",
-    "text": "Rounding with across()\n\niris %&gt;%\n  group_by(Species) %&gt;%\n  summarise(across(\n    .cols = Sepal.Length:Petal.Width, \n    .fns = round))\n\nWarning: Returning more (or less) than 1 row per `summarise()` group was deprecated in\ndplyr 1.1.0.\nℹ Please use `reframe()` instead.\nℹ When switching from `summarise()` to `reframe()`, remember that `reframe()`\n  always returns an ungrouped data frame and adjust accordingly.\n\n\n`summarise()` has grouped output by 'Species'. You can override using the\n`.groups` argument.\n\n\n# A tibble: 150 × 5\n# Groups:   Species [3]\n   Species Sepal.Length Sepal.Width Petal.Length Petal.Width\n   &lt;fct&gt;          &lt;dbl&gt;       &lt;dbl&gt;        &lt;dbl&gt;       &lt;dbl&gt;\n 1 setosa             5           4            1           0\n 2 setosa             5           3            1           0\n 3 setosa             5           3            1           0\n 4 setosa             5           3            2           0\n 5 setosa             5           4            1           0\n 6 setosa             5           4            2           0\n 7 setosa             5           3            1           0\n 8 setosa             5           3            2           0\n 9 setosa             4           3            1           0\n10 setosa             5           3            2           0\n# ℹ 140 more rows"
+    "text": "Rounding with across()\n\niris %&gt;%\n  group_by(Species) %&gt;%\n  summarise(across(\n    .cols = Sepal.Length:Petal.Width, \n    .fns = round))\n\n# A tibble: 150 × 5\n# Groups:   Species [3]\n   Species Sepal.Length Sepal.Width Petal.Length Petal.Width\n   &lt;fct&gt;          &lt;dbl&gt;       &lt;dbl&gt;        &lt;dbl&gt;       &lt;dbl&gt;\n 1 setosa             5           4            1           0\n 2 setosa             5           3            1           0\n 3 setosa             5           3            1           0\n 4 setosa             5           3            2           0\n 5 setosa             5           4            1           0\n 6 setosa             5           4            2           0\n 7 setosa             5           3            1           0\n 8 setosa             5           3            2           0\n 9 setosa             4           3            1           0\n10 setosa             5           3            2           0\n# ℹ 140 more rows"
   },
   {
     "objectID": "course-materials/lectures/24_across_maps.html#rounding-without-across",
     "href": "course-materials/lectures/24_across_maps.html#rounding-without-across",
     "title": "iteration",
     "section": "Rounding without across()",
-    "text": "Rounding without across()\n\niris %&gt;%\n  group_by(Species) %&gt;%\n  summarise(Sepal.Length = round(Sepal.Length),\n            Sepal.Width = round(Sepal.Width),\n            Petal.Length = round(Petal.Length),\n            Petal.Width = round(Petal.Width))\n\nWarning: Returning more (or less) than 1 row per `summarise()` group was deprecated in\ndplyr 1.1.0.\nℹ Please use `reframe()` instead.\nℹ When switching from `summarise()` to `reframe()`, remember that `reframe()`\n  always returns an ungrouped data frame and adjust accordingly.\n\n\n`summarise()` has grouped output by 'Species'. You can override using the\n`.groups` argument.\n\n\n# A tibble: 150 × 5\n# Groups:   Species [3]\n   Species Sepal.Length Sepal.Width Petal.Length Petal.Width\n   &lt;fct&gt;          &lt;dbl&gt;       &lt;dbl&gt;        &lt;dbl&gt;       &lt;dbl&gt;\n 1 setosa             5           4            1           0\n 2 setosa             5           3            1           0\n 3 setosa             5           3            1           0\n 4 setosa             5           3            2           0\n 5 setosa             5           4            1           0\n 6 setosa             5           4            2           0\n 7 setosa             5           3            1           0\n 8 setosa             5           3            2           0\n 9 setosa             4           3            1           0\n10 setosa             5           3            2           0\n# ℹ 140 more rows"
+    "text": "Rounding without across()\n\niris %&gt;%\n  group_by(Species) %&gt;%\n  summarise(Sepal.Length = round(Sepal.Length),\n            Sepal.Width = round(Sepal.Width),\n            Petal.Length = round(Petal.Length),\n            Petal.Width = round(Petal.Width))\n\n# A tibble: 150 × 5\n# Groups:   Species [3]\n   Species Sepal.Length Sepal.Width Petal.Length Petal.Width\n   &lt;fct&gt;          &lt;dbl&gt;       &lt;dbl&gt;        &lt;dbl&gt;       &lt;dbl&gt;\n 1 setosa             5           4            1           0\n 2 setosa             5           3            1           0\n 3 setosa             5           3            1           0\n 4 setosa             5           3            2           0\n 5 setosa             5           4            1           0\n 6 setosa             5           4            2           0\n 7 setosa             5           3            1           0\n 8 setosa             5           3            2           0\n 9 setosa             4           3            1           0\n10 setosa             5           3            2           0\n# ℹ 140 more rows"
   },
   {
     "objectID": "course-materials/lectures/24_across_maps.html#rounding",
@@ -1684,7 +1684,7 @@
     "href": "course-materials/lectures/24_across_maps.html#map-is-similar-to-across",
     "title": "iteration",
     "section": "map() is similar to across()",
-    "text": "map() is similar to across()\nIt performs some operation on a data frame, vector or list.\n\niris |&gt;\n  map(.f = mean)\n\nWarning in mean.default(.x[[i]], ...): argument is not numeric or logical:\nreturning NA\n\n\n$Sepal.Length\n[1] 5.843333\n\n$Sepal.Width\n[1] 3.057333\n\n$Petal.Length\n[1] 3.758\n\n$Petal.Width\n[1] 1.199333\n\n$Species\n[1] NA"
+    "text": "map() is similar to across()\nIt performs some operation on a data frame, vector or list.\n\niris |&gt;\n  map(.f = mean)\n\n$Sepal.Length\n[1] 5.843333\n\n$Sepal.Width\n[1] 3.057333\n\n$Petal.Length\n[1] 3.758\n\n$Petal.Width\n[1] 1.199333\n\n$Species\n[1] NA"
   },
   {
     "objectID": "course-materials/lectures/24_across_maps.html#different-maps",
@@ -1698,7 +1698,7 @@
     "href": "course-materials/lectures/24_across_maps.html#map_dfc",
     "title": "iteration",
     "section": "map_dfc()",
-    "text": "map_dfc()\n\niris |&gt;\n  map_dfc(.f = mean)\n\nWarning in mean.default(.x[[i]], ...): argument is not numeric or logical:\nreturning NA\n\n\n# A tibble: 1 × 5\n  Sepal.Length Sepal.Width Petal.Length Petal.Width Species\n         &lt;dbl&gt;       &lt;dbl&gt;        &lt;dbl&gt;       &lt;dbl&gt;   &lt;dbl&gt;\n1         5.84        3.06         3.76        1.20      NA"
+    "text": "map_dfc()\n\niris |&gt;\n  map_dfc(.f = mean)\n\n# A tibble: 1 × 5\n  Sepal.Length Sepal.Width Petal.Length Petal.Width Species\n         &lt;dbl&gt;       &lt;dbl&gt;        &lt;dbl&gt;       &lt;dbl&gt;   &lt;dbl&gt;\n1         5.84        3.06         3.76        1.20      NA"
   },
   {
     "objectID": "course-materials/lectures/23_functions.html",
