@@ -1776,5 +1776,54 @@
     "title": "Making Functions practice",
     "section": "Your turn",
     "text": "Your turn\nMake a function that outputs a scatterplot and linear regression\n\nCall your function super grapher.\n\nIt should take an x and y variable.\nIt needs the data\nIt need a logical for the graph"
+  },
+  {
+    "objectID": "course-materials/lectures/24_In-classExercise-Iteration_solution.html",
+    "href": "course-materials/lectures/24_In-classExercise-Iteration_solution.html",
+    "title": "Lec 21: In-class Exercise: Iteration",
+    "section": "",
+    "text": "library(tidyverse)"
+  },
+  {
+    "objectID": "course-materials/lectures/24_In-classExercise-Iteration_solution.html#ex2-1",
+    "href": "course-materials/lectures/24_In-classExercise-Iteration_solution.html#ex2-1",
+    "title": "Lec 21: In-class Exercise: Iteration",
+    "section": "Ex2-1",
+    "text": "Ex2-1\n\n# summarize three numeric columns, `map()` creates a list"
+  },
+  {
+    "objectID": "course-materials/lectures/24_In-classExercise-Iteration_solution.html#ex2-2",
+    "href": "course-materials/lectures/24_In-classExercise-Iteration_solution.html#ex2-2",
+    "title": "Lec 21: In-class Exercise: Iteration",
+    "section": "Ex2-2",
+    "text": "Ex2-2\n\n# `map_dfc()` creates a tibble, (c for columns) stacks them side-by-side"
+  },
+  {
+    "objectID": "course-materials/lectures/24_In-classExercise-Iteration_solution.html#ex2-3",
+    "href": "course-materials/lectures/24_In-classExercise-Iteration_solution.html#ex2-3",
+    "title": "Lec 21: In-class Exercise: Iteration",
+    "section": "Ex2-3",
+    "text": "Ex2-3\n\n# `map_dfr()` creates a tibble, (r for rows) stacks the smaller tibbles on top of each other"
+  },
+  {
+    "objectID": "course-materials/lectures/24_In-classExercise-Iteration_solution.html#getting-creative",
+    "href": "course-materials/lectures/24_In-classExercise-Iteration_solution.html#getting-creative",
+    "title": "Lec 21: In-class Exercise: Iteration",
+    "section": "Getting Creative",
+    "text": "Getting Creative"
+  },
+  {
+    "objectID": "course-materials/lectures/24_In-classExercise-Iteration_solution.html#ex-3-1-use-across-on-the-penguins-data-from-the-palmerpenguins-package-to-do-something.",
+    "href": "course-materials/lectures/24_In-classExercise-Iteration_solution.html#ex-3-1-use-across-on-the-penguins-data-from-the-palmerpenguins-package-to-do-something.",
+    "title": "Lec 21: In-class Exercise: Iteration",
+    "section": "Ex 3-1 Use across() on the penguins data from the palmerpenguins package to do something.",
+    "text": "Ex 3-1 Use across() on the penguins data from the palmerpenguins package to do something."
+  },
+  {
+    "objectID": "course-materials/lectures/24_In-classExercise-Iteration_solution.html#ex-3-2-use-map-on-the-penguins-data-from-the-palmerpenguins-package-to-do-something.",
+    "href": "course-materials/lectures/24_In-classExercise-Iteration_solution.html#ex-3-2-use-map-on-the-penguins-data-from-the-palmerpenguins-package-to-do-something.",
+    "title": "Lec 21: In-class Exercise: Iteration",
+    "section": "Ex 3-2 Use map() on the penguins data from the palmerpenguins package to do something.",
+    "text": "Ex 3-2 Use map() on the penguins data from the palmerpenguins package to do something."
   }
 ]
