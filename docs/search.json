@@ -1825,5 +1825,89 @@
     "title": "Lec 21: In-class Exercise: Iteration",
     "section": "Ex 3-2 Use map() on the penguins data from the palmerpenguins package to do something.",
     "text": "Ex 3-2 Use map() on the penguins data from the palmerpenguins package to do something."
+  },
+  {
+    "objectID": "course-materials/lectures/26_maps-ggplot.html",
+    "href": "course-materials/lectures/26_maps-ggplot.html",
+    "title": "maps-ggplot",
+    "section": "",
+    "text": "library(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.3     ✔ readr     2.1.4\n✔ forcats   1.0.0     ✔ stringr   1.5.0\n✔ ggplot2   3.4.4     ✔ tibble    3.2.1\n✔ lubridate 1.9.2     ✔ tidyr     1.3.0\n✔ purrr     1.0.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nlibrary(sf)\n\nLinking to GEOS 3.11.0, GDAL 3.5.3, PROJ 9.1.0; sf_use_s2() is TRUE\n\n#library(ggspatial)\nlibrary(tidygeocoder)\n#library(mapproj)\nlibrary(maps)\n\n\nAttaching package: 'maps'\n\nThe following object is masked from 'package:purrr':\n\n    map\nLet’s find the latitude and longitude for a couple of places.\naddresses&lt;- tibble(address=c(\"Smith College\", \"2 Tyler Ct, Northampton, MA 01060\", \"Holyoke Community College\")) |&gt;\ngeocode(address, method=\"osm\") |&gt;\n  mutate(name = c(\"Smith College\",\"McConnell Hall\",\"Holyoke Community College\"))\n\nPassing 3 addresses to the Nominatim single address geocoder\n\n\nQuery completed in: 3 seconds\n\naddresses\n\n# A tibble: 3 × 4\n  address                             lat  long name                     \n  &lt;chr&gt;                             &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;                    \n1 Smith College                      42.3 -72.6 Smith College            \n2 2 Tyler Ct, Northampton, MA 01060  42.3 -72.6 McConnell Hall           \n3 Holyoke Community College          42.2 -72.7 Holyoke Community College\nLet’s plot those with ggplot.\nggplot(addresses) +\n  geom_point(aes(long,lat))\nNot very exciting. We’ll add it it in a moment.\nLet’s build a map of Massachusetts with the map_data() function\n# map_data comes from ggplot2\n\nma_counties &lt;- map_data(\"county\", \"massachusetts\") |&gt;\n  select( long, lat, group, id = subregion)\n\nhead(ma_counties)\n\n       long      lat group         id\n1 -70.67435 41.73997     1 barnstable\n2 -70.53683 41.79727     1 barnstable\n3 -70.53683 41.79727     1 barnstable\n4 -70.51392 41.78008     1 barnstable\n5 -70.47954 41.75716     1 barnstable\n6 -70.41078 41.73425     1 barnstable\nNotice there are a lot of points for barnstable. Those are the vertices of a polygon. Let’s draw the polygon with the points.\nma_counties |&gt; ggplot(aes(long,lat,group=group))+\n  geom_polygon(fill = \"white\", colour = \"grey50\")+\n  geom_point()  \n\n\n\n  #coord_sf()"
+  },
+  {
+    "objectID": "course-materials/lectures/26_maps-ggplot.html#mapping-projections",
+    "href": "course-materials/lectures/26_maps-ggplot.html#mapping-projections",
+    "title": "Static Maps w/ ggplot",
+    "section": "Mapping projections",
+    "text": "Mapping projections\nCoordinate Reference Systems (CRS) - Is the type of map projection employed To get a 3D Earth to a 2D surface.\nWhich one will coord_sf default to?\n\n# ?coord_sf\n\nThis is the crs commonly used in gps."
+  },
+  {
+    "objectID": "course-materials/lectures/26_maps-ggplot.html#adding-the-4326-crs",
+    "href": "course-materials/lectures/26_maps-ggplot.html#adding-the-4326-crs",
+    "title": "Static Maps w/ ggplot",
+    "section": "Adding the 4326 crs",
+    "text": "Adding the 4326 crs\n\nma_counties |&gt; ggplot(aes(long,lat,group=group))+\n  geom_polygon(fill = \"white\", colour = \"grey50\")+\n  geom_point()+\n  coord_sf()"
+  },
+  {
+    "objectID": "course-materials/lectures/26_maps-ggplot.html#west-wing-explanation",
+    "href": "course-materials/lectures/26_maps-ggplot.html#west-wing-explanation",
+    "title": "Static Maps w/ ggplot",
+    "section": "West wing explanation",
+    "text": "West wing explanation\nWest Wing"
+  },
+  {
+    "objectID": "course-materials/lectures/26_maps-ggplot.html#libraries",
+    "href": "course-materials/lectures/26_maps-ggplot.html#libraries",
+    "title": "Static Maps w/ ggplot",
+    "section": "Libraries",
+    "text": "Libraries\n\nlibrary(tidyverse)\nlibrary(sf)\nlibrary(tidygeocoder)\nlibrary(maps)"
+  },
+  {
+    "objectID": "course-materials/lectures/26_maps-ggplot.html#tidygeocoder",
+    "href": "course-materials/lectures/26_maps-ggplot.html#tidygeocoder",
+    "title": "Static Maps w/ ggplot",
+    "section": "tidygeocoder",
+    "text": "tidygeocoder\nLet’s find the latitude and longitude for a couple of places.\n\naddresses&lt;- tibble(address=c(\"Smith College\", \"2 Tyler Ct, Northampton, MA 01060\", \"Holyoke Community College\")) |&gt;\ngeocode(address, method=\"osm\") |&gt;\n  mutate(name = c(\"Smith College\",\"McConnell Hall\",\"Holyoke Community College\"))\n\naddresses\n\n# A tibble: 3 × 4\n  address                             lat  long name                     \n  &lt;chr&gt;                             &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;                    \n1 Smith College                      42.3 -72.6 Smith College            \n2 2 Tyler Ct, Northampton, MA 01060  42.3 -72.6 McConnell Hall           \n3 Holyoke Community College          42.2 -72.7 Holyoke Community College"
+  },
+  {
+    "objectID": "course-materials/lectures/26_maps-ggplot.html#my-first-map",
+    "href": "course-materials/lectures/26_maps-ggplot.html#my-first-map",
+    "title": "Static Maps w/ ggplot",
+    "section": "My first map",
+    "text": "My first map\nLet’s plot those with ggplot.\n\nggplot(addresses) +\n  geom_point(aes(long,lat)) \n\n\nNot very exciting. We’ll add it it in a moment."
+  },
+  {
+    "objectID": "course-materials/lectures/26_maps-ggplot.html#mass-map-data",
+    "href": "course-materials/lectures/26_maps-ggplot.html#mass-map-data",
+    "title": "Static Maps w/ ggplot",
+    "section": "Mass Map data",
+    "text": "Mass Map data\nLet’s build a map of Massachusetts with the map_data() function\n\n# map_data comes from ggplot2\n\nma_counties &lt;- map_data(\"county\", \"massachusetts\") |&gt;\n  select( long, lat, group, id = subregion)\n\nhead(ma_counties)\n\n       long      lat group         id\n1 -70.67435 41.73997     1 barnstable\n2 -70.53683 41.79727     1 barnstable\n3 -70.53683 41.79727     1 barnstable\n4 -70.51392 41.78008     1 barnstable\n5 -70.47954 41.75716     1 barnstable\n6 -70.41078 41.73425     1 barnstable"
+  },
+  {
+    "objectID": "course-materials/lectures/26_maps-ggplot.html#mass-map",
+    "href": "course-materials/lectures/26_maps-ggplot.html#mass-map",
+    "title": "Static Maps w/ ggplot",
+    "section": "Mass Map",
+    "text": "Mass Map\nNotice there are a lot of points for barnstable. Those are the vertices of a polygon. Let’s draw the polygon with the points.\n\nma_counties |&gt; ggplot(aes(long,lat,group=group))+\n  geom_polygon(fill = \"white\", colour = \"grey50\")+\n  geom_point()  \n\n  #coord_sf()"
+  },
+  {
+    "objectID": "course-materials/lectures/26_maps-ggplot.html#add-some-cities",
+    "href": "course-materials/lectures/26_maps-ggplot.html#add-some-cities",
+    "title": "Static Maps w/ ggplot",
+    "section": "Add some cities",
+    "text": "Add some cities\nLet’s grab just Massachusetts cities from the data frame us.cities.\n\n# us.cities comes from the maps package\n\nma_cities &lt;- us.cities |&gt;\n  filter(country.etc ==\"MA\") |&gt;\n  select(name, long, lat)\n\nhead(ma_cities)\n\n                name   long   lat\n1         Andover MA -71.14 42.65\n2       Arlington MA -71.16 42.42\n3       Attleboro MA -71.30 41.93\n4 Barnstable Town MA -70.30 41.70\n5         Beverly MA -70.84 42.56\n6       Billerica MA -71.26 42.56"
+  },
+  {
+    "objectID": "course-materials/lectures/26_maps-ggplot.html#exercise",
+    "href": "course-materials/lectures/26_maps-ggplot.html#exercise",
+    "title": "Static Maps w/ ggplot",
+    "section": "Exercise:",
+    "text": "Exercise:\nPlot MA cities onto our county map. Then clean up our map.\n\nma_counties |&gt; ggplot(aes(long,lat))+\n  geom_polygon(fill = \"white\", colour = \"grey50\",aes(group=group)) +\n  #geom_point(data=ma_cities,.......)\n  \n  #This is the default mapping. Think GPS\n coord_sf(default_crs= st_crs(4326) )\n\n          # This is Mercator\n          # st_crs(3857))"
+  },
+  {
+    "objectID": "course-materials/lectures/26_maps-ggplot.html#shape-files",
+    "href": "course-materials/lectures/26_maps-ggplot.html#shape-files",
+    "title": "Static Maps w/ ggplot",
+    "section": "Shape files",
+    "text": "Shape files\nOften times map data is saved as a shape file.\nThe US government has shape files here.\n\nmap_url &lt;- \"https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_us_region_500k.zip\"\nus_region &lt;- download.file(url = map_url,\n                           destfile = basename(map_url))\n\n#regions &lt;- read_sf(\"us_region_unzipped\") |&gt;\n#  sf::st_transform('+proj=longlat +datum=WGS84')"
   }
 ]

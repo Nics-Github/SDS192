@@ -1,21 +1,25 @@
 ---
-title: "maps-ggplot"
+title: "Static Maps w/ ggplot"
 author: "Schwab"
-format: html
+format: 
+  revealjs: 
+    theme: beige
 editor: visual
+execute: 
+  echo: true
 ---
+
+## Libraries
 
 ```{r setup}
 library(tidyverse)
-library(mdsr)
 library(sf)
-library(ggspatial)
-library(leaflet)
 library(tidygeocoder)
-library(mapproj)
 library(maps)
 
 ```
+
+## tidygeocoder
 
 Let's find the latitude and longitude for a couple of places.
 
@@ -27,6 +31,8 @@ geocode(address, method="osm") |>
 
 addresses
 ```
+
+## My first map
 
 Let's plot those with ggplot.
 
@@ -40,15 +46,21 @@ ggplot(addresses) +
 
 Not very exciting. We'll add it it in a moment.
 
+## Mass Map data
+
 Let's build a map of Massachusetts with the map_data() function
 
 ```{r}
-ma_counties <- map_data("county", "massachusetts") %>% 
+# map_data comes from ggplot2
+
+ma_counties <- map_data("county", "massachusetts") |>
   select( long, lat, group, id = subregion)
 
 head(ma_counties)
 
 ```
+
+## Mass Map
 
 Notice there are a lot of points for barnstable. Those are the vertices of a polygon. Let's draw the polygon with the points.
 
@@ -59,6 +71,24 @@ ma_counties |> ggplot(aes(long,lat,group=group))+
   #coord_sf()
 ```
 
+## Mapping projections
+
+Coordinate Reference Systems (CRS) - Is the type of map projection employed To get a 3D Earth to a 2D surface.
+
+Which one will coord_sf default to?
+
+```{r}
+# ?coord_sf
+```
+
+[This is the crs commonly used in gps.](https://epsg.io/4326)
+
+## West wing explanation
+
+[West Wing](https://www.youtube.com/watch?v=vVX-PrBRtTY)
+
+## Adding the 4326 crs
+
 ```{r}
 ma_counties |> ggplot(aes(long,lat,group=group))+
   geom_polygon(fill = "white", colour = "grey50")+
@@ -66,9 +96,13 @@ ma_counties |> ggplot(aes(long,lat,group=group))+
   coord_sf()
 ```
 
+## Add some cities
+
 Let's grab just Massachusetts cities from the data frame us.cities.
 
 ```{r}
+# us.cities comes from the maps package
+
 ma_cities <- us.cities |>
   filter(country.etc =="MA") |>
   select(name, long, lat)
@@ -76,7 +110,9 @@ ma_cities <- us.cities |>
 head(ma_cities)
 ```
 
-Exercise: Plot MA cities onto our county map.
+## Exercise: 
+
+Plot MA cities onto our county map. Then clean up our map. 
 
 ```{r}
 ma_counties |> ggplot(aes(long,lat))+
@@ -91,21 +127,18 @@ ma_counties |> ggplot(aes(long,lat))+
           # st_crs(3857))
 ```
 
-```{r}
+## Shape files
 
-```
+Often times map data is saved as a shape file. 
 
-Let's get some more accurate government data.
-
-[Go here](https://www.census.gov/geographies/mapping-files/time-series/geo/cartographic-boundary.html) and download some shape files.
-
-Saving them will be a bit of work. First we need to find those files.
+The US government has shape files [here](https://www.census.gov/geographies/mapping-files/time-series/geo/carto-boundary-file.html).
 
 ```{r}
-#| eval: FALSE
-states <- read_sf("") |>
-  sf::st_transform('+proj=longlat +datum=WGS84')
+map_url <- "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_us_region_500k.zip"
+us_region <- download.file(url = map_url,
+                           destfile = basename(map_url))
 
-counties <- read_sf("") |>
-  st_transform('+proj=longlat +datum=WGS84')
+#regions <- read_sf("us_region_unzipped") |>
+#  sf::st_transform('+proj=longlat +datum=WGS84')
+
 ```

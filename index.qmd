@@ -58,7 +58,7 @@ h1{font-weight: 400;}
 
 ```{=html}
 
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTG_b6upDZcPxXB92LHYIhV1uAXgeVGaMsZ3sDRPuSQN74JdhkKhZQVjw6T68I3zsP8KGYzDSVTZW64/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false&amp;gid=0&amp;range=A1:E28
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTG_b6upDZcPxXB92LHYIhV1uAXgeVGaMsZ3sDRPuSQN74JdhkKhZQVjw6T68I3zsP8KGYzDSVTZW64/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false&amp;gid=0&amp;range=A1:E30
 " width="100%" height="400">
 ```
 </iframe>
@@ -195,49 +195,20 @@ h1{font-weight: 400;}
 
 <!-- [More leaflet tiles](https://leaflet-extras.github.io/leaflet-providers/preview/) -->
 
-<!-- # Day 29 The other Mapping -->
+# Day 26 The Other Mapping
 
-<!-- One more group project and one final project. -->
+Announcements
 
-<!-- [Becky Sweger](https://www.linkedin.com/in/beckysweger/) to talk on Monday Nov 27. -->
+-   Advising sessions to declare your major
 
-<!-- [Questions for Becky](https://forms.gle/pXGRTJBx1UovvY8G6) -->
+-   April 8 there is no class. Eclipse. 
 
-<!-- ::: {.callout-note collapse="true"} -->
 
-<!-- # Libraries -->
 
-<!-- You will need to install the libraries below. -->
+[Example: static maps](./course-materials/lectures/26_maps-ggplot.qmd)
 
-<!-- -   (fivethirtyeight) -->
+[Activity: Maps](./course-materials/in-class-activies/Mapping.zip)
 
-<!-- -   (leaflet) -->
-
-<!-- -   (sf) -->
-
-<!-- -   (maps) -->
-
-<!-- -   (tidycensus) -->
-
-<!-- -   (tmaptools) -->
-
-<!-- -   (macleish) -->
-
-<!-- ::: -->
-
-<!-- [West Wing](https://www.youtube.com/watch?v=vVX-PrBRtTY) -->
-
-<!-- <!-- Fix the file below -->
-
---\>
-
-<!-- [Example: static maps](./course-materials/lectures/maps-ggplot.qmd) -->
-
-<!-- [Activity: Maps](./course-materials/in-class-activies/Mapping.zip) -->
-
-<!-- # Day 28 Lab 6- map() -->
-
-<!-- The Lab-6 link is on [moodle](moodle.smith.edu). It is due Friday at midnight. -->
 
 <!-- # Day 27 `map()` and `across()` practice -->
 
@@ -260,6 +231,7 @@ h1{font-weight: 400;}
 <!-- -   `filter( == )` vs `filter( %in% )` -->
 
 <!-- ::: -->
+
 
 # Day 25 Lab 6
 
