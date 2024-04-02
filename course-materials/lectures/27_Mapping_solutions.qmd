@@ -1,0 +1,367 @@
+---
+title: "In-class Exercises: Mapping"
+output:
+  html_document
+---
+
+```{r, message=FALSE, warning=FALSE, echo=FALSE}
+# Set R chunk default options:
+# -do not output all R messages in html report
+# -do not output all R warnings in html report
+# -set default figure widths and heights for all code blocks, unless you 
+#  override them
+knitr::opts_chunk$set(
+  message = FALSE, warning = FALSE, fig.width = 16/2, fig.height = 9/2
+)
+```
+
+```{r, echo=FALSE}
+# Load all packages here. It's good practice to load all packages at the
+# beginning of a qmd file so that collaborators can see in one shot all packages
+# they'll need installed:
+library(tidyverse)
+library(fivethirtyeight) # This is the the presidential data
+library(rvest) # This is for scraping VT ski areas
+library(janitor) # cleaning
+library(leaflet)
+library(macleish)
+
+# Libraries for Mapping
+library(sf) # shape files
+library(maps) # we get the maps of VT and MA from here. 
+library(tidygeocoder) # geocoding. 
+
+```
+
+# Tip {-}
+
+Do not run entire code blocks at once, as you'll skip over a lot of very important details. Rather, I recommend you highlight small segments of code and run them individually using:
+
+* macOS: Command + Enter
+* Windows: Control + Enter
+
+# 1. Converting data frames to sf objects
+
+```{r}
+# Convert pres_2016_trail data frame to sf object using st_as_sf() from sf
+# package. Note we set the coordinate reference system to WGS84
+# https://spatialreference.org/ref/epsg/wgs-84/
+pres_2016_trail_sf <- pres_2016_trail |>
+  st_as_sf(coords = c("lng", "lat"), crs = 4326)
+pres_2016_trail_sf
+
+# Load maps package map object of US states and plot using default R plot
+# function (not ggplot2). Plot is not pretty!
+USA_map <-  maps::map("state", plot = FALSE, fill = TRUE)
+plot(USA_map)
+
+# Convert maps package map object to sf object using st_as_sf() again:
+USA_sf <- USA_map |> 
+  st_as_sf(coords = c("x", "y"), crs = 4326)
+
+# Plot both layers:
+ggplot() +
+  geom_sf(data = USA_sf) +
+  geom_sf(data = pres_2016_trail_sf, aes(color = candidate), size = 2) +
+  facet_wrap(~candidate)
+```
+
+## Exercise
+
+Draw a map of the US with the 2 colleges I've worked at marked:
+
+```{r}
+# How did I get the longitude and latitude for Worcester Polytechnic Institute and Smith College? By tapping into
+# the OpenStreetMap (OSM) database using the geocode_OSM() function from the
+# tmaptools package. Be careful though, apparently you are limited to 2000
+# queries a day.
+ne_colleges <- tibble(
+  name = c("Holyoke Community College", "Smith College"), 
+  long = c(-72.6527, -72.640),
+  lat = c(42.1953, 42.316)
+)
+```
+
+Draw a map of only Massachusetts with Boston, Northampton, and Holyoke Marked. This will require you to manually create a data frame like `ne_colleges` above. You can use the geocode() function from yesterday, or just google each of the three places and make a data frame. 
+
+```{r}
+# Obtain a map of Massachusetts counties from the maps package
+ma_counties <- maps::map("county",regions = "massachusetts",  plot = FALSE, fill = TRUE) |>
+  # This sets the simple features 
+  st_as_sf(coords = c("x", "y"), crs = 4326) |>
+  # This adds a new column with the names of the counties. 
+  mutate(county_name = str_replace(ID,pattern = "massachusetts,", replace = ""))
+```
+
+```{r}
+# Write your code below
+Colleges <- ne_colleges |>
+  st_as_sf(coords = c("long", "lat"), crs = 4326)
+
+ggplot() +
+  geom_sf(data = ma_counties)+
+  geom_sf(data = Colleges)
+  
+```
+
+# 2. Loading shapefiles into R
+
+Let's load a shapefile of all bike trails in Massachusetts as provided by
+[MassGIS (Bureau of Geographic Information)](https://www.mass.gov/info-details/massgis-data-bicycle-trails)
+
+```{r}
+# Load the "shapefile" contained in the biketrails_arc/ folder and load
+# it into R using the sf package's read_sf() function.
+bike_trails <- read_sf("biketrails_arc/") |>
+  st_transform(crs = 4326)
+
+# Plot this data!
+ggplot() +
+  geom_sf(data = bike_trails, color = "blue")
+
+# The above map lacks context however. Where are these bikepaths?
+# Use ma_counties from problem 1 above obtain a map of Massachusetts counties.
+
+  
+# Plot this data!
+ggplot() +
+  geom_sf(data = ma_counties)
+
+# Plot both maps by adding both layers!
+ggplot() +
+  geom_sf(data = bike_trails, color = "blue") + 
+  geom_sf(data = ma_counties) 
+
+# Where did our bike paths go? The order you plot in matters! Switch the two
+# geom_sf()
+ggplot() +
+  geom_sf(data = ma_counties) +
+  geom_sf(data = bike_trails, color = "blue")
+
+# Better! But what are these counties? Let's mark each counties' centroid
+ma_counties <- ma_counties |>
+  # Add centroids to each region using purrr package (covered in SDS 270 I believe)
+  mutate(
+    lng = purrr::map_dbl(geom, ~st_centroid(.x)[[1]]),
+    lat = purrr::map_dbl(geom, ~st_centroid(.x)[[2]])
+    )
+ma_counties 
+
+# Plot! Notice how we define data = in the geom_point() instead of the ggplot().
+# This sets the data set only for the geom_point() and not the other geoms.
+# Any data = defined in the global ggplot() trickles down by default to the other
+# geoms.
+ggplot() +
+  geom_sf(data = ma_counties, size = 0.5) +
+  geom_sf(data = bike_trails, color = "blue") +
+  geom_point(data = ma_counties, aes(x = lng, y = lat)) 
+
+# Can we do better? Yes! Use geom_text() instead with the label aesthetic!
+ggplot() +
+  geom_sf(data = ma_counties, size = 0.5) +
+  geom_sf(data = bike_trails, color = "blue") +
+  geom_text(data = ma_counties, aes(x = lng, y = lat, label = county_name)) 
+```
+
+## Exercise
+
+Create a map of the state of Vermont showing the top 9 ski resorts by Acres. Some of the resorts have leases on public land. the shape files are located in the Alpine_Ski_Area_Leases folder and were downloaded from https://geodata.vermont.gov/search?collection=Dataset. Add these to your map and color them blue. 
+
+> Hint: You get to get the coordinates using geocode(), then set `crs` , before using st_as_sf()
+
+```{r}
+# Write your code below
+ski_resorts <- "https://bestmapsever.com/pages/vermont-ski-areas-resorts-list"
+
+# This scraps the names, Acres, Vertical, Trails, and List from the website above. Use the slice_max() function to grab the top 9 resorts by acres.   
+
+vt_ski_resorts <- ski_resorts |>
+  read_html() |> 
+  html_element("table") |>
+  html_table() |>
+  clean_names() |>
+  slice_max(order_by = acres, n = 9)
+
+# geocode the addresses and save them in the vt_ski_resorts_df. wait 1 second per address.
+vt_ski_resorts <- vt_ski_resorts |>
+  geocode(resort, method="osm")
+
+# transfrom your data to have the correct projection.  
+vt_ski_resorts <- vt_ski_resorts |>
+  st_as_sf(coords = c("long", "lat"), crs = 4326, remove = FALSE)
+
+# Use map from the maps package to get your vermont map information. We don't need the counties just the state 
+
+vt_counties <- maps::map("state",regions = "vermont",  plot = FALSE, fill = TRUE) |>
+  # This sets the simple features 
+  st_as_sf(coords = c("x", "y"), crs = 4326) |>
+  # This adds a new column with the names of the counties. 
+  mutate(county_name = str_replace(ID,pattern = "vermont,", replace = ""))
+
+# Load in the lease shape file. 
+leases <- read_sf("Alpine_Ski_Area_Leases/") |>
+  st_transform(crs = 4326)
+
+# plot the vermont ski areas. When plotting the ski resorts, set shape = 8  for a snowflake. Add the name with geom_text, set the size to 2 and nudge_x to move the names to the right.  
+
+ggplot()+
+  geom_sf(data = vt_counties, color = "green")+
+  geom_sf(data = leases, color="blue")+
+  geom_sf(data = vt_ski_resorts, shape = 8, )+
+  geom_text(data = vt_ski_resorts, aes(x=long, y=lat, label= resort), size = 2, nudge_x = .5)+
+  theme_minimal()+
+  theme(
+    axis.text = element_blank(),
+    axis.line = element_blank(),
+    axis.ticks = element_blank(),
+    panel.grid = element_blank(),
+  ) +
+  labs(
+    title = "Top 9 Aki Areas VT",
+    subtitle = "Resort Land leases in blue",
+    x="",
+    y=""
+  )
+
+
+```
+
+
+
+# 3. Interactive maps using leaflet
+
+Draw an interative map of a previous school or place you went. 
+
+```{r}
+# Interactive map example:
+leaflet() |>
+  addTiles() |> 
+  addMarkers(lng = -72.64039, 
+             lat = 42.31622,
+             popup = "Smith College")
+```
+
+```{r}
+# Plot sf objects in leaflet:
+leaflet() |>
+  addTiles() |>
+  addPolygons(data = ma_counties)
+
+st_crs(ma_counties)
+```
+
+## Exercise
+
+Draw an interactive map of a previous school or place you went.
+
+```{r}
+# Write your code below
+
+```
+
+## Color in leaflet
+
+```{r}
+wetlands <- macleish_layers |>
+  pluck("wetlands")
+
+leaflet() |>
+  addTiles()|>
+  addPolygons(data = wetlands, 
+              color = ~SHAPE_LEN, 
+              popup = ~IT_VALDESC)
+
+wetland_pal <- colorNumeric(
+  palette = "viridis", 
+  domain = wetlands |>
+    pull(SHAPE_LEN)
+)
+
+leaflet() |>
+  addTiles() |>
+  addPolygons(data = wetlands, 
+              color = ~wetland_pal(SHAPE_LEN), 
+              fillOpacity = 0.8, weight = 0.1, 
+              popup = ~IT_VALDESC) |>
+  addLegend(position = "bottomleft", 
+            pal = wetland_pal, 
+            values = wetlands$SHAPE_LEN,
+            title = "Wetland Area")
+```
+
+## Exercise
+
+Draw an interactive map adding circles.
+
+```{r}
+# Write your code below
+
+```
+
+# 4. Choropleth maps using census data
+
+```{r}
+# Get MA county sf object, that includes population estimate column in data
+mass_pop_orig <- 
+  tidycensus::get_acs(
+    geography = "county", 
+    variables = "B01003_001", 
+    state = "MA",
+    geometry = TRUE
+  ) |> 
+  # Add centroids to each region using purrr package
+  mutate(
+    lng = purrr::map_dbl(geometry, ~st_centroid(.x)[[1]]),
+    lat = purrr::map_dbl(geometry, ~st_centroid(.x)[[2]])
+  )  
+mass_pop_orig
+
+# Unfortunately the original NAME variable above is very long and redundant.
+# Create a new data frame with the just the county name using the separate()
+# function from the tidyr package. 
+mass_pop <- mass_pop_orig |> 
+  tidyr::separate(NAME, c("County", "State"), sep = ", ") |> 
+  tidyr::separate(County, c("County", "Fluff"), sep = " ") 
+
+# Plot gradient choropleth map based on numerical variable estimate
+ggplot() +
+  geom_sf(data = mass_pop, aes(fill = estimate)) +
+  geom_text(data = mass_pop, aes(x = lng, y = lat, label = County)) +
+  labs(fill = "Population\nEstimate")
+
+# What if instead we want a bin based choropleth map. Use the cut_number()
+# function to convert the numerical variable estimate 
+# to a categorical variable with 3 levels!
+mass_pop <- mass_pop |>
+  mutate(estimate_discrete = cut_number(estimate, 3))
+mass_pop
+
+# Plot!
+ggplot() +
+  geom_sf(data = mass_pop, aes(fill = estimate_discrete)) +
+  geom_text(data = mass_pop, aes(x = lng, y = lat, label = County)) +
+  labs(fill = "Population\nEstimate")
+```
+
+## Exercise
+
+Use the `tidycensus` package to conduct a spatial analysis of the Census data it contains for Massachusetts.
+
+[Instructions for using the tidycensus package](https://walker-data.com/tidycensus/articles/basic-usage.html)
+
+```{r}
+# Write your code below
+
+```
+
+## Challenge!!
+
+1. Use the above data to create an interactive map
+2. Convert the numerical variable estimate to a categorical variable with 3 levels such as Low, Medium, High
+3. Use the `factor()` function to order 3 levels as Low, Medium, High, otherwise the legend order will be in alphabetical order
+4. Create your own color palette to match the color order (e.g., from light green to dark green) with your legend order
+
+```{r}
+# Write your code below
+
+```

@@ -195,19 +195,26 @@ h1{font-weight: 400;}
 
 <!-- [More leaflet tiles](https://leaflet-extras.github.io/leaflet-providers/preview/) -->
 
-# Day 26 The Other Mapping
+# Day 27 Mapping with simple features (sf) and shape files
+
+Simple features and Shape files. 
+
+-   [Vermont's Geospacial Data](https://geodata.vermont.gov/)
+
+-   [MA Bike Trails](https://www.mass.gov/info-details/massgis-data-bicycle-trails)
+
+[In class activity](./course-materials/in-class-activies/27_mapping.zip)
+
+
+# Day 26 Static Mapping part 1
 
 Announcements
 
 -   Advising sessions to declare your major
 
--   April 8 there is no class. Eclipse. 
-
-
 
 [Example: static maps](./course-materials/lectures/26_maps-ggplot.qmd)
 
-[Activity: Maps](./course-materials/in-class-activies/Mapping.zip)
 
 
 <!-- # Day 27 `map()` and `across()` practice -->
