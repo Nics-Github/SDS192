@@ -203,7 +203,10 @@ Simple features and Shape files.
 
 -   [MA Bike Trails](https://www.mass.gov/info-details/massgis-data-bicycle-trails)
 
+-   [tidygeocoder services](https://jessecambon.github.io/tidygeocoder/articles/geocoder_services.html)
+
 [In class activity](./course-materials/in-class-activies/27_mapping.zip)
+
 
 
 # Day 26 Static Mapping part 1

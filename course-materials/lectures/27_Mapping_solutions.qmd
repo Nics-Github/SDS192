@@ -226,7 +226,120 @@ ggplot()+
 
 ```
 
+Write a function that will produce a map with the top five ski areas in a new england state displayed. 
 
+```{r}
+
+ne_ski_area <-function(state, top_number = 5){
+  # Write your code below
+  ski_resorts <- "https://en.wikipedia.org/wiki/List_of_New_England_ski_areas_by_vertical_drop"
+
+# This scraps the names, Acres, Vertical, Trails, and List from the website above. Use the slice_max() function to grab the top 9 resorts by acres.   
+
+state_ski_resorts <- ski_resorts |>
+  read_html() |> 
+  html_element("table") |>
+  html_table() |>
+  clean_names() |>
+  filter(state == {{state}})|>
+  slice_max(order_by = acres, n = {{top_number}})
+
+# geocode the addresses and save them in the vt_ski_resorts_df. wait 1 second per address.
+state_ski_resorts <- state_ski_resorts |>
+  geocode(resort, method="US Census")
+
+# transfrom your data to have the correct projection.  
+vt_ski_resorts <- vt_ski_resorts |>
+  st_as_sf(coords = c("long", "lat"), crs = 4326, remove = FALSE)
+
+# Use map from the maps package to get your vermont map information. We don't need the counties just the state 
+
+vt_counties <- maps::map("state",regions = "vermont",  plot = FALSE, fill = TRUE) |>
+  # This sets the simple features 
+  st_as_sf(coords = c("x", "y"), crs = 4326) |>
+  # This adds a new column with the names of the counties. 
+  mutate(county_name = str_replace(ID,pattern = "vermont,", replace = ""))
+
+# Load in the lease shape file. 
+leases <- read_sf("Alpine_Ski_Area_Leases/") |>
+  st_transform(crs = 4326)
+
+# plot the vermont ski areas. When plotting the ski resorts, set shape = 8  for a snowflake. Add the name with geom_text, set the size to 2 and nudge_x to move the names to the right.  
+
+ggplot()+
+  geom_sf(data = vt_counties, color = "green")+
+  geom_sf(data = leases, color="blue")+
+  geom_sf(data = vt_ski_resorts, shape = 8, )+
+  geom_text(data = vt_ski_resorts, aes(x=long, y=lat, label= resort), size = 2, nudge_x = .5)+
+  theme_minimal()+
+  theme(
+    axis.text = element_blank(),
+    axis.line = element_blank(),
+    axis.ticks = element_blank(),
+    panel.grid = element_blank(),
+  ) +
+  labs(
+    title = "Top 9 Aki Areas VT",
+    subtitle = "Resort Land leases in blue",
+    x="",
+    y=""
+  )
+
+}
+
+
+```
+
+```{r}
+ne_ski_area <-function(state, top_number = 5){
+  # Write your code below
+  ski_resorts <- "https://en.wikipedia.org/wiki/List_of_New_England_ski_areas_by_vertical_drop"
+
+# This scraps the names, Acres, Vertical, Trails, and List from the website above. Use the slice_max() function to grab the top 9 resorts by acres.   
+
+state_ski_resorts <- ski_resorts |>
+  read_html() |> 
+  html_element("table") |>
+  html_table() |>
+  clean_names() |>
+  filter(state == {{state}})|>
+  slice_max(order_by = skiable_acres, n = {{top_number}})
+
+# geocode the addresses and save them in the vt_ski_resorts_df. wait 1 second per address.
+print("please wait")
+state_ski_resorts <- state_ski_resorts |>
+  geocode(resort_name, method="arcgis")
+
+state_maps <- maps::map("state",regions = state,  plot = FALSE, fill = TRUE) |>
+  # This sets the simple features 
+  st_as_sf(coords = c("long", "lat"), crs = 4326) |>
+  # This adds a new column with the names of the counties. 
+  mutate(county_name = str_replace(ID,pattern = paste({{state}},","), replace = ""))
+
+# plot the vermont ski areas. When plotting the ski resorts, set shape = 8  for a snowflake. Add the name with geom_text, set the size to 2 and nudge_x to move the names to the right.  
+
+ggplot()+
+  geom_sf(data = state_maps, color = "green")+
+  geom_point(data = state_ski_resorts,aes(x=long,y=lat), shape = 8 )+
+  geom_text(data = state_ski_resorts, aes(x=long, y=lat, label= resort_name), size = 2, nudge_x = .5)+
+  theme_minimal()+
+  theme(
+    axis.text = element_blank(),
+    axis.line = element_blank(),
+    axis.ticks = element_blank(),
+    panel.grid = element_blank(),
+  ) +
+  labs(
+    title = "Top 9 Aki Areas VT",
+    subtitle = "Resort Land leases in blue",
+    x="",
+    y=""
+  )
+
+
+}
+ne_ski_area(state="Vermont")
+```
 
 # 3. Interactive maps using leaflet
 
