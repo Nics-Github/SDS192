@@ -200,6 +200,8 @@ h1{font-weight: 400;}
 
 [Jon Caris and Kala'i Ellis](https://docs.google.com/presentation/d/1yxMAglQLNAWok3_xqPgMCqxa2g1IlsPHXeu04iT9BZs/edit?usp=sharing)
 
+Project 2 due today by midnight. 
+
 # Day 27 Mapping with simple features (sf) and shape files
 
 Simple features and Shape files. 
