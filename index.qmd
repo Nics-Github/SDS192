@@ -195,6 +195,11 @@ h1{font-weight: 400;}
 
 <!-- [More leaflet tiles](https://leaflet-extras.github.io/leaflet-providers/preview/) -->
 
+
+# Day 28 SAL guests
+
+[Jon Caris and Kala'i Ellis](https://docs.google.com/presentation/d/1yxMAglQLNAWok3_xqPgMCqxa2g1IlsPHXeu04iT9BZs/edit?usp=sharing)
+
 # Day 27 Mapping with simple features (sf) and shape files
 
 Simple features and Shape files. 
