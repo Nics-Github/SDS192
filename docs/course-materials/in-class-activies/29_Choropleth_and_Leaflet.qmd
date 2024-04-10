@@ -1,0 +1,232 @@
+
+---
+title: "In-class Exercises: Mapping"
+output:
+  html_document
+---
+
+```{r, message=FALSE, warning=FALSE, echo=FALSE}
+# Set R chunk default options:
+# -do not output all R messages in html report
+# -do not output all R warnings in html report
+# -set default figure widths and heights for all code blocks, unless you 
+#  override them
+knitr::opts_chunk$set(
+  message = FALSE, warning = FALSE, fig.width = 16/2, fig.height = 9/2
+)
+```
+
+```{r, echo=FALSE}
+# Load all packages here. It's good practice to load all packages at the
+# beginning of a qmd file so that collaborators can see in one shot all packages
+# they'll need installed:
+library(tidyverse)
+library(fivethirtyeight) # This is the the presidential data
+library(rvest) # This is for scraping VT ski areas
+library(janitor) # cleaning
+library(leaflet)
+library(macleish)
+
+# Libraries for Mapping
+library(sf) # shape files
+library(maps) # we get the maps of VT and MA from here. 
+library(tidygeocoder) # geocoding. 
+
+```
+
+
+# 3. Choropleth maps using census data
+
+```{r}
+# Get MA county sf object, that includes population estimate column in data
+mass_pop_orig <- 
+  tidycensus::get_acs(
+    geography = "county", 
+    variables = "B01003_001", 
+    state = "MA",
+    geometry = TRUE
+  ) |> 
+  # Add centroids to each region using purrr package
+  mutate(
+    lng = purrr::map_dbl(geometry, ~st_centroid(.x)[[1]]),
+    lat = purrr::map_dbl(geometry, ~st_centroid(.x)[[2]])
+  )  
+mass_pop_orig
+
+# Unfortunately the original NAME variable above is very long and redundant.
+# Create a new data frame with the just the county name using the separate()
+# function from the tidyr package. 
+mass_pop <- mass_pop_orig |> 
+  tidyr::separate(NAME, c("County", "State"), sep = ", ") |> 
+  tidyr::separate(County, c("County", "Fluff"), sep = " ") 
+
+# Plot gradient choropleth map based on numerical variable estimate
+ggplot() +
+  geom_sf(data = mass_pop, aes(fill = estimate)) +
+  geom_text(data = mass_pop, aes(x = lng, y = lat, label = County)) +
+  labs(fill = "Population\nEstimate")
+
+# What if instead we want a bin based choropleth map. Use the cut_number()
+# function to convert the numerical variable estimate 
+# to a categorical variable with 3 levels!
+mass_pop <- mass_pop |>
+  mutate(estimate_discrete = cut_number(estimate, 3))
+mass_pop
+
+# Plot!
+ggplot() +
+  geom_sf(data = mass_pop, aes(fill = estimate_discrete)) +
+  geom_text(data = mass_pop, aes(x = lng, y = lat, label = County)) +
+  labs(fill = "Population\nEstimate")
+```
+
+Check out this site for more on [tidycensus](https://walker-data.com/tidycensus/articles/basic-usage.html)
+
+Specifically the `load_variables` function.
+```{r}
+v20 <- load_variables(2020, "acs5", cache = TRUE)
+
+View(v20)
+```
+
+
+# What counties have the highes proportion of under 5s?
+
+We need to weight our data in some way. 
+```{r}
+# Where do all the under 5 year olds live?
+
+mass_pop_under_5 <- 
+  tidycensus::get_acs(
+    geography = "county", 
+    variables = c(population = "B01003_001", under_5m="B01001_003", under_5f= "B01001_027"),
+    state = "MA",
+    # We'll need to pivot wider, but that doesn't work with simple features. 
+    geometry = FALSE
+  )|>
+  # Add centroids to each region using purrr package
+ tidyr::separate(NAME, c("County", "State"), sep = ", ") |> 
+ tidyr::separate(County, c("County", "Fluff"), sep = " ") 
+
+# Just count them we get a similar map to before. 
+
+props <- mass_pop_under_5 |> 
+  select(County,variable,estimate)|>
+  pivot_wider(names_from = variable, values_from = estimate)|>
+  reframe(County, prop_under_5 = (under_5m+under_5f)/population)
+
+# Do a left join, a right join will lose the multipolygon-ness
+mass_prop <- mass_pop |>
+  left_join(props, by = "County")
+
+ggplot() +
+  geom_sf(data = mass_prop, aes(fill = prop_under_5)) +
+  scale_fill_distiller(direction = 1)
+```
+
+## Exercise
+
+Use the `tidycensus` package to conduct a spatial analysis of the American Community Survey data it contains for Massachusetts. Answer the question: Which counties in Massachusetts have the highest proportion of retirees? 
+
+[Instructions for using the tidycensus package](https://walker-data.com/tidycensus/articles/basic-usage.html)
+
+```{r}
+# Write your code below
+
+```
+
+
+# 4. Interactive maps using leaflet
+
+Draw an interactive map of a previous school or place you went. 
+
+```{r}
+# Interactive map example:
+leaflet() |>
+  addTiles() |> 
+  addMarkers(lng = -72.64039, 
+             lat = 42.31622,
+             popup = "Smith College")
+```
+
+```{r}
+# Plot sf objects in leaflet:
+
+# This is the same dataframe we made last week.
+ma_counties <- maps::map("county",regions = "massachusetts",  plot = FALSE, fill = TRUE) |>
+  # This sets the simple features 
+  st_as_sf(coords = c("x", "y"), crs = 4326) |>
+  # This adds a new column with the names of the counties. 
+  mutate(county_name = str_replace(ID,pattern = "massachusetts,", replace = ""))
+
+
+leaflet() |>
+  addTiles() |>
+  addPolygons(data = ma_counties)
+
+st_crs(ma_counties)
+```
+
+## Exercise
+
+Draw an interactive map of a previous school or place you went.
+
+```{r}
+# Write your code below
+
+```
+
+## Color in leaflet
+
+```{r}
+wetlands <- macleish_layers |>
+  pluck("wetlands")
+
+leaflet() |>
+  addTiles()|>
+  addPolygons(data = wetlands, 
+              color = ~SHAPE_LEN, 
+              popup = ~IT_VALDESC)
+
+wetland_pal <- colorNumeric(
+  palette = "viridis", 
+  domain = wetlands |>
+    pull(SHAPE_LEN)
+)
+
+leaflet() |>
+  addTiles() |>
+  addPolygons(data = wetlands, 
+              color = ~wetland_pal(SHAPE_LEN), 
+              fillOpacity = 0.8, weight = 0.1, 
+              popup = ~IT_VALDESC) |>
+  addLegend(position = "bottomleft", 
+            pal = wetland_pal, 
+            values = wetlands$SHAPE_LEN,
+            title = "Wetland Area")
+```
+
+## Exercise
+
+Draw an interactive map adding circles.
+
+```{r}
+# Write your code below
+
+```
+
+
+
+
+
+## Challenge!!
+
+1. Use the above data to create an interactive map
+2. Convert the numerical variable estimate to a categorical variable with 3 levels such as Low, Medium, High
+3. Use the `factor()` function to order 3 levels as Low, Medium, High, otherwise the legend order will be in alphabetical order
+4. Create your own color palette to match the color order (e.g., from light green to dark green) with your legend order
+
+```{r}
+# Write your code below
+
+```

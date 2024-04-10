@@ -196,9 +196,9 @@ h1{font-weight: 400;}
 <!-- [More leaflet tiles](https://leaflet-extras.github.io/leaflet-providers/preview/) -->
 
 
-# Day 29 Normalizing Data and leaflet
+# Day 29 Choropleth Mapping and Leaflet
 
-
+[Choropleth Mapping](./course-materials/in-class-activies/29_Choropleth_and_Leaflet.qmd)
 
 # Day 28 SAL guests
 
