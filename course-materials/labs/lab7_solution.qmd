@@ -34,10 +34,6 @@ US_CAN_Recovery_2022 <- read_sheet("https://docs.google.com/spreadsheets/d/14ONb
 # Mexico Recovery Data
 Pre_2023_Mexico_Recovery <- read_sheet("https://docs.google.com/spreadsheets/d/1UdJfooBJrm0Y1zlpwIhGz7ToZfP9h8OeucJbXrWwZEY/edit#gid=1853245517")
 
-# If you cannot get acces to the above data run these two lines in the console. Otherwise ignore this message
-# googlesheets4::gs4_deauth()
-# googlesheets4::gs4_auth()
-
 # The code below takes both of these dataframes and makes them into a list. 
 
 data_frame_list <- list(US_CAN_Recovery_2022, Pre_2023_Mexico_Recovery)
@@ -52,8 +48,8 @@ List can be handy for storing and retrieving data. We will make a list called `b
 
 # Iterate over your function to clean the names and store the three dataframes as a list. 
 butterfly_dataframes <- map(
-  .x = #add the name of the list here,
-  .f = #add the name of the function here. 
+  .x = data_frame_list,
+  .f = clean_names
 )
 
 # At the moment butterfly_dataframes is unnamed which is inconvient so below I'm naming all the dataframes in the list.  
@@ -61,7 +57,7 @@ butterfly_dataframes <- map(
 names(butterfly_dataframes) <-   c( "US_CAN_Recovery_2022", "Pre_2023_Mexico_Recovery")
 ```
 
-Now work with the list `butterfly_dataframes`. To access the element in the list you want use the \$.
+Now work with the list \`butterfly_dataframes\`. To access the element in the list you want use the \$.
 
 ```{r}
 # glimpse just one of the dataframes with $
@@ -75,9 +71,9 @@ Wrangle US_CAN_Recovery to get the top 7 most spotted butterflies 2022. The use 
 
 ```{r}
 top_7_most_spotted_2022 <- butterfly_dataframes$US_CAN_Recovery_2022  |>
-  count(#what do you want to count) |>
-  arrange(#) |>
-  slice_head(#what arguement goes here?) |>
+  count(tag_code) |>
+  arrange(desc(n)) |>
+  slice_head(n=7) |>
   pull(tag_code)
   
 
@@ -87,11 +83,13 @@ To map the butterfly sightings we need the location data for the top 7 butterfli
 
 ```{r}
 top_7_butterfly <- butterfly_dataframes$US_CAN_Recovery_2022 |>
-# wrangle here. 
+  filter(tag_code %in% top_7_most_spotted_2022) |>
+  select(tag_code,city_location,state_province) |>
+  geocode(city = city_location, state= state_province)
 ```
 
 ```{r}
-# I made the US state map for you.
+# Make a US state map and a Canada/Mexico Map
 
 USA_map <-  maps::map("state", plot = FALSE, fill = TRUE) |> st_as_sf(coords = c("x", "y"), crs = 4326)
 
@@ -100,20 +98,27 @@ USA_map <-  maps::map("state", plot = FALSE, fill = TRUE) |> st_as_sf(coords = c
 Plot the map to make sure the lower 48 states are shown. Examine USA_map and become familiar with it.
 
 ```{r}
-# Map out USA_map here. 
+ggplot()+
+  geom_sf(data = USA_map) +
+  theme_minimal() 
 ```
 
-In the code chunk below add your top 7 butterflies, be sure to jitter them and make them orange.
+This is much better. In the code chunk below add your top 7 butterflies, be sure to jitter them and make them orange.
 
 ```{r}
-# Make your top 7 butterfly map here. 
+USA_map|>
+  ggplot()+
+  geom_sf() +
+  geom_jitter(data = top_7_butterfly,
+           aes(x= long ,y= lat) , size = 2, color="orange")+
+  theme_bw() 
 ```
 
 This is not an exciting map, I only see 7ish dots, not seven butterflies travelling south. This shows the limits of citizen science. Not many people participate so the data is spotty.
 
 ## Make a Chrolopleth map of the US and Canada.
 
-Let's see what we can learn when we plot all of the butterflies from 2022 at the same time. Let's code it by the state level, as opposed to the city level to save time. Getting location at the state level will take `geocode()` 43 seconds instead of 8 minutes at the city level. Once you geocode your data you can use save() to save the data, and load() to load it back in when you render. You should comment out the geocoding and save function afterward, uncomment the load().
+Let's see what we can learn when we plot all of the butterflies from 2022 at the same time. Let's code it by the state level, as opposed to the city level to save time. Getting location at the state level will take `geocode()` 43 seconds instead of 8 minutes at the city level. Once you geocode your data you can use save() to save the data, and load() to load it back in when you render. You should comment out the geocoding afterward.
 
 ```{r}
  butterfly_location_data <- butterfly_dataframes$US_CAN_Recovery_2022 |>
@@ -145,32 +150,35 @@ Then we need to join our data frame with `USA_map` to get the location data. I m
 butterfly_location_summary <- butterfly_location_data |>
    group_by(state_province) |>
    summarise(
+          count_of_sightings = n(),
           total = nrow(x=butterfly_location_data),
-          #total sighting per state here
-          # total proportions)
+          prop = count_of_sightings/total)
 
 
 # Here is a df with state abreviation and names
 states<- as.data.frame(cbind(abrev = state.abb, lower_state = tolower(state.name), upper_state = state.name))
 
-#First join
+butterfly_location_data_summary <- inner_join(states, butterfly_location_summary, by = c("abrev" = "state_province"))
 
-#Second join  Inner join to get the location data. Call the resulting dataframe USA_map_joined.
-USA_map_joined <-
+# Inner join to get the location data.
+
+
+USA_map_joined <- USA_map |>
+  inner_join(butterfly_location_data_summary, by = c("ID"="lower_state")) 
 
 ```
 
-Great! Let's make our map. Also pick the "YlOrRd" color palette, the default one doesn't conjure up images of Monarchs. Make sure darker means more.  I added some themes to make things nicer
+Great! Let's make our map. Also pick the "YlOrRd" color palette, the default one doesn't conjure up images of Monarchs.
 
 ```{r}
 
-# Make map here.
-
+USA_map_joined|>
+  ggplot()+
+  geom_sf(aes(fill=prop)) +
+  
   # The code below set a color palette and changes the background color. Orange colors for butterflys and light blue for the background the make the points pop. I also turned off the grid lines. 
   
-  
-  
-  # I added the following themes you can change them or leave them the same.
+  scale_fill_distiller(palette = "YlOrRd", direction = 1) +
   theme_minimal() +
   theme(
     panel.background = element_rect(fill = "azure2",
@@ -204,30 +212,27 @@ USA_map_joined|>
 
 I'd like a map that shows the proportion of sightings based on the population of each state. Use `get_acs()` from tidycensus to get the state population for the states (choose geography ="state"). Then join with the USA_map_joined to make a normalized proportion by state population.
 
-Give the map below a descriptive title and a caption stating where the data came from remove the latitude and longitude by setting axis.text = element_blank() in theme (see notes from previous classes).
+This is an interesting map, give it a descriptive title and a caption stating where the data came from remove the latitude and longitude by setting axis.text = element_blank() in theme (see notes from previous classes).
 
 ```{r}
-# I'm bringing in the population bby state data for you. 
-
 US_pop <- 
   tidycensus::get_acs(
-    # arguements here, you want all states, not just Mass like we did in class. 
+    geography = "state", 
+    variables = c(population = "B01003_001"), 
+    geometry = FALSE
   ) |>
   mutate(NAME = tolower(NAME))
 
-# Join the population data with USA_map_joined Call the resulting dataframe US_tot_pop
+US_tot_pop <- inner_join(USA_map_joined, US_pop, by = c("ID"="NAME"))|>
+  mutate(new_prop = count_of_sightings/estimate)
 
-US_tot_pop <- inner_join()|>
-  
-  #make a coloumn that has a proportion for the sighting by population. 
- 
-
-# Make your new map here. 
-
+US_tot_pop|>
+  ggplot()+
+  geom_sf(aes(fill=new_prop)) +
   
   # The code below set a color palette and changes the background color. Orange colors for butterflys and light blue for the background the make the points pop. I also turned off the grid lines. 
   
-  
+  scale_fill_distiller(palette = "YlOrRd", direction = 1) +
   theme_minimal() +
   theme(
     panel.background = element_rect(fill = "azure2",
@@ -235,8 +240,11 @@ US_tot_pop <- inner_join()|>
                                 size = 0.5),
     panel.grid.major = element_blank(), 
     panel.grid.minor = element_blank(),
-    # remove the lat and long with the appropriate arguement.
-    )
+    axis.text = element_blank())+
+  labs(
+    title = "Monarch sightings by population",
+    caption = "data: American Community Survey 2017-2022 \\ Monarch Watch "
+  )
   
 ```
 
@@ -253,24 +261,24 @@ These butterflys end up in Mexico for the winter. Using Pre_2023_Mexico_Recovery
 
 -   add a column that is called Mexico and is the word "Mexico" repeated.
 
--   add a column that is the count of the number of sightings in each location.
+-   count the number of sightings in each location.
 
 -   Then geocode by state and country.
 
 ```{r}
 Mexico_locations <- butterfly_dataframes$Pre_2023_Mexico_Recovery |>
-  filter(#)|>
-  group_by()|>
-  mutate() |>
-    # We need to ungroup our data before we geocode it. 
+  filter(report_season == 2022)|>
+  group_by(location)|>
+  mutate(Mexico = "Mexico",
+         count = n()) |>
   ungroup()|>
-  geocode(state = , country = )
+  geocode(state = location, country = Mexico)
 
 
 
 ```
 
-I ran the location by city, and it took 8 minutes. You should be able to load in the data. I've left my code for geocoding, just so you can see it. You don't need it. 
+I ran the location by city, and it took 8 minutes you should be able to load in the data. I've left my code for geocoding, just so you can see it. You don't need it. 
 
 ```{r}
 #If you choose to do this I recommend you save the data then load it as necessary. After saving the data comment the code below. If you want to use the geocoding my state, that's fine too. 
@@ -280,8 +288,7 @@ I ran the location by city, and it took 8 minutes. You should be able to load in
 #    geocode(city = city_location, state = state_province, country = country)
 
 #save(butterfly_location_data_8min, file = "butterfly_location_data_8min.Rdata")
-
-# Make sure butterfly_location_data_8min shows in the environment after loading.  
+# 
 load("butterfly_location_data_8min.Rdata")
 ```
 
@@ -292,7 +299,7 @@ Mexico_map <-  maps::map(region = "Mexico", plot = FALSE, fill = TRUE) |> st_as_
 
 ```
 
-This bit of code will bring in the image of a butterfly, so we can make our map pretty. You can see this file in your files. 
+This bit of code will bring in the image of a butterfly, so we can make our map pretty. 
 
 ```{r}
 butterfly_icon <- makeIcon(
@@ -306,15 +313,13 @@ Add two sets for markers one for the individual sightings in `butterfly_location
 ```{r leaflet}
 leaflet() |>
   addTiles() |>
-  addMarkers(data= , 
-             lat = ~#what variable goes here, leave the ~,
-             lng = ~#what variable goes here, leave the ~,
-             icon = 
+  addMarkers(data= butterfly_location_data_8min, 
+             lat = ~lat,
+             lng = ~long,
+             icon = butterfly_icon
              )|>
-  
-  # Add a popup with the number of butterflies counted for mexico. 
   addCircleMarkers(data = Mexico_locations,
-                   popup = ~as.character(#what goes here?))
+                   popup = ~as.character(count))
     
   
 ```
