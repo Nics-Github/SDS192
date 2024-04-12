@@ -262,7 +262,10 @@ Finally these butterflys end up in Mexico for the winter. Using Pre_2023_Mexico_
 ```{r}
 Mexico_locations <- butterfly_dataframes$Pre_2023_Mexico_Recovery |>
   filter(report_season == 2022)|>
-  mutate(Mexico = "Mexico") |>
+  group_by(location)|>
+  mutate(Mexico = "Mexico",
+         count = n()) |>
+  ungroup()|>
   geocode(state = location, country = Mexico)
 
 
@@ -278,9 +281,9 @@ Finally make a point plot to show the location of all the sightings of these but
 #    select(tag_code,city_location,state_province,country, date)|>
 #    geocode(city = city_location, state = state_province, country = country)
 
-#save(butterfly_location_data_8min, file = "eight_minute_data")
+#save(butterfly_location_data_8min, file = "butterfly_location_data_8min.Rdata")
 # 
-load("eight_minute_data")
+load("butterfly_location_data_8min.Rdata")
 ```
 
 ```{r}
@@ -300,18 +303,20 @@ Add two sets for markers one for the individual sightings in `butterfly_location
 ```{r leaflet}
 leaflet() |>
   addTiles() |>
-  addMarkers(data = Mexico_map) |>
-  addMarkers(data = butterfly_location_data_8min,
-             lng = ~long,
+  addMarkers(data= butterfly_location_data_8min, 
              lat = ~lat,
-             icon = ~butterfly_icon)
+             lng = ~long,
+             icon = butterfly_icon
+             #clusterOptions = markerClusterOptions()
+             )|>
+  addCircleMarkers(data = Mexico_locations,
+                   #radius= ~count/10,
+                   popup = ~as.character(count))
+    
+  
 ```
 
-This map gives an interesting picture of where this type of citizen science is actually happening. I like the smaller icons, more than the larger butterflies, it feels misleading. Perhaps another icon representing how butterflies gather in trees would be more appropriate.
+This map gives an interesting picture of where this type of citizen science is actually happening. We'll play with leaflet more on Monday. 
 
-Change the big butterfly icon to a tree, I've included one, but if you can find one with a butterfly in it that would be nicer. Redraw your map.
 
-```{r}
-
-```
 
