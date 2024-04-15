@@ -195,6 +195,34 @@ h1{font-weight: 400;}
 
 <!-- [More leaflet tiles](https://leaflet-extras.github.io/leaflet-providers/preview/) -->
 
+# Day 36 
+
+Project work day. 
+
+# Day 35
+
+Project 3 work day. 
+
+Professor Garcia
+
+# Day 34 SQL lab
+
+Lab 8 SQL
+
+Prof Cao
+
+# Day 33 SQL with Tim
+
+# Day 32 SQL with Tim
+
+# Day 31 Project 3
+
+Leaflet Example
+
+[Project 3](https://classroom.github.com/a/9QKu_fCl)
+
+Quiz 3 is available and due by Sunday.
+
 # Day 30 Lab 7 Mapping Monarchs. 
 
 [Here is the lab for today.](https://classroom.github.com/a/ozqRg4gy) 
