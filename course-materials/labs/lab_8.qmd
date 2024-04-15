@@ -1,12 +1,14 @@
 ---
 title: "Querying a MySQL database"
-format: pdf
+format:  pdf
+  
+execute: 
+  echo: true
 ---
 
 This lab was originally created by Profs Ben Baumer and Jordan Crouser. I've edited it slightly. 
 
 ```{r global_options, include=FALSE}
-knitr::opts_chunk$set(eval = FALSE)
 posted <- Sys.time() > "2020-11-25 11:00:00 EDT"
 ```
 
@@ -32,10 +34,10 @@ db <- dbConnect(
   MySQL(),
   host = "scidb.smith.edu",
   user = "sds192",
-  password = "DSismfc@S"
-  #  dbname = "imdb"
-)
-knitr::opts_chunk$set(connection = db, max.print = 20)
+  password = "DSismfc@S",
+  dbname = "imdb"
+  )
+knitr::opts_chunk$set(connection= 'db', max.print = 5)
 ```
 
 This chunk of code will allow you to connect to `scidb`. Note that this creates a database connection object named `db`, which has the class `MySQLConnection`. 
@@ -52,33 +54,42 @@ To retrieve the results from a query in R, use the `dbGetQuery()` function from 
 
 ## Retrieving data
 
-We want to be able to see which type of databases exist on the server. We can do this with SHOW table
+We want to be able to see which type of databases exist on the server. We can do this with SHOW DATABASES
 
-```{sql}
+```{sql, connection='db', max.print = 5}
+
 SHOW DATABASES;
 ```
 
+You don't actually need the ; at the end of the quiery above for MySQL, but for other SQL dialects you do so it doesn't hurt. 
+
 We want to use the imdb databse and we have to tell our db connection that. 
 
-```{sql}
-USE imdb
+```{sql, connection='db'}
+USE imdb;
 ```
 
-Let's look at the tables avaialble in imdb. 
+Its fine that there are 0 rows, this is just how we tell R which db we want to use. 
 
-```{sql}
-SHOW TABLES
+Let's look at the tables available in imdb. 
+
+```{sql, connection='db'}
+SHOW TABLES;
 ```
 
-This query returns the list of kinds of "movies" stored in the IMDB.
+See the kind_type table? That one shows what type of movie it is. 
 
-```{sql}
+This query returns the list of kinds of "movies" stored in the IMDB. We are selecting everything with * from the kind_type table.
+
+```{sql, connection='db', max.print = 20}
+#| output = TRUE
+
 SELECT * FROM kind_type;
 ```
 
 Of course, you will often want to store the result of your query as a data frame. This can be achieved by setting the `output.var` argument in the chunk. Here we retrieve the list of different types of information stored in the database, save it as a data frame in R, and show the first few rows. 
 
-```{sql, output.var="info_types"}
+```{sql, connection='db', output.var="info_types"}
 ## output.var="info_types" in this chunk
 
 SELECT * FROM info_type;
@@ -87,6 +98,8 @@ SELECT * FROM info_type;
 We now have a `data.frame` called `info_types` in our environment.
 
 ```{r}
+# Note: this is an r chunk s we use R instead of SQL.
+
 head(info_types)
 ```
 
@@ -94,7 +107,6 @@ That's all you need to know about how to get data from MySQL into R. The rest of
 
 For example, let's say I wanted to find information on the wacky Bill Murray Movie [Groundhog Day](https://www.imdb.com/title/tt0107048/). 
 
-![](https://m.media-amazon.com/images/I/51E9PTFZZ3L._SY445_.jpg)
 
 The titles are stored in the `title` field (i.e. column) in the `title` table. [Note: your professor is not responsible for naming these tables and fields!] Each row in the `title` table corresponds to a single movie, but of course, we need to restrict the rows we retrieve to only those where the `title` field equals `Groundhog Day`. The following query achieves this.
 
@@ -102,24 +114,28 @@ The titles are stored in the `title` field (i.e. column) in the `title` table. [
 
 > Note: You have to use `'` single quotes since you are working within a `"` double-quoted string. 
 
-```{sql}
+In the chunk below we select every column from the title-table where the title-variable equals 'Groundhog Day'
+
+```{sql , connection='db'}
 SELECT *
 FROM title
-WHERE title = 'GroundHog Day';
+WHERE title = 'Groundhog Day';
 ```
 
 That retrieved a lot of movies! Let's see if we can refine our query. First, movies (as opposed to TV episodes, etc.) have the `kind_id` value of `1`. 
 
-```{sql}
+```{sql, connection='db'}
 SELECT *
 FROM title
 WHERE title = 'Groundhog Day'
 AND kind_id = 1;
 ```
 
-Now we the result that I want. Imagine that I didn't know the full title of the movie I could soften my query by searching for the phrase `Groundhog` within the title. We can do this using the `LIKE` function along with some wildcards (`%` in SQL).
+Now we have the result that I want. 
 
-```{sql}
+Imagine that I didn't know the full title of the movie I could soften my query by searching for the phrase `Groundhog` within the title. We can do this using the `LIKE` function along with some wildcards (`%` in SQL).
+
+```{sql, connection='db'}
 SELECT *
 FROM title
 WHERE title LIKE '%Groundhog%'
@@ -128,7 +144,7 @@ AND kind_id = 1;
 
 Pretend I'm still not sure which of the above four movies is the real Groundhog Day movie I'm interested in, but I'm sure its the first movie that came out. I could put them in order with the code below. 
 
-```{sql}
+```{sql, connection='db'}
 SELECT *
 FROM title
 WHERE title LIKE '%Groundhog%'
@@ -136,51 +152,54 @@ WHERE title LIKE '%Groundhog%'
 ORDER BY production_year;
 ```
 
-Finally I can select just the two columns I'm interested in. Also notice that I am renaming the title table as t. So I select the columns t.title and t.production_year. The convention is table.variable. This will be useful when joining tables. 
+Finally I can select just the three columns I'm interested in. Also notice that I am renaming the title table as t. So I select the columns t.title and t.production_year. This is called creating an alias. The convention is table.variable. This will be useful when joining tables. 
 
-```{sql}
-SELECT t.title, t.production_year
+```{sql, connection='db'}
+SELECT t.id, t.title, t.production_year
 FROM title AS t
 WHERE title LIKE '%Groundhog%'
   AND t.kind_id = 1
-ORDER BY t.production_year
+ORDER BY t.production_year;
 ```
 
 Its the first Groundhog day that came out in 1993 with ID 3664274.
 
-# Exercise: Find your favorite movie in the `title` table. 
+# Exercise: 
 
-```{r}
+Find the original Ghostbusters in the `title` table. 
+
+```{sql, connection='db'}
 
 
 ```
 
 Now lets consider the name table
 
-```{sql}
+```{sql, connection='db'}
 DESCRIBE name
 ```
 
-# Exercise: Find [Andie MacDowell ](https://www.imdb.com/title/tt0107048/fullcredits?ref_=tt_ov_st_sm)'s `id` in the `name` table. 
+# Exercise: 
+
+Find [Andie MacDowell ](https://www.imdb.com/title/tt0107048/fullcredits?ref_=tt_ov_st_sm)'s `id` in the `name` table. 
 
 > Note: that names are listed last name first and seperated by a comma (eg Murray, Bill)
 
 
-```{sql, include=posted}
+```{sql, connection='db', include=posted}
 
-SELECT * FROM name 
-WHERE name = 'MacDowell, Andie';
+
 ```
 
 
-## Joining two tables
+## Joining tables
 
 In the IMDB, the `title` table contains information about movies, the `name` table contains the names of people, the `char_name` table contains information about the names of characters, and the `cast_info` table contains information about which people played which roles in which movies. Linking the tables together is essential in order to extract information from the database. 
 
 Since we already know that the ID of *Groundhog Day* is `3664274`, we can use that to find all of the cast assignments. 
 
 
-```{sql}
+```{sql, connection='db'}
 SELECT *
 FROM cast_info
 WHERE movie_id = 3664274;
@@ -192,14 +211,16 @@ Note that this returns a list of person-role pairs. person_id is unique for the 
 
 We first need to understand the columns that are in cast_info. 
 
-```{sql}
+```{sql, connection='db'}
 DESCRIBE cast_info
 ```
 
+
+
 The id from the name table should match the person_id from the cast_info table. So we can join on that. Notice that the names of the tables are being shorted again as n for name and ci for cast_info.
 
-```{sql, include=posted}
-##SAMPLE SOLUTION
+```{sql, sql, connection='db',include=posted}
+
 
 SELECT n.name, ci.role_id
 FROM cast_info AS ci
@@ -207,22 +228,27 @@ JOIN name AS n ON n.id = ci.person_id
 WHERE ci.person_id = 3479179;
 ```
 
-Next, we can join the `cast_info` table on the `name` table to recover the names of the people. 
+# Find all the people who acted in Groundhog Day
 
-```{sql}
+Next, we can join the `cast_info` table on the `name` table to recover the names of the actors in Groundhog Day. 
+
+```{sql, connection='db'}
 SELECT n.name, ci.role_id
-FROM cast_info ci
+FROM cast_info AS ci
 JOIN name n ON n.id = ci.person_id
 WHERE movie_id = 3664274;
 ```
 
 Note how we have used table aliases to save some typing. 
 
-#. Add the names of the characters she played to the list of Andie MacDowell 's roles from the previous exercise. 
+## Joining more than two tables
 
+Add the names of the characters she played to the list of Andie MacDowell 's roles from the previous exercise. 
 
-```{sql, include=posted}
--- SAMPLE SOLUTION
+We have to do a second join to get the names of the roles Andie MacDowell has played. 
+
+```{sql, connection='db', include=posted}
+
 SELECT n.name, ci.role_id, cn.name
 FROM cast_info ci
 JOIN name n ON n.id = ci.person_id
@@ -230,62 +256,64 @@ JOIN char_name cn ON cn.id = ci.person_role_id
 WHERE ci.person_id = 3479179;
 ```
 
-## Joining more than two tables
 
-Of course, we can join more than two tables together in a single query. 
+## Exercise 
 
-#. Find Annie Davis's full filmography, in chronological order. Include each movie's `title`, `production_year`, and the name of the character that she played. 
+Find Annie Davis's full filmography, in chronological order. Include each movie's `title`, `production_year`, and the name of the character that she played. 
+
+Hint: You will need the cast_info, title, and char_name tables. I've put the commands in for you. 
 
 
-```{sql, include=posted}
-## SAMPLE SOLUTION 
+```{sql, connection='db', include=posted}
+
 SELECT t.title, t.production_year, cn.name
-FROM cast_info ci
-JOIN title t ON ci.movie_id = t.id
-JOIN char_name cn ON cn.id = ci.person_role_id
-WHERE ci.person_id = 3479179
-  AND t.kind_id = 1
-ORDER BY production_year;
+FROM 
+JOIN    ON 
+JOIN    ON 
+WHERE 
+  AND 
+ORDER BY ;
 ```
 
-# Exercise Pull up the titles of the movies that were made in my birth year 1984. There are more than 1000 so we'll put a limit on the number of movies returned.
+# Exercise 
 
-```{sql}
-SELECT t.title, t.production_year
-FROM title AS t
-WHERE production_year = 1984
+Pull up the titles of the movies that were made in my birth year 1984. There are more than 1000 so we'll put a limit on the number of movies returned.
+
+```{sql, connection='db'}
+
 LIMIT 100;
 
 ```
 
-Pull the one movie that Andie MacDowell was in in 1984. Hint its Greystoke.
+# Exercise 
 
-```{sql}
-SELECT t.title, t.production_year
-FROM cast_info AS ci
-JOIN title AS t ON ci.movie_id = t.id
-WHERE t.production_year = 1984 
-AND ci.person_id = 3479179
-AND t.kind_id = 1;
+Pull the one movie that Andie MacDowell was in in 1984 and bring it into R as a dataframe. Hint: We found it above.
+
+```{sql,connection='db'}
+
 ```
 
-```{sql}
-DESCRIBE person_info
+# Exercise 
+
+This [website](https://www.imdb.com/list/ls000011405/) lists Nicole Kidman as the most prolific actress. Find the name and production year of all of the movies she has been in ordered by production_year descending
+
+```{sql,connection='db'}
+
 ```
 
-```{sql}
+```{sql, connection='db'}
 
-SELECT * 
-FROM name AS n 
-JOIN person_info AS pi on pi.person_id 
-WHERE name = 'Murray, Bill'
+ORDER BY   DESC;
+```
+
+# Exercise
+
+Challenge: Look up the COUNT() and GROUP function for MySQL to answer the question, which year did Nicole Kidman act in the most movies?
 
 
+```{sql, connection='db'}
 
-```    
 
-## Your Learning
+```
 
-Please respond to the following prompt on [Slack in the `#mod-sql channel](https://smi-sds192-01-202102.slack.com).
-
-> Prompt: Does your understanding of `dplyr` help with understanding SQL? What questions to you still have about SQL?
+A few notes: The pdf output will not look great for large tables, don't worry about how it looks in the rendered format. Also the maximum rendered table size will have 5 rows. 
