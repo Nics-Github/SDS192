@@ -87,7 +87,7 @@ Prof Cao will be in to help with the lab.
 
 [SQL part 1](./course-materials/lectures/32_Tim_s_SQL/Smith-Part-I.pdf)
 
-[SQL starter code](./course-materials/in-class-activities/32_SQL_starter_code.qmd)
+[SQL starter code](./course-materials/in-class-activies/32_SQL_starter_code.qmd)
 
 [SQL Notes](./course-materials/lectures/32_Tim_s_SQL/Smith-SQL-Notes-I.pdf)
 

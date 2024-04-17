@@ -22,15 +22,6 @@ db <- dbConnect(
 knitr::opts_chunk$set(connection = db, max.print = 20)
 ```
 
-# Big Idea
-
-Data can live in a flat file (.csv) or relational database.
-
-If the flat file is too big it'll crash R (think of fec20).
-
-We store large quantities in a database on a server and call up what we need. 
-
-We use the Structured Query Language (SQL) to do this. 
 
 # Different dialects of SQL
 
@@ -38,7 +29,7 @@ We'll be using MySQL.
 
 The server is in Bass Hall. It is a physical computer. 
 
-Non efficient queries slow it down for everyone. 
+Non efficient queries slow it down for everyone. Use LIMIT. 
 
 # db?
 
@@ -47,7 +38,6 @@ class(db)
 ```
 # Take a look at the databases
 ```{sql connection= db}
-
 SHOW DATABASES;
 
 ```
@@ -91,33 +81,45 @@ DESCRIBE station_summary	;
 | ORDER BY  | arrange()                       |
 | LIMIT     | head()                          |
 
+Also
+
+Some aggregating functions: MAX(), MIN(), COUNT(), AVG()
+
+# Understand our DATA through mapping. 
+
+```{sql connection=db, output.var="citi_map_data"}
+# Bring this into R
+SELECT lat, lon 
+
+FROM station_summary
+
+```
+
+# Make a map
+
+```{r}
+library(leaflet)
+
+leaflet() |>
+  addTiles()|>
+  addMarkers(lat= ~lat, lng = ~lon, data = citi_map_data)
+```
+
 
 #  Question
 
-Which station had the most bikes rented from it? 
+**Ex. What is the most number of starts from a station? **
 
 Probably consider num_starts from station_summary. 
 
 ```{sql connection=db}
 
-SELECT station_id, num_starts 
+SELECT MAX(num_starts )
 
 FROM station_summary 
 
-LIMIT 10;
 ```
-# ORDER BY
-
-```{sql connection=db}
-
-SELECT station_id, num_starts 
-
-FROM station_summary 
-
-ORDER BY num_starts
-
-LIMIT 10;
-```
+**Ex. Find out more information about the station above by ordering your data. **
 
 # ORDER BY DESC
 
@@ -129,7 +131,7 @@ FROM station_summary
 
 ORDER BY  num_starts DESC
 
-LIMIT 10;
+LIMIT 1;
 ```
 
 # Where are the top 10 stations? 
@@ -146,7 +148,7 @@ LIMIT 10;
 ```
 
 
-# How to bring an SQL query into R
+# Another way to bring an SQL query into R
 
 ```{r }
 top_10_data <- dbGetQuery(conn = db, 
@@ -172,111 +174,102 @@ leaflet() |>
 
 # Wrangling in SQL
 
-What is the average age of people leaving from each location? 
-
-```{sql connection = db}
-
-SELECT start_station_id, AVG(2023-birth_year) AS avg_age 
-
-FROM trips 
-
-WHERE 2023-birth_year < 100
-
-GROUP BY start_station_id 
-
-ORDER BY start_station_id DESC
-
-LIMIT 10;
-
+```{sql connection=db}
+DESCRIBE trip_summary
 
 ```
+**Ex:  Using trip_summary find the busiest month by ordering your data.**
+
+```{sql connection=db}
+SELECT the_month, num_trips
+
+FROM trip_summary 
+
+ORDER BY num_trips DEC
+
+```
+
+
+
+
+**Ex:  Use SUM() to find the number of trips that were made for the year this data was collected.**
+
+```{sql connection=db}
+SELECT SUM(num_trips) As Revenue
+FROM trip_summary
+
+```
+
+**Ex:  Find the difference between start and end time by bike_id.**
+
+```{sql connection = db}
+SELECT TIME(stop_time)-TIME(start_time) AS Duration, bike_id
+
+FROM trips
+
+Group By bike_id
+
+ORDER By Duration DESC
+
+LIMIT 10;
+```
+
+We need to know what types of variables we are dealing with. 
 
 # JOIN 
 
-This query take a while, don't execute it now. 
+Let's join some tables and save it to R
+
+I'd like to join trips and station_summary to find if there is a connection between people's ages and the stations they go to, let's look at the names of those tables.
 
 ```{sql connection = db}
 
-SELECT start_station_id, 
-  AVG(2023-birth_year) AS age , 
-  lat, 
-  lon
+DESCRIBE trips;
+
+```
+
+```{sql connection = db}
+
+DESCRIBE station_summary;
+
+```
+Looks like we can join by station ID.
+
+```{sql connection = db}
+
+SELECT AVG(2017-trips.birth_year) AS AGE
 
 FROM trips 
 
-JOIN station_summary ON trips.start_station_id = station_summary.station_id 
+JOIN station_summary  ON trips.start_station_id = station_summary.station_id 
 
-GROUP BY start_station_id
-
-ORDER BY age DESC;
+WHERE birth_year > 1900 AND station_summary.name = 'W 52 St & 11 Ave'
+ 
+LIMIT 5 ;
 
 ```
 
-# Bring this into R
-
-Use the `dbGetQuery()` function. The first argument is the connection the second is the query as a character.
-
-```{r}
-age_by_station_data <- dbGetQuery(conn = db, 
-                          "SELECT start_station_id, 
-                          AVG(2023-birth_year) AS age , 
-                          lat,
-                          lon
-                          
-                          FROM trips 
-                          
-                          JOIN station_summary ON trips.start_station_id = station_summary.station_id 
-                          
-                          GROUP BY start_station_id
-                          
-                          ORDER BY age DESC;")
-
-                          
-```
-
-# Make a map
-
-```{r}
-library(leaflet)
-
-leaflet() |>
-  addTiles()|>
-  addMarkers(lat= ~lat, lng = ~lon, popup= ~as.character(age), data=age_by_station_data)
-```
-
-# Try some SQL with yelp
-
-1. SHOW the databases
-
-2. USE yelp
-
-3. SHOW Tables
-
-4. DESCRIBE one of them
-
-5. Make a simple query 
-
-6. Filter with WHERE or HAVING
-
-# Part 2
-
-# Two magical verbs
 
 
+Here are some questions for practice:
 
-These two functions will be helpful and are in the `dbplyr` library.
+1. Which station had the least stops?
 
-1.    `show_query()`
+2. Which month of the year had the most starts?  
 
-2.    `collect()`
+3. Using trips find the AVG() bike ride time. 
 
+4. What is the average age of a rider at Broadway & W 25 St?
+
+
+# Part 2 Intro to dbplyr
 
 # This makes table connection with the server
 
 
 ```{r bring-tables-to-r}
 
-#This creates a tbl_sql object in R 
+#This creates wo tbl_sql objects in R. One for trips and one for station_summary
 
  trips <- db |>
    tbl("trips")
