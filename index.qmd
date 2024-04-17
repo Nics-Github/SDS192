@@ -211,9 +211,13 @@ Lab 8 SQL
 
 Prof Cao
 
-# Day 33 SQL with Tim
+# Day 33 SQL 
 
-# Day 32 SQL with Tim
+# Day 32 SQL with Tim Martyn
+
+[SQL part 1](./course-materials/lectures/32_Tim_s_SQL/Smith-Part-I.pdf)
+
+[SQL Notes](./course-materials/lectures/32_Tim_s_SQL/Smith-SQL-Notes-I.pdf)
 
 # Day 31 Project 3
 
