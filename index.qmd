@@ -81,7 +81,9 @@ Prof Cao will be in to help with the lab.
 
 [Lab 8 SQL](https://classroom.github.com/a/ehcYv9eT)
 
-# Day 33 SQL 
+# Day 33 SQL in R
+
+[SQL part 2](./course-materials/in-class-activies/33_SQL-examples.qmd)
 
 # Day 32 SQL with Tim Martyn
 
