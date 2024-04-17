@@ -207,9 +207,9 @@ Professor Garcia
 
 # Day 34 SQL lab
 
-Lab 8 SQL
+Prof Cao will be in to help with the lab. 
 
-Prof Cao
+[Lab 8 SQL](https://classroom.github.com/a/ehcYv9eT)
 
 # Day 33 SQL 
 
