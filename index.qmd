@@ -217,7 +217,11 @@ Prof Cao
 
 [SQL part 1](./course-materials/lectures/32_Tim_s_SQL/Smith-Part-I.pdf)
 
+[SQL starter code](./course-materials/lectures/32_Tim_s_SQL/32_SQL_starter_code.qmd)
+
 [SQL Notes](./course-materials/lectures/32_Tim_s_SQL/Smith-SQL-Notes-I.pdf)
+
+[dbplyr introduction](https://dbplyr.tidyverse.org/articles/dbplyr.html)
 
 # Day 31 Project 3
 

@@ -26,16 +26,19 @@ The data we will be using is stored on a server in Bass Hall. It's called `scidb
 ```{r, message=FALSE}
 library(tidyverse)
 library(RMySQL)
-
+library(dbplyr)
 
 db <- dbConnect(
   MySQL(),
   host = "scidb.smith.edu",
   user = "sds192",
-  password = "DSismfc@S",
-  dbname = "imdb"
+  password = "DSismfc@S"
   )
 knitr::opts_chunk$set(connection= 'db', max.print = 5)
+```
+
+```{r}
+dbGetQuery(conn = db, "SHOW DATABASES;")
 ```
 
 
