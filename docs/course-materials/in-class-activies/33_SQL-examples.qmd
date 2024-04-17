@@ -1,5 +1,6 @@
+
 ---
-title: "dbplyr-SQL"
+title: "SQL examples"
 format: html
 execute: 
   echo: true
