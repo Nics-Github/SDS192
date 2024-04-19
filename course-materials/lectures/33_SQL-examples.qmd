@@ -3,6 +3,7 @@ title: "dbplyr-SQL"
 format: html
 execute: 
   echo: true
+  eval: false
 ---
 # Setup
 

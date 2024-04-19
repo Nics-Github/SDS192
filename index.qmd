@@ -67,6 +67,8 @@ h1{font-weight: 400;}
 
 # Day 36 
 
+[Prof Cao's Post Course Survey](https://smithcollege.qualtrics.com/jfe/form/SV_dh7rSgiH2AvNUj4)
+
 Project 3 work day. 
 
 # Day 35
@@ -79,11 +81,15 @@ Professor Garcia
 
 Prof Cao will be in to help with the lab. 
 
+[Tim made a schema for imdb](./course-materials/lectures/32_Tim_s_SQL/imdb_schema.pdf)
+
 [Lab 8 SQL](https://classroom.github.com/a/ehcYv9eT)
 
 # Day 33 SQL in R
 
 [SQL part 2](./course-materials/in-class-activies/33_SQL-examples.qmd)
+
+[dbplyr introduction](https://dbplyr.tidyverse.org/articles/dbplyr.html)
 
 # Day 32 SQL with Tim Martyn
 
@@ -92,8 +98,6 @@ Prof Cao will be in to help with the lab.
 [SQL starter code](./course-materials/in-class-activies/32_SQL_starter_code.qmd)
 
 [SQL Notes](./course-materials/lectures/32_Tim_s_SQL/Smith-SQL-Notes-I.pdf)
-
-[dbplyr introduction](https://dbplyr.tidyverse.org/articles/dbplyr.html)
 
 # Day 31 Project 3
 
