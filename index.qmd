@@ -67,7 +67,16 @@ h1{font-weight: 400;}
 
 [Prof Cao's Post Course Survey](https://smithcollege.qualtrics.com/jfe/form/SV_dh7rSgiH2AvNUj4)
 
-Short Lecture? 
+::: {.callout-note collapse="FALSE"}
+#Couple notes on website building 
+
+-   Publishing the website
+
+-   Adjusting the theme
+
+-   Changing the icon
+
+:::
 
 Website/Project 3 work day. 
 
