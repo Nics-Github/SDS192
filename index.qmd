@@ -16,656 +16,638 @@ format:
     smooth-scroll: true
 ---
 
-```{=html}
-<style>
-h1{font-weight: 400;}
-</style>
-```
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(
-  echo = TRUE, message=FALSE, warning = FALSE, eval = TRUE, 
-  fig.width = 16/2, fig.height = 9/2
-)
-
-# tidyverse R packages:
-library(tidyverse)
-library(mdsr)
-
-# CRAN R packages:
-library(knitr)
-library(fivethirtyeight)
-library(nycflights13)
-library(gapminder)
-library(babynames)
-library(scales)
-library(moderndive)
-
-library(maps)
-library(mapproj)
-library(patchwork)
-
-# Set seed value of random number generator to get "replicable" random numbers.
-# Why 76? Because of https://www.youtube.com/watch?v=xjJ7FheCkCU
-set.seed(76)
-```
-
-```{=html}
-<style>
-h1{font-weight: 400;}
-</style>
-```
-# Schedule
-
-```{=html}
-
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTG_b6upDZcPxXB92LHYIhV1uAXgeVGaMsZ3sDRPuSQN74JdhkKhZQVjw6T68I3zsP8KGYzDSVTZW64/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false&amp;gid=0&amp;range=A1:E44
-" width="100%" height="400">
-```
-</iframe>
-
-# Day 38 
-
-[Prof Cao's Post Course Survey](https://smithcollege.qualtrics.com/jfe/form/SV_dh7rSgiH2AvNUj4)
-
-::: {.callout-note collapse="FALSE"}
-#Couple notes on website building 
-
--   Publishing the website
-
--   Adjusting the theme
-
--   Changing the icon
-
-:::
-
-Website/Project 3 work day. 
-
-Late work for labs 5,6,7 and 8 is due Wednesday May 1. [Fill out this form](https://forms.gle/VJZy56Y5GStmgjtC8)
-
-# Day 37
-
-[Prof Cao's Post Course Survey](https://smithcollege.qualtrics.com/jfe/form/SV_dh7rSgiH2AvNUj4)
-
-Intro to website building. 
-
-[Final project.](https://classroom.github.com/a/LGiuwAy_) 
-
-# Day 36 
-
-[Prof Cao's Post Course Survey](https://smithcollege.qualtrics.com/jfe/form/SV_dh7rSgiH2AvNUj4)
-
-Project 3 work day. 
-
-# Day 35
-
-Project 3 work day. 
-
-Professor Garcia
-
-# Day 34 SQL lab
-
-Prof Cao will be in to help with the lab. 
-
-[Tim made a schema for imdb](./course-materials/lectures/32_Tim_s_SQL/imdb_schema.pdf)
-
-[Lab 8 SQL](https://classroom.github.com/a/ehcYv9eT)
-
-# Day 33 SQL in R
-
-[SQL part 2](./course-materials/in-class-activies/33_SQL-examples.qmd)
-
-[dbplyr introduction](https://dbplyr.tidyverse.org/articles/dbplyr.html)
-
-# Day 32 SQL with Tim Martyn
-
-[SQL part 1](./course-materials/lectures/32_Tim_s_SQL/Smith-Part-I.pdf)
-
-[SQL starter code](./course-materials/in-class-activies/32_SQL_starter_code.qmd)
-
-[SQL Notes](./course-materials/lectures/32_Tim_s_SQL/Smith-SQL-Notes-I.pdf)
-
-# Day 31 Project 3
-
-Leaflet Example
-
-[Project 3](https://classroom.github.com/a/9QKu_fCl)
-
-Quiz 3 is available and due by Sunday.
-
-# Day 30 Lab 7 Mapping Monarchs. 
-
-[Here is the lab for today.](https://classroom.github.com/a/ozqRg4gy) 
-
-It is due next Wednesday. 
-
-
-# Day 29 Choropleth Mapping and Leaflet
-
-[Choropleth Mapping](./course-materials/in-class-activies/29_Choropleth_and_Leaflet.qmd)
-
-# Day 28 SAL guests
-
-[Jon Caris and Kala'i Ellis](https://docs.google.com/presentation/d/1yxMAglQLNAWok3_xqPgMCqxa2g1IlsPHXeu04iT9BZs/edit?usp=sharing)
-
-Project 2 due today by midnight. 
-
-# Day 27 Mapping with simple features (sf) and shape files
-
-Simple features and Shape files. 
-
--   [Vermont's Geospacial Data](https://geodata.vermont.gov/)
-
--   [MA Bike Trails](https://www.mass.gov/info-details/massgis-data-bicycle-trails)
-
--   [tidygeocoder services](https://jessecambon.github.io/tidygeocoder/articles/geocoder_services.html)
-
-[In class activity](./course-materials/in-class-activies/27_mapping.zip)
-
-
-
-# Day 26 Static Mapping part 1
-
-Announcements
-
--   Advising sessions to declare your major
-
-
-[Example: static maps](./course-materials/lectures/26_maps-ggplot.qmd)
-
-
-
-<!-- # Day 27 `map()` and `across()` practice -->
-
-<!-- Project time -->
-
-<!-- ::: {.callout-tip collapse="true"} -->
-
-<!-- # Reminder Project 2 due Friday -->
-
-<!-- Project 2 notes: -->
-
-<!-- -   Project 2 due Friday -->
-
-<!-- -   **Render** your project -->
-
-<!-- -   **Comment** your code in `fec_analysis.qmd` -->
-
-<!-- -   Make your code readable with spaces and short lines -->
-
-<!-- -   `filter( == )` vs `filter( %in% )` -->
+<!-- ```{=html} -->
+<!-- <style> -->
+<!-- h1{font-weight: 400;} -->
+<!-- </style> -->
+<!-- ``` -->
+<!-- ```{r setup, include=FALSE} -->
+<!-- knitr::opts_chunk$set( -->
+<!--   echo = TRUE, message=FALSE, warning = FALSE, eval = TRUE,  -->
+<!--   fig.width = 16/2, fig.height = 9/2 -->
+<!-- ) -->
+
+<!-- # tidyverse R packages: -->
+<!-- library(tidyverse) -->
+<!-- library(mdsr) -->
+
+<!-- # CRAN R packages: -->
+<!-- library(knitr) -->
+<!-- library(fivethirtyeight) -->
+<!-- library(nycflights13) -->
+<!-- library(gapminder) -->
+<!-- library(babynames) -->
+<!-- library(scales) -->
+<!-- library(moderndive) -->
+
+<!-- library(maps) -->
+<!-- library(mapproj) -->
+<!-- library(patchwork) -->
+
+<!-- # Set seed value of random number generator to get "replicable" random numbers. -->
+<!-- # Why 76? Because of https://www.youtube.com/watch?v=xjJ7FheCkCU -->
+<!-- set.seed(76) -->
+<!-- ``` -->
+
+<!-- ```{=html} -->
+<!-- <style> -->
+<!-- h1{font-weight: 400;} -->
+<!-- </style> -->
+<!-- ``` -->
+<!-- # Schedule -->
+
+<!-- ```{=html} -->
+
+<!-- <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTG_b6upDZcPxXB92LHYIhV1uAXgeVGaMsZ3sDRPuSQN74JdhkKhZQVjw6T68I3zsP8KGYzDSVTZW64/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false&amp;gid=0&amp;range=A1:E44 -->
+<!-- " width="100%" height="400"> -->
+<!-- ``` -->
+<!-- </iframe> -->
+
+<!-- # Day 38  -->
+
+<!-- [Prof Cao's Post Course Survey](https://smithcollege.qualtrics.com/jfe/form/SV_dh7rSgiH2AvNUj4) -->
+
+<!-- ::: {.callout-note collapse="FALSE"} -->
+<!-- #Couple notes on website building  -->
+
+<!-- -   Publishing the website -->
+
+<!-- -   Adjusting the theme -->
+
+<!-- -   Changing the icon -->
 
 <!-- ::: -->
 
+<!-- Website/Project 3 work day.  -->
 
-# Day 25 Lab 6
+<!-- Late work for labs 5,6,7 and 8 is due Wednesday May 1. [Fill out this form](https://forms.gle/VJZy56Y5GStmgjtC8) -->
 
-Two announcements
+<!-- # Day 37 -->
 
--   [Advising Fair](/course-materials/images/SDS-Advising-Fair-1-Portrait.pdf) 
+<!-- [Prof Cao's Post Course Survey](https://smithcollege.qualtrics.com/jfe/form/SV_dh7rSgiH2AvNUj4) -->
 
-  -   Dates Wednesday April 3 and Thursday April 4. 
-  
-  -   [Here is the virtual POM](https://smith.zoom.us/rec/play/jGGNU4b4YFudw1pc9BhDC5fAvNVAFJ-Btd45G0zt8iCMUbHNu37Ui56gyyXGlQGhlQ5FHWphKABMTCk_.VUDGMGY8iqpz8zMw?canPlayFromShare=true&from=share_recording_detail&startTime=1711632679000&componentName=rec-play&originRequestUrl=https%3A%2F%2Fsmith.zoom.us%2Frec%2Fshare%2FMLfUh3jeCdMbYuveLxaHea3lXH6lC-NWUQCSZRqOxP_RU7ULp_7xgHHlsBSYEpeQ.lqOHQFIpwaVmMyZA%3FstartTime%3D1711632679000)
-  
-  -   More info on the major at [this site](https://docs.google.com/document/d/1FY2vdUIQKBC2VlXfY1NkkBPWHJADH0O1ukUPMU02xRE/edit#heading=h.dg2gqkumg3ys).
+<!-- Intro to website building.  -->
 
--   [Guest Speaker](/course-materials/images/Guest-Speaker-Professor-Shu-Min-Liao.pdf)
+<!-- [Final project.](https://classroom.github.com/a/LGiuwAy_)  -->
 
-[Lab 6](https://classroom.github.com/a/7ehigFea) is due next Wednesday 4/3/2024
+<!-- # Day 36  -->
 
-# Day 24 Iteration
+<!-- [Prof Cao's Post Course Survey](https://smithcollege.qualtrics.com/jfe/form/SV_dh7rSgiH2AvNUj4) -->
 
-[Solution to Monday's in class activity](/course-materials/in-class-activies/day_25solutions_function_writing.html)
+<!-- Project 3 work day.  -->
 
-[Lecture: `across()` and `map()`](course-materials/lectures/24_across_maps.qmd)
+<!-- # Day 35 -->
 
-[In class activity](./course-materials/in-class-activies/24_In-classExercise-Iteration.qmd)
+<!-- Project 3 work day.  -->
 
-[More on masking](https://rlang.r-lib.org/reference/topic-data-mask.html)
+<!-- Professor Garcia -->
 
-# Day 23 Function Writing
+<!-- # Day 34 SQL lab -->
 
-[Lecture: Intro to if, else and functions](course-materials/lectures/23_functions.qmd)
+<!-- Prof Cao will be in to help with the lab.  -->
 
-[Function writing practice](./course-materials/in-class-activies/day_25_function_writing.qmd)
+<!-- [Tim made a schema for imdb](./course-materials/lectures/32_Tim_s_SQL/imdb_schema.pdf) -->
 
-<!-- Reminder lab-5 is due Wednesday. -->
+<!-- [Lab 8 SQL](https://classroom.github.com/a/ehcYv9eT) -->
 
-<!-- [Introduce Project 2](https://moodle.smith.edu/) -->
+<!-- # Day 33 SQL in R -->
 
-<!-- Time to get familiar with `fec20` -->
+<!-- [SQL part 2](./course-materials/in-class-activies/33_SQL-examples.qmd) -->
 
-<!-- # Day 20 Cleaning -->
+<!-- [dbplyr introduction](https://dbplyr.tidyverse.org/articles/dbplyr.html) -->
 
-<!-- Warm up: table2 -->
+<!-- # Day 32 SQL with Tim Martyn -->
 
-<!-- [Cleaning Data](course-materials/lectures/Day_20_tidying.qmd) -->
+<!-- [SQL part 1](./course-materials/lectures/32_Tim_s_SQL/Smith-Part-I.pdf) -->
 
-<!-- Let's clean up `billboard` -->
+<!-- [SQL starter code](./course-materials/in-class-activies/32_SQL_starter_code.qmd) -->
 
-<!-- # Day 19 Tidy Data -->
+<!-- [SQL Notes](./course-materials/lectures/32_Tim_s_SQL/Smith-SQL-Notes-I.pdf) -->
 
-<!-- Chapter 5 problem 4 solutions -->
+<!-- # Day 31 Project 3 -->
 
-<!-- #### 4a The oldest plane to fly from NYC is a Douglas with tailnum: -->
+<!-- Leaflet Example -->
 
-<!-- ```{r A-solution-to-problem-4} -->
+<!-- [Project 3](https://classroom.github.com/a/9QKu_fCl) -->
 
-<!-- #| echo: false -->
+<!-- Quiz 3 is available and due by Sunday. -->
 
-<!-- #| eval: true -->
+<!-- # Day 30 Lab 7 Mapping Monarchs.  -->
 
-<!-- library(nycflights13) -->
+<!-- [Here is the lab for today.](https://classroom.github.com/a/ozqRg4gy)  -->
 
-<!-- planes |> inner_join(flights, by = "tailnum") |> -->
+<!-- It is due next Wednesday.  -->
 
-<!--   arrange(year.x) |> -->
 
-<!--   filter(tailnum == "N381AA") |> -->
+<!-- # Day 29 Choropleth Mapping and Leaflet -->
 
-<!--   select(tailnum)|> -->
+<!-- [Choropleth Mapping](./course-materials/in-class-activies/29_Choropleth_and_Leaflet.qmd) -->
 
-<!--   head(1) -->
+<!-- # Day 28 SAL guests -->
 
-<!-- ``` -->
+<!-- [Jon Caris and Kala'i Ellis](https://docs.google.com/presentation/d/1yxMAglQLNAWok3_xqPgMCqxa2g1IlsPHXeu04iT9BZs/edit?usp=sharing) -->
 
-<!-- #### 4b The number of planes included in planes that flew from NYC is: -->
+<!-- Project 2 due today by midnight.  -->
 
-<!-- ```{r solution-to-4b} -->
+<!-- # Day 27 Mapping with simple features (sf) and shape files -->
 
-<!-- #| echo: false -->
+<!-- Simple features and Shape files.  -->
 
-<!-- #| eval: true -->
+<!-- -   [Vermont's Geospacial Data](https://geodata.vermont.gov/) -->
 
-<!-- library(nycflights13) -->
+<!-- -   [MA Bike Trails](https://www.mass.gov/info-details/massgis-data-bicycle-trails) -->
 
-<!-- planes |> inner_join(flights, by = "tailnum") |> -->
+<!-- -   [tidygeocoder services](https://jessecambon.github.io/tidygeocoder/articles/geocoder_services.html) -->
 
-<!--   count(tailnum) |> -->
+<!-- [In class activity](./course-materials/in-class-activies/27_mapping.zip) -->
 
-<!--   nrow() -->
 
-<!-- ``` -->
 
-# Day 22 Project 2
+<!-- # Day 26 Static Mapping part 1 -->
 
-# Day 21 Project 2
+<!-- Announcements -->
 
-Here's the link to join [project 2](https://classroom.github.com/a/YUonEUOS)
+<!-- -   Advising sessions to declare your major -->
 
-See your new groups on moodle.
 
-# Day 20 Pivots
+<!-- [Example: static maps](./course-materials/lectures/26_maps-ggplot.qmd) -->
 
-Late/ unrendered work can be pushed to github for a 10% penalty by Friday March 15. [Fill out this form for regrading.](https://forms.gle/JjExv5NVDwEvywgi8)
 
-[Pivots](course-materials/lectures/18_pivots.qmd)
 
-We'll do Problems [Chapter 4: 1,2,5,9,(12)](https://mdsr-book.github.io/mdsr3e/04-dataI.html#dataI-exercises) in class today. [Chapter 5: 3,4](https://mdsr-book.github.io/mdsr3e/05-joins.html#join-exercises)
+<!-- <!-- # Day 27 `map()` and `across()` practice --> -->
 
-# Day 19 Lab 5
+<!-- <!-- Project time --> -->
 
-Quiz 2 is open and due the Sunday before break. (Do it after pivot tables next week).
+<!-- <!-- ::: {.callout-tip collapse="true"} --> -->
 
-Here is [lab 5](https://classroom.github.com/a/BNYDfmiq) it is due next Wednesday
+<!-- <!-- # Reminder Project 2 due Friday --> -->
 
-# Day 18 Joining Tables cont.
+<!-- <!-- Project 2 notes: --> -->
 
-Continue our exploration of joining tables.
+<!-- <!-- -   Project 2 due Friday --> -->
 
-[Problems 1, 3](https://mdsr-book.github.io/mdsr3e/05-joins.html#join-exercises)
+<!-- <!-- -   **Render** your project --> -->
 
-[Joining two tables in class exercise](https://scao53.github.io/sds192spring2023/in-class_exercises/Lec17In-classExercise-JoinTables.zip)
+<!-- <!-- -   **Comment** your code in `fec_analysis.qmd` --> -->
 
-# Day 17 Joining tables
+<!-- <!-- -   Make your code readable with spaces and short lines --> -->
 
-Monday's office hours moved to Wednesday.
+<!-- <!-- -   `filter( == )` vs `filter( %in% )` --> -->
 
-::: {.callout-tip collapse="true"}
-# lab 4 rendering/submission issues
+<!-- <!-- ::: --> -->
 
-rendering:
 
--   Note on `#| eval: FALSE` in lab 4 (due Friday)
+<!-- # Day 25 Lab 6 -->
 
-gitignore:
+<!-- Two announcements -->
 
-If you tried to push the `sqf_2011.csv` to github you probably got an error.
+<!-- -   [Advising Fair](/course-materials/images/SDS-Advising-Fair-1-Portrait.pdf)  -->
 
--   First save your qmd somewhere.
+<!--   -   Dates Wednesday April 3 and Thursday April 4.  -->
 
--   Uncommit your commit with `git reset --hard HEAD^` or `git reset --hard HEAD~2`
+<!--   -   [Here is the virtual POM](https://smith.zoom.us/rec/play/jGGNU4b4YFudw1pc9BhDC5fAvNVAFJ-Btd45G0zt8iCMUbHNu37Ui56gyyXGlQGhlQ5FHWphKABMTCk_.VUDGMGY8iqpz8zMw?canPlayFromShare=true&from=share_recording_detail&startTime=1711632679000&componentName=rec-play&originRequestUrl=https%3A%2F%2Fsmith.zoom.us%2Frec%2Fshare%2FMLfUh3jeCdMbYuveLxaHea3lXH6lC-NWUQCSZRqOxP_RU7ULp_7xgHHlsBSYEpeQ.lqOHQFIpwaVmMyZA%3FstartTime%3D1711632679000) -->
 
--   You may need to add a `.gitignore` file.
+<!--   -   More info on the major at [this site](https://docs.google.com/document/d/1FY2vdUIQKBC2VlXfY1NkkBPWHJADH0O1ukUPMU02xRE/edit#heading=h.dg2gqkumg3ys). -->
 
--   Open `.gitignore` and add `sqf_2011.csv` to it.
-:::
+<!-- -   [Guest Speaker](/course-materials/images/Guest-Speaker-Professor-Shu-Min-Liao.pdf) -->
 
-[Wrangling Practice: MDSR Problems 1 and 2](https://mdsr-book.github.io/mdsr2e/ch-dataI.html#dataI-exercises)
+<!-- [Lab 6](https://classroom.github.com/a/7ehigFea) is due next Wednesday 4/3/2024 -->
 
-```{r, Random_subset }
-#| eval: FALSE
-#| echo: TRUE
-#| code-fold: true
+<!-- # Day 24 Iteration -->
 
+<!-- [Solution to Monday's in class activity](/course-materials/in-class-activies/day_25solutions_function_writing.html) -->
 
-# Copy this code into a chunk in R to make the Random_subset data frame from problem 1 and 2.
-# Use the verbs we've discussed to make the subsets from the text.
-# The code below will install babynames, if we have not done it already. 
-#install.packages("babynames")
+<!-- [Lecture: `across()` and `map()`](course-materials/lectures/24_across_maps.qmd) -->
 
-library(babynames)
+<!-- [In class activity](./course-materials/in-class-activies/24_In-classExercise-Iteration.qmd) -->
 
-Random_subset <-  tibble::tribble(
-    ~year,~sex,   ~name,         ~n, ~prop,
-     2003, "M",     "Bilal",        146, 0.0000695,
-     1999, "F",     "Terria",        23, 0.0000118,
-     2010, "F",     "Naziyah",       45, 0.0000230,
-     1989, "F",     "Shawana",       41, 0.0000206,
-     1989, "F",     "Jessi",        210, 0.000105,
-     1928, "M",     "Tillman",       43, 0.0000377,
-     1981, "F",     "Leslee",        83, 0.0000464,
-     1981, "F",     "Sherise",       27, 0.0000151,
-     1920, "F",     "Marquerite",    26, 0.0000209,
-     1941, "M",     "Lorraine",      24, 0.0000191
-  )
+<!-- [More on masking](https://rlang.r-lib.org/reference/topic-data-mask.html) -->
 
 
-```
 
-Exploration: How to join tables?
+<!-- <!-- Reminder lab-5 is due Wednesday. --> -->
 
-# Day 16 Lab 4
+<!-- <!-- [Introduce Project 2](https://moodle.smith.edu/) --> -->
 
-[This is the article referred to in the lab](https://www.nyclu.org/en/stop-and-frisk-data)
+<!-- <!-- Time to get familiar with `fec20` --> -->
 
-[dpylr cheatsheet for wrangling](https://nyu-cdsc.github.io/learningr/assets/data-transformation.pdf)
+<!-- <!-- # Day 20 Cleaning --> -->
 
-[Here is the link](https://classroom.github.com/a/J1JzkKjE) for Lab 4.
+<!-- <!-- Warm up: table2 --> -->
 
-Lab 4 will be due next *Friday* by midnight.
+<!-- <!-- [Cleaning Data](course-materials/lectures/Day_20_tidying.qmd) --> -->
 
-<!-- See how filtering goes for lab 4, I might not need to do this because 100 did it in lab 4 -->
+<!-- <!-- Let's clean up `billboard` --> -->
 
-<!-- # Day 15 Wrangling with Filter -->
+<!-- <!-- # Day 19 Tidy Data --> -->
 
-<!-- Wrangle sqf_2011 data together -->
+<!-- <!-- Chapter 5 problem 4 solutions --> -->
 
-<!-- [Lecture on the five verbs](course-materials/lectures/mdsr-the-verbs.qmd) -->
+<!-- <!-- #### 4a The oldest plane to fly from NYC is a Douglas with tailnum: --> -->
 
-<!-- [Wrangle babynames](/course-materials/in-class-activies/Wrangling_Baby_Names.qmd) -->
+<!-- <!-- ```{r A-solution-to-problem-4} --> -->
 
-<!-- ```{r} -->
+<!-- <!-- #| echo: false --> -->
 
-<!-- #| code-fold: true -->
+<!-- <!-- #| eval: true --> -->
 
-<!-- #| echo: true -->
+<!-- <!-- library(nycflights13) --> -->
 
-<!-- #| eval: false -->
+<!-- <!-- planes |> inner_join(flights, by = "tailnum") |> --> -->
 
-<!-- install.packages("babynames") -->
+<!-- <!--   arrange(year.x) |> --> -->
 
-<!-- ``` -->
+<!-- <!--   filter(tailnum == "N381AA") |> --> -->
 
-# Day 15 Wrangling
+<!-- <!--   select(tailnum)|> --> -->
 
-[Stop and Frisk Wrangling](/course-materials/lectures/15_Wrangling_1_SQF.qmd)
+<!-- <!--   head(1) --> -->
 
-<!-- Didn't get to the code below. It would be good for wrangling practice.  -->
+<!-- <!-- ``` --> -->
 
-<!-- [In class MDSR Problems 1 and 2](https://mdsr-book.github.io/mdsr2e/ch-dataI.html#dataI-exercises) -->
+<!-- <!-- #### 4b The number of planes included in planes that flew from NYC is: --> -->
+
+<!-- <!-- ```{r solution-to-4b} --> -->
+
+<!-- <!-- #| echo: false --> -->
+
+<!-- <!-- #| eval: true --> -->
+
+<!-- <!-- library(nycflights13) --> -->
+
+<!-- <!-- planes |> inner_join(flights, by = "tailnum") |> --> -->
+
+<!-- <!--   count(tailnum) |> --> -->
+
+<!-- <!--   nrow() --> -->
+
+<!-- <!-- ``` --> -->
+
+<!-- # Day 22 Project 2 -->
+
+<!-- # Day 21 Project 2 -->
+
+<!-- Here's the link to join [project 2](https://classroom.github.com/a/YUonEUOS) -->
+
+<!-- See your new groups on moodle. -->
+
+<!-- # Day 20 Pivots -->
+
+<!-- Late/ unrendered work can be pushed to github for a 10% penalty by Friday March 15. [Fill out this form for regrading.](https://forms.gle/JjExv5NVDwEvywgi8) -->
+
+<!-- [Pivots](course-materials/lectures/18_pivots.qmd) -->
+
+<!-- We'll do Problems [Chapter 4: 1,2,5,9,(12)](https://mdsr-book.github.io/mdsr3e/04-dataI.html#dataI-exercises) in class today. [Chapter 5: 3,4](https://mdsr-book.github.io/mdsr3e/05-joins.html#join-exercises) -->
+
+<!-- # Day 19 Lab 5 -->
+
+<!-- Quiz 2 is open and due the Sunday before break. (Do it after pivot tables next week). -->
+
+<!-- Here is [lab 5](https://classroom.github.com/a/BNYDfmiq) it is due next Wednesday -->
+
+<!-- # Day 18 Joining Tables cont. -->
+
+<!-- Continue our exploration of joining tables. -->
+
+<!-- [Problems 1, 3](https://mdsr-book.github.io/mdsr3e/05-joins.html#join-exercises) -->
+
+<!-- [Joining two tables in class exercise](https://scao53.github.io/sds192spring2023/in-class_exercises/Lec17In-classExercise-JoinTables.zip) -->
+
+<!-- # Day 17 Joining tables -->
+
+<!-- Monday's office hours moved to Wednesday. -->
+
+<!-- ::: {.callout-tip collapse="true"} -->
+<!-- # lab 4 rendering/submission issues -->
+
+<!-- rendering: -->
+
+<!-- -   Note on `#| eval: FALSE` in lab 4 (due Friday) -->
+
+<!-- gitignore: -->
+
+<!-- If you tried to push the `sqf_2011.csv` to github you probably got an error. -->
+
+<!-- -   First save your qmd somewhere. -->
+
+<!-- -   Uncommit your commit with `git reset --hard HEAD^` or `git reset --hard HEAD~2` -->
+
+<!-- -   You may need to add a `.gitignore` file. -->
+
+<!-- -   Open `.gitignore` and add `sqf_2011.csv` to it. -->
+<!-- ::: -->
+
+<!-- [Wrangling Practice: MDSR Problems 1 and 2](https://mdsr-book.github.io/mdsr2e/ch-dataI.html#dataI-exercises) -->
 
 <!-- ```{r, Random_subset } -->
-
 <!-- #| eval: FALSE -->
-
 <!-- #| echo: TRUE -->
-
 <!-- #| code-fold: true -->
 
-<!-- # Copy this code into a chunk in R to make the Random_subset data frame from problem 1 and 2.  -->
 
-<!-- # Use the verbs we've discussed to make the subsets from the text.  -->
+<!-- # Copy this code into a chunk in R to make the Random_subset data frame from problem 1 and 2. -->
+<!-- # Use the verbs we've discussed to make the subsets from the text. -->
+<!-- # The code below will install babynames, if we have not done it already.  -->
+<!-- #install.packages("babynames") -->
+
+<!-- library(babynames) -->
 
 <!-- Random_subset <-  tibble::tribble( -->
-
 <!--     ~year,~sex,   ~name,         ~n, ~prop, -->
-
 <!--      2003, "M",     "Bilal",        146, 0.0000695, -->
-
 <!--      1999, "F",     "Terria",        23, 0.0000118, -->
-
 <!--      2010, "F",     "Naziyah",       45, 0.0000230, -->
-
 <!--      1989, "F",     "Shawana",       41, 0.0000206, -->
-
 <!--      1989, "F",     "Jessi",        210, 0.000105, -->
-
 <!--      1928, "M",     "Tillman",       43, 0.0000377, -->
-
 <!--      1981, "F",     "Leslee",        83, 0.0000464, -->
-
 <!--      1981, "F",     "Sherise",       27, 0.0000151, -->
-
 <!--      1920, "F",     "Marquerite",    26, 0.0000209, -->
-
 <!--      1941, "M",     "Lorraine",      24, 0.0000191 -->
-
 <!--   ) -->
+
 
 <!-- ``` -->
 
+<!-- Exploration: How to join tables? -->
+
+<!-- # Day 16 Lab 4 -->
+
+<!-- [This is the article referred to in the lab](https://www.nyclu.org/en/stop-and-frisk-data) -->
+
+<!-- [dpylr cheatsheet for wrangling](https://nyu-cdsc.github.io/learningr/assets/data-transformation.pdf) -->
+
+<!-- [Here is the link](https://classroom.github.com/a/J1JzkKjE) for Lab 4. -->
+
+<!-- Lab 4 will be due next *Friday* by midnight. -->
+
+<!-- <!-- See how filtering goes for lab 4, I might not need to do this because 100 did it in lab 4 --> -->
+
+<!-- <!-- # Day 15 Wrangling with Filter --> -->
+
+<!-- <!-- Wrangle sqf_2011 data together --> -->
+
+<!-- <!-- [Lecture on the five verbs](course-materials/lectures/mdsr-the-verbs.qmd) --> -->
+
+<!-- <!-- [Wrangle babynames](/course-materials/in-class-activies/Wrangling_Baby_Names.qmd) --> -->
+
+<!-- <!-- ```{r} --> -->
+
+<!-- <!-- #| code-fold: true --> -->
+
+<!-- <!-- #| echo: true --> -->
+
+<!-- <!-- #| eval: false --> -->
+
+<!-- <!-- install.packages("babynames") --> -->
+
+<!-- <!-- ``` --> -->
+
+<!-- # Day 15 Wrangling -->
+
+<!-- [Stop and Frisk Wrangling](/course-materials/lectures/15_Wrangling_1_SQF.qmd) -->
+
+<!-- <!-- Didn't get to the code below. It would be good for wrangling practice.  --> -->
+
+<!-- <!-- [In class MDSR Problems 1 and 2](https://mdsr-book.github.io/mdsr2e/ch-dataI.html#dataI-exercises) --> -->
+
+<!-- <!-- ```{r, Random_subset } --> -->
+
+<!-- <!-- #| eval: FALSE --> -->
+
+<!-- <!-- #| echo: TRUE --> -->
+
+<!-- <!-- #| code-fold: true --> -->
+
+<!-- <!-- # Copy this code into a chunk in R to make the Random_subset data frame from problem 1 and 2.  --> -->
+
+<!-- <!-- # Use the verbs we've discussed to make the subsets from the text.  --> -->
+
+<!-- <!-- Random_subset <-  tibble::tribble( --> -->
+
+<!-- <!--     ~year,~sex,   ~name,         ~n, ~prop, --> -->
+
+<!-- <!--      2003, "M",     "Bilal",        146, 0.0000695, --> -->
+
+<!-- <!--      1999, "F",     "Terria",        23, 0.0000118, --> -->
+
+<!-- <!--      2010, "F",     "Naziyah",       45, 0.0000230, --> -->
+
+<!-- <!--      1989, "F",     "Shawana",       41, 0.0000206, --> -->
+
+<!-- <!--      1989, "F",     "Jessi",        210, 0.000105, --> -->
+
+<!-- <!--      1928, "M",     "Tillman",       43, 0.0000377, --> -->
+
+<!-- <!--      1981, "F",     "Leslee",        83, 0.0000464, --> -->
+
+<!-- <!--      1981, "F",     "Sherise",       27, 0.0000151, --> -->
+
+<!-- <!--      1920, "F",     "Marquerite",    26, 0.0000209, --> -->
+
+<!-- <!--      1941, "M",     "Lorraine",      24, 0.0000191 --> -->
+
+<!-- <!--   ) --> -->
+
+<!-- <!-- ``` --> -->
+
+<!-- <!-- ::: {.callout-tip collapse="true"} --> -->
+
+<!-- <!-- # terminal work --> -->
+
+<!-- <!-- -   This is a helpful website: `https://ioflood.com/blog/solved-git-error-you-have-divergent-branches-and-need-to-specify-how-to-reconcile-them/` --> -->
+
+<!-- <!-- -   Some times you get "you have divergent branches and need to specify how to reconcile them" --> -->
+
+<!-- <!-- -   In terminal: `git config pull.ff only` --> -->
+
+<!-- <!-- -   Sometimes fast forwarding is fatal.Try Merge Commit: --> -->
+
+<!-- <!-- -   In terminal: `git checkout branch-name` then `git merge --no-ff -m "commit name" branch-name` --> -->
+
+<!-- <!-- -   You can also try following the instructions git gives. --> -->
+
+<!-- <!-- -   Nothing wrong with saving your code and deleting the branch. Branches are disposable. --> -->
+
+<!-- <!-- -   You can work in a branch with lots of commmits before you push. Once you merge a pull request delete the branch. --> -->
+
+<!-- <!-- -   Once you delete a branch on github don't work in it any more. do: `git fetch --prune` to remove the old remote branches from rstudio.Or `git branch -d branch_name` to delete your old branch --> -->
+
+<!-- <!-- ::: --> -->
+
+<!-- # Day 13 and 14 Project 1 -->
+
+<!-- Announcement: SAL on Feb 29 from 2:45-4pm. Mapping with Google Earth Engine by Mags MacLaughlin. -->
+
+<!-- Today we are working on project 1. -->
+
+<!-- -   Project is due next Monday, March 4. -->
+
+<!-- -   This is the las in class day to work on Project 1 -->
+
+<!-- -   We will have a lab this Friday. -->
+
 <!-- ::: {.callout-tip collapse="true"} -->
+<!-- # Think about Project 1 -->
 
-<!-- # terminal work -->
+<!-- -   Consider the ethics. -->
 
-<!-- -   This is a helpful website: `https://ioflood.com/blog/solved-git-error-you-have-divergent-branches-and-need-to-specify-how-to-reconcile-them/` -->
+<!-- -   Consider code layout. Lots of space and arguments on different lines. -->
 
-<!-- -   Some times you get "you have divergent branches and need to specify how to reconcile them" -->
+<!-- -   Do at least one push on the project in class today. -->
 
-<!-- -   In terminal: `git config pull.ff only` -->
+<!-- -   In general lots of little pushes. -->
 
-<!-- -   Sometimes fast forwarding is fatal.Try Merge Commit: -->
+<!-- -   Remember to comment your code, and follow tidyverse style guide. -->
 
-<!-- -   In terminal: `git checkout branch-name` then `git merge --no-ff -m "commit name" branch-name` -->
+<!-- -   Make your graph legible to the lay person (title, labels, source, captions). -->
 
-<!-- -   You can also try following the instructions git gives. -->
-
-<!-- -   Nothing wrong with saving your code and deleting the branch. Branches are disposable. -->
-
-<!-- -   You can work in a branch with lots of commmits before you push. Once you merge a pull request delete the branch. -->
-
-<!-- -   Once you delete a branch on github don't work in it any more. do: `git fetch --prune` to remove the old remote branches from rstudio.Or `git branch -d branch_name` to delete your old branch -->
-
+<!-- -   You might realize you are sharing an API key. Consider what that means. -->
 <!-- ::: -->
 
-# Day 13 and 14 Project 1
+<!-- # Day 12 Ethics -->
 
-Announcement: SAL on Feb 29 from 2:45-4pm. Mapping with Google Earth Engine by Mags MacLaughlin.
+<!-- [Data Ethics](/course-materials/lectures/11_ethics.qmd) -->
 
-Today we are working on project 1.
+<!-- [Project 1](https://classroom.github.com/a/1riUqcQQ) -->
 
--   Project is due next Monday, March 4.
+<!-- # Day 11 Markdown and Github -->
 
--   This is the las in class day to work on Project 1
-
--   We will have a lab this Friday.
-
-::: {.callout-tip collapse="true"}
-# Think about Project 1
-
--   Consider the ethics.
-
--   Consider code layout. Lots of space and arguments on different lines.
-
--   Do at least one push on the project in class today.
-
--   In general lots of little pushes.
-
--   Remember to comment your code, and follow tidyverse style guide.
-
--   Make your graph legible to the lay person (title, labels, source, captions).
-
--   You might realize you are sharing an API key. Consider what that means.
-:::
-
-# Day 12 Ethics
-
-[Data Ethics](/course-materials/lectures/11_ethics.qmd)
-
-[Project 1](https://classroom.github.com/a/1riUqcQQ)
-
-# Day 11 Markdown and Github
-
-Quiz 1 due Sunday
-
-::: {.callout-tip collapse="true"}
-# 3 hours
-
--   15 questions, open book
-
--   No collaboration
-
--   Score visible next Monday
-
--   Take quiz through moodle
-:::
-
-[Reading on Git and RStudio](https://r-bio.github.io/intro-git-rstudio/)
-
-Class Git [Practice](https://classroom.github.com/a/U8S5PFOe)
-
-## [Project 1](https://classroom.github.com/a/1riUqcQQ)
-
-Project 1 Data Dictionary
-
-[See moodle for project groups.](https://moodle.smith.edu/pluginfile.php/1681130/mod_resource/content/1/Project%201%20and%202%20Groups.pdf)
-
-[Data Ethics](/course-materials/lectures/11_ethics.qmd)
-
-# Day 10 Lab 3
-
-Lab 3 is due next Wednesday by midnight.
-
-[Lab 3](https://classroom.github.com/a/WuMupoI-)
-
-::: {.callout-warning collapse="true"}
-# Lab 3 pitfalls
-
-**You will be asked for a URI** enter this: `http://localhost:1410/`
-
-Step 5: part 3. To set the line color do color="green"
-
-For some notes on skew: https://en.wikipedia.org/wiki/Skewness
-
-`geom_bar()` counts whatever variable you give it for x.
-
-reorder(categorical_var, numeric variable, function for reordering)
-
-We'll discuss ethics Monday or Wednesday, read chapter 8.
-:::
-
-<!-- It makes most sense to do this before lab 3. [Polishing Figures](/course-materials/in-class-activies/Lec09In-classExercise-PolishingFigures.zip) -->
+<!-- Quiz 1 due Sunday -->
 
 <!-- ::: {.callout-tip collapse="true"} -->
+<!-- # 3 hours -->
 
-<!-- # working directory -->
+<!-- -   15 questions, open book -->
 
-<!-- You may need to set your working directory. -->
+<!-- -   No collaboration -->
 
-<!-- The easiest way to do this is to find your Lec09-...zip in the file pane and go gear-icon \> "Set As Working Directory" -->
+<!-- -   Score visible next Monday -->
 
+<!-- -   Take quiz through moodle -->
 <!-- ::: -->
 
-# Day 9 Trend Lines, Data.Frames, and RMarkdown Rendering Options
+<!-- [Reading on Git and RStudio](https://r-bio.github.io/intro-git-rstudio/) -->
 
-[Digest Lab 2](./course-materials/lectures/lab-solutions-for-discussion/Lab2_solution_digestion.pdf)
+<!-- Class Git [Practice](https://classroom.github.com/a/U8S5PFOe) -->
 
-[Data Fundamentals](./course-materials/lectures/Making-data-frames.qmd)
+<!-- ## [Project 1](https://classroom.github.com/a/1riUqcQQ) -->
 
-[Rendering options](https://quarto.org/docs/computations/execution-options.html)
+<!-- Project 1 Data Dictionary -->
 
-Simple Linear Regression and Lowess
+<!-- [See moodle for project groups.](https://moodle.smith.edu/pluginfile.php/1681130/mod_resource/content/1/Project%201%20and%202%20Groups.pdf) -->
 
-[Create Trendlines](course-materials/in-class-activies/Lec09In-classExercise-TrendLines.qmd)
+<!-- [Data Ethics](/course-materials/lectures/11_ethics.qmd) -->
 
-# Day 8 Stats and Boxplots
+<!-- # Day 10 Lab 3 -->
 
-## Other things
+<!-- Lab 3 is due next Wednesday by midnight. -->
 
-::: {.callout-note collapse="true"}
-# To activate colors
+<!-- [Lab 3](https://classroom.github.com/a/WuMupoI-) -->
 
-Some students are not getting "red" to be red. Try this: Tools menu \> global options \> code \> display \> "enable preview of named and hex colors
+<!-- ::: {.callout-warning collapse="true"} -->
+<!-- # Lab 3 pitfalls -->
 
-If that doesn't work, [maybe its a bug?](https://github.com/rstudio/rstudio/issues/13118)
-:::
+<!-- **You will be asked for a URI** enter this: `http://localhost:1410/` -->
 
--   the c() function
--   [tidyverse style guide](https://style.tidyverse.org/ggplot2.html)
--   [typing math](https://nics-github.github.io/sds220/latex-in-quarto-template.html)
--   The visual editor vs source editor
--   [Short History of R](./course-materials/lectures/Brief-R-history.qmd)
+<!-- Step 5: part 3. To set the line color do color="green" -->
 
-## Lecture: [Descriptive stats and boxplots](/course-materials/lectures/8-Descriptive-Stats-and-Boxplots.qmd)
+<!-- For some notes on skew: https://en.wikipedia.org/wiki/Skewness -->
 
-## Classwork: MDSR [Chapter 3.5](https://mdsr-book.github.io/mdsr2e/ch-vizII.html#datavizII-exercises) problem 3 and 7
+<!-- `geom_bar()` counts whatever variable you give it for x. -->
 
-::: {.callout-tip collapse="true"}
-## Hints
+<!-- reorder(categorical_var, numeric variable, function for reordering) -->
 
--   you might need to install `mosaicdata`
+<!-- We'll discuss ethics Monday or Wednesday, read chapter 8. -->
+<!-- ::: -->
 
--   look for the correct graph type for 7c on the cheat sheet
-:::
+<!-- <!-- It makes most sense to do this before lab 3. [Polishing Figures](/course-materials/in-class-activies/Lec09In-classExercise-PolishingFigures.zip) --> -->
 
-# Day 7 Lab 2
+<!-- <!-- ::: {.callout-tip collapse="true"} --> -->
 
-[Link to lab 2](https://classroom.github.com/a/OQWAvHYK)
+<!-- <!-- # working directory --> -->
 
-# Day 6 Color theory
+<!-- <!-- You may need to set your working directory. --> -->
 
-::: {.callout-note collapse="FALSE"}
-## Lab requirements
+<!-- <!-- The easiest way to do this is to find your Lec09-...zip in the file pane and go gear-icon \> "Set As Working Directory" --> -->
 
--   All labs (after lab 1) must be rendered to a pdf.
+<!-- <!-- ::: --> -->
 
--   All code for labs must be well commented.
-:::
+<!-- # Day 9 Trend Lines, Data.Frames, and RMarkdown Rendering Options -->
 
-[ggplot cheatsheet](https://github.com/rstudio/cheatsheets/blob/main/data-visualization-2.1.pdf)
+<!-- [Digest Lab 2](./course-materials/lectures/lab-solutions-for-discussion/Lab2_solution_digestion.pdf) -->
 
-## Colors
+<!-- [Data Fundamentals](./course-materials/lectures/Making-data-frames.qmd) -->
 
--   [Prof. Baumer's Color talk](https://beanumber.github.io/sds192/lectures/mdsr_viz_05-color.html)
+<!-- [Rendering options](https://quarto.org/docs/computations/execution-options.html) -->
 
--   Color Brewer [site](https://colorbrewer2.org/#type=sequential&scheme=BuGn&n=3)
+<!-- Simple Linear Regression and Lowess -->
 
--   [Prof. Cao's Lecture on Frequency Plots and Facets](https://scao53.github.io/sds192spring2023/slides/Lec4-FrequencyPlots.html)
+<!-- [Create Trendlines](course-materials/in-class-activies/Lec09In-classExercise-TrendLines.qmd) -->
 
--   [In class exercise](./course-materials/in-class-activies/5_color_theory.qmd)
+<!-- # Day 8 Stats and Boxplots -->
+<!-- I don't think I need to do this day, its covered in 100. -->
+<!-- ## Other things -->
 
-# Day 5 Catch up
+<!-- ::: {.callout-note collapse="true"} -->
+<!-- # To activate colors -->
 
-**Finish work from Day 3.**
+<!-- Some students are not getting "red" to be red. Try this: Tools menu \> global options \> code \> display \> "enable preview of named and hex colors -->
 
-# Day 4 Github lab 1
+<!-- If that doesn't work, [maybe its a bug?](https://github.com/rstudio/rstudio/issues/13118) -->
+<!-- ::: -->
 
-Finish our classwork from Wednesday
+<!-- -   the c() function -->
+<!-- -   [tidyverse style guide](https://style.tidyverse.org/ggplot2.html) -->
+<!-- -   [typing math](https://nics-github.github.io/sds220/latex-in-quarto-template.html) -->
+<!-- -   The visual editor vs source editor -->
+<!-- -   [Short History of R](./course-materials/lectures/Brief-R-history.qmd) -->
 
-::: {.callout-note collapse="true"}
-## Sign into githubclassroom
+<!-- ## Lecture: [Descriptive stats and boxplots](/course-materials/lectures/8-Descriptive-Stats-and-Boxplots.qmd) -->
 
-Link github account to github classroom - sign into github
+<!-- ## Classwork: MDSR [Chapter 3.5](https://mdsr-book.github.io/mdsr2e/ch-vizII.html#datavizII-exercises) problem 3 and 7 -->
 
--   https://classroom.github.com/a/JR8iYUWI for lab 1
+<!-- ::: {.callout-tip collapse="true"} -->
+<!-- ## Hints -->
 
--   find your name in the roster and click it.
+<!-- -   you might need to install `mosaicdata` -->
 
--   You should see lab 1, which we will discuss on Friday.
-:::
+<!-- -   look for the correct graph type for 7c on the cheat sheet -->
+<!-- ::: -->
 
-# Day 3 Taxonomy part 2
+<!-- # Day 7 Lab 2 -->
+
+<!-- [Link to lab 2](https://classroom.github.com/a/OQWAvHYK) -->
+
+<!-- # Day 6 Color theory -->
+
+<!-- ::: {.callout-note collapse="FALSE"} -->
+<!-- ## Lab requirements -->
+
+<!-- -   All labs (after lab 1) must be rendered to a pdf. -->
+
+<!-- -   All code for labs must be well commented. -->
+<!-- ::: -->
+
+<!-- [ggplot cheatsheet](https://github.com/rstudio/cheatsheets/blob/main/data-visualization-2.1.pdf) -->
+
+<!-- ## Colors -->
+
+<!-- -   [Prof. Baumer's Color talk](https://beanumber.github.io/sds192/lectures/mdsr_viz_05-color.html) -->
+
+<!-- -   Color Brewer [site](https://colorbrewer2.org/#type=sequential&scheme=BuGn&n=3) -->
+
+<!-- -   [Prof. Cao's Lecture on Frequency Plots and Facets](https://scao53.github.io/sds192spring2023/slides/Lec4-FrequencyPlots.html) -->
+
+<!-- -   [In class exercise](./course-materials/in-class-activies/5_color_theory.qmd) -->
+
+<!-- # Day 5 Catch up -->
+
+<!-- **Finish work from Day 3.** -->
+
+
+
+# Day 9 Taxonomy part 2
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/IRJ2Ac9vI5o?si=JMeZEIQQNGNBscno" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
 
@@ -683,9 +665,13 @@ Coding Example:
 
 2.  [Solo: linegraph](./course-materials/in-class-activies/3_Line_Graph.qmd)
 
-# Day 2 Taxonomy
+# Day 8 Lab 2
 
-Please complete [this survey](https://smithcollege.qualtrics.com/jfe/form/SV_bJhVbkxf8LPzspw) for Prof. Cao's study.
+
+
+# Day 7 Taxonomy
+
+[Check out lab 3](https://smithcollege-sds.github.io/sds100/lab_03_graphics.html) from sds 100 I might not have to do this. 
 
 ::: {.callout-tip collapse="true"}
 ## For Help
@@ -719,7 +705,68 @@ Help us help you: take screenshots of your screen and post them to Slack.
 
 -   [How R builds a Graph](course-materials/lectures/2How-R-builds-a-graph.qmd)
 
-# Day 1: No Computer Data Viz
+# Day 6: No Computer Data Viz
+
+### Lecture
+
+[Data Viz No Computers](./course-materials/lectures/1first-day-survey/Data-Viz-No-Computers.qmd)
+
+### General Questions and Comments
+
+::: {.callout-note collapse="true"}
+
+## Homework:
+
+-   Read the prologue to chapter 1.4 of MDSR.
+:::
+
+# Day 5 Writing functions
+
+# Day 5 Intro Function Writing
+
+[Lecture: Intro to if, else and functions](course-materials/lectures/23_functions.qmd)
+
+[Function writing practice](./course-materials/in-class-activies/day_25_function_writing.qmd)
+
+# Day 4 Finding Data and Getting Data Into R
+
+Students know how to store variables
+
+Students know about functions and arguments
+
+Errors and warnings and comments
+
+cheatsheets
+
+working directories
+
+getting data into R 
+
+# Day 3 Understanding File Paths
+
+Play with our repository 
+
+Make some of our own class data
+
+# Day 2 Github Lab
+
+Where are we going? 
+
+-   Final project Website
+
+::: {.callout-note collapse="true"}
+## Sign into githubclassroom
+
+Link github account to github classroom - sign into github
+
+-   https://classroom.github.com/a/ERIt75vu for lab 1
+
+-   find your name in the roster and click it.
+
+-   You should see lab 1, which we will discuss on Friday.
+:::
+
+# Day 1 Welcome and Github 
 
 -   [Syllabus](./course-materials/syllabus/syllabus.html)
 
@@ -729,19 +776,14 @@ Help us help you: take screenshots of your screen and post them to Slack.
 
 -   Bring Computers to Class
 
-### Lecture
-
-[Data Viz No Computers](./course-materials/lectures/1first-day-survey/Data-Viz-No-Computers.qmd)
-
-### General Questions and Comments
-
-::: {.callout-note collapse="true"}
-## Homework:
-
 -   Sign up for [github here](https://github.com/), if you don't already have an account. We will very carefully link your github account to our github classroom account.
 
--   Read the prologue to chapter 1.4 of MDSR.
-:::
+-   Intro to github
+
+-   [Github Fundamentals Lab 0](https://classroom.github.com/a/GG36O-3I)
+
+-   [Happy Git and the UseR](https://happygitwithr.com/)
+
 
 ### Walk to MCConnell 213 and 214
 

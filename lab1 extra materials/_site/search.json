@@ -1,0 +1,30 @@
+[
+  {
+    "objectID": "first_map.html",
+    "href": "first_map.html",
+    "title": "1st_Maps",
+    "section": "",
+    "text": "#install.packages(\"maps\")\nlibrary(maps)\nHere are some maps from the map package. 1"
+  },
+  {
+    "objectID": "first_map.html#the-world",
+    "href": "first_map.html#the-world",
+    "title": "1st_Maps",
+    "section": "The world",
+    "text": "The world\n\nmap()"
+  },
+  {
+    "objectID": "first_map.html#the-us",
+    "href": "first_map.html#the-us",
+    "title": "1st_Maps",
+    "section": "The US",
+    "text": "The US\n\nmap(database = \"state\")\n\n\n\n\n\nmap(database = \"state\", regions = \"Massachusetts\")\n\n\n\n\n\nmap(database = \"county\", regions = c(\"Massachusetts\"))\nmap.cities()\n\n\n\n\n\nnew_england &lt;-c('Vermont',\"Massachusetts\",\"Connecticut\", \"Rhode Island\", \"New Hampshire\", \"Maine\")\n\nmap(database = \"county\", regions = new_england)\nmap.cities()"
+  },
+  {
+    "objectID": "first_map.html#footnotes",
+    "href": "first_map.html#footnotes",
+    "title": "1st_Maps",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nhttps://cran.r-project.org/web/packages/maps/maps.pdf↩︎"
+  }
+]
