@@ -1,0 +1,9 @@
+---
+title: "website"
+---
+
+This is a Quarto website.
+
+To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+
+[This is a link to your map](first_map.qmd)

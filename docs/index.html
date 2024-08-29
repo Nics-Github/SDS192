@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.4.555">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Nicholas Schwab">
-<meta name="dcterms.date" content="2024-04-24">
+<meta name="dcterms.date" content="2024-08-29">
 
 <title>SDS 192 - SDS 192: Intro to Data Science</title>
 <style>
@@ -21,40 +21,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -84,7 +50,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -93,6 +65,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
@@ -107,9 +80,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">SDS 192</span>
     </a>
@@ -121,102 +94,77 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./course-materials/website/Resources.html" rel="" target="">
- <span class="menu-text">Resources</span></a>
+    <a class="nav-link" href="./course-materials/website/Resources.html"> 
+<span class="menu-text">Resources</span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://mdsr-book.github.io/mdsr3e/" rel="" target=""><i class="bi bi-book" role="img">
+    <a class="nav-link" href="https://mdsr-book.github.io/mdsr3e/"> <i class="bi bi-book" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="https://moderndive.com/C-appendixC.html" rel="" target="">
- <span class="menu-text">T &amp; T</span></a>
+    <a class="nav-link" href="https://moderndive.com/C-appendixC.html"> 
+<span class="menu-text">T &amp; T</span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://www.slack.com" rel="" target=""><i class="bi bi-slack" role="img">
+    <a class="nav-link" href="https://www.slack.com"> <i class="bi bi-slack" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="https://rstudio.smith.edu/auth-sign-in?appUri=%2F" rel="" target="">
- <span class="menu-text">R</span></a>
+    <a class="nav-link" href="https://rstudio.smith.edu/auth-sign-in?appUri=%2F"> 
+<span class="menu-text">R</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="https://moodle.smith.edu/" rel="" target="">
- <span class="menu-text">m</span></a>
+    <a class="nav-link" href="https://moodle.smith.edu/"> 
+<span class="menu-text">m</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
-    <a class="nav-link" href="https://classroom.github.com/classrooms/144164606-sds-192-f23-sections-02-03" rel="" target=""><i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://classroom.github.com/classrooms/144164606-sds-192-f23-sections-02-03"> <i class="bi bi-github" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="././course-materials/syllabus/syllabus.html" rel="" target="">
- <span class="menu-text">Syllabus</span></a>
+    <a class="nav-link" href="././course-materials/syllabus/syllabus.html"> 
+<span class="menu-text">Syllabus</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./course-materials/website/schwab.html" rel="" target="">
- <span class="menu-text">Schwab</span></a>
+    <a class="nav-link" href="./course-materials/website/schwab.html"> 
+<span class="menu-text">Schwab</span></a>
   </li>  
 </ul>
-            <div class="quarto-navbar-tools">
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
-          </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#schedule" id="toc-schedule" class="nav-link active" data-scroll-target="#schedule">Schedule</a></li>
-  <li><a href="#day-36" id="toc-day-36" class="nav-link" data-scroll-target="#day-36">Day 36</a></li>
-  <li><a href="#day-35" id="toc-day-35" class="nav-link" data-scroll-target="#day-35">Day 35</a></li>
-  <li><a href="#day-34-sql-lab" id="toc-day-34-sql-lab" class="nav-link" data-scroll-target="#day-34-sql-lab">Day 34 SQL lab</a></li>
-  <li><a href="#day-33-sql-with-tim" id="toc-day-33-sql-with-tim" class="nav-link" data-scroll-target="#day-33-sql-with-tim">Day 33 SQL with Tim</a></li>
-  <li><a href="#day-32-sql-with-tim" id="toc-day-32-sql-with-tim" class="nav-link" data-scroll-target="#day-32-sql-with-tim">Day 32 SQL with Tim</a></li>
-  <li><a href="#day-31-project-3" id="toc-day-31-project-3" class="nav-link" data-scroll-target="#day-31-project-3">Day 31 Project 3</a></li>
-  <li><a href="#day-30-lab-7-mapping-monarchs." id="toc-day-30-lab-7-mapping-monarchs." class="nav-link" data-scroll-target="#day-30-lab-7-mapping-monarchs.">Day 30 Lab 7 Mapping Monarchs.</a></li>
-  <li><a href="#day-29-choropleth-mapping-and-leaflet" id="toc-day-29-choropleth-mapping-and-leaflet" class="nav-link" data-scroll-target="#day-29-choropleth-mapping-and-leaflet">Day 29 Choropleth Mapping and Leaflet</a></li>
-  <li><a href="#day-28-sal-guests" id="toc-day-28-sal-guests" class="nav-link" data-scroll-target="#day-28-sal-guests">Day 28 SAL guests</a></li>
-  <li><a href="#day-27-mapping-with-simple-features-sf-and-shape-files" id="toc-day-27-mapping-with-simple-features-sf-and-shape-files" class="nav-link" data-scroll-target="#day-27-mapping-with-simple-features-sf-and-shape-files">Day 27 Mapping with simple features (sf) and shape files</a></li>
-  <li><a href="#day-26-static-mapping-part-1" id="toc-day-26-static-mapping-part-1" class="nav-link" data-scroll-target="#day-26-static-mapping-part-1">Day 26 Static Mapping part 1</a></li>
-  <li><a href="#day-25-lab-6" id="toc-day-25-lab-6" class="nav-link" data-scroll-target="#day-25-lab-6">Day 25 Lab 6</a></li>
-  <li><a href="#day-24-iteration" id="toc-day-24-iteration" class="nav-link" data-scroll-target="#day-24-iteration">Day 24 Iteration</a></li>
-  <li><a href="#day-23-function-writing" id="toc-day-23-function-writing" class="nav-link" data-scroll-target="#day-23-function-writing">Day 23 Function Writing</a></li>
-  <li><a href="#day-22-project-2" id="toc-day-22-project-2" class="nav-link" data-scroll-target="#day-22-project-2">Day 22 Project 2</a></li>
-  <li><a href="#day-21-project-2" id="toc-day-21-project-2" class="nav-link" data-scroll-target="#day-21-project-2">Day 21 Project 2</a></li>
-  <li><a href="#day-20-pivots" id="toc-day-20-pivots" class="nav-link" data-scroll-target="#day-20-pivots">Day 20 Pivots</a></li>
-  <li><a href="#day-19-lab-5" id="toc-day-19-lab-5" class="nav-link" data-scroll-target="#day-19-lab-5">Day 19 Lab 5</a></li>
-  <li><a href="#day-18-joining-tables-cont." id="toc-day-18-joining-tables-cont." class="nav-link" data-scroll-target="#day-18-joining-tables-cont.">Day 18 Joining Tables cont.</a></li>
-  <li><a href="#day-17-joining-tables" id="toc-day-17-joining-tables" class="nav-link" data-scroll-target="#day-17-joining-tables">Day 17 Joining tables</a></li>
-  <li><a href="#day-16-lab-4" id="toc-day-16-lab-4" class="nav-link" data-scroll-target="#day-16-lab-4">Day 16 Lab 4</a></li>
-  <li><a href="#day-15-wrangling" id="toc-day-15-wrangling" class="nav-link" data-scroll-target="#day-15-wrangling">Day 15 Wrangling</a></li>
-  <li><a href="#day-13-and-14-project-1" id="toc-day-13-and-14-project-1" class="nav-link" data-scroll-target="#day-13-and-14-project-1">Day 13 and 14 Project 1</a></li>
-  <li><a href="#day-12-ethics" id="toc-day-12-ethics" class="nav-link" data-scroll-target="#day-12-ethics">Day 12 Ethics</a></li>
-  <li><a href="#day-11-markdown-and-github" id="toc-day-11-markdown-and-github" class="nav-link" data-scroll-target="#day-11-markdown-and-github">Day 11 Markdown and Github</a></li>
-  <li><a href="#day-10-lab-3" id="toc-day-10-lab-3" class="nav-link" data-scroll-target="#day-10-lab-3">Day 10 Lab 3</a></li>
-  <li><a href="#day-9-trend-lines-data.frames-and-rmarkdown-rendering-options" id="toc-day-9-trend-lines-data.frames-and-rmarkdown-rendering-options" class="nav-link" data-scroll-target="#day-9-trend-lines-data.frames-and-rmarkdown-rendering-options">Day 9 Trend Lines, Data.Frames, and RMarkdown Rendering Options</a></li>
-  <li><a href="#day-8-stats-and-boxplots" id="toc-day-8-stats-and-boxplots" class="nav-link" data-scroll-target="#day-8-stats-and-boxplots">Day 8 Stats and Boxplots</a></li>
-  <li><a href="#day-7-lab-2" id="toc-day-7-lab-2" class="nav-link" data-scroll-target="#day-7-lab-2">Day 7 Lab 2</a></li>
-  <li><a href="#day-6-color-theory" id="toc-day-6-color-theory" class="nav-link" data-scroll-target="#day-6-color-theory">Day 6 Color theory</a></li>
-  <li><a href="#day-5-catch-up" id="toc-day-5-catch-up" class="nav-link" data-scroll-target="#day-5-catch-up">Day 5 Catch up</a></li>
-  <li><a href="#day-4-github-lab-1" id="toc-day-4-github-lab-1" class="nav-link" data-scroll-target="#day-4-github-lab-1">Day 4 Github lab 1</a></li>
-  <li><a href="#day-3-taxonomy-part-2" id="toc-day-3-taxonomy-part-2" class="nav-link" data-scroll-target="#day-3-taxonomy-part-2">Day 3 Taxonomy part 2</a></li>
-  <li><a href="#day-2-taxonomy" id="toc-day-2-taxonomy" class="nav-link" data-scroll-target="#day-2-taxonomy">Day 2 Taxonomy</a></li>
-  <li><a href="#day-1-no-computer-data-viz" id="toc-day-1-no-computer-data-viz" class="nav-link" data-scroll-target="#day-1-no-computer-data-viz">Day 1: No Computer Data Viz</a></li>
+  <li><a href="#professor-garcia." id="toc-professor-garcia." class="nav-link active" data-scroll-target="#professor-garcia.">Professor Garcia.</a></li>
+  <li><a href="#day-9-taxonomy-part-2" id="toc-day-9-taxonomy-part-2" class="nav-link" data-scroll-target="#day-9-taxonomy-part-2">Day 9 Taxonomy part 2</a></li>
+  <li><a href="#day-8-lab-2" id="toc-day-8-lab-2" class="nav-link" data-scroll-target="#day-8-lab-2">Day 8 Lab 2</a></li>
+  <li><a href="#day-7-taxonomy" id="toc-day-7-taxonomy" class="nav-link" data-scroll-target="#day-7-taxonomy">Day 7 Taxonomy</a></li>
+  <li><a href="#day-6-no-computer-data-viz" id="toc-day-6-no-computer-data-viz" class="nav-link" data-scroll-target="#day-6-no-computer-data-viz">Day 6: No Computer Data Viz</a></li>
+  <li><a href="#day-5-writing-functions" id="toc-day-5-writing-functions" class="nav-link" data-scroll-target="#day-5-writing-functions">Day 5 Writing functions</a></li>
+  <li><a href="#day-5-intro-function-writing" id="toc-day-5-intro-function-writing" class="nav-link" data-scroll-target="#day-5-intro-function-writing">Day 5 Intro Function Writing</a></li>
+  <li><a href="#day-4-finding-data-and-getting-data-into-r" id="toc-day-4-finding-data-and-getting-data-into-r" class="nav-link" data-scroll-target="#day-4-finding-data-and-getting-data-into-r">Day 4 Finding Data and Getting Data Into R</a></li>
+  <li><a href="#day-3-understanding-file-paths" id="toc-day-3-understanding-file-paths" class="nav-link" data-scroll-target="#day-3-understanding-file-paths">Day 3 Understanding File Paths</a></li>
+  <li><a href="#day-2-github-lab" id="toc-day-2-github-lab" class="nav-link" data-scroll-target="#day-2-github-lab">Day 2 Github Lab</a></li>
+  <li><a href="#day-1-welcome-and-github" id="toc-day-1-welcome-and-github" class="nav-link" data-scroll-target="#day-1-welcome-and-github">Day 1 Welcome and Github</a></li>
   </ul>
 </nav>
 </nav>
-<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
     </div>
@@ -242,7 +190,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">April 24, 2024</p>
+      <p class="date">August 29, 2024</p>
     </div>
   </div>
   
@@ -250,324 +198,238 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </div>
   
 
+
 </header>
 
-<style>
-h1{font-weight: 400;}
-</style>
-<style>
-h1{font-weight: 400;}
-</style>
-<section id="schedule" class="level1">
-<h1>Schedule</h1>
 
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTG_b6upDZcPxXB92LHYIhV1uAXgeVGaMsZ3sDRPuSQN74JdhkKhZQVjw6T68I3zsP8KGYzDSVTZW64/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false&amp;gid=0&amp;range=A1:E44
-" width="100%" height="400">
-</iframe>
-<!-- # Day 39 Final project work day 2.  -->
-<!-- Project 3 was due Monday and I have begun grading them.  -->
-<!-- The final Project is due tomorrow at midnight. I will have normal office hours tomorrow.  -->
-<!-- [Engagment form](https://forms.gle/boWjkJaGBtCG8c769) due by last day of classes.  -->
-<!-- Please fill out [this course exit poll.](https://forms.gle/boHygMf48DCXk6bZA) -->
-<!-- # Day 38 Project 3 Day -->
-<!-- # Day 37 Project 3 day -->
-<!-- # Day 36 Project 3 day -->
-<!-- [Engagment form](https://forms.gle/boWjkJaGBtCG8c769) due by last day of classes.  -->
-<!-- # Day 35 SAL guests -->
+<!-- ```{=html} -->
+<!-- <style> -->
+<!-- h1{font-weight: 400;} -->
+<!-- </style> -->
+<!-- ``` -->
+<!-- ```{r setup, include=FALSE} -->
+<!-- knitr::opts_chunk$set( -->
+<!--   echo = TRUE, message=FALSE, warning = FALSE, eval = TRUE,  -->
+<!--   fig.width = 16/2, fig.height = 9/2 -->
+<!-- ) -->
+<!-- # tidyverse R packages: -->
+<!-- library(tidyverse) -->
+<!-- library(mdsr) -->
+<!-- # CRAN R packages: -->
+<!-- library(knitr) -->
+<!-- library(fivethirtyeight) -->
+<!-- library(nycflights13) -->
+<!-- library(gapminder) -->
+<!-- library(babynames) -->
+<!-- library(scales) -->
+<!-- library(moderndive) -->
+<!-- library(maps) -->
+<!-- library(mapproj) -->
+<!-- library(patchwork) -->
+<!-- # Set seed value of random number generator to get "replicable" random numbers. -->
+<!-- # Why 76? Because of https://www.youtube.com/watch?v=xjJ7FheCkCU -->
+<!-- set.seed(76) -->
+<!-- ``` -->
+<!-- ```{=html} -->
+<!-- <style> -->
+<!-- h1{font-weight: 400;} -->
+<!-- </style> -->
+<!-- ``` -->
+<!-- # Schedule -->
+<!-- ```{=html} -->
+<!-- <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTG_b6upDZcPxXB92LHYIhV1uAXgeVGaMsZ3sDRPuSQN74JdhkKhZQVjw6T68I3zsP8KGYzDSVTZW64/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false&amp;gid=0&amp;range=A1:E44 -->
+<!-- " width="100%" height="400"> -->
+<!-- ``` -->
+<!-- </iframe> -->
+<!-- # Day 38  -->
+<!-- [Prof Cao's Post Course Survey](https://smithcollege.qualtrics.com/jfe/form/SV_dh7rSgiH2AvNUj4) -->
+<!-- ::: {.callout-note collapse="FALSE"} -->
+<!-- #Couple notes on website building  -->
+<!-- -   Publishing the website -->
+<!-- -   Adjusting the theme -->
+<!-- -   Changing the icon -->
+<!-- ::: -->
+<!-- Website/Project 3 work day.  -->
+<!-- Late work for labs 5,6,7 and 8 is due Wednesday May 1. [Fill out this form](https://forms.gle/VJZy56Y5GStmgjtC8) -->
+<!-- # Day 37 -->
+<!-- [Prof Cao's Post Course Survey](https://smithcollege.qualtrics.com/jfe/form/SV_dh7rSgiH2AvNUj4) -->
+<!-- Intro to website building.  -->
+<!-- [Final project.](https://classroom.github.com/a/LGiuwAy_)  -->
+<!-- # Day 36  -->
+<!-- [Prof Cao's Post Course Survey](https://smithcollege.qualtrics.com/jfe/form/SV_dh7rSgiH2AvNUj4) -->
+<!-- Project 3 work day.  -->
+<!-- # Day 35 -->
+<!-- Project 3 work day.  -->
+<!-- Professor Garcia -->
+<!-- # Day 34 SQL lab -->
+<!-- Prof Cao will be in to help with the lab.  -->
+<!-- [Tim made a schema for imdb](./course-materials/lectures/32_Tim_s_SQL/imdb_schema.pdf) -->
+<!-- [Lab 8 SQL](https://classroom.github.com/a/ehcYv9eT) -->
+<!-- # Day 33 SQL in R -->
+<!-- [SQL part 2](./course-materials/in-class-activies/33_SQL-examples.qmd) -->
+<!-- [dbplyr introduction](https://dbplyr.tidyverse.org/articles/dbplyr.html) -->
+<!-- # Day 32 SQL with Tim Martyn -->
+<!-- [SQL part 1](./course-materials/lectures/32_Tim_s_SQL/Smith-Part-I.pdf) -->
+<!-- [SQL starter code](./course-materials/in-class-activies/32_SQL_starter_code.qmd) -->
+<!-- [SQL Notes](./course-materials/lectures/32_Tim_s_SQL/Smith-SQL-Notes-I.pdf) -->
+<!-- # Day 31 Project 3 -->
+<!-- Leaflet Example -->
+<!-- [Project 3](https://classroom.github.com/a/9QKu_fCl) -->
+<!-- Quiz 3 is available and due by Sunday. -->
+<!-- # Day 30 Lab 7 Mapping Monarchs.  -->
+<!-- [Here is the lab for today.](https://classroom.github.com/a/ozqRg4gy)  -->
+<!-- It is due next Wednesday.  -->
+<!-- # Day 29 Choropleth Mapping and Leaflet -->
+<!-- [Choropleth Mapping](./course-materials/in-class-activies/29_Choropleth_and_Leaflet.qmd) -->
+<!-- # Day 28 SAL guests -->
 <!-- [Jon Caris and Kala'i Ellis](https://docs.google.com/presentation/d/1yxMAglQLNAWok3_xqPgMCqxa2g1IlsPHXeu04iT9BZs/edit?usp=sharing) -->
-<!-- # Day 34 Final Project work Day 1 -->
-<!-- [Here's the link to the final project via moodle](https://moodle.smith.edu/mod/url/view.php?id=1116437) -->
-<!-- You will have Dec 13 to work on this in class as well.  -->
-<!-- Monday we will have [Jon Caris and Kala'i Ellis](https://www.science.smith.edu/sal/people-of-sal/) from Smith's [Spatial Analysis Lab](https://www.science.smith.edu/sal/) talk about mapping. -->
-<!-- [Spenlli Center wants some feedback on tutoring](https://docs.google.com/forms/d/e/1FAIpQLScaFw8W2yCrmK5KVyDbEtBzbA8-rHFFj-2PxqK557RyKlpwhg/viewform) -->
-<!-- # Day 33 SQL -->
-<!-- ![](JC_promo_slide_updated.png) -->
-<!-- [Fill out this survey](https://smithcollege.qualtrics.com/jfe/form/SV_bf6ZnwCkNwM8xfM) -->
-<!-- Read Chapter 15 in [MDSR](https://mdsr-book.github.io/mdsr3e/15-sqlI.html) -->
-<!-- ::: {.callout-note collapse="true"} -->
-<!-- # Final Project -->
-<!-- Basic Outline: -->
-<!-- -   Develop a question about database on Smith's SQL server. -->
-<!-- -   Make at least one 5 (or more) line query in SQL to help answer that question. -->
-<!-- -   Other wrangling in R. Must join, iterate, or create a function. -->
-<!-- -   Produce one well put together graph/ map. -->
-<!-- -   Short write up (200-300 words). -->
-<!-- -   Working alone -->
-<!-- Due Dec 14 by midnight -->
-<!-- ::: -->
-<!-- [Intro to SQL](course-materials/lectures/SQL-example-information-schema.qmd) -->
-<!-- SDS 261 SQL for Data Science -->
-<!-- # Day 32 Talk with Becky -->
-<!-- [Project 3 partnership](https://forms.gle/Ltn9E2ChG8w2fGcw9) -->
-<!-- ::: {.callout-note collapse="true"} -->
-<!-- # Project 3 -->
-<!-- Partner and data set due today at midnight. -->
-<!-- If you want help finding a partner still fill out form. -->
-<!-- If you have a partner fill out form. -->
-<!-- [Here is the partner form](https://forms.gle/Ltn9E2ChG8w2fGcw9) -->
-<!-- I'm making partners tomorrow. -->
-<!-- [Here are some possible data examples](data_for_mapping.qmd) -->
-<!-- ::: -->
-<!-- Courtesy notes before talk with Becky. -->
-<!-- Introduce Becky Sweger. -->
-<!-- ::: {.callout-note collapse="false"} -->
-<!-- # Becky's links -->
-<!-- [DS links](https://docs.google.com/document/d/1VoeRatxdytSHQoY24LtGRpw0kjc0W9sfh1V4Bq8rfkw/edit) -->
-<!-- ::: -->
-<!-- # Day 31 Lab 7 -->
-<!-- [Intro to Project 3](https://moodle.smith.edu/). -->
-<!-- ::: {.callout-note collapse="false"} -->
-<!-- # Project 3 -->
-<!-- Partner and data set due next Monday. -->
-<!-- If you want help finding a partner let me know. -->
-<!-- [Here is the partner form](https://forms.gle/Ltn9E2ChG8w2fGcw9) -->
-<!-- ::: -->
-<!-- Outline for the rest of the course. -->
-<!-- [Lab 7](https://moodle.smith.edu) -->
-<!-- # Day 30 More Maps -->
-<!-- Lab 6 Due Tonight -->
-<!-- Lab 7 on Mapping is Monday -->
-<!-- [discuss first few problems](/docs/course-materials/in-class-activies/Mapping/Lec30-32In-classExercises-Mapping.qmd) -->
-<!-- [Intro to leaflet](/course-materials/lectures/day-30-leaflet.qmd) -->
-<!-- [More leaflet tiles](https://leaflet-extras.github.io/leaflet-providers/preview/) -->
-</section>
-<section id="day-36" class="level1">
-<h1>Day 36</h1>
-<p>Project work day.</p>
-</section>
-<section id="day-35" class="level1">
-<h1>Day 35</h1>
-<p>The last quiz is posted, there is no time limit it is due Wednesday May 8.</p>
+<!-- Project 2 due today by midnight.  -->
+<!-- # Day 27 Mapping with simple features (sf) and shape files -->
+<!-- Simple features and Shape files.  -->
+<!-- -   [Vermont's Geospacial Data](https://geodata.vermont.gov/) -->
+<!-- -   [MA Bike Trails](https://www.mass.gov/info-details/massgis-data-bicycle-trails) -->
+<!-- -   [tidygeocoder services](https://jessecambon.github.io/tidygeocoder/articles/geocoder_services.html) -->
+<!-- [In class activity](./course-materials/in-class-activies/27_mapping.zip) -->
+<!-- # Day 26 Static Mapping part 1 -->
+<!-- Announcements -->
+<!-- -   Advising sessions to declare your major -->
+<!-- [Example: static maps](./course-materials/lectures/26_maps-ggplot.qmd) -->
+<!-- <!-- # Day 27 `map()` and `across()` practice -->
+<p>–&gt;</p>
+<!-- <!-- Project time -->
+<p>–&gt;</p>
+<!-- <!-- ::: {.callout-tip collapse="true"} -->
+<p>–&gt;</p>
+<!-- <!-- # Reminder Project 2 due Friday -->
+<p>–&gt;</p>
+<!-- <!-- Project 2 notes: -->
+<p>–&gt;</p>
+<!-- <!-- -   Project 2 due Friday -->
+<p>–&gt;</p>
+<!-- <!-- -   **Render** your project -->
+<p>–&gt;</p>
+<!-- <!-- -   **Comment** your code in `fec_analysis.qmd` -->
+<p>–&gt;</p>
+<!-- <!-- -   Make your code readable with spaces and short lines -->
+<p>–&gt;</p>
+<!-- <!-- -   `filter( == )` vs `filter( %in% )` -->
+<p>–&gt;</p>
+<!-- <!-- ::: -->
+<p>–&gt;</p>
+<!-- # Day 25 Lab 6 -->
+<!-- Two announcements -->
+<!-- -   [Advising Fair](/course-materials/images/SDS-Advising-Fair-1-Portrait.pdf)  -->
+<!--   -   Dates Wednesday April 3 and Thursday April 4.  -->
+<!--   -   [Here is the virtual POM](https://smith.zoom.us/rec/play/jGGNU4b4YFudw1pc9BhDC5fAvNVAFJ-Btd45G0zt8iCMUbHNu37Ui56gyyXGlQGhlQ5FHWphKABMTCk_.VUDGMGY8iqpz8zMw?canPlayFromShare=true&from=share_recording_detail&startTime=1711632679000&componentName=rec-play&originRequestUrl=https%3A%2F%2Fsmith.zoom.us%2Frec%2Fshare%2FMLfUh3jeCdMbYuveLxaHea3lXH6lC-NWUQCSZRqOxP_RU7ULp_7xgHHlsBSYEpeQ.lqOHQFIpwaVmMyZA%3FstartTime%3D1711632679000) -->
+<!--   -   More info on the major at [this site](https://docs.google.com/document/d/1FY2vdUIQKBC2VlXfY1NkkBPWHJADH0O1ukUPMU02xRE/edit#heading=h.dg2gqkumg3ys). -->
+<!-- -   [Guest Speaker](/course-materials/images/Guest-Speaker-Professor-Shu-Min-Liao.pdf) -->
+<!-- [Lab 6](https://classroom.github.com/a/7ehigFea) is due next Wednesday 4/3/2024 -->
+<!-- # Day 24 Iteration -->
+<!-- [Solution to Monday's in class activity](/course-materials/in-class-activies/day_25solutions_function_writing.html) -->
+<!-- [Lecture: `across()` and `map()`](course-materials/lectures/24_across_maps.qmd) -->
+<!-- [In class activity](./course-materials/in-class-activies/24_In-classExercise-Iteration.qmd) -->
+<!-- [More on masking](https://rlang.r-lib.org/reference/topic-data-mask.html) -->
+<!-- <!-- Reminder lab-5 is due Wednesday. -->
+<p>–&gt;</p>
+<!-- <!-- [Introduce Project 2](https://moodle.smith.edu/) -->
+<p>–&gt;</p>
+<!-- <!-- Time to get familiar with `fec20` -->
+<p>–&gt;</p>
+<!-- <!-- # Day 20 Cleaning -->
+<p>–&gt;</p>
+<!-- <!-- Warm up: table2 -->
+<p>–&gt;</p>
+<!-- <!-- [Cleaning Data](course-materials/lectures/Day_20_tidying.qmd) -->
+<p>–&gt;</p>
+<!-- <!-- Let's clean up `billboard` -->
+<p>–&gt;</p>
+<!-- <!-- # Day 19 Tidy Data -->
+<p>–&gt;</p>
+<!-- <!-- Chapter 5 problem 4 solutions -->
+<p>–&gt;</p>
+<!-- <!-- #### 4a The oldest plane to fly from NYC is a Douglas with tailnum: -->
+<p>–&gt;</p>
+<!-- <!-- ```{r A-solution-to-problem-4} -->
+<p>–&gt;</p>
+<!-- <!-- #| echo: false -->
+<p>–&gt;</p>
+<!-- <!-- #| eval: true -->
+<p>–&gt;</p>
+<!-- <!-- library(nycflights13) -->
+<p>–&gt;</p>
+<!-- <!-- planes |> inner_join(flights, by = "tailnum") |> -->
+<p>–&gt;</p>
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD The last quiz is posted, there is no time limit it is due Wednesday May 8.</p>
 <p>Also late work for labs 5,6,7 and 8 is due next Wednesday May 1. <a href="https://forms.gle/VJZy56Y5GStmgjtC8">Fill out this form</a>.</p>
 <p>Project 3 work day.</p>
-<p>Professor Garcia.</p>
-</section>
-<section id="day-34-sql-lab" class="level1">
-<h1>Day 34 SQL lab</h1>
-<p>Lab 8 SQL</p>
-<p>Prof Cao</p>
-</section>
-<section id="day-33-sql-with-tim" class="level1">
-<h1>Day 33 SQL with Tim</h1>
-</section>
-<section id="day-32-sql-with-tim" class="level1">
-<h1>Day 32 SQL with Tim</h1>
-</section>
-<section id="day-31-project-3" class="level1">
-<h1>Day 31 Project 3</h1>
-<p>Leaflet Example</p>
-<p><a href="https://classroom.github.com/a/9QKu_fCl">Project 3</a></p>
-<p>Quiz 3 is available and due by Sunday.</p>
-</section>
-<section id="day-30-lab-7-mapping-monarchs." class="level1">
-<h1>Day 30 Lab 7 Mapping Monarchs.</h1>
-<p><a href="https://classroom.github.com/a/ozqRg4gy">Here is the lab for today.</a></p>
-<p>It is due next Wednesday.</p>
-</section>
-<section id="day-29-choropleth-mapping-and-leaflet" class="level1">
-<h1>Day 29 Choropleth Mapping and Leaflet</h1>
-<p><a href="./course-materials/in-class-activies/29_Choropleth_and_Leaflet.qmd">Choropleth Mapping</a></p>
-</section>
-<section id="day-28-sal-guests" class="level1">
-<h1>Day 28 SAL guests</h1>
-<p><a href="https://docs.google.com/presentation/d/1yxMAglQLNAWok3_xqPgMCqxa2g1IlsPHXeu04iT9BZs/edit?usp=sharing">Jon Caris and Kala’i Ellis</a></p>
-<p>Project 2 due today by midnight.</p>
-</section>
-<section id="day-27-mapping-with-simple-features-sf-and-shape-files" class="level1">
-<h1>Day 27 Mapping with simple features (sf) and shape files</h1>
-<p>Simple features and Shape files.</p>
-<ul>
-<li><p><a href="https://geodata.vermont.gov/">Vermont’s Geospacial Data</a></p></li>
-<li><p><a href="https://www.mass.gov/info-details/massgis-data-bicycle-trails">MA Bike Trails</a></p></li>
-<li><p><a href="https://jessecambon.github.io/tidygeocoder/articles/geocoder_services.html">tidygeocoder services</a></p></li>
-</ul>
-<p><a href="./course-materials/in-class-activies/27_mapping.zip">In class activity</a></p>
-</section>
-<section id="day-26-static-mapping-part-1" class="level1">
-<h1>Day 26 Static Mapping part 1</h1>
-<p>Announcements</p>
-<ul>
-<li>Advising sessions to declare your major</li>
-</ul>
-<p><a href="./course-materials/lectures/26_maps-ggplot.html">Example: static maps</a></p>
-<!-- # Day 27 `map()` and `across()` practice -->
-<!-- Project time -->
+<section id="professor-garcia." class="level1">
+<h1>Professor Garcia.</h1>
+<!-- <!--   arrange(year.x) |> -->
+<p>–&gt;</p>
+<!-- <!--   filter(tailnum == "N381AA") |> -->
+<p>–&gt; &gt;&gt;&gt;&gt;&gt;&gt;&gt; 36f86241f868e0df4f122d87aa97cab6c0bf0df4</p>
+<!-- <!--   select(tailnum)|> -->
+<p>–&gt;</p>
+<!-- <!--   head(1) -->
+<p>–&gt;</p>
+<!-- <!-- ``` -->
+<p>–&gt;</p>
+<!-- <!-- #### 4b The number of planes included in planes that flew from NYC is: -->
+<p>–&gt;</p>
+<!-- <!-- ```{r solution-to-4b} -->
+<p>–&gt;</p>
+<!-- <!-- #| echo: false -->
+<p>–&gt;</p>
+<!-- <!-- #| eval: true -->
+<p>–&gt;</p>
+<!-- <!-- library(nycflights13) -->
+<p>–&gt;</p>
+<!-- <!-- planes |> inner_join(flights, by = "tailnum") |> -->
+<p>–&gt;</p>
+<!-- <!--   count(tailnum) |> -->
+<p>–&gt;</p>
+<!-- <!--   nrow() -->
+<p>–&gt;</p>
+<!-- <!-- ``` -->
+<p>–&gt;</p>
+<!-- # Day 22 Project 2 -->
+<!-- # Day 21 Project 2 -->
+<!-- Here's the link to join [project 2](https://classroom.github.com/a/YUonEUOS) -->
+<!-- See your new groups on moodle. -->
+<!-- # Day 20 Pivots -->
+<!-- Late/ unrendered work can be pushed to github for a 10% penalty by Friday March 15. [Fill out this form for regrading.](https://forms.gle/JjExv5NVDwEvywgi8) -->
+<!-- [Pivots](course-materials/lectures/18_pivots.qmd) -->
+<!-- We'll do Problems [Chapter 4: 1,2,5,9,(12)](https://mdsr-book.github.io/mdsr3e/04-dataI.html#dataI-exercises) in class today. [Chapter 5: 3,4](https://mdsr-book.github.io/mdsr3e/05-joins.html#join-exercises) -->
+<!-- # Day 19 Lab 5 -->
+<!-- Quiz 2 is open and due the Sunday before break. (Do it after pivot tables next week). -->
+<!-- Here is [lab 5](https://classroom.github.com/a/BNYDfmiq) it is due next Wednesday -->
+<!-- # Day 18 Joining Tables cont. -->
+<!-- Continue our exploration of joining tables. -->
+<!-- [Problems 1, 3](https://mdsr-book.github.io/mdsr3e/05-joins.html#join-exercises) -->
+<!-- [Joining two tables in class exercise](https://scao53.github.io/sds192spring2023/in-class_exercises/Lec17In-classExercise-JoinTables.zip) -->
+<!-- # Day 17 Joining tables -->
+<!-- Monday's office hours moved to Wednesday. -->
 <!-- ::: {.callout-tip collapse="true"} -->
-<!-- # Reminder Project 2 due Friday -->
-<!-- Project 2 notes: -->
-<!-- -   Project 2 due Friday -->
-<!-- -   **Render** your project -->
-<!-- -   **Comment** your code in `fec_analysis.qmd` -->
-<!-- -   Make your code readable with spaces and short lines -->
-<!-- -   `filter( == )` vs `filter( %in% )` -->
+<!-- # lab 4 rendering/submission issues -->
+<!-- rendering: -->
+<!-- -   Note on `#| eval: FALSE` in lab 4 (due Friday) -->
+<!-- gitignore: -->
+<!-- If you tried to push the `sqf_2011.csv` to github you probably got an error. -->
+<!-- -   First save your qmd somewhere. -->
+<!-- -   Uncommit your commit with `git reset --hard HEAD^` or `git reset --hard HEAD~2` -->
+<!-- -   You may need to add a `.gitignore` file. -->
+<!-- -   Open `.gitignore` and add `sqf_2011.csv` to it. -->
 <!-- ::: -->
-</section>
-<section id="day-25-lab-6" class="level1">
-<h1>Day 25 Lab 6</h1>
-<p>Two announcements</p>
-<ul>
-<li><p><a href="./course-materials/images/SDS-Advising-Fair-1-Portrait.pdf">Advising Fair</a></p></li>
-<li><p>Dates Wednesday April 3 and Thursday April 4.</p></li>
-<li><p><a href="https://smith.zoom.us/rec/play/jGGNU4b4YFudw1pc9BhDC5fAvNVAFJ-Btd45G0zt8iCMUbHNu37Ui56gyyXGlQGhlQ5FHWphKABMTCk_.VUDGMGY8iqpz8zMw?canPlayFromShare=true&amp;from=share_recording_detail&amp;startTime=1711632679000&amp;componentName=rec-play&amp;originRequestUrl=https%3A%2F%2Fsmith.zoom.us%2Frec%2Fshare%2FMLfUh3jeCdMbYuveLxaHea3lXH6lC-NWUQCSZRqOxP_RU7ULp_7xgHHlsBSYEpeQ.lqOHQFIpwaVmMyZA%3FstartTime%3D1711632679000">Here is the virtual POM</a></p></li>
-<li><p>More info on the major at <a href="https://docs.google.com/document/d/1FY2vdUIQKBC2VlXfY1NkkBPWHJADH0O1ukUPMU02xRE/edit#heading=h.dg2gqkumg3ys">this site</a>.</p></li>
-<li><p><a href="./course-materials/images/Guest-Speaker-Professor-Shu-Min-Liao.pdf">Guest Speaker</a></p></li>
-</ul>
-<p><a href="https://classroom.github.com/a/7ehigFea">Lab 6</a> is due next Wednesday 4/3/2024</p>
-</section>
-<section id="day-24-iteration" class="level1">
-<h1>Day 24 Iteration</h1>
-<p><a href="./course-materials/in-class-activies/day_25solutions_function_writing.html">Solution to Monday’s in class activity</a></p>
-<p><a href="./course-materials/lectures/24_across_maps.html">Lecture: <code>across()</code> and <code>map()</code></a></p>
-<p><a href="./course-materials/in-class-activies/24_In-classExercise-Iteration.qmd">In class activity</a></p>
-<p><a href="https://rlang.r-lib.org/reference/topic-data-mask.html">More on masking</a></p>
-</section>
-<section id="day-23-function-writing" class="level1">
-<h1>Day 23 Function Writing</h1>
-<p><a href="./course-materials/lectures/23_functions.html">Lecture: Intro to if, else and functions</a></p>
-<p><a href="./course-materials/in-class-activies/day_25_function_writing.qmd">Function writing practice</a></p>
-<!-- Reminder lab-5 is due Wednesday. -->
-<!-- [Introduce Project 2](https://moodle.smith.edu/) -->
-<!-- Time to get familiar with `fec20` -->
-<!-- # Day 20 Cleaning -->
-
-<!-- Warm up: table2 -->
-<!-- [Cleaning Data](course-materials/lectures/Day_20_tidying.qmd) -->
-<!-- Let's clean up `billboard` -->
-<!-- # Day 19 Tidy Data -->
-<!-- Chapter 5 problem 4 solutions -->
-<!-- #### 4a The oldest plane to fly from NYC is a Douglas with tailnum: -->
-<!-- ```{r A-solution-to-problem-4} -->
-<!-- #| echo: false -->
-<!-- #| eval: true -->
-<!-- library(nycflights13) -->
-<!-- planes |> inner_join(flights, by = "tailnum") |> -->
-<!--   arrange(year.x) |> -->
-<!--   filter(tailnum == "N381AA") |> -->
-<!--   select(tailnum)|> -->
-<!--   head(1) -->
-<!-- ``` -->
-<!-- #### 4b The number of planes included in planes that flew from NYC is: -->
-<!-- ```{r solution-to-4b} -->
-<!-- #| echo: false -->
-<!-- #| eval: true -->
-<!-- library(nycflights13) -->
-<!-- planes |> inner_join(flights, by = "tailnum") |> -->
-<!--   count(tailnum) |> -->
-<!--   nrow() -->
-<!-- ``` -->
-</section>
-<section id="day-22-project-2" class="level1">
-<h1>Day 22 Project 2</h1>
-</section>
-<section id="day-21-project-2" class="level1">
-<h1>Day 21 Project 2</h1>
-<p>Here’s the link to join <a href="https://classroom.github.com/a/YUonEUOS">project 2</a></p>
-<p>See your new groups on moodle.</p>
-</section>
-<section id="day-20-pivots" class="level1">
-<h1>Day 20 Pivots</h1>
-<p>Late/ unrendered work can be pushed to github for a 10% penalty by Friday March 15. <a href="https://forms.gle/JjExv5NVDwEvywgi8">Fill out this form for regrading.</a></p>
-<p><a href="./course-materials/lectures/18_pivots.html">Pivots</a></p>
-<p>We’ll do Problems <a href="https://mdsr-book.github.io/mdsr3e/04-dataI.html#dataI-exercises">Chapter 4: 1,2,5,9,(12)</a> in class today. <a href="https://mdsr-book.github.io/mdsr3e/05-joins.html#join-exercises">Chapter 5: 3,4</a></p>
-</section>
-<section id="day-19-lab-5" class="level1">
-<h1>Day 19 Lab 5</h1>
-<p>Quiz 2 is open and due the Sunday before break. (Do it after pivot tables next week).</p>
-<p>Here is <a href="https://classroom.github.com/a/BNYDfmiq">lab 5</a> it is due next Wednesday</p>
-</section>
-<section id="day-18-joining-tables-cont." class="level1">
-<h1>Day 18 Joining Tables cont.</h1>
-<p>Continue our exploration of joining tables.</p>
-<p><a href="https://mdsr-book.github.io/mdsr3e/05-joins.html#join-exercises">Problems 1, 3</a></p>
-<p><a href="https://scao53.github.io/sds192spring2023/in-class_exercises/Lec17In-classExercise-JoinTables.zip">Joining two tables in class exercise</a></p>
-</section>
-<section id="day-17-joining-tables" class="level1">
-<h1>Day 17 Joining tables</h1>
-<p>Monday’s office hours moved to Wednesday.</p>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-lab 4 rendering/submission issues
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>rendering:</p>
-<ul>
-<li>Note on <code>#| eval: FALSE</code> in lab 4 (due Friday)</li>
-</ul>
-<p>gitignore:</p>
-<p>If you tried to push the <code>sqf_2011.csv</code> to github you probably got an error.</p>
-<ul>
-<li><p>First save your qmd somewhere.</p></li>
-<li><p>Uncommit your commit with <code>git reset --hard HEAD^</code> or <code>git reset --hard HEAD~2</code></p></li>
-<li><p>You may need to add a <code>.gitignore</code> file.</p></li>
-<li><p>Open <code>.gitignore</code> and add <code>sqf_2011.csv</code> to it.</p></li>
-</ul>
-</div>
-</div>
-</div>
-<p><a href="https://mdsr-book.github.io/mdsr2e/ch-dataI.html#dataI-exercises">Wrangling Practice: MDSR Problems 1 and 2</a></p>
-<div class="cell">
-<details>
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Copy this code into a chunk in R to make the Random_subset data frame from problem 1 and 2.</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Use the verbs we've discussed to make the subsets from the text.</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># The code below will install babynames, if we have not done it already. </span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">#install.packages("babynames")</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(babynames)</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>Random_subset <span class="ot">&lt;-</span>  tibble<span class="sc">::</span><span class="fu">tribble</span>(</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="sc">~</span>year,<span class="sc">~</span>sex,   <span class="sc">~</span>name,         <span class="sc">~</span>n, <span class="sc">~</span>prop,</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>     <span class="dv">2003</span>, <span class="st">"M"</span>,     <span class="st">"Bilal"</span>,        <span class="dv">146</span>, <span class="fl">0.0000695</span>,</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>     <span class="dv">1999</span>, <span class="st">"F"</span>,     <span class="st">"Terria"</span>,        <span class="dv">23</span>, <span class="fl">0.0000118</span>,</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>     <span class="dv">2010</span>, <span class="st">"F"</span>,     <span class="st">"Naziyah"</span>,       <span class="dv">45</span>, <span class="fl">0.0000230</span>,</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>     <span class="dv">1989</span>, <span class="st">"F"</span>,     <span class="st">"Shawana"</span>,       <span class="dv">41</span>, <span class="fl">0.0000206</span>,</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>     <span class="dv">1989</span>, <span class="st">"F"</span>,     <span class="st">"Jessi"</span>,        <span class="dv">210</span>, <span class="fl">0.000105</span>,</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>     <span class="dv">1928</span>, <span class="st">"M"</span>,     <span class="st">"Tillman"</span>,       <span class="dv">43</span>, <span class="fl">0.0000377</span>,</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>     <span class="dv">1981</span>, <span class="st">"F"</span>,     <span class="st">"Leslee"</span>,        <span class="dv">83</span>, <span class="fl">0.0000464</span>,</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>     <span class="dv">1981</span>, <span class="st">"F"</span>,     <span class="st">"Sherise"</span>,       <span class="dv">27</span>, <span class="fl">0.0000151</span>,</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>     <span class="dv">1920</span>, <span class="st">"F"</span>,     <span class="st">"Marquerite"</span>,    <span class="dv">26</span>, <span class="fl">0.0000209</span>,</span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>     <span class="dv">1941</span>, <span class="st">"M"</span>,     <span class="st">"Lorraine"</span>,      <span class="dv">24</span>, <span class="fl">0.0000191</span></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</div>
-<p>Exploration: How to join tables?</p>
-</section>
-<section id="day-16-lab-4" class="level1">
-<h1>Day 16 Lab 4</h1>
-<p><a href="https://www.nyclu.org/en/stop-and-frisk-data">This is the article referred to in the lab</a></p>
-<p><a href="https://nyu-cdsc.github.io/learningr/assets/data-transformation.pdf">dpylr cheatsheet for wrangling</a></p>
-<p><a href="https://classroom.github.com/a/J1JzkKjE">Here is the link</a> for Lab 4.</p>
-<p>Lab 4 will be due next <em>Friday</em> by midnight.</p>
-<!-- See how filtering goes for lab 4, I might not need to do this because 100 did it in lab 4 -->
-<!-- # Day 15 Wrangling with Filter -->
-<!-- Wrangle sqf_2011 data together -->
-<!-- [Lecture on the five verbs](course-materials/lectures/mdsr-the-verbs.qmd) -->
-<!-- [Wrangle babynames](/course-materials/in-class-activies/Wrangling_Baby_Names.qmd) -->
-<!-- ```{r} -->
-<!-- #| code-fold: true -->
-<!-- #| echo: true -->
-<!-- #| eval: false -->
-<!-- install.packages("babynames") -->
-<!-- ``` -->
-</section>
-<section id="day-15-wrangling" class="level1">
-<h1>Day 15 Wrangling</h1>
-<p><a href="./course-materials/lectures/15_Wrangling_1_SQF.html">Stop and Frisk Wrangling</a></p>
-<!-- Didn't get to the code below. It would be good for wrangling practice.  -->
-<!-- [In class MDSR Problems 1 and 2](https://mdsr-book.github.io/mdsr2e/ch-dataI.html#dataI-exercises) -->
+<!-- [Wrangling Practice: MDSR Problems 1 and 2](https://mdsr-book.github.io/mdsr2e/ch-dataI.html#dataI-exercises) -->
 <!-- ```{r, Random_subset } -->
 <!-- #| eval: FALSE -->
 <!-- #| echo: TRUE -->
 <!-- #| code-fold: true -->
-<!-- # Copy this code into a chunk in R to make the Random_subset data frame from problem 1 and 2.  -->
-<!-- # Use the verbs we've discussed to make the subsets from the text.  -->
+<!-- # Copy this code into a chunk in R to make the Random_subset data frame from problem 1 and 2. -->
+<!-- # Use the verbs we've discussed to make the subsets from the text. -->
+<!-- # The code below will install babynames, if we have not done it already.  -->
+<!-- #install.packages("babynames") -->
+<!-- library(babynames) -->
 <!-- Random_subset <-  tibble::tribble( -->
 <!--     ~year,~sex,   ~name,         ~n, ~prop, -->
 <!--      2003, "M",     "Bilal",        146, 0.0000695, -->
@@ -582,253 +444,207 @@ lab 4 rendering/submission issues
 <!--      1941, "M",     "Lorraine",      24, 0.0000191 -->
 <!--   ) -->
 <!-- ``` -->
+<!-- Exploration: How to join tables? -->
+<!-- # Day 16 Lab 4 -->
+<!-- [This is the article referred to in the lab](https://www.nyclu.org/en/stop-and-frisk-data) -->
+<!-- [dpylr cheatsheet for wrangling](https://nyu-cdsc.github.io/learningr/assets/data-transformation.pdf) -->
+<!-- [Here is the link](https://classroom.github.com/a/J1JzkKjE) for Lab 4. -->
+<!-- Lab 4 will be due next *Friday* by midnight. -->
+<!-- <!-- See how filtering goes for lab 4, I might not need to do this because 100 did it in lab 4 -->
+<p>–&gt;</p>
+<!-- <!-- # Day 15 Wrangling with Filter -->
+<p>–&gt;</p>
+<!-- <!-- Wrangle sqf_2011 data together -->
+<p>–&gt;</p>
+<!-- <!-- [Lecture on the five verbs](course-materials/lectures/mdsr-the-verbs.qmd) -->
+<p>–&gt;</p>
+<!-- <!-- [Wrangle babynames](/course-materials/in-class-activies/Wrangling_Baby_Names.qmd) -->
+<p>–&gt;</p>
+<!-- <!-- ```{r} -->
+<p>–&gt;</p>
+<!-- <!-- #| code-fold: true -->
+<p>–&gt;</p>
+<!-- <!-- #| echo: true -->
+<p>–&gt;</p>
+<!-- <!-- #| eval: false -->
+<p>–&gt;</p>
+<!-- <!-- install.packages("babynames") -->
+<p>–&gt;</p>
+<!-- <!-- ``` -->
+<p>–&gt;</p>
+<!-- # Day 15 Wrangling -->
+<!-- [Stop and Frisk Wrangling](/course-materials/lectures/15_Wrangling_1_SQF.qmd) -->
+<!-- <!-- Didn't get to the code below. It would be good for wrangling practice.  -->
+<p>–&gt;</p>
+<!-- <!-- [In class MDSR Problems 1 and 2](https://mdsr-book.github.io/mdsr2e/ch-dataI.html#dataI-exercises) -->
+<p>–&gt;</p>
+<!-- <!-- ```{r, Random_subset } -->
+<p>–&gt;</p>
+<!-- <!-- #| eval: FALSE -->
+<p>–&gt;</p>
+<!-- <!-- #| echo: TRUE -->
+<p>–&gt;</p>
+<!-- <!-- #| code-fold: true -->
+<p>–&gt;</p>
+<!-- <!-- # Copy this code into a chunk in R to make the Random_subset data frame from problem 1 and 2.  -->
+<p>–&gt;</p>
+<!-- <!-- # Use the verbs we've discussed to make the subsets from the text.  -->
+<p>–&gt;</p>
+<!-- <!-- Random_subset <-  tibble::tribble( -->
+<p>–&gt;</p>
+<!-- <!--     ~year,~sex,   ~name,         ~n, ~prop, -->
+<p>–&gt;</p>
+<!-- <!--      2003, "M",     "Bilal",        146, 0.0000695, -->
+<p>–&gt;</p>
+<!-- <!--      1999, "F",     "Terria",        23, 0.0000118, -->
+<p>–&gt;</p>
+<!-- <!--      2010, "F",     "Naziyah",       45, 0.0000230, -->
+<p>–&gt;</p>
+<!-- <!--      1989, "F",     "Shawana",       41, 0.0000206, -->
+<p>–&gt;</p>
+<!-- <!--      1989, "F",     "Jessi",        210, 0.000105, -->
+<p>–&gt;</p>
+<!-- <!--      1928, "M",     "Tillman",       43, 0.0000377, -->
+<p>–&gt;</p>
+<!-- <!--      1981, "F",     "Leslee",        83, 0.0000464, -->
+<p>–&gt;</p>
+<!-- <!--      1981, "F",     "Sherise",       27, 0.0000151, -->
+<p>–&gt;</p>
+<!-- <!--      1920, "F",     "Marquerite",    26, 0.0000209, -->
+<p>–&gt;</p>
+<!-- <!--      1941, "M",     "Lorraine",      24, 0.0000191 -->
+<p>–&gt;</p>
+<!-- <!--   ) -->
+<p>–&gt;</p>
+<!-- <!-- ``` -->
+<p>–&gt;</p>
+<!-- <!-- ::: {.callout-tip collapse="true"} -->
+<p>–&gt;</p>
+<!-- <!-- # terminal work -->
+<p>–&gt;</p>
+<!-- <!-- -   This is a helpful website: `https://ioflood.com/blog/solved-git-error-you-have-divergent-branches-and-need-to-specify-how-to-reconcile-them/` -->
+<p>–&gt;</p>
+<!-- <!-- -   Some times you get "you have divergent branches and need to specify how to reconcile them" -->
+<p>–&gt;</p>
+<!-- <!-- -   In terminal: `git config pull.ff only` -->
+<p>–&gt;</p>
+<!-- <!-- -   Sometimes fast forwarding is fatal.Try Merge Commit: -->
+<p>–&gt;</p>
+<!-- <!-- -   In terminal: `git checkout branch-name` then `git merge --no-ff -m "commit name" branch-name` -->
+<p>–&gt;</p>
+<!-- <!-- -   You can also try following the instructions git gives. -->
+<p>–&gt;</p>
+<!-- <!-- -   Nothing wrong with saving your code and deleting the branch. Branches are disposable. -->
+<p>–&gt;</p>
+<!-- <!-- -   You can work in a branch with lots of commmits before you push. Once you merge a pull request delete the branch. -->
+<p>–&gt;</p>
+<!-- <!-- -   Once you delete a branch on github don't work in it any more. do: `git fetch --prune` to remove the old remote branches from rstudio.Or `git branch -d branch_name` to delete your old branch -->
+<p>–&gt;</p>
+<!-- <!-- ::: -->
+<p>–&gt;</p>
+<!-- # Day 13 and 14 Project 1 -->
+<!-- Announcement: SAL on Feb 29 from 2:45-4pm. Mapping with Google Earth Engine by Mags MacLaughlin. -->
+<!-- Today we are working on project 1. -->
+<!-- -   Project is due next Monday, March 4. -->
+<!-- -   This is the las in class day to work on Project 1 -->
+<!-- -   We will have a lab this Friday. -->
 <!-- ::: {.callout-tip collapse="true"} -->
-<!-- # terminal work -->
-<!-- -   This is a helpful website: `https://ioflood.com/blog/solved-git-error-you-have-divergent-branches-and-need-to-specify-how-to-reconcile-them/` -->
-<!-- -   Some times you get "you have divergent branches and need to specify how to reconcile them" -->
-<!-- -   In terminal: `git config pull.ff only` -->
-<!-- -   Sometimes fast forwarding is fatal.Try Merge Commit: -->
-<!-- -   In terminal: `git checkout branch-name` then `git merge --no-ff -m "commit name" branch-name` -->
-<!-- -   You can also try following the instructions git gives. -->
-<!-- -   Nothing wrong with saving your code and deleting the branch. Branches are disposable. -->
-<!-- -   You can work in a branch with lots of commmits before you push. Once you merge a pull request delete the branch. -->
-<!-- -   Once you delete a branch on github don't work in it any more. do: `git fetch --prune` to remove the old remote branches from rstudio.Or `git branch -d branch_name` to delete your old branch -->
+<!-- # Think about Project 1 -->
+<!-- -   Consider the ethics. -->
+<!-- -   Consider code layout. Lots of space and arguments on different lines. -->
+<!-- -   Do at least one push on the project in class today. -->
+<!-- -   In general lots of little pushes. -->
+<!-- -   Remember to comment your code, and follow tidyverse style guide. -->
+<!-- -   Make your graph legible to the lay person (title, labels, source, captions). -->
+<!-- -   You might realize you are sharing an API key. Consider what that means. -->
 <!-- ::: -->
-</section>
-<section id="day-13-and-14-project-1" class="level1">
-<h1>Day 13 and 14 Project 1</h1>
-<p>Announcement: SAL on Feb 29 from 2:45-4pm. Mapping with Google Earth Engine by Mags MacLaughlin.</p>
-<p>Today we are working on project 1.</p>
-<ul>
-<li><p>Project is due next Monday, March 4.</p></li>
-<li><p>This is the las in class day to work on Project 1</p></li>
-<li><p>We will have a lab this Friday.</p></li>
-</ul>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Think about Project 1
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<ul>
-<li><p>Consider the ethics.</p></li>
-<li><p>Consider code layout. Lots of space and arguments on different lines.</p></li>
-<li><p>Do at least one push on the project in class today.</p></li>
-<li><p>In general lots of little pushes.</p></li>
-<li><p>Remember to comment your code, and follow tidyverse style guide.</p></li>
-<li><p>Make your graph legible to the lay person (title, labels, source, captions).</p></li>
-<li><p>You might realize you are sharing an API key. Consider what that means.</p></li>
-</ul>
-</div>
-</div>
-</div>
-</section>
-<section id="day-12-ethics" class="level1">
-<h1>Day 12 Ethics</h1>
-<p><a href="./course-materials/lectures/11_ethics.html">Data Ethics</a></p>
-<p><a href="https://classroom.github.com/a/1riUqcQQ">Project 1</a></p>
-</section>
-<section id="day-11-markdown-and-github" class="level1">
-<h1>Day 11 Markdown and Github</h1>
-<p>Quiz 1 due Sunday</p>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-3 hours
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-3" class="callout-3-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<ul>
-<li><p>15 questions, open book</p></li>
-<li><p>No collaboration</p></li>
-<li><p>Score visible next Monday</p></li>
-<li><p>Take quiz through moodle</p></li>
-</ul>
-</div>
-</div>
-</div>
-<p><a href="https://r-bio.github.io/intro-git-rstudio/">Reading on Git and RStudio</a></p>
-<p>Class Git <a href="https://classroom.github.com/a/U8S5PFOe">Practice</a></p>
-<section id="project-1" class="level2">
-<h2 class="anchored" data-anchor-id="project-1"><a href="https://classroom.github.com/a/1riUqcQQ">Project 1</a></h2>
-<p>Project 1 Data Dictionary</p>
-<p><a href="https://moodle.smith.edu/pluginfile.php/1681130/mod_resource/content/1/Project%201%20and%202%20Groups.pdf">See moodle for project groups.</a></p>
-<p><a href="./course-materials/lectures/11_ethics.html">Data Ethics</a></p>
-</section>
-</section>
-<section id="day-10-lab-3" class="level1">
-<h1>Day 10 Lab 3</h1>
-<p>Lab 3 is due next Wednesday by midnight.</p>
-<p><a href="https://classroom.github.com/a/WuMupoI-">Lab 3</a></p>
-<div class="callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Lab 3 pitfalls
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-4" class="callout-4-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p><strong>You will be asked for a URI</strong> enter this: <code>http://localhost:1410/</code></p>
-<p>Step 5: part 3. To set the line color do color=“green”</p>
-<p>For some notes on skew: https://en.wikipedia.org/wiki/Skewness</p>
-<p><code>geom_bar()</code> counts whatever variable you give it for x.</p>
-<p>reorder(categorical_var, numeric variable, function for reordering)</p>
-<p>We’ll discuss ethics Monday or Wednesday, read chapter 8.</p>
-</div>
-</div>
-</div>
-<!-- It makes most sense to do this before lab 3. [Polishing Figures](/course-materials/in-class-activies/Lec09In-classExercise-PolishingFigures.zip) -->
+<!-- # Day 12 Ethics -->
+<!-- [Data Ethics](/course-materials/lectures/11_ethics.qmd) -->
+<!-- [Project 1](https://classroom.github.com/a/1riUqcQQ) -->
+<!-- # Day 11 Markdown and Github -->
+<!-- Quiz 1 due Sunday -->
 <!-- ::: {.callout-tip collapse="true"} -->
-<!-- # working directory -->
-<!-- You may need to set your working directory. -->
-<!-- The easiest way to do this is to find your Lec09-...zip in the file pane and go gear-icon \> "Set As Working Directory" -->
+<!-- # 3 hours -->
+<!-- -   15 questions, open book -->
+<!-- -   No collaboration -->
+<!-- -   Score visible next Monday -->
+<!-- -   Take quiz through moodle -->
 <!-- ::: -->
+<!-- [Reading on Git and RStudio](https://r-bio.github.io/intro-git-rstudio/) -->
+<!-- Class Git [Practice](https://classroom.github.com/a/U8S5PFOe) -->
+<!-- ## [Project 1](https://classroom.github.com/a/1riUqcQQ) -->
+<!-- Project 1 Data Dictionary -->
+<!-- [See moodle for project groups.](https://moodle.smith.edu/pluginfile.php/1681130/mod_resource/content/1/Project%201%20and%202%20Groups.pdf) -->
+<!-- [Data Ethics](/course-materials/lectures/11_ethics.qmd) -->
+<!-- # Day 10 Lab 3 -->
+<!-- Lab 3 is due next Wednesday by midnight. -->
+<!-- [Lab 3](https://classroom.github.com/a/WuMupoI-) -->
+<!-- ::: {.callout-warning collapse="true"} -->
+<!-- # Lab 3 pitfalls -->
+<!-- **You will be asked for a URI** enter this: `http://localhost:1410/` -->
+<!-- Step 5: part 3. To set the line color do color="green" -->
+<!-- For some notes on skew: https://en.wikipedia.org/wiki/Skewness -->
+<!-- `geom_bar()` counts whatever variable you give it for x. -->
+<!-- reorder(categorical_var, numeric variable, function for reordering) -->
+<!-- We'll discuss ethics Monday or Wednesday, read chapter 8. -->
+<!-- ::: -->
+<!-- <!-- It makes most sense to do this before lab 3. [Polishing Figures](/course-materials/in-class-activies/Lec09In-classExercise-PolishingFigures.zip) -->
+<p>–&gt;</p>
+<!-- <!-- ::: {.callout-tip collapse="true"} -->
+<p>–&gt;</p>
+<!-- <!-- # working directory -->
+<p>–&gt;</p>
+<!-- <!-- You may need to set your working directory. -->
+<p>–&gt;</p>
+<!-- <!-- The easiest way to do this is to find your Lec09-...zip in the file pane and go gear-icon \> "Set As Working Directory" -->
+<p>–&gt;</p>
+<!-- <!-- ::: -->
+<p>–&gt;</p>
+<!-- # Day 9 Trend Lines, Data.Frames, and RMarkdown Rendering Options -->
+<!-- [Digest Lab 2](./course-materials/lectures/lab-solutions-for-discussion/Lab2_solution_digestion.pdf) -->
+<!-- [Data Fundamentals](./course-materials/lectures/Making-data-frames.qmd) -->
+<!-- [Rendering options](https://quarto.org/docs/computations/execution-options.html) -->
+<!-- Simple Linear Regression and Lowess -->
+<!-- [Create Trendlines](course-materials/in-class-activies/Lec09In-classExercise-TrendLines.qmd) -->
+<!-- # Day 8 Stats and Boxplots -->
+<!-- I don't think I need to do this day, its covered in 100. -->
+<!-- ## Other things -->
+<!-- ::: {.callout-note collapse="true"} -->
+<!-- # To activate colors -->
+<!-- Some students are not getting "red" to be red. Try this: Tools menu \> global options \> code \> display \> "enable preview of named and hex colors -->
+<!-- If that doesn't work, [maybe its a bug?](https://github.com/rstudio/rstudio/issues/13118) -->
+<!-- ::: -->
+<!-- -   the c() function -->
+<!-- -   [tidyverse style guide](https://style.tidyverse.org/ggplot2.html) -->
+<!-- -   [typing math](https://nics-github.github.io/sds220/latex-in-quarto-template.html) -->
+<!-- -   The visual editor vs source editor -->
+<!-- -   [Short History of R](./course-materials/lectures/Brief-R-history.qmd) -->
+<!-- ## Lecture: [Descriptive stats and boxplots](/course-materials/lectures/8-Descriptive-Stats-and-Boxplots.qmd) -->
+<!-- ## Classwork: MDSR [Chapter 3.5](https://mdsr-book.github.io/mdsr2e/ch-vizII.html#datavizII-exercises) problem 3 and 7 -->
+<!-- ::: {.callout-tip collapse="true"} -->
+<!-- ## Hints -->
+<!-- -   you might need to install `mosaicdata` -->
+<!-- -   look for the correct graph type for 7c on the cheat sheet -->
+<!-- ::: -->
+<!-- # Day 7 Lab 2 -->
+<!-- [Link to lab 2](https://classroom.github.com/a/OQWAvHYK) -->
+<!-- # Day 6 Color theory -->
+<!-- ::: {.callout-note collapse="FALSE"} -->
+<!-- ## Lab requirements -->
+<!-- -   All labs (after lab 1) must be rendered to a pdf. -->
+<!-- -   All code for labs must be well commented. -->
+<!-- ::: -->
+<!-- [ggplot cheatsheet](https://github.com/rstudio/cheatsheets/blob/main/data-visualization-2.1.pdf) -->
+<!-- ## Colors -->
+<!-- -   [Prof. Baumer's Color talk](https://beanumber.github.io/sds192/lectures/mdsr_viz_05-color.html) -->
+<!-- -   Color Brewer [site](https://colorbrewer2.org/#type=sequential&scheme=BuGn&n=3) -->
+<!-- -   [Prof. Cao's Lecture on Frequency Plots and Facets](https://scao53.github.io/sds192spring2023/slides/Lec4-FrequencyPlots.html) -->
+<!-- -   [In class exercise](./course-materials/in-class-activies/5_color_theory.qmd) -->
+<!-- # Day 5 Catch up -->
+<!-- **Finish work from Day 3.** -->
 </section>
-<section id="day-9-trend-lines-data.frames-and-rmarkdown-rendering-options" class="level1">
-<h1>Day 9 Trend Lines, Data.Frames, and RMarkdown Rendering Options</h1>
-<p><a href="./course-materials/lectures/lab-solutions-for-discussion/Lab2_solution_digestion.pdf">Digest Lab 2</a></p>
-<p><a href="./course-materials/lectures/Making-data-frames.html">Data Fundamentals</a></p>
-<p><a href="https://quarto.org/docs/computations/execution-options.html">Rendering options</a></p>
-<p>Simple Linear Regression and Lowess</p>
-<p><a href="course-materials/in-class-activies/Lec09In-classExercise-TrendLines.qmd">Create Trendlines</a></p>
-</section>
-<section id="day-8-stats-and-boxplots" class="level1">
-<h1>Day 8 Stats and Boxplots</h1>
-<section id="other-things" class="level2">
-<h2 class="anchored" data-anchor-id="other-things">Other things</h2>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-To activate colors
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-5" class="callout-5-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>Some students are not getting “red” to be red. Try this: Tools menu &gt; global options &gt; code &gt; display &gt; “enable preview of named and hex colors</p>
-<p>If that doesn’t work, <a href="https://github.com/rstudio/rstudio/issues/13118">maybe its a bug?</a></p>
-</div>
-</div>
-</div>
-<ul>
-<li>the c() function</li>
-<li><a href="https://style.tidyverse.org/ggplot2.html">tidyverse style guide</a></li>
-<li><a href="https://nics-github.github.io/sds220/latex-in-quarto-template.html">typing math</a></li>
-<li>The visual editor vs source editor</li>
-<li><a href="./course-materials/lectures/Brief-R-history.html">Short History of R</a></li>
-</ul>
-</section>
-<section id="lecture-descriptive-stats-and-boxplots" class="level2">
-<h2 class="anchored" data-anchor-id="lecture-descriptive-stats-and-boxplots">Lecture: <a href="./course-materials/lectures/8-Descriptive-Stats-and-Boxplots.html">Descriptive stats and boxplots</a></h2>
-</section>
-<section id="classwork-mdsr-chapter-3.5-problem-3-and-7" class="level2">
-<h2 class="anchored" data-anchor-id="classwork-mdsr-chapter-3.5-problem-3-and-7">Classwork: MDSR <a href="https://mdsr-book.github.io/mdsr2e/ch-vizII.html#datavizII-exercises">Chapter 3.5</a> problem 3 and 7</h2>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Hints
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-6" class="callout-6-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<ul>
-<li><p>you might need to install <code>mosaicdata</code></p></li>
-<li><p>look for the correct graph type for 7c on the cheat sheet</p></li>
-</ul>
-</div>
-</div>
-</div>
-</section>
-</section>
-<section id="day-7-lab-2" class="level1">
-<h1>Day 7 Lab 2</h1>
-<p><a href="https://classroom.github.com/a/OQWAvHYK">Link to lab 2</a></p>
-</section>
-<section id="day-6-color-theory" class="level1">
-<h1>Day 6 Color theory</h1>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="true" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Lab requirements
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-7" class="callout-7-contents callout-collapse collapse show">
-<div class="callout-body-container callout-body">
-<ul>
-<li><p>All labs (after lab 1) must be rendered to a pdf.</p></li>
-<li><p>All code for labs must be well commented.</p></li>
-</ul>
-</div>
-</div>
-</div>
-<p><a href="https://github.com/rstudio/cheatsheets/blob/main/data-visualization-2.1.pdf">ggplot cheatsheet</a></p>
-<section id="colors" class="level2">
-<h2 class="anchored" data-anchor-id="colors">Colors</h2>
-<ul>
-<li><p><a href="https://beanumber.github.io/sds192/lectures/mdsr_viz_05-color.html">Prof.&nbsp;Baumer’s Color talk</a></p></li>
-<li><p>Color Brewer <a href="https://colorbrewer2.org/#type=sequential&amp;scheme=BuGn&amp;n=3">site</a></p></li>
-<li><p><a href="https://scao53.github.io/sds192spring2023/slides/Lec4-FrequencyPlots.html">Prof.&nbsp;Cao’s Lecture on Frequency Plots and Facets</a></p></li>
-<li><p><a href="./course-materials/in-class-activies/5_color_theory.qmd">In class exercise</a></p></li>
-</ul>
-</section>
-</section>
-<section id="day-5-catch-up" class="level1">
-<h1>Day 5 Catch up</h1>
-<p><strong>Finish work from Day 3.</strong></p>
-</section>
-<section id="day-4-github-lab-1" class="level1">
-<h1>Day 4 Github lab 1</h1>
-<p>Finish our classwork from Wednesday</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Sign into githubclassroom
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-8" class="callout-8-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>Link github account to github classroom - sign into github</p>
-<ul>
-<li><p>https://classroom.github.com/a/JR8iYUWI for lab 1</p></li>
-<li><p>find your name in the roster and click it.</p></li>
-<li><p>You should see lab 1, which we will discuss on Friday.</p></li>
-</ul>
-</div>
-</div>
-</div>
-</section>
-<section id="day-3-taxonomy-part-2" class="level1">
-<h1>Day 3 Taxonomy part 2</h1>
+<section id="day-9-taxonomy-part-2" class="level1">
+<h1>Day 9 Taxonomy part 2</h1>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/IRJ2Ac9vI5o?si=JMeZEIQQNGNBscno" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="">
 </iframe>
 <section id="discussion-taxonomy-of-graphics" class="level2">
@@ -842,11 +658,14 @@ Sign into githubclassroom
 </ol>
 </section>
 </section>
-<section id="day-2-taxonomy" class="level1">
-<h1>Day 2 Taxonomy</h1>
-<p>Please complete <a href="https://smithcollege.qualtrics.com/jfe/form/SV_bJhVbkxf8LPzspw">this survey</a> for Prof.&nbsp;Cao’s study.</p>
+<section id="day-8-lab-2" class="level1">
+<h1>Day 8 Lab 2</h1>
+</section>
+<section id="day-7-taxonomy" class="level1">
+<h1>Day 7 Taxonomy</h1>
+<p><a href="https://smithcollege-sds.github.io/sds100/lab_03_graphics.html">Check out lab 3</a> from sds 100 I might not have to do this.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -855,7 +674,7 @@ For Help
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ul>
 <li><p><a href="https://docs.google.com/document/d/1P7IyZ4On9OlrCOhygFxjC7XhQqyw8OludwChz-uFd_o/edit">The six-fixes</a></p></li>
@@ -866,7 +685,7 @@ For Help
 </div>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -875,7 +694,7 @@ Screenshots Help
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-10" class="callout-10-contents callout-collapse collapse">
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Help us help you: take screenshots of your screen and post them to Slack.</p>
 <ul>
@@ -896,14 +715,8 @@ Screenshots Help
 </ul>
 </section>
 </section>
-<section id="day-1-no-computer-data-viz" class="level1">
-<h1>Day 1: No Computer Data Viz</h1>
-<ul>
-<li><p><a href="./course-materials/syllabus/syllabus.html">Syllabus</a></p></li>
-<li><p>Log into <a href="https://www.slack.com">Slack</a></p></li>
-<li><p>Website tour</p></li>
-<li><p>Bring Computers to Class</p></li>
-</ul>
+<section id="day-6-no-computer-data-viz" class="level1">
+<h1>Day 6: No Computer Data Viz</h1>
 <section id="lecture-1" class="level3">
 <h3 class="anchored" data-anchor-id="lecture-1">Lecture</h3>
 <p><a href="./course-materials/lectures/1first-day-survey/Data-Viz-No-Computers.html">Data Viz No Computers</a></p>
@@ -911,7 +724,7 @@ Screenshots Help
 <section id="general-questions-and-comments" class="level3">
 <h3 class="anchored" data-anchor-id="general-questions-and-comments">General Questions and Comments</h3>
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -920,18 +733,80 @@ Homework:
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-11" class="callout-11-contents callout-collapse collapse">
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ul>
-<li><p>Sign up for <a href="https://github.com/">github here</a>, if you don’t already have an account. We will very carefully link your github account to our github classroom account.</p></li>
-<li><p>Read the prologue to chapter 1.4 of MDSR.</p></li>
+<li>Read the prologue to chapter 1.4 of MDSR.</li>
 </ul>
 </div>
 </div>
 </div>
 </section>
-<section id="walk-to-mcconnell-213-and-214" class="level3">
-<h3 class="anchored" data-anchor-id="walk-to-mcconnell-213-and-214">Walk to MCConnell 213 and 214</h3>
+</section>
+<section id="day-5-writing-functions" class="level1">
+<h1>Day 5 Writing functions</h1>
+</section>
+<section id="day-5-intro-function-writing" class="level1">
+<h1>Day 5 Intro Function Writing</h1>
+<p><a href="./course-materials/lectures/23_functions.html">Lecture: Intro to if, else and functions</a></p>
+<p><a href="./course-materials/in-class-activies/day_25_function_writing.qmd">Function writing practice</a></p>
+</section>
+<section id="day-4-finding-data-and-getting-data-into-r" class="level1">
+<h1>Day 4 Finding Data and Getting Data Into R</h1>
+<p>Students know how to store variables</p>
+<p>Students know about functions and arguments</p>
+<p>Errors and warnings and comments</p>
+<p>cheatsheets</p>
+<p>working directories</p>
+<p>getting data into R</p>
+</section>
+<section id="day-3-understanding-file-paths" class="level1">
+<h1>Day 3 Understanding File Paths</h1>
+<p>Play with our repository</p>
+<p>Make some of our own class data</p>
+</section>
+<section id="day-2-github-lab" class="level1">
+<h1>Day 2 Github Lab</h1>
+<p>Where are we going?</p>
+<ul>
+<li>Final project Website</li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Sign into githubclassroom
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Link github account to github classroom - sign into github</p>
+<ul>
+<li><p>https://classroom.github.com/a/ERIt75vu for lab 1</p></li>
+<li><p>find your name in the roster and click it.</p></li>
+<li><p>You should see lab 1, which we will discuss on Friday.</p></li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="day-1-welcome-and-github" class="level1">
+<h1>Day 1 Welcome and Github</h1>
+<ul>
+<li><p><a href="./course-materials/syllabus/syllabus.html">Syllabus</a></p></li>
+<li><p>Log into <a href="https://www.slack.com">Slack</a></p></li>
+<li><p>Website tour</p></li>
+<li><p>Bring Computers to Class</p></li>
+<li><p>Sign up for <a href="https://github.com/">github here</a>, if you don’t already have an account. We will very carefully link your github account to our github classroom account.</p></li>
+<li><p>Intro to github</p></li>
+<li><p><a href="https://classroom.github.com/a/GG36O-3I">Github Fundamentals Lab 0</a></p></li>
+<li><p><a href="https://happygitwithr.com/">Happy Git and the UseR</a></p></li>
+</ul>
+<section id="walk-to-mcconnell-215-and-214" class="level3">
+<h3 class="anchored" data-anchor-id="walk-to-mcconnell-215-and-214">Walk to MCConnell 215 and 214</h3>
 <p>My office and group study room.</p>
 
 
@@ -980,6 +855,33 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       } else {
         el.classList.add('notransition');
       }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
     }
   }
   const toggleColorMode = (alternate) => {
@@ -1048,13 +950,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return localAlternateSentinel;
     }
   }
-  let localAlternateSentinel = 'default';
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
   // Dark / light mode switch
   window.quartoToggleColorScheme = () => {
     // Read the current dark / light value 
     let toAlternate = !hasAlternateSentinel();
     toggleColorMode(toAlternate);
     setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
   };
   // Ensure there is a toggle, if there isn't float one in the top right
   if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
@@ -1133,10 +1037,27 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -1146,8 +1067,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -1159,7 +1089,130 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -1203,6 +1256,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -1228,6 +1282,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -1299,12 +1379,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
-    <a class="nav-link" href="./credits.qmd">credits</a>
+    <a class="nav-link" href="./credits.qmd">
+<p>credits</p>
+</a>
   </li>  
 </ul>
     </div>
   </div>
 </footer>
+
 
 
 
