@@ -1,9 +1,48 @@
 ---
-title: "About"
+title: "Nic Schwab"
+about:
+  id: schwab
+  template: trestles
+  image: "self.jpg"
+  links:
+
+    - icon: github
+      text: GitHub
+      href: https://github.com/Nics-Github
+    - icon: bookmark
+      text: Smith
+      href: https://www.smith.edu/academics/faculty/nicholas-schwab
 ---
 
-About this site
+**Nicholas Schwab** is a lecture in Statistical and Data Sciences. He is a tenured professor at Holyoke Community College. When not teaching data science, he enjoys rock climbing, biking, and reading childrens' books with his kids.
 
-```{r}
-1 + 1
-```
+## Student Hours
+
+
+**Drop into the office:** 
+
+-   Wednesday: 1:30-2:30 pm 
+
+-   By appointment in McConnell 214
+
+    
+Please let me know if the above times do not work for your schedule and we can coordinate another time.   
+
+## Education
+
+-   MS in Data Science (\~2026)\
+    [University of Texas at Austin](https://cdso.utexas.edu/msds)\
+    Austin, Texas
+-   MA in Mathematics (2009)\
+    [Appalchain State University](https://mathsci.appstate.edu/)\
+    Boone, NC
+-   BA in Mathematics (2007)\
+    [UC Santa Cruz](https://www.math.ucsc.edu/)\
+    Santa Cruz, CA
+
+## Experience
+
+-   Professor of Mathematics\
+    [Holyoke Community College](https://www.hcc.edu)\
+    Holyoke, MA 2014--2023
+

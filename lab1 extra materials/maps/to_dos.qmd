@@ -1,0 +1,22 @@
+---
+title: "Tasks"
+author: "Schwab"
+editor: visual
+---
+
+First maps
+
+1.  Render your index.qmd to make your website.
+    1.  If the website doesn't pop up go docs/index.html to look at it.
+    2.  Delete the file called first_map_files, what happens to your first map page?
+2.  Add the overview of the course to the the index as a link.
+3.  Add another map of California, Oregon and Washington
+4.  Make a world map with China, Indonesia and Australia.
+
+Edit the about
+
+Edit the about.qmd to have some information about you. At the moment it is all about me. Render often and figure out what is changing as you edit.
+
+Fancier maps
+
+Open the fancier maps document and play around with leaflet.
