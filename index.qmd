@@ -732,15 +732,17 @@ format:
 
 <!-- More practice writing functions. -->
 
+<!-- [Cleaning up documents](https://quarto.org/docs/computations/execution-options.html) -->
+
 <!-- # Day 4 Getting Data Into R Making functions -->
 
-<!-- <!-- Students know how to store variables --> -->
+<!-- <!-- Students know how to store variables --> 
 
-<!-- <!-- Students know about functions and arguments --> -->
+<!-- <!-- Students know about functions and arguments --> 
 
-<!-- <!-- Students Errors and warnings and comments --> -->
+<!-- <!-- Students Errors and warnings and comments --> 
 
-<!-- <!-- cheatsheets --> -->
+<!-- <!-- cheatsheets --> 
 
 <!-- Getting data into R  -->
 
