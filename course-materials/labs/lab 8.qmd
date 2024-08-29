@@ -196,7 +196,7 @@ We first need to understand the columns that are in cast_info.
 DESCRIBE cast_info
 ```
 
-The id from the name table should match the person_id from the cast_info table. So we can join on that. Notice that the names of the tables are being shorted again as n for name and ci for cast_info.
+The id from the name table should match the person_id from the cast_info table. So we can join the name table with the cast_info. Notice that the names of the tables are being shorted again as n for name and ci for cast_info.
 
 ```{sql, include=posted}
 ##SAMPLE SOLUTION
@@ -207,14 +207,6 @@ JOIN name AS n ON n.id = ci.person_id
 WHERE ci.person_id = 3479179;
 ```
 
-Next, we can join the `cast_info` table on the `name` table to recover the names of the people. 
-
-```{sql}
-SELECT n.name, ci.role_id
-FROM cast_info ci
-JOIN name n ON n.id = ci.person_id
-WHERE movie_id = 3664274;
-```
 
 Note how we have used table aliases to save some typing. 
 
@@ -222,10 +214,11 @@ Note how we have used table aliases to save some typing.
 
 
 ```{sql, include=posted}
--- SAMPLE SOLUTION
+## SAMPLE SOLUTION
+
 SELECT n.name, ci.role_id, cn.name
 FROM cast_info ci
-JOIN name n ON n.id = ci.person_id
+JOIN name AS n ON n.id = ci.person_id
 JOIN char_name cn ON cn.id = ci.person_role_id
 WHERE ci.person_id = 3479179;
 ```
@@ -234,7 +227,7 @@ WHERE ci.person_id = 3479179;
 
 Of course, we can join more than two tables together in a single query. 
 
-#. Find Annie Davis's full filmography, in chronological order. Include each movie's `title`, `production_year`, and the name of the character that she played. 
+#. Find Annie MacDowell's full filmography, in chronological order. Include each movie's `title`, `production_year`, and the name of the character that she played. 
 
 
 ```{sql, include=posted}
@@ -248,44 +241,24 @@ WHERE ci.person_id = 3479179
 ORDER BY production_year;
 ```
 
-# Exercise Pull up the titles of the movies that were made in my birth year 1984. There are more than 1000 so we'll put a limit on the number of movies returned.
+# Exercise: Get the name of every movie in the imdb databse that was produced on my birth year 1984. The response will be limited to 100, but there are more. 
 
 ```{sql}
-SELECT t.title, t.production_year
+SELECT t.title
 FROM title AS t
 WHERE production_year = 1984
+AND kind_id = 1
 LIMIT 100;
-
 ```
 
-Pull the one movie that Andie MacDowell was in in 1984. Hint its Greystoke.
+# Exercise get the name of every movie that came out in 1984 that Annie MacDowell was in. Hint the answer is : Greystoke: The Legend of Tarzan, Lord of the Apes 
 
 ```{sql}
-SELECT t.title, t.production_year
+SELECT *
 FROM cast_info AS ci
 JOIN title AS t ON ci.movie_id = t.id
-WHERE t.production_year = 1984 
-AND ci.person_id = 3479179
-AND t.kind_id = 1;
+WHERE production_year = 1984 
+AND ;
 ```
-
-```{sql}
-DESCRIBE person_info
-```
-
-```{sql}
-
-SELECT * 
-FROM name AS n 
-JOIN person_info AS pi on pi.person_id 
-WHERE name = 'Murray, Bill'
-
-
-
-```    
-
-## Your Learning
-
-Please respond to the following prompt on [Slack in the `#mod-sql channel](https://smi-sds192-01-202102.slack.com).
 
 > Prompt: Does your understanding of `dplyr` help with understanding SQL? What questions to you still have about SQL?
