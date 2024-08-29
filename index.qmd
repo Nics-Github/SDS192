@@ -174,27 +174,27 @@ format:
 
 
 
-<!-- <!-- # Day 27 `map()` and `across()` practice --> -->
+<!-- <!-- # Day 27 `map()` and `across()` practice --> 
 
-<!-- <!-- Project time --> -->
+<!-- <!-- Project time --> 
 
-<!-- <!-- ::: {.callout-tip collapse="true"} --> -->
+<!-- <!-- ::: {.callout-tip collapse="true"} --> 
 
-<!-- <!-- # Reminder Project 2 due Friday --> -->
+<!-- <!-- # Reminder Project 2 due Friday --> 
 
-<!-- <!-- Project 2 notes: --> -->
+<!-- <!-- Project 2 notes: --> 
 
-<!-- <!-- -   Project 2 due Friday --> -->
+<!-- <!-- -   Project 2 due Friday --> 
 
-<!-- <!-- -   **Render** your project --> -->
+<!-- <!-- -   **Render** your project -->
 
-<!-- <!-- -   **Comment** your code in `fec_analysis.qmd` --> -->
+<!-- <!-- -   **Comment** your code in `fec_analysis.qmd` --> 
 
-<!-- <!-- -   Make your code readable with spaces and short lines --> -->
+<!-- <!-- -   Make your code readable with spaces and short lines --> 
 
-<!-- <!-- -   `filter( == )` vs `filter( %in% )` --> -->
+<!-- <!-- -   `filter( == )` vs `filter( %in% )` --> 
 
-<!-- <!-- ::: --> -->
+<!-- <!-- ::: --> 
 
 
 <!-- # Day 25 Lab 6 -->
@@ -225,73 +225,73 @@ format:
 
 
 
-<!-- <!-- Reminder lab-5 is due Wednesday. --> -->
+<!-- <!-- Reminder lab-5 is due Wednesday. --> 
 
-<!-- <!-- [Introduce Project 2](https://moodle.smith.edu/) --> -->
+<!-- <!-- [Introduce Project 2](https://moodle.smith.edu/) --> 
 
-<!-- <!-- Time to get familiar with `fec20` --> -->
+<!-- <!-- Time to get familiar with `fec20` --> 
 
-<!-- <!-- # Day 20 Cleaning --> -->
+<!-- <!-- # Day 20 Cleaning --> 
 
-<!-- <!-- Warm up: table2 --> -->
+<!-- <!-- Warm up: table2 --> 
 
-<!-- <!-- [Cleaning Data](course-materials/lectures/Day_20_tidying.qmd) --> -->
+<!-- <!-- [Cleaning Data](course-materials/lectures/Day_20_tidying.qmd) --> 
 
-<!-- <!-- Let's clean up `billboard` --> -->
+<!-- <!-- Let's clean up `billboard` --> 
 
-<!-- <!-- # Day 19 Tidy Data --> -->
+<!-- <!-- # Day 19 Tidy Data --> 
 
-<!-- <!-- Chapter 5 problem 4 solutions --> -->
+<!-- <!-- Chapter 5 problem 4 solutions --> 
 
-<!-- <!-- #### 4a The oldest plane to fly from NYC is a Douglas with tailnum: --> -->
+<!-- <!-- #### 4a The oldest plane to fly from NYC is a Douglas with tailnum: --> 
 
-<!-- <!-- ```{r A-solution-to-problem-4} --> -->
+<!-- <!-- ```{r A-solution-to-problem-4} --> 
 
-<!-- <!-- #| echo: false --> -->
+<!-- <!-- #| echo: false --> 
 
-<!-- <!-- #| eval: true --> -->
+<!-- <!-- #| eval: true --> 
 
-<!-- <!-- library(nycflights13) --> -->
+<!-- <!-- library(nycflights13) --> 
 
-<!-- <!-- planes |> inner_join(flights, by = "tailnum") |> --> -->
+<!-- <!-- planes |> inner_join(flights, by = "tailnum") |> -->
 
-<<<<<<< HEAD
-The last quiz is posted, there is no time limit it is due Wednesday May 8.
 
-Also late work for labs 5,6,7 and 8 is due next Wednesday May 1. [Fill out this form](https://forms.gle/VJZy56Y5GStmgjtC8).
+<!-- The last quiz is posted, there is no time limit it is due Wednesday May 8. -->
 
-Project 3 work day. 
+<!-- Also late work for labs 5,6,7 and 8 is due next Wednesday May 1. [Fill out this form](https://forms.gle/VJZy56Y5GStmgjtC8). -->
 
-Professor Garcia.
-=======
-<!-- <!--   arrange(year.x) |> --> -->
+<!-- Project 3 work day.  -->
 
-<!-- <!--   filter(tailnum == "N381AA") |> --> -->
+<!-- Professor Garcia. -->
+
+<!-- <!--   arrange(year.x) |> --> 
+
+<!-- <!--   filter(tailnum == "N381AA") |> --> 
 >>>>>>> 36f86241f868e0df4f122d87aa97cab6c0bf0df4
 
-<!-- <!--   select(tailnum)|> --> -->
+<!-- <!--   select(tailnum)|> --> 
 
-<!-- <!--   head(1) --> -->
+<!-- <!--   head(1) --> 
 
-<!-- <!-- ``` --> -->
+<!-- <!-- ``` --> 
 
-<!-- <!-- #### 4b The number of planes included in planes that flew from NYC is: --> -->
+<!-- <!-- #### 4b The number of planes included in planes that flew from NYC is: --> 
 
-<!-- <!-- ```{r solution-to-4b} --> -->
+<!-- <!-- ```{r solution-to-4b} --> 
 
-<!-- <!-- #| echo: false --> -->
+<!-- <!-- #| echo: false --> 
 
-<!-- <!-- #| eval: true --> -->
+<!-- <!-- #| eval: true --> 
 
-<!-- <!-- library(nycflights13) --> -->
+<!-- <!-- library(nycflights13) --> 
 
-<!-- <!-- planes |> inner_join(flights, by = "tailnum") |> --> -->
+<!-- <!-- planes |> inner_join(flights, by = "tailnum") |> --> 
 
-<!-- <!--   count(tailnum) |> --> -->
+<!-- <!--   count(tailnum) |> --> 
 
-<!-- <!--   nrow() --> -->
+<!-- <!--   nrow() --> 
 
-<!-- <!-- ``` --> -->
+<!-- <!-- ``` --> 
 
 <!-- # Day 22 Project 2 -->
 
@@ -391,99 +391,98 @@ Professor Garcia.
 
 <!-- Lab 4 will be due next *Friday* by midnight. -->
 
-<!-- <!-- See how filtering goes for lab 4, I might not need to do this because 100 did it in lab 4 --> -->
+<!-- <!-- See how filtering goes for lab 4, I might not need to do this because 100 did it in lab 4 --> 
 
-<!-- <!-- # Day 15 Wrangling with Filter --> -->
+<!-- <!-- # Day 15 Wrangling with Filter --> 
 
-<!-- <!-- Wrangle sqf_2011 data together --> -->
+<!-- <!-- Wrangle sqf_2011 data together -->
 
-<!-- <!-- [Lecture on the five verbs](course-materials/lectures/mdsr-the-verbs.qmd) --> -->
+<!-- <!-- [Lecture on the five verbs](course-materials/lectures/mdsr-the-verbs.qmd) --> 
 
-<!-- <!-- [Wrangle babynames](/course-materials/in-class-activies/Wrangling_Baby_Names.qmd) --> -->
+<!-- <!-- [Wrangle babynames](/course-materials/in-class-activies/Wrangling_Baby_Names.qmd) --> 
 
-<!-- <!-- ```{r} --> -->
+<!-- <!-- ```{r} --> 
 
-<!-- <!-- #| code-fold: true --> -->
+<!-- <!-- #| code-fold: true --> 
 
-<!-- <!-- #| echo: true --> -->
+<!-- <!-- #| echo: true --> 
 
-<!-- <!-- #| eval: false --> -->
+<!-- <!-- #| eval: false --> 
 
-<!-- <!-- install.packages("babynames") --> -->
+<!-- <!-- install.packages("babynames") --> 
 
-<!-- <!-- ``` --> -->
+<!-- <!-- ``` --> 
 
 <!-- # Day 15 Wrangling -->
 
 <!-- [Stop and Frisk Wrangling](/course-materials/lectures/15_Wrangling_1_SQF.qmd) -->
 
-<!-- <!-- Didn't get to the code below. It would be good for wrangling practice.  --> -->
+<!-- <!-- Didn't get to the code below. It would be good for wrangling practice.  --> 
 
-<!-- <!-- [In class MDSR Problems 1 and 2](https://mdsr-book.github.io/mdsr2e/ch-dataI.html#dataI-exercises) --> -->
+<!-- <!-- [In class MDSR Problems 1 and 2](https://mdsr-book.github.io/mdsr2e/ch-dataI.html#dataI-exercises) --> 
 
-<!-- <!-- ```{r, Random_subset } --> -->
+<!-- <!-- ```{r, Random_subset } --> 
 
-<!-- <!-- #| eval: FALSE --> -->
+<!-- <!-- #| eval: FALSE -->
 
-<!-- <!-- #| echo: TRUE --> -->
+<!-- <!-- #| echo: TRUE --> 
 
-<!-- <!-- #| code-fold: true --> -->
+<!-- <!-- #| code-fold: true --> 
 
-<!-- <!-- # Copy this code into a chunk in R to make the Random_subset data frame from problem 1 and 2.  --> -->
+<!-- <!-- # Copy this code into a chunk in R to make the Random_subset data frame from problem 1 and 2.  --> 
 
-<!-- <!-- # Use the verbs we've discussed to make the subsets from the text.  --> -->
+<!-- <!-- # Use the verbs we've discussed to make the subsets from the text.  --> 
 
-<!-- <!-- Random_subset <-  tibble::tribble( --> -->
+<!-- <!-- Random_subset <-  tibble::tribble( --> 
 
-<!-- <!--     ~year,~sex,   ~name,         ~n, ~prop, --> -->
+<!-- <!--     ~year,~sex,   ~name,         ~n, ~prop, -->
 
-<!-- <!--      2003, "M",     "Bilal",        146, 0.0000695, --> -->
+<!-- <!--      2003, "M",     "Bilal",        146, 0.0000695, --> 
 
-<!-- <!--      1999, "F",     "Terria",        23, 0.0000118, --> -->
+<!-- <!--      1999, "F",     "Terria",        23, 0.0000118, -->
 
-<!-- <!--      2010, "F",     "Naziyah",       45, 0.0000230, --> -->
+<!-- <!--      2010, "F",     "Naziyah",       45, 0.0000230, --> 
 
-<!-- <!--      1989, "F",     "Shawana",       41, 0.0000206, --> -->
+<!-- <!--      1989, "F",     "Shawana",       41, 0.0000206, --> 
 
-<!-- <!--      1989, "F",     "Jessi",        210, 0.000105, --> -->
+<!-- <!--      1989, "F",     "Jessi",        210, 0.000105, --> 
 
-<!-- <!--      1928, "M",     "Tillman",       43, 0.0000377, --> -->
+<!-- <!--      1928, "M",     "Tillman",       43, 0.0000377, --> 
 
-<!-- <!--      1981, "F",     "Leslee",        83, 0.0000464, --> -->
+<!-- <!--      1981, "F",     "Leslee",        83, 0.0000464, --> 
 
-<!-- <!--      1981, "F",     "Sherise",       27, 0.0000151, --> -->
+<!-- <!--      1981, "F",     "Sherise",       27, 0.0000151, --> 
 
-<!-- <!--      1920, "F",     "Marquerite",    26, 0.0000209, --> -->
+<!-- <!--      1920, "F",     "Marquerite",    26, 0.0000209, --> 
 
-<!-- <!--      1941, "M",     "Lorraine",      24, 0.0000191 --> -->
+<!-- <!--      1941, "M",     "Lorraine",      24, 0.0000191 --> 
 
-<!-- <!--   ) --> -->
+<!-- <!--   ) --> 
 
-<!-- <!-- ``` --> -->
+<!-- <!-- ``` --> 
 
-<!-- <!-- ::: {.callout-tip collapse="true"} --> -->
+<!-- <!-- ::: {.callout-tip collapse="true"} --> 
 
-<!-- <!-- # terminal work --> -->
+<!-- <!-- # terminal work --> 
 
-<!-- <!-- -   This is a helpful website: `https://ioflood.com/blog/solved-git-error-you-have-divergent-branches-and-need-to-specify-how-to-reconcile-them/` --> -->
+<!-- <!-- -   This is a helpful website: `https://ioflood.com/blog/solved-git-error-you-have-divergent-branches-and-need-to-specify-how-to-reconcile-them/` --> 
+<!-- <!-- -   Some times you get "you have divergent branches and need to specify how to reconcile them" --> 
 
-<!-- <!-- -   Some times you get "you have divergent branches and need to specify how to reconcile them" --> -->
+<!-- <!-- -   In terminal: `git config pull.ff only` --> 
 
-<!-- <!-- -   In terminal: `git config pull.ff only` --> -->
+<!-- <!-- -   Sometimes fast forwarding is fatal.Try Merge Commit: --> 
 
-<!-- <!-- -   Sometimes fast forwarding is fatal.Try Merge Commit: --> -->
+<!-- <!-- -   In terminal: `git checkout branch-name` then `git merge --no-ff -m "commit name" branch-name` --> 
 
-<!-- <!-- -   In terminal: `git checkout branch-name` then `git merge --no-ff -m "commit name" branch-name` --> -->
+<!-- <!-- -   You can also try following the instructions git gives. --> 
 
-<!-- <!-- -   You can also try following the instructions git gives. --> -->
+<!-- <!-- -   Nothing wrong with saving your code and deleting the branch. Branches are disposable. --> 
 
-<!-- <!-- -   Nothing wrong with saving your code and deleting the branch. Branches are disposable. --> -->
+<!-- <!-- -   You can work in a branch with lots of commmits before you push. Once you merge a pull request delete the branch. --> 
 
-<!-- <!-- -   You can work in a branch with lots of commmits before you push. Once you merge a pull request delete the branch. --> -->
+<!-- <!-- -   Once you delete a branch on github don't work in it any more. do: `git fetch --prune` to remove the old remote branches from rstudio.Or `git branch -d branch_name` to delete your old branch --> 
 
-<!-- <!-- -   Once you delete a branch on github don't work in it any more. do: `git fetch --prune` to remove the old remote branches from rstudio.Or `git branch -d branch_name` to delete your old branch --> -->
-
-<!-- <!-- ::: --> -->
+<!-- <!-- ::: --> 
 
 <!-- # Day 13 and 14 Project 1 -->
 
@@ -571,17 +570,16 @@ Professor Garcia.
 <!-- We'll discuss ethics Monday or Wednesday, read chapter 8. -->
 <!-- ::: -->
 
-<!-- <!-- It makes most sense to do this before lab 3. [Polishing Figures](/course-materials/in-class-activies/Lec09In-classExercise-PolishingFigures.zip) --> -->
+<!-- <!-- It makes most sense to do this before lab 3. [Polishing Figures](/course-materials/in-class-activies/Lec09In-classExercise-PolishingFigures.zip) --> 
 
-<!-- <!-- ::: {.callout-tip collapse="true"} --> -->
+<!-- <!-- ::: {.callout-tip collapse="true"} -->
 
-<!-- <!-- # working directory --> -->
+<!-- <!-- # working directory -->
 
-<!-- <!-- You may need to set your working directory. --> -->
+<!-- <!-- You may need to set your working directory. --> 
 
-<!-- <!-- The easiest way to do this is to find your Lec09-...zip in the file pane and go gear-icon \> "Set As Working Directory" --> -->
-
-<!-- <!-- ::: --> -->
+<!-- <!-- The easiest way to do this is to find your Lec09-...zip in the file pane and go gear-icon \> "Set As Working Directory" --> 
+<!-- <!-- ::: --> 
 
 <!-- # Day 9 Trend Lines, Data.Frames, and RMarkdown Rendering Options -->
 
