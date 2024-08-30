@@ -777,7 +777,7 @@ format:
 
 
 
-<!-- [Make some of our own class data]() -->
+<!--  -->
 
 <!-- # Day 2 Github Lab -->
 
@@ -797,6 +797,9 @@ format:
 
 # Day 1 Welcome and Github 
 
+::: {.callout-note collapse="true"}
+## Classic First Day Stuff
+
 -   [Syllabus](./course-materials/syllabus/syllabus.html)
 
 -   Log into [Slack](https://www.slack.com)
@@ -805,6 +808,15 @@ format:
 
 -   Bring Computers to Class
 
+:::
+
+-   [Make some of our own class data](https://forms.gle/bzaGFftbFczZMhRe7)
+
+-   [Overview of Intro to Data Science](./course-materials/lectures/1_Overview_of_the_course.qmd)
+
+::: {.callout-note collapse="true"}
+### git started with Version Control
+
 -   Sign up for [github here](https://github.com/), if you don't already have an account. We will very carefully link your github account to our github classroom account.
 
 -   Intro to github
@@ -812,6 +824,8 @@ format:
 -   [Github Fundamentals Lab 0](https://classroom.github.com/a/GG36O-3I)
 
 -   [Happy Git and the UseR](https://happygitwithr.com/)
+
+:::
 
 
 ### Walk to MCConnell 215 and 214
