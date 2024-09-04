@@ -1,7 +1,11 @@
 ---
 title: "A Short History of R"
 author: "Schwab"
-format: revealjs
+format: 
+  revealjs:
+    theme: beige
+    controls: 
+      true
 editor: visual
 ---
 

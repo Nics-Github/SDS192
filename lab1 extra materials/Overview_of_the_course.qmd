@@ -1,6 +1,11 @@
 ---
 title: "File Paths and Intro to Maps"
 author: "Schwab"
+format: 
+  revealjs:
+    theme: beige
+    controls: 
+      true
 editor: visual
 ---
 
