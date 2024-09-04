@@ -16,52 +16,51 @@ format:
     smooth-scroll: true
 ---
 
-<!-- ```{=html} -->
-<!-- <style> -->
-<!-- h1{font-weight: 400;} -->
-<!-- </style> -->
-<!-- ``` -->
-<!-- ```{r setup, include=FALSE} -->
-<!-- knitr::opts_chunk$set( -->
-<!--   echo = TRUE, message=FALSE, warning = FALSE, eval = TRUE,  -->
-<!--   fig.width = 16/2, fig.height = 9/2 -->
-<!-- ) -->
+```{=html}
+<style>
+h1{font-weight: 400;}
+</style>
+```
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  echo = TRUE, message=FALSE, warning = FALSE, eval = TRUE,
+  fig.width = 16/2, fig.height = 9/2
+)
 
-<!-- # tidyverse R packages: -->
-<!-- library(tidyverse) -->
-<!-- library(mdsr) -->
+# tidyverse R packages:
+library(tidyverse)
+library(mdsr)
 
-<!-- # CRAN R packages: -->
-<!-- library(knitr) -->
-<!-- library(fivethirtyeight) -->
-<!-- library(nycflights13) -->
-<!-- library(gapminder) -->
-<!-- library(babynames) -->
-<!-- library(scales) -->
-<!-- library(moderndive) -->
+# CRAN R packages:
+library(knitr)
+library(fivethirtyeight)
+library(nycflights13)
+library(gapminder)
+library(babynames)
+library(scales)
+library(moderndive)
 
-<!-- library(maps) -->
-<!-- library(mapproj) -->
-<!-- library(patchwork) -->
+library(maps)
+library(mapproj)
+library(patchwork)
 
-<!-- # Set seed value of random number generator to get "replicable" random numbers. -->
-<!-- # Why 76? Because of https://www.youtube.com/watch?v=xjJ7FheCkCU -->
-<!-- set.seed(76) -->
-<!-- ``` -->
+# Set seed value of random number generator to get "replicable" random numbers.
+# Why 76? Because of https://www.youtube.com/watch?v=xjJ7FheCkCU
+set.seed(76)
+```
 
-<!-- ```{=html} -->
-<!-- <style> -->
-<!-- h1{font-weight: 400;} -->
-<!-- </style> -->
-<!-- ``` -->
-<!-- # Schedule -->
+```{=html}
+<style>
+h1{font-weight: 400;}
+</style>
+```
+# Schedule
 
-<!-- ```{=html} -->
-
-<!-- <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTG_b6upDZcPxXB92LHYIhV1uAXgeVGaMsZ3sDRPuSQN74JdhkKhZQVjw6T68I3zsP8KGYzDSVTZW64/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false&amp;gid=0&amp;range=A1:E44 -->
-<!-- " width="100%" height="400"> -->
-<!-- ``` -->
-<!-- </iframe> -->
+```{=html}
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTG_b6upDZcPxXB92LHYIhV1uAXgeVGaMsZ3sDRPuSQN74JdhkKhZQVjw6T68I3zsP8KGYzDSVTZW64/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false&amp;gid=0&amp;range=A1:E3
+" width="100%" height="200">
+```
+</iframe>
 
 <!-- # Day 38  -->
 
@@ -779,23 +778,33 @@ format:
 
 <!--  -->
 
-<!-- # Day 2 Github Lab -->
+# Day 2 Github Lab
 
-<!-- You are only installing git today. Ignore the other files until Day 3 -->
+[Overview of Intro to Data Science](./course-materials/lectures/1_Overview_of_the_course.qmd)
 
-<!-- ::: {.callout-note collapse="true"} -->
-<!-- ## Sign into githubclassroom -->
 
-<!-- Link github account to github classroom - sign into github -->
 
-<!-- -   https://classroom.github.com/a/ERIt75vu for lab 1 -->
+You are only installing git today. Ignore the other files until Day 3
 
-<!-- -   find your name in the roster and click it. -->
+::: {.callout-note collapse="true"}
+## Sign into githubclassroom
 
-<!-- -   you should see lab 1, which we will discuss on Friday. -->
-<!-- ::: -->
+Link github account to github classroom - sign into github
+
+-   prereq- We need to have a github account
+
+-   https://classroom.github.com/a/ERIt75vu for lab 1
+
+-   find your name in the roster and click it.
+
+-   you should see lab 1, which we will discuss on Friday.
+:::
+
+[Survey for Prof Cao's study](https://smithcollege.qualtrics.com/jfe/form/SV_1YAqUXjbwJJbe3s)
 
 # Day 1 Welcome and Github 
+
+
 
 ::: {.callout-note collapse="true"}
 ## Classic First Day Stuff
@@ -827,7 +836,7 @@ format:
 
 :::
 
-[Survey for Prof Cao's study](https://smithcollege.qualtrics.com/jfe/form/SV_1YAqUXjbwJJbe3s)
+
 
 ### Walk to MCConnell 215 and 214
 
