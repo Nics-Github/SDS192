@@ -1,0 +1,1660 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>SDS 192 - dbplyr-SQL</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../course-materials/website//images/192.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script src="../../site_libs/htmlwidgets-1.6.2/htmlwidgets.js"></script>
+<script src="../../site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<link href="../../site_libs/leaflet-1.3.1/leaflet.css" rel="stylesheet">
+<script src="../../site_libs/leaflet-1.3.1/leaflet.js"></script>
+<link href="../../site_libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet">
+<script src="../../site_libs/proj4-2.6.2/proj4.min.js"></script>
+<script src="../../site_libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
+<link href="../../site_libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet">
+<script src="../../site_libs/leaflet-binding-2.2.2/leaflet.js"></script>
+
+
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">SDS 192</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../course-materials/website/Resources.html" rel="" target="">
+ <span class="menu-text">Resources</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://mdsr-book.github.io/mdsr3e/" rel="" target=""><i class="bi bi-book" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://moderndive.com/C-appendixC.html" rel="" target="">
+ <span class="menu-text">T &amp; T</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.slack.com" rel="" target=""><i class="bi bi-slack" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://rstudio.smith.edu/auth-sign-in?appUri=%2F" rel="" target="">
+ <span class="menu-text">R</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://moodle.smith.edu/" rel="" target="">
+ <span class="menu-text">m</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://classroom.github.com/classrooms/144164606-sds-192-f23-sections-02-03" rel="" target=""><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../.././course-materials/syllabus/syllabus.html" rel="" target="">
+ <span class="menu-text">Syllabus</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../course-materials/website/schwab.html" rel="" target="">
+ <span class="menu-text">Schwab</span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">dbplyr-SQL</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="setup" class="level1">
+<h1>Setup</h1>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.1.4     ✔ readr     2.1.4
+✔ forcats   1.0.0     ✔ stringr   1.5.1
+✔ ggplot2   3.4.4     ✔ tibble    3.2.1
+✔ lubridate 1.9.2     ✔ tidyr     1.3.0
+✔ purrr     1.0.2     
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
+ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(RMySQL)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Loading required package: DBI</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(leaflet)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dbplyr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>
+Attaching package: 'dbplyr'
+
+The following objects are masked from 'package:dplyr':
+
+    ident, sql</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>db <span class="ot">&lt;-</span> <span class="fu">dbConnect</span>(</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">MySQL</span>(),</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">host =</span> <span class="st">"scidb.smith.edu"</span>,</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">user =</span> <span class="st">"sds192"</span>,</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">password =</span> <span class="st">"DSismfc@S"</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span>opts_chunk<span class="sc">$</span><span class="fu">set</span>(<span class="at">connection =</span> db, <span class="at">max.print =</span> <span class="dv">20</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="big-idea" class="level1">
+<h1>Big Idea</h1>
+<p>Data can live in a flat file (.csv) or relational database.</p>
+<p>If the flat file is too big it’ll crash R (think of fec20).</p>
+<p>We store large quantities in a database on a server and call up what we need.</p>
+<p>We use the Structured Query Language (SQL) to do this.</p>
+</section>
+<section id="different-dialects-of-sql" class="level1">
+<h1>Different dialects of SQL</h1>
+<p>We’ll be using MySQL.</p>
+<p>The server is in Bass Hall. It is a physical computer.</p>
+<p>Non efficient queries slow it down for everyone.</p>
+</section>
+<section id="db" class="level1">
+<h1>db?</h1>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(db)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "MySQLConnection"
+attr(,"package")
+[1] "RMySQL"</code></pre>
+</div>
+</div>
+</section>
+<section id="take-a-look-at-the-databases" class="level1">
+<h1>Take a look at the databases</h1>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>SHOW DATABASES;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="knitsql-table">
+<table class="table table-sm table-striped small">
+<caption>8 records</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Database</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">airlines</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">citibike</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">fec</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">imdb</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">information_schema</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">lahman</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">performance_schema</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">yelp</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="choose-a-database" class="level1">
+<h1>Choose a database</h1>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="kw">USE</span> citibike;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="look-at-the-tables" class="level1">
+<h1>Look at the tables</h1>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>SHOW <span class="kw">TABLES</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="knitsql-table">
+<table class="table table-sm table-striped small">
+<caption>4 records</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Tables_in_citibike</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">station_months</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">station_summary</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">trip_summary</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">trips</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="describe-a-table" class="level1">
+<h1>Describe a table</h1>
+<p>This shows what each variable (field) is and its type.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>DESCRIBE trips;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="knitsql-table">
+<table class="table table-sm table-striped small">
+<caption>9 records</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Field</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Null</th>
+<th style="text-align: left;">Key</th>
+<th style="text-align: left;">Default</th>
+<th style="text-align: left;">Extra</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">duration</td>
+<td style="text-align: left;">smallint</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">start_time</td>
+<td style="text-align: left;">datetime</td>
+<td style="text-align: left;">NO</td>
+<td style="text-align: left;">MUL</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">stop_time</td>
+<td style="text-align: left;">datetime</td>
+<td style="text-align: left;">NO</td>
+<td style="text-align: left;">MUL</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">start_station_id</td>
+<td style="text-align: left;">smallint</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">MUL</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">end_station_id</td>
+<td style="text-align: left;">smallint</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">MUL</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">bike_id</td>
+<td style="text-align: left;">smallint</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">MUL</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">user_type</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">birth_year</td>
+<td style="text-align: left;">smallint</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">gender</td>
+<td style="text-align: left;">smallint</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>DESCRIBE station_summary    ;           </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="knitsql-table">
+<table class="table table-sm table-striped small">
+<caption>9 records</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Field</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Null</th>
+<th style="text-align: left;">Key</th>
+<th style="text-align: left;">Default</th>
+<th style="text-align: left;">Extra</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">station_id</td>
+<td style="text-align: left;">smallint</td>
+<td style="text-align: left;">NO</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">name</td>
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">lat</td>
+<td style="text-align: left;">double</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">lon</td>
+<td style="text-align: left;">double</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">num_months</td>
+<td style="text-align: left;">decimal(23,0)</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">earliest</td>
+<td style="text-align: left;">datetime</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">latest</td>
+<td style="text-align: left;">datetime</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">num_starts</td>
+<td style="text-align: left;">decimal(27,0)</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">num_stops</td>
+<td style="text-align: left;">decimal(27,0)</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="sql-to-dplyr" class="level1">
+<h1>SQL to dplyr</h1>
+<table class="table">
+<thead>
+<tr class="header">
+<th>SQL</th>
+<th>dplyr</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>SELECT</td>
+<td>select(), mutate(), summarise()</td>
+</tr>
+<tr class="even">
+<td>FROM</td>
+<td>the data frame. data=</td>
+</tr>
+<tr class="odd">
+<td>WHERE</td>
+<td>filter()</td>
+</tr>
+<tr class="even">
+<td>GROUP BY</td>
+<td>group_by</td>
+</tr>
+<tr class="odd">
+<td>HAVING</td>
+<td>filter() use after group_by()</td>
+</tr>
+<tr class="even">
+<td>ORDER BY</td>
+<td>arrange()</td>
+</tr>
+<tr class="odd">
+<td>LIMIT</td>
+<td>head()</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="question" class="level1">
+<h1>Question</h1>
+<p>Which station had the most bikes rented from it?</p>
+<p>Probably consider num_starts from station_summary.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> station_id, num_starts </span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> station_summary </span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a><span class="kw">LIMIT</span> <span class="dv">10</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="knitsql-table">
+<table class="table table-sm table-striped small">
+<caption>10 records</caption>
+<thead>
+<tr class="header">
+<th style="text-align: right;">station_id</th>
+<th style="text-align: right;">num_starts</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">72</td>
+<td style="text-align: right;">38308</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">79</td>
+<td style="text-align: right;">26373</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">82</td>
+<td style="text-align: right;">9588</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">83</td>
+<td style="text-align: right;">14866</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">116</td>
+<td style="text-align: right;">38377</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">119</td>
+<td style="text-align: right;">3035</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">120</td>
+<td style="text-align: right;">9173</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">127</td>
+<td style="text-align: right;">58446</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">128</td>
+<td style="text-align: right;">63044</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">143</td>
+<td style="text-align: right;">22234</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="order-by" class="level1">
+<h1>ORDER BY</h1>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> station_id, num_starts </span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> station_summary </span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a><span class="kw">ORDER</span> <span class="kw">BY</span> num_starts</span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a><span class="kw">LIMIT</span> <span class="dv">10</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="knitsql-table">
+<table class="table table-sm table-striped small">
+<caption>10 records</caption>
+<thead>
+<tr class="header">
+<th style="text-align: right;">station_id</th>
+<th style="text-align: right;">num_starts</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">3278</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">3275</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3276</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">3277</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3213</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">3279</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3202</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">3471</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3273</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">3639</td>
+<td style="text-align: right;">0</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="order-by-desc" class="level1">
+<h1>ORDER BY DESC</h1>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> station_id, num_starts </span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> station_summary </span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a><span class="kw">ORDER</span> <span class="kw">BY</span>  num_starts <span class="kw">DESC</span></span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a><span class="kw">LIMIT</span> <span class="dv">10</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="knitsql-table">
+<table class="table table-sm table-striped small">
+<caption>10 records</caption>
+<thead>
+<tr class="header">
+<th style="text-align: right;">station_id</th>
+<th style="text-align: right;">num_starts</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">519</td>
+<td style="text-align: right;">162716</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">497</td>
+<td style="text-align: right;">112218</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">402</td>
+<td style="text-align: right;">108590</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">435</td>
+<td style="text-align: right;">107133</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">426</td>
+<td style="text-align: right;">105610</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">3255</td>
+<td style="text-align: right;">97083</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">490</td>
+<td style="text-align: right;">94872</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">459</td>
+<td style="text-align: right;">90718</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">514</td>
+<td style="text-align: right;">86833</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">477</td>
+<td style="text-align: right;">85082</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="where-are-the-top-10-stations" class="level1">
+<h1>Where are the top 10 stations?</h1>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> station_id, num_starts, lat, lon </span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> station_summary </span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a><span class="kw">ORDER</span> <span class="kw">BY</span>  num_starts <span class="kw">DESC</span></span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a><span class="kw">LIMIT</span> <span class="dv">10</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="knitsql-table">
+<table class="table table-sm table-striped small">
+<caption>10 records</caption>
+<thead>
+<tr class="header">
+<th style="text-align: right;">station_id</th>
+<th style="text-align: right;">num_starts</th>
+<th style="text-align: right;">lat</th>
+<th style="text-align: right;">lon</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">519</td>
+<td style="text-align: right;">162716</td>
+<td style="text-align: right;">40.75187</td>
+<td style="text-align: right;">-73.97771</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">497</td>
+<td style="text-align: right;">112218</td>
+<td style="text-align: right;">40.73705</td>
+<td style="text-align: right;">-73.99009</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">402</td>
+<td style="text-align: right;">108590</td>
+<td style="text-align: right;">40.74034</td>
+<td style="text-align: right;">-73.98955</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">435</td>
+<td style="text-align: right;">107133</td>
+<td style="text-align: right;">40.74174</td>
+<td style="text-align: right;">-73.99416</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">426</td>
+<td style="text-align: right;">105610</td>
+<td style="text-align: right;">40.71755</td>
+<td style="text-align: right;">-74.01322</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">3255</td>
+<td style="text-align: right;">97083</td>
+<td style="text-align: right;">40.75059</td>
+<td style="text-align: right;">-73.99468</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">490</td>
+<td style="text-align: right;">94872</td>
+<td style="text-align: right;">40.75155</td>
+<td style="text-align: right;">-73.99393</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">459</td>
+<td style="text-align: right;">90718</td>
+<td style="text-align: right;">40.74674</td>
+<td style="text-align: right;">-74.00776</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">514</td>
+<td style="text-align: right;">86833</td>
+<td style="text-align: right;">40.76087</td>
+<td style="text-align: right;">-74.00278</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">477</td>
+<td style="text-align: right;">85082</td>
+<td style="text-align: right;">40.75641</td>
+<td style="text-align: right;">-73.99003</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="how-to-bring-an-sql-query-into-r" class="level1">
+<h1>How to bring an SQL query into R</h1>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>top_10_data <span class="ot">&lt;-</span> <span class="fu">dbGetQuery</span>(<span class="at">conn =</span> db, </span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="st">"SELECT station_id, num_starts, lat, lon </span></span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a><span class="st">FROM station_summary </span></span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a><span class="st">ORDER BY  num_starts DESC</span></span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a><span class="st">LIMIT 10;"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in dbSendQuery(conn, statement, ...): Decimal MySQL column 1 imported
+as numeric</code></pre>
+</div>
+</div>
+</section>
+<section id="put-points-on-map" class="level1">
+<h1>Put points on map</h1>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(leaflet)</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="fu">leaflet</span>() <span class="sc">|&gt;</span></span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">addTiles</span>()<span class="sc">|&gt;</span></span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">addMarkers</span>(<span class="at">lat=</span> <span class="sc">~</span>lat, <span class="at">lng =</span> <span class="sc">~</span>lon, <span class="at">data=</span>top_10_data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="leaflet html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-774afaf5cee741b719dd" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-774afaf5cee741b719dd">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org/copyright/\">OpenStreetMap<\/a>,  <a href=\"https://opendatacommons.org/licenses/odbl/\">ODbL<\/a>"}]},{"method":"addMarkers","args":[[40.751873,40.73704984,40.74034319999999,40.74173969000001,40.71754834,40.75058534702151,40.751551,40.74674499999999,40.76087502000001,40.75640548000001],[-73.977706,-73.99009295999998,-73.98955108999999,-73.99415555999998,-74.01322069000001,-73.9946848154068,-73.99393399999998,-74.00775599999999,-74.00277668,-73.9900262],null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},null,null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[40.71754834,40.76087502000001],"lng":[-74.01322069000001,-73.977706]}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</section>
+<section id="wrangling-in-sql" class="level1">
+<h1>Wrangling in SQL</h1>
+<p>What is the average age of people leaving from each location?</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> start_station_id, <span class="fu">AVG</span>(<span class="dv">2023</span><span class="op">-</span>birth_year) <span class="kw">AS</span> avg_age </span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> trips </span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> <span class="dv">2023</span><span class="op">-</span>birth_year <span class="op">&lt;</span> <span class="dv">100</span></span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a><span class="kw">GROUP</span> <span class="kw">BY</span> start_station_id </span>
+<span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-10"><a href="#cb22-10" aria-hidden="true" tabindex="-1"></a><span class="kw">ORDER</span> <span class="kw">BY</span> start_station_id <span class="kw">DESC</span></span>
+<span id="cb22-11"><a href="#cb22-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-12"><a href="#cb22-12" aria-hidden="true" tabindex="-1"></a><span class="kw">LIMIT</span> <span class="dv">10</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="knitsql-table">
+<table class="table table-sm table-striped small">
+<caption>10 records</caption>
+<thead>
+<tr class="header">
+<th style="text-align: right;">start_station_id</th>
+<th style="text-align: right;">avg_age</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">3654</td>
+<td style="text-align: right;">43.8261</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">3653</td>
+<td style="text-align: right;">40.1600</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3650</td>
+<td style="text-align: right;">36.2462</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">3649</td>
+<td style="text-align: right;">44.4194</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3648</td>
+<td style="text-align: right;">41.1166</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">3647</td>
+<td style="text-align: right;">43.8048</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3646</td>
+<td style="text-align: right;">38.8705</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">3644</td>
+<td style="text-align: right;">46.5960</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3643</td>
+<td style="text-align: right;">44.7412</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">3642</td>
+<td style="text-align: right;">42.5606</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="join" class="level1">
+<h1>JOIN</h1>
+<p>This query take a while, don’t execute it now.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> start_station_id, </span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">AVG</span>(<span class="dv">2023</span><span class="op">-</span>birth_year) <span class="kw">AS</span> age , </span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>  lat, </span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>  lon</span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> trips </span>
+<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a><span class="kw">JOIN</span> station_summary <span class="kw">ON</span> trips.start_station_id <span class="op">=</span> station_summary.station_id </span>
+<span id="cb23-10"><a href="#cb23-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-11"><a href="#cb23-11" aria-hidden="true" tabindex="-1"></a><span class="kw">GROUP</span> <span class="kw">BY</span> start_station_id</span>
+<span id="cb23-12"><a href="#cb23-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-13"><a href="#cb23-13" aria-hidden="true" tabindex="-1"></a><span class="kw">ORDER</span> <span class="kw">BY</span> age <span class="kw">DESC</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="knitsql-table">
+<table class="table table-sm table-striped small">
+<caption>Displaying records 1 - 20</caption>
+<thead>
+<tr class="header">
+<th style="text-align: right;">start_station_id</th>
+<th style="text-align: right;">age</th>
+<th style="text-align: right;">lat</th>
+<th style="text-align: right;">lon</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">3237</td>
+<td style="text-align: right;">402.7122</td>
+<td style="text-align: right;">40.75383</td>
+<td style="text-align: right;">-73.94268</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">298</td>
+<td style="text-align: right;">233.7158</td>
+<td style="text-align: right;">40.68683</td>
+<td style="text-align: right;">-73.97968</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">225</td>
+<td style="text-align: right;">216.8843</td>
+<td style="text-align: right;">40.74195</td>
+<td style="text-align: right;">-74.00803</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">3036</td>
+<td style="text-align: right;">189.7692</td>
+<td style="text-align: right;">40.79018</td>
+<td style="text-align: right;">-73.93029</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3282</td>
+<td style="text-align: right;">173.8735</td>
+<td style="text-align: right;">40.78307</td>
+<td style="text-align: right;">-73.95939</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">3143</td>
+<td style="text-align: right;">172.2901</td>
+<td style="text-align: right;">40.77645</td>
+<td style="text-align: right;">-73.96418</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3160</td>
+<td style="text-align: right;">165.6663</td>
+<td style="text-align: right;">40.77897</td>
+<td style="text-align: right;">-73.97375</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2006</td>
+<td style="text-align: right;">159.9212</td>
+<td style="text-align: right;">40.76591</td>
+<td style="text-align: right;">-73.97634</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3040</td>
+<td style="text-align: right;">157.6471</td>
+<td style="text-align: right;">40.66402</td>
+<td style="text-align: right;">-74.00030</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2004</td>
+<td style="text-align: right;">154.1392</td>
+<td style="text-align: right;">40.72440</td>
+<td style="text-align: right;">-74.00470</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3374</td>
+<td style="text-align: right;">153.8073</td>
+<td style="text-align: right;">40.79948</td>
+<td style="text-align: right;">-73.95561</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">3180</td>
+<td style="text-align: right;">147.0312</td>
+<td style="text-align: right;">40.69878</td>
+<td style="text-align: right;">-73.99712</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">493</td>
+<td style="text-align: right;">144.9925</td>
+<td style="text-align: right;">40.75680</td>
+<td style="text-align: right;">-73.98291</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">232</td>
+<td style="text-align: right;">143.2358</td>
+<td style="text-align: right;">40.69598</td>
+<td style="text-align: right;">-73.99015</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3114</td>
+<td style="text-align: right;">141.0478</td>
+<td style="text-align: right;">40.73165</td>
+<td style="text-align: right;">-73.96162</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">3137</td>
+<td style="text-align: right;">137.6360</td>
+<td style="text-align: right;">40.77283</td>
+<td style="text-align: right;">-73.96685</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3136</td>
+<td style="text-align: right;">134.5695</td>
+<td style="text-align: right;">40.76637</td>
+<td style="text-align: right;">-73.97152</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">217</td>
+<td style="text-align: right;">131.6999</td>
+<td style="text-align: right;">40.70277</td>
+<td style="text-align: right;">-73.99384</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">224</td>
+<td style="text-align: right;">129.1457</td>
+<td style="text-align: right;">40.71146</td>
+<td style="text-align: right;">-74.00552</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">3165</td>
+<td style="text-align: right;">128.8369</td>
+<td style="text-align: right;">40.77579</td>
+<td style="text-align: right;">-73.97621</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="bring-this-into-r" class="level1">
+<h1>Bring this into R</h1>
+<p>Use the <code>dbGetQuery()</code> function. The first argument is the connection the second is the query as a character.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>age_by_station_data <span class="ot">&lt;-</span> <span class="fu">dbGetQuery</span>(<span class="at">conn =</span> db, </span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>                          <span class="st">"SELECT start_station_id, </span></span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a><span class="st">                          AVG(2023-birth_year) AS age , </span></span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a><span class="st">                          lat,</span></span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a><span class="st">                          lon</span></span>
+<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a><span class="st">                          </span></span>
+<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a><span class="st">                          FROM trips </span></span>
+<span id="cb24-8"><a href="#cb24-8" aria-hidden="true" tabindex="-1"></a><span class="st">                          </span></span>
+<span id="cb24-9"><a href="#cb24-9" aria-hidden="true" tabindex="-1"></a><span class="st">                          JOIN station_summary ON trips.start_station_id = station_summary.station_id </span></span>
+<span id="cb24-10"><a href="#cb24-10" aria-hidden="true" tabindex="-1"></a><span class="st">                          </span></span>
+<span id="cb24-11"><a href="#cb24-11" aria-hidden="true" tabindex="-1"></a><span class="st">                          GROUP BY start_station_id</span></span>
+<span id="cb24-12"><a href="#cb24-12" aria-hidden="true" tabindex="-1"></a><span class="st">                          </span></span>
+<span id="cb24-13"><a href="#cb24-13" aria-hidden="true" tabindex="-1"></a><span class="st">                          ORDER BY age DESC;"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in dbSendQuery(conn, statement, ...): Decimal MySQL column 1 imported
+as numeric</code></pre>
+</div>
+</div>
+</section>
+<section id="make-a-map" class="level1">
+<h1>Make a map</h1>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(leaflet)</span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a><span class="fu">leaflet</span>() <span class="sc">|&gt;</span></span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">addTiles</span>()<span class="sc">|&gt;</span></span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">addMarkers</span>(<span class="at">lat=</span> <span class="sc">~</span>lat, <span class="at">lng =</span> <span class="sc">~</span>lon, <span class="at">popup=</span> <span class="sc">~</span><span class="fu">as.character</span>(age), <span class="at">data=</span>age_by_station_data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="leaflet html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-5b7d9d41408c2f6b3549" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-5b7d9d41408c2f6b3549">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org/copyright/\">OpenStreetMap<\/a>,  <a href=\"https://opendatacommons.org/licenses/odbl/\">ODbL<\/a>"}]},{"method":"addMarkers","args":[[40.75383343437622,40.68683208,40.74195138,40.7901842165262,40.78307,40.77644822496696,40.77896784,40.76590936000001,40.66401923165019,40.724399,40.799484,40.69878,40.7568001,40.69597683,40.73165141,40.77282817,40.766368,40.70277159,40.71146364,40.77579376683666,40.69991755,40.69428114139733,40.71273266000001,40.79339299999999,40.7857851,40.696192,40.69839895,40.71542197,40.7245634290432,40.75022392,40.77340659999999,40.78472675,40.70037867000001,40.7643971,40.79127,40.76421007169063,40.6765304,40.67281550000001,40.701907,40.6747844,40.7277140777778,40.75828065,40.79225530000001,40.6610633719006,40.71045099999999,40.6751622,40.68199044270703,40.79181171501097,40.66812700000001,40.66813200000001,40.6725058,40.71494807,40.6729679,40.6812117,40.76087502000001,40.73524276,40.7969347,40.69165183,40.6662078,40.70569253999999,40.70255088,40.6859296,40.67699929999999,40.75299641,40.69794000000001,40.78414471999999,40.7781314,40.74160999999999,40.67727439999999,40.67049220000001,40.79343369999999,40.70122128000001,40.795346,40.72153266999999,40.7076449441757,40.7423543,40.70463333999999,40.7817212,40.7981856,40.67051349999999,40.70355376999999,40.70853074000001,40.6829151,40.6750207,40.76695317000001,40.75594159000001,40.75645824,40.75910699999999,40.700469,40.74708585999999,40.6776147,40.76915505,40.78275000000001,40.77677702,40.8013434,40.74966,40.68644419999999,40.69474881000001,40.75325964,40.66514681533793,40.77118287540657,40.71497870000001,40.71151199999999,40.75992262,40.72490985000001,40.7961535,40.70255064999999,40.75052534000001,40.67734289999999,40.78720869,40.76800889305947,40.707873,40.695065,40.75206230700001,40.71754834,40.71117415999999,40.69241829257846,40.67514683870979,40.6703837,40.78490320000001,40.75001986,40.70281857999999,40.67260298150126,40.7361967,40.6740886,40.76344058,40.804213,40.6750705,40.68382603999999,40.69766563999999,40.78350160000001,40.71219906,40.7691572,40.7997568,40.80083630000001,40.76068327096591,40.6763947,40.78057799010333,40.77750702754798,40.75206862,40.76228826,40.77518615000001,40.6917823,40.74144387,40.71581550000001,40.74334935000001,40.77862688,40.77163851,40.7512836,40.71106600000001,40.74524767999999,40.67119780000001,40.739445,40.79195570000001,40.6809447234773,40.75110165,40.6777287,40.80211739999999,40.7037992,40.76350531999999,40.75714757999999,40.79899369999999,40.77376300000001,40.71911552,40.6795766,40.6794327,40.6686273,40.74730999999999,40.73997354103409,40.75172632,40.66377899999999,40.74765947000001,40.68807003,40.74421899999999,40.66866270000001,40.73535398000001,40.78679469999999,40.78339981,40.68763155,40.6704836,40.680611,40.76440022999999,40.72036775298455,40.75929124,40.67904299999999,40.76727216,40.7941654,40.70905622999999,40.77748046,40.70365182,40.76370738999999,40.69512844999999,40.70955958,40.67248110000001,40.66631810000001,40.6802133,40.77224853772174,40.72079821,40.721319,40.71450450999999,40.75455731,40.74718234,40.74317449,40.677236,40.67267243410948,40.67461342247582,40.72185379,40.71473993,40.78499979000001,40.787801,40.7454973,40.71307916,40.79329668,40.67927880000001,40.69089272000001,40.7153379,40.70925010207117,40.67872419999999,40.71291223999999,40.75500254000001,40.79377039999999,40.70834697999999,40.69610226,40.68304560000001,40.7859201,40.7047177,40.73912601,40.74674499999999,40.73226397999999,40.75968085,40.686371,40.74620090000001,40.74516770000001,40.73652889,40.78018397242391,40.6849894,40.7921,40.6945355363525,40.69023750000001,40.729193,40.72884599999999,40.70530954000001,40.75527306999999,40.72362738,40.75724567911726,40.72165481,40.7597108,40.73532426999999,40.71622644000001,40.68815289999999,40.69102925677969,40.74971775300001,40.70317239999999,40.7892529,40.74901271,40.68312488999999,40.73401143,40.78141070019002,40.68275490000001,40.77705750000001,40.7902541733042,40.69573398,40.78822129999999,40.71413310999999,40.718822,40.70148510000001,40.72243796999999,40.78839,40.71413088999999,40.78524672000001,40.71782143000001,40.74937024193277,40.76341379000001,40.78948541553216,40.67637439999999,40.6933982,40.75460110260001,40.7512835969623,40.73564,40.67469570000001,40.78293910000001,40.6809591,40.75756990000001,40.6786115,0,40.71722740000001,40.75058534702151,40.76526539999999,40.70224000000001,40.77856689999999,40.67933069999999,40.71910537000001,40.77565541000001,40.76500525,40.7973721,40.68926942000001,40.72110063000001,40.67909799721684,40.71427487,40.71469,40.75038009000001,40.77492512999999,40.75255434000001,40.756014,40.666287,40.77966809007312,40.71602117999999,40.722055,40.72311651,40.72210378668603,40.751551,40.71748752000001,40.77466709999999,40.71757100000001,40.751873,40.778301,40.70823502,40.69327018000001,40.72229346,40.73038599,40.75019995000001,40.73704984,40.697787,40.71870987,40.76780080148132,40.74854862,40.73543933999999,40.74394314,40.746647,40.76030096,40.67434000000001,40.7779453,40.73555,40.77573034,40.68506807308177,40.76095756,40.73454567,40.668603,40.74734825000001,40.71924000000001,40.68981035000001,40.73224119000001,40.69236178,40.7284186,40.74890060000001,40.75898481399634,40.69608941000001,40.75797322,40.70708701,40.68496679999999,40.74475148,40.71625008,40.76132983124814,40.79197599999999,40.76994259999999,40.76712840349541,40.74436328706688,40.75097711,40.7612274,40.71076227999999,40.71939226,40.68435490000001,40.74444920999999,40.75513557,40.71044554000001,40.74780372999999,40.76009437,40.68674429999999,40.71421500000001,40.72430527250332,40.76663814,40.75892386377695,40.73261787000001,40.73331967000001,40.76019251999999,40.69239502,40.7390169121,40.72917025,40.74469738,40.72706363348306,40.7806284,40.72405500000001,40.68851534,40.771522,40.71260486,40.69221589,40.73935542,40.75158099999999,40.75640548000001,40.68822599999999,40.73047746999999,40.68833369999999,40.71745169,40.69957607999999,40.73827427999999,40.77801203000001,40.72710258,40.74915599999999,40.75216528062197,40.6847514,40.69760127,40.72405549,40.71406667000001,40.71559509000001,40.77112927000001,40.73291553000001,40.71534824999999,40.71688699999999,40.77536905,40.68691865,40.75323098,40.73649403000001,40.79017948095082,40.76584940999999,40.6906495,40.72317958000001,40.69331716,40.68311640000001,40.74487634,40.72580614000001,40.74290902000001,40.74402299999999,40.7381765,40.6828003,40.68962188790334,40.770513,40.73971301,40.7457121,40.77140426,40.699773,40.77391390238119,40.71285887,40.70717936,40.79500000000001,40.713126,40.76471851944338,40.6783563,40.6851443,40.71739973,40.77452834999999,40.73143724085229,40.78112229934165,40.75466590999999,40.75510266999999,40.71893904,40.68539567,40.73492694999999,40.70706456,40.75899655960512,40.73726186,40.73020660529954,40.76461837,40.72066442,40.7262807,40.74173969000001,40.743,40.72903917000001,40.735238,40.7727966,40.7689738,40.751396,40.73047308999999,40.70691254,40.6861758,40.7728384,40.68304799999999,40.68764484,40.6685455,40.7258483,40.76312583999999,40.74177602999999,40.72953837,40.69539816999999,40.74395411,40.70767788,40.7160751,40.76873687,40.73221853,40.74034319999999,40.72228087000001,40.73932300000001,40.69681963,40.68940747,40.76825400000001,40.76269881999999,40.75018156325683,40.7303801,40.73423200000001,40.72179134,40.73172427999999,40.67532740000001,40.68650064999999,40.71173106999999,40.74098300000001,40.68216564,40.71900949999999,40.73266,40.71269042,40.73650199999999,40.70029511000001,40.76669671000001,40.74345335,40.74652400000001,40.71605865999999,40.72019576000001,40.74238787000001,40.74232744,40.7877214,40.69861700000001,40.76227204999999,40.71117443999999,40.72779126,40.72906,40.69072548999999,40.72740793999999,40.68537609999999,40.71247661,40.689888,40.72743422999999,40.68223166000001,40.69425403000001,40.73232194000001,40.72930611488741,40.74311555376487,40.68631199999999,40.73624526999999,40.68456830000001,40.70538076999999,40.70583339,40.69008150000001,40.70166569999999,40.71774591999999,40.74096373999999,40.68753406,40.68620299999999,40.68034242300001,40.75660359,40.68145979999999,40.67890678999999,40.73587678000001,40.72467721,40.68900443,40.67363551341504,40.6777748,40.79313480986662,40.68260099999999,40.68488000000001,40.72938685,40.68680820503432,40.74691959,40.751483,40.68415748,40.77246067789397,40.70510918000001,40.70411790999999,40.6809833854,40.73314259,40.76703432309871,40.70934,40.73381219196632,40.8109494,40.72368361000001,40.70862144,40.72521311000001,40.7208736,40.6851532,40.77376867022874,40.693261,40.68676792999999,40.69363137,40.69196035,40.69383,40.71764000000001,40.7904828,40.67942679999999,40.69308257,40.73025999999999,40.68949320000001,40.71850211000001,40.69580704999999,40.67581622522832,40.715143,40.7862586,40.69622936999999,40.804038,40.7839636,40.72453733999999,40.69527008,40.8011939,40.711863,40.78699460000001,40.78921050000001,40.71907891179564,40.71167350999999,40.72325,40.72621787999999,40.7519071,40.71926080999999,40.7169811,40.68236869999999,40.73223272000001,40.74025877999999,40.7903051,40.70877084,40.76302594280519,40.71069994631387,40.81,40.69237074,40.72955361,40.75742,40.68001049999999,40.8078316,40.7557327,40.69196566,40.76309387270797,40.72217444,40.805159,40.80295,40.72082834,40.6803560840434,40.8029263,40.7525758,40.68693100000001,40.801694,40.74286877312112,40.74252,40.73781509000001,40.75668720603179,40.802692,40.75272201381188,40.8107922,40.7949879,40.72299207999999,40.7974772,40.69231660719192,40.71485150526252,40.71915571696043,40.72708583999999,40.70531194,40.81439443791582,40.72557,40.68401999999999,40.71929301,40.7692475,40.72502875999999,40.74275382865903,40.73536705560539,40.6809741,40.78245417527987,40.745038,40.75227093837409,40.8013066,40.73035413827326,40.68512559515415,40.75186951421875,40.72481256440017,40.74128309355993,40.64653836709648,40.8143256,40.76108,40.805973,40.7647,40.75763227739443,40.7449067,40.72606,40.774591,40.72494672359416,40.776165,40.70870367999999,40.8006721,40.75462324029105,40.78145,40.66314,40.808442,40.8014866,40.7252556952547,40.7923272,40.67470550000001,40.646768,40.813358,0,40.75118387463277,40.8045555,40.7638753,40.802535,40.7628138,40.69128258,40.79747,40.7987859,40.81413,40.799139,40.6716493,40.78728519860952,40.7767,40.770845,40.748,40.6630619,40.7552433,40.7576314,40.754876,40.8114323,40.6740123,40.809725,40.73181401720966,40.756913,40.6767,40.7729,40.804372,40.68841742754083,40.7659,40.7945663,40.81028506306003,40.774645,40.66980193089616,40.8082,40.7671863,40.7682,40.678045,40.68323865460341,40.8125511,40.75295699999999,40.757186,40.6804836,40.797911,40.7747878,40.6769694,40.71335226222875,40.8120562,40.7633589,40.80698,40.7485,40.796879,40.69795031569544,40.6627059,40.72146256229816,40.7954121,40.805726,40.7711528,40.751047,40.7774552,40.6794388,40.7596276,40.72576996727214,40.7580583,40.6765198,40.7656251,40.7531106,40.761584,40.7668,40.7601853,40.7614376,40.71286844000001,40.80756,40.72804857136261,40.7658346,40.75820464696758,40.7699176,40.6721683,40.65539977447832,40.7527085,40.6737236,40.65708866668485,40.8005385,40.7703743,0,40.7787185,40.676368,40.7577284,40.7671,40.768692,40.6686744,40.71928,40.8067581,40.6758324,40.6661649,40.760339,40.7713937,40.7569332,40.795508,40.71036854235229,40.71638031973561,40.7713615,40.6777747,40.7595701,40.7739825,40.763154,40.76315481910373,40.6791944,40.6707767,40.67280641227746,40.6741806,40.7701477,40.8086249,40.7989445,40.6642406,40.672695,40.6679411,0,40.66906013501107,40.7747175,40.6691783,40.7627442,40.725208,45.50585063876723,40.6817612423526,40.71690978045965,40.666563,40.75903008219606,45.50636405401139,40.7077314839547,0],[-73.94267678260802,-73.9796772,-74.00803012999999,-73.93029436469078,-73.95939,-73.96417737007141,-73.97374736999998,-73.97634151,-74.00030064379882,-74.004704,-73.95561299999999,-73.99712,-73.98291153,-73.99014892000001,-73.96161892000001,-73.96685275999998,-73.97151800000002,-73.99383605000001,-74.00552427,-73.9762057363987,-73.98971772999998,-73.99230033159256,-74.00460729999999,-73.96355560000002,-73.95748100000002,-73.991218,-73.98068914,-74.01121978,-73.9894437789917,-73.97121414,-73.97782542000002,-73.96961714999999,-73.99548058999999,-73.97371465000002,-73.964839,-73.96910458803177,-73.97846878999998,-73.98352354999999,-74.01394200000001,-74.01612847,-74.01129573583603,-73.97069431,-73.95249933000001,-73.97945255041122,-73.960876,-73.98148319999999,-73.99079024791718,-73.9786022901535,-73.98377641,-73.97363830999998,-74.00494694999999,-74.00234481999999,-73.97087983999998,-74.00860911999999,-74.00277668,-73.98758561,-73.9643412291,-73.99997859999999,-73.98199885999999,-74.01677685000001,-73.98940236,-74.00242363999999,-74.00647133999999,-73.98721619000001,-73.96986848000002,-73.98362492,-73.96069399,-73.96044000000002,-73.98282001999999,-73.98541675,-73.94945002999999,-74.01234218,-73.96186,-73.95782356999999,-73.96841526031494,-73.98915076000002,-74.01361706,-73.94593999999998,-73.9605909006,-73.98876584999998,-74.00670227000001,-73.96408963,-73.99318208,-73.97111472999998,-73.98169333,-74.0021163,-73.99372222,-73.95922299999998,-73.99145399999999,-73.94977234,-73.97324283,-73.98191841000002,-73.97136999999999,-73.95900970000001,-73.97114574390001,-73.95209999999999,-73.98759104,-73.98362464,-73.94335787999999,-73.97637605667114,-73.96409422159195,-74.013012,-74.015756,-73.97648516000001,-74.00154701999999,-73.94782145000001,-74.01272340000001,-73.94594845000002,-74.01275055999999,-73.98128126999998,-73.96845281124115,-74.00167,-73.987167,-73.9816324043,-74.01322069000001,-74.00016544999998,-73.98949474096298,-73.97523209452629,-73.97839676,-73.95050300000001,-73.96905301000001,-73.98765761999998,-73.98983001708984,-74.00859206999999,-73.97872819999999,-73.98268128999999,-73.96699104000001,-73.98775225999999,-73.97632327999999,-73.98476436999999,-73.955327,-73.97948148,-73.96703463999998,-73.9621128676,-73.9664492472,-73.9845272898674,-73.99869893000002,-73.98562431335449,-73.98888587951659,-73.96784384,-73.98336183000002,-73.94446054000001,-73.97372989999998,-73.97536082000001,-73.99422366,-74.00681753000002,-73.95772073000001,-73.98261428000001,-73.99692450000001,-74.00944700000001,-73.94733275999999,-73.97484125999999,-73.976806,-73.96808699999998,-73.97567331790923,-73.94073717000002,-73.99364122999999,-73.96818053050002,-74.00838675999999,-73.97109243,-73.97207835999998,-73.96621737780002,-73.96222088,-74.00666661000001,-73.97854971000001,-74.00785040999999,-73.98700053000002,-73.95451000000001,-74.00513872504234,-73.98753523000002,-73.98396846000001,-73.98490706999999,-73.98410637000001,-73.97121214000002,-73.97988067000001,-74.00483091,-73.97711200000002,-73.98093132999999,-74.0016256,-73.98208967999999,-73.99475825,-73.96648976999998,-73.96165072917938,-73.98859650999999,-74.011169,-73.99392888,-73.97412399999999,-74.01043382,-73.98288593999999,-74.01167796999998,-73.9851615,-73.99595064999998,-74.00653609,-73.99331393999999,-73.98546169999999,-73.98432694999998,-73.95842134952545,-73.95484711999998,-74.01006499999998,-74.00562789000001,-73.96592975999999,-73.94326350000001,-74.00366442999999,-74.015665,-74.0087952464819,-73.98501142859459,-74.00771779,-74.00910626999999,-73.97283405999998,-73.95355900000001,-74.00197138999999,-73.99851192999999,-73.94320830000001,-73.98154004000001,-73.99612348999999,-74.01658354000001,-73.96042916231529,-73.99599099,-74.01020233999999,-73.98014437000002,-73.97188800000002,-74.01713444999999,-73.96751037,-74.00348558999998,-73.94860294,-74.00926027000001,-73.97973776000002,-74.00775599999999,-73.99852205000001,-73.97031366,-73.99383323999999,-73.98855722999998,-73.98683077,-74.00618025999998,-73.97728532552719,-73.99440329000001,-73.97389999999999,-73.95805760573133,-73.99203074,-73.97665499999999,-74.00859100000001,-74.00612572,-73.98316936000002,-73.99949601000002,-73.97805914282799,-74.00234737000001,-73.97402310999999,-73.99800418999999,-73.98261205999998,-73.99520918999998,-73.99183362722397,-74.00295034600002,-73.94063600000001,-73.93956236999999,-73.98848395000002,-73.97895137,-74.00293877,-73.95595908164978,-73.98258554999998,-73.97898475,-73.97718340158461,-73.97129668000001,-73.97041561000002,-73.95234386000001,-73.99595999999998,-73.98656928000001,-74.00566443000001,-73.9747,-73.99704680000001,-73.97667320999999,-73.97628939000002,-73.99923384189606,-73.99667444000001,-73.95242929458618,-74.00324956999999,-73.93987700000001,-73.971878855,-73.99692445993422,-73.95865999999999,-73.99785768000001,-73.9786517,-73.99905708999998,-73.99098506999998,-73.99037292000001,0,-73.98802084,-73.9946848154068,-73.98192338,-73.982578,-73.97754961,-73.97519523000001,-73.99973337000002,-73.95068615000001,-73.95818491,-73.97041192000002,-73.98912867,-73.9919254,-73.98765474557877,-73.98990025000001,-73.95739000000002,-73.98338988,-73.98266565999998,-73.97282625000001,-73.96741599999999,-73.98895053,-73.98093044757842,-73.99974371999998,-73.98911099999999,-73.95212324000001,-73.99724900722504,-73.99393399999998,-74.01045539999998,-73.98470567000001,-74.00554899999999,-73.977706,-73.94881340000002,-74.00530062999998,-73.97703874,-73.99147534999999,-74.00214988000002,-73.99093085000001,-73.99009295999998,-73.97373600000002,-74.00900090000002,-73.96592080593109,-73.98808415999999,-73.99453947999999,-73.97966068999999,-73.993915,-73.99884222000001,-74.00194697999999,-73.94604100000001,-73.95284000000001,-73.95675259999999,-73.97790759801863,-73.96724467,-73.99074141999999,-73.9904394,-73.99723551,-73.95241999999999,-73.97493121000001,-74.00026393999998,-73.98631746,-73.98713956000002,-73.97604881999999,-73.99379968643188,-73.97803415,-73.96603308,-73.95796783000002,-73.98620772000001,-73.99915362,-74.00910589999999,-73.97982001304626,-73.94599300000002,-73.96060711999999,-73.96224617958069,-73.9558732509613,-73.98765428,-73.96094022,-73.99400398,-74.00247213999999,-73.98901629,-73.98303528999999,-73.98658032000002,-73.96525063,-73.9734419,-73.99461842999999,-73.99063167999999,-73.98134600000002,-73.99600982666016,-73.95348295999999,-73.96226227283478,-73.99158043,-73.99510132,-73.9912551,-73.99337908999999,-74.0026376103,-73.99810231000001,-73.93540374999999,-73.99662137031554,-73.95216670000001,-73.955736,-73.9647628,-73.99054099999999,-73.96264402999999,-73.98428439999999,-73.99931783,-73.97790999999998,-73.9900262,-73.979382,-73.99906065000002,-73.95091600000001,-73.95850939,-73.94708417000001,-73.98751968000001,-73.95407149000002,-74.00297088000001,-73.99160000000002,-73.97992193698882,-73.99917254,-73.99344558999998,-74.00965965,-73.99293910999998,-73.98702950000002,-73.95772296999999,-74.00711384,-73.96024116,-73.96319800000002,-73.94803391999999,-73.976682,-73.97032517000001,-73.99704374,-73.97288918495178,-73.98690506000001,-73.95643106999999,-73.99480012000001,-73.95381995000001,-73.99785267000001,-73.99529885000001,-73.97422494,-73.97706057999999,-73.97605599999999,-73.97738662000002,-73.99990419000001,-73.98304268717766,-73.98803799999999,-73.99456404999999,-73.98194829000001,-73.95351660000001,-73.97992699999999,-73.9543953537941,-73.96590293999999,-74.00887308000001,-73.96450000000002,-73.98484399999998,-73.96222069859505,-74.00014502000001,-73.95380904,-73.98016555000001,-73.98753759,-73.99490341544151,-73.94965589046478,-73.99138152,-73.97498696000001,-73.99266288,-73.97431458000001,-73.99200509000001,-74.00731853000001,-73.96865397691727,-73.99238966999998,-73.99102628231049,-73.98789472999999,-73.98517977000002,-73.98978040999999,-73.99415555999998,-73.93561,-73.99404648999999,-74.000271,-73.95577801,-73.95482273000002,-74.00522599999999,-73.98672378000002,-73.95441667,-73.99645295000002,-73.94989233,-73.964915,-73.96968902000002,-73.99333264000002,-73.95064893000001,-73.96526895,-74.00149746,-73.98426726000001,-73.94954908,-73.99144871,-73.94016171,-73.95202900000001,-73.96119945,-73.98165557000002,-73.98955108999999,-73.97668709000001,-74.00811899999998,-73.93756926000002,-73.96885457999998,-73.98863900000002,-73.99301221999998,-74.00218427181244,-73.9747502,-73.98692300000002,-73.9504154,-74.00674435999998,-74.0100698,-73.96563306999998,-73.99193043000001,-74.00170200000001,-73.95399025999998,-73.95852515,-73.95826,-73.98776323000001,-73.97809471999999,-73.95032283,-73.99061728000001,-74.00004031000002,-73.977885,-73.99190759,-73.98997825000001,-73.99726235000001,-73.95411749000002,-73.94728331,-73.94134199999999,-73.98788205000001,-73.99682618999999,-73.98564945,-73.95779000000002,-73.95133465000002,-73.98142006,-73.98302135999998,-73.94100004999999,-73.98101299999999,-73.99379024999999,-73.9614583,-73.94626915000002,-73.95508580000001,-73.9908391982317,-73.98215353488922,-73.93577500000002,-73.98473764999999,-73.95881081000002,-73.94976518999999,-73.94644577999999,-73.94791499999998,-73.94373029999998,-73.95600096,-73.98602213000001,-73.97265183,-73.94469400000001,-73.95576893919998,-73.9979009,-73.93490299999999,-73.94142770999999,-73.98205026999999,-73.98783413,-73.96023853999999,-74.01195555925369,-74.0094613,-73.97700369358063,-73.93803699999999,-73.96303999999999,-73.97772428999998,-73.98036181926727,-74.00451886999998,-73.996764,-73.96922272999998,-73.94682079553604,-73.94407279000002,-73.94818595000001,-73.95004797590001,-73.97573880999998,-73.95622730255127,-73.95608000000001,-73.98054420948029,-73.96339999999999,-73.97574813000001,-74.00722156000002,-73.97768752,-73.98085794999999,-73.94110999999999,-73.97116988897324,-73.96889599999999,-73.95928168,-73.96223557999998,-73.96536850999999,-73.990539,-73.94881999999998,-73.95033067999999,-73.92989109999999,-73.97178913000002,-73.95394,-73.94206099999998,-73.98329859,-73.97355569,-74.01488184928894,-73.94450700000002,-73.94552579000002,-73.94371093999999,-73.945925,-73.94716730000002,-73.98185423999999,-73.95238107999999,-73.95007390000001,-73.944024,-73.94164802,-73.94370784,-73.94223690032959,-73.95141312,-73.94307999999999,-73.98379854999999,-73.94791189999999,-73.98178024000002,-73.94485917999999,-73.944118,-73.98889957000002,-73.98409214000002,-73.94755756999999,-73.95095259000001,-73.97209525108337,-74.00354146957397,-73.9551508,-73.93705428,-73.98057249,-73.945133,-73.93847500000001,-73.94937299999999,-73.9236611,-73.9813018,-73.9783501625061,-73.98368778999999,-73.95469199999999,-73.942954,-73.97793172,-73.94767910242081,-73.9379,-73.9364281,-74.01696600000001,-73.957145,-73.98918628692627,-73.948852,-73.99994661000001,-73.98257732391357,-73.96295000000001,-73.98123621940613,-73.9430681,-73.93333490000001,-73.97995465999999,-73.9311847,-74.01486575603485,-74.01122331619263,-73.94885390996933,-73.95299117,-73.97100055999999,-73.95324736833572,-73.94434,-73.94976999999999,-73.94500379,-73.93545039999999,-73.99069656000002,-74.00747358798981,-73.98797392845154,-73.9710097,-73.94891962409019,-73.957539,-73.98770570755005,-73.93981669999999,-74.03773099155426,-74.02535319328308,-73.93349289894103,-73.94752621650696,-73.93725872039794,-74.01658773422241,-73.9590255,-73.93056199999999,-73.964928,-73.9240312,-73.96930575370789,-73.9534573,-73.95621000000001,-73.918544,-74.00165855884552,-73.9153175,-73.9448625,-73.9349,-73.99516761302948,-73.9183302,-73.96056950000001,-73.94520869999999,-73.9442507,-74.00412082672119,-73.9383,-74.00755719999998,-74.01651,-73.956461,0,-73.97138714790344,-73.9396861,-73.9364848,-73.9532423,-73.9342862,-73.94524160000002,-73.93504,-73.95229999999999,-73.953005,-73.9389152,-73.9631145,-73.95012259483337,-73.92763100000001,-73.93417100000001,-73.94609269999999,-73.95387460000001,-73.94856780000001,-73.9391224,-73.934326,-73.9518776,-73.9671457,-73.953149,-73.95995020866394,-73.921631,-73.969024,-73.91614199999999,-73.951475,-73.98451656103134,-73.930819,-73.9362541,-73.95736455917358,-73.923706,-73.99490475654602,-73.9641,-73.9373554,-73.9322662,-73.962408,-73.96599590778351,-73.9492286,-74.00264000000001,-73.93271900000001,-73.9646795,-73.9423,-73.91255510000001,-73.96579,-73.9491033554077,-73.9612547,-73.92864710000001,-73.94174700000001,-73.941275,-73.93726100000001,-73.97077560424805,-73.9569115,-73.94800901412964,-73.94412320000001,-73.936322,-73.9170074,-73.93797000000001,-73.92254029999999,-73.9680438,-73.9321455,-73.9507395029068,-73.9242751,-73.95960820000001,-73.9136695,-73.92799170000001,-73.925921,-73.9347774,-73.9362726,-73.9411265,-73.95698118999998,-73.939182,-73.97881150245667,-73.9265474,-73.92832159996033,-73.91840569999999,-73.9609,-74.01062786579132,-73.9397405,-73.96316109999999,-74.00870203971863,-73.9419949,-73.92860779999999,0,-73.9145645,-73.952918,-73.91663680000001,-73.91698580000001,-73.9249574,-73.9618148,-73.94861,-73.9607082,-73.95616769999999,-73.9593484,-73.9222427,-73.9077436,-73.9262231,-73.94160599999999,-73.94705951213837,-73.94821286201477,-73.9246145,-73.95293220000001,-73.9142678,-73.93091339999999,-73.920827,-73.93985509872437,-73.9587903,-73.9576801,-73.96886587142944,-73.95649469999999,-73.91209379999999,-73.9596214,-73.944846,-73.9574686,-73.954131,-73.9588,0,-73.99463653564453,-73.93378939999999,-73.9554162,-73.9391141,-73.97472399999999,-73.56910943984985,-73.99797222831033,-73.98383796215057,-73.95674099999999,-73.99385869503021,-73.56946349143981,-73.93452286720276,0],null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},["402.7122","233.7158","216.8843","189.7692","173.8735","172.2901","165.6663","159.9212","157.6471","154.1392","153.8073","147.0312","144.9925","143.2358","141.0478","137.636","134.5695","131.6999","129.1457","128.8369","127.1224","123.415","123.0791","122.3009","117.7513","117.0963","113.518","112.8538","111.7398","109.9713","107.1129","104.4546","104.3228","103.3868","101.7087","100.7042","99.1822","97.7821","95.6966","95.4877","95.4744","93.616","92.6804","91.55","88.857","88.6053","88.0708","87.4671","86.9418","85.977","84.6064","83.8103","83.2798","83.0698","82.2572","81.2686","81.2109","80.805","80.7325","80.5332","80.3266","80.1774","79.861","78.9446","78.2958","77.9343","77.1059","76.7067","76.6176","75.6494","75.5602","75.261","75.1859","75.0911","75.0759","75.0436","74.6509","74.6246","74.4841","73.9708","73.7696","73.7088","73.5065","72.466","72.1252","72.0586","71.8805","71.7453","71.5976","71.2063","71.1438","70.9828","70.8718","70.4585","70.3834","70.3391","70.1883","70.108","69.9934","69.9709","69.9473","69.9003","69.8394","69.8274","69.7786","69.7429","69.7357","69.44","69.0851","68.6434","68.6228","68.5904","67.9783","67.8245","67.786","67.7412","67.6256","67.541","67.4909","67.4413","67.2355","67.0022","66.8079","66.6835","66.6354","66.2249","66.1263","66.0758","65.9474","65.8936","65.7867","65.7235","65.7229","65.6343","65.6307","65.3052","65.2943","65.0882","64.8798","64.8729","64.7528","64.6704","64.3579","64.3231","64.3121","64.2649","64.2477","64.2405","64.2108","64.1662","64.131","63.9552","63.9528","63.7785","63.7145","63.6785","63.4405","63.4039","63.3809","63.2804","63.127","63.1104","63.0049","62.8474","62.6918","62.4576","62.3727","62.2742","62.2688","62.2074","62.1981","62.1702","62.1218","62.118","62.019","61.943","61.9063","61.7884","61.7488","61.7052","61.5914","61.5818","61.5422","61.5405","61.3184","61.2481","61.2405","61.193","61.1182","60.9849","60.8032","60.7205","60.4549","60.3636","60.3482","60.2758","60.2516","60.2254","60.155","60.1382","60.1143","60.0036","59.9667","59.794","59.769","59.7402","59.693","59.6885","59.666","59.6195","59.5182","59.4833","59.4688","59.4487","59.3934","59.3903","59.351","59.2848","59.2679","59.1994","59.1715","59.1021","59.0627","59.0461","59.0063","58.9878","58.955","58.9466","58.9133","58.8887","58.8435","58.8053","58.7985","58.6583","58.6178","58.5692","58.5637","58.4932","58.4806","58.4615","58.3766","58.2928","58.273","58.2474","58.157","57.9813","57.972","57.9516","57.8172","57.7753","57.6809","57.6556","57.6248","57.6112","57.6083","57.596","57.5702","57.4418","57.3919","57.3546","57.3414","57.3364","57.3091","57.3044","57.2984","57.2605","57.2356","57.2137","57.1577","57.0798","57.0588","57.0266","57.023","56.9896","56.9577","56.9422","56.8916","56.8642","56.8631","56.7703","56.7522","56.6803","56.549","56.5154","56.5","56.4909","56.4658","56.4606","56.435","56.411","56.3872","56.3867","56.3687","56.3417","56.3331","56.3084","56.2896","56.2706","56.2668","56.2489","56.236","56.2359","56.154","56.1414","56.1306","56.0648","56.0641","56.0578","56.025","55.9994","55.9703","55.9469","55.9062","55.794","55.7643","55.7438","55.7216","55.6884","55.6262","55.6063","55.5664","55.5599","55.5589","55.5546","55.4924","55.4685","55.4475","55.3474","55.2709","55.2695","55.2622","55.2601","55.2525","55.2092","55.1728","55.1133","55.1025","55.1025","55.072","55.0647","55.0594","55.0341","54.986","54.971","54.9553","54.9442","54.8878","54.8289","54.8061","54.7828","54.674","54.6616","54.6279","54.5534","54.5474","54.5239","54.4917","54.4837","54.4834","54.4665","54.4501","54.4138","54.3932","54.3877","54.343","54.3396","54.3335","54.2493","54.2397","54.2112","54.2107","54.2008","54.1565","54.1401","54.1285","54.0967","54.0571","54.0415","54.0259","53.9931","53.9868","53.9831","53.9606","53.9532","53.9464","53.9418","53.9298","53.9293","53.9123","53.9108","53.8876","53.887","53.8851","53.8557","53.8189","53.7215","53.7032","53.6666","53.6592","53.6494","53.5642","53.5614","53.4823","53.4512","53.4003","53.3924","53.3771","53.377","53.3622","53.3528","53.3449","53.2765","53.259","53.2438","53.2376","53.2341","53.2183","53.2045","53.1733","53.0365","52.9717","52.9682","52.9615","52.897","52.8435","52.8237","52.7029","52.6333","52.6221","52.6019","52.5556","52.4937","52.4505","52.4096","52.2271","52.2149","52.203","52.19","52.1493","52.1365","52.1362","52.0791","52.0646","52.0259","51.9938","51.9851","51.9592","51.9459","51.9139","51.8957","51.8674","51.8602","51.8287","51.8086","51.8035","51.7974","51.7795","51.7787","51.7784","51.7715","51.7642","51.7586","51.7334","51.7183","51.7043","51.6862","51.6565","51.58","51.5325","51.5225","51.5144","51.5075","51.4127","51.381","51.3501","51.2647","51.2521","51.239","51.1251","51.1035","51.0951","51.0858","51.0811","51.0771","50.9039","50.859","50.8565","50.7719","50.7081","50.7019","50.6981","50.6908","50.6903","50.6481","50.624","50.5055","50.4234","50.3641","50.3378","50.3283","50.3057","50.2558","50.2537","50.2271","50.2141","50.2092","50.2071","50.0969","50.0953","50.0896","49.9979","49.9109","49.8864","49.8859","49.873","49.7138","49.7089","49.6908","49.6886","49.6501","49.6419","49.613","49.5728","49.5606","49.4912","49.3686","49.3312","49.2944","49.2854","49.2651","49.2608","49.0772","49.064","49.0622","48.9034","48.8831","48.8129","48.7837","48.6597","48.6288","48.5641","48.5322","48.4363","48.3633","48.334","48.2831","48.2693","48.2356","48.231","48.2056","48.2","48.1946","48.1704","48.1164","47.9898","47.8478","47.8317","47.7909","47.7703","47.7659","47.6279","47.6113","47.5729","47.5446","47.537","47.4246","47.3333","47.2899","47.2878","47.2759","47.2728","47.1826","47.0834","47.0458","46.9813","46.9687","46.954","46.877","46.8417","46.8267","46.7084","46.6894","46.6324","46.4804","46.456","46.3939","46.381","46.3461","46.3134","46.2853","46.2738","46.2489","46.2473","46.2118","46.1893","46.0737","46.0588","46.03","46.0155","45.9832","45.9439","45.8122","45.7923","45.7905","45.7903","45.7391","45.7354","45.724","45.653","45.6415","45.6021","45.5055","45.3931","45.3657","45.3442","45.3182","45.2716","45.1715","45.133","45.0027","44.9942","44.9829","44.9804","44.9519","44.9441","44.8815","44.8588","44.8368","44.8333","44.8095","44.732","44.699","44.6912","44.6837","44.6643","44.6617","44.6168","44.5971","44.548","44.4194","44.3892","44.3321","44.2357","44.2295","44.2142","44.1818","43.9467","43.9123","43.896","43.8806","43.8636","43.8532","43.8485","43.8333","43.8261","43.8157","43.8048","43.7934","43.7746","43.6519","43.615","43.6098","43.5754","43.5522","43.5117","43.51","43.4925","43.4129","43.3158","43.3061","43.2186","43.2149","43.1723","43.1666","43.1502","43.1202","43.0997","43.0826","43.0512","43.0443","43","42.992","42.9753","42.9397","42.933","42.9156","42.9081","42.8719","42.8151","42.7436","42.6272","42.6184","42.5606","42.5509","42.5475","42.5374","42.5071","42.4519","42.4494","42.4291","42.4072","42.3942","42.3781","42.3104","42.2672","42.2128","42.2072","42.1811","42.1772","42.1373","42.0854","42","41.9386","41.8889","41.8792","41.8415","41.6536","41.6373","41.6338","41.5306","41.5137","41.5034","41.498","41.4895","41.481","41.4454","41.4415","41.2755","41.2546","41.2448","41.2239","41.1945","41.1166","41.1011","41.0725","41.0636","40.9897","40.9419","40.9372","40.9229","40.8781","40.8671","40.8268","40.8082","40.8033","40.7721","40.7569","40.7411","40.6259","40.5899","40.5402","40.463","40.2817","40.2646","40.206","40.16","40.1502","40.1173","40.1024","40.0962","40.0871","40.0691","40.0613","40.0518","40","39.9502","39.7867","39.7828","39.6749","39.6277","39.5246","39.5","39.335","39.3121","39.2596","39.231","39.1788","39.1535","39.1124","39.1118","39.1047","39.0474","39.0354","39.0107","38.976","38.9509","38.8705","38.7691","38.696","38.4464","38.4129","38.317","38.2257","38.1834","37.9125","37.5431","37.5114","37.5","37.2187","37.1722","37.1663","36.5897","36.3846","36.2462","35.9555","35.9375","35","34.6667","34","33.6364","33.5"],null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[0,45.50636405401139],"lng":[-74.03773099155426,0]}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</section>
+<section id="try-some-sql-with-yelp" class="level1">
+<h1>Try some SQL with yelp</h1>
+<ol type="1">
+<li><p>SHOW the databases</p></li>
+<li><p>USE yelp</p></li>
+<li><p>SHOW Tables</p></li>
+<li><p>DESCRIBE one of them</p></li>
+<li><p>Make a simple query</p></li>
+<li><p>Filter with WHERE or HAVING</p></li>
+</ol>
+</section>
+<section id="part-2" class="level1">
+<h1>Part 2</h1>
+</section>
+<section id="two-magical-verbs" class="level1">
+<h1>Two magical verbs</h1>
+<p>These two functions will be helpful and are in the <code>dbplyr</code> library.</p>
+<ol type="1">
+<li><p><code>show_query()</code></p></li>
+<li><p><code>collect()</code></p></li>
+</ol>
+</section>
+<section id="this-makes-table-connection-with-the-server" class="level1">
+<h1>This makes table connection with the server</h1>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co">#This creates a tbl_sql object in R </span></span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a> trips <span class="ot">&lt;-</span> db <span class="sc">|&gt;</span></span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a>   <span class="fu">tbl</span>(<span class="st">"trips"</span>)</span>
+<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-6"><a href="#cb27-6" aria-hidden="true" tabindex="-1"></a> station_summary <span class="ot">&lt;-</span> db <span class="sc">|&gt;</span></span>
+<span id="cb27-7"><a href="#cb27-7" aria-hidden="true" tabindex="-1"></a>   <span class="fu">tbl</span>(<span class="st">"station_summary"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in dbSendQuery(conn, statement, ...): Decimal MySQL column 4 imported
+as numeric</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in dbSendQuery(conn, statement, ...): Decimal MySQL column 7 imported
+as numeric</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in dbSendQuery(conn, statement, ...): Decimal MySQL column 8 imported
+as numeric</code></pre>
+</div>
+</div>
+</section>
+<section id="we-can-see-the-query" class="level1">
+<h1>We can see the query</h1>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Do the average age wrangling again in R</span></span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a><span class="co"># The data still lives on the server</span></span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a>station_summary <span class="sc">|&gt;</span></span>
+<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-7"><a href="#cb31-7" aria-hidden="true" tabindex="-1"></a><span class="fu">inner_join</span>( <span class="at">y=</span> trips, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"station_id"</span><span class="ot">=</span><span class="st">"start_station_id"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb31-8"><a href="#cb31-8" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb31-9"><a href="#cb31-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(station_id, birth_year , lat, lon) <span class="sc">|&gt;</span></span>
+<span id="cb31-10"><a href="#cb31-10" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb31-11"><a href="#cb31-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">age=</span> <span class="dv">2023</span><span class="sc">-</span>birth_year) <span class="sc">|&gt;</span></span>
+<span id="cb31-12"><a href="#cb31-12" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb31-13"><a href="#cb31-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(station_id)<span class="sc">|&gt;</span></span>
+<span id="cb31-14"><a href="#cb31-14" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb31-15"><a href="#cb31-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">average_age =</span> <span class="fu">mean</span>(age, <span class="at">na.rm=</span><span class="cn">TRUE</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb31-16"><a href="#cb31-16" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb31-17"><a href="#cb31-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">show_query</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>&lt;SQL&gt;
+SELECT `station_id`, AVG(`age`) AS `average_age`
+FROM (
+  SELECT *, 2023.0 - `birth_year` AS `age`
+  FROM (
+    SELECT `station_id`, `birth_year`, `lat`, `lon`
+    FROM `station_summary`
+    INNER JOIN `trips`
+      ON (`station_summary`.`station_id` = `trips`.`start_station_id`)
+  ) `q01`
+) `q02`
+GROUP BY `station_id`</code></pre>
+</div>
+</div>
+</section>
+<section id="data-on-server" class="level1">
+<h1>Data on Server</h1>
+<p>If we run this, the data still live on the server</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>station_summary <span class="sc">|&gt;</span></span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a><span class="fu">inner_join</span>( <span class="at">y=</span> trips, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"station_id"</span><span class="ot">=</span><span class="st">"start_station_id"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(station_id, birth_year , lat, lon) <span class="sc">|&gt;</span></span>
+<span id="cb33-6"><a href="#cb33-6" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb33-7"><a href="#cb33-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">age=</span> <span class="dv">2023</span><span class="sc">-</span>birth_year) <span class="sc">|&gt;</span></span>
+<span id="cb33-8"><a href="#cb33-8" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb33-9"><a href="#cb33-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(station_id)<span class="sc">|&gt;</span></span>
+<span id="cb33-10"><a href="#cb33-10" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb33-11"><a href="#cb33-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(lat,lon,<span class="at">average_age =</span> <span class="fu">mean</span>(age, <span class="at">na.rm=</span><span class="cn">TRUE</span>)) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="use-collect-to-bring-data-into-r." class="level1">
+<h1>Use collect() to bring data into R.</h1>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>age_by_station_R <span class="ot">&lt;-</span></span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a>  station_summary <span class="sc">|&gt;</span></span>
+<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb34-5"><a href="#cb34-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">inner_join</span>( <span class="at">y=</span> trips, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"station_id"</span><span class="ot">=</span><span class="st">"start_station_id"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb34-6"><a href="#cb34-6" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb34-7"><a href="#cb34-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(station_id, birth_year , lat, lon) <span class="sc">|&gt;</span></span>
+<span id="cb34-8"><a href="#cb34-8" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb34-9"><a href="#cb34-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">age=</span> <span class="dv">2023</span><span class="sc">-</span>birth_year) <span class="sc">|&gt;</span></span>
+<span id="cb34-10"><a href="#cb34-10" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb34-11"><a href="#cb34-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(station_id)<span class="sc">|&gt;</span></span>
+<span id="cb34-12"><a href="#cb34-12" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb34-13"><a href="#cb34-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(lat,lon,<span class="at">average_age =</span> <span class="fu">mean</span>(age, <span class="at">na.rm=</span><span class="cn">TRUE</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb34-14"><a href="#cb34-14" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb34-15"><a href="#cb34-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">collect</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in dbSendQuery(con, sql): Decimal MySQL column 3 imported as numeric</code></pre>
+</div>
+</div>
+</section>
+<section id="map" class="level1">
+<h1>Map</h1>
+<!-- # ```{r} -->
+<!-- #  -->
+<!-- # leaflet() |> -->
+<!-- #   addTiles()|> -->
+<!-- #   addMarkers(lat= ~lat, lng = ~lon, popup= ~as.character(average_age), data=age_by_station_R) -->
+<!-- #  -->
+<!-- # ``` -->
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="../../credits.qmd">credits</a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+</body></html>

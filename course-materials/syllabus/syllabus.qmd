@@ -40,16 +40,16 @@ h1{font-weight: 400;}
 
 -   **Contact Info:**\
     `r fontawesome::fa("at")` [nschwab\@smith.edu](mailto:nschwab@smith.edu)\
-    `r fontawesome::fa("phone")` 413-585-5598\
+    <!-- `r fontawesome::fa("phone")` 413-585-\ -->
     `r fontawesome::fa("github")` [Nics-Github](http://www.github.com/Nics-Github)
 
--   **Office location:** McConnell 213
+-   **Office location:** McConnell 215
 
     -   Office Hours:
 
-        -   Monday: 1:35-2:35 pm
+        -   Wednesday: 1:30-2:30 pm
 
-        -   Friday: 12:45 pm -1:45pm
+        -   In McConnell 214
 
         -   By appointment
 
@@ -60,7 +60,7 @@ h1{font-weight: 400;}
 Morning Section
 
 ```         
--   MWF: 10:50 AM - 12:05 PM / Sabin-Reed 220
+-   MWF: 8:00 AM - 9:15 AM / Sabin-Reed 301
 ```
 
 -   **Getting help**:
@@ -155,7 +155,7 @@ Students who complete this course will be able to:
 
 # Lecture schedule
 
-The lecture schedule and associated readings can be found on the [main page](https://nics-github.github.io/MTH_190_Intro_to_DS/) of this course webpage.
+The lecture schedule and associated readings can be found on the [main page](../index.qmd) of this course webpage.
 
 # Book and software
 
@@ -181,15 +181,15 @@ This class is project based. As such your evaluations will be based on projects 
 
 ## Projects 30%
 
-There are four projects to complete during the semester. They will be completed collaboratively with a team of students using SCRUM.
+There are three projects to complete during the semester. They will be completed with groups.
 
 ## Final project 20%
 
-There will be a final project due the last day of classes. These will be completed in groups during the last few weeks of class.
+There will be a final project due the last day of classes, but you will be working on it during the entirety of the course. It will be a portfolio of you work presented as a website. 
 
 ## Quizzes 20%
 
-There are 3 or 4 self schedules quizzes this semester.
+There are 3 or 4 quizzes this semester.
 
 ## Labs 20%
 
@@ -211,10 +211,8 @@ Many Fridays there will be in class labs. You will have until the following Wedn
 
 It is difficult to explicit codify what constitutes "an engaged student," so instead I present the following rough principle I will follow: *you'll only get out of this class as much as you put in*. That being said, here are multiple pathways for you to stay engaged in this class:
 
--   Participation in all SCRUM Sprints
 -   Asking and answering questions in class.
 -   Working and staying focused in class.
--   Coming to office hours.
 -   Posting questions on Slack.
 -   Even better: Responding to questions on Slack.
 -   Complete Classwork problems

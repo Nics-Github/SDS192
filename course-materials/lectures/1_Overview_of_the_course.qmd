@@ -1,0 +1,116 @@
+---
+title: "Course Overview"
+subtitle: "SDS 192"
+author: "Schwab"
+editor: visual
+format: 
+  revealjs: 
+    theme: beige
+execute: 
+  echo: true
+---
+
+## Introduction to Programming Language for Data Science (R) and Computing Environment (RStudio)
+
+-   Take a look at R Studio together
+
+-   [Short History of R](https://nics-github.github.io/SDS192/course-materials/lectures/Brief-R-history.html)
+
+## Data Science Life Cycle
+
+[DS life cycle](https://towardsdatascience.com/data-science-101-life-cycle-of-a-data-science-project-86cbc4a2f7f0)
+
+## Grammar of Graphics
+
+[Hadley Wickham](https://byrneslab.net/classes/biol607/readings/wickham_layered-grammar.pdf)
+
+## Data Collection
+
+[Collect student data here](https://forms.gle/FQhAau8GuKURoH2p9)
+
+## Web Scraping and Importing Data ( and a tiny bit of cleaning)
+
+```{r import_student_data}
+library(googlesheets4)
+library(janitor)
+
+student_data <- read_sheet('https://docs.google.com/spreadsheets/d/1XOAFQvBcFvhKwEl5xH6l3nRJK2Wk0hWZ18S9kAZclQ0/edit?usp=sharing')
+
+student_data <- clean_names(student_data)
+
+```
+
+## Data Visualization
+
+```{r}
+# make simple plot of student data. 
+library(tidyverse)
+
+student_data |>
+  ggplot(mapping = aes(x = height) )+
+  geom_histogram()+
+  labs(
+    title = "Students' height in inches"
+  )
+```
+
+## Data Wrangling
+
+```{r wrangle_s_d}
+# wrangle student data. edit plot
+student_data |>
+  
+  select(briefly_describe_any_previous_experience_you_have_with_r) |>
+  
+  rename(r_experiance = briefly_describe_any_previous_experience_you_have_with_r )|>
+  
+  group_by(r_experiance)|>
+  
+  summarize(
+    
+    sum()/n()
+    
+  )
+  
+```
+
+## Data Management
+
+```         
+-   Security
+-   Keeping yourself organized!
+-   How Data is housed
+```
+
+## Data Ethics
+
+How we use data without doing harm.
+
+## Iteration
+
+```{r}
+# have r do many repeat steps for us. 
+
+print(student_data$one_word_summer_highlight)
+
+```
+
+## Verson Control
+
+With git and github.
+
+## Introduction to Database Querying with SQL
+
+Wrangle some data with the classic SQL.
+
+[Simple Query?](https://www.w3schools.com/sql/trysql.asp?filename=trysql_editor)
+
+## Further Topics based on time and student interest may include:
+
+```         
+-   Dynamic and Customized Data Graphics
+
+-   Geospatial Data and Maps
+
+-   Learning with AI
+```

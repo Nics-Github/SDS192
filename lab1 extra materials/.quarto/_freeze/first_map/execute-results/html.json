@@ -1,0 +1,16 @@
+{
+  "hash": "a11d22566eb59dd44508b2b6cad884f2",
+  "result": {
+    "markdown": "---\ntitle: \"1st_Maps\"\neditor: visual\n---\n\n::: {.cell}\n\n```{.r .cell-code}\n#install.packages(\"maps\")\nlibrary(maps)\n```\n:::\n\n\nHere are some maps from the map package. [^1]\n\n[^1]: https://cran.r-project.org/web/packages/maps/maps.pdf\n\n## The world\n\n\n::: {.cell}\n\n```{.r .cell-code}\nmap()\n```\n\n::: {.cell-output-display}\n![](first_map_files/figure-html/unnamed-chunk-2-1.png){width=672}\n:::\n:::\n\n\n## The US\n\n\n::: {.cell}\n\n```{.r .cell-code}\nmap(database = \"state\")\n```\n\n::: {.cell-output-display}\n![](first_map_files/figure-html/unnamed-chunk-3-1.png){width=672}\n:::\n:::\n\n::: {.cell}\n\n```{.r .cell-code}\nmap(database = \"state\", regions = \"Massachusetts\")\n```\n\n::: {.cell-output-display}\n![](first_map_files/figure-html/unnamed-chunk-4-1.png){width=672}\n:::\n:::\n\n::: {.cell}\n\n```{.r .cell-code}\nmap(database = \"county\", regions = c(\"Massachusetts\"))\nmap.cities()\n```\n\n::: {.cell-output-display}\n![](first_map_files/figure-html/unnamed-chunk-5-1.png){width=672}\n:::\n:::\n\n::: {.cell}\n\n```{.r .cell-code}\nnew_england <-c('Vermont',\"Massachusetts\",\"Connecticut\", \"Rhode Island\", \"New Hampshire\", \"Maine\")\n\nmap(database = \"county\", regions = new_england)\nmap.cities()\n```\n\n::: {.cell-output-display}\n![](first_map_files/figure-html/unnamed-chunk-6-1.png){width=672}\n:::\n:::\n",
+    "supporting": [
+      "first_map_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

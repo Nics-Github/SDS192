@@ -110,9 +110,9 @@ ma_cities <- us.cities |>
 head(ma_cities)
 ```
 
-## Exercise: 
+## Exercise:
 
-Plot MA cities onto our county map. Then clean up our map. 
+Plot MA cities onto our county map. Then clean up our map.
 
 ```{r}
 ma_counties |> ggplot(aes(long,lat))+
@@ -129,7 +129,7 @@ ma_counties |> ggplot(aes(long,lat))+
 
 ## Shape files
 
-Often times map data is saved as a shape file. 
+Often times map data is saved as a shape file.
 
 The US government has shape files [here](https://www.census.gov/geographies/mapping-files/time-series/geo/carto-boundary-file.html).
 

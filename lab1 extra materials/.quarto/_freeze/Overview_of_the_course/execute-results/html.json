@@ -1,0 +1,20 @@
+{
+  "hash": "f8f705ae283f90677a365b73001df918",
+  "result": {
+    "markdown": "---\ntitle: \"File Paths and Intro to Maps\"\nauthor: \"Schwab\"\nformat: \n  revealjs:\n    theme: beige\n    controls: \n      true\neditor: visual\n---\n\n\nOverview of the course\n\n-   Introduction to Programming Language for Data Science (R) and Computing Environment (RStudio)\n\n    [Short History of R](https://nics-github.github.io/SDS192/course-materials/lectures/Brief-R-history.html)\n\n-   Data Science Life Cycle\n\n    [DS life cycle](https://towardsdatascience.com/data-science-101-life-cycle-of-a-data-science-project-86cbc4a2f7f0)\n\n-   Grammar of Graphics\n\n    [Hadley Wickham](https://byrneslab.net/classes/biol607/readings/wickham_layered-grammar.pdf)\n\n-   Data Collection\n\n[Collect student data here](https://forms.gle/FQhAau8GuKURoH2p9)\n\n-   Web Scraping and Importing Data\n\n\n::: {.cell}\n\n:::\n\n\n-   Data Visualization\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](Overview_of_the_course_files/figure-revealjs/unnamed-chunk-1-1.png){width=960}\n:::\n:::\n\n\n-   Data Wrangling\n\n\n::: {.cell}\n::: {.cell-output .cell-output-stdout}\n```\n# A tibble: 0 × 2\n# ℹ 2 variables: r_experiance <lgl>, sum()/n() <dbl>\n```\n:::\n:::\n\n\n-   Data Management\n\nKeeping yourself organized!\n\n-   Data Ethics\n\n-   Iteration\n\n\n::: {.cell}\n\n:::\n\n\n-   Introduction to Database Querying with SQL\n\nDo all the same stuff we learned above with SQL.\n\n[Simple Query?](https://www.w3schools.com/sql/trysql.asp?filename=trysql_editor)\n\n-   Further Topics based on time and student interest may include:\n\n    -   Dynamic and Customized Data Graphics\n\n    -   Geospatial Data and Maps\n\n    -   Learning with AI\n",
+    "supporting": [
+      "Overview_of_the_course_files/figure-revealjs"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {
+      "include-after-body": [
+        "\n<script>\n  // htmlwidgets need to know to resize themselves when slides are shown/hidden.\n  // Fire the \"slideenter\" event (handled by htmlwidgets.js) when the current\n  // slide changes (different for each slide format).\n  (function () {\n    // dispatch for htmlwidgets\n    function fireSlideEnter() {\n      const event = window.document.createEvent(\"Event\");\n      event.initEvent(\"slideenter\", true, true);\n      window.document.dispatchEvent(event);\n    }\n\n    function fireSlideChanged(previousSlide, currentSlide) {\n      fireSlideEnter();\n\n      // dispatch for shiny\n      if (window.jQuery) {\n        if (previousSlide) {\n          window.jQuery(previousSlide).trigger(\"hidden\");\n        }\n        if (currentSlide) {\n          window.jQuery(currentSlide).trigger(\"shown\");\n        }\n      }\n    }\n\n    // hookup for slidy\n    if (window.w3c_slidy) {\n      window.w3c_slidy.add_observer(function (slide_num) {\n        // slide_num starts at position 1\n        fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);\n      });\n    }\n\n  })();\n</script>\n\n"
+      ]
+    },
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

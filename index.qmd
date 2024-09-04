@@ -174,27 +174,27 @@ format:
 
 
 
-<!-- <!-- # Day 27 `map()` and `across()` practice --> -->
+<!-- <!-- # Day 27 `map()` and `across()` practice --> 
 
-<!-- <!-- Project time --> -->
+<!-- <!-- Project time --> 
 
-<!-- <!-- ::: {.callout-tip collapse="true"} --> -->
+<!-- <!-- ::: {.callout-tip collapse="true"} --> 
 
-<!-- <!-- # Reminder Project 2 due Friday --> -->
+<!-- <!-- # Reminder Project 2 due Friday --> 
 
-<!-- <!-- Project 2 notes: --> -->
+<!-- <!-- Project 2 notes: --> 
 
-<!-- <!-- -   Project 2 due Friday --> -->
+<!-- <!-- -   Project 2 due Friday --> 
 
-<!-- <!-- -   **Render** your project --> -->
+<!-- <!-- -   **Render** your project -->
 
-<!-- <!-- -   **Comment** your code in `fec_analysis.qmd` --> -->
+<!-- <!-- -   **Comment** your code in `fec_analysis.qmd` --> 
 
-<!-- <!-- -   Make your code readable with spaces and short lines --> -->
+<!-- <!-- -   Make your code readable with spaces and short lines --> 
 
-<!-- <!-- -   `filter( == )` vs `filter( %in% )` --> -->
+<!-- <!-- -   `filter( == )` vs `filter( %in% )` --> 
 
-<!-- <!-- ::: --> -->
+<!-- <!-- ::: --> 
 
 
 <!-- # Day 25 Lab 6 -->
@@ -225,63 +225,73 @@ format:
 
 
 
-<!-- <!-- Reminder lab-5 is due Wednesday. --> -->
+<!-- <!-- Reminder lab-5 is due Wednesday. --> 
 
-<!-- <!-- [Introduce Project 2](https://moodle.smith.edu/) --> -->
+<!-- <!-- [Introduce Project 2](https://moodle.smith.edu/) --> 
 
-<!-- <!-- Time to get familiar with `fec20` --> -->
+<!-- <!-- Time to get familiar with `fec20` --> 
 
-<!-- <!-- # Day 20 Cleaning --> -->
+<!-- <!-- # Day 20 Cleaning --> 
 
-<!-- <!-- Warm up: table2 --> -->
+<!-- <!-- Warm up: table2 --> 
 
-<!-- <!-- [Cleaning Data](course-materials/lectures/Day_20_tidying.qmd) --> -->
+<!-- <!-- [Cleaning Data](course-materials/lectures/Day_20_tidying.qmd) --> 
 
-<!-- <!-- Let's clean up `billboard` --> -->
+<!-- <!-- Let's clean up `billboard` --> 
 
-<!-- <!-- # Day 19 Tidy Data --> -->
+<!-- <!-- # Day 19 Tidy Data --> 
 
-<!-- <!-- Chapter 5 problem 4 solutions --> -->
+<!-- <!-- Chapter 5 problem 4 solutions --> 
 
-<!-- <!-- #### 4a The oldest plane to fly from NYC is a Douglas with tailnum: --> -->
+<!-- <!-- #### 4a The oldest plane to fly from NYC is a Douglas with tailnum: --> 
 
-<!-- <!-- ```{r A-solution-to-problem-4} --> -->
+<!-- <!-- ```{r A-solution-to-problem-4} --> 
 
-<!-- <!-- #| echo: false --> -->
+<!-- <!-- #| echo: false --> 
 
-<!-- <!-- #| eval: true --> -->
+<!-- <!-- #| eval: true --> 
 
-<!-- <!-- library(nycflights13) --> -->
+<!-- <!-- library(nycflights13) --> 
 
-<!-- <!-- planes |> inner_join(flights, by = "tailnum") |> --> -->
+<!-- <!-- planes |> inner_join(flights, by = "tailnum") |> -->
 
-<!-- <!--   arrange(year.x) |> --> -->
 
-<!-- <!--   filter(tailnum == "N381AA") |> --> -->
+<!-- The last quiz is posted, there is no time limit it is due Wednesday May 8. -->
 
-<!-- <!--   select(tailnum)|> --> -->
+<!-- Also late work for labs 5,6,7 and 8 is due next Wednesday May 1. [Fill out this form](https://forms.gle/VJZy56Y5GStmgjtC8). -->
 
-<!-- <!--   head(1) --> -->
+<!-- Project 3 work day.  -->
 
-<!-- <!-- ``` --> -->
+<!-- Professor Garcia. -->
 
-<!-- <!-- #### 4b The number of planes included in planes that flew from NYC is: --> -->
+<!-- <!--   arrange(year.x) |> --> 
 
-<!-- <!-- ```{r solution-to-4b} --> -->
+<!-- <!--   filter(tailnum == "N381AA") |> --> 
 
-<!-- <!-- #| echo: false --> -->
 
-<!-- <!-- #| eval: true --> -->
+<!-- <!--   select(tailnum)|> --> 
 
-<!-- <!-- library(nycflights13) --> -->
+<!-- <!--   head(1) --> 
 
-<!-- <!-- planes |> inner_join(flights, by = "tailnum") |> --> -->
+<!-- <!-- ``` --> 
 
-<!-- <!--   count(tailnum) |> --> -->
+<!-- <!-- #### 4b The number of planes included in planes that flew from NYC is: --> 
 
-<!-- <!--   nrow() --> -->
+<!-- <!-- ```{r solution-to-4b} --> 
 
-<!-- <!-- ``` --> -->
+<!-- <!-- #| echo: false --> 
+
+<!-- <!-- #| eval: true --> 
+
+<!-- <!-- library(nycflights13) --> 
+
+<!-- <!-- planes |> inner_join(flights, by = "tailnum") |> --> 
+
+<!-- <!--   count(tailnum) |> --> 
+
+<!-- <!--   nrow() --> 
+
+<!-- <!-- ``` --> 
 
 <!-- # Day 22 Project 2 -->
 
@@ -381,99 +391,98 @@ format:
 
 <!-- Lab 4 will be due next *Friday* by midnight. -->
 
-<!-- <!-- See how filtering goes for lab 4, I might not need to do this because 100 did it in lab 4 --> -->
+<!-- <!-- See how filtering goes for lab 4, I might not need to do this because 100 did it in lab 4 --> 
 
-<!-- <!-- # Day 15 Wrangling with Filter --> -->
+<!-- <!-- # Day 15 Wrangling with Filter --> 
 
-<!-- <!-- Wrangle sqf_2011 data together --> -->
+<!-- <!-- Wrangle sqf_2011 data together -->
 
-<!-- <!-- [Lecture on the five verbs](course-materials/lectures/mdsr-the-verbs.qmd) --> -->
+<!-- <!-- [Lecture on the five verbs](course-materials/lectures/mdsr-the-verbs.qmd) --> 
 
-<!-- <!-- [Wrangle babynames](/course-materials/in-class-activies/Wrangling_Baby_Names.qmd) --> -->
+<!-- <!-- [Wrangle babynames](/course-materials/in-class-activies/Wrangling_Baby_Names.qmd) --> 
 
-<!-- <!-- ```{r} --> -->
+<!-- <!-- ```{r} --> 
 
-<!-- <!-- #| code-fold: true --> -->
+<!-- <!-- #| code-fold: true --> 
 
-<!-- <!-- #| echo: true --> -->
+<!-- <!-- #| echo: true --> 
 
-<!-- <!-- #| eval: false --> -->
+<!-- <!-- #| eval: false --> 
 
-<!-- <!-- install.packages("babynames") --> -->
+<!-- <!-- install.packages("babynames") --> 
 
-<!-- <!-- ``` --> -->
+<!-- <!-- ``` --> 
 
 <!-- # Day 15 Wrangling -->
 
 <!-- [Stop and Frisk Wrangling](/course-materials/lectures/15_Wrangling_1_SQF.qmd) -->
 
-<!-- <!-- Didn't get to the code below. It would be good for wrangling practice.  --> -->
+<!-- <!-- Didn't get to the code below. It would be good for wrangling practice.  --> 
 
-<!-- <!-- [In class MDSR Problems 1 and 2](https://mdsr-book.github.io/mdsr2e/ch-dataI.html#dataI-exercises) --> -->
+<!-- <!-- [In class MDSR Problems 1 and 2](https://mdsr-book.github.io/mdsr2e/ch-dataI.html#dataI-exercises) --> 
 
-<!-- <!-- ```{r, Random_subset } --> -->
+<!-- <!-- ```{r, Random_subset } --> 
 
-<!-- <!-- #| eval: FALSE --> -->
+<!-- <!-- #| eval: FALSE -->
 
-<!-- <!-- #| echo: TRUE --> -->
+<!-- <!-- #| echo: TRUE --> 
 
-<!-- <!-- #| code-fold: true --> -->
+<!-- <!-- #| code-fold: true --> 
 
-<!-- <!-- # Copy this code into a chunk in R to make the Random_subset data frame from problem 1 and 2.  --> -->
+<!-- <!-- # Copy this code into a chunk in R to make the Random_subset data frame from problem 1 and 2.  --> 
 
-<!-- <!-- # Use the verbs we've discussed to make the subsets from the text.  --> -->
+<!-- <!-- # Use the verbs we've discussed to make the subsets from the text.  --> 
 
-<!-- <!-- Random_subset <-  tibble::tribble( --> -->
+<!-- <!-- Random_subset <-  tibble::tribble( --> 
 
-<!-- <!--     ~year,~sex,   ~name,         ~n, ~prop, --> -->
+<!-- <!--     ~year,~sex,   ~name,         ~n, ~prop, -->
 
-<!-- <!--      2003, "M",     "Bilal",        146, 0.0000695, --> -->
+<!-- <!--      2003, "M",     "Bilal",        146, 0.0000695, --> 
 
-<!-- <!--      1999, "F",     "Terria",        23, 0.0000118, --> -->
+<!-- <!--      1999, "F",     "Terria",        23, 0.0000118, -->
 
-<!-- <!--      2010, "F",     "Naziyah",       45, 0.0000230, --> -->
+<!-- <!--      2010, "F",     "Naziyah",       45, 0.0000230, --> 
 
-<!-- <!--      1989, "F",     "Shawana",       41, 0.0000206, --> -->
+<!-- <!--      1989, "F",     "Shawana",       41, 0.0000206, --> 
 
-<!-- <!--      1989, "F",     "Jessi",        210, 0.000105, --> -->
+<!-- <!--      1989, "F",     "Jessi",        210, 0.000105, --> 
 
-<!-- <!--      1928, "M",     "Tillman",       43, 0.0000377, --> -->
+<!-- <!--      1928, "M",     "Tillman",       43, 0.0000377, --> 
 
-<!-- <!--      1981, "F",     "Leslee",        83, 0.0000464, --> -->
+<!-- <!--      1981, "F",     "Leslee",        83, 0.0000464, --> 
 
-<!-- <!--      1981, "F",     "Sherise",       27, 0.0000151, --> -->
+<!-- <!--      1981, "F",     "Sherise",       27, 0.0000151, --> 
 
-<!-- <!--      1920, "F",     "Marquerite",    26, 0.0000209, --> -->
+<!-- <!--      1920, "F",     "Marquerite",    26, 0.0000209, --> 
 
-<!-- <!--      1941, "M",     "Lorraine",      24, 0.0000191 --> -->
+<!-- <!--      1941, "M",     "Lorraine",      24, 0.0000191 --> 
 
-<!-- <!--   ) --> -->
+<!-- <!--   ) --> 
 
-<!-- <!-- ``` --> -->
+<!-- <!-- ``` --> 
 
-<!-- <!-- ::: {.callout-tip collapse="true"} --> -->
+<!-- <!-- ::: {.callout-tip collapse="true"} --> 
 
-<!-- <!-- # terminal work --> -->
+<!-- <!-- # terminal work --> 
 
-<!-- <!-- -   This is a helpful website: `https://ioflood.com/blog/solved-git-error-you-have-divergent-branches-and-need-to-specify-how-to-reconcile-them/` --> -->
+<!-- <!-- -   This is a helpful website: `https://ioflood.com/blog/solved-git-error-you-have-divergent-branches-and-need-to-specify-how-to-reconcile-them/` --> 
+<!-- <!-- -   Some times you get "you have divergent branches and need to specify how to reconcile them" --> 
 
-<!-- <!-- -   Some times you get "you have divergent branches and need to specify how to reconcile them" --> -->
+<!-- <!-- -   In terminal: `git config pull.ff only` --> 
 
-<!-- <!-- -   In terminal: `git config pull.ff only` --> -->
+<!-- <!-- -   Sometimes fast forwarding is fatal.Try Merge Commit: --> 
 
-<!-- <!-- -   Sometimes fast forwarding is fatal.Try Merge Commit: --> -->
+<!-- <!-- -   In terminal: `git checkout branch-name` then `git merge --no-ff -m "commit name" branch-name` --> 
 
-<!-- <!-- -   In terminal: `git checkout branch-name` then `git merge --no-ff -m "commit name" branch-name` --> -->
+<!-- <!-- -   You can also try following the instructions git gives. --> 
 
-<!-- <!-- -   You can also try following the instructions git gives. --> -->
+<!-- <!-- -   Nothing wrong with saving your code and deleting the branch. Branches are disposable. --> 
 
-<!-- <!-- -   Nothing wrong with saving your code and deleting the branch. Branches are disposable. --> -->
+<!-- <!-- -   You can work in a branch with lots of commmits before you push. Once you merge a pull request delete the branch. --> 
 
-<!-- <!-- -   You can work in a branch with lots of commmits before you push. Once you merge a pull request delete the branch. --> -->
+<!-- <!-- -   Once you delete a branch on github don't work in it any more. do: `git fetch --prune` to remove the old remote branches from rstudio.Or `git branch -d branch_name` to delete your old branch --> 
 
-<!-- <!-- -   Once you delete a branch on github don't work in it any more. do: `git fetch --prune` to remove the old remote branches from rstudio.Or `git branch -d branch_name` to delete your old branch --> -->
-
-<!-- <!-- ::: --> -->
+<!-- <!-- ::: --> 
 
 <!-- # Day 13 and 14 Project 1 -->
 
@@ -561,17 +570,16 @@ format:
 <!-- We'll discuss ethics Monday or Wednesday, read chapter 8. -->
 <!-- ::: -->
 
-<!-- <!-- It makes most sense to do this before lab 3. [Polishing Figures](/course-materials/in-class-activies/Lec09In-classExercise-PolishingFigures.zip) --> -->
+<!-- <!-- It makes most sense to do this before lab 3. [Polishing Figures](/course-materials/in-class-activies/Lec09In-classExercise-PolishingFigures.zip) --> 
 
-<!-- <!-- ::: {.callout-tip collapse="true"} --> -->
+<!-- <!-- ::: {.callout-tip collapse="true"} -->
 
-<!-- <!-- # working directory --> -->
+<!-- <!-- # working directory -->
 
-<!-- <!-- You may need to set your working directory. --> -->
+<!-- <!-- You may need to set your working directory. --> 
 
-<!-- <!-- The easiest way to do this is to find your Lec09-...zip in the file pane and go gear-icon \> "Set As Working Directory" --> -->
-
-<!-- <!-- ::: --> -->
+<!-- <!-- The easiest way to do this is to find your Lec09-...zip in the file pane and go gear-icon \> "Set As Working Directory" --> 
+<!-- <!-- ::: --> 
 
 <!-- # Day 9 Trend Lines, Data.Frames, and RMarkdown Rendering Options -->
 
@@ -647,126 +655,150 @@ format:
 
 
 
-# Day 9 Taxonomy part 2
+<!-- # Day 9 Taxonomy part 2 -->
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/IRJ2Ac9vI5o?si=JMeZEIQQNGNBscno" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/IRJ2Ac9vI5o?si=JMeZEIQQNGNBscno" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen> -->
 
-</iframe>
+<!-- </iframe> -->
 
-## [Discussion: Taxonomy of Graphics](./course-materials/in-class-activies/3Activity_Taxonomy_of_Graphics.qmd)
+<!-- ## [Discussion: Taxonomy of Graphics](./course-materials/in-class-activies/3Activity_Taxonomy_of_Graphics.qmd) -->
 
-Chalk Talk: Working directories and file organization in RStudio.
+<!-- Chalk Talk: Working directories and file organization in RStudio. -->
 
-Coding Example:
+<!-- Coding Example: -->
 
-<!-- Working directory problems with scatterplots  -->
+<!-- <!-- Working directory problems with scatterplots  --> -->
 
-1.  [Together: scatter plot](./course-materials/in-class-activies/3_Scatterplots.zip)
+<!-- 1.  [Together: scatter plot](./course-materials/in-class-activies/3_Scatterplots.zip) -->
 
-2.  [Solo: linegraph](./course-materials/in-class-activies/3_Line_Graph.qmd)
+<!-- 2.  [Solo: linegraph](./course-materials/in-class-activies/3_Line_Graph.qmd) -->
 
-# Day 8 Lab 2
+<!-- # Day 8 Lab 2 -->
 
 
 
-# Day 7 Taxonomy
+<!-- # Day 7 Taxonomy -->
 
-[Check out lab 3](https://smithcollege-sds.github.io/sds100/lab_03_graphics.html) from sds 100 I might not have to do this. 
+<!-- [Check out lab 3](https://smithcollege-sds.github.io/sds100/lab_03_graphics.html) from sds 100 I might not have to do this.  -->
 
-::: {.callout-tip collapse="true"}
-## For Help
+<!-- ::: {.callout-tip collapse="true"} -->
+<!-- ## For Help -->
 
--   [The six-fixes](https://docs.google.com/document/d/1P7IyZ4On9OlrCOhygFxjC7XhQqyw8OludwChz-uFd_o/edit)
+<!-- -   [The six-fixes](https://docs.google.com/document/d/1P7IyZ4On9OlrCOhygFxjC7XhQqyw8OludwChz-uFd_o/edit) -->
 
--   [Student hours](/course-materials/syllabus/schwab.qmd)
+<!-- -   [Student hours](/course-materials/syllabus/schwab.qmd) -->
 
--   [Spennlli center](https://www.smith.edu/academics/spinelli-center/tutoring#disciplines)
-:::
+<!-- -   [Spennlli center](https://www.smith.edu/academics/spinelli-center/tutoring#disciplines) -->
+<!-- ::: -->
 
-::: {.callout-tip collapse="true"}
-## Screenshots Help
+<!-- ::: {.callout-tip collapse="true"} -->
+<!-- ## Screenshots Help -->
 
-Help us help you: take screenshots of your screen and post them to Slack.
+<!-- Help us help you: take screenshots of your screen and post them to Slack. -->
 
--   macOS: Command+Shift+3 to take shot of whole screen, Command+Shift+4 to take subportion
+<!-- -   macOS: Command+Shift+3 to take shot of whole screen, Command+Shift+4 to take subportion -->
 
--   Windows: Shift-Windows Key-S and Snip & Sketch
+<!-- -   Windows: Shift-Windows Key-S and Snip & Sketch -->
 
--   Linux: Print screen
+<!-- -   Linux: Print screen -->
 
--   Chromebook: Shift + Ctrl + Show windows
-:::
+<!-- -   Chromebook: Shift + Ctrl + Show windows -->
+<!-- ::: -->
 
-### Lecture
+<!-- ### Lecture -->
 
--   [Taxonomy of graphs](course-materials/lectures/2_mdsr_viz_1_taxonomy.qmd)
+<!-- -   [Taxonomy of graphs](course-materials/lectures/2_mdsr_viz_1_taxonomy.qmd) -->
 
--   [Some graph examples from Day 1](./course-materials/lectures/1first-day-survey/Data-Viz-No-Computers.qmd)
+<!-- -   [Some graph examples from Day 1](./course-materials/lectures/1first-day-survey/Data-Viz-No-Computers.qmd) -->
 
--   [How R builds a Graph](course-materials/lectures/2How-R-builds-a-graph.qmd)
+<!-- -   [How R builds a Graph](course-materials/lectures/2How-R-builds-a-graph.qmd) -->
 
-# Day 6: No Computer Data Viz
+<!-- # Day 6: No Computer Data Viz -->
 
-### Lecture
+<!-- ### Lecture -->
 
-[Data Viz No Computers](./course-materials/lectures/1first-day-survey/Data-Viz-No-Computers.qmd)
+<!-- [Data Viz No Computers](./course-materials/lectures/1first-day-survey/Data-Viz-No-Computers.qmd) -->
 
-### General Questions and Comments
+<!-- ### General Questions and Comments -->
 
-::: {.callout-note collapse="true"}
+<!-- ::: {.callout-note collapse="true"} -->
 
-## Homework:
+<!-- ## Homework: -->
 
--   Read the prologue to chapter 1.4 of MDSR.
-:::
+<!-- -   Read the prologue to chapter 1.4 of MDSR. -->
+<!-- ::: -->
 
-# Day 5 Writing functions
+<!-- # Day 5 Writing functions -->
 
-# Day 5 Intro Function Writing
+<!-- More practice writing functions. -->
 
-[Lecture: Intro to if, else and functions](course-materials/lectures/23_functions.qmd)
+<!-- [Cleaning up documents](https://quarto.org/docs/computations/execution-options.html) -->
 
-[Function writing practice](./course-materials/in-class-activies/day_25_function_writing.qmd)
+<!-- # Day 4 Getting Data Into R Making functions -->
 
-# Day 4 Finding Data and Getting Data Into R
+<!-- <!-- Students know how to store variables --> 
 
-Students know how to store variables
+<!-- <!-- Students know about functions and arguments --> 
 
-Students know about functions and arguments
+<!-- <!-- Students Errors and warnings and comments --> 
 
-Errors and warnings and comments
+<!-- <!-- cheatsheets --> 
 
-cheatsheets
+<!-- Getting data into R  -->
 
-working directories
+<!-- [Lecture: Intro to functions](course-materials/lectures/23_functions.qmd) -->
 
-getting data into R 
+<!-- [Function writing practice](./course-materials/in-class-activies/day_25_function_writing.qmd) -->
 
-# Day 3 Understanding File Paths
+<!-- Let's make a function that takes the country each person is from and makes a map.  -->
 
-Play with our repository 
 
-Make some of our own class data
 
-# Day 2 Github Lab
+<!-- # Day 3 Understanding File Paths -->
 
-Where are we going? 
+<!-- ::: {.callout-note collapse="true"} -->
+<!-- ## Learning Goals -->
 
--   Final project Website
+<!-- -   Filing system -->
 
-::: {.callout-note collapse="true"}
-## Sign into githubclassroom
+<!-- -   Strings and Vectors -->
 
-Link github account to github classroom - sign into github
+<!-- -   Libraries, functions, arguments and parameters -->
 
--   https://classroom.github.com/a/ERIt75vu for lab 1
+<!-- -   The pipe -->
 
--   find your name in the roster and click it.
+<!-- -   Understand File Structure  -->
 
--   You should see lab 1, which we will discuss on Friday.
-:::
+<!-- ::: -->
+
+<!-- Where are we going?  -->
+
+<!-- -   Final project Website -->
+
+
+
+<!--  -->
+
+<!-- # Day 2 Github Lab -->
+
+<!-- You are only installing git today. Ignore the other files until Day 3 -->
+
+<!-- ::: {.callout-note collapse="true"} -->
+<!-- ## Sign into githubclassroom -->
+
+<!-- Link github account to github classroom - sign into github -->
+
+<!-- -   https://classroom.github.com/a/ERIt75vu for lab 1 -->
+
+<!-- -   find your name in the roster and click it. -->
+
+<!-- -   you should see lab 1, which we will discuss on Friday. -->
+<!-- ::: -->
 
 # Day 1 Welcome and Github 
+
+::: {.callout-note collapse="true"}
+## Classic First Day Stuff
 
 -   [Syllabus](./course-materials/syllabus/syllabus.html)
 
@@ -776,6 +808,15 @@ Link github account to github classroom - sign into github
 
 -   Bring Computers to Class
 
+:::
+
+-   [Make some of our own class data](https://forms.gle/bzaGFftbFczZMhRe7)
+
+-   [Overview of Intro to Data Science](./course-materials/lectures/1_Overview_of_the_course.qmd)
+
+::: {.callout-note collapse="true"}
+### git started with Version Control
+
 -   Sign up for [github here](https://github.com/), if you don't already have an account. We will very carefully link your github account to our github classroom account.
 
 -   Intro to github
@@ -784,7 +825,10 @@ Link github account to github classroom - sign into github
 
 -   [Happy Git and the UseR](https://happygitwithr.com/)
 
+:::
 
-### Walk to MCConnell 213 and 214
+[Survey for Prof Cao's study](https://smithcollege.qualtrics.com/jfe/form/SV_1YAqUXjbwJJbe3s)
+
+### Walk to MCConnell 215 and 214
 
 My office and group study room.

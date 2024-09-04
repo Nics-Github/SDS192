@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.353">
+<meta name="generator" content="quarto-1.4.555">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Nicholas Schwab">
-<meta name="dcterms.date" content="2024-08-26">
+<meta name="dcterms.date" content="2024-08-30">
 
 <title>SDS 192 - SDS 192: Intro to Data Science</title>
 <style>
@@ -50,7 +50,13 @@ ul.task-list li input[type="checkbox"] {
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -59,8 +65,10 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
@@ -72,9 +80,9 @@ ul.task-list li input[type="checkbox"] {
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">SDS 192</span>
     </a>
@@ -86,76 +94,67 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./course-materials/website/Resources.html" rel="" target="">
- <span class="menu-text">Resources</span></a>
+    <a class="nav-link" href="./course-materials/website/Resources.html"> 
+<span class="menu-text">Resources</span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://mdsr-book.github.io/mdsr3e/" rel="" target=""><i class="bi bi-book" role="img">
+    <a class="nav-link" href="https://mdsr-book.github.io/mdsr3e/"> <i class="bi bi-book" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="https://moderndive.com/C-appendixC.html" rel="" target="">
- <span class="menu-text">T &amp; T</span></a>
+    <a class="nav-link" href="https://moderndive.com/C-appendixC.html"> 
+<span class="menu-text">T &amp; T</span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://www.slack.com" rel="" target=""><i class="bi bi-slack" role="img">
+    <a class="nav-link" href="https://www.slack.com"> <i class="bi bi-slack" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="https://rstudio.smith.edu/auth-sign-in?appUri=%2F" rel="" target="">
- <span class="menu-text">R</span></a>
+    <a class="nav-link" href="https://rstudio.smith.edu/auth-sign-in?appUri=%2F"> 
+<span class="menu-text">R</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="https://moodle.smith.edu/" rel="" target="">
- <span class="menu-text">m</span></a>
+    <a class="nav-link" href="https://moodle.smith.edu/"> 
+<span class="menu-text">m</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
-    <a class="nav-link" href="https://classroom.github.com/classrooms/144164606-sds-192-f23-sections-02-03" rel="" target=""><i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://classroom.github.com/classrooms/144164606-sds-192-f23-sections-02-03"> <i class="bi bi-github" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="././course-materials/syllabus/syllabus.html" rel="" target="">
- <span class="menu-text">Syllabus</span></a>
+    <a class="nav-link" href="././course-materials/syllabus/syllabus.html"> 
+<span class="menu-text">Syllabus</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./course-materials/website/schwab.html" rel="" target="">
- <span class="menu-text">Schwab</span></a>
+    <a class="nav-link" href="./course-materials/website/schwab.html"> 
+<span class="menu-text">Schwab</span></a>
   </li>  
 </ul>
-            <div class="quarto-navbar-tools">
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
-          </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#day-9-taxonomy-part-2" id="toc-day-9-taxonomy-part-2" class="nav-link active" data-scroll-target="#day-9-taxonomy-part-2">Day 9 Taxonomy part 2</a></li>
-  <li><a href="#day-8-lab-2" id="toc-day-8-lab-2" class="nav-link" data-scroll-target="#day-8-lab-2">Day 8 Lab 2</a></li>
-  <li><a href="#day-7-taxonomy" id="toc-day-7-taxonomy" class="nav-link" data-scroll-target="#day-7-taxonomy">Day 7 Taxonomy</a></li>
-  <li><a href="#day-6-no-computer-data-viz" id="toc-day-6-no-computer-data-viz" class="nav-link" data-scroll-target="#day-6-no-computer-data-viz">Day 6: No Computer Data Viz</a></li>
-  <li><a href="#day-5-writing-functions" id="toc-day-5-writing-functions" class="nav-link" data-scroll-target="#day-5-writing-functions">Day 5 Writing functions</a></li>
-  <li><a href="#day-5-intro-function-writing" id="toc-day-5-intro-function-writing" class="nav-link" data-scroll-target="#day-5-intro-function-writing">Day 5 Intro Function Writing</a></li>
-  <li><a href="#day-4-finding-data-and-getting-data-into-r" id="toc-day-4-finding-data-and-getting-data-into-r" class="nav-link" data-scroll-target="#day-4-finding-data-and-getting-data-into-r">Day 4 Finding Data and Getting Data Into R</a></li>
-  <li><a href="#day-3-understanding-file-paths" id="toc-day-3-understanding-file-paths" class="nav-link" data-scroll-target="#day-3-understanding-file-paths">Day 3 Understanding File Paths</a></li>
-  <li><a href="#day-2-github-lab" id="toc-day-2-github-lab" class="nav-link" data-scroll-target="#day-2-github-lab">Day 2 Github Lab</a></li>
-  <li><a href="#day-1-welcome-and-github" id="toc-day-1-welcome-and-github" class="nav-link" data-scroll-target="#day-1-welcome-and-github">Day 1 Welcome and Github</a></li>
+  <li><a href="#day-1-welcome-and-github" id="toc-day-1-welcome-and-github" class="nav-link active" data-scroll-target="#day-1-welcome-and-github">Day 1 Welcome and Github</a></li>
   </ul>
 </nav>
 </nav>
-<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
     </div>
@@ -181,7 +180,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">August 26, 2024</p>
+      <p class="date">August 30, 2024</p>
     </div>
   </div>
   
@@ -189,7 +188,9 @@ ul.task-list li input[type="checkbox"] {
   </div>
   
 
+
 </header>
+
 
 <!-- ```{=html} -->
 <!-- <style> -->
@@ -284,27 +285,16 @@ ul.task-list li input[type="checkbox"] {
 <!-- -   Advising sessions to declare your major -->
 <!-- [Example: static maps](./course-materials/lectures/26_maps-ggplot.qmd) -->
 <!-- <!-- # Day 27 `map()` and `across()` practice -->
-<p>–&gt;</p>
 <!-- <!-- Project time -->
-<p>–&gt;</p>
 <!-- <!-- ::: {.callout-tip collapse="true"} -->
-<p>–&gt;</p>
 <!-- <!-- # Reminder Project 2 due Friday -->
-<p>–&gt;</p>
 <!-- <!-- Project 2 notes: -->
-<p>–&gt;</p>
 <!-- <!-- -   Project 2 due Friday -->
-<p>–&gt;</p>
 <!-- <!-- -   **Render** your project -->
-<p>–&gt;</p>
 <!-- <!-- -   **Comment** your code in `fec_analysis.qmd` -->
-<p>–&gt;</p>
 <!-- <!-- -   Make your code readable with spaces and short lines -->
-<p>–&gt;</p>
 <!-- <!-- -   `filter( == )` vs `filter( %in% )` -->
-<p>–&gt;</p>
 <!-- <!-- ::: -->
-<p>–&gt;</p>
 <!-- # Day 25 Lab 6 -->
 <!-- Two announcements -->
 <!-- -   [Advising Fair](/course-materials/images/SDS-Advising-Fair-1-Portrait.pdf)  -->
@@ -319,64 +309,38 @@ ul.task-list li input[type="checkbox"] {
 <!-- [In class activity](./course-materials/in-class-activies/24_In-classExercise-Iteration.qmd) -->
 <!-- [More on masking](https://rlang.r-lib.org/reference/topic-data-mask.html) -->
 <!-- <!-- Reminder lab-5 is due Wednesday. -->
-<p>–&gt;</p>
 <!-- <!-- [Introduce Project 2](https://moodle.smith.edu/) -->
-<p>–&gt;</p>
 <!-- <!-- Time to get familiar with `fec20` -->
-<p>–&gt;</p>
 <!-- <!-- # Day 20 Cleaning -->
-<p>–&gt;</p>
-
 <!-- <!-- Warm up: table2 -->
-<p>–&gt;</p>
 <!-- <!-- [Cleaning Data](course-materials/lectures/Day_20_tidying.qmd) -->
-<p>–&gt;</p>
 <!-- <!-- Let's clean up `billboard` -->
-<p>–&gt;</p>
 <!-- <!-- # Day 19 Tidy Data -->
-<p>–&gt;</p>
 <!-- <!-- Chapter 5 problem 4 solutions -->
-<p>–&gt;</p>
 <!-- <!-- #### 4a The oldest plane to fly from NYC is a Douglas with tailnum: -->
-<p>–&gt;</p>
 <!-- <!-- ```{r A-solution-to-problem-4} -->
-<p>–&gt;</p>
 <!-- <!-- #| echo: false -->
-<p>–&gt;</p>
 <!-- <!-- #| eval: true -->
-<p>–&gt;</p>
 <!-- <!-- library(nycflights13) -->
-<p>–&gt;</p>
 <!-- <!-- planes |> inner_join(flights, by = "tailnum") |> -->
-<p>–&gt;</p>
+<!-- The last quiz is posted, there is no time limit it is due Wednesday May 8. -->
+<!-- Also late work for labs 5,6,7 and 8 is due next Wednesday May 1. [Fill out this form](https://forms.gle/VJZy56Y5GStmgjtC8). -->
+<!-- Project 3 work day.  -->
+<!-- Professor Garcia. -->
 <!-- <!--   arrange(year.x) |> -->
-<p>–&gt;</p>
 <!-- <!--   filter(tailnum == "N381AA") |> -->
-<p>–&gt;</p>
 <!-- <!--   select(tailnum)|> -->
-<p>–&gt;</p>
 <!-- <!--   head(1) -->
-<p>–&gt;</p>
 <!-- <!-- ``` -->
-<p>–&gt;</p>
 <!-- <!-- #### 4b The number of planes included in planes that flew from NYC is: -->
-<p>–&gt;</p>
 <!-- <!-- ```{r solution-to-4b} -->
-<p>–&gt;</p>
 <!-- <!-- #| echo: false -->
-<p>–&gt;</p>
 <!-- <!-- #| eval: true -->
-<p>–&gt;</p>
 <!-- <!-- library(nycflights13) -->
-<p>–&gt;</p>
 <!-- <!-- planes |> inner_join(flights, by = "tailnum") |> -->
-<p>–&gt;</p>
 <!-- <!--   count(tailnum) |> -->
-<p>–&gt;</p>
 <!-- <!--   nrow() -->
-<p>–&gt;</p>
 <!-- <!-- ``` -->
-<p>–&gt;</p>
 <!-- # Day 22 Project 2 -->
 <!-- # Day 21 Project 2 -->
 <!-- Here's the link to join [project 2](https://classroom.github.com/a/YUonEUOS) -->
@@ -386,14 +350,11 @@ ul.task-list li input[type="checkbox"] {
 <!-- [Pivots](course-materials/lectures/18_pivots.qmd) -->
 <!-- We'll do Problems [Chapter 4: 1,2,5,9,(12)](https://mdsr-book.github.io/mdsr3e/04-dataI.html#dataI-exercises) in class today. [Chapter 5: 3,4](https://mdsr-book.github.io/mdsr3e/05-joins.html#join-exercises) -->
 <!-- # Day 19 Lab 5 -->
-
 <!-- Quiz 2 is open and due the Sunday before break. (Do it after pivot tables next week). -->
 <!-- Here is [lab 5](https://classroom.github.com/a/BNYDfmiq) it is due next Wednesday -->
-
 <!-- # Day 18 Joining Tables cont. -->
 <!-- Continue our exploration of joining tables. -->
 <!-- [Problems 1, 3](https://mdsr-book.github.io/mdsr3e/05-joins.html#join-exercises) -->
-
 <!-- [Joining two tables in class exercise](https://scao53.github.io/sds192spring2023/in-class_exercises/Lec17In-classExercise-JoinTables.zip) -->
 <!-- # Day 17 Joining tables -->
 <!-- Monday's office hours moved to Wednesday. -->
@@ -432,7 +393,6 @@ ul.task-list li input[type="checkbox"] {
 <!--      1941, "M",     "Lorraine",      24, 0.0000191 -->
 <!--   ) -->
 <!-- ``` -->
-
 <!-- Exploration: How to join tables? -->
 <!-- # Day 16 Lab 4 -->
 <!-- [This is the article referred to in the lab](https://www.nyclu.org/en/stop-and-frisk-data) -->
@@ -440,97 +400,52 @@ ul.task-list li input[type="checkbox"] {
 <!-- [Here is the link](https://classroom.github.com/a/J1JzkKjE) for Lab 4. -->
 <!-- Lab 4 will be due next *Friday* by midnight. -->
 <!-- <!-- See how filtering goes for lab 4, I might not need to do this because 100 did it in lab 4 -->
-<p>–&gt;</p>
 <!-- <!-- # Day 15 Wrangling with Filter -->
-<p>–&gt;</p>
 <!-- <!-- Wrangle sqf_2011 data together -->
-<p>–&gt;</p>
 <!-- <!-- [Lecture on the five verbs](course-materials/lectures/mdsr-the-verbs.qmd) -->
-<p>–&gt;</p>
 <!-- <!-- [Wrangle babynames](/course-materials/in-class-activies/Wrangling_Baby_Names.qmd) -->
-<p>–&gt;</p>
 <!-- <!-- ```{r} -->
-<p>–&gt;</p>
 <!-- <!-- #| code-fold: true -->
-<p>–&gt;</p>
 <!-- <!-- #| echo: true -->
-<p>–&gt;</p>
 <!-- <!-- #| eval: false -->
-<p>–&gt;</p>
 <!-- <!-- install.packages("babynames") -->
-<p>–&gt;</p>
 <!-- <!-- ``` -->
-<p>–&gt;</p>
 <!-- # Day 15 Wrangling -->
 <!-- [Stop and Frisk Wrangling](/course-materials/lectures/15_Wrangling_1_SQF.qmd) -->
 <!-- <!-- Didn't get to the code below. It would be good for wrangling practice.  -->
-<p>–&gt;</p>
 <!-- <!-- [In class MDSR Problems 1 and 2](https://mdsr-book.github.io/mdsr2e/ch-dataI.html#dataI-exercises) -->
-<p>–&gt;</p>
 <!-- <!-- ```{r, Random_subset } -->
-<p>–&gt;</p>
 <!-- <!-- #| eval: FALSE -->
-<p>–&gt;</p>
 <!-- <!-- #| echo: TRUE -->
-<p>–&gt;</p>
 <!-- <!-- #| code-fold: true -->
-<p>–&gt;</p>
 <!-- <!-- # Copy this code into a chunk in R to make the Random_subset data frame from problem 1 and 2.  -->
-<p>–&gt;</p>
 <!-- <!-- # Use the verbs we've discussed to make the subsets from the text.  -->
-<p>–&gt;</p>
 <!-- <!-- Random_subset <-  tibble::tribble( -->
-<p>–&gt;</p>
 <!-- <!--     ~year,~sex,   ~name,         ~n, ~prop, -->
-<p>–&gt;</p>
 <!-- <!--      2003, "M",     "Bilal",        146, 0.0000695, -->
-<p>–&gt;</p>
 <!-- <!--      1999, "F",     "Terria",        23, 0.0000118, -->
-<p>–&gt;</p>
 <!-- <!--      2010, "F",     "Naziyah",       45, 0.0000230, -->
-<p>–&gt;</p>
 <!-- <!--      1989, "F",     "Shawana",       41, 0.0000206, -->
-<p>–&gt;</p>
 <!-- <!--      1989, "F",     "Jessi",        210, 0.000105, -->
-<p>–&gt;</p>
 <!-- <!--      1928, "M",     "Tillman",       43, 0.0000377, -->
-<p>–&gt;</p>
 <!-- <!--      1981, "F",     "Leslee",        83, 0.0000464, -->
-<p>–&gt;</p>
 <!-- <!--      1981, "F",     "Sherise",       27, 0.0000151, -->
-<p>–&gt;</p>
 <!-- <!--      1920, "F",     "Marquerite",    26, 0.0000209, -->
-<p>–&gt;</p>
 <!-- <!--      1941, "M",     "Lorraine",      24, 0.0000191 -->
-<p>–&gt;</p>
 <!-- <!--   ) -->
-<p>–&gt;</p>
 <!-- <!-- ``` -->
-<p>–&gt;</p>
 <!-- <!-- ::: {.callout-tip collapse="true"} -->
-<p>–&gt;</p>
 <!-- <!-- # terminal work -->
-<p>–&gt;</p>
 <!-- <!-- -   This is a helpful website: `https://ioflood.com/blog/solved-git-error-you-have-divergent-branches-and-need-to-specify-how-to-reconcile-them/` -->
-<p>–&gt;</p>
 <!-- <!-- -   Some times you get "you have divergent branches and need to specify how to reconcile them" -->
-<p>–&gt;</p>
 <!-- <!-- -   In terminal: `git config pull.ff only` -->
-<p>–&gt;</p>
 <!-- <!-- -   Sometimes fast forwarding is fatal.Try Merge Commit: -->
-<p>–&gt;</p>
 <!-- <!-- -   In terminal: `git checkout branch-name` then `git merge --no-ff -m "commit name" branch-name` -->
-<p>–&gt;</p>
 <!-- <!-- -   You can also try following the instructions git gives. -->
-<p>–&gt;</p>
 <!-- <!-- -   Nothing wrong with saving your code and deleting the branch. Branches are disposable. -->
-<p>–&gt;</p>
 <!-- <!-- -   You can work in a branch with lots of commmits before you push. Once you merge a pull request delete the branch. -->
-<p>–&gt;</p>
 <!-- <!-- -   Once you delete a branch on github don't work in it any more. do: `git fetch --prune` to remove the old remote branches from rstudio.Or `git branch -d branch_name` to delete your old branch -->
-<p>–&gt;</p>
 <!-- <!-- ::: -->
-<p>–&gt;</p>
 <!-- # Day 13 and 14 Project 1 -->
 <!-- Announcement: SAL on Feb 29 from 2:45-4pm. Mapping with Google Earth Engine by Mags MacLaughlin. -->
 <!-- Today we are working on project 1. -->
@@ -578,17 +493,11 @@ ul.task-list li input[type="checkbox"] {
 <!-- We'll discuss ethics Monday or Wednesday, read chapter 8. -->
 <!-- ::: -->
 <!-- <!-- It makes most sense to do this before lab 3. [Polishing Figures](/course-materials/in-class-activies/Lec09In-classExercise-PolishingFigures.zip) -->
-<p>–&gt;</p>
 <!-- <!-- ::: {.callout-tip collapse="true"} -->
-<p>–&gt;</p>
 <!-- <!-- # working directory -->
-<p>–&gt;</p>
 <!-- <!-- You may need to set your working directory. -->
-<p>–&gt;</p>
 <!-- <!-- The easiest way to do this is to find your Lec09-...zip in the file pane and go gear-icon \> "Set As Working Directory" -->
-<p>–&gt;</p>
 <!-- <!-- ::: -->
-<p>–&gt;</p>
 <!-- # Day 9 Trend Lines, Data.Frames, and RMarkdown Rendering Options -->
 <!-- [Digest Lab 2](./course-materials/lectures/lab-solutions-for-discussion/Lab2_solution_digestion.pdf) -->
 <!-- [Data Fundamentals](./course-materials/lectures/Making-data-frames.qmd) -->
@@ -631,170 +540,129 @@ ul.task-list li input[type="checkbox"] {
 <!-- -   [In class exercise](./course-materials/in-class-activies/5_color_theory.qmd) -->
 <!-- # Day 5 Catch up -->
 <!-- **Finish work from Day 3.** -->
-<section id="day-9-taxonomy-part-2" class="level1">
-<h1>Day 9 Taxonomy part 2</h1>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/IRJ2Ac9vI5o?si=JMeZEIQQNGNBscno" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="">
-</iframe>
-<section id="discussion-taxonomy-of-graphics" class="level2">
-<h2 class="anchored" data-anchor-id="discussion-taxonomy-of-graphics"><a href="./course-materials/in-class-activies/3Activity_Taxonomy_of_Graphics.html">Discussion: Taxonomy of Graphics</a></h2>
-<p>Chalk Talk: Working directories and file organization in RStudio.</p>
-<p>Coding Example:</p>
-<!-- Working directory problems with scatterplots  -->
-<ol type="1">
-<li><p><a href="./course-materials/in-class-activies/3_Scatterplots.zip">Together: scatter plot</a></p></li>
-<li><p><a href="./course-materials/in-class-activies/3_Line_Graph.qmd">Solo: linegraph</a></p></li>
-</ol>
-</section>
-</section>
-<section id="day-8-lab-2" class="level1">
-<h1>Day 8 Lab 2</h1>
-</section>
-<section id="day-7-taxonomy" class="level1">
-<h1>Day 7 Taxonomy</h1>
-<p><a href="https://smithcollege-sds.github.io/sds100/lab_03_graphics.html">Check out lab 3</a> from sds 100 I might not have to do this.</p>
-<div class="callout callout-style-default callout-tip callout-titled">
+<!-- # Day 9 Taxonomy part 2 -->
+<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/IRJ2Ac9vI5o?si=JMeZEIQQNGNBscno" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen> -->
+<!-- </iframe> -->
+<!-- ## [Discussion: Taxonomy of Graphics](./course-materials/in-class-activies/3Activity_Taxonomy_of_Graphics.qmd) -->
+<!-- Chalk Talk: Working directories and file organization in RStudio. -->
+<!-- Coding Example: -->
+<!-- <!-- Working directory problems with scatterplots  -->
+<p>–&gt;</p>
+<!-- 1.  [Together: scatter plot](./course-materials/in-class-activies/3_Scatterplots.zip) -->
+<!-- 2.  [Solo: linegraph](./course-materials/in-class-activies/3_Line_Graph.qmd) -->
+<!-- # Day 8 Lab 2 -->
+<!-- # Day 7 Taxonomy -->
+<!-- [Check out lab 3](https://smithcollege-sds.github.io/sds100/lab_03_graphics.html) from sds 100 I might not have to do this.  -->
+<!-- ::: {.callout-tip collapse="true"} -->
+<!-- ## For Help -->
+<!-- -   [The six-fixes](https://docs.google.com/document/d/1P7IyZ4On9OlrCOhygFxjC7XhQqyw8OludwChz-uFd_o/edit) -->
+<!-- -   [Student hours](/course-materials/syllabus/schwab.qmd) -->
+<!-- -   [Spennlli center](https://www.smith.edu/academics/spinelli-center/tutoring#disciplines) -->
+<!-- ::: -->
+<!-- ::: {.callout-tip collapse="true"} -->
+<!-- ## Screenshots Help -->
+<!-- Help us help you: take screenshots of your screen and post them to Slack. -->
+<!-- -   macOS: Command+Shift+3 to take shot of whole screen, Command+Shift+4 to take subportion -->
+<!-- -   Windows: Shift-Windows Key-S and Snip & Sketch -->
+<!-- -   Linux: Print screen -->
+<!-- -   Chromebook: Shift + Ctrl + Show windows -->
+<!-- ::: -->
+<!-- ### Lecture -->
+<!-- -   [Taxonomy of graphs](course-materials/lectures/2_mdsr_viz_1_taxonomy.qmd) -->
+<!-- -   [Some graph examples from Day 1](./course-materials/lectures/1first-day-survey/Data-Viz-No-Computers.qmd) -->
+<!-- -   [How R builds a Graph](course-materials/lectures/2How-R-builds-a-graph.qmd) -->
+<!-- # Day 6: No Computer Data Viz -->
+<!-- ### Lecture -->
+<!-- [Data Viz No Computers](./course-materials/lectures/1first-day-survey/Data-Viz-No-Computers.qmd) -->
+<!-- ### General Questions and Comments -->
+<!-- ::: {.callout-note collapse="true"} -->
+<!-- ## Homework: -->
+<!-- -   Read the prologue to chapter 1.4 of MDSR. -->
+<!-- ::: -->
+<!-- # Day 5 Writing functions -->
+<!-- More practice writing functions. -->
+<!-- [Cleaning up documents](https://quarto.org/docs/computations/execution-options.html) -->
+<!-- # Day 4 Getting Data Into R Making functions -->
+<!-- <!-- Students know how to store variables -->
+<!-- <!-- Students know about functions and arguments -->
+<!-- <!-- Students Errors and warnings and comments -->
+<!-- <!-- cheatsheets -->
+<!-- Getting data into R  -->
+<!-- [Lecture: Intro to functions](course-materials/lectures/23_functions.qmd) -->
+<!-- [Function writing practice](./course-materials/in-class-activies/day_25_function_writing.qmd) -->
+<!-- Let's make a function that takes the country each person is from and makes a map.  -->
+<!-- # Day 3 Understanding File Paths -->
+<!-- ::: {.callout-note collapse="true"} -->
+<!-- ## Learning Goals -->
+<!-- -   Filing system -->
+<!-- -   Strings and Vectors -->
+<!-- -   Libraries, functions, arguments and parameters -->
+<!-- -   The pipe -->
+<!-- -   Understand File Structure  -->
+<!-- ::: -->
+<!-- Where are we going?  -->
+<!-- -   Final project Website -->
+<!--  -->
+<!-- # Day 2 Github Lab -->
+<!-- You are only installing git today. Ignore the other files until Day 3 -->
+<!-- ::: {.callout-note collapse="true"} -->
+<!-- ## Sign into githubclassroom -->
+<!-- Link github account to github classroom - sign into github -->
+<!-- -   https://classroom.github.com/a/ERIt75vu for lab 1 -->
+<!-- -   find your name in the roster and click it. -->
+<!-- -   you should see lab 1, which we will discuss on Friday. -->
+<!-- ::: -->
+<section id="day-1-welcome-and-github" class="level1">
+<h1>Day 1 Welcome and Github</h1>
+<div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-For Help
+Classic First Day Stuff
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ul>
-<li><p><a href="https://docs.google.com/document/d/1P7IyZ4On9OlrCOhygFxjC7XhQqyw8OludwChz-uFd_o/edit">The six-fixes</a></p></li>
-<li><p><a href="./course-materials/syllabus/schwab.qmd">Student hours</a></p></li>
-<li><p><a href="https://www.smith.edu/academics/spinelli-center/tutoring#disciplines">Spennlli center</a></p></li>
+<li><p><a href="./course-materials/syllabus/syllabus.html">Syllabus</a></p></li>
+<li><p>Log into <a href="https://www.slack.com">Slack</a></p></li>
+<li><p>Website tour</p></li>
+<li><p>Bring Computers to Class</p></li>
 </ul>
 </div>
 </div>
 </div>
-<div class="callout callout-style-default callout-tip callout-titled">
+<ul>
+<li><p><a href="https://forms.gle/bzaGFftbFczZMhRe7">Make some of our own class data</a></p></li>
+<li><p><a href="./course-materials/lectures/1_Overview_of_the_course.html">Overview of Intro to Data Science</a></p></li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Screenshots Help
+git started with Version Control
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Help us help you: take screenshots of your screen and post them to Slack.</p>
 <ul>
-<li><p>macOS: Command+Shift+3 to take shot of whole screen, Command+Shift+4 to take subportion</p></li>
-<li><p>Windows: Shift-Windows Key-S and Snip &amp; Sketch</p></li>
-<li><p>Linux: Print screen</p></li>
-<li><p>Chromebook: Shift + Ctrl + Show windows</p></li>
-</ul>
-</div>
-</div>
-</div>
-<section id="lecture" class="level3">
-<h3 class="anchored" data-anchor-id="lecture">Lecture</h3>
-<ul>
-<li><p><a href="./course-materials/lectures/2_mdsr_viz_1_taxonomy.html">Taxonomy of graphs</a></p></li>
-<li><p><a href="./course-materials/lectures/1first-day-survey/Data-Viz-No-Computers.html">Some graph examples from Day 1</a></p></li>
-<li><p><a href="./course-materials/lectures/2How-R-builds-a-graph.html">How R builds a Graph</a></p></li>
-</ul>
-</section>
-</section>
-<section id="day-6-no-computer-data-viz" class="level1">
-<h1>Day 6: No Computer Data Viz</h1>
-<section id="lecture-1" class="level3">
-<h3 class="anchored" data-anchor-id="lecture-1">Lecture</h3>
-<p><a href="./course-materials/lectures/1first-day-survey/Data-Viz-No-Computers.html">Data Viz No Computers</a></p>
-</section>
-<section id="general-questions-and-comments" class="level3">
-<h3 class="anchored" data-anchor-id="general-questions-and-comments">General Questions and Comments</h3>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Homework:
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-3" class="callout-3-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<ul>
-<li>Read the prologue to chapter 1.4 of MDSR.</li>
-</ul>
-</div>
-</div>
-</div>
-</section>
-</section>
-<section id="day-5-writing-functions" class="level1">
-<h1>Day 5 Writing functions</h1>
-</section>
-<section id="day-5-intro-function-writing" class="level1">
-<h1>Day 5 Intro Function Writing</h1>
-<p><a href="./course-materials/lectures/23_functions.html">Lecture: Intro to if, else and functions</a></p>
-<p><a href="./course-materials/in-class-activies/day_25_function_writing.qmd">Function writing practice</a></p>
-</section>
-<section id="day-4-finding-data-and-getting-data-into-r" class="level1">
-<h1>Day 4 Finding Data and Getting Data Into R</h1>
-<p>Students know how to store variables</p>
-<p>Students know about functions and arguments</p>
-<p>Errors and warnings and comments</p>
-<p>cheatsheets</p>
-<p>working directories</p>
-<p>getting data into R</p>
-</section>
-<section id="day-3-understanding-file-paths" class="level1">
-<h1>Day 3 Understanding File Paths</h1>
-<p>Play with our repository</p>
-<p>Make some of our own class data</p>
-</section>
-<section id="day-2-github-lab" class="level1">
-<h1>Day 2 Github Lab</h1>
-<p>Where are we going?</p>
-<ul>
-<li>Final project Website</li>
-</ul>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Sign into githubclassroom
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-4" class="callout-4-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>Link github account to github classroom - sign into github</p>
-<ul>
-<li><p>https://classroom.github.com/a/ERIt75vu for lab 1</p></li>
-<li><p>find your name in the roster and click it.</p></li>
-<li><p>You should see lab 1, which we will discuss on Friday.</p></li>
-</ul>
-</div>
-</div>
-</div>
-</section>
-<section id="day-1-welcome-and-github" class="level1">
-<h1>Day 1 Welcome and Github</h1>
-<ul>
-<li><p><a href="./course-materials/syllabus/syllabus.html">Syllabus</a></p></li>
-<li><p>Log into <a href="https://www.slack.com">Slack</a></p></li>
-<li><p>Website tour</p></li>
-<li><p>Bring Computers to Class</p></li>
 <li><p>Sign up for <a href="https://github.com/">github here</a>, if you don’t already have an account. We will very carefully link your github account to our github classroom account.</p></li>
 <li><p>Intro to github</p></li>
 <li><p><a href="https://classroom.github.com/a/GG36O-3I">Github Fundamentals Lab 0</a></p></li>
 <li><p><a href="https://happygitwithr.com/">Happy Git and the UseR</a></p></li>
 </ul>
-<section id="walk-to-mcconnell-213-and-214" class="level3">
-<h3 class="anchored" data-anchor-id="walk-to-mcconnell-213-and-214">Walk to MCConnell 213 and 214</h3>
+</div>
+</div>
+</div>
+<p><a href="https://smithcollege.qualtrics.com/jfe/form/SV_1YAqUXjbwJJbe3s">Survey for Prof Cao’s study</a></p>
+<section id="walk-to-mcconnell-215-and-214" class="level3">
+<h3 class="anchored" data-anchor-id="walk-to-mcconnell-215-and-214">Walk to MCConnell 215 and 214</h3>
 <p>My office and group study room.</p>
 
 
@@ -843,6 +711,33 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       } else {
         el.classList.add('notransition');
       }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
     }
   }
   const toggleColorMode = (alternate) => {
@@ -911,13 +806,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return localAlternateSentinel;
     }
   }
-  let localAlternateSentinel = 'default';
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
   // Dark / light mode switch
   window.quartoToggleColorScheme = () => {
     // Read the current dark / light value 
     let toAlternate = !hasAlternateSentinel();
     toggleColorMode(toAlternate);
     setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
   };
   // Ensure there is a toggle, if there isn't float one in the top right
   if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
@@ -996,10 +893,27 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -1009,8 +923,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -1022,7 +945,130 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -1066,6 +1112,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -1091,6 +1138,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -1162,12 +1235,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
-    <a class="nav-link" href="./credits.qmd">credits</a>
+    <a class="nav-link" href="./credits.qmd">
+<p>credits</p>
+</a>
   </li>  
 </ul>
     </div>
   </div>
 </footer>
+
 
 
 

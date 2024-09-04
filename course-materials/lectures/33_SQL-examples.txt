@@ -1,0 +1,352 @@
+---
+title: "dbplyr-SQL"
+format: html
+execute: 
+  echo: true
+  eval: false
+---
+# Setup
+
+```{r setup}
+
+library(tidyverse)
+library(RMySQL)
+library(leaflet)
+library(dbplyr)
+
+db <- dbConnect(
+  MySQL(),
+  host = "scidb.smith.edu",
+  user = "sds192",
+  password = "DSismfc@S"
+)
+knitr::opts_chunk$set(connection = db, max.print = 20)
+```
+
+
+# Different dialects of SQL
+
+We'll be using MySQL. 
+
+The server is in Bass Hall. It is a physical computer. 
+
+Non efficient queries slow it down for everyone. Use LIMIT. 
+
+# db?
+
+```{r}
+class(db)
+```
+# Take a look at the databases
+```{sql, connection= db}
+SHOW DATABASES;
+
+```
+
+# Choose a database
+
+```{sql connection=db}
+USE citibike;
+
+```
+
+# Look at the tables
+
+```{sql connection=db}
+SHOW TABLES;
+```
+# Describe a table
+
+This shows what each variable (field) is and its type. 
+```{sql connection=db}
+
+DESCRIBE trips;
+```
+
+
+```{sql connection=db}
+DESCRIBE station_summary	;			
+
+```
+
+
+# SQL to dplyr
+
+| SQL       | dplyr                           |
+|-----------|---------------------------------|
+| SELECT    | select(), mutate(), summarise() |
+| FROM      | the data frame. data=           |
+| WHERE     | filter()                        |
+| GROUP BY  | group_by                        |
+| HAVING    | filter() use after group_by()   |
+| ORDER BY  | arrange()                       |
+| LIMIT     | head()                          |
+
+Also
+
+Some aggregating functions: MAX(), MIN(), COUNT(), AVG()
+
+# Understand our DATA through mapping. 
+
+```{sql connection=db, output.var="citi_map_data"}
+# Bring this into R
+SELECT lat, lon 
+
+FROM station_summary
+
+```
+
+# Make a map
+
+```{r}
+library(leaflet)
+
+leaflet() |>
+  addTiles()|>
+  addMarkers(lat= ~lat, lng = ~lon, data = citi_map_data)
+```
+
+
+#  Question
+
+**Ex. What is the most number of starts from a station? **
+
+Probably consider num_starts from station_summary. 
+
+```{sql connection=db}
+
+SELECT MAX(num_starts )
+
+FROM station_summary 
+
+```
+**Ex. Find out more information about the station above by ordering your data. **
+
+# ORDER BY DESC
+
+```{sql connection=db}
+
+SELECT station_id, num_starts 
+
+FROM station_summary 
+
+ORDER BY  num_starts DESC
+
+LIMIT 1;
+```
+
+# Where are the top 10 stations? 
+
+```{sql connection=db}
+
+SELECT station_id, num_starts, lat, lon 
+
+FROM station_summary 
+
+ORDER BY  num_starts DESC
+
+LIMIT 10;
+```
+
+
+# Another way to bring an SQL query into R
+
+```{r }
+top_10_data <- dbGetQuery(conn = db, 
+
+"SELECT station_id, num_starts, lat, lon 
+
+FROM station_summary 
+
+ORDER BY  num_starts DESC
+
+LIMIT 10;")
+```
+
+# Put points on map
+
+```{r}
+library(leaflet)
+
+leaflet() |>
+  addTiles()|>
+  addMarkers(lat= ~lat, lng = ~lon, data=top_10_data)
+```
+
+# Wrangling in SQL
+
+```{sql connection=db}
+DESCRIBE trip_summary
+
+```
+**Ex:  Using trip_summary find the busiest month by ordering your data.**
+
+```{sql connection=db}
+SELECT the_month, num_trips
+
+FROM trip_summary 
+
+ORDER BY num_trips DEC
+
+```
+
+
+
+
+**Ex:  Use SUM() to find the number of trips that were made for the year this data was collected.**
+
+```{sql connection=db}
+SELECT SUM(num_trips) As Revenue
+FROM trip_summary
+
+```
+
+**Ex:  Find the difference between start and end time by bike_id.**
+
+```{sql connection = db}
+SELECT TIME(stop_time)-TIME(start_time) AS Duration, bike_id
+
+FROM trips
+
+Group By bike_id
+
+ORDER By Duration DESC
+
+LIMIT 10;
+```
+
+We need to know what types of variables we are dealing with. 
+
+# JOIN 
+
+Let's join some tables and save it to R
+
+I'd like to join trips and station_summary to find if there is a connection between people's ages and the stations they go to, let's look at the names of those tables.
+
+```{sql connection = db}
+
+DESCRIBE trips;
+
+```
+
+```{sql connection = db}
+
+DESCRIBE station_summary;
+
+```
+Looks like we can join by station ID.
+
+```{sql connection = db}
+
+SELECT AVG(2017-trips.birth_year) AS AGE
+
+FROM trips 
+
+JOIN station_summary  ON trips.start_station_id = station_summary.station_id 
+
+WHERE birth_year > 1900 AND station_summary.name = 'W 52 St & 11 Ave'
+ 
+LIMIT 5 ;
+
+```
+
+
+
+Here are some questions for practice:
+
+1. Which station had the least stops?
+
+2. Which month of the year had the most starts?  
+
+3. Using trips find the AVG() bike ride time. 
+
+4. What is the average age of a rider at Broadway & W 25 St?
+
+
+# Part 2 Intro to dbplyr
+
+# This makes table connection with the server
+
+
+```{r bring-tables-to-r}
+
+#This creates wo tbl_sql objects in R. One for trips and one for station_summary
+
+ trips <- db |>
+   tbl("trips")
+
+ station_summary <- db |>
+   tbl("station_summary")
+
+```
+
+# We can see the query
+
+```{r}
+# Do the average age wrangling again in R
+
+# The data still lives on the server
+
+station_summary |>
+
+inner_join( y= trips, by = c("station_id"="start_station_id")) |>
+  
+  select(station_id, birth_year , lat, lon) |>
+  
+  mutate(age= 2023-birth_year) |>
+  
+  group_by(station_id)|>
+  
+  summarise(average_age = mean(age, na.rm=TRUE)) |>
+  
+  show_query()
+```
+# Data on Server
+If we run this, the data still live on the server
+
+
+```{r}
+#| eval: FALSE
+
+station_summary |>
+
+inner_join( y= trips, by = c("station_id"="start_station_id")) |>
+  
+  select(station_id, birth_year , lat, lon) |>
+  
+  mutate(age= 2023-birth_year) |>
+  
+  group_by(station_id)|>
+  
+  summarise(lat,lon,average_age = mean(age, na.rm=TRUE)) 
+```
+
+# Use collect() to bring data into R. 
+
+```{r}
+age_by_station_R <-
+  
+  station_summary |>
+  
+  inner_join( y= trips, by = c("station_id"="start_station_id")) |>
+  
+  select(station_id, birth_year , lat, lon) |>
+  
+  mutate(age= 2023-birth_year) |>
+  
+  group_by(station_id)|>
+  
+  summarise(lat,lon,average_age = mean(age, na.rm=TRUE)) |>
+  
+  collect()
+```
+
+# Map
+
+<!-- # ```{r} -->
+<!-- #  -->
+<!-- # leaflet() |> -->
+<!-- #   addTiles()|> -->
+<!-- #   addMarkers(lat= ~lat, lng = ~lon, popup= ~as.character(average_age), data=age_by_station_R) -->
+<!-- #  -->
+<!-- # ``` -->
