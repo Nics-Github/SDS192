@@ -753,35 +753,37 @@ h1{font-weight: 400;}
 
 
 
-<!-- # Day 3 Understanding File Paths -->
+# Day 3 Understanding File Paths
 
-<!-- ::: {.callout-note collapse="true"} -->
-<!-- ## Learning Goals -->
-
-<!-- -   Filing system -->
-
-<!-- -   Strings and Vectors -->
-
-<!-- -   Libraries, functions, arguments and parameters -->
-
-<!-- -   The pipe -->
-
-<!-- -   Understand File Structure  -->
-
-<!-- ::: -->
-
-<!-- Where are we going?  -->
-
-<!-- -   Final project Website -->
-
-
-
-<!--  -->
-
-# Day 2 Github Lab
+[Survey for Prof Cao's study](https://smithcollege.qualtrics.com/jfe/form/SV_1YAqUXjbwJJbe3s)
 
 [Overview of Intro to Data Science](./course-materials/lectures/1_Overview_of_the_course.qmd)
 
+::: {.callout-note collapse="true"}
+## Learning Goals
+
+-   Understand File Structure
+
+    -   Filing system
+
+-   Pushing, commiting and pulling from git
+
+-   Strings and Vectors
+
+-   Libraries, functions, arguments and parameters
+
+-   Inmtroduction to the pipe
+
+:::
+
+Where are we going?
+
+-   Final project Website
+
+
+# Day 2 Github Lab
+
+<!--Note to self update github lab 1 it is out of date. updating github username, email and password should be in the terminal. -->
 
 
 You are only installing git today. Ignore the other files until Day 3
@@ -800,7 +802,7 @@ Link github account to github classroom - sign into github
 -   you should see lab 1, which we will discuss on Friday.
 :::
 
-[Survey for Prof Cao's study](https://smithcollege.qualtrics.com/jfe/form/SV_1YAqUXjbwJJbe3s)
+
 
 # Day 1 Welcome and Github 
 
