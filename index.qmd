@@ -29,7 +29,7 @@ knitr::opts_chunk$set(
 
 # tidyverse R packages:
 library(tidyverse)
-library(mdsr)
+# library(mdsr)
 
 # CRAN R packages:
 library(knitr)
@@ -57,7 +57,7 @@ h1{font-weight: 400;}
 # Schedule
 
 ```{=html}
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTG_b6upDZcPxXB92LHYIhV1uAXgeVGaMsZ3sDRPuSQN74JdhkKhZQVjw6T68I3zsP8KGYzDSVTZW64/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false&amp;gid=0&amp;range=A1:E4
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTG_b6upDZcPxXB92LHYIhV1uAXgeVGaMsZ3sDRPuSQN74JdhkKhZQVjw6T68I3zsP8KGYzDSVTZW64/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false&amp;gid=0&amp;range=A1:E5
 " width="100%" height="200">
 ```
 </iframe>
@@ -733,23 +733,21 @@ h1{font-weight: 400;}
 
 <!-- [Cleaning up documents](https://quarto.org/docs/computations/execution-options.html) -->
 
-<!-- # Day 4 Getting Data Into R Making functions -->
+# Day 4 Getting Data Into R Making functions
 
-<!-- <!-- Students know how to store variables --> 
+<!-- Students know how to store variables -->
 
-<!-- <!-- Students know about functions and arguments --> 
+<!-- Students know about functions and arguments -->
 
-<!-- <!-- Students Errors and warnings and comments --> 
+<!-- Students Errors and warnings and comments -->
 
-<!-- <!-- cheatsheets --> 
+Getting data into R
 
-<!-- Getting data into R  -->
+Leaflet Maps
 
-<!-- [Lecture: Intro to functions](course-materials/lectures/23_functions.qmd) -->
+[Lecture: Intro to functions](course-materials/lectures/23_functions.qmd)
 
-<!-- [Function writing practice](./course-materials/in-class-activies/day_25_function_writing.qmd) -->
-
-<!-- Let's make a function that takes the country each person is from and makes a map.  -->
+Let's make a function that takes the country each person is from and makes a map. See `function_map`.
 
 
 
@@ -772,7 +770,7 @@ h1{font-weight: 400;}
 
 -   Libraries, functions, arguments and parameters
 
--   Inmtroduction to the pipe
+-   Introduction to the pipe
 
 :::
 

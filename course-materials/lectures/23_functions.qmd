@@ -68,7 +68,7 @@ The computer can run a logical check.
 Consider this function:
 
 ```{r}
-umbrella <- function(weather = "no precipitation"){
+umbrella <- function(weather = "sunny"){
 
 if(weather == "no precipitation"){
   
@@ -115,64 +115,83 @@ my_1st_calculator <-function(x,y,operation="add"){
 my_1st_calculator(1,6, operation="multiply")
 ```
 
-## Note on data masking
+## Try one
 
-No masking : data\$variable
-
-With masking : data \|\> filter(variable)
-
-Data masking is super convenient for learning the tidyverse.
-
-Not so great when making functions.
-
-If using a tidyverse verb with a variable use `{{}}` around the variable.
-
-[Read more](https://rlang.r-lib.org/reference/topic-data-mask.html)
-
-## Filtering a lot
+Make a function that takes a vector of students in this class and prints the name of each student.
 
 ```{r}
 library(tidyverse)
+library(googlesheets4)
 
-auto_filter <- function(data, variable, value){
-  
-  data |>
-    filter({{variable}} == value)
-}
+class_info <- read_sheet("https://docs.google.com/spreadsheets/d/1XOAFQvBcFvhKwEl5xH6l3nRJK2Wk0hWZ18S9kAZclQ0/edit?usp=sharing") |>
+  janitor::clean_names()
+
+# selecting only the column we are interested in and making it into a vector.
+name_vector <- as.vector( 
+  class_info |>
+    select("preferred_name"))
+
 ```
 
-```{r}
-auto_filter(data = mtcars, variable = am, value = 0 )
-```
 
-## Classwork
+<!-- ## Note on data masking -->
 
-## Your turn
+<!-- No masking : data\$variable -->
 
-Make a function that outputs a scatterplot and linear regression
+<!-- With masking : data \|\> filter(variable) -->
 
--   Call your function super grapher.
+<!-- Data masking is super convenient for learning the tidyverse. -->
 
-    -   It should take an x and y variable.
+<!-- Not so great when making functions. -->
 
-    -   It needs the data
+<!-- If using a tidyverse verb with a variable use `{{}}` around the variable. -->
 
-    -   It need a logical for the graph
+<!-- [Read more](https://rlang.r-lib.org/reference/topic-data-mask.html) -->
 
-```{r}
-#| echo: FALSE
+<!-- ## Filtering a lot -->
 
-library(tidyverse)
+<!-- ```{r} -->
+<!-- library(tidyverse) -->
 
-super_grapher <- function(variable1=NULL ,variable2=NULL , dat= NULL ,linear_regression = TRUE){
-  ggplot(mapping = aes(x= {{variable1}},  y= {{variable2}}), data = dat)+
-    geom_point() +
-    if(linear_regression == TRUE){
-    geom_smooth(method = "lm" )
-    }
-    else{
-    labs(caption = "no regression required")
-    }
-}
-super_grapher(variable1 = mpg,variable2 = hp, dat = mtcars, linear_regression = FALSE)
-```
+<!-- auto_filter <- function(data, variable, value){ -->
+
+<!--   data |> -->
+<!--     filter({{variable}} == value) -->
+<!-- } -->
+<!-- ``` -->
+
+<!-- ```{r} -->
+<!-- auto_filter(data = mtcars, variable = am, value = 0 ) -->
+<!-- ``` -->
+
+<!-- ## Classwork -->
+
+<!-- ## Your turn -->
+
+<!-- Make a function that outputs a scatterplot and linear regression -->
+
+<!-- -   Call your function super grapher. -->
+
+<!--     -   It should take an x and y variable. -->
+
+<!--     -   It needs the data -->
+
+<!--     -   It need a logical for the graph -->
+
+<!-- ```{r} -->
+<!-- #| echo: FALSE -->
+
+<!-- library(tidyverse) -->
+
+<!-- super_grapher <- function(variable1=NULL ,variable2=NULL , dat= NULL ,linear_regression = TRUE){ -->
+<!--   ggplot(mapping = aes(x= {{variable1}},  y= {{variable2}}), data = dat)+ -->
+<!--     geom_point() + -->
+<!--     if(linear_regression == TRUE){ -->
+<!--     geom_smooth(method = "lm" ) -->
+<!--     } -->
+<!--     else{ -->
+<!--     labs(caption = "no regression required") -->
+<!--     } -->
+<!-- } -->
+<!-- super_grapher(variable1 = mpg,variable2 = hp, dat = mtcars, linear_regression = FALSE) -->
+<!-- ``` -->
