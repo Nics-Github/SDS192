@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-<link href="../../../course-materials/website//images/192.png" rel="icon" type="image/png">
-<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../../site_libs/quarto-html/tabby.min.js"></script>
-<script src="../../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<link href="../../course-materials/website//images/192.png" rel="icon" type="image/png">
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-html/tabby.min.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.3.353">
 
   <meta name="author" content="Schwab">
-  <title>SDS 192 - No Computers Data Viz</title>
+  <title>SDS 192 - Notes on Style</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="../../../site_libs/revealjs/dist/reset.css">
-  <link rel="stylesheet" href="../../../site_libs/revealjs/dist/reveal.css">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/reveal.css">
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -30,12 +30,77 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="../../../site_libs/revealjs/dist/theme/quarto.css">
-  <link href="../../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-  <link href="../../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-  <link href="../../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="../../../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto.css">
+  <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
 
   .callout {
@@ -326,7 +391,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">No Computers Data Viz</h1>
+  <h1 class="title">Notes on Style</h1>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -337,158 +402,77 @@ Schwab
 </div>
 
 </section>
-<section id="names-and-surveys" class="slide level2">
-<h2>Names and Surveys</h2>
-<p><a href="https://docs.google.com/forms/d/e/1FAIpQLSfYrVhaMo9BCVSTRZ8EhOnfxZbkdzjek9AB2EV11qFDDXgo9Q/viewform?usp=sf_link">Survey Questions</a></p>
+<section id="the-tidyverse-style-guide" class="slide level2">
+<h2>The Tidyverse Style Guide</h2>
+<p><a href="https://style.tidyverse.org/index.html">Tidyverse style guide</a></p>
 </section>
-<section id="data-viz-no-computers" class="slide level2">
-<h2>Data Viz no computers</h2>
-<p><a href="https://docs.google.com/spreadsheets/d/1x9srZXDoYzKGew1f-y4brMbN8dl4QM66pc-dmCBWHQY/edit?usp=sharing">Sheets data</a></p>
+<section id="files" class="slide level2">
+<h2>1. files</h2>
+<p>I will use underscores <code>_</code>, not spaces to name your files. You can also use <code>-</code></p>
 <ul>
-<li><p>Data Frame</p></li>
-<li><p>Observations</p></li>
-<li><p>Tidy Data</p></li>
-<li><p>Variables</p></li>
-<li><p>Variable Types</p></li>
+<li><p>Avoid special symbols.</p></li>
+<li><p>Called <a href="https://en.wikipedia.org/wiki/Snake_case">snake case.</a></p></li>
 </ul>
+<h3 id="good-name">good name</h3>
+<p><code>my_file.qmd</code></p>
+<h3 id="poor-name">poor name</h3>
+<p><code>my file!.qmd</code></p>
 </section>
-<section id="take-1-hand-drawn-graphs-of-survey-questions." class="slide level2">
-<h2>Take 1: Hand drawn graphs of survey questions.</h2>
-<p>Draw a graph of a variable. <strong>Do not write your name.</strong></p>
+<section id="syntax" class="slide level2">
+<h2>2. Syntax</h2>
+<p>syntax is how the code looks</p>
 <ul>
-<li><p>It does not need to be perfect.</p></li>
-<li><p>Try to make it correct.</p>
-<ul>
-<li>It is fine if its not correct.</li>
-</ul></li>
+<li><p>variables should be in snake case and lower case</p></li>
+<li><p>variables should be nouns</p></li>
+<li><p>functions should be verbs</p></li>
+<li><p>names should be meaningful and concise.</p></li>
+<li><p>Don’t reuse built in R names (True, False, c, n)</p></li>
 </ul>
-</section>
-<section id="talk-to-someone-close-to-you." class="slide level2">
-<h2>Talk to someone close to you.</h2>
-<p>Answer these questions:</p>
-<ol type="1">
-<li><p>Is the graph’s message or story clear?</p></li>
-<li><p>What is missing from each graph?</p></li>
-<li><p>What is distracting from the graph?</p></li>
-<li><p>What does the graph do well?</p></li>
-</ol>
-</section>
-<section id="what-makes-a-clear-graph" class="slide level2">
-<h2>What makes a clear graph?</h2>
-<p>Class discussion.</p>
-</section>
-<section id="graph-context." class="slide level2">
-<h2>Graph Context.</h2>
-<ol type="1">
-<li><p>Title</p></li>
-<li><p>Well labeled Axes</p></li>
-<li><p>Author’s Name</p></li>
-<li><p>Data Source</p></li>
-<li><p>Captions</p></li>
-</ol>
-</section>
-<section id="section" class="slide level2">
-<h2></h2>
-</section>
-<section id="baumers-thoughts" class="slide level2">
-<h2>Baumer’s Thoughts</h2>
-<p>Some of the following slides were borrowed by the text’s author.</p>
-</section>
-<section id="a-misleading-chart-from-apple" class="slide level2">
-<h2><a href="https://qz.com/122921/the-chart-tim-cook-doesnt-want-you-to-see/">A misleading chart from Apple</a></h2>
-
-<img data-src="https://cms.qz.com/wp-content/uploads/2013/09/iphone-sales.jpg?quality=75&amp;strip=all&amp;w=620&amp;h=413&amp;crop=1" class="r-stretch"></section>
-<section id="pie-charts" class="slide level2">
-<h2>Pie charts</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
 <div class="cell">
-<div class="cell-output-display">
-<p><img data-src="figures/mtcars-stacked-bar-1.png" width="960"></p>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># good</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a>first_name <span class="ot">&lt;-</span> <span class="st">"Nic"</span></span>
+<span id="cb1-3"><a href="#cb1-3"></a></span>
+<span id="cb1-4"><a href="#cb1-4"></a><span class="co"># not so good</span></span>
+<span id="cb1-5"><a href="#cb1-5"></a>LASTNAME <span class="ot">&lt;-</span> <span class="st">"Schwab"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</div>
-</div><div class="column" style="width:50%;">
+</section>
+<section id="more-syntax" class="slide level2">
+<h2>2.5 More Syntax</h2>
+<p>Consider spacing and commas like in english writing.</p>
+<p>More space for reability is ok. Don’t over do it.</p>
 <div class="cell">
-<div class="cell-output-display">
-<p><img data-src="figures/mtcars-pie-chart-1.png" width="960"></p>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="co"># good</span></span>
+<span id="cb2-2"><a href="#cb2-2"></a>x <span class="ot">&lt;-</span> <span class="dv">1</span></span>
+<span id="cb2-3"><a href="#cb2-3"></a>y <span class="ot">&lt;-</span> <span class="dv">2</span></span>
+<span id="cb2-4"><a href="#cb2-4"></a>total <span class="ot">&lt;-</span> <span class="fu">sum</span>(<span class="fu">c</span>(x, y))</span>
+<span id="cb2-5"><a href="#cb2-5"></a>  </span>
+<span id="cb2-6"><a href="#cb2-6"></a><span class="co"># Not as good</span></span>
+<span id="cb2-7"><a href="#cb2-7"></a>new_total<span class="ot">&lt;-</span>x<span class="sc">+</span>y<span class="sc">-</span>total </span>
+<span id="cb2-8"><a href="#cb2-8"></a></span>
+<span id="cb2-9"><a href="#cb2-9"></a><span class="co"># Maybe ok</span></span>
+<span id="cb2-10"><a href="#cb2-10"></a><span class="fu">sum</span>( <span class="fu">c</span>( x , y , total ) )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 6</code></pre>
 </div>
 </div>
+</section>
+<section id="functions" class="slide level2">
+<h2>Functions</h2>
+<p>Indent long lines (R does this automatically)</p>
+<p>We don’t need return, R automatically returns the last line.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a>add <span class="ot">&lt;-</span> <span class="cf">function</span>(<span class="at">a =</span> <span class="st">"first number"</span>,</span>
+<span id="cb4-2"><a href="#cb4-2"></a>                <span class="at">b =</span> <span class="st">"second number"</span>,</span>
+<span id="cb4-3"><a href="#cb4-3"></a>                <span class="at">c =</span> <span class="st">"third number"</span>) {</span>
+<span id="cb4-4"><a href="#cb4-4"></a>  a <span class="sc">+</span> b <span class="sc">+</span> c</span>
+<span id="cb4-5"><a href="#cb4-5"></a>  <span class="co"># As usual code is indented by two spaces.</span></span>
+<span id="cb4-6"><a href="#cb4-6"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</div>
-<p>Are 6-cylinder engines more common among manuals or automatics?</p>
 </section>
-<section id="unclear-scales" class="slide level2">
-<h2>Unclear Scales</h2>
-
-<img data-src="https://infovis-wiki.net/w/images/0/05/Lie_factor_example1_image.jpg" style="width:200.0%" class="r-stretch quarto-figure-center"><ul>
-<li>Often not very clearly defined</li>
-<li>Easy to lie by manipulating scales</li>
-<li>Why perspective?</li>
-<li>Width of lines?</li>
-</ul>
-</section>
-<section id="clearer-scales" class="slide level2">
-<h2>Clearer Scales</h2>
-
-<img data-src="http://images.slideplayer.com/14/4403460/slides/slide_21.jpg" class="r-stretch quarto-figure-center"><ul>
-<li>Good graphics have clear scales
-<ul>
-<li>Remember iPhone sales graphic</li>
-</ul></li>
-</ul>
-</section>
-<section id="tufte" class="slide level2">
-<h2>Tufte</h2>
-<p>The follow slides are taken from Tufte.</p>
-<p><a href="https://www.edwardtufte.com/books/">Recommended: The Visual Display of Quantitative Information.</a></p>
-</section>
-<section id="section-1" class="slide level2">
-<h2></h2>
-
-<img data-src="https://image.slidesharecdn.com/tufte-slides-150224020553-conversion-gate02/95/lessons-from-edward-tufte-5-638.jpg?cb=1424765239" width="800" class="r-stretch quarto-figure-center"></section>
-<section id="section-2" class="slide level2">
-<h2></h2>
-
-<img data-src="https://image.slidesharecdn.com/tufte-slides-150224020553-conversion-gate02/95/lessons-from-edward-tufte-9-638.jpg?cb=1424765239" width="800" class="r-stretch"></section>
-<section id="section-3" class="slide level2">
-<h2></h2>
-
-<img data-src="https://image.slidesharecdn.com/tufte-slides-150224020553-conversion-gate02/95/lessons-from-edward-tufte-16-638.jpg?cb=1424765239" width="800" class="r-stretch"></section>
-<section id="balance-of-art-vs.-science" class="slide level2">
-<h2>Balance of art vs.&nbsp;science</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p>Data graphics:</p>
-<ul>
-<li><p>purpose is to convey meaning</p></li>
-<li><p>scientific, rigorous</p></li>
-<li><p>peer-reviewed</p></li>
-<li><p>clear</p></li>
-<li><p><strong>creative!</strong></p></li>
-</ul>
-</div><div class="column" style="width:50%;">
-<p><a href="https://en.wikipedia.org/wiki/Infographic">Infographics</a>:</p>
-<ul>
-<li><p>purpose might be to draw eyeballs</p></li>
-<li><p>entertaining?</p></li>
-<li><p>sales or marketing?</p></li>
-<li><p>public sphere</p></li>
-<li><p>creative</p></li>
-</ul>
-</div>
-</div>
-<p>We’re only interested in the former</p>
-</section>
-<section id="other-people-have-thought-about-this" class="slide level2">
-<h2>Other people have thought about this</h2>
-<p><a href="https://guides.library.duke.edu/datavis/topten">Do’s and Don’t</a></p>
-<p><a href="https://infovis-wiki.net/wiki/Data-Ink_Ratio">Tufte’s Data to Ink Ratio</a></p>
-<p><a href="https://flowingdata.com/2015/08/11/real-chart-rules-to-follow/">Flowing Data</a></p>
-</section>
-<section id="some-graphs-to-discuss-in-groups" class="slide level2">
-<h2>Some Graphs to discuss in groups</h2>
-<p><a href="https://www.economist.com/graphic-detail">The Economist’s Graph detail</a></p>
-<p><a href="https://www.nytimes.com/2023/07/26/learning/over-75-new-york-times-graphs-for-students-to-analyze.html">Graphs from the NYTimes</a></p>
+<section id="pipes-and-plus" class="slide level2">
+<h2>Pipes and plus</h2>
+<p>In general <code>|&gt;</code> and <code>+</code> should end lines.</p>
+<p>We will discuss these operators more later.</p>
 
 <div class="footer footer-default">
 
@@ -498,19 +482,19 @@ Schwab
   </div>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>
-  <script src="../../../site_libs/revealjs/dist/reveal.js"></script>
+  <script src="../../site_libs/revealjs/dist/reveal.js"></script>
   <!-- reveal.js plugins -->
-  <script src="../../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
-  <script src="../../../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
-  <script src="../../../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
-  <script src="../../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="../../../site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  <script src="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="../../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="../../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="../../site_libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
-  <script src="../../../site_libs/revealjs/plugin/notes/notes.js"></script>
-  <script src="../../../site_libs/revealjs/plugin/search/search.js"></script>
-  <script src="../../../site_libs/revealjs/plugin/zoom/zoom.js"></script>
-  <script src="../../../site_libs/revealjs/plugin/math/math.js"></script>
+  <script src="../../site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="../../site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="../../site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="../../site_libs/revealjs/plugin/math/math.js"></script>
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
 
   <script>
@@ -518,7 +502,7 @@ Schwab
       // Full list of configuration options available at:
       // https://revealjs.com/config/
       Reveal.initialize({
-'controlsAuto': true,
+'controlsAuto': false,
 'previewLinksAuto': false,
 'smaller': false,
 'pdfSeparateFragments': false,
@@ -529,7 +513,7 @@ Schwab
 'smaller': false,
  
         // Display controls in the bottom right corner
-        controls: false,
+        controls: true,
 
         // Help the user learn the controls by providing hints, for example by
         // bouncing the down arrow when they first encounter a vertical slide

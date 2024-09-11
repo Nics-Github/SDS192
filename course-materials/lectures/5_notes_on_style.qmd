@@ -1,0 +1,95 @@
+---
+title: "Notes on Style"
+author: "Schwab"
+format: 
+  revealjs:
+    theme: beige
+    controls: 
+      true
+execute: 
+  echo: true
+editor: visual
+---
+
+## The Tidyverse Style Guide
+
+[Tidyverse style guide](https://style.tidyverse.org/index.html)
+
+## 1. files 
+
+I will use underscores `_`, not spaces to name your files. You can also use `-`
+
+-   Avoid special symbols.
+
+-   Called [snake case.](https://en.wikipedia.org/wiki/Snake_case)
+
+### good name
+
+`my_file.qmd`
+
+### poor name
+
+`my file!.qmd`
+
+## 2. Syntax 
+
+syntax is how the code looks
+
+-   variables should be in snake case and lower case
+
+-   variables should be nouns
+
+-   functions should be verbs
+
+-   names should be meaningful and concise.
+
+-   Don't reuse built in R names (True, False, c, n)
+
+```{r}
+# good
+first_name <- "Nic"
+
+# not so good
+LASTNAME <- "Schwab"
+```
+
+## 2.5 More Syntax
+
+Consider spacing and commas like in english writing.
+
+More space for reability is ok. Don't over do it.
+
+```{r}
+# good
+x <- 1
+y <- 2
+total <- sum(c(x, y))
+  
+# Not as good
+new_total<-x+y-total 
+
+# Maybe ok
+sum( c( x , y , total ) )
+
+```
+
+## Functions
+
+Indent long lines (R does this automatically)
+
+We don't need return, R automatically returns the last line.
+
+```{r}
+add <- function(a = "first number",
+                b = "second number",
+                c = "third number") {
+  a + b + c
+  # As usual code is indented by two spaces.
+}
+```
+
+## Pipes and plus
+
+In general `|>` and `+` should end lines.
+
+We will discuss these operators more later.

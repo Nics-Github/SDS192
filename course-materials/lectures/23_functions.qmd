@@ -133,7 +133,6 @@ name_vector <- as.vector(
 
 ```
 
-
 <!-- ## Note on data masking -->
 
 <!-- No masking : data\$variable -->
@@ -151,17 +150,23 @@ name_vector <- as.vector(
 <!-- ## Filtering a lot -->
 
 <!-- ```{r} -->
+
 <!-- library(tidyverse) -->
 
 <!-- auto_filter <- function(data, variable, value){ -->
 
 <!--   data |> -->
+
 <!--     filter({{variable}} == value) -->
+
 <!-- } -->
+
 <!-- ``` -->
 
 <!-- ```{r} -->
+
 <!-- auto_filter(data = mtcars, variable = am, value = 0 ) -->
+
 <!-- ``` -->
 
 <!-- ## Classwork -->
@@ -179,19 +184,31 @@ name_vector <- as.vector(
 <!--     -   It need a logical for the graph -->
 
 <!-- ```{r} -->
+
 <!-- #| echo: FALSE -->
 
 <!-- library(tidyverse) -->
 
 <!-- super_grapher <- function(variable1=NULL ,variable2=NULL , dat= NULL ,linear_regression = TRUE){ -->
+
 <!--   ggplot(mapping = aes(x= {{variable1}},  y= {{variable2}}), data = dat)+ -->
+
 <!--     geom_point() + -->
+
 <!--     if(linear_regression == TRUE){ -->
+
 <!--     geom_smooth(method = "lm" ) -->
+
 <!--     } -->
+
 <!--     else{ -->
+
 <!--     labs(caption = "no regression required") -->
+
 <!--     } -->
+
 <!-- } -->
+
 <!-- super_grapher(variable1 = mpg,variable2 = hp, dat = mtcars, linear_regression = FALSE) -->
+
 <!-- ``` -->

@@ -57,6 +57,20 @@ Answer these questions:
 
 Class discussion.
 
+## Graph Context. 
+
+1.  Title
+
+2.  Well labeled Axes
+
+3.  Author's Name
+
+4.  Data Source
+
+5.  Captions
+
+##  
+
 ## Baumer's Thoughts
 
 Some of the following slides were borrowed by the text's author.
@@ -112,11 +126,13 @@ Are 6-cylinder engines more common among manuals or automatics?
 -   Good graphics have clear scales
     -   Remember iPhone sales graphic
 
-## 
+## Tufte
 
-[^1]
+The follow slides are taken from Tufte.
 
-[^1]: https://en.wikipedia.org/wiki/Misleading_graph#Improper_scaling
+[Recommended: The Visual Display of Quantitative Information.](https://www.edwardtufte.com/books/)
+
+##  
 
 ![](https://image.slidesharecdn.com/tufte-slides-150224020553-conversion-gate02/95/lessons-from-edward-tufte-5-638.jpg?cb=1424765239){fig-align="center" width="800"}
 
@@ -124,17 +140,9 @@ Are 6-cylinder engines more common among manuals or automatics?
 
 ![](https://image.slidesharecdn.com/tufte-slides-150224020553-conversion-gate02/95/lessons-from-edward-tufte-9-638.jpg?cb=1424765239){width="800"}
 
-[^2]
-
-[^2]: https://en.wikipedia.org/wiki/Misleading_graph#3D
-
 ## 
 
 ![](https://image.slidesharecdn.com/tufte-slides-150224020553-conversion-gate02/95/lessons-from-edward-tufte-16-638.jpg?cb=1424765239){width="800"}
-
-[^3]
-
-[^3]: https://en.wikipedia.org/wiki/Chartjunk
 
 ## Balance of art vs. science
 
