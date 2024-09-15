@@ -58,7 +58,7 @@ h1{font-weight: 400;}
 
 ```{=html}
 <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTG_b6upDZcPxXB92LHYIhV1uAXgeVGaMsZ3sDRPuSQN74JdhkKhZQVjw6T68I3zsP8KGYzDSVTZW64/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false&amp;gid=0&amp;range=A1:E8
-" width="100%" height="200">
+" width="100%" height="300">
 ```
 </iframe>
 
@@ -727,13 +727,26 @@ h1{font-weight: 400;}
 <!-- -   Read the prologue to chapter 1.4 of MDSR. -->
 <!-- ::: -->
 
-<!-- # Day 5 Writing functions -->
+# Day 6 Writing functions
 
-<!-- More practice writing functions. -->
 
+
+[Data Viz No Computers](./course-materials/lectures/1first-day-survey/Data-Viz-No-Computers.qmd)
+
+[Notes on Style](course-materials/lectures/5_notes_on_style.qmd)
+
+<!-- Cleaning up documents happens in sds100 [lab 8](https://smithcollege-sds.github.io/sds100/lab_08_formatting.html) -->
 <!-- [Cleaning up documents](https://quarto.org/docs/computations/execution-options.html) -->
 
+9am - Guest: Cameron Haas
+
+-   [Appointments](https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1H8Jjb0iUT1d-ZNrc1wfg0wrGjzd2bPSjdcDdgXuBGyt3A8x6LORIyVEm3-TA1NflWPkgOXsIq)
+
+-   [Spinelli Center](https://www.smith.edu/academics/applied-learning-research/spinelli-center-quantitative-learning#PanelDataCnslr)
+
 # Day 5 Making Functions (cont.)
+
+<!-- A bit of github practice might have been good here. -->
 
 [Lecture: Intro to functions](course-materials/lectures/23_functions.qmd)
 
@@ -741,9 +754,7 @@ See `function_map.qmd`.
 
 -   Make a function that takes the country each person is from and makes a `map()`. 
 
-[Notes on Style](course-materials/lectures/5_notes_on_style.qmd)
 
-[Data Viz No Computers](./course-materials/lectures/1first-day-survey/Data-Viz-No-Computers.qmd)
 
 # Day 4 Getting Data Into R Making functions
 
