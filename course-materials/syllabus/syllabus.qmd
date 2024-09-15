@@ -47,7 +47,9 @@ h1{font-weight: 400;}
 
     -   Office Hours:
 
-        -   Wednesday: 1:30-2:30 pm
+        -   Monday: 9:20-9:40
+
+        -   Wednesday: 9:20-10:00, 1:30-2:30 pm
 
         -   In McConnell 214
 

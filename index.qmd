@@ -687,9 +687,6 @@ h1{font-weight: 400;}
 
 <!-- -   [Student hours](/course-materials/syllabus/schwab.qmd) -->
 
-<!-- -   [Spennlli center](https://www.smith.edu/academics/spinelli-center/tutoring#disciplines) -->
-<!-- ::: -->
-
 <!-- ::: {.callout-tip collapse="true"} -->
 <!-- ## Screenshots Help -->
 
@@ -712,24 +709,13 @@ h1{font-weight: 400;}
 
 <!-- -   [How R builds a Graph](course-materials/lectures/2How-R-builds-a-graph.qmd) -->
 
-<!-- # Day 6: No Computer Data Viz -->
+# Day 6 No Computer Data Viz
 
-<!-- ### Lecture -->
+-   Office Hours:
 
-<!-- [Data Viz No Computers](./course-materials/lectures/1first-day-survey/Data-Viz-No-Computers.qmd) -->
+        -   Monday: 9:20-9:40
 
-<!-- ### General Questions and Comments -->
-
-<!-- ::: {.callout-note collapse="true"} -->
-
-<!-- ## Homework: -->
-
-<!-- -   Read the prologue to chapter 1.4 of MDSR. -->
-<!-- ::: -->
-
-# Day 6 Writing functions
-
-
+        -   Wednesday: 9:20-10:00, 1:30-2:30 pm
 
 [Data Viz No Computers](./course-materials/lectures/1first-day-survey/Data-Viz-No-Computers.qmd)
 

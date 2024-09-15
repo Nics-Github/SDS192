@@ -15,7 +15,7 @@ library(tidyverse)
 
 ## Names and Surveys
 
-[Survey Questions](https://docs.google.com/forms/d/e/1FAIpQLSfYrVhaMo9BCVSTRZ8EhOnfxZbkdzjek9AB2EV11qFDDXgo9Q/viewform?usp=sf_link)
+[Survey Questions](https://docs.google.com/spreadsheets/d/1XOAFQvBcFvhKwEl5xH6l3nRJK2Wk0hWZ18S9kAZclQ0/edit?usp=sharing)
 
 ## Data Viz no computers
 
@@ -39,7 +39,7 @@ Draw a graph of a variable. **Do not write your name.**
 
 -   Try to make it correct.
 
-    -   It is fine if its not correct.
+    -   It is fine if it is not correct.
 
 ## Talk to someone close to you.
 
@@ -57,7 +57,7 @@ Answer these questions:
 
 Class discussion.
 
-## Graph Context. 
+## Graph Context.
 
 1.  Title
 
@@ -69,7 +69,7 @@ Class discussion.
 
 5.  Captions
 
-##  
+## 
 
 ## Baumer's Thoughts
 
@@ -132,7 +132,7 @@ The follow slides are taken from Tufte.
 
 [Recommended: The Visual Display of Quantitative Information.](https://www.edwardtufte.com/books/)
 
-##  
+## 
 
 ![](https://image.slidesharecdn.com/tufte-slides-150224020553-conversion-gate02/95/lessons-from-edward-tufte-5-638.jpg?cb=1424765239){fig-align="center" width="800"}
 
