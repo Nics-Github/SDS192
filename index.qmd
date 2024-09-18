@@ -56,11 +56,16 @@ h1{font-weight: 400;}
 ```
 # Schedule
 
+<!-- This is the wesbite for the schedule below:  -->
+<!-- https://docs.google.com/spreadsheets/d/1j1Mub7lb1CJKpG-PySzdbzzgvryVQ3XrlvNgPRUcN0I/edit?usp=sharing -->
+
 ```{=html}
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTG_b6upDZcPxXB92LHYIhV1uAXgeVGaMsZ3sDRPuSQN74JdhkKhZQVjw6T68I3zsP8KGYzDSVTZW64/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false&amp;gid=0&amp;range=A1:E8
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTG_b6upDZcPxXB92LHYIhV1uAXgeVGaMsZ3sDRPuSQN74JdhkKhZQVjw6T68I3zsP8KGYzDSVTZW64/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false&amp;gid=0&amp;range=A1:E18
 " width="100%" height="300">
 ```
 </iframe>
+
+
 
 <!-- # Day 38  -->
 
@@ -539,7 +544,7 @@ h1{font-weight: 400;}
 
 <!-- Class Git [Practice](https://classroom.github.com/a/U8S5PFOe) -->
 
-<!-- ## [Project 1](https://classroom.github.com/a/1riUqcQQ) -->
+<!-- ## [Project 1](https://classroom.github.com/a/UyQ4D2MD) -->
 
 <!-- Project 1 Data Dictionary -->
 
@@ -553,21 +558,7 @@ h1{font-weight: 400;}
 
 <!-- [Lab 3](https://classroom.github.com/a/WuMupoI-) -->
 
-<!-- ::: {.callout-warning collapse="true"} -->
-<!-- # Lab 3 pitfalls -->
 
-<!-- **You will be asked for a URI** enter this: `http://localhost:1410/` -->
-
-<!-- Step 5: part 3. To set the line color do color="green" -->
-
-<!-- For some notes on skew: https://en.wikipedia.org/wiki/Skewness -->
-
-<!-- `geom_bar()` counts whatever variable you give it for x. -->
-
-<!-- reorder(categorical_var, numeric variable, function for reordering) -->
-
-<!-- We'll discuss ethics Monday or Wednesday, read chapter 8. -->
-<!-- ::: -->
 
 <!-- <!-- It makes most sense to do this before lab 3. [Polishing Figures](/course-materials/in-class-activies/Lec09In-classExercise-PolishingFigures.zip) --> 
 
@@ -592,8 +583,7 @@ h1{font-weight: 400;}
 
 <!-- [Create Trendlines](course-materials/in-class-activies/Lec09In-classExercise-TrendLines.qmd) -->
 
-<!-- # Day 8 Stats and Boxplots -->
-<!-- I don't think I need to do this day, its covered in 100. -->
+
 <!-- ## Other things -->
 
 <!-- ::: {.callout-note collapse="true"} -->
@@ -604,11 +594,6 @@ h1{font-weight: 400;}
 <!-- If that doesn't work, [maybe its a bug?](https://github.com/rstudio/rstudio/issues/13118) -->
 <!-- ::: -->
 
-<!-- -   the c() function -->
-<!-- -   [tidyverse style guide](https://style.tidyverse.org/ggplot2.html) -->
-<!-- -   [typing math](https://nics-github.github.io/sds220/latex-in-quarto-template.html) -->
-<!-- -   The visual editor vs source editor -->
-<!-- -   [Short History of R](./course-materials/lectures/Brief-R-history.qmd) -->
 
 <!-- ## Lecture: [Descriptive stats and boxplots](/course-materials/lectures/8-Descriptive-Stats-and-Boxplots.qmd) -->
 
@@ -622,13 +607,27 @@ h1{font-weight: 400;}
 <!-- -   look for the correct graph type for 7c on the cheat sheet -->
 <!-- ::: -->
 
-<!-- # Day 7 Lab 2 -->
+<!-- # Day 11 Lab 3 -->
 
-<!-- [Link to lab 2](https://classroom.github.com/a/OQWAvHYK) -->
+<!-- [Link to lab 3](https://classroom.github.com/a/MkUWGiyZ) -->
 
-<!-- # Day 6 Color theory -->
+<!-- ::: {.callout-warning collapse="true"} -->
+<!-- # Lab 3 pitfalls -->
 
-<!-- ::: {.callout-note collapse="FALSE"} -->
+<!-- **You will be asked for a URI** enter this: `http://localhost:1410/` -->
+
+<!-- Step 5: part 3. To set the line color do color="green" -->
+
+<!-- For some notes on skew: https://en.wikipedia.org/wiki/Skewness -->
+
+<!-- `geom_bar()` counts whatever variable you give it for x. -->
+
+<!-- reorder(categorical_var, numeric variable, function for reordering) -->
+
+<!-- We'll discuss ethics Monday or Wednesday, read chapter 8. -->
+<!-- ::: -->
+
+<!-- # Day 10 Color theory -->
 
 
 <!-- [ggplot cheatsheet](https://github.com/rstudio/cheatsheets/blob/main/data-visualization-2.1.pdf) -->
@@ -639,17 +638,19 @@ h1{font-weight: 400;}
 
 <!-- -   Color Brewer [site](https://colorbrewer2.org/#type=sequential&scheme=BuGn&n=3) -->
 
-<!-- -   [Prof. Cao's Lecture on Frequency Plots and Facets](https://scao53.github.io/sds192spring2023/slides/Lec4-FrequencyPlots.html) -->
-
 <!-- -   [In class exercise](./course-materials/in-class-activies/5_color_theory.qmd) -->
 
 
 <!-- # Day 9 Taxonomy part 2 -->
 
+<!-- [Check out lab 3](https://smithcollege-sds.github.io/sds100/lab_03_graphics.html) from sds 100 I might not have to do this.  -->
+
 <!-- <!-- </iframe> --> 
 <!-- 1.  [Together: scatter plot](./course-materials/in-class-activies/3_Scatterplots.zip) -->
 
 <!-- 2.  [Solo: linegraph](./course-materials/in-class-activies/3_Line_Graph.qmd) -->
+
+<!-- 3. [Frequency Plots](course-materials/lectures/9_frequency_plots.qmd) -->
 
 <!-- [Notes on Style](course-materials/lectures/5_notes_on_style.qmd) -->
 
@@ -657,22 +658,21 @@ h1{font-weight: 400;}
 
 <!-- ## Lab requirements -->
 
-<!-- -   All labs must be rendered to a pdf. -->
+<!-- -   All labs must be rendered as a pdf or self-contained html. -->
 
-<!-- -   All code for labs must be well commented. -->
+<!-- -   All code for labs must be satisfactorily commented. -->
 <!-- ::: -->
-
 
 
 # Day 8 Lab 2
 
+This lab is due Wednesday at Midnight. 
 
-
-Lab 2 
+[Lab 2](https://classroom.github.com/a/CLF1ck4I) 
 
 # Day 7 Taxonomy
 
-<!-- [Check out lab 3](https://smithcollege-sds.github.io/sds100/lab_03_graphics.html) from sds 100 I might not have to do this.  -->
+
 
 [Kaelen Medeiros Healthech](presentation.pdf)
 

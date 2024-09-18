@@ -1,8 +1,12 @@
 ---
 title: "Frequency Plots"
 author: "Schwab"
-format: revealjs
+format: 
+  revealjs:
+    theme: beige
 editor: visual
+execute: 
+  echo: true
 ---
 
 ## Libraries
@@ -30,9 +34,9 @@ Numeric Variables in R are called:
 To see the spread, center and shape of a numeric variable.
 
 ```{r}
-mtcars |>
-  ggplot(aes(x= mpg )) +
-  geom_historgram()
+starwars |>
+  ggplot(aes(x= height )) +
+  geom_histogram()
 ```
 
 ## Histograms
@@ -43,13 +47,51 @@ mtcars |>
 
 We can adjust the bin or bin size.
 
-## Create Bargraph
+## Create Bar graph
 
 Visualize the counts of a categorical variable
 
 ```{r}
-library(openintro)
-loans50
+starwars |>
+  ggplot(aes(x = hair_color))+
+  geom_bar()
+```
+
+## Two bar graphs
+
+Use geom_bar() is data is not precounted
+
+Use geom_col() if data is precounted.
+
+```{r}
+starwars |>
+  count(hair_color, name = "no_of_characters") |>
+  ggplot(aes(x= hair_color, y= no_of_characters)) +
+  geom_col()
 ```
 
 ## Create Facets
+
+We can split graphs by another categorical or discrete variable.
+
+```{r}
+starwars |>
+  ggplot(aes(x = hair_color))+
+  geom_bar() +
+  facet_wrap(~gender)+
+  theme(axis.text.x = element_text(angle = 90)) # rotating text so its easier to read
+```
+
+Be careful too many facets can obscure the visualization.
+
+```{r}
+starwars |>
+  ggplot(aes(x = hair_color))+
+  geom_bar() +
+  facet_wrap(~species) +
+  theme(axis.text.x = element_text(angle = 90))
+```
+
+## Try one
+
+Facet starwar's characters' height by their gender.
