@@ -669,6 +669,8 @@ h1{font-weight: 400;}
 
 <!-- [Check out lab 3](https://smithcollege-sds.github.io/sds100/lab_03_graphics.html) from sds 100 I might not have to do this.  -->
 
+[Kaelen Medeiros Healthech](presentation.pdf)
+
 ::: {.callout-tip collapse="true"}
 ## Screenshots Help
 
