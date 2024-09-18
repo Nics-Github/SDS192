@@ -660,54 +660,46 @@ h1{font-weight: 400;}
 
 <!-- </iframe> -->
 
-<!-- ## [Discussion: Taxonomy of Graphics](./course-materials/in-class-activies/3Activity_Taxonomy_of_Graphics.qmd) -->
-
-<!-- Chalk Talk: Working directories and file organization in RStudio. -->
-
-<!-- Coding Example: -->
-
-<!-- <!-- Working directory problems with scatterplots  --> -->
-
-<!-- 1.  [Together: scatter plot](./course-materials/in-class-activies/3_Scatterplots.zip) -->
-
-<!-- 2.  [Solo: linegraph](./course-materials/in-class-activies/3_Line_Graph.qmd) -->
 
 <!-- # Day 8 Lab 2 -->
 
 
 
-<!-- # Day 7 Taxonomy -->
+# Day 7 Taxonomy
 
 <!-- [Check out lab 3](https://smithcollege-sds.github.io/sds100/lab_03_graphics.html) from sds 100 I might not have to do this.  -->
 
-<!-- ::: {.callout-tip collapse="true"} -->
-<!-- ## For Help -->
+::: {.callout-tip collapse="true"}
+## Screenshots Help
 
-<!-- -   [The six-fixes](https://docs.google.com/document/d/1P7IyZ4On9OlrCOhygFxjC7XhQqyw8OludwChz-uFd_o/edit) -->
+-   [The six-fixes](https://docs.google.com/document/d/1P7IyZ4On9OlrCOhygFxjC7XhQqyw8OludwChz-uFd_o/edit)
 
-<!-- -   [Student hours](/course-materials/syllabus/schwab.qmd) -->
+Help us help you: take screenshots of your screen and post them to Slack.
 
-<!-- ::: {.callout-tip collapse="true"} -->
-<!-- ## Screenshots Help -->
+-   macOS: Command+Shift+3 to take shot of whole screen, Command+Shift+4 to take subportion
 
-<!-- Help us help you: take screenshots of your screen and post them to Slack. -->
+-   Windows: Shift-Windows Key-S and Snip & Sketch
 
-<!-- -   macOS: Command+Shift+3 to take shot of whole screen, Command+Shift+4 to take subportion -->
+-   Linux: Print screen
 
-<!-- -   Windows: Shift-Windows Key-S and Snip & Sketch -->
+-   Chromebook: Shift + Ctrl + Show windows
+:::
 
-<!-- -   Linux: Print screen -->
+### Lecture
 
-<!-- -   Chromebook: Shift + Ctrl + Show windows -->
-<!-- ::: -->
+-   [Taxonomy of graphs](course-materials/lectures/2_mdsr_viz_1_taxonomy.qmd)
 
-<!-- ### Lecture -->
+-   Demo: How R builds a graph. 
 
-<!-- -   [Taxonomy of graphs](course-materials/lectures/2_mdsr_viz_1_taxonomy.qmd) -->
+-   [Discussion: Taxonomy of Graphics](./course-materials/in-class-activies/3Activity_Taxonomy_of_Graphics.qmd)
 
-<!-- -   [Some graph examples from Day 1](./course-materials/lectures/1first-day-survey/Data-Viz-No-Computers.qmd) -->
+Working directory problems with scatterplots
 
-<!-- -   [How R builds a Graph](course-materials/lectures/2How-R-builds-a-graph.qmd) -->
+1.  [Together: scatter plot](./course-materials/in-class-activies/3_Scatterplots.zip)
+
+2.  [Solo: linegraph](./course-materials/in-class-activies/3_Line_Graph.qmd)
+
+[Notes on Style](course-materials/lectures/5_notes_on_style.qmd)
 
 # Day 6 No Computer Data Viz
 
