@@ -1,0 +1,55 @@
+---
+title: "Frequency Plots"
+author: "Schwab"
+format: revealjs
+editor: visual
+---
+
+## Libraries
+
+```{r}
+library(tidyverse)
+```
+
+## Recall Variable Types
+
+Categorical Variables in R are called:
+
+-   Character variables
+
+-   Factors
+
+Numeric Variables in R are called:
+
+-   Integer
+
+-   Double
+
+## Create Histograms
+
+To see the spread, center and shape of a numeric variable.
+
+```{r}
+mtcars |>
+  ggplot(aes(x= mpg )) +
+  geom_historgram()
+```
+
+## Histograms
+
+1.  Make bins for the numbers
+2.  Counts the occurrence of a value within bins
+3.  The height is the number of counts.
+
+We can adjust the bin or bin size.
+
+## Create Bargraph
+
+Visualize the counts of a categorical variable
+
+```{r}
+library(openintro)
+loans50
+```
+
+## Create Facets
