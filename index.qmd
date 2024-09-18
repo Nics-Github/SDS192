@@ -629,12 +629,7 @@ h1{font-weight: 400;}
 <!-- # Day 6 Color theory -->
 
 <!-- ::: {.callout-note collapse="FALSE"} -->
-<!-- ## Lab requirements -->
 
-<!-- -   All labs (after lab 1) must be rendered to a pdf. -->
-
-<!-- -   All code for labs must be well commented. -->
-<!-- ::: -->
 
 <!-- [ggplot cheatsheet](https://github.com/rstudio/cheatsheets/blob/main/data-visualization-2.1.pdf) -->
 
@@ -648,22 +643,32 @@ h1{font-weight: 400;}
 
 <!-- -   [In class exercise](./course-materials/in-class-activies/5_color_theory.qmd) -->
 
-<!-- # Day 5 Catch up -->
-
-<!-- **Finish work from Day 3.** -->
-
-
 
 <!-- # Day 9 Taxonomy part 2 -->
 
-<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/IRJ2Ac9vI5o?si=JMeZEIQQNGNBscno" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen> -->
+<!-- <!-- </iframe> --> 
+<!-- 1.  [Together: scatter plot](./course-materials/in-class-activies/3_Scatterplots.zip) -->
 
-<!-- </iframe> -->
+<!-- 2.  [Solo: linegraph](./course-materials/in-class-activies/3_Line_Graph.qmd) -->
+
+<!-- [Notes on Style](course-materials/lectures/5_notes_on_style.qmd) -->
+
+<!-- <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/IRJ2Ac9vI5o?si=JMeZEIQQNGNBscno" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen> --> 
+
+<!-- ## Lab requirements -->
+
+<!-- -   All labs must be rendered to a pdf. -->
+
+<!-- -   All code for labs must be well commented. -->
+<!-- ::: -->
 
 
-<!-- # Day 8 Lab 2 -->
+
+# Day 8 Lab 2
 
 
+
+Lab 2 
 
 # Day 7 Taxonomy
 
@@ -697,11 +702,7 @@ Help us help you: take screenshots of your screen and post them to Slack.
 
 Working directory problems with scatterplots
 
-1.  [Together: scatter plot](./course-materials/in-class-activies/3_Scatterplots.zip)
 
-2.  [Solo: linegraph](./course-materials/in-class-activies/3_Line_Graph.qmd)
-
-[Notes on Style](course-materials/lectures/5_notes_on_style.qmd)
 
 # Day 6 No Computer Data Viz
 
