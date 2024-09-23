@@ -471,10 +471,11 @@ Schwab
 <span id="cb5-3"><a href="#cb5-3"></a>  <span class="fu">geom_bar</span>() <span class="sc">+</span></span>
 <span id="cb5-4"><a href="#cb5-4"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>gender)<span class="sc">+</span></span>
 <span id="cb5-5"><a href="#cb5-5"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">90</span>)) <span class="co"># rotating text so its easier to read</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<p><img data-src="9_frequency_plots_files/figure-revealjs/unnamed-chunk-5-1.png" width="960"></p>
+
 </div>
-</div>
+<img data-src="9_frequency_plots_files/figure-revealjs/unnamed-chunk-5-1.png" width="960" class="r-stretch"></section>
+<section id="too-many-facets" class="slide level2">
+<h2>Too many facets</h2>
 <p>Be careful too many facets can obscure the visualization.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a>starwars <span class="sc">|&gt;</span></span>
@@ -482,11 +483,9 @@ Schwab
 <span id="cb6-3"><a href="#cb6-3"></a>  <span class="fu">geom_bar</span>() <span class="sc">+</span></span>
 <span id="cb6-4"><a href="#cb6-4"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>species) <span class="sc">+</span></span>
 <span id="cb6-5"><a href="#cb6-5"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">90</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<p><img data-src="9_frequency_plots_files/figure-revealjs/unnamed-chunk-6-1.png" width="960"></p>
+
 </div>
-</div>
-</section>
+<img data-src="9_frequency_plots_files/figure-revealjs/unnamed-chunk-6-1.png" width="960" class="r-stretch"></section>
 <section id="try-one" class="slide level2">
 <h2>Try one</h2>
 <p>Facet starwar’s characters’ height by their gender.</p>

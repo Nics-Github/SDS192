@@ -82,6 +82,8 @@ starwars |>
   theme(axis.text.x = element_text(angle = 90)) # rotating text so its easier to read
 ```
 
+## Too many facets
+
 Be careful too many facets can obscure the visualization.
 
 ```{r}
