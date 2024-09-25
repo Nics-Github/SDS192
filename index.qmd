@@ -620,27 +620,33 @@ h1{font-weight: 400;}
 
 <!-- ::: -->
 
-<!-- # Day 11 Lab 3 -->
+# Day 12 Practice with git/ Project 1
 
-<!-- [Link to lab 3](https://classroom.github.com/a/MkUWGiyZ) -->
+We'll practice with git in our projects.
 
-<!-- ::: {.callout-warning collapse="true"} -->
+[Another git lecture](course-materials/lectures/12_git.qmd)
 
-<!-- # Lab 3 pitfalls -->
+[Project 1](https://classroom.github.com/a/UyQ4D2MD)
 
-<!-- **You will be asked for a URI** enter this: `http://localhost:1410/` -->
+See moodle for project groups.
 
-<!-- Step 5: part 3. To set the line color do color="green" -->
+# Day 11 Lab 3
 
-<!-- For some notes on skew: https://en.wikipedia.org/wiki/Skewness -->
+[Link to lab 3](https://classroom.github.com/a/Nwp-FDXz)
 
-<!-- `geom_bar()` counts whatever variable you give it for x. -->
+::: {.callout-warning collapse="true"}
+# Lab 3 pitfalls
 
-<!-- reorder(categorical_var, numeric variable, function for reordering) -->
+Step 5: part 3. To set the line color do color="green"
 
-<!-- We'll discuss ethics Monday or Wednesday, read chapter 8. -->
+For some notes on skew: https://en.wikipedia.org/wiki/Skewness
 
-<!-- ::: -->
+`geom_bar()` counts whatever variable you give it for x.
+
+reorder(categorical_var, numeric variable, function for reordering)
+
+We'll discuss ethics Monday or Wednesday, read chapter 8.
+:::
 
 # Day 10 Color theory
 
@@ -695,6 +701,10 @@ See moodle for project 1 partners.
 :::
 
 # Day 8 Lab 2
+
+<!-- Note to self, update the format of lab 2 -->
+
+Change the format of lab 2
 
 This lab is due Wednesday at Midnight.
 

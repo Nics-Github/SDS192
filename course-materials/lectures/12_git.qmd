@@ -1,0 +1,84 @@
+---
+title: "5% of git"
+author: "Schwab"
+format: 
+  revealjs:
+    theme: beige
+editor: visual
+---
+
+## Using Git
+
+We'll use just a little bit of git in this class.
+
+# Some vocab
+
+## Main
+
+main - this is the main repo, where all your code should start and end.
+
+When we work with others we don't push to main.
+
+## Branches
+
+branches - these are temporary repositories that you make changes in. They are copies of main at the time you made your branch.
+
+You can do anything you want in your branch.
+
+Generally one big change gets a branch. This is often called a feature.
+
+## Pull Request
+
+Once you are done in your branch you need to pull the changes into main.
+
+You make a pull request on github.com
+
+## Merge Conflicts
+
+While you were working on a file, your partner was too.
+
+If there is different code in the same line github needs your help to decide which one to keep.
+
+This is marked in the file with
+
+\>\>\>\>\>\>\>
+
+code
+
+=======
+
+more code
+
+\<\<\<\<\<\<\<
+
+## merge strategies
+
+You might see this:
+
+![classic merge message](course-materials/lectures/images/git-merge-message.png)
+
+## A default merge strategy
+
+We can set a default merge strategy for your repo by opening the terminal and typing
+
+```         
+git config pull.rebase false
+```
+
+## Resolve conflict
+
+You will resolve conflicts either on github.com or in RStudio.
+
+After pull requests its easy enough to use github's interface.
+
+Sometime when you pull in R you'll be promoted to solve a merge conflict.
+
+Either way delete the `>>>>>>>>` and `<<<<<<<<` and `========` and select the line of code you want.
+
+## If all else fails, start over. 
+
+##  
+
+![](https://learning.nceas.ucsb.edu/2023-04-coreR/images/git-xkcd-comic.png)
+
+## Let's practice a bit with Project 1. 
