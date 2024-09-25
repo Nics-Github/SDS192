@@ -642,17 +642,31 @@ h1{font-weight: 400;}
 
 <!-- ::: -->
 
-<!-- # Day 10 Color theory -->
+# Day 10 Color theory
 
-<!-- [ggplot cheatsheet](https://github.com/rstudio/cheatsheets/blob/main/data-visualization-2.1.pdf) -->
+[ggplot cheatsheet](https://github.com/rstudio/cheatsheets/blob/main/data-visualization-2.1.pdf)
 
-<!-- ## Colors -->
+## Colors
 
-<!-- -   [Prof. Baumer's Color talk](https://beanumber.github.io/sds192/lectures/mdsr_viz_05-color.html) -->
+-   [Prof. Baumer's Color talk](https://beanumber.github.io/sds192/lectures/mdsr_viz_05-color.html)
 
-<!-- -   Color Brewer [site](https://colorbrewer2.org/#type=sequential&scheme=BuGn&n=3) -->
+-   Color Brewer [site](https://colorbrewer2.org/#type=sequential&scheme=BuGn&n=3)
 
-<!-- -   [In class exercise](./course-materials/in-class-activies/5_color_theory.qmd) -->
+-   [In class exercise](./course-materials/in-class-activies/5_color_theory.qmd)
+
+![Figure 2.26 from Modern Dive](https://moderndive.com/ModernDive_files/figure-html/flights-dodged-bar-color-tweak-1.png)
+
+See moodle for project 1 partners.
+
+::: {.callout-note collapse="true"}
+### Git Resources
+
+-   [Github Fundamentals Lab 0](https://classroom.github.com/a/GG36O-3I)
+
+    -   This lab is not due, it is only for reference.
+
+-   [Happy Git and the UseR](https://happygitwithr.com/)
+:::
 
 # Day 9 Taxonomy part 2
 
@@ -661,7 +675,6 @@ h1{font-weight: 400;}
 1.  [Together: scatter plot](./course-materials/in-class-activies/3_Scatterplots.zip)
 
 -   We are halfway through this open Lec02In-classExercise
-   
 
 2.  [Solo: linegraph](./course-materials/in-class-activies/3_Line_Graph.qmd)
 
