@@ -9,7 +9,7 @@
 <link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.3.353">
+  <meta name="generator" content="quarto-1.4.555">
 
   <meta name="author" content="Schwab">
   <title>SDS 192 - Data Ethics</title>
@@ -157,7 +157,8 @@
   }
 
   .callout.callout-titled .callout-body > .callout-content > :last-child {
-    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0;
   }
 
   .callout.callout-titled .callout-icon::before {
@@ -341,52 +342,100 @@ Schwab
 <section id="data-ethics" class="title-slide slide level1 center">
 <h1>Data Ethics</h1>
 <p>This is a squishy area.</p>
-<p><span class="smallcaps"><em>Is the use of data causing harm?</em></span></p>
+<p>“Use Common Sense” - The authors of our textbook.</p>
 </section>
-<section id="well-look-at-two-areas" class="slide level2">
-<h2>We’ll look at two areas</h2>
-<ol type="1">
-<li><p>Data Ethics of Big Data.</p></li>
-<li><p>Data Ethics of Visualization.</p></li>
-</ol>
+<section id="the-five-ps-of-ethical-data-handling." class="slide level2">
+<h2>The Five Ps of Ethical Data Handling.</h2>
+<p>The five Ps termonology comes from here the Harvard Business Review.</p>
+<p><a href="https://hbr.org/2023/07/the-ethics-of-managing-peoples-data">Here’s the link.</a></p>
 </section>
 <section id="copyright-and-chat-gpt" class="slide level2">
 <h2>Copyright and Chat GPT</h2>
-
-<img data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/ChatGPT_logo.svg/1920px-ChatGPT_logo.svg.png" class="r-stretch"><ul>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><img data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/ChatGPT_logo.svg/1920px-ChatGPT_logo.svg.png"></p>
+</div><div class="column" style="width:50%;">
+<ul>
 <li><p>Sarah Silverman, Mona Awad and Paul Tremplay sue Open AI for direct infringement.</p></li>
 <li><p>Using copyrighted materials to train their models.</p></li>
 <li><p><a href="https://originality.ai/blog/openai-chatgpt-lawsuit-list">List of suits is getting longer.</a></p></li>
 </ul>
+</div>
+</div>
 </section>
-<section id="christopher-wylie" class="slide level2">
-<h2>Christopher Wylie</h2>
+<section id="provenance" class="slide level2">
+<h2>Provenance</h2>
+<p>Where does the data originate?</p>
+<p>Was it aquired legally?</p>
+</section>
+<section id="github" class="slide level2">
+<h2>Github</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
-<div class="quarto-figure quarto-figure-left">
-<figure>
-<p><img data-src="https://static01.nyt.com/images/2018/03/18/autossell/18Cambridge1/merlin_135596256_2eaf14bd-c577-441b-ac87-b5d54199d1b4-superJumbo.jpg?quality=75&amp;auto=webp" width="400"></p>
-</figure>
-</div>
+<p><img data-src="https://upload.wikimedia.org/wikipedia/commons/a/ae/Github-desktop-logo-symbol.svg" width="354"></p>
 </div><div class="column" style="width:50%;">
-<ul>
-<li><p>Cambridge Analytica improperly gets data on 50 million facebook users.</p></li>
-<li><p>Uses Data to manipulate users for votes in 2016 election.</p></li>
-<li><p>Similar story with Brexit.</p></li>
+<div class="columns">
+<p>Microsoft (owner of github) uses code in repos to train copilot.</p><ul>
+<li><p>Ethical on public repositories?</p></li>
+<li><p>Private repositories?</p></li>
+<li><p>Copilot costs $20 a month or is free.</p></li>
 </ul>
 </div>
 </div>
+</div>
 </section>
-<section id="prediction-of-race" class="slide level2">
-<h2>Prediction of Race</h2>
-<p>Github user solivella made an <a href="https://github.com/kosukeimai/wru">r package</a> to predict race based on surname and location.</p>
-<p>API from the US Census Bureau.</p>
+<section id="purpose" class="slide level2">
+<h2>Purpose</h2>
+<p>Would the source of the data agree with how it is being used?</p>
+<p>What if the data is re-purposed?</p>
 </section>
-<section id="making-gaydar" class="slide level2">
-<h2>Making Gaydar</h2>
-
-<img data-src="https://static01.nyt.com/images/2017/10/10/science/10SCI-GAYDAR1/00GAYDAR1-superJumbo.jpg?quality=75&amp;auto=webp" width="1500" class="r-stretch quarto-figure-center"><p><a href="https://www.nytimes.com/2017/10/09/science/stanford-sexual-orientation-study.html">Michal Kosinski and Yilun Wang create a gaydar.</a></p>
-<p>Want to show that is it possible to make something public with data that should be private to the individual.</p>
+<section id="section" class="slide level2">
+<h2><img data-src="https://upload.wikimedia.org/wikipedia/commons/4/48/OKCupid_Logo.svg" width="243"></h2>
+<div>
+<ul>
+<li class="fragment"><p>If that data is scraped from the site by a third party and made available is that ethical?</p></li>
+<li class="fragment"><p>OkCupid, including usernames, age, gender, location, what kind of relationship (or sex) they’re interested in, personality traits</p></li>
+<li class="fragment"><p>“The data is already public.” -Emil Kirkegaard</p></li>
+</ul>
+</div>
+</section>
+<section id="protection" class="slide level2">
+<h2>Protection</h2>
+<p>How is the data being protected?</p>
+<p>Who is responsible for destroying it?</p>
+</section>
+<section id="college-students" class="slide level2">
+<h2>College Students</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQm_RWI9VTHbnc4TXZTOpWZxf-nX3KdhlyATA&amp;s.png"></p>
+<figcaption>Smith College</figcaption>
+</figure>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="columns">
+<p>There is data that Smith collected from you.</p><p>The repos in this class are data that you are creating.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="preparation" class="slide level2">
+<h2>Preparation</h2>
+<p>How is the data cleaned?</p>
+<p>Are data sets being combined to preserve anonymity?</p>
+<p>Is the accuracy of the data verified?</p>
+</section>
+<section id="lab-7ish" class="slide level2">
+<h2>Lab 7ish</h2>
+<p><a href="https://aratrace.com/7-sisters-trail-race-4/"><img data-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAGMOJ6BcHCxFFTln4-ZM9AQ9jaul5yUThUg&amp;s.png"></a></p>
+</section>
+<section id="privacy" class="slide level2">
+<h2>Privacy</h2>
+<p>Who will have access to data that can be used to ID a person?</p>
+<p>How will individuals be anonymized?</p>
+<p>Who has access to that anonymized data.</p>
 </section>
 <section id="lab-3" class="slide level2">
 <h2>Lab 3</h2>
@@ -401,33 +450,11 @@ Schwab
 <section id="books" class="slide level2">
 <h2>Books</h2>
 <div class="columns">
-<div class="column" style="width:58%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1456091964i/28186015.jpg"></p>
-</figure>
-</div>
-</div>
-</div>
-</section>
-<section id="data-visualizations." class="slide level2">
-<h2>Data Visualizations.</h2>
-<p>Charts can be manipulated either intentionally or unintentionally.</p>
-<p>Here are <a href="https://towardsdatascience.com/lessons-from-how-to-lie-with-statistics-57060c0d2f19">some lesson’s learned from Lying With Statistics.</a> by Darrell Huff.</p>
-<p>Here is a <a href="https://www.statisticshowto.com/probability-and-statistics/descriptive-statistics/misleading-graphs/">site I wanted to show you forever ago.</a></p>
-<p>Here’s another, <a href="https://www.buzzfeednews.com/article/katienotopoulos/graphs-that-lied-to-us">if we have time.</a></p>
-</section>
-<section id="telling-a-story" class="slide level2">
-<h2>Telling a story</h2>
-<p>Data Visualizations are just telling a story.</p>
-<p>Try to make it an honest one.</p>
-</section>
-<section id="how-to-lie-with-statistics" class="slide level2">
-<h2>How to lie with Statistics</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
+<div class="column" style="width:33%;">
 <p><img data-src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1427665814i/51291.jpg"></p>
-</div><div class="column" style="width:50%;">
+</div><div class="column" style="width:33%;">
+<p><img data-src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1456091964i/28186015.jpg"></p>
+</div><div class="column" style="width:33%;">
 <p><img data-src="https://timharford.com/wp-content/uploads/2020/11/data-detective.png"></p>
 </div>
 </div>
@@ -435,15 +462,14 @@ Schwab
 <section id="credits" class="slide level2">
 <h2>Credits</h2>
 <ul>
-<li><p>Some Content was taken from Ben Baumer’s Lecture on Ethics</p></li>
-<li><p>Chistopher Wylie https://www.nytimes.com/2018/03/17/us/politics/cambridge-analytica-trump-campaign.html</p></li>
-<li><p>Michal Kosinski and Yilun Wang https://www.nytimes.com/2017/10/09/science/stanford-sexual-orientation-study.html</p></li>
-<li><p>New Yorker https://www.newyorker.com/news/daily-comment/the-ai-gaydar-study-and-the-real-dangers-of-big-data</p></li>
+<li><p>The five ps seem to come from the Harvard Business Review <a href="https://hbr.org/2023/07/the-ethics-of-managing-peoples-data" class="uri">https://hbr.org/2023/07/the-ethics-of-managing-peoples-data</a> 9/30/2024</p></li>
 <li><p>Suing Chat GPT https://www.theverge.com/2024/2/13/24072131/sarah-silverman-paul-tremblay-openai-chatgpt-copyright-lawsuit</p></li>
 </ul>
 
+<div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 
+</div>
 </div>
 </section></section>
     </div>
@@ -472,7 +498,6 @@ Schwab
       Reveal.initialize({
 'controlsAuto': true,
 'previewLinksAuto': false,
-'smaller': false,
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
@@ -733,10 +758,27 @@ Schwab
         // clear code selection
         e.clearSelection();
       });
-      function tippyHover(el, contentFn) {
+        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+        var mailtoRegex = new RegExp(/^mailto:/);
+          var filterRegex = new RegExp('/' + window.location.host + '/');
+        var isInternal = (href) => {
+            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+        }
+        // Inspect non-navigation links and adorn them if external
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+        for (var i=0; i<links.length; i++) {
+          const link = links[i];
+          if (!isInternal(link.href)) {
+            // undo the damage that might have been done by quarto-nav.js in the case of
+            // links that we want to consider external
+            if (link.dataset.originalHref !== undefined) {
+              link.href = link.dataset.originalHref;
+            }
+          }
+        }
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
         const config = {
           allowHTML: true,
-          content: contentFn,
           maxWidth: 500,
           delay: 100,
           arrow: false,
@@ -746,8 +788,17 @@ Schwab
           interactive: true,
           interactiveBorder: 10,
           theme: 'light-border',
-          placement: 'bottom-start'
+          placement: 'bottom-start',
         };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
           config['offset'] = [0,0];
           config['maxWidth'] = 700;
         window.tippy(el, config); 
@@ -761,7 +812,11 @@ Schwab
           try { href = new URL(href).hash; } catch {}
           const id = href.replace(/^#\/?/, "");
           const note = window.document.getElementById(id);
-          return note.innerHTML;
+          if (note) {
+            return note.innerHTML;
+          } else {
+            return "";
+          }
         });
       }
       const findCites = (el) => {

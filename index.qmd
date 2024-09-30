@@ -33,16 +33,16 @@ library(tidyverse)
 
 # CRAN R packages:
 library(knitr)
-library(fivethirtyeight)
-library(nycflights13)
-library(gapminder)
-library(babynames)
-library(scales)
-library(moderndive)
+#library(fivethirtyeight)
+#library(nycflights13)
+#library(gapminder)
+#library(babynames)
+#library(scales)
+#library(moderndive)
 
-library(maps)
-library(mapproj)
-library(patchwork)
+#library(maps)
+#library(mapproj)
+#library(patchwork)
 
 # Set seed value of random number generator to get "replicable" random numbers.
 # Why 76? Because of https://www.youtube.com/watch?v=xjJ7FheCkCU
@@ -528,48 +528,6 @@ h1{font-weight: 400;}
 
 <!-- ::: -->
 
-<!-- # Day 12 Ethics -->
-
-<!-- [Data Ethics](/course-materials/lectures/11_ethics.qmd) -->
-
-<!-- [Project 1](https://classroom.github.com/a/1riUqcQQ) -->
-
-<!-- # Day 11 Markdown and Github -->
-
-<!-- Quiz 1 due Sunday -->
-
-<!-- ::: {.callout-tip collapse="true"} -->
-
-<!-- # 3 hours -->
-
-<!-- -   15 questions, open book -->
-
-<!-- -   No collaboration -->
-
-<!-- -   Score visible next Monday -->
-
-<!-- -   Take quiz through moodle -->
-
-<!-- ::: -->
-
-<!-- [Reading on Git and RStudio](https://r-bio.github.io/intro-git-rstudio/) -->
-
-<!-- Class Git [Practice](https://classroom.github.com/a/U8S5PFOe) -->
-
-<!-- ## [Project 1](https://classroom.github.com/a/UyQ4D2MD) -->
-
-<!-- Project 1 Data Dictionary -->
-
-<!-- [See moodle for project groups.](https://moodle.smith.edu/pluginfile.php/1681130/mod_resource/content/1/Project%201%20and%202%20Groups.pdf) -->
-
-<!-- [Data Ethics](/course-materials/lectures/11_ethics.qmd) -->
-
-<!-- # Day 10 Lab 3 -->
-
-<!-- Lab 3 is due next Wednesday by midnight. -->
-
-<!-- [Lab 3](https://classroom.github.com/a/WuMupoI-) -->
-
 <!-- <!-- It makes most sense to do this before lab 3. [Polishing Figures](/course-materials/in-class-activies/Lec09In-classExercise-PolishingFigures.zip) -->
 
 <!-- <!-- ::: {.callout-tip collapse="true"} -->
@@ -619,6 +577,16 @@ h1{font-weight: 400;}
 <!-- -   look for the correct graph type for 7c on the cheat sheet -->
 
 <!-- ::: -->
+
+# Project 1 work day
+
+Working on projects together.
+
+# Day 13 Ethics
+
+[Data Ethics](/course-materials/lectures/11_ethics.qmd)
+
+[Maybe some project time]{.smallcaps}
 
 # Day 12 Practice with git/ Project 1
 
