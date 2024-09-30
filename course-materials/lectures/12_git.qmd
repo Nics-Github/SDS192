@@ -55,7 +55,7 @@ more code
 
 You might see this:
 
-![classic merge message](course-materials/lectures/images/git-merge-message.png)
+![classic merge message](images/git-merge-message.png)
 
 ## A default merge strategy
 
@@ -75,10 +75,10 @@ Sometime when you pull in R you'll be promoted to solve a merge conflict.
 
 Either way delete the `>>>>>>>>` and `<<<<<<<<` and `========` and select the line of code you want.
 
-## If all else fails, start over. 
+## If all else fails, start over.
 
-##  
+## 
 
 ![](https://learning.nceas.ucsb.edu/2023-04-coreR/images/git-xkcd-comic.png)
 
-## Let's practice a bit with Project 1. 
+## Let's practice a bit with Project 1.
