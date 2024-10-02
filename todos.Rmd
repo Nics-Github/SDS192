@@ -7,3 +7,4 @@ This is a list of things I should change be for spring.
 
 1. Update lab 1 github. I think there are easier ways to get on github 
 2. Update format options for lab 2 and 3 (I'm doing the other ones as I go.)
+3. Update link for project 1.

@@ -622,6 +622,8 @@ h1{font-weight: 400;}
 
 # Day 12 Practice with git/ Project 1
 
+
+
 We'll practice with git in our projects.
 
 [Another git lecture](course-materials/lectures/12_git.qmd)
