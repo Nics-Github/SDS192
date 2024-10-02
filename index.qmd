@@ -584,6 +584,9 @@ Working on projects together.
 
 # Day 13 Ethics
 
+<!-- Add a bit about hiring bias based on the open intro data -->
+<!-- facial recognition bias -->
+
 [Data Ethics](/course-materials/lectures/11_ethics.qmd)
 
 [Maybe some project time]{.smallcaps}
