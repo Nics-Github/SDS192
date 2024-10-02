@@ -7,3 +7,8 @@ This is a list of things I should change be for spring.
 
 1. Update lab 1 github. I think there are easier ways to get on github 
 2. Update format options for lab 2 and 3 (I'm doing the other ones as I go.)
+
+
+For ethics lecture. 
+<!-- Add a bit about hiring bias based on the open intro data -->
+<!-- facial recognition bias -->
