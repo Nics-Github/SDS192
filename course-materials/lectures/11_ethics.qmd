@@ -11,53 +11,114 @@ editor: visual
 
 This is a squishy area.
 
-[*Is the use of data causing harm?*]{.smallcaps}
+"Use Common Sense" - The authors of our textbook.
 
-## We'll look at two areas
+## The Five Ps of Ethical Data Handling. 
 
-1.  Data Ethics of Big Data.
+The five Ps termonology comes from here the Harvard Business Review.
 
-2.  Data Ethics of Visualization.
+[Here's the link.](https://hbr.org/2023/07/the-ethics-of-managing-peoples-data)
 
 ## Copyright and Chat GPT
 
+::: columns
+::: {.column width="50%"}
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/ChatGPT_logo.svg/1920px-ChatGPT_logo.svg.png)
+:::
 
+::: {.column width="50%"}
 -   Sarah Silverman, Mona Awad and Paul Tremplay sue Open AI for direct infringement.
 
 -   Using copyrighted materials to train their models.
 
 -   [List of suits is getting longer.](https://originality.ai/blog/openai-chatgpt-lawsuit-list)
+:::
+:::
 
-## Christopher Wylie
+## Provenance
+
+Where does the data originate?
+
+Was it aquired legally?
+
+## Github 
 
 ::: columns
 ::: {.column width="50%"}
-![](https://static01.nyt.com/images/2018/03/18/autossell/18Cambridge1/merlin_135596256_2eaf14bd-c577-441b-ac87-b5d54199d1b4-superJumbo.jpg?quality=75&auto=webp){fig-align="left" width="400"}
+![](https://upload.wikimedia.org/wikipedia/commons/a/ae/Github-desktop-logo-symbol.svg){width="354"}
 :::
 
 ::: {.column width="50%"}
--   Cambridge Analytica improperly gets data on 50 million facebook users.
+::: columns
+Microsoft (owner of github) uses code in repos to train copilot.
 
--   Uses Data to manipulate users for votes in 2016 election.
+-   Ethical on public repositories?
 
--   Similar story with Brexit.
+-   Private repositories?
+
+-   Copilot costs \$20 a month or is free.
 :::
 :::
+:::
 
-## Prediction of Race
+## Purpose
 
-Github user solivella made an [r package](https://github.com/kosukeimai/wru) to predict race based on surname and location.
+Would the source of the data agree with how it is being used?
 
-API from the US Census Bureau.
+What if the data is re-purposed?
 
-## Making Gaydar
+## ![](https://upload.wikimedia.org/wikipedia/commons/4/48/OKCupid_Logo.svg){width="243"}
 
-![](https://static01.nyt.com/images/2017/10/10/science/10SCI-GAYDAR1/00GAYDAR1-superJumbo.jpg?quality=75&auto=webp){fig-align="center" width="1500"}
+::: incremental
+-   If that data is scraped from the site by a third party and made available is that ethical?
 
-[Michal Kosinski and Yilun Wang create a gaydar.](https://www.nytimes.com/2017/10/09/science/stanford-sexual-orientation-study.html)
+-   OkCupid, including usernames, age, gender, location, what kind of
+    relationship (or sex) they’re interested in, personality traits
 
-Want to show that is it possible to make something public with data that should be private to the individual.
+-   "The data is already public. " -Emil Kirkegaard
+:::
+
+## Protection
+
+How is the data being protected?
+
+Who is responsible for destroying it?
+
+## College Students
+
+::: columns
+::: {.column width="50%"}
+![Smith College](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQm_RWI9VTHbnc4TXZTOpWZxf-nX3KdhlyATA&s)
+:::
+
+::: {.column width="50%"}
+::: columns
+There is data that Smith collected from you.
+
+The repos in this class are data that you are creating.
+:::
+:::
+:::
+
+## Preparation
+
+How is the data cleaned?
+
+Are data sets being combined to preserve anonymity?
+
+Is the accuracy of the data verified?
+
+## Lab 7ish
+
+[![](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAGMOJ6BcHCxFFTln4-ZM9AQ9jaul5yUThUg&s)](https://aratrace.com/7-sisters-trail-race-4/)
+
+## Privacy
+
+Who will have access to data that can be used to ID a person?
+
+How will individuals be anonymized?
+
+Who has access to that anonymized data.
 
 ## Lab 3
 
@@ -69,48 +130,21 @@ Want to show that is it possible to make something public with data that should 
 
 ## Books
 
-::: columns
-::: {.column width="58%"}
-![](https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1456091964i/28186015.jpg){fig-align="center"}
-:::
-:::
-
-## Data Visualizations.
-
-Charts can be manipulated either intentionally or unintentionally.
-
-Here are [some lesson's learned from Lying With Statistics.](https://towardsdatascience.com/lessons-from-how-to-lie-with-statistics-57060c0d2f19) by Darrell Huff.
-
-Here is a [site I wanted to show you forever ago.](https://www.statisticshowto.com/probability-and-statistics/descriptive-statistics/misleading-graphs/)
-
-Here's another, [if we have time.](https://www.buzzfeednews.com/article/katienotopoulos/graphs-that-lied-to-us)
-
-## Telling a story
-
-Data Visualizations are just telling a story.
-
-Try to make it an honest one.
-
-## How to lie with Statistics
 
 ::: columns
-::: {.column width="50%"}
+::: {.column width="33%"}
 ![](https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1427665814i/51291.jpg)
 :::
-
-::: {.column width="50%"}
+::: {.column width="33%"}
+![](https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1456091964i/28186015.jpg)
+:::
+::: {.column width="33%"}
 ![](https://timharford.com/wp-content/uploads/2020/11/data-detective.png)
 :::
 :::
 
 ## Credits
 
--   Some Content was taken from Ben Baumer's Lecture on Ethics
-
--   Chistopher Wylie https://www.nytimes.com/2018/03/17/us/politics/cambridge-analytica-trump-campaign.html
-
--   Michal Kosinski and Yilun Wang https://www.nytimes.com/2017/10/09/science/stanford-sexual-orientation-study.html
-
--   New Yorker https://www.newyorker.com/news/daily-comment/the-ai-gaydar-study-and-the-real-dangers-of-big-data
+-   The five ps seem to come from the Harvard Business Review <https://hbr.org/2023/07/the-ethics-of-managing-peoples-data> 9/30/2024
 
 -   Suing Chat GPT https://www.theverge.com/2024/2/13/24072131/sarah-silverman-paul-tremblay-openai-chatgpt-copyright-lawsuit
