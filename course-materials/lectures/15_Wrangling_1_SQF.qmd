@@ -154,14 +154,13 @@ sqf |>
 ## Questions
 
 ::: incremental
-  1.  Which racial groups were most likely to be stopped by police officers in 2011?
+1.  Which racial groups were most likely to be stopped by police officers in 2011?
 
-  2.  What percent of the stops resulted in an arrest by race in 2011?
+2.  What percent of the stops resulted in an arrest by race in 2011?
 
-  3.  How do the answers to these questions change in 2021?
+3.  How do the answers to these questions change in 2021?
 
-  4.  You will likely have more questions as we analyze the data.
-  
+4.  You will likely have more questions as we analyze the data.
 :::
 
 ## Your data frames
@@ -182,17 +181,16 @@ sqf |>
 
 ## Conclusions from 2021 data
 
-Here are our questions again 
+Here are our questions again
 
 ::: incremental
-  1.  Which racial groups were most likely to be stopped by police officers in 2011?
+1.  Which racial groups were most likely to be stopped by police officers in 2011?
 
-  2.  What percent of the stops resulted in an arrest by race in 2011?
+2.  What percent of the stops resulted in an arrest by race in 2011?
 
-  3.  How do the answers to these questions change in 2021?
+3.  How do the answers to these questions change in 2021?
 
-  4.  You will likely have more questions as we analyze the data.
-  
+4.  You will likely have more questions as we analyze the data.
 :::
 
 ## For comparison:
@@ -221,7 +219,7 @@ Old functions:
 
 Make a new r project.
 
-Download 2011 csv from [this site.](https://www.nyc.gov/site/nypd/stats/reports-analysis/stopfrisk.page) 
+Download 2011 csv from [this site.](https://www.nyc.gov/site/nypd/stats/reports-analysis/stopfrisk.page)
 
 Make a new document and put this in a chunk.
 
@@ -249,7 +247,7 @@ unlink(temp)
 
 Figure out the variable names and do a similar analysis.
 
-> Are Black, and Hispanic groups more likely to be stopped by police officers than other groups in 2011? 
+> Are Black, and Hispanic groups more likely to be stopped by police officers than other groups in 2011?
 
 > Does this change as the total counts of stops decreases to 2021 levels?
 

@@ -11,7 +11,7 @@
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.3.353">
 
-  <meta name="author" content="Ben Baumer">
+  <meta name="author" content="Nic Schwab">
   <title>SDS 192 - The Verbs</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -327,11 +327,12 @@
 
 <section id="title-slide" class="quarto-title-block center">
   <h1 class="title">The Verbs</h1>
+  <p class="subtitle">Edited from Ben Baumer’s Lecture</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-Ben Baumer 
+Nic Schwab 
 </div>
 </div>
 </div>
@@ -341,47 +342,57 @@ Ben Baumer
 <h2>dplyr lives in the tidyverse</h2>
 
 <img data-src="https://raw.githubusercontent.com/tidyverse/dplyr/master/man/figures/logo.png" class="r-stretch quarto-figure-center"></section>
-<section id="dplyr-highlights" class="slide level2">
-<h2><code>dplyr</code> highlights</h2>
+<section id="sds-100-lab-4" class="slide level2">
+<h2>SDS 100 Lab 4</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
-<p>The Five Verbs:</p>
+<p>In lab 4 you learned about these verbs:</p>
 <ul>
-<li><p><code>select()</code></p></li>
-<li><p><code>filter()</code></p></li>
-<li><p><code>mutate()</code></p></li>
-<li><p><code>arrange()</code></p></li>
-<li><p><code>summarize()</code></p></li>
+<li><p><code>select()</code></p>
+<ul>
+<li>subsets columns</li>
+</ul></li>
+<li><p><code>filter()</code></p>
+<ul>
+<li>subsets rows</li>
+</ul></li>
+<li><p><code>mutate()</code></p>
+<ul>
+<li>creates new variables (or columns)</li>
+</ul></li>
+<li><p><code>arrange()</code> and <code>arrange(desc())</code></p></li>
 </ul>
 </div><div class="column" style="width:50%;">
-<p>Plus:</p>
+<p>We will also use:</p>
 <ul>
-<li><p><code>group_by()</code></p></li>
-<li><p><code>rename()</code></p></li>
-<li><p><code>inner_join()</code></p></li>
-<li><p><code>left_join()</code></p></li>
+<li><p><code>group_by()</code></p>
+<ul>
+<li>to group the data before summarizing</li>
+</ul></li>
+<li><p><code>summarize()</code></p>
+<ul>
+<li>to summarize data</li>
+</ul></li>
+<li><p><code>rename()</code></p>
+<ul>
+<li>to rename columns</li>
+</ul></li>
 </ul>
 </div>
 </div>
-<p><a href="https://r4ds.had.co.nz/transform.html">Read more</a></p>
 </section>
-<section id="philosophy" class="slide level2">
-<h2>Philosophy</h2>
+<section id="the-idea" class="slide level2">
+<h2>The idea</h2>
+<p>You can get good at a few functions and do a lot.</p>
+<p>The first argument is a data frame.</p>
 <ul>
-<li>Each <em>verb</em> takes a data frame and returns a data frame
+<li>its a special kind called a tibble.</li>
+</ul>
+<p>The output of the wrangling functions is a data frame.</p>
+<p>When we wrangle we are not altering the original data.</p>
 <ul>
-<li>actually a <code>tbl_df</code> (more on that later)</li>
-<li>allows chaining with <code>%&gt;%</code> or <code>|&gt;</code></li>
-</ul></li>
-<li>Idea:
-<ul>
-<li>master a few simple commands</li>
-<li>use your creativity to combine them</li>
-</ul></li>
-<li>Cheat Sheet:
-<ul>
-<li>Resources <a href="../../Resources.html">tab</a></li>
-</ul></li>
+<li><p>It still exists.</p></li>
+<li><p>You can start over.</p></li>
 </ul>
 </section>
 <section id="what-is-a-tibble" class="slide level2">
@@ -391,37 +402,17 @@ Ben Baumer
 <p><img data-src="http://hexb.in/hexagons/tibble.png" style="width:90.0%"></p>
 </div><div class="column" style="width:50%;">
 <ul>
-<li><p>object of class <code>tbl</code></p></li>
-<li><p>a re-imagining of a <code>data.frame</code></p></li>
-<li><p>it looks and acts like a <code>data.frame</code></p></li>
-<li><p>but it’s even better…</p></li>
-<li><p><code>tidyverse</code> works with tibbles</p></li>
+<li><p>Object of class <code>tbl</code></p></li>
+<li><p><a href="https://jtr13.github.io/cc21fall1/tibble-vs.-dataframe.html">Its different from a data frame.</a></p></li>
 </ul>
 </div>
 </div>
-<p><a href="https://r4ds.had.co.nz/tibbles.html">footnote</a></p>
 </section>
-<section id="select-take-a-subset-of-the-columns" class="slide level2">
-<h2><code>select()</code>: take a subset of the <strong>columns</strong></h2>
+<section id="practice-wrangling" class="slide level2">
+<h2>Practice wrangling</h2>
+<p><a href="https://mdsr-book.github.io/mdsr2e/ch-dataI.html#dataI-exercises">In class MDSR Problems 1 and 2</a></p>
 
-<img data-src="images/select.png" class="r-stretch"></section>
-<section id="filter-take-a-subset-of-the-rows" class="slide level2">
-<h2><code>filter()</code>: take a subset of the <strong>rows</strong></h2>
-
-<img data-src="images/filter.png" class="r-stretch"></section>
-<section id="mutate-add-or-modify-a-column" class="slide level2">
-<h2><code>mutate()</code>: add or modify a <strong>column</strong></h2>
-
-<img data-src="images/mutate.png" class="r-stretch"></section>
-<section id="arrange-sort-the-rows" class="slide level2">
-<h2><code>arrange()</code>: sort the <strong>rows</strong></h2>
-
-<img data-src="images/arrange.png" class="r-stretch"></section>
-<section id="summarize-collapse-to-a-single-row" class="slide level2">
-<h2><code>summarize()</code>: collapse to <strong>a single row</strong></h2>
-
-
-<img data-src="images/summarise.png" class="r-stretch"><div class="footer footer-default">
+<div class="footer footer-default">
 
 </div>
 </section>

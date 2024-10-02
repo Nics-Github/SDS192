@@ -1,6 +1,7 @@
 ---
 title: "The Verbs"
-author: "Ben Baumer"
+subtitle: "Edited from Ben Baumer's Lecture"
+author: "Nic Schwab" 
 format: 
   revealjs:
     theme: beige
@@ -16,56 +17,59 @@ knitr::opts_chunk$set(fig.path = 'figures/', fig.height = 5)
 
 ![](https://raw.githubusercontent.com/tidyverse/dplyr/master/man/figures/logo.png){fig-align="center"}
 
-## `dplyr` highlights
+## SDS 100 Lab 4
 
 ::: columns
 ::: {.column width="50%"}
-The Five Verbs:
+In lab 4 you learned about these verbs:
 
 -   `select()`
 
+    -   subsets columns
+
 -   `filter()`
+
+    -   subsets rows
 
 -   `mutate()`
 
--   `arrange()`
+    -   creates new variables (or columns)
 
--   `summarize()`
+-   `arrange()` and `arrange(desc())`
 :::
 
 ::: {.column width="50%"}
-Plus:
+We will also use:
 
 -   `group_by()`
 
+    -   to group the data before summarizing
+
+-   `summarize()`
+
+    -   to summarize data
+
 -   `rename()`
 
--   `inner_join()`
-
--   `left_join()`
+    -   to rename columns
 :::
 :::
 
-[Read more](https://r4ds.had.co.nz/transform.html)
+## The idea
 
-## Philosophy
+You can get good at a few functions and do a lot.
 
--   Each *verb* takes a data frame and returns a data frame
-    -   actually a `tbl_df` (more on that later)
-    -   allows chaining with `%>%` or `|>`
--   Idea:
-    -   master a few simple commands
-    -   use your creativity to combine them
--   Cheat Sheet:
-    -   Resources [tab](/Resources.html)
+The first argument is a data frame.
 
-```{r, eval=FALSE, include=FALSE}
-download.file("https://github.com/rstudio/cheatsheets/raw/master/data-transformation.pdf", destfile = "/tmp/dplyr.pdf")
-```
+-   its a special kind called a tibble.
 
-```{bash, eval=FALSE, echo=FALSE}
-pdftoppm /tmp/dplyr.pdf ../gfx/dplyr_cheatsheet -png -f 1 -singlefile
-```
+The output of the wrangling functions is a data frame.
+
+When we wrangle we are not altering the original data.
+
+-   It still exists.
+
+-   You can start over.
 
 ## What is a tibble?
 
@@ -75,36 +79,33 @@ pdftoppm /tmp/dplyr.pdf ../gfx/dplyr_cheatsheet -png -f 1 -singlefile
 :::
 
 ::: {.column width="50%"}
--   object of class `tbl`
+-   Object of class `tbl`
 
--   a re-imagining of a `data.frame`
-
--   it looks and acts like a `data.frame`
-
--   but it's even better...
-
--   `tidyverse` works with tibbles
+-   [Its different from a data frame.](https://jtr13.github.io/cc21fall1/tibble-vs.-dataframe.html)
 :::
 :::
 
-[footnote](https://r4ds.had.co.nz/tibbles.html)
+## Practice wrangling
 
-## `select()`: take a subset of the **columns**
+[In class MDSR Problems 1 and 2](https://mdsr-book.github.io/mdsr2e/ch-dataI.html#dataI-exercises)
 
-![](images/select.png)
-
-## `filter()`: take a subset of the **rows**
-
-![](images/filter.png)
-
-## `mutate()`: add or modify a **column**
-
-![](images/mutate.png)
-
-## `arrange()`: sort the **rows**
-
-![](images/arrange.png)
-
-## `summarize()`: collapse to **a single row**
-
-![](images/summarise.png)
+```{r, Random_subset }
+ #| eval: FALSE
+ #| echo: TRUE
+ #| code-fold: true
+ # Copy this code into a chunk in R to make the Random_subset data frame from problem 1 and 2.
+ # Use the verbs we've discussed to make the subsets from the text.
+ Random_subset <-  tibble::tribble(
+     ~year,~sex,   ~name,         ~n, ~prop,
+      2003, "M",     "Bilal",        146, 0.0000695,
+      1999, "F",     "Terria",        23, 0.0000118,
+      2010, "F",     "Naziyah",       45, 0.0000230,
+      1989, "F",     "Shawana",       41, 0.0000206,
+      1989, "F",     "Jessi",        210, 0.000105,
+      1928, "M",     "Tillman",       43, 0.0000377,
+      1981, "F",     "Leslee",        83, 0.0000464,
+      1981, "F",     "Sherise",       27, 0.0000151,
+      1920, "F",     "Marquerite",    26, 0.0000209,
+      1941, "M",     "Lorraine",      24, 0.0000191
+   )
+```
