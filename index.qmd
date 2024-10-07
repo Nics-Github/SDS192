@@ -469,9 +469,11 @@ h1{font-weight: 400;}
 
 <!-- [Here is the link](https://classroom.github.com/a/eSF9MUxn) for Lab 4. -->
 
-<!-- # Day 15 Data wrangling in one table.  -->
+# Day 15 Data wrangling in one table.
 
-<!-- [Lecture on the five verbs](course-materials/lectures/mdsr-the-verbs.qmd) -->
+[Lecture on the five verbs](course-materials/lectures/mdsr-the-verbs.qmd)
+
+[dpylr cheatsheet for wrangling](https://nyu-cdsc.github.io/learningr/assets/data-transformation.pdf)
 
 
 <!-- The below is based on my NECOMMIT keynote.   -->
