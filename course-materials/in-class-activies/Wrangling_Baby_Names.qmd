@@ -10,14 +10,15 @@ We will work with the five verbs to wrangle and graph babynames.
 
 You should check out the [dplyr cheatsheet](https://nics-github.github.io/SDS192/Resources.html).
 
-There are three parts to today's classwork. 
+There are three parts to today's classwork.
 
--   Part 1. make a narcissistic graph
+-   Part 1. make a narcissistic graph.
 
 -   Part 2. 5 most popular names in the US since 1880
 
--   Part 3. Do presidents' names influence babies' names? 
+-   Part 3. Do presidents' names influence babies' names?
 
+-   Part 4. Most and least most popular names.
 
 # Part 1 make a narcissistic graph
 
@@ -25,9 +26,11 @@ There are three parts to today's classwork.
 
 You will want to `filter()` your name. I would make a vector of names c("Nic","Nicholas", "Nick")
 
-Consider if you want both the sex= M and F.
+-   In what year was your name the most popular?
 
-## 2. Create a line graph 
+-   Facet by sex.
+
+## 2. Create a line graph
 
 Show the proportion of children with the same names as you over time.
 
@@ -35,12 +38,16 @@ Show the proportion of children with the same names as you over time.
 
 Do some wrangling to tell me the five most popular names separated by sex.
 
-# Part 3. Do presidents' names influence babies' names? 
+# Part 3. Do presidents' names influence babies' names?
 
 Wrangle the data to show how president's first names effect newborn babies' names. [Former Presidents](https://www.whitehouse.gov/about-the-white-house/presidents/)
 
--   Choose three recent presidents (Donald Trump and Joe Biden might be too recent).  
+-   Choose three recent presidents (Donald Trump and Joe Biden might be too recent).
 
 -   Make one graph that shows all three president's names. Use `geom_vline()` to show the year they entered office.
 
+# Part 4: Most and least. 
 
+What is the year in which the most babies were born?
+
+What is the year the least babies were born?
