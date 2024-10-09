@@ -342,61 +342,10 @@ h1{font-weight: 400;}
 
 <!-- ::: -->
 
-<!-- [Wrangling Practice: MDSR Problems 1 and 2](https://mdsr-book.github.io/mdsr2e/ch-dataI.html#dataI-exercises) -->
 
-<!-- ```{r, Random_subset } -->
-
-<!-- #| eval: FALSE -->
-
-<!-- #| echo: TRUE -->
-
-<!-- #| code-fold: true -->
-
-<!-- # Copy this code into a chunk in R to make the Random_subset data frame from problem 1 and 2. -->
-
-<!-- # Use the verbs we've discussed to make the subsets from the text. -->
-
-<!-- # The code below will install babynames, if we have not done it already.  -->
-
-<!-- #install.packages("babynames") -->
-
-<!-- library(babynames) -->
-
-<!-- Random_subset <-  tibble::tribble( -->
-
-<!--     ~year,~sex,   ~name,         ~n, ~prop, -->
-
-<!--      2003, "M",     "Bilal",        146, 0.0000695, -->
-
-<!--      1999, "F",     "Terria",        23, 0.0000118, -->
-
-<!--      2010, "F",     "Naziyah",       45, 0.0000230, -->
-
-<!--      1989, "F",     "Shawana",       41, 0.0000206, -->
-
-<!--      1989, "F",     "Jessi",        210, 0.000105, -->
-
-<!--      1928, "M",     "Tillman",       43, 0.0000377, -->
-
-<!--      1981, "F",     "Leslee",        83, 0.0000464, -->
-
-<!--      1981, "F",     "Sherise",       27, 0.0000151, -->
-
-<!--      1920, "F",     "Marquerite",    26, 0.0000209, -->
-
-<!--      1941, "M",     "Lorraine",      24, 0.0000191 -->
-
-<!--   ) -->
-
-<!-- ``` -->
 
 <!-- Exploration: How to join tables? -->
 
-
-
-<!-- <!-- # Day 15 Wrangling with Filter -->
-
-<!-- <!-- Wrangle sqf_2011 data together -->
 
 
 
@@ -457,16 +406,17 @@ h1{font-weight: 400;}
 
 <!-- [Here is the link](https://classroom.github.com/a/eSF9MUxn) for Lab 4. -->
 
-# Day 16 Lab 4
+# Day 17 
+
+[Lab 4 SQF](https://classroom.github.com/a/eSF9MUxn)
+
+# Day 16 
 
 [Wrangle babynames](/course-materials/in-class-activies/Wrangling_Baby_Names.qmd)
 
 ```{r}
-
 #| code-fold: true
-
 #| echo: true
-
 #| eval: false
 
  install.packages("babynames")
@@ -479,6 +429,42 @@ h1{font-weight: 400;}
 
 [dpylr cheatsheet for wrangling](https://nyu-cdsc.github.io/learningr/assets/data-transformation.pdf)
 
+
+```{r}
+#| code-summary: "Make the Random_subset data frame."
+#| code-fold: true
+#| echo: true
+#| eval: false
+
+
+
+Random_subset <-  tibble::tribble(
+
+    ~year,~sex,   ~name,         ~n, ~prop,
+
+     2003, "M",     "Bilal",        146, 0.0000695,
+
+     1999, "F",     "Terria",        23, 0.0000118,
+
+     2010, "F",     "Naziyah",       45, 0.0000230,
+
+     1989, "F",     "Shawana",       41, 0.0000206,
+
+     1989, "F",     "Jessi",        210, 0.000105,
+
+     1928, "M",     "Tillman",       43, 0.0000377,
+
+     1981, "F",     "Leslee",        83, 0.0000464,
+
+     1981, "F",     "Sherise",       27, 0.0000151,
+
+     1920, "F",     "Marquerite",    26, 0.0000209,
+
+     1941, "M",     "Lorraine",      24, 0.0000191
+
+  )
+
+```
 
 <!-- The below is based on my NECOMMIT keynote.   -->
 
