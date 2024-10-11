@@ -380,6 +380,9 @@ h1{font-weight: 400;}
 <!-- Open Quiz 2, maybe edit it!  -->
 
 
+<!-- Part of day 18 should be digestion of lab 4 -->
+
+
 # Day 17 Lab 4
 
 [Lab 4 SQF](https://classroom.github.com/a/eSF9MUxn)
