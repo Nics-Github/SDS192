@@ -46,7 +46,7 @@ Wrangle the data to show how president's first names effect newborn babies' name
 
 -   Make one graph that shows all three president's names. Use `geom_vline()` to show the year they entered office.
 
-# Part 4: Most and least. 
+# Part 4: Most and least.
 
 What is the year in which the most babies were born?
 
