@@ -294,13 +294,7 @@ h1{font-weight: 400;}
 
 <!-- See your new groups on moodle. -->
 
-<!-- # Day 20 Pivots -->
 
-<!-- Late/ unrendered work can be pushed to github for a 10% penalty by Friday March 15. [Fill out this form for regrading.](https://forms.gle/JjExv5NVDwEvywgi8) -->
-
-<!-- [Pivots](course-materials/lectures/18_pivots.qmd) -->
-
-<!-- We'll do Problems [Chapter 4: 1,2,5,9,(12)](https://mdsr-book.github.io/mdsr3e/04-dataI.html#dataI-exercises) in class today. [Chapter 5: 3,4](https://mdsr-book.github.io/mdsr3e/05-joins.html#join-exercises) -->
 
 <!-- # Day 19 Lab 5 -->
 
@@ -353,6 +347,14 @@ h1{font-weight: 400;}
 <!-- [dpylr cheatsheet for wrangling](https://nyu-cdsc.github.io/learningr/assets/data-transformation.pdf) -->
 
 <!-- [Here is the link](https://classroom.github.com/a/eSF9MUxn) for Lab 4. -->
+
+# Day 20 Pivots
+
+[Reflection on Lab 4](course-materials/lectures/20_SQF.qmd)
+
+[Pivots](course-materials/lectures/18_pivots.qmd)
+
+We'll do Problems [Chapter 4: 1,2,5,9,(12)](https://mdsr-book.github.io/mdsr3e/04-dataI.html#dataI-exercises) in class today. [Chapter 5: 3,4](https://mdsr-book.github.io/mdsr3e/05-joins.html#join-exercises)
 
 # Day 19 lab 5
 
