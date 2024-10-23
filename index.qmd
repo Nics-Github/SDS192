@@ -348,6 +348,12 @@ h1{font-weight: 400;}
 
 <!-- [Here is the link](https://classroom.github.com/a/eSF9MUxn) for Lab 4. -->
 
+# Day 22
+
+Project 1 grades are up and current. Please let me know if you cannot see grades on moodle. 
+
+Project 2 workday
+
 # Day 21 
 
 Lab 5 reflection - personal information
