@@ -348,6 +348,56 @@ h1{font-weight: 400;}
 
 <!-- [Here is the link](https://classroom.github.com/a/eSF9MUxn) for Lab 4. -->
 
+# Day 24: 
+
+Project 2 work day
+
+# Day 23: Final Project: Website 
+
+::: {.callout-note collapse="true"}
+# Website work
+
+-   Make a new private repo
+
+-   Move all your website files to that repo
+
+    -   Recall they are in your lab 1 folder.
+
+-   Add your project 1 to your website. 
+
+    -   You could just link it to the main page
+    
+    -   [Add it to the side bar](https://quarto.org/docs/websites/website-navigation.html#side-navigations).
+
+:::
+
+
+
+::: {.callout-note collapse="true"}
+# Clean up your project
+
+-   #| echo: False to hide code from a code chunk. 
+
+-   #| eval: False to not include the output of the code. 
+
+-   [More options](https://rstudio.github.io/cheatsheets/html/quarto.html)
+:::
+
+
+::: {.callout-note collapse="true"}
+# Customize
+
+-   [Formatting, sds 100 :lab 8 ](https://quarto.org/docs/authoring/markdown-basics.html)
+
+-   [set a theme](https://quarto.org/docs/websites/#website-theme)
+
+-   [make a custom 404](https://quarto.org/docs/websites/website-navigation.html#pages-404)
+
+:::
+
+What more to do? 
+
+
 # Day 22
 
 Project 1 grades are up and current. Please let me know if you cannot see grades on moodle. 

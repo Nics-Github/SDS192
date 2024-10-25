@@ -59,6 +59,12 @@ website:
   #  - icon: fa-github fa-lg
   #    href: https://github.com/rudeboybert/SDS192
   
+  sidebar: 
+    style: docked
+    contents: 
+      text: "Project 1"
+      href: project1.qmd
+      
   page-footer:
     right: 
     - text: credits
