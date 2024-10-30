@@ -10,11 +10,42 @@ execute:
   echo: true
 ---
 
+## The for loop
+
+In most computer programming languages you can write a for loop.
+
+```{r}
+iris |> 
+  head(3)
+```
+
+```{r}
+for (column in 1:4){
+  print(mean(iris[[column]], na.rm = TRUE))
+}
+```
+
+## R is a vectorized language
+
+This means all objects are vectors.
+
+```{r}
+word <- "hi"
+is.vector(word)
+length(word)
+two_words <- c(word , word)
+is.vector(two_words)
+is.vector(two_words[1])
+```
+
+We can take advantage of this without for loops.
+
+We can use across() and map() do for loops on data frames.
+
 ## `across()` and `map()`
 
 ```{r}
 #| include: false
-
 
 library(tidyverse)
 ```
@@ -32,6 +63,17 @@ head(iris)
 ```
 
 ## Average
+
+Let's mimic the for loop above.
+
+```{r}
+iris %>%
+  summarise(
+    across(.cols = everything(), 
+           .fns = mean))
+```
+
+## Again with group_by()
 
 Let's find the average of each column that ends with `.Length` by species.
 
@@ -74,9 +116,33 @@ iris %>%
     .fns = ~ round(. , digits = 2)))
 ```
 
+## What .fns?
+
+Any function with the appropriate data type can be used.
+
+mean, median, sd, round
+
+[Basically any of them,](https://www.datacamp.com/doc/r/functions) just drop the parenthesis.
+
+## where()
+
+We can drop the warning by specifying we only want the numeric variables.
+
+```{r}
+iris |>
+  summarise(
+    across(
+      where(is.numeric), 
+      .fns = mean
+    )
+  )
+```
+
 ## `map()` is similar to `across()`
 
 It performs some operation on a data frame, vector or list.
+
+map() returns a list.
 
 ```{r}
 

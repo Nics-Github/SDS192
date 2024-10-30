@@ -61,7 +61,7 @@ h1{font-weight: 400;}
 <!-- https://docs.google.com/spreadsheets/d/1j1Mub7lb1CJKpG-PySzdbzzgvryVQ3XrlvNgPRUcN0I/edit?usp=sharing -->
 
 ```{=html}
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTG_b6upDZcPxXB92LHYIhV1uAXgeVGaMsZ3sDRPuSQN74JdhkKhZQVjw6T68I3zsP8KGYzDSVTZW64/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false&amp;gid=0&amp;range=A1:E32
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTG_b6upDZcPxXB92LHYIhV1uAXgeVGaMsZ3sDRPuSQN74JdhkKhZQVjw6T68I3zsP8KGYzDSVTZW64/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false&amp;gid=0&amp;range=A1:E35
 " width="100%" height="300">
 ```
 </iframe>
@@ -220,19 +220,6 @@ h1{font-weight: 400;}
 
 <!-- [More on masking](https://rlang.r-lib.org/reference/topic-data-mask.html) -->
 
-<!-- <!-- Reminder lab-5 is due Wednesday. -->
-
-<!-- <!-- [Introduce Project 2](https://moodle.smith.edu/) -->
-
-<!-- <!-- Time to get familiar with `fec20` -->
-
-<!-- <!-- # Day 20 Cleaning -->
-
-<!-- <!-- Warm up: table2 -->
-
-<!-- <!-- [Cleaning Data](course-materials/lectures/Day_20_tidying.qmd) -->
-
-<!-- <!-- Let's clean up `billboard` -->
 
 <!-- <!-- # Day 19 Tidy Data -->
 
@@ -286,71 +273,28 @@ h1{font-weight: 400;}
 
 <!-- <!-- ``` -->
 
-<!-- # Day 22 Project 2 -->
 
-<!-- # Day 21 Project 2 -->
+# Day 25: Function refresher. 
 
-<!-- Here's the link to join [project 2](https://classroom.github.com/a/YUonEUOS) -->
+[Data Masking](course-materials/lectures/24_data_masking.qmd)
 
-<!-- See your new groups on moodle. -->
+[More on masking](https://rlang.r-lib.org/reference/topic-data-mask.html)
+
+<!-- [Solution to Monday's in class activity](/course-materials/in-class-activies/day_25solutions_function_writing.html) -->
+
+[Lecture: `across()` and `map()`](course-materials/lectures/24_across_maps.qmd)
+
+[In class activity](./course-materials/in-class-activies/24_In-classExercise-Iteration.qmd)
 
 
 
-<!-- # Day 19 Lab 5 -->
+teeny bit on regular expressions
 
-<!-- Quiz 2 is open and due the Sunday before break. (Do it after pivot tables next week). -->
+map/ across. 
 
-<!-- Here is [lab 5](https://classroom.github.com/a/BNYDfmiq) it is due next Wednesday -->
+# Day 24: Project 2 work day
 
-<!-- # Day 18 Joining Tables cont. -->
 
-<!-- It makes most sense to do this before lab 3. [Polishing Figures](/course-materials/in-class-activies/Lec09In-classExercise-PolishingFigures.zip) -->
-
-<!-- # Day 9 Trend Lines, Data.Frames, and RMarkdown Rendering Options -->
-
-<!-- [Digest Lab 2](./course-materials/lectures/lab-solutions-for-discussion/Lab2_solution_digestion.pdf) -->
-
-<!-- [Rendering options](https://quarto.org/docs/computations/execution-options.html) -->
-
-<!-- Simple Linear Regression and Lowess -->
-
-<!-- [Create Trendlines](course-materials/in-class-activies/Lec09In-classExercise-TrendLines.qmd) -->
-
-<!-- ## Other things -->
-
-<!-- ::: {.callout-note collapse="true"} -->
-
-<!-- # To activate colors -->
-
-<!-- Some students are not getting "red" to be red. Try this: Tools menu \> global options \> code \> display \> "enable preview of named and hex colors -->
-
-<!-- If that doesn't work, [maybe its a bug?](https://github.com/rstudio/rstudio/issues/13118) -->
-
-<!-- ::: -->
-
-<!-- ## Lecture: [Descriptive stats and boxplots](/course-materials/lectures/8-Descriptive-Stats-and-Boxplots.qmd) -->
-
-<!-- ## Classwork: MDSR [Chapter 3.5](https://mdsr-book.github.io/mdsr2e/ch-vizII.html#datavizII-exercises) problem 3 and 7 -->
-
-<!-- ::: {.callout-tip collapse="true"} -->
-
-<!-- ## Hints -->
-
-<!-- -   you might need to install `mosaicdata` -->
-
-<!-- -   look for the correct graph type for 7c on the cheat sheet -->
-
-<!-- ::: -->
-
-<!-- [This is the article referred to in the lab](https://www.nyclu.org/en/stop-and-frisk-data) -->
-
-<!-- [dpylr cheatsheet for wrangling](https://nyu-cdsc.github.io/learningr/assets/data-transformation.pdf) -->
-
-<!-- [Here is the link](https://classroom.github.com/a/eSF9MUxn) for Lab 4. -->
-
-# Day 24: 
-
-Project 2 work day
 
 # Day 23: Final Project: Website 
 

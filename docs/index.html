@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Nicholas Schwab">
-<meta name="dcterms.date" content="2024-10-25">
+<meta name="dcterms.date" content="2024-10-30">
 
 <title>SDS 192 - SDS 192: Intro to Data Science</title>
 <style>
@@ -197,7 +197,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul>
   <li><a href="#schedule" id="toc-schedule" class="nav-link active" data-scroll-target="#schedule">Schedule</a></li>
-  <li><a href="#day-24" id="toc-day-24" class="nav-link" data-scroll-target="#day-24">Day 24:</a></li>
+  <li><a href="#day-25-function-refresher." id="toc-day-25-function-refresher." class="nav-link" data-scroll-target="#day-25-function-refresher.">Day 25: Function refresher.</a></li>
+  <li><a href="#day-24-project-2-work-day" id="toc-day-24-project-2-work-day" class="nav-link" data-scroll-target="#day-24-project-2-work-day">Day 24: Project 2 work day</a></li>
   <li><a href="#day-23-final-project-website" id="toc-day-23-final-project-website" class="nav-link" data-scroll-target="#day-23-final-project-website">Day 23: Final Project: Website</a></li>
   <li><a href="#day-22" id="toc-day-22" class="nav-link" data-scroll-target="#day-22">Day 22</a></li>
   <li><a href="#day-21" id="toc-day-21" class="nav-link" data-scroll-target="#day-21">Day 21</a></li>
@@ -250,7 +251,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">October 25, 2024</p>
+      <p class="date">October 30, 2024</p>
     </div>
   </div>
   
@@ -270,7 +271,7 @@ h1{font-weight: 400;}
 <h1>Schedule</h1>
 <!-- This is the wesbite for the schedule below:  -->
 <!-- https://docs.google.com/spreadsheets/d/1j1Mub7lb1CJKpG-PySzdbzzgvryVQ3XrlvNgPRUcN0I/edit?usp=sharing -->
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTG_b6upDZcPxXB92LHYIhV1uAXgeVGaMsZ3sDRPuSQN74JdhkKhZQVjw6T68I3zsP8KGYzDSVTZW64/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false&amp;gid=0&amp;range=A1:E32
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTG_b6upDZcPxXB92LHYIhV1uAXgeVGaMsZ3sDRPuSQN74JdhkKhZQVjw6T68I3zsP8KGYzDSVTZW64/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false&amp;gid=0&amp;range=A1:E35
 " width="100%" height="300">
 </iframe>
 <!-- # Day 38  -->
@@ -350,14 +351,6 @@ h1{font-weight: 400;}
 <!-- [Lecture: `across()` and `map()`](course-materials/lectures/24_across_maps.qmd) -->
 <!-- [In class activity](./course-materials/in-class-activies/24_In-classExercise-Iteration.qmd) -->
 <!-- [More on masking](https://rlang.r-lib.org/reference/topic-data-mask.html) -->
-<!-- <!-- Reminder lab-5 is due Wednesday. -->
-<!-- <!-- [Introduce Project 2](https://moodle.smith.edu/) -->
-<!-- <!-- Time to get familiar with `fec20` -->
-<!-- <!-- # Day 20 Cleaning -->
-
-<!-- <!-- Warm up: table2 -->
-<!-- <!-- [Cleaning Data](course-materials/lectures/Day_20_tidying.qmd) -->
-<!-- <!-- Let's clean up `billboard` -->
 <!-- <!-- # Day 19 Tidy Data -->
 <!-- <!-- Chapter 5 problem 4 solutions -->
 <!-- <!-- #### 4a The oldest plane to fly from NYC is a Douglas with tailnum: -->
@@ -384,42 +377,19 @@ h1{font-weight: 400;}
 <!-- <!--   count(tailnum) |> -->
 <!-- <!--   nrow() -->
 <!-- <!-- ``` -->
-<!-- # Day 22 Project 2 -->
-<!-- # Day 21 Project 2 -->
-<!-- Here's the link to join [project 2](https://classroom.github.com/a/YUonEUOS) -->
-<!-- See your new groups on moodle. -->
-<!-- # Day 19 Lab 5 -->
-
-<!-- Quiz 2 is open and due the Sunday before break. (Do it after pivot tables next week). -->
-<!-- Here is [lab 5](https://classroom.github.com/a/BNYDfmiq) it is due next Wednesday -->
-
-<!-- # Day 18 Joining Tables cont. -->
-<!-- It makes most sense to do this before lab 3. [Polishing Figures](/course-materials/in-class-activies/Lec09In-classExercise-PolishingFigures.zip) -->
-<!-- # Day 9 Trend Lines, Data.Frames, and RMarkdown Rendering Options -->
-<!-- [Digest Lab 2](./course-materials/lectures/lab-solutions-for-discussion/Lab2_solution_digestion.pdf) -->
-<!-- [Rendering options](https://quarto.org/docs/computations/execution-options.html) -->
-<!-- Simple Linear Regression and Lowess -->
-<!-- [Create Trendlines](course-materials/in-class-activies/Lec09In-classExercise-TrendLines.qmd) -->
-<!-- ## Other things -->
-<!-- ::: {.callout-note collapse="true"} -->
-<!-- # To activate colors -->
-<!-- Some students are not getting "red" to be red. Try this: Tools menu \> global options \> code \> display \> "enable preview of named and hex colors -->
-<!-- If that doesn't work, [maybe its a bug?](https://github.com/rstudio/rstudio/issues/13118) -->
-<!-- ::: -->
-<!-- ## Lecture: [Descriptive stats and boxplots](/course-materials/lectures/8-Descriptive-Stats-and-Boxplots.qmd) -->
-<!-- ## Classwork: MDSR [Chapter 3.5](https://mdsr-book.github.io/mdsr2e/ch-vizII.html#datavizII-exercises) problem 3 and 7 -->
-<!-- ::: {.callout-tip collapse="true"} -->
-<!-- ## Hints -->
-<!-- -   you might need to install `mosaicdata` -->
-<!-- -   look for the correct graph type for 7c on the cheat sheet -->
-<!-- ::: -->
-<!-- [This is the article referred to in the lab](https://www.nyclu.org/en/stop-and-frisk-data) -->
-<!-- [dpylr cheatsheet for wrangling](https://nyu-cdsc.github.io/learningr/assets/data-transformation.pdf) -->
-<!-- [Here is the link](https://classroom.github.com/a/eSF9MUxn) for Lab 4. -->
 </section>
-<section id="day-24" class="level1">
-<h1>Day 24:</h1>
-<p>Project 2 work day</p>
+<section id="day-25-function-refresher." class="level1">
+<h1>Day 25: Function refresher.</h1>
+<p><a href="course-materials/lectures/24_data_masking.qmd">Data Masking</a></p>
+<p><a href="https://rlang.r-lib.org/reference/topic-data-mask.html">More on masking</a></p>
+<!-- [Solution to Monday's in class activity](/course-materials/in-class-activies/day_25solutions_function_writing.html) -->
+<p><a href="./course-materials/lectures/24_across_maps.html">Lecture: <code>across()</code> and <code>map()</code></a></p>
+<p><a href="./course-materials/in-class-activies/24_In-classExercise-Iteration.qmd">In class activity</a></p>
+<p>teeny bit on regular expressions</p>
+<p>map/ across.</p>
+</section>
+<section id="day-24-project-2-work-day" class="level1">
+<h1>Day 24: Project 2 work day</h1>
 </section>
 <section id="day-23-final-project-website" class="level1">
 <h1>Day 23: Final Project: Website</h1>
