@@ -273,8 +273,22 @@ h1{font-weight: 400;}
 
 <!-- <!-- ``` -->
 
+# Day 28 Lab 6
 
-# Day 25: Function refresher. 
+
+# Day 27: Bonus Project 2 day?
+
+Making our own functions
+
+# Day 26: Iteration
+
+[Lecture: `across()` and `map()`](course-materials/lectures/24_across_maps.qmd)
+
+[In class activity](./course-materials/in-class-activies/24_In-classExercise-Iteration.qmd)
+
+Making our own functions
+
+# Day 25: Function refresher
 
 [Data Masking](course-materials/lectures/24_data_masking.qmd)
 
@@ -282,19 +296,7 @@ h1{font-weight: 400;}
 
 <!-- [Solution to Monday's in class activity](/course-materials/in-class-activies/day_25solutions_function_writing.html) -->
 
-[Lecture: `across()` and `map()`](course-materials/lectures/24_across_maps.qmd)
-
-[In class activity](./course-materials/in-class-activies/24_In-classExercise-Iteration.qmd)
-
-
-
-teeny bit on regular expressions
-
-map/ across. 
-
 # Day 24: Project 2 work day
-
-
 
 # Day 23: Final Project: Website 
 

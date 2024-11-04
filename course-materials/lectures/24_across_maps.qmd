@@ -14,20 +14,33 @@ execute:
 
 In most computer programming languages you can write a for loop.
 
-```{r}
-iris |> 
-  head(3)
-```
+In R we try not to do this (although we can).
+
+## Computing multiple powers.
+
+Write a for loop that computes e\^1, e\^2,... e\^100 and prints them.
+
+Or better yet stores them as a vector (this is a little harder).
+
+## Solution
 
 ```{r}
-for (column in 1:4){
-  print(mean(iris[[column]], na.rm = TRUE))
+e = 2.71828
+vector_o_numbers <- vector(mode = "numeric", length = 100)
+
+for(exponent in 1:100){
+  print(e^exponent)
+  vector_o_numbers[exponent] <- exp(exponent)
 }
 ```
 
 ## R is a vectorized language
 
-This means all objects are vectors.
+This means most created objects are vectors.
+
+Traditionally the word "hi" is a character variable or "string".
+
+R makes it a vector with a string in it.
 
 ```{r}
 word <- "hi"
@@ -38,23 +51,80 @@ is.vector(two_words)
 is.vector(two_words[1])
 ```
 
-We can take advantage of this without for loops.
+We can take advantage of this vectorized nature.
 
-We can use across() and map() do for loops on data frames.
+## Many functions are vectorized
+
+This means they take a vector as an input and give a vector as an output.
+
+```{r}
+# Here I recompute the for loop with 100 powers of e in it. 
+
+faster_vec_o_numbers <- exp(1:100)
+
+```
+
+## Some vectorized operations and functions
+
+-   Basic Operations (+, -, \*, /, //, %/%)
+
+-   Base R functions: `nchar()`, `is.na()` , `is.numeric()`
+
+-   Comparison operators \>, \<, ==
+
+## Make a vectorized function.
+
+The conversion between Celsius and Fahrenheit is given by this formula: $$ F = C \times \frac{9}{5}+32$$
+
+1.  Make a function that does this conversion.
+
+2.  Use the function to compute all temps for C between 0 and 100.
+
+## Solution
+
+```{r}
+C_to_F <-function(temperature_C){
+  temperature_F = temperature_C * 9/5+32  
+  #return(temperature_F)
+}
+
+celcius_temps <- C_to_F(0:100)
+
+```
+
+Note: In R the last line is always returned, so we do not need to explicitly return anything.
+
+## Aggregating functions
+
+These are functions that take a vector and give one output.
+
+Examples: `mean()`, `sd()`, `median()`, `sum()`, `n()`
+
+They are not vectorized functions.
+
+## Vectorize Exisiting functions
+
+We can vectorized existing functions with helper functions in R
+
+Two general types are `across()` and `map()`
 
 ## `across()` and `map()`
 
 ```{r}
-#| include: false
-
 library(tidyverse)
 ```
 
 These functions allow us to preform the same operation across multiple rows.
 
-`map()` comes from the `purr` package.
+`map()` comes from [the `purr` package.](https://github.com/rstudio/cheatsheets/blob/main/purrr.pdf)
 
-`across()` comes from the `dplyr` package.
+-   many different map()s
+-   apply a function to every element
+
+`across()` comes from [the `dplyr` package.](https://raw.githubusercontent.com/rstudio/cheatsheets/main/data-transformation.pdf)
+
+-   this is a helper used with mutate and summarize
+-   can also apply a function to every element.
 
 ## Example: `iris`
 
@@ -62,14 +132,27 @@ These functions allow us to preform the same operation across multiple rows.
 head(iris)
 ```
 
-## Average
+## A for loop
+
+There are four columns in iris and I'd like to calculate the mean of each of them.
+
+This feels bad. I'm using vectors in a four loop
+
+```{r}
+for (column in 1:4){
+  print(mean(iris[[column]], na.rm = TRUE))
+}
+```
+
+## Average with across
 
 Let's mimic the for loop above.
 
 ```{r}
 iris %>%
   summarise(
-    across(.cols = everything(), 
+    across(.cols = is.numeric, 
+           #.cols = everything()
            .fns = mean))
 ```
 
@@ -82,10 +165,16 @@ iris %>%
   group_by(Species) %>%
   summarise(
     across(.cols = ends_with("Length"), 
-           .fns = list(mean = mean)))
+           .fns =  mean))
 ```
 
+## Let's consider rounding
+
+We'll look at 5 methods of rounding.
+
 ## Rounding with `across()`
+
+Let's say we want to round every value.
 
 ```{r}
 iris %>%
@@ -97,18 +186,45 @@ iris %>%
 
 ## Rounding without `across()`
 
+and the tidyverse
+
 ```{r}
 iris %>%
   group_by(Species) %>%
-  summarise(Sepal.Length = round(Sepal.Length),
+  mutate(Sepal.Length = round(Sepal.Length),
             Sepal.Width = round(Sepal.Width),
             Petal.Length = round(Petal.Length),
             Petal.Width = round(Petal.Width))
 ```
 
-## Rounding
+## Rounding old school R
+
+This is not taking advantage of the vectors.
 
 ```{r}
+# one at a time
+iris$Sepal.Length <- round(iris$Sepal.Length)
+iris$Sepal.Width <- round(iris$Sepal.Width)
+iris$Petal.Length <- round(iris$Petal.Length)
+iris$Petal.Width <- round(iris$Petal.Width)
+
+
+```
+
+## Rounding w/ vectors
+
+Round all at the same time because round() is vectorized.
+
+```{r}
+iris <- round(iris[1:4])
+```
+
+## Rounding example 5
+
+```{r}
+# This removes the previous iris df that we made. 
+rm(iris)
+
 iris %>%
   group_by(Species) %>%
   reframe(across(
@@ -118,11 +234,11 @@ iris %>%
 
 ## What .fns?
 
-Any function with the appropriate data type can be used.
+Any aggregating function with the appropriate data type can be used.
 
 mean, median, sd, round
 
-[Basically any of them,](https://www.datacamp.com/doc/r/functions) just drop the parenthesis.
+[Here's a nice list](https://www.datacamp.com/doc/r/functions) just drop the parenthesis.
 
 ## where()
 
@@ -138,14 +254,13 @@ iris |>
   )
 ```
 
-## `map()` is similar to `across()`
+## `map()`  for iteration.
 
 It performs some operation on a data frame, vector or list.
 
 map() returns a list.
 
 ```{r}
-
 iris |>
   map(.f = mean)
 ```
@@ -164,3 +279,7 @@ iris |>
 iris |>
   map_dfc(.f = mean)
 ```
+
+## Conclusion
+
+Try not to use a for loop unless you really need to.
