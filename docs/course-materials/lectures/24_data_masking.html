@@ -11,8 +11,7 @@
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.3.353">
 
-  <meta name="author" content="Schwab">
-  <title>SDS 192 - Static Maps w/ ggplot</title>
+  <title>SDS 192 - data masking practice</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -391,156 +390,203 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Static Maps w/ ggplot</h1>
+  <h1 class="title">data masking practice</h1>
 
 <div class="quarto-title-authors">
-<div class="quarto-title-author">
-<div class="quarto-title-author-name">
-Schwab 
-</div>
-</div>
 </div>
 
 </section>
-<section id="libraries" class="slide level2">
-<h2>Libraries</h2>
+<section class="slide level2">
+
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb1-2"><a href="#cb1-2"></a><span class="fu">library</span>(sf)</span>
-<span id="cb1-3"><a href="#cb1-3"></a><span class="fu">library</span>(tidygeocoder)</span>
-<span id="cb1-4"><a href="#cb1-4"></a><span class="fu">library</span>(maps)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="tidygeocoder" class="slide level2">
-<h2>tidygeocoder</h2>
-<p>Let’s find the latitude and longitude for a couple of places.</p>
+<section>
+<section id="scope" class="title-slide slide level1 center">
+<h1>Scope</h1>
+<p>Local vs.&nbsp;Global variables</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>addresses<span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">address=</span><span class="fu">c</span>(<span class="st">"Smith College"</span>, <span class="st">"2 Tyler Ct, Northampton, MA 01060"</span>, <span class="st">"Holyoke Community College"</span>)) <span class="sc">|&gt;</span></span>
-<span id="cb2-2"><a href="#cb2-2"></a><span class="fu">geocode</span>(address, <span class="at">method=</span><span class="st">"osm"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb2-3"><a href="#cb2-3"></a>  <span class="fu">mutate</span>(<span class="at">name =</span> <span class="fu">c</span>(<span class="st">"Smith College"</span>,<span class="st">"McConnell Hall"</span>,<span class="st">"Holyoke Community College"</span>))</span>
-<span id="cb2-4"><a href="#cb2-4"></a></span>
-<span id="cb2-5"><a href="#cb2-5"></a>addresses</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>x <span class="ot">&lt;-</span> <span class="dv">10</span></span>
+<span id="cb2-2"><a href="#cb2-2"></a></span>
+<span id="cb2-3"><a href="#cb2-3"></a>df <span class="ot">&lt;-</span> <span class="fu">tribble</span>(</span>
+<span id="cb2-4"><a href="#cb2-4"></a>  <span class="sc">~</span>x, <span class="sc">~</span>y, <span class="sc">~</span> z ,</span>
+<span id="cb2-5"><a href="#cb2-5"></a>  <span class="dv">5</span>, <span class="dv">0</span> , <span class="dv">0</span></span>
+<span id="cb2-6"><a href="#cb2-6"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>x and df are global. They are referred to as environment variables.</p>
+<p>df#x and df$y are local to the dataframe. They are often referred to as stats-variables.</p>
+</section>
+<section id="the-dollar-sign-operator" class="slide level2">
+<h2>The dollar sign operator</h2>
+<p>We don’t use the dollar sign operator often, because we use the tidyverse which makes it unnecessary.</p>
+<p><code>$</code> selects a variable.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>df<span class="sc">$</span>x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 3 × 4
-  address                             lat  long name                     
-  &lt;chr&gt;                             &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;                    
-1 Smith College                      42.3 -72.6 Smith College            
-2 2 Tyler Ct, Northampton, MA 01060  42.3 -72.6 McConnell Hall           
-3 Holyoke Community College          42.2 -72.7 Holyoke Community College</code></pre>
+<pre><code>[1] 5</code></pre>
 </div>
-</div>
-</section>
-<section id="my-first-map" class="slide level2">
-<h2>My first map</h2>
-<p>Let’s plot those with ggplot.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="fu">ggplot</span>(addresses) <span class="sc">+</span></span>
-<span id="cb4-2"><a href="#cb4-2"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(long,lat)) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-
-</div>
-<img data-src="26_maps-ggplot_files/figure-revealjs/unnamed-chunk-2-1.png" width="960" class="r-stretch"><p>Not very exciting. We’ll add it it in a moment.</p>
-</section>
-<section id="mass-map-data" class="slide level2">
-<h2>Mass Map data</h2>
-<p>Let’s build a map of Massachusetts with the map_data() function</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="co"># map_data comes from ggplot2</span></span>
-<span id="cb5-2"><a href="#cb5-2"></a></span>
-<span id="cb5-3"><a href="#cb5-3"></a>ma_counties <span class="ot">&lt;-</span> <span class="fu">map_data</span>(<span class="st">"county"</span>, <span class="st">"massachusetts"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb5-4"><a href="#cb5-4"></a>  <span class="fu">select</span>( long, lat, group, <span class="at">id =</span> subregion)</span>
-<span id="cb5-5"><a href="#cb5-5"></a></span>
-<span id="cb5-6"><a href="#cb5-6"></a><span class="fu">head</span>(ma_counties)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="co"># or </span></span>
+<span id="cb5-2"><a href="#cb5-2"></a>df[<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>       long      lat group         id
-1 -70.67435 41.73997     1 barnstable
-2 -70.53683 41.79727     1 barnstable
-3 -70.53683 41.79727     1 barnstable
-4 -70.51392 41.78008     1 barnstable
-5 -70.47954 41.75716     1 barnstable
-6 -70.41078 41.73425     1 barnstable</code></pre>
+<pre><code># A tibble: 1 × 3
+      x     y     z
+  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+1     5     0     0</code></pre>
 </div>
 </div>
-</section>
-<section id="mass-map" class="slide level2">
-<h2>Mass Map</h2>
-<p>Notice there are a lot of points for barnstable. Those are the vertices of a polygon. Let’s draw the polygon with the points.</p>
+<p>We can select a variable with tidyr from the tidyverse.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a>ma_counties <span class="sc">|&gt;</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(long,lat,<span class="at">group=</span>group))<span class="sc">+</span></span>
-<span id="cb7-2"><a href="#cb7-2"></a>  <span class="fu">geom_polygon</span>(<span class="at">fill =</span> <span class="st">"white"</span>, <span class="at">colour =</span> <span class="st">"grey50"</span>)<span class="sc">+</span></span>
-<span id="cb7-3"><a href="#cb7-3"></a>  <span class="fu">geom_point</span>()  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a>  <span class="co">#coord_sf()</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<img data-src="26_maps-ggplot_files/figure-revealjs/unnamed-chunk-4-1.png" width="960" class="r-stretch"></section>
-<section id="mapping-projections" class="slide level2">
-<h2>Mapping projections</h2>
-<p>Coordinate Reference Systems (CRS) - Is the type of map projection employed To get a 3D Earth to a 2D surface.</p>
-<p>Which one will coord_sf default to?</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a>?coord_sf</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p><a href="https://epsg.io/4326">This is the crs commonly used in gps.</a></p>
-</section>
-<section id="west-wing-explanation" class="slide level2">
-<h2>West wing explanation</h2>
-<p><a href="https://www.youtube.com/watch?v=vVX-PrBRtTY">West Wing</a></p>
-</section>
-<section id="adding-the-4326-crs" class="slide level2">
-<h2>Adding the 4326 crs</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a>ma_counties <span class="sc">|&gt;</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(long,lat,<span class="at">group=</span>group))<span class="sc">+</span></span>
-<span id="cb10-2"><a href="#cb10-2"></a>  <span class="fu">geom_polygon</span>(<span class="at">fill =</span> <span class="st">"white"</span>, <span class="at">colour =</span> <span class="st">"grey50"</span>)<span class="sc">+</span></span>
-<span id="cb10-3"><a href="#cb10-3"></a>  <span class="fu">geom_point</span>()<span class="sc">+</span></span>
-<span id="cb10-4"><a href="#cb10-4"></a>  <span class="fu">coord_sf</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-
-</div>
-<img data-src="26_maps-ggplot_files/figure-revealjs/unnamed-chunk-6-1.png" width="960" class="r-stretch"></section>
-<section id="add-some-cities" class="slide level2">
-<h2>Add some cities</h2>
-<p>Let’s grab just Massachusetts cities from the data frame us.cities.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="co"># us.cities comes from the maps package</span></span>
-<span id="cb11-2"><a href="#cb11-2"></a></span>
-<span id="cb11-3"><a href="#cb11-3"></a>ma_cities <span class="ot">&lt;-</span> us.cities <span class="sc">|&gt;</span></span>
-<span id="cb11-4"><a href="#cb11-4"></a>  <span class="fu">filter</span>(country.etc <span class="sc">==</span><span class="st">"MA"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb11-5"><a href="#cb11-5"></a>  <span class="fu">select</span>(name, long, lat)</span>
-<span id="cb11-6"><a href="#cb11-6"></a></span>
-<span id="cb11-7"><a href="#cb11-7"></a><span class="fu">head</span>(ma_cities)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a>df <span class="sc">|&gt;</span></span>
+<span id="cb7-2"><a href="#cb7-2"></a>  <span class="fu">select</span>(x,y,z)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>                name   long   lat
-1         Andover MA -71.14 42.65
-2       Arlington MA -71.16 42.42
-3       Attleboro MA -71.30 41.93
-4 Barnstable Town MA -70.30 41.70
-5         Beverly MA -70.84 42.56
-6       Billerica MA -71.26 42.56</code></pre>
+<pre><code># A tibble: 1 × 3
+      x     y     z
+  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+1     5     0     0</code></pre>
 </div>
 </div>
+<p>This makes things easier to read and less redundant.</p>
 </section>
-<section id="exercise" class="slide level2">
-<h2>Exercise:</h2>
-<p>Plot MA cities onto our county map. Then clean up our map.</p>
+<section id="make-a-function" class="slide level2">
+<h2>Make a function</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a>ma_counties <span class="sc">|&gt;</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(long,lat))<span class="sc">+</span></span>
-<span id="cb13-2"><a href="#cb13-2"></a>  <span class="fu">geom_polygon</span>(<span class="at">fill =</span> <span class="st">"white"</span>, <span class="at">colour =</span> <span class="st">"grey50"</span>,<span class="fu">aes</span>(<span class="at">group=</span>group)) <span class="sc">+</span></span>
-<span id="cb13-3"><a href="#cb13-3"></a>  <span class="co">#geom_point(data=ma_cities,.......)</span></span>
-<span id="cb13-4"><a href="#cb13-4"></a>  </span>
-<span id="cb13-5"><a href="#cb13-5"></a>  <span class="co">#This is the default mapping. Think GPS</span></span>
-<span id="cb13-6"><a href="#cb13-6"></a> <span class="fu">coord_sf</span>(<span class="at">default_crs=</span> <span class="fu">st_crs</span>(<span class="dv">4326</span>) )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a>          <span class="co"># This is Mercator</span></span>
-<span id="cb14-2"><a href="#cb14-2"></a>          <span class="co"># st_crs(3857))</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a>my_printer <span class="ot">&lt;-</span> <span class="cf">function</span>(variable){</span>
+<span id="cb9-2"><a href="#cb9-2"></a>  <span class="fu">print</span>(variable)</span>
+<span id="cb9-3"><a href="#cb9-3"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<img data-src="26_maps-ggplot_files/figure-revealjs/unnamed-chunk-8-1.png" width="960" class="r-stretch"></section>
-<section id="shape-files" class="slide level2">
-<h2>Shape files</h2>
-<p>Often times map data is saved as a shape file.</p>
-<p>The US government has shape files <a href="https://www.census.gov/geographies/mapping-files/time-series/geo/carto-boundary-file.html">here</a>.</p>
-
-<div class="footer footer-default">
-
+<p>To print out 5 we need to tell R where to find the variable 5.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a><span class="fu">my_printer</span>(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 10</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a><span class="fu">my_printer</span>(df<span class="sc">$</span>x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 5</code></pre>
+</div>
+</div>
+<p>my_printer() looks through the environment first.</p>
+<p>So my_printer(x)=10 and not 5.</p>
+</section>
+<section id="tidyverse-problems" class="slide level2">
+<h2>tidyverse problems</h2>
+<p>The tidyverse uses a process called masking to blur the lines between environment and data variables.</p>
+<p>This is why we like it so much.</p>
+<p>However it makes programming with the tidyverse functions more challenging.</p>
+</section>
+<section id="use-summarize-to-calculate-a-mean." class="slide level2">
+<h2>Use summarize to calculate a mean.</h2>
+<p>The code below works as expected because tidyr is working under the hood to select x from df.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a>df <span class="sc">|&gt;</span></span>
+<span id="cb14-2"><a href="#cb14-2"></a>    <span class="fu">summarise</span>(<span class="fu">mean</span>(x))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 1
+  `mean(x)`
+      &lt;dbl&gt;
+1         5</code></pre>
+</div>
 </div>
 </section>
+<section id="a-mean-calculating-function" class="slide level2">
+<h2>A mean calculating function</h2>
+<p>We get into problems when using tidyverse functions within homemade functions:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a>my_mean_maker <span class="ot">&lt;-</span> <span class="cf">function</span>(data, variable){</span>
+<span id="cb16-2"><a href="#cb16-2"></a>  data <span class="sc">|&gt;</span></span>
+<span id="cb16-3"><a href="#cb16-3"></a>    <span class="fu">summarise</span>(<span class="fu">mean</span>(variable))</span>
+<span id="cb16-4"><a href="#cb16-4"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a><span class="fu">my_mean_maker</span>(<span class="at">data=</span> df, <span class="at">variable =</span> x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 1
+  `mean(variable)`
+             &lt;dbl&gt;
+1               10</code></pre>
+</div>
+</div>
+<p>We’re still getting 10 in our output! It should be 5, because that is the value from the data frame.</p>
+<p>my_mean_maker() goes to the global environment because it doesn’t recognize that it should be looking in the data frame.</p>
+</section>
+<section id="when-is-tidyr-working" class="slide level2">
+<h2>When is tidyr working?</h2>
+<p>We can check to see if tidyr is working under the hood by checking the arguments of a function.</p>
+<p>We are looking for the words “data-masking” or “tidy-select”.</p>
+<p>If these words are not present we will not need to inject the data (aka unmask the data).</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a>?summarise</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="solution" class="slide level2">
+<h2>Solution</h2>
+<p>We need to inject the data into the sumarize function. We can do this by <strong>unmasking</strong> the data with {{}}.</p>
+<p>This tells R to look for the variable within the dataframe, not the global environment.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1"></a>my_mean_maker <span class="ot">&lt;-</span> <span class="cf">function</span>(data, variable){</span>
+<span id="cb20-2"><a href="#cb20-2"></a>  data <span class="sc">|&gt;</span></span>
+<span id="cb20-3"><a href="#cb20-3"></a>    <span class="fu">summarise</span>(<span class="fu">mean</span>({{variable}}))</span>
+<span id="cb20-4"><a href="#cb20-4"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1"></a><span class="fu">my_mean_maker</span>(<span class="at">data=</span> df, <span class="at">variable =</span> x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 1
+  `mean(x)`
+      &lt;dbl&gt;
+1         5</code></pre>
+</div>
+</div>
+</section>
+<section id="problem-1" class="slide level2">
+<h2>Problem 1</h2>
+<p>Make a function that will calculate the mean, median, and standard deviation of any variable from a data frame using tidyverse functions.</p>
+<p>Use <code>filter( !is.na() )</code> or <code>na.rm = TRUE</code> to remove missing variables.</p>
+<p>Test your function on the <code>starwars</code> data <code>height</code> variable.</p>
+</section>
+<section id="solution-1" class="slide level2">
+<h2>Solution 1</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1"></a>centers_of_data <span class="ot">&lt;-</span> <span class="cf">function</span>(data, variable){</span>
+<span id="cb23-2"><a href="#cb23-2"></a>  data<span class="sc">|&gt;</span></span>
+<span id="cb23-3"><a href="#cb23-3"></a>    <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>({{variable}})) <span class="sc">|&gt;</span></span>
+<span id="cb23-4"><a href="#cb23-4"></a>    <span class="fu">summarise</span>(<span class="at">mean =</span> <span class="fu">mean</span>({{variable}}), <span class="at">median =</span> <span class="fu">median</span>({{variable}}), <span class="at">sd=</span> <span class="fu">sd</span>({{variable}}))</span>
+<span id="cb23-5"><a href="#cb23-5"></a>}</span>
+<span id="cb23-6"><a href="#cb23-6"></a></span>
+<span id="cb23-7"><a href="#cb23-7"></a></span>
+<span id="cb23-8"><a href="#cb23-8"></a><span class="fu">centers_of_data</span>(starwars, height)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 3
+   mean median    sd
+  &lt;dbl&gt;  &lt;int&gt; &lt;dbl&gt;
+1  175.    180  34.8</code></pre>
+</div>
+</div>
+</section>
+<section id="problem-2" class="slide level2">
+<h2>Problem 2</h2>
+<p>Make a function that makes a bargraph of a categorical variable.</p>
+<p>Test your function on the <code>starwars</code> <code>eye_color</code> variable.</p>
+</section>
+<section id="solution-2" class="slide level2">
+<h2>Solution 2</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1"></a>my_bar_grapher <span class="ot">&lt;-</span> <span class="cf">function</span>(data, variable){</span>
+<span id="cb25-2"><a href="#cb25-2"></a>  data <span class="sc">|&gt;</span></span>
+<span id="cb25-3"><a href="#cb25-3"></a>    <span class="fu">ggplot</span>(<span class="fu">aes</span>({{variable}}))<span class="sc">+</span></span>
+<span id="cb25-4"><a href="#cb25-4"></a>    <span class="fu">geom_bar</span>() <span class="sc">+</span></span>
+<span id="cb25-5"><a href="#cb25-5"></a>    <span class="fu">theme_minimal</span>()</span>
+<span id="cb25-6"><a href="#cb25-6"></a>}</span>
+<span id="cb25-7"><a href="#cb25-7"></a></span>
+<span id="cb25-8"><a href="#cb25-8"></a><span class="fu">my_bar_grapher</span>(starwars, eye_color)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+
+<img data-src="24_data_masking_files/figure-revealjs/unnamed-chunk-14-1.png" width="960" class="r-stretch"><div class="footer footer-default">
+
+</div>
+</section></section>
     </div>
   </div>
 

@@ -1,0 +1,94 @@
+---
+title: "Map Review"
+author: "Schwab"
+format: 
+  revealjs:
+    theme: beige
+editor: visual
+---
+
+## Map code
+
+Your map code is probably in lab 1 or the website project.
+
+## Quick Review
+
+Quick Review of maps from the beginning of the semester.
+
+Simple Maps with the `maps` package
+
+```{r}
+library(maps)
+map(database = "state", regions = "Massachusetts")
+```
+
+```{r}
+west_coast <-c('California',"Oregon","Washington")
+
+colors <- c('blue', 'pink','orange','yellow')
+
+map("state", regions = west_coast, col = colors, fill = TRUE)
+```
+
+## Get into trouble
+
+R gets confused when we have two packages loaded with the same name.
+
+Note that in the case below the maps maps wins out. We even get a message.
+
+```{r}
+detach("package:maps", unload = TRUE)
+library(maps)
+library(purrr)
+
+west_coast <-c('California',"Oregon","Washington")
+
+colors <- c('blue', 'pink','orange','yellow')
+
+map("state", regions = west_coast, col = colors, fill = TRUE)
+
+```
+
+## Now try the map from purr
+
+This is a silly example. Just to show we sometimes have to be explicit with R when choosing our functions
+
+```{r}
+US_city_names <- maps::us.cities |> 
+  select(name)
+
+# R is still thinking map() is from maps we have to be explicit
+map(.x = US_city_names,
+    .f = ~str_detect(.x, "a"))
+
+# Explicitly tell R we want the map() from purrr
+purrr::map(.x = US_city_names,
+    .f = ~str_detect(.x, "a"))
+
+```
+
+## More geospacial map review
+
+We also made fancier maps
+
+```{r}
+library(leaflet)
+home_icon <- awesomeIcons()
+school_icon <- awesomeIcons(icon = "education")
+
+# Put my awesome icons on the map. 
+leaflet()|>
+  addTiles() |>
+  addAwesomeMarkers(
+             lng = -122.1569,
+             lat = 37.7258,
+             popup = "I lived here once",
+             label = "SAN LEANDRO",
+             icon = home_icon
+             ) |>
+  addAwesomeMarkers(lng = -72.6403,
+             lat = 42.3163,
+             popup = "Home of the Pioneers",
+             label = "Smith College",
+             icon = school_icon)
+```

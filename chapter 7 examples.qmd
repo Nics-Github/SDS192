@@ -45,11 +45,12 @@ library(tidyverse)
 library(mosaicData)
 
 my_func <- function(data,variable2){
-  my_plot <- data |>
-    ggplot(aes(x = cesd))+
-    aes_string(y = variable2)+
+  data |>
+    ggplot(aes(x = cesd, y = .data[[variable2]]))+
     geom_point()
 }
+
+my_func(HELPrct, age)
 
 numeric_names_only <- HELPrct |>
   select("age":"d1")|>
@@ -69,12 +70,12 @@ library(tidyverse)
 library(mosaicData)
 
 my_func <- function(data,variable2){
-  my_plot <- data |>
-    ggplot(aes(x = cesd, y = {{variable2}}))+
+  data |>
+    ggplot(aes(x = cesd, y = variable2 ))+
     geom_point()
 }
 
-my_func(HELPrct, age)
+
 
 ```
 

@@ -171,17 +171,27 @@ h1{font-weight: 400;}
 
 <!-- [Example: static maps](./course-materials/lectures/26_maps-ggplot.qmd) -->
 
+# Day 30 Functions and Static Maps
 
+Let's finish this problem from last class. 
+
+
+::: {.callout-note collapse="true"}
+# 6 scatter plots
+
+Make a function that takes a df and a variable then produces a scatter plot of that variable vs cesd. Use it to plot multiple graphs of the first 6 numeric variables HELPrct. [Hint: check out the extended example from 7.7](https://mdsr-book.github.io/mdsr3e/07-iteration.html#extended-example-factors-associated-with-bmi)
+:::
+
+[Anonymous functions](course-materials/lectures/30_anonymous_functions.qmd)
+
+[Mapping Review](course-materials/lectures/30_map_review.qmd)
+
+[Example: static maps](./course-materials/lectures/26_maps-ggplot.qmd)
 
 
 # Day 29 Practice function writing in R 
 
 [Chapter 7 Problem 1 and 3](https://mdsr-book.github.io/mdsr3e/07-iteration.html#iteration-exercises)
-
-Activity 2. 
-
-Make a function that takes a df and a variable then produces a scatter plot of that variable vs cesd. Use it to plot multiple graphs of the first 6 numeric variables HELPrct. [Hint: check out the extended example from 7.7](https://mdsr-book.github.io/mdsr3e/07-iteration.html#extended-example-factors-associated-with-bmi)
-
 
 
 # Day 28 Lab 6

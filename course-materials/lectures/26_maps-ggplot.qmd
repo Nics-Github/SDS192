@@ -78,7 +78,7 @@ Coordinate Reference Systems (CRS) - Is the type of map projection employed To g
 Which one will coord_sf default to?
 
 ```{r}
-# ?coord_sf
+?coord_sf
 ```
 
 [This is the crs commonly used in gps.](https://epsg.io/4326)
@@ -132,13 +132,3 @@ ma_counties |> ggplot(aes(long,lat))+
 Often times map data is saved as a shape file.
 
 The US government has shape files [here](https://www.census.gov/geographies/mapping-files/time-series/geo/carto-boundary-file.html).
-
-```{r}
-map_url <- "https://www2.census.gov/geo/tiger/GENZ2018/shp/cb_2018_us_region_500k.zip"
-us_region <- download.file(url = map_url,
-                           destfile = basename(map_url))
-
-#regions <- read_sf("us_region_unzipped") |>
-#  sf::st_transform('+proj=longlat +datum=WGS84')
-
-```
