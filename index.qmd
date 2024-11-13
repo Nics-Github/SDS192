@@ -144,9 +144,9 @@ h1{font-weight: 400;}
 
 <!-- # Day 33 Lab 7 Mapping Monarchs.  -->
 
-<!-- [Here is the lab for today.](https://classroom.github.com/a/ozqRg4gy)  -->
+<!-- [Here is the lab for today.](https://classroom.github.com/a/OgSLZGBv)  -->
 
-<!-- It is due next Wednesday.  -->
+<!-- It is due next Monday.  -->
 
 <!-- # Day 32 Choropleth Mapping and Leaflet -->
 
@@ -165,6 +165,8 @@ Simple features and Shape files.
 -   [tidygeocoder services](https://jessecambon.github.io/tidygeocoder/articles/geocoder_services.html)
 
 [In class activity](./course-materials/in-class-activies/27_mapping.zip)
+
+Quiz 3 on mapping is open, don't take it until after Monday's class. 
 
 <!-- # Day 26 Static Mapping part 1 -->
 
