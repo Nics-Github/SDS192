@@ -1,0 +1,277 @@
+---
+title: "In-class Exercises: Mapping"
+output:
+  html_document
+execute: 
+  warning: false
+  message: false
+---
+
+```{r, message=FALSE, warning=FALSE, echo=FALSE}
+# Set R chunk default options:
+# -do not output all R messages in html report
+# -do not output all R warnings in html report
+# -set default figure widths and heights for all code blocks, unless you 
+#  override them
+knitr::opts_chunk$set(
+  message = FALSE, warning = FALSE, fig.width = 16/2, fig.height = 9/2
+)
+```
+
+```{r, echo=FALSE}
+# Load all packages here. It's good practice to load all packages at the
+# beginning of a qmd file so that collaborators can see in one shot all packages
+# they'll need installed:
+library(tidyverse)
+library(fivethirtyeight) # This is the the presidential data
+library(rvest) # This is for scraping VT ski areas
+library(janitor) # cleaning
+
+# Libraries for Mapping
+library(sf) # shape files
+library(maps) # we get the maps of VT and MA from here. 
+library(tidygeocoder) # geocoding. 
+
+```
+
+# Tip {-}
+
+Do not run entire code blocks at once, as you'll skip over a lot of very important details. Rather, I recommend you highlight small segments of code and run them individually using:
+
+* macOS: Command + Enter
+* Windows: Control + Enter
+
+# 1. Converting data frames to sf objects
+
+Its nicer to work with simple features data rather than polygons when dealing with mapping. (Most publicly available data is available as an sf or .csv.) When working with simple features in statistc maps we use geom_sf().
+
+The code below will map the president campaign sites for Hilary Clinton and Donald Trump. 
+
+```{r}
+# Convert pres_2016_trail data frame to sf object using st_as_sf() from sf
+# package. Note we set the coordinate reference system to WGS84
+# https://spatialreference.org/ref/epsg/wgs-84/
+pres_2016_trail_sf <- pres_2016_trail |>
+  st_as_sf(coords = c("lng", "lat"), crs = 4326)
+pres_2016_trail_sf
+
+# Load maps package map object of US states and plot using default R plot
+# function (not ggplot2). Plot is not pretty!
+USA_map <-  maps::map("state", plot = FALSE, fill = TRUE)
+plot(USA_map)
+
+# Convert maps package map object to sf object using st_as_sf() again:
+USA_sf <- USA_map |> 
+  st_as_sf(coords = c("x", "y"), crs = 4326)
+
+# Plot both layers:
+ggplot() +
+  geom_sf(data = USA_sf) +
+  geom_sf(data = pres_2016_trail_sf, aes(color = candidate), size = 2) +
+  facet_wrap(~candidate)
+
+#Lose the latitude and longitude. 
+ggplot() +
+  geom_sf(data = USA_sf) +
+  geom_sf(data = pres_2016_trail_sf, aes(color = candidate), size = 2) +
+  facet_wrap(~candidate)+
+  theme(
+    axis.ticks.x= element_blank(),
+    axis.ticks.y= element_blank(),
+    axis.text.x = element_blank(),
+    axis.text.y = element_blank()
+  )+
+  labs(
+    title = "2016 Presidential Campaign Trail"
+  )
+```
+
+## Exercise 1 
+
+Draw a map of the US with the 2 colleges I work at:
+
+```{r}
+# How did I get the longitude and latitude for Holyoke Community College and Smith College? By tapping into
+# the OpenStreetMap (OSM) database using the geocode() function. 
+ne_colleges <- tibble(
+  name = c("Holyoke Community College", "Smith College"), 
+  long = c(-72.6527, -72.640),
+  lat = c(42.1953, 42.316)
+)
+
+# Obtain a map of Massachusetts counties from the maps package
+ma_counties <- maps::map("county",regions = "massachusetts",  plot = FALSE, fill = TRUE) |>
+  # This sets the simple features 
+  st_as_sf(coords = c("x", "y"), crs = 4326) |>
+  # This adds a new column with the names of the counties. 
+  mutate(county_name = str_replace(ID,pattern = "massachusetts,", replace = ""))
+```
+
+```{r}
+# Write your code below 
+Colleges <- ne_colleges |>
+  st_as_sf(coords = c("long", "lat"), crs = 4326)
+
+ggplot() +
+  geom_sf(data = ma_counties)+
+  geom_sf(data = Colleges)
+  
+```
+
+## Exercise 2
+
+Go back to the previous plot and add the cities Boston, and Pittsfield to the map. Hint: Make a new dataframe with those places in them, then use geocode to plot them on the same map. 
+
+
+# 2. Loading shapefiles into R
+
+Let's load a shapefile of all bike trails in Massachusetts as provided by
+[MassGIS (Bureau of Geographic Information)](https://www.mass.gov/info-details/massgis-data-bicycle-trails)
+
+```{r}
+# Load the "shapefile" contained in the biketrails_arc/ folder and load
+# it into R using the sf package's read_sf() function.
+bike_trails <- read_sf("biketrails_arc/") |>
+  st_transform(crs = 4326)
+
+# Plot this data!
+ggplot() +
+  geom_sf(data = bike_trails, color = "blue")
+
+# The above map lacks context however. Where are these bikepaths?
+# Use ma_counties from problem 1 above obtain a map of Massachusetts counties.
+
+  
+# Plot this data!
+ggplot() +
+  geom_sf(data = ma_counties)
+
+# Plot both maps by adding both layers!
+ggplot() +
+  geom_sf(data = bike_trails, color = "blue") + 
+  geom_sf(data = ma_counties) 
+
+# Where did our bike paths go? The order you plot in matters! Switch the two
+# geom_sf()
+ggplot() +
+  geom_sf(data = ma_counties) +
+  geom_sf(data = bike_trails, color = "blue")
+
+# Better! But what are these counties? Let's mark each counties' centroid. This is the center point. st_centroid will output the lat and long of the center of the shape. 
+
+ma_counties <- ma_counties |>
+  # Add centroids to each region using purrr package 
+  mutate(
+    lng = map_dbl(geom, ~st_centroid(.x)[[1]]),
+    lat = map_dbl(geom, ~st_centroid(.x)[[2]])
+    )
+ma_counties 
+
+# Plot! Notice how we define data = in the geom_point() instead of the ggplot().
+# This sets the data set only for the geom_point() and not the other geoms.
+# Any data = defined in the global ggplot() trickles down by default to the other
+# geoms.
+ggplot() +
+  geom_sf(data = ma_counties, size = 0.5) +
+  geom_sf(data = bike_trails, color = "blue") +
+  geom_point(data = ma_counties, aes(x = lng, y = lat)) 
+
+# Can we do better? Yes! Use geom_text() instead with the label aesthetic!
+ggplot() +
+  geom_sf(data = ma_counties, size = 0.5) +
+  geom_sf(data = bike_trails, color = "blue") +
+  geom_text(data = ma_counties, aes(x = lng, y = lat, label = county_name)) 
+```
+
+## Exercise 3
+
+Create a map of the state of Vermont showing the top 9 ski resorts by Acres. Some of the resorts have leases on public land. The shape files are located in the Alpine_Ski_Area_Leases folder and were downloaded from https://geodata.vermont.gov/search?collection=Dataset. Add these to your map and color them blue. Finally clean up your map. 
+
+It'll look like this (if you don't see it, try saving this file or setting the 27_mapping folder to the working directory):
+![](VT_ski.png)
+
+
+> Hint: You can get the coordinates using geocode(), then set `crs` , before using st_as_sf()
+
+### part 1
+
+```{r}
+# Write your code below
+ski_resorts <- "https://bestmapsever.com/pages/vermont-ski-areas-resorts-list"
+
+# This scraps the names, Acres, Vertical, Trails, and List from the website above. Edit the the slice_max() function to grab the top 9 resorts by acres.   
+
+vt_ski_resorts <- ski_resorts |>
+  read_html() |> 
+  html_element("table") |>
+  html_table() |>
+  clean_names() |>
+  # fill in the appropriate arguments for slice_max()
+  slice_max()
+```
+
+part 2: `geocode()` the addresses from the Vermot Ski Resourts and save them in the vt_ski_resorts_df. wait 1 second per address.
+```{r} 
+vt_ski_resorts <- vt_ski_resorts 
+```
+
+part 3: Transform you vt_ski_resorts to a shape file that has the correct projection. 
+```{r}
+vt_ski_resorts <- vt_ski_resorts 
+```
+
+part 4: Use map from the maps package to get your Vermont map information. Then make it into an SF object. We don't need the counties just the state outline.  
+
+```{r}
+vt_outline <- maps::map("state", regions = "___",  plot = FALSE, fill = TRUE) |>
+  # This sets the simple features 
+  st_as_sf(coords = c("x", "y"), crs = 4326)
+
+# check your plot to make sure it looks like VT
+ggplot()+
+  geom_sf(____)
+
+```
+
+
+part 5: Load in the lease file. 
+```{r}
+# I copied the code from when we loaded in the biketrails data. edit the file path and varibale name appropriately. 
+leases <- read_sf("biketrails_arc/") |>
+  st_transform(crs = 4326)
+```
+
+
+part 6: plot the vermont ski areas. When plotting the ski resorts, set shape = 8  for a snowflake. Add the name with geom_text, set the size to 2 and nudge_x to move the names to the right.  
+
+```{r}
+ggplot()+
+  geom_sf(data = vt_outlines, color = "green")+
+  geom_sf(data = leases, color="blue")+
+  geom_sf(data = ___, shape = 8, )+
+  geom_text(data = ___, aes(x=long, y=lat, label= resort), size = 2, nudge_x = ____)+
+  theme_minimal()+
+  # This removes the lat and long data
+  theme(
+    axis.text = element_blank(),
+    axis.line = element_blank(),
+    axis.ticks = element_blank(),
+    panel.grid = element_blank(),
+  ) +
+  labs(
+    title = "Top 9 Aki Areas VT",
+    subtitle = "Resort Land leases in blue",
+    x="",
+    y=""
+  )
+
+```
+
+part 7: Make go back and get the top 10 ski resorts in vermont, instead of 9 and redraw your map, what do you notice? Why do you think this happened? How do you think we can get Pico on the VT map correctly? Try it below to make a map of the top 10 resorts. 
+
+
+
+
+## Exercise:
+
+Create a function called ski_map_ne that produces a map of a new england state's top 5 resorts by skiable acres. You can use the wikipedia page [here](https://en.wikipedia.org/wiki/List_of_New_England_ski_areas_by_vertical_drop) for your reference. You'll have to scrape the data, clean, wrangle, and geocode it. Your function should also return errors for states names that are outside new england. 

@@ -136,33 +136,35 @@ h1{font-weight: 400;}
 
 <!-- Quiz 3 is available and due by Sunday. -->
 
-<!-- # Day 30 Lab 7 Mapping Monarchs.  -->
+
+
+<!-- # Day 34 SAL guests -->
+
+<!-- [Jon Caris and Kala'i Ellis](https://docs.google.com/presentation/d/1yxMAglQLNAWok3_xqPgMCqxa2g1IlsPHXeu04iT9BZs/edit?usp=sharing) -->
+
+<!-- # Day 33 Lab 7 Mapping Monarchs.  -->
 
 <!-- [Here is the lab for today.](https://classroom.github.com/a/ozqRg4gy)  -->
 
 <!-- It is due next Wednesday.  -->
 
-<!-- # Day 29 Choropleth Mapping and Leaflet -->
+<!-- # Day 32 Choropleth Mapping and Leaflet -->
 
 <!-- [Choropleth Mapping](./course-materials/in-class-activies/29_Choropleth_and_Leaflet.qmd) -->
 
-<!-- # Day 28 SAL guests -->
 
-<!-- [Jon Caris and Kala'i Ellis](https://docs.google.com/presentation/d/1yxMAglQLNAWok3_xqPgMCqxa2g1IlsPHXeu04iT9BZs/edit?usp=sharing) -->
 
-<!-- Project 2 due today by midnight.  -->
+# Day 31 Mapping with simple features (sf) and shape files
 
-<!-- # Day 27 Mapping with simple features (sf) and shape files -->
+Simple features and Shape files.
 
-<!-- Simple features and Shape files.  -->
+-   [Vermont's Geospacial Data](https://geodata.vermont.gov/)
 
-<!-- -   [Vermont's Geospacial Data](https://geodata.vermont.gov/) -->
+-   [MA Bike Trails](https://www.mass.gov/info-details/massgis-data-bicycle-trails)
 
-<!-- -   [MA Bike Trails](https://www.mass.gov/info-details/massgis-data-bicycle-trails) -->
+-   [tidygeocoder services](https://jessecambon.github.io/tidygeocoder/articles/geocoder_services.html)
 
-<!-- -   [tidygeocoder services](https://jessecambon.github.io/tidygeocoder/articles/geocoder_services.html) -->
-
-<!-- [In class activity](./course-materials/in-class-activies/27_mapping.zip) -->
+[In class activity](./course-materials/in-class-activies/27_mapping.zip)
 
 <!-- # Day 26 Static Mapping part 1 -->
 
