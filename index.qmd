@@ -148,9 +148,9 @@ h1{font-weight: 400;}
 
 <!-- It is due next Monday.  -->
 
-<!-- # Day 32 Choropleth Mapping and Leaflet -->
+# Day 32 Choropleth Mapping and Leaflet
 
-<!-- [Choropleth Mapping](./course-materials/in-class-activies/29_Choropleth_and_Leaflet.qmd) -->
+[Choropleth Mapping](./course-materials/in-class-activies/29_Choropleth_and_Leaflet.qmd)
 
 
 
