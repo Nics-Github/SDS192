@@ -142,11 +142,11 @@ h1{font-weight: 400;}
 
 <!-- [Jon Caris and Kala'i Ellis](https://docs.google.com/presentation/d/1yxMAglQLNAWok3_xqPgMCqxa2g1IlsPHXeu04iT9BZs/edit?usp=sharing) -->
 
-<!-- # Day 33 Lab 7 Mapping Monarchs.  -->
+# Day 33 Lab 7 Mapping Monarchs.
 
-<!-- [Here is the lab for today.](https://classroom.github.com/a/OgSLZGBv)  -->
+[Here is the lab for today.](https://classroom.github.com/a/OgSLZGBv)
 
-<!-- It is due next Monday.  -->
+It is due next Monday.
 
 # Day 32 Choropleth Mapping and Leaflet
 
