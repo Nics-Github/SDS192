@@ -98,13 +98,7 @@ h1{font-weight: 400;}
 
 <!-- [Prof Cao's Post Course Survey](https://smithcollege.qualtrics.com/jfe/form/SV_dh7rSgiH2AvNUj4) -->
 
-<!-- Project 3 work day.  -->
 
-<!-- # Day 35 -->
-
-<!-- Project 3 work day.  -->
-
-<!-- Professor Garcia -->
 
 <!-- # Day 34 SQL lab -->
 
@@ -128,19 +122,23 @@ h1{font-weight: 400;}
 
 <!-- [SQL Notes](./course-materials/lectures/32_Tim_s_SQL/Smith-SQL-Notes-I.pdf) -->
 
-<!-- # Day 31 Project 3 -->
-
-<!-- Leaflet Example -->
-
-<!-- [Project 3](https://classroom.github.com/a/9QKu_fCl) -->
-
-<!-- Quiz 3 is available and due by Sunday. -->
 
 
 
-<!-- # Day 34 SAL guests -->
 
-<!-- [Jon Caris and Kala'i Ellis](https://docs.google.com/presentation/d/1yxMAglQLNAWok3_xqPgMCqxa2g1IlsPHXeu04iT9BZs/edit?usp=sharing) -->
+# Day 35 Project 3
+
+[Here is the link to project 3.](https://classroom.github.com/a/byNX6O7W) 
+
+I encourage you to work with a new partner in the class to experiance what it is like working with another person on github. 
+
+# Day 34 SAL guests
+
+[Jon Caris and Kala'i Ellis](https://docs.google.com/presentation/d/1s6YGENIbpoSxuAcfiv_E6Lv5kRv15lDMJ9BE8BNS2uU/edit?usp=sharing)
+
+[Survey for Prof Coa's class](https://smithcollege.qualtrics.com/jfe/form/SV_eR2LYqtBBTu0BBI))
+
+Quiz 3 is available and due by Sunday.
 
 # Day 33 Lab 7 Mapping Monarchs.
 
