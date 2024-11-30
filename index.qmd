@@ -124,6 +124,12 @@ h1{font-weight: 400;}
 
 
 
+# Day 36 Project 3 and Final Project
+
+The final project instructions can be found [here](./course-materials/Final-Project/Project.qmd). 
+
+Today and Wednesday you should mostly work on Project 3 in class
+
 
 
 # Day 35 Project 3
