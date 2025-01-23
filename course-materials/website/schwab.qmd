@@ -14,16 +14,14 @@ about:
       href: https://www.smith.edu/academics/faculty/nicholas-schwab
 ---
 
-**Nicholas Schwab** is a visiting lecture in Statistical and Data Sciences. He is a tenured professor at Holyoke Community College. When not teaching data science, he enjoys rock climbing, running, and reading childrens' books to his kids.
+**Nicholas Schwab** is a lecture in Statistical and Data Sciences. He is a tenured professor at Holyoke Community College. When not teaching data science, he enjoys rock climbing, biking, and reading childrens' books with his kids.
 
 ## Student Hours
 
 
 **Drop into the office:** 
 
--   Monday: 9:20-9:40
-
--   Wednesday: 9:20-10:00, 1:30-2:30 pm 
+-   Wednesday: 1:30-2:30 pm 
 
 -   By appointment in McConnell 214
 

@@ -163,7 +163,12 @@ ggplot() +
   geom_text(data = ma_counties, aes(x = lng, y = lat, label = county_name)) 
 ```
 
+
+
+
 ## Exercise
+
+
 
 Create a map of the state of Vermont showing the top 9 ski resorts by Acres. Some of the resorts have leases on public land. the shape files are located in the Alpine_Ski_Area_Leases folder and were downloaded from https://geodata.vermont.gov/search?collection=Dataset. Add these to your map and color them blue. 
 
@@ -180,7 +185,7 @@ vt_ski_resorts <- ski_resorts |>
   html_element("table") |>
   html_table() |>
   clean_names() |>
-  slice_max(order_by = acres, n = 9)
+  slice_max(order_by = acres, n = 10)
 
 # geocode the addresses and save them in the vt_ski_resorts_df. wait 1 second per address.
 vt_ski_resorts <- vt_ski_resorts |>
@@ -208,7 +213,7 @@ ggplot()+
   geom_sf(data = vt_counties, color = "green")+
   geom_sf(data = leases, color="blue")+
   geom_sf(data = vt_ski_resorts, shape = 8, )+
-  geom_text(data = vt_ski_resorts, aes(x=long, y=lat, label= resort), size = 2, nudge_x = .5)+
+  geom_text(data = vt_ski_resorts, aes(x=long, y=lat, label= resort), size = 2, nudge_x = 0.75)+
   theme_minimal()+
   theme(
     axis.text = element_blank(),
@@ -225,28 +230,19 @@ ggplot()+
 
 
 ```
-
-Write a function that will produce a map with the top five ski areas in a new england state displayed. 
+part 7: Make go back and get the top 10 ski resorts in Vermont, instead of 9 and redraw your map, what do you notice? Why do you think this happened? How do you think we can get Pico on the VT map correctly? Try it below to make a map of the top 10 resorts. 
 
 ```{r}
-
-ne_ski_area <-function(state, top_number = 5){
-  # Write your code below
-  ski_resorts <- "https://en.wikipedia.org/wiki/List_of_New_England_ski_areas_by_vertical_drop"
-
-# This scraps the names, Acres, Vertical, Trails, and List from the website above. Use the slice_max() function to grab the top 9 resorts by acres.   
-
-state_ski_resorts <- ski_resorts |>
+vt_ski_resorts <- ski_resorts |>
   read_html() |> 
   html_element("table") |>
   html_table() |>
   clean_names() |>
-  filter(state == {{state}})|>
-  slice_max(order_by = acres, n = {{top_number}})
+  mutate(resort_state = paste(resort , ", VT"))|>
+  slice_max(order_by = acres, n = 10)
 
-# geocode the addresses and save them in the vt_ski_resorts_df. wait 1 second per address.
-state_ski_resorts <- state_ski_resorts |>
-  geocode(resort, method="US Census")
+vt_ski_resorts <- vt_ski_resorts |>
+  geocode(resort_state, method="osm")
 
 # transfrom your data to have the correct projection.  
 vt_ski_resorts <- vt_ski_resorts |>
@@ -270,58 +266,7 @@ ggplot()+
   geom_sf(data = vt_counties, color = "green")+
   geom_sf(data = leases, color="blue")+
   geom_sf(data = vt_ski_resorts, shape = 8, )+
-  geom_text(data = vt_ski_resorts, aes(x=long, y=lat, label= resort), size = 2, nudge_x = .5)+
-  theme_minimal()+
-  theme(
-    axis.text = element_blank(),
-    axis.line = element_blank(),
-    axis.ticks = element_blank(),
-    panel.grid = element_blank(),
-  ) +
-  labs(
-    title = "Top 9 Aki Areas VT",
-    subtitle = "Resort Land leases in blue",
-    x="",
-    y=""
-  )
-
-}
-
-
-```
-
-```{r}
-ne_ski_area <-function(state, top_number = 5){
-  # Write your code below
-  ski_resorts <- "https://en.wikipedia.org/wiki/List_of_New_England_ski_areas_by_vertical_drop"
-
-# This scraps the names, Acres, Vertical, Trails, and List from the website above. Use the slice_max() function to grab the top 9 resorts by acres.   
-
-state_ski_resorts <- ski_resorts |>
-  read_html() |> 
-  html_element("table") |>
-  html_table() |>
-  clean_names() |>
-  filter(state == {{state}})|>
-  slice_max(order_by = skiable_acres, n = {{top_number}})
-
-# geocode the addresses and save them in the vt_ski_resorts_df. wait 1 second per address.
-print("please wait")
-state_ski_resorts <- state_ski_resorts |>
-  geocode(resort_name, method="arcgis")
-
-state_maps <- maps::map("state",regions = state,  plot = FALSE, fill = TRUE) |>
-  # This sets the simple features 
-  st_as_sf(coords = c("long", "lat"), crs = 4326) |>
-  # This adds a new column with the names of the counties. 
-  mutate(county_name = str_replace(ID,pattern = paste({{state}},","), replace = ""))
-
-# plot the vermont ski areas. When plotting the ski resorts, set shape = 8  for a snowflake. Add the name with geom_text, set the size to 2 and nudge_x to move the names to the right.  
-
-ggplot()+
-  geom_sf(data = state_maps, color = "green")+
-  geom_point(data = state_ski_resorts,aes(x=long,y=lat), shape = 8 )+
-  geom_text(data = state_ski_resorts, aes(x=long, y=lat, label= resort_name), size = 2, nudge_x = .5)+
+  geom_text(data = vt_ski_resorts, aes(x=long, y=lat, label= resort), size = 2, nudge_x = 0.75)+
   theme_minimal()+
   theme(
     axis.text = element_blank(),
@@ -337,9 +282,8 @@ ggplot()+
   )
 
 
-}
-ne_ski_area(state="Vermont")
 ```
+
 
 # 3. Interactive maps using leaflet
 

@@ -9,7 +9,7 @@
 <link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.3.353">
+  <meta name="generator" content="quarto-1.4.555">
 
   <meta name="author" content="Schwab">
   <title>SDS 192 - iteration</title>
@@ -32,7 +32,7 @@
     }
     /* CSS for syntax highlighting */
     pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span { line-height: 1.25; }
     pre > code.sourceCode > span:empty { height: 1.2em; }
     .sourceCode { overflow: visible; }
     code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -222,7 +222,8 @@
   }
 
   .callout.callout-titled .callout-body > .callout-content > :last-child {
-    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0;
   }
 
   .callout.callout-titled .callout-icon::before {
@@ -402,16 +403,226 @@ Schwab
 </div>
 
 </section>
+<section id="the-for-loop" class="slide level2">
+<h2>The for loop</h2>
+<p>In most computer programming languages you can write a for loop.</p>
+<p>In R we try not to do this (although we can).</p>
+</section>
+<section id="computing-multiple-powers." class="slide level2">
+<h2>Computing multiple powers.</h2>
+<p>Write a for loop that computes e^1, e^2,… e^100 and prints them.</p>
+<p>Or better yet stores them as a vector (this is a little harder).</p>
+</section>
+<section id="solution" class="slide level2">
+<h2>Solution</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a>e <span class="ot">=</span> <span class="fl">2.71828</span></span>
+<span id="cb1-2"><a></a>vector_o_numbers <span class="ot">&lt;-</span> <span class="fu">vector</span>(<span class="at">mode =</span> <span class="st">"numeric"</span>, <span class="at">length =</span> <span class="dv">100</span>)</span>
+<span id="cb1-3"><a></a></span>
+<span id="cb1-4"><a></a><span class="cf">for</span>(exponent <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">100</span>){</span>
+<span id="cb1-5"><a></a>  <span class="fu">print</span>(e<span class="sc">^</span>exponent)</span>
+<span id="cb1-6"><a></a>  vector_o_numbers[exponent] <span class="ot">&lt;-</span> <span class="fu">exp</span>(exponent)</span>
+<span id="cb1-7"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 2.71828
+[1] 7.389046
+[1] 20.0855
+[1] 54.598
+[1] 148.4127
+[1] 403.4272
+[1] 1096.628
+[1] 2980.942
+[1] 8103.035
+[1] 22026.32
+[1] 59873.7
+[1] 162753.5
+[1] 442409.5
+[1] 1202593
+[1] 3268984
+[1] 8886015
+[1] 24154677
+[1] 65659174
+[1] 178480020
+[1] 485158668
+[1] 1318797105
+[1] 3584859796
+[1] 9744652685
+[1] 26488694502
+[1] 72003688490
+[1] 195726186349
+[1] 532038577830
+[1] 1.44623e+12
+[1] 3.931258e+12
+[1] 1.068626e+13
+[1] 2.904824e+13
+[1] 7.896126e+13
+[1] 2.146388e+14
+[1] 5.834484e+14
+[1] 1.585976e+15
+[1] 4.311127e+15
+[1] 1.171885e+16
+[1] 3.185512e+16
+[1] 8.659113e+16
+[1] 2.353789e+17
+[1] 6.398258e+17
+[1] 1.739226e+18
+[1] 4.727703e+18
+[1] 1.285122e+19
+[1] 3.493321e+19
+[1] 9.495826e+19
+[1] 2.581231e+20
+[1] 7.016509e+20
+[1] 1.907284e+21
+[1] 5.184531e+21
+[1] 1.409301e+22
+[1] 3.830874e+22
+[1] 1.041339e+23
+[1] 2.83065e+23
+[1] 7.694501e+23
+[1] 2.091581e+24
+[1] 5.685502e+24
+[1] 1.545479e+25
+[1] 4.201044e+25
+[1] 1.141961e+26
+[1] 3.104171e+26
+[1] 8.438005e+26
+[1] 2.293686e+27
+[1] 6.234881e+27
+[1] 1.694815e+28
+[1] 4.606982e+28
+[1] 1.252307e+29
+[1] 3.40412e+29
+[1] 9.253352e+29
+[1] 2.51532e+30
+[1] 6.837345e+30
+[1] 1.858582e+31
+[1] 5.052146e+31
+[1] 1.373315e+32
+[1] 3.733054e+32
+[1] 1.014749e+33
+[1] 2.758371e+33
+[1] 7.498024e+33
+[1] 2.038173e+34
+[1] 5.540324e+34
+[1] 1.506015e+35
+[1] 4.093771e+35
+[1] 1.112802e+36
+[1] 3.024906e+36
+[1] 8.222543e+36
+[1] 2.235117e+37
+[1] 6.075675e+37
+[1] 1.651538e+38
+[1] 4.489344e+38
+[1] 1.220329e+39
+[1] 3.317197e+39
+[1] 9.01707e+39
+[1] 2.451092e+40
+[1] 6.662755e+40
+[1] 1.811123e+41
+[1] 4.92314e+41
+[1] 1.338247e+42
+[1] 3.637731e+42
+[1] 9.888372e+42
+[1] 2.687936e+43</code></pre>
+</div>
+</div>
+</section>
+<section id="r-is-a-vectorized-language" class="slide level2">
+<h2>R is a vectorized language</h2>
+<p>This means most created objects are vectors.</p>
+<p>Traditionally the word “hi” is a character variable or “string”.</p>
+<p>R makes it a vector with a string in it.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a>word <span class="ot">&lt;-</span> <span class="st">"hi"</span></span>
+<span id="cb3-2"><a></a><span class="fu">is.vector</span>(word)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] TRUE</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="fu">length</span>(word)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a>two_words <span class="ot">&lt;-</span> <span class="fu">c</span>(word , word)</span>
+<span id="cb7-2"><a></a><span class="fu">is.vector</span>(two_words)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] TRUE</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a><span class="fu">is.vector</span>(two_words[<span class="dv">1</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] TRUE</code></pre>
+</div>
+</div>
+<p>We can take advantage of this vectorized nature.</p>
+</section>
+<section id="many-functions-are-vectorized" class="slide level2">
+<h2>Many functions are vectorized</h2>
+<p>This means they take a vector as an input and give a vector as an output.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a><span class="co"># Here I recompute the for loop with 100 powers of e in it. </span></span>
+<span id="cb11-2"><a></a></span>
+<span id="cb11-3"><a></a>faster_vec_o_numbers <span class="ot">&lt;-</span> <span class="fu">exp</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">100</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="some-vectorized-operations-and-functions" class="slide level2">
+<h2>Some vectorized operations and functions</h2>
+<ul>
+<li><p>Basic Operations (+, -, *, /, //, %/%)</p></li>
+<li><p>Base R functions: <code>nchar()</code>, <code>is.na()</code> , <code>is.numeric()</code></p></li>
+<li><p>Comparison operators &gt;, &lt;, ==</p></li>
+</ul>
+</section>
+<section id="make-a-vectorized-function." class="slide level2">
+<h2>Make a vectorized function.</h2>
+<p>The conversion between Celsius and Fahrenheit is given by this formula: <span class="math display">\[ F = C \times \frac{9}{5}+32\]</span></p>
+<ol type="1">
+<li><p>Make a function that does this conversion.</p></li>
+<li><p>Use the function to compute all temps for C between 0 and 100.</p></li>
+</ol>
+</section>
+<section id="solution-1" class="slide level2">
+<h2>Solution</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a>C_to_F <span class="ot">&lt;-</span><span class="cf">function</span>(temperature_C){</span>
+<span id="cb12-2"><a></a>  temperature_F <span class="ot">=</span> temperature_C <span class="sc">*</span> <span class="dv">9</span><span class="sc">/</span><span class="dv">5</span><span class="sc">+</span><span class="dv">32</span>  </span>
+<span id="cb12-3"><a></a>  <span class="co">#return(temperature_F)</span></span>
+<span id="cb12-4"><a></a>}</span>
+<span id="cb12-5"><a></a></span>
+<span id="cb12-6"><a></a>celcius_temps <span class="ot">&lt;-</span> <span class="fu">C_to_F</span>(<span class="dv">0</span><span class="sc">:</span><span class="dv">100</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Note: In R the last line is always returned, so we do not need to explicitly return anything.</p>
+</section>
+<section id="aggregating-functions" class="slide level2">
+<h2>Aggregating functions</h2>
+<p>These are functions that take a vector and give one output.</p>
+<p>Examples: <code>mean()</code>, <code>sd()</code>, <code>median()</code>, <code>sum()</code>, <code>n()</code></p>
+<p>They are not vectorized functions.</p>
+</section>
+<section id="vectorize-exisiting-functions" class="slide level2">
+<h2>Vectorize Exisiting functions</h2>
+<p>We can vectorized existing functions with helper functions in R</p>
+<p>Two general types are <code>across()</code> and <code>map()</code></p>
+</section>
 <section id="across-and-map" class="slide level2">
 <h2><code>across()</code> and <code>map()</code></h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p>These functions allow us to preform the same operation across multiple rows.</p>
-<p><code>map()</code> comes from the <code>purr</code> package.</p>
-<p><code>across()</code> comes from the <code>dplyr</code> package.</p>
+<p><code>map()</code> comes from <a href="https://github.com/rstudio/cheatsheets/blob/main/purrr.pdf">the <code>purr</code> package.</a></p>
+<ul>
+<li>many different map()s</li>
+<li>apply a function to every element</li>
+</ul>
+<p><code>across()</code> comes from <a href="https://raw.githubusercontent.com/rstudio/cheatsheets/main/data-transformation.pdf">the <code>dplyr</code> package.</a></p>
+<ul>
+<li>this is a helper used with mutate and summarize</li>
+<li>can also apply a function to every element.</li>
+</ul>
 </section>
 <section id="example-iris" class="slide level2">
 <h2>Example: <code>iris</code></h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">head</span>(iris)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a></a><span class="fu">head</span>(iris)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  Sepal.Length Sepal.Width Petal.Length Petal.Width Species
 1          5.1         3.5          1.4         0.2  setosa
@@ -423,33 +634,69 @@ Schwab
 </div>
 </div>
 </section>
-<section id="average" class="slide level2">
-<h2>Average</h2>
-<p>Let’s find the average of each column that ends with <code>.Length</code> by species.</p>
+<section id="a-for-loop" class="slide level2">
+<h2>A for loop</h2>
+<p>There are four columns in iris and I’d like to calculate the mean of each of them.</p>
+<p>This feels bad. I’m using vectors in a four loop</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>iris <span class="sc">%&gt;%</span></span>
-<span id="cb3-2"><a href="#cb3-2"></a>  <span class="fu">group_by</span>(Species) <span class="sc">%&gt;%</span></span>
-<span id="cb3-3"><a href="#cb3-3"></a>  <span class="fu">summarise</span>(</span>
-<span id="cb3-4"><a href="#cb3-4"></a>    <span class="fu">across</span>(<span class="at">.cols =</span> <span class="fu">ends_with</span>(<span class="st">"Length"</span>), </span>
-<span id="cb3-5"><a href="#cb3-5"></a>           <span class="at">.fns =</span> <span class="fu">list</span>(<span class="at">mean =</span> mean)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a></a><span class="cf">for</span> (column <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>){</span>
+<span id="cb16-2"><a></a>  <span class="fu">print</span>(<span class="fu">mean</span>(iris[[column]], <span class="at">na.rm =</span> <span class="cn">TRUE</span>))</span>
+<span id="cb16-3"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 3 × 3
-  Species    Sepal.Length_mean Petal.Length_mean
-  &lt;fct&gt;                  &lt;dbl&gt;             &lt;dbl&gt;
-1 setosa                  5.01              1.46
-2 versicolor              5.94              4.26
-3 virginica               6.59              5.55</code></pre>
+<pre><code>[1] 5.843333
+[1] 3.057333
+[1] 3.758
+[1] 1.199333</code></pre>
 </div>
 </div>
 </section>
+<section id="average-with-across" class="slide level2">
+<h2>Average with across</h2>
+<p>Let’s mimic the for loop above.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a></a>iris <span class="sc">%&gt;%</span></span>
+<span id="cb18-2"><a></a>  <span class="fu">summarise</span>(</span>
+<span id="cb18-3"><a></a>    <span class="fu">across</span>(<span class="at">.cols =</span> is.numeric, </span>
+<span id="cb18-4"><a></a>           <span class="co">#.cols = everything()</span></span>
+<span id="cb18-5"><a></a>           <span class="at">.fns =</span> mean))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  Sepal.Length Sepal.Width Petal.Length Petal.Width
+1     5.843333    3.057333        3.758    1.199333</code></pre>
+</div>
+</div>
+</section>
+<section id="again-with-group_by" class="slide level2">
+<h2>Again with group_by()</h2>
+<p>Let’s find the average of each column that ends with <code>.Length</code> by species.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a></a>iris <span class="sc">%&gt;%</span></span>
+<span id="cb20-2"><a></a>  <span class="fu">group_by</span>(Species) <span class="sc">%&gt;%</span></span>
+<span id="cb20-3"><a></a>  <span class="fu">summarise</span>(</span>
+<span id="cb20-4"><a></a>    <span class="fu">across</span>(<span class="at">.cols =</span> <span class="fu">ends_with</span>(<span class="st">"Length"</span>), </span>
+<span id="cb20-5"><a></a>           <span class="at">.fns =</span>  mean))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 3
+  Species    Sepal.Length Petal.Length
+  &lt;fct&gt;             &lt;dbl&gt;        &lt;dbl&gt;
+1 setosa             5.01         1.46
+2 versicolor         5.94         4.26
+3 virginica          6.59         5.55</code></pre>
+</div>
+</div>
+</section>
+<section id="lets-consider-rounding" class="slide level2">
+<h2>Let’s consider rounding</h2>
+<p>We’ll look at 5 methods of rounding.</p>
+</section>
 <section id="rounding-with-across" class="slide level2">
 <h2>Rounding with <code>across()</code></h2>
+<p>Let’s say we want to round every value.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a>iris <span class="sc">%&gt;%</span></span>
-<span id="cb5-2"><a href="#cb5-2"></a>  <span class="fu">group_by</span>(Species) <span class="sc">%&gt;%</span></span>
-<span id="cb5-3"><a href="#cb5-3"></a>  <span class="fu">summarise</span>(<span class="fu">across</span>(</span>
-<span id="cb5-4"><a href="#cb5-4"></a>    <span class="at">.cols =</span> Sepal.Length<span class="sc">:</span>Petal.Width, </span>
-<span id="cb5-5"><a href="#cb5-5"></a>    <span class="at">.fns =</span> round))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a></a>iris <span class="sc">%&gt;%</span></span>
+<span id="cb22-2"><a></a>  <span class="fu">group_by</span>(Species) <span class="sc">%&gt;%</span></span>
+<span id="cb22-3"><a></a>  <span class="fu">summarise</span>(<span class="fu">across</span>(</span>
+<span id="cb22-4"><a></a>    <span class="at">.cols =</span> Sepal.Length<span class="sc">:</span>Petal.Width, </span>
+<span id="cb22-5"><a></a>    <span class="at">.fns =</span> round))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 150 × 5
 # Groups:   Species [3]
@@ -471,40 +718,62 @@ Schwab
 </section>
 <section id="rounding-without-across" class="slide level2">
 <h2>Rounding without <code>across()</code></h2>
+<p>and the tidyverse</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a>iris <span class="sc">%&gt;%</span></span>
-<span id="cb7-2"><a href="#cb7-2"></a>  <span class="fu">group_by</span>(Species) <span class="sc">%&gt;%</span></span>
-<span id="cb7-3"><a href="#cb7-3"></a>  <span class="fu">summarise</span>(<span class="at">Sepal.Length =</span> <span class="fu">round</span>(Sepal.Length),</span>
-<span id="cb7-4"><a href="#cb7-4"></a>            <span class="at">Sepal.Width =</span> <span class="fu">round</span>(Sepal.Width),</span>
-<span id="cb7-5"><a href="#cb7-5"></a>            <span class="at">Petal.Length =</span> <span class="fu">round</span>(Petal.Length),</span>
-<span id="cb7-6"><a href="#cb7-6"></a>            <span class="at">Petal.Width =</span> <span class="fu">round</span>(Petal.Width))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a></a>iris <span class="sc">%&gt;%</span></span>
+<span id="cb24-2"><a></a>  <span class="fu">group_by</span>(Species) <span class="sc">%&gt;%</span></span>
+<span id="cb24-3"><a></a>  <span class="fu">mutate</span>(<span class="at">Sepal.Length =</span> <span class="fu">round</span>(Sepal.Length),</span>
+<span id="cb24-4"><a></a>            <span class="at">Sepal.Width =</span> <span class="fu">round</span>(Sepal.Width),</span>
+<span id="cb24-5"><a></a>            <span class="at">Petal.Length =</span> <span class="fu">round</span>(Petal.Length),</span>
+<span id="cb24-6"><a></a>            <span class="at">Petal.Width =</span> <span class="fu">round</span>(Petal.Width))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 150 × 5
 # Groups:   Species [3]
-   Species Sepal.Length Sepal.Width Petal.Length Petal.Width
-   &lt;fct&gt;          &lt;dbl&gt;       &lt;dbl&gt;        &lt;dbl&gt;       &lt;dbl&gt;
- 1 setosa             5           4            1           0
- 2 setosa             5           3            1           0
- 3 setosa             5           3            1           0
- 4 setosa             5           3            2           0
- 5 setosa             5           4            1           0
- 6 setosa             5           4            2           0
- 7 setosa             5           3            1           0
- 8 setosa             5           3            2           0
- 9 setosa             4           3            1           0
-10 setosa             5           3            2           0
+   Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+          &lt;dbl&gt;       &lt;dbl&gt;        &lt;dbl&gt;       &lt;dbl&gt; &lt;fct&gt;  
+ 1            5           4            1           0 setosa 
+ 2            5           3            1           0 setosa 
+ 3            5           3            1           0 setosa 
+ 4            5           3            2           0 setosa 
+ 5            5           4            1           0 setosa 
+ 6            5           4            2           0 setosa 
+ 7            5           3            1           0 setosa 
+ 8            5           3            2           0 setosa 
+ 9            4           3            1           0 setosa 
+10            5           3            2           0 setosa 
 # ℹ 140 more rows</code></pre>
 </div>
 </div>
 </section>
-<section id="rounding" class="slide level2">
-<h2>Rounding</h2>
+<section id="rounding-old-school-r" class="slide level2">
+<h2>Rounding old school R</h2>
+<p>This is not taking advantage of the vectors.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a>iris <span class="sc">%&gt;%</span></span>
-<span id="cb9-2"><a href="#cb9-2"></a>  <span class="fu">group_by</span>(Species) <span class="sc">%&gt;%</span></span>
-<span id="cb9-3"><a href="#cb9-3"></a>  <span class="fu">reframe</span>(<span class="fu">across</span>(</span>
-<span id="cb9-4"><a href="#cb9-4"></a>    <span class="at">.cols =</span> <span class="fu">starts_with</span>(<span class="st">"Sepal"</span>), </span>
-<span id="cb9-5"><a href="#cb9-5"></a>    <span class="at">.fns =</span> <span class="sc">~</span> <span class="fu">round</span>(. , <span class="at">digits =</span> <span class="dv">2</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a></a><span class="co"># one at a time</span></span>
+<span id="cb26-2"><a></a>iris<span class="sc">$</span>Sepal.Length <span class="ot">&lt;-</span> <span class="fu">round</span>(iris<span class="sc">$</span>Sepal.Length)</span>
+<span id="cb26-3"><a></a>iris<span class="sc">$</span>Sepal.Width <span class="ot">&lt;-</span> <span class="fu">round</span>(iris<span class="sc">$</span>Sepal.Width)</span>
+<span id="cb26-4"><a></a>iris<span class="sc">$</span>Petal.Length <span class="ot">&lt;-</span> <span class="fu">round</span>(iris<span class="sc">$</span>Petal.Length)</span>
+<span id="cb26-5"><a></a>iris<span class="sc">$</span>Petal.Width <span class="ot">&lt;-</span> <span class="fu">round</span>(iris<span class="sc">$</span>Petal.Width)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="rounding-w-vectors" class="slide level2">
+<h2>Rounding w/ vectors</h2>
+<p>Round all at the same time because round() is vectorized.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a></a>iris <span class="ot">&lt;-</span> <span class="fu">round</span>(iris[<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="rounding-example-5" class="slide level2">
+<h2>Rounding example 5</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a></a><span class="co"># This removes the previous iris df that we made. </span></span>
+<span id="cb28-2"><a></a><span class="fu">rm</span>(iris)</span>
+<span id="cb28-3"><a></a></span>
+<span id="cb28-4"><a></a>iris <span class="sc">%&gt;%</span></span>
+<span id="cb28-5"><a></a>  <span class="fu">group_by</span>(Species) <span class="sc">%&gt;%</span></span>
+<span id="cb28-6"><a></a>  <span class="fu">reframe</span>(<span class="fu">across</span>(</span>
+<span id="cb28-7"><a></a>    <span class="at">.cols =</span> <span class="fu">starts_with</span>(<span class="st">"Sepal"</span>), </span>
+<span id="cb28-8"><a></a>    <span class="at">.fns =</span> <span class="sc">~</span> <span class="fu">round</span>(. , <span class="at">digits =</span> <span class="dv">2</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 150 × 3
    Species Sepal.Length Sepal.Width
@@ -523,12 +792,36 @@ Schwab
 </div>
 </div>
 </section>
-<section id="map-is-similar-to-across" class="slide level2">
-<h2><code>map()</code> is similar to <code>across()</code></h2>
-<p>It performs some operation on a data frame, vector or list.</p>
+<section id="what-.fns" class="slide level2">
+<h2>What .fns?</h2>
+<p>Any aggregating function with the appropriate data type can be used.</p>
+<p>mean, median, sd, round</p>
+<p><a href="https://www.datacamp.com/doc/r/functions">Here’s a nice list</a> just drop the parenthesis.</p>
+</section>
+<section id="where" class="slide level2">
+<h2>where()</h2>
+<p>We can drop the warning by specifying we only want the numeric variables.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a>iris <span class="sc">|&gt;</span></span>
-<span id="cb11-2"><a href="#cb11-2"></a>  <span class="fu">map</span>(<span class="at">.f =</span> mean)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a></a>iris <span class="sc">|&gt;</span></span>
+<span id="cb30-2"><a></a>  <span class="fu">summarise</span>(</span>
+<span id="cb30-3"><a></a>    <span class="fu">across</span>(</span>
+<span id="cb30-4"><a></a>      <span class="fu">where</span>(is.numeric), </span>
+<span id="cb30-5"><a></a>      <span class="at">.fns =</span> mean</span>
+<span id="cb30-6"><a></a>    )</span>
+<span id="cb30-7"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  Sepal.Length Sepal.Width Petal.Length Petal.Width
+1     5.843333    3.057333        3.758    1.199333</code></pre>
+</div>
+</div>
+</section>
+<section id="map-for-iteration." class="slide level2">
+<h2><code>map()</code> for iteration.</h2>
+<p>It performs some operation on a data frame, vector or list.</p>
+<p>map() returns a list.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a></a>iris <span class="sc">|&gt;</span></span>
+<span id="cb32-2"><a></a>  <span class="fu">map</span>(<span class="at">.f =</span> mean)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>$Sepal.Length
 [1] 5.843333
@@ -556,8 +849,8 @@ $Species
 <section id="map_dfc" class="slide level2">
 <h2><code>map_dfc()</code></h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a>iris <span class="sc">|&gt;</span></span>
-<span id="cb13-2"><a href="#cb13-2"></a>  <span class="fu">map_dfc</span>(<span class="at">.f =</span> mean)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a></a>iris <span class="sc">|&gt;</span></span>
+<span id="cb34-2"><a></a>  <span class="fu">map_dfc</span>(<span class="at">.f =</span> mean)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 5
   Sepal.Length Sepal.Width Petal.Length Petal.Width Species
@@ -565,9 +858,15 @@ $Species
 1         5.84        3.06         3.76        1.20      NA</code></pre>
 </div>
 </div>
+</section>
+<section id="conclusion" class="slide level2">
+<h2>Conclusion</h2>
+<p>Try not to use a for loop unless you really need to.</p>
 
+<div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 
+</div>
 </div>
 </section>
     </div>
@@ -596,7 +895,6 @@ $Species
       Reveal.initialize({
 'controlsAuto': true,
 'previewLinksAuto': false,
-'smaller': false,
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
@@ -895,10 +1193,27 @@ $Species
         // clear code selection
         e.clearSelection();
       });
-      function tippyHover(el, contentFn) {
+        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+        var mailtoRegex = new RegExp(/^mailto:/);
+          var filterRegex = new RegExp('/' + window.location.host + '/');
+        var isInternal = (href) => {
+            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+        }
+        // Inspect non-navigation links and adorn them if external
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+        for (var i=0; i<links.length; i++) {
+          const link = links[i];
+          if (!isInternal(link.href)) {
+            // undo the damage that might have been done by quarto-nav.js in the case of
+            // links that we want to consider external
+            if (link.dataset.originalHref !== undefined) {
+              link.href = link.dataset.originalHref;
+            }
+          }
+        }
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
         const config = {
           allowHTML: true,
-          content: contentFn,
           maxWidth: 500,
           delay: 100,
           arrow: false,
@@ -908,8 +1223,17 @@ $Species
           interactive: true,
           interactiveBorder: 10,
           theme: 'light-border',
-          placement: 'bottom-start'
+          placement: 'bottom-start',
         };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
           config['offset'] = [0,0];
           config['maxWidth'] = 700;
         window.tippy(el, config); 
@@ -923,7 +1247,11 @@ $Species
           try { href = new URL(href).hash; } catch {}
           const id = href.replace(/^#\/?/, "");
           const note = window.document.getElementById(id);
-          return note.innerHTML;
+          if (note) {
+            return note.innerHTML;
+          } else {
+            return "";
+          }
         });
       }
       const findCites = (el) => {

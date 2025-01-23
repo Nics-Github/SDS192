@@ -1,0 +1,177 @@
+---
+title: "data masking practice"
+format: 
+  revealjs:
+    theme: beige
+
+editor: visual
+execute: 
+  echo: true
+---
+
+```{r}
+library(tidyverse)
+```
+
+# Scope
+
+Local vs. Global variables
+
+```{r}
+x <- 10
+
+df <- tribble(
+  ~x, ~y, ~ z ,
+  5, 0 , 0
+)
+```
+
+x and df are global. They are referred to as environment variables.
+
+df#x and df\$y are local to the dataframe. They are often referred to as stats-variables.
+
+## The dollar sign operator
+
+We don't use the dollar sign operator often, because we use the tidyverse which makes it unnecessary.
+
+`$` selects a variable.
+
+```{r}
+df$x
+# or 
+df[1:3]
+```
+
+We can select a variable with tidyr from the tidyverse.
+
+```{r}
+df |>
+  select(x,y,z)
+```
+
+This makes things easier to read and less redundant.
+
+## Make a function
+
+```{r}
+my_printer <- function(variable){
+  print(variable)
+}
+```
+
+To print out 5 we need to tell R where to find the variable 5.
+
+```{r}
+my_printer(x)
+my_printer(df$x)
+```
+
+my_printer() looks through the environment first.
+
+So my_printer(x)=10 and not 5.
+
+## tidyverse problems
+
+The tidyverse uses a process called masking to blur the lines between environment and data variables.
+
+This is why we like it so much.
+
+However it makes programming with the tidyverse functions more challenging.
+
+## Use summarize to calculate a mean.
+
+The code below works as expected because tidyr is working under the hood to select x from df.
+
+```{r}
+df |>
+    summarise(mean(x))
+```
+
+## A mean calculating function
+
+We get into problems when using tidyverse functions within homemade functions:
+
+```{r}
+my_mean_maker <- function(data, variable){
+  data |>
+    summarise(mean(variable))
+}
+```
+
+```{r}
+my_mean_maker(data= df, variable = x)
+```
+
+We're still getting 10 in our output! It should be 5, because that is the value from the data frame.
+
+my_mean_maker() goes to the global environment because it doesn't recognize that it should be looking in the data frame.
+
+## When is tidyr working?
+
+We can check to see if tidyr is working under the hood by checking the arguments of a function.
+
+We are looking for the words "data-masking" or "tidy-select".
+
+If these words are not present we will not need to inject the data (aka unmask the data).
+
+```{r}
+?summarise
+```
+
+## Solution
+
+We need to inject the data into the sumarize function. We can do this by **unmasking** the data with {{}}.
+
+This tells R to look for the variable within the dataframe, not the global environment.
+
+```{r}
+my_mean_maker <- function(data, variable){
+  data |>
+    summarise(mean({{variable}}))
+}
+```
+
+```{r}
+my_mean_maker(data= df, variable = x)
+```
+
+## Problem 1
+
+Make a function that will calculate the mean, median, and standard deviation of any variable from a data frame using tidyverse functions.
+
+Use `filter( !is.na() )` or `na.rm = TRUE` to remove missing variables.
+
+Test your function on the `starwars` data `height` variable.
+
+## Solution 1
+
+```{r}
+centers_of_data <- function(data, variable){
+  data|>
+    filter(!is.na({{variable}})) |>
+    summarise(mean = mean({{variable}}), median = median({{variable}}), sd= sd({{variable}}))
+}
+
+
+centers_of_data(starwars, height)
+```
+
+## Problem 2
+
+Make a function that makes a bargraph of a categorical variable.
+
+Test your function on the `starwars` `eye_color` variable.
+
+## Solution 2
+
+```{r}
+my_bar_grapher <- function(data, variable){
+  data |>
+    ggplot(aes({{variable}}))+
+    geom_bar() +
+    theme_minimal()
+}
+
+my_bar_grapher(starwars, eye_color)
+
+```

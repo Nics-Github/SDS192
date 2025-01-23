@@ -1,0 +1,129 @@
+---
+title: "Anonymous Functions"
+author: "Schwab"
+editor: visual
+format: 
+  revealjs:
+    theme: beige
+execute: 
+  echo: true
+---
+
+## Digression
+
+Anonymous functions are functions without a name.
+
+## A named function
+
+```{r}
+library(stringr)
+
+#This function has a name, upper_case
+
+upper_case <-  function(word){
+  str_to_upper(word)
+}
+
+upper_case("hi")
+```
+
+## Anonymous functions
+
+This is the same function without a name
+
+```{r}
+function(word) str_to_upper(word)
+```
+
+Its harder to use by itself, we often use them in combination with other functions.
+
+## Using the anonymous function
+
+The function after .f will only be used once, we don't need to name it.
+
+```{r}
+words <- c("I", "Like", "to", "eat", "cheese", "!")
+purrr::map_chr(
+  .x = words,
+  .f = function(word) str_to_upper(word)
+)
+```
+
+## Name an anonymous function
+
+You can name an anonymous function.
+
+```{r}
+# This works with map_chhr() because str_to_upper is vectorized
+
+upper_case_anon <- function(word) str_to_upper(word)
+upper_case_anon(words)
+```
+
+## Does this work?
+
+```{r}
+# This works because str_to_upper is vectorized
+
+upper_case_anon <- function(word) 
+  str_to_upper(word)
+
+upper_case_anon(words)
+```
+
+Yes, but it can get confusing.
+
+## This does not work
+
+```{r, eval=FALSE}
+library(tidyverse)
+
+confusing_function <- function(word) 
+  upper_case_words<- 
+    str_to_upper(word)
+## This should lower the word's case, but it doesn't because its not part of the function.  
+  str_to_lower(upper_case_words)
+
+confusing_function(words)
+```
+
+## Last example fixed with
+
+```{r}
+confusing_function <- function(word){ 
+  upper_case_words<- 
+    str_to_upper(word)
+  ## Now it is part of the function.  
+  str_to_lower(upper_case_words)
+}
+  
+confusing_function(words)
+```
+
+## Summary
+
+Use an anonymous function to do one thing.
+
+If it get complicated give some {}
+
+## More anonymous?
+
+Since R version 4.1, May 2021.
+
+Just use a `\(argument) operations`
+
+```{r, eval=FALSE}
+# This is also an anonymous function. 
+\(word) str_to_upper(word)
+
+map_chr(.x = words,
+    .f = \(word) str_to_upper(word))
+```
+
+## Deep dive
+
+There are actually lots of ways of making anonymous functions.
+
+[Here are more.](https://stackoverflow.com/questions/52492462/define-an-anonymous-function-without-using-the-function-keyword) I like the idea of the lambda package.
+
+## SDS 270 for more on functions in R
