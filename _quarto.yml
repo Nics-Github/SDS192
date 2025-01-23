@@ -56,6 +56,12 @@ website:
       href: ./course-materials/syllabus/syllabus.html
     - text: Schwab
       href: course-materials/website/schwab.qmd
+    - text: "drop down"
+      menu:
+        - text: "a website"
+          href: https://mdsr-book.github.io/mdsr3e/
+        - text: "course materials"
+          href: course-materials/website/Resources.qmd
   #  - icon: fa-github fa-lg
   #    href: https://github.com/rudeboybert/SDS192
   
