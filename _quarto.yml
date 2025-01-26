@@ -45,7 +45,7 @@ website:
     
     right:
     - icon: github
-      href: https://classroom.github.com/classrooms/144164606-sds-192-f23-sections-02-03
+      href: https://classroom.github.com/classrooms/196546846-sds-192-spring-2025
   # - text: Problem Sets
   #   href: PS.html
   #  - text: Mini-Projects
@@ -53,15 +53,15 @@ website:
   # - text: Midterms
   #   href: midterms.html
     - text: Syllabus
-      href: ./course-materials/syllabus/syllabus.html
+      href: ./course-materials/syllabus/syllabus.qmd
     - text: Schwab
       href: course-materials/website/schwab.qmd
-    - text: "drop down"
-      menu:
-        - text: "a website"
-          href: https://mdsr-book.github.io/mdsr3e/
-        - text: "course materials"
-          href: course-materials/website/Resources.qmd
+    # - text: "drop down"
+    #   menu:
+    #     - text: "a website"
+    #       href: https://mdsr-book.github.io/mdsr3e/
+    #     - text: "course materials"
+    #       href: course-materials/website/Resources.qmd
   #  - icon: fa-github fa-lg
   #    href: https://github.com/rudeboybert/SDS192
   

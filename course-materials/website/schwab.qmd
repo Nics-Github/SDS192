@@ -16,18 +16,6 @@ about:
 
 **Nicholas Schwab** is a lecture in Statistical and Data Sciences. He is a tenured professor at Holyoke Community College. When not teaching data science, he enjoys rock climbing, biking, and reading childrens' books with his kids.
 
-## Student Hours
-
-
-**Drop into the office:** 
-
--   Wednesday: 1:30-2:30 pm 
-
--   By appointment in McConnell 214
-
-    
-Please let me know if the above times do not work for your schedule and we can coordinate another time.   
-
 <!-- Google Calendar Appointment Scheduling begin -->
 <!-- <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet"> -->
 <!-- <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script> -->
@@ -60,6 +48,10 @@ Please let me know if the above times do not work for your schedule and we can c
 
 ## Experience
 
+-   Lecturer Statistics and Data Sciences\
+    [Smith College](https://www.smith.edu)\
+    Northampton, MA 2023--2025
+
 -   Professor of Mathematics\
     [Holyoke Community College](https://www.hcc.edu)\
-    Holyoke, MA 2014--2023
+    Holyoke, MA 2014--2025

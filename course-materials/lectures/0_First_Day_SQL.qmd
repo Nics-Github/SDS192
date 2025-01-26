@@ -9,6 +9,7 @@ format:
 execute: 
   echo: true
 ---
+
 # Setup
 
 # Big Idea
@@ -17,99 +18,95 @@ Data can live in a flat file (.csv) or relational database.
 
 If the file is too big it wont fit into the computer's memory and the software may crash.
 
-Often data is stored in a database on a server and called up on demand. 
+Often data is stored in a database on a server and called up on demand.
 
-To do this we use the Structured Query Language (SQL). 
+To do this we use the Structured Query Language (SQL).
 
-# Different dialects of SQL
-
-We'll be using MySQL later in the course 
+# Dialects of SQL
 
 There are SQL, SQL Server, MySQL, PostgreSQL, Oracle, and others.
 
 # SQL is old
 
-IT was developed in the 1970s by IBM, but is still in use and important for data science 
+IT was developed in the 1970s by IBM, but is still in use and important for data science
 
-[Here at the 2024 programming language rankings. ](https://spectrum.ieee.org/top-programming-languages-2024)
+[Here are the 2024 programming language rankings.](https://spectrum.ieee.org/top-programming-languages-2024)
 
 # SQL-Practice
 
-We'll use this SQL practice to get started. 
+We'll use this SQL practice to get started.
 
 https://www.sql-practice.com/
 
-# The Database db 
+# The Database db
 
-Here there are two small databases. 
+Here there are two small databases.
 
-hospitals
-northwind
+1.  hospitals.db
+2.  northwind.db
 
-We'll focus on hospitals. 
+We'll focus on hospitals.
 
-# Tables or Data Frames
+# Tables (Data Frames)
 
-There are four tables in hospitals. 
+There are four tables in hospitals.
 
-They are related, we can see the relationship using the schema. 
+They are related, we can see the relationship using the schema.
 
 Most databases are relational.
 
 # Variable Types
 
-- Categorical
-  
-  - SQL: Text, CHAR
+-   Categorical
 
+    -   SQL: Text, CHAR
 
-- Numeric
+-   Numeric
 
-  - SQL: DATE, INT
+    -   SQL: DATE, INT
 
-[There are more,](https://www.w3schools.com/sql/sql_datatypes.asp) but they all fall under Catergoical or Numeric.
+[There are more,](https://www.w3schools.com/sql/sql_datatypes.asp) but they all fall under Categorical or Numeric.
 
 # SQL commands
 
-| SQL       | dplyr                           |
-|-----------|---------------------------------|
-| SELECT    | Choose a column...              |
-| FROM      | ...the data frame               |
-| WHERE     | A condition on a variable       |
-| GROUP BY  | Subset the data for computation |
-| HAVING    | A condition on grouped variables  |
-| ORDER BY  | Used to arrange the data (use DESC too) |
-| LIMIT     | Shows only the first so many rows |
-|COUNT  | Used with Select to count rows |
-|IS NULL | USed when searching for missing values|
+| SQL      | dplyr                                   |
+|----------|-----------------------------------------|
+| SELECT   | Choose a column...                      |
+| FROM     | ...the data frame                       |
+| WHERE    | A condition on a variable               |
+| GROUP BY | Subset the data for computation         |
+| HAVING   | A condition on grouped variables        |
+| ORDER BY | Used to arrange the data (use DESC too) |
+| LIMIT    | Shows only the first so many rows       |
+| COUNT    | Used with Select to count rows          |
+| IS NULL  | Used when searching for missing values  |
 
-
-#  Example 1
+# Example 1
 
 How many doctors are there?
 
 # Answer 1
 
-We can probably just count the data to answer this. 
+We can probably just count the data to answer this.
 
 But we can also do
-```{}
+
+```         
 
 
 SELECT COUNT(doctor_id)
 FROM doctors
-
 ```
 
-# Example 2 
+# Example 2
 
 How many cardiologists are there? What are their names?
 
 # Answer 2
 
-We can count them, but if there were lots of doctors at several hospitals this would be hard. 
+We can count them, but if there were lots of doctors at several hospitals this would be hard.
 
-```{}
+```         
 
 
 SELECT 
@@ -117,14 +114,13 @@ first_name,
 last_name
 FROM doctors
 WHERE specialty = "Cardiologist"
-
 ```
 
 # Like and Wild cards
 
-You can use a combination of the command LIKE and a wild card % to answer the question above. 
+You can use a combination of the command LIKE and a wild card % to answer the question above.
 
-```{}
+```         
 
 
 SELECT 
@@ -132,20 +128,17 @@ first_name,
 last_name
 FROM doctors
 WHERE specialty LIKE "Card%"
-
 ```
 
-
-# Example 3 
+# Example 3
 
 Who is the oldest patient?
 
 # Answer 3a
 
-Here we can order the data (or use the min function to find the earliest date). 
+Here we can order the data (or use the min function to find the earliest date).
 
-
-```{}
+```         
 
 
 SELECT 
@@ -158,27 +151,25 @@ order by birth_date
 
 # Answer 3b
 
-```{}
+```         
 
 SELECT 
 min(birth_date), 
 first_name, 
 last_name
 FROM patients
-
 ```
 
 # Practice
 
-There are some built in problems on this platform. 
+There are some built in problems on this platform.
 
 Try questions 1 - 4
 
 ![](./images/Questions_1_4_SQL_0.png)
+
 # Why use R?
 
-We use R because SQL is good for looking up data, but not for visualizing it, creating custom functions, building websites to show off our work or machine learning. 
+We use R because SQL is good for looking up data, but not for visualizing it, creating custom functions, building websites to show off our work or machine learning.
 
 R is good at these things.
-
-

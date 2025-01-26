@@ -352,16 +352,15 @@ Schwab
 <p>To do this we use the Structured Query Language (SQL).</p>
 </section>
 
-<section id="different-dialects-of-sql" class="title-slide slide level1 center">
-<h1>Different dialects of SQL</h1>
-<p>We’ll be using MySQL later in the course</p>
+<section id="dialects-of-sql" class="title-slide slide level1 center">
+<h1>Dialects of SQL</h1>
 <p>There are SQL, SQL Server, MySQL, PostgreSQL, Oracle, and others.</p>
 </section>
 
 <section id="sql-is-old" class="title-slide slide level1 center">
 <h1>SQL is old</h1>
 <p>IT was developed in the 1970s by IBM, but is still in use and important for data science</p>
-<p><a href="https://spectrum.ieee.org/top-programming-languages-2024">Here at the 2024 programming language rankings.</a></p>
+<p><a href="https://spectrum.ieee.org/top-programming-languages-2024">Here are the 2024 programming language rankings.</a></p>
 </section>
 
 <section id="sql-practice" class="title-slide slide level1 center">
@@ -373,12 +372,15 @@ Schwab
 <section id="the-database-db" class="title-slide slide level1 center">
 <h1>The Database db</h1>
 <p>Here there are two small databases.</p>
-<p>hospitals northwind</p>
+<ol type="1">
+<li>hospitals.db</li>
+<li>northwind.db</li>
+</ol>
 <p>We’ll focus on hospitals.</p>
 </section>
 
-<section id="tables-or-data-frames" class="title-slide slide level1 center">
-<h1>Tables or Data Frames</h1>
+<section id="tables-data-frames" class="title-slide slide level1 center">
+<h1>Tables (Data Frames)</h1>
 <p>There are four tables in hospitals.</p>
 <p>They are related, we can see the relationship using the schema.</p>
 <p>Most databases are relational.</p>
@@ -396,7 +398,7 @@ Schwab
 <li>SQL: DATE, INT</li>
 </ul></li>
 </ul>
-<p><a href="https://www.w3schools.com/sql/sql_datatypes.asp">There are more,</a> but they all fall under Catergoical or Numeric.</p>
+<p><a href="https://www.w3schools.com/sql/sql_datatypes.asp">There are more,</a> but they all fall under Categorical or Numeric.</p>
 </section>
 
 <section id="sql-commands" class="title-slide slide level1 center">
@@ -443,7 +445,7 @@ Schwab
 </tr>
 <tr class="odd">
 <td>IS NULL</td>
-<td>USed when searching for missing values</td>
+<td>Used when searching for missing values</td>
 </tr>
 </tbody>
 </table>
@@ -461,8 +463,7 @@ Schwab
 <pre><code>
 
 SELECT COUNT(doctor_id)
-FROM doctors
-</code></pre>
+FROM doctors</code></pre>
 </section>
 
 <section id="example-2" class="title-slide slide level1 center">
@@ -479,8 +480,7 @@ SELECT
 first_name, 
 last_name
 FROM doctors
-WHERE specialty = "Cardiologist"
-</code></pre>
+WHERE specialty = "Cardiologist"</code></pre>
 </section>
 
 <section id="like-and-wild-cards" class="title-slide slide level1 center">
@@ -492,8 +492,7 @@ SELECT
 first_name, 
 last_name
 FROM doctors
-WHERE specialty LIKE "Card%"
-</code></pre>
+WHERE specialty LIKE "Card%"</code></pre>
 </section>
 
 <section id="example-3" class="title-slide slide level1 center">
@@ -521,15 +520,18 @@ SELECT
 min(birth_date), 
 first_name, 
 last_name
-FROM patients
-</code></pre>
+FROM patients</code></pre>
 </section>
 
 <section id="practice" class="title-slide slide level1 center">
 <h1>Practice</h1>
 <p>There are some built in problems on this platform.</p>
 <p>Try questions 1 - 4</p>
-<p><img data-src="./images/Questions_1_4_SQL_0.png"> # Why use R?</p>
+
+<img data-src="./images/Questions_1_4_SQL_0.png" class="r-stretch"></section>
+
+<section id="why-use-r" class="title-slide slide level1 center">
+<h1>Why use R?</h1>
 <p>We use R because SQL is good for looking up data, but not for visualizing it, creating custom functions, building websites to show off our work or machine learning.</p>
 <p>R is good at these things.</p>
 

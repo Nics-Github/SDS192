@@ -646,7 +646,7 @@ h1{font-weight: 400;}
 
 <!-- -   Final project Website -->
 
-<!-- # Day 3 Github Lab -->
+<!-- # Day 2 Github Lab -->
 
 <!-- <!--Note to self update github lab 1 it is out of date. updating github username, email and password should be in the terminal. -->
 
@@ -659,7 +659,7 @@ h1{font-weight: 400;}
 
 <!-- -   prereq- We need to have a github account -->
 
-<!-- -   https://classroom.github.com/a/ERIt75vu for lab 1 -->
+<!-- -   https://classroom.github.com/a/Ca2gHqyI for lab 1 -->
 
 <!-- -   find your name in the roster and click it. -->
 
@@ -680,7 +680,7 @@ h1{font-weight: 400;}
 -   Bring Computers to Class
 :::
 
--   [Make some of our own class data](https://forms.gle/bzaGFftbFczZMhRe7)
+-   [Make some of our own class data](https://docs.google.com/forms/d/e/1FAIpQLSdRR5mxYfqj5kSr1bu7dTGlMBdKdEhPG8wQ6o8iRMAY-wFAxQ/viewform?usp=sharing)
 
 -   [Overview of Intro to Data Science](./course-materials/lectures/1_Overview_of_the_course.qmd)
 
