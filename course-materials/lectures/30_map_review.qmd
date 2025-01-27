@@ -38,8 +38,9 @@ Note that in the case below the maps maps wins out. We even get a message.
 
 ```{r}
 detach("package:maps", unload = TRUE)
-library(maps)
 library(purrr)
+library(maps)
+
 
 west_coast <-c('California',"Oregon","Washington")
 
@@ -54,6 +55,7 @@ map("state", regions = west_coast, col = colors, fill = TRUE)
 This is a silly example. Just to show we sometimes have to be explicit with R when choosing our functions
 
 ```{r}
+library(dplyr)
 US_city_names <- maps::us.cities |> 
   select(name)
 
@@ -63,7 +65,7 @@ map(.x = US_city_names,
 
 # Explicitly tell R we want the map() from purrr
 purrr::map(.x = US_city_names,
-    .f = ~str_detect(.x, "a"))
+    .f = ~stringr::str_detect(.x, "a"))
 
 ```
 

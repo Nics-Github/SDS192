@@ -1,0 +1,1455 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.353">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>SDS 192 - In-class Exercises: Mapping</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../course-materials/website//images/192.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+<link href="../../site_libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet">
+<script src="../../site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+<script src="../../site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<link href="../../site_libs/leaflet-1.3.1/leaflet.css" rel="stylesheet">
+<script src="../../site_libs/leaflet-1.3.1/leaflet.js"></script>
+<link href="../../site_libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet">
+<script src="../../site_libs/proj4-2.6.2/proj4.min.js"></script>
+<script src="../../site_libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
+<link href="../../site_libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet">
+<script src="../../site_libs/leaflet-binding-2.2.2/leaflet.js"></script>
+
+
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">SDS 192</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../course-materials/website/Resources.html" rel="" target="">
+ <span class="menu-text">Resources</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://mdsr-book.github.io/mdsr3e/" rel="" target=""><i class="bi bi-book" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://moderndive.com/C-appendixC.html" rel="" target="">
+ <span class="menu-text">T &amp; T</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.slack.com" rel="" target=""><i class="bi bi-slack" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://rstudio.smith.edu/auth-sign-in?appUri=%2F" rel="" target="">
+ <span class="menu-text">R</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://moodle.smith.edu/" rel="" target="">
+ <span class="menu-text">m</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://classroom.github.com/classrooms/196546846-sds-192-spring-2025" rel="" target=""><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../course-materials/syllabus/syllabus.html" rel="" target="">
+ <span class="menu-text">Syllabus</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../course-materials/website/schwab.html" rel="" target="">
+ <span class="menu-text">Schwab</span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">In-class Exercises: Mapping</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="tip" class="level1 unnumbered">
+<h1 class="unnumbered">Tip</h1>
+<p>Do not run entire code blocks at once, as you’ll skip over a lot of very important details. Rather, I recommend you highlight small segments of code and run them individually using:</p>
+<ul>
+<li>macOS: Command + Enter</li>
+<li>Windows: Control + Enter</li>
+</ul>
+</section>
+<section id="converting-data-frames-to-sf-objects" class="level1">
+<h1>1. Converting data frames to sf objects</h1>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert pres_2016_trail data frame to sf object using st_as_sf() from sf</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"># package. Note we set the coordinate reference system to WGS84</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># https://spatialreference.org/ref/epsg/wgs-84/</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>pres_2016_trail_sf <span class="ot">&lt;-</span> pres_2016_trail <span class="sc">|&gt;</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">st_as_sf</span>(<span class="at">coords =</span> <span class="fu">c</span>(<span class="st">"lng"</span>, <span class="st">"lat"</span>), <span class="at">crs =</span> <span class="dv">4326</span>)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>pres_2016_trail_sf</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Simple feature collection with 177 features and 3 fields
+Geometry type: POINT
+Dimension:     XY
+Bounding box:  xmin: -122.4194 ymin: 25.76168 xmax: -68.77781 ymax: 44.97775
+Geodetic CRS:  WGS 84
+# A tibble: 177 × 4
+   candidate date       location                               geometry
+ * &lt;chr&gt;     &lt;date&gt;     &lt;chr&gt;                               &lt;POINT [°]&gt;
+ 1 Clinton   2016-09-05 Cleveland, Ohio            (-81.69436 41.49932)
+ 2 Clinton   2016-09-05 Hampton, Illinois           (-90.4093 41.55587)
+ 3 Clinton   2016-09-06 Tampa, Florida             (-82.45718 27.95058)
+ 4 Clinton   2016-09-07 New York City, New York    (-74.00594 40.71278)
+ 5 Clinton   2016-09-08 Charlotte, North Carolina  (-80.84313 35.22709)
+ 6 Clinton   2016-09-08 Kansas City, Missouri      (-94.57857 39.09973)
+ 7 Clinton   2016-09-09 New York City, New York    (-74.00594 40.71278)
+ 8 Clinton   2016-09-12 New York City, New York    (-74.00594 40.71278)
+ 9 Clinton   2016-09-15 Greensboro, North Carolina (-79.79198 36.07264)
+10 Clinton   2016-09-15 Washington, DC             (-77.03687 38.90719)
+# ℹ 167 more rows</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load maps package map object of US states and plot using default R plot</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co"># function (not ggplot2). Plot is not pretty!</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>USA_map <span class="ot">&lt;-</span>  maps<span class="sc">::</span><span class="fu">map</span>(<span class="st">"state"</span>, <span class="at">plot =</span> <span class="cn">FALSE</span>, <span class="at">fill =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(USA_map)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="27_Mapping_solutions_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid" width="768"></p>
+</div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert maps package map object to sf object using st_as_sf() again:</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>USA_sf <span class="ot">&lt;-</span> USA_map <span class="sc">|&gt;</span> </span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">st_as_sf</span>(<span class="at">coords =</span> <span class="fu">c</span>(<span class="st">"x"</span>, <span class="st">"y"</span>), <span class="at">crs =</span> <span class="dv">4326</span>)</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot both layers:</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> USA_sf) <span class="sc">+</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> pres_2016_trail_sf, <span class="fu">aes</span>(<span class="at">color =</span> candidate), <span class="at">size =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>candidate)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="27_Mapping_solutions_files/figure-html/unnamed-chunk-3-2.png" class="img-fluid" width="768"></p>
+</div>
+</div>
+<section id="exercise" class="level2">
+<h2 class="anchored" data-anchor-id="exercise">Exercise</h2>
+<p>Draw a map of the US with the 2 colleges I’ve worked at marked:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># How did I get the longitude and latitude for Worcester Polytechnic Institute and Smith College? By tapping into</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="co"># the OpenStreetMap (OSM) database using the geocode_OSM() function from the</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co"># tmaptools package. Be careful though, apparently you are limited to 2000</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co"># queries a day.</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>ne_colleges <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">name =</span> <span class="fu">c</span>(<span class="st">"Holyoke Community College"</span>, <span class="st">"Smith College"</span>), </span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">long =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="fl">72.6527</span>, <span class="sc">-</span><span class="fl">72.640</span>),</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">lat =</span> <span class="fu">c</span>(<span class="fl">42.1953</span>, <span class="fl">42.316</span>)</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Draw a map of only Massachusetts with Boston, Northampton, and Holyoke Marked. This will require you to manually create a data frame like <code>ne_colleges</code> above. You can use the geocode() function from yesterday, or just google each of the three places and make a data frame.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Obtain a map of Massachusetts counties from the maps package</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>ma_counties <span class="ot">&lt;-</span> maps<span class="sc">::</span><span class="fu">map</span>(<span class="st">"county"</span>,<span class="at">regions =</span> <span class="st">"massachusetts"</span>,  <span class="at">plot =</span> <span class="cn">FALSE</span>, <span class="at">fill =</span> <span class="cn">TRUE</span>) <span class="sc">|&gt;</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="co"># This sets the simple features </span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">st_as_sf</span>(<span class="at">coords =</span> <span class="fu">c</span>(<span class="st">"x"</span>, <span class="st">"y"</span>), <span class="at">crs =</span> <span class="dv">4326</span>) <span class="sc">|&gt;</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  <span class="co"># This adds a new column with the names of the counties. </span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">county_name =</span> <span class="fu">str_replace</span>(ID,<span class="at">pattern =</span> <span class="st">"massachusetts,"</span>, <span class="at">replace =</span> <span class="st">""</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Write your code below</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>Colleges <span class="ot">&lt;-</span> ne_colleges <span class="sc">|&gt;</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">st_as_sf</span>(<span class="at">coords =</span> <span class="fu">c</span>(<span class="st">"long"</span>, <span class="st">"lat"</span>), <span class="at">crs =</span> <span class="dv">4326</span>)</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> ma_counties)<span class="sc">+</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> Colleges)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="27_Mapping_solutions_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid" width="768"></p>
+</div>
+</div>
+</section>
+</section>
+<section id="loading-shapefiles-into-r" class="level1">
+<h1>2. Loading shapefiles into R</h1>
+<p>Let’s load a shapefile of all bike trails in Massachusetts as provided by <a href="https://www.mass.gov/info-details/massgis-data-bicycle-trails">MassGIS (Bureau of Geographic Information)</a></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load the "shapefile" contained in the biketrails_arc/ folder and load</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="co"># it into R using the sf package's read_sf() function.</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>bike_trails <span class="ot">&lt;-</span> <span class="fu">read_sf</span>(<span class="st">"biketrails_arc/"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">st_transform</span>(<span class="at">crs =</span> <span class="dv">4326</span>)</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot this data!</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> bike_trails, <span class="at">color =</span> <span class="st">"blue"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="27_Mapping_solutions_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid" width="768"></p>
+</div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># The above map lacks context however. Where are these bikepaths?</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Use ma_counties from problem 1 above obtain a map of Massachusetts counties.</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot this data!</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> ma_counties)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="27_Mapping_solutions_files/figure-html/unnamed-chunk-7-2.png" class="img-fluid" width="768"></p>
+</div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot both maps by adding both layers!</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> bike_trails, <span class="at">color =</span> <span class="st">"blue"</span>) <span class="sc">+</span> </span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> ma_counties) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="27_Mapping_solutions_files/figure-html/unnamed-chunk-7-3.png" class="img-fluid" width="768"></p>
+</div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Where did our bike paths go? The order you plot in matters! Switch the two</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="co"># geom_sf()</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> ma_counties) <span class="sc">+</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> bike_trails, <span class="at">color =</span> <span class="st">"blue"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="27_Mapping_solutions_files/figure-html/unnamed-chunk-7-4.png" class="img-fluid" width="768"></p>
+</div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Better! But what are these counties? Let's mark each counties' centroid</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>ma_counties <span class="ot">&lt;-</span> ma_counties <span class="sc">|&gt;</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Add centroids to each region using purrr package (covered in SDS 270 I believe)</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">lng =</span> purrr<span class="sc">::</span><span class="fu">map_dbl</span>(geom, <span class="sc">~</span><span class="fu">st_centroid</span>(.x)[[<span class="dv">1</span>]]),</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">lat =</span> purrr<span class="sc">::</span><span class="fu">map_dbl</span>(geom, <span class="sc">~</span><span class="fu">st_centroid</span>(.x)[[<span class="dv">2</span>]])</span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>ma_counties </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Simple feature collection with 14 features and 4 fields
+Geometry type: MULTIPOLYGON
+Dimension:     XY
+Bounding box:  xmin: -73.50475 ymin: 41.2415 xmax: -69.94669 ymax: 42.87443
+Geodetic CRS:  +proj=longlat +ellps=clrk66 +no_defs +type=crs
+First 10 features:
+                                               ID
+massachusetts,barnstable massachusetts,barnstable
+massachusetts,berkshire   massachusetts,berkshire
+massachusetts,bristol       massachusetts,bristol
+massachusetts,dukes           massachusetts,dukes
+massachusetts,essex           massachusetts,essex
+massachusetts,franklin     massachusetts,franklin
+massachusetts,hampden       massachusetts,hampden
+massachusetts,hampshire   massachusetts,hampshire
+massachusetts,middlesex   massachusetts,middlesex
+massachusetts,nantucket   massachusetts,nantucket
+                                                   geom county_name       lng
+massachusetts,barnstable MULTIPOLYGON (((-70.67435 4...  barnstable -70.28634
+massachusetts,berkshire  MULTIPOLYGON (((-73.49902 4...   berkshire -73.20492
+massachusetts,bristol    MULTIPOLYGON (((-71.16135 4...     bristol -71.10949
+massachusetts,dukes      MULTIPOLYGON (((-70.45089 4...       dukes -70.63476
+massachusetts,essex      MULTIPOLYGON (((-70.9952 42...       essex -70.97771
+massachusetts,franklin   MULTIPOLYGON (((-72.9719 42...    franklin -72.59141
+massachusetts,hampden    MULTIPOLYGON (((-72.23279 4...     hampden -72.62533
+massachusetts,hampshire  MULTIPOLYGON (((-72.99483 4...   hampshire -72.65910
+massachusetts,middlesex  MULTIPOLYGON (((-71.47648 4...   middlesex -71.38994
+massachusetts,nantucket  MULTIPOLYGON (((-70.06128 4...   nantucket -70.05303
+                              lat
+massachusetts,barnstable 41.73562
+massachusetts,berkshire  42.36783
+massachusetts,bristol    41.80539
+massachusetts,dukes      41.38519
+massachusetts,essex      42.66980
+massachusetts,franklin   42.58311
+massachusetts,hampden    42.13671
+massachusetts,hampshire  42.33916
+massachusetts,middlesex  42.48438
+massachusetts,nantucket  41.28930</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot! Notice how we define data = in the geom_point() instead of the ggplot().</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="co"># This sets the data set only for the geom_point() and not the other geoms.</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Any data = defined in the global ggplot() trickles down by default to the other</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="co"># geoms.</span></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> ma_counties, <span class="at">size =</span> <span class="fl">0.5</span>) <span class="sc">+</span></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> bike_trails, <span class="at">color =</span> <span class="st">"blue"</span>) <span class="sc">+</span></span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">data =</span> ma_counties, <span class="fu">aes</span>(<span class="at">x =</span> lng, <span class="at">y =</span> lat)) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="27_Mapping_solutions_files/figure-html/unnamed-chunk-7-5.png" class="img-fluid" width="768"></p>
+</div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Can we do better? Yes! Use geom_text() instead with the label aesthetic!</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> ma_counties, <span class="at">size =</span> <span class="fl">0.5</span>) <span class="sc">+</span></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> bike_trails, <span class="at">color =</span> <span class="st">"blue"</span>) <span class="sc">+</span></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(<span class="at">data =</span> ma_counties, <span class="fu">aes</span>(<span class="at">x =</span> lng, <span class="at">y =</span> lat, <span class="at">label =</span> county_name)) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="27_Mapping_solutions_files/figure-html/unnamed-chunk-7-6.png" class="img-fluid" width="768"></p>
+</div>
+</div>
+<section id="exercise-1" class="level2">
+<h2 class="anchored" data-anchor-id="exercise-1">Exercise</h2>
+<p>Create a map of the state of Vermont showing the top 9 ski resorts by Acres. Some of the resorts have leases on public land. the shape files are located in the Alpine_Ski_Area_Leases folder and were downloaded from https://geodata.vermont.gov/search?collection=Dataset. Add these to your map and color them blue.</p>
+<blockquote class="blockquote">
+<p>Hint: You get to get the coordinates using geocode(), then set <code>crs</code> , before using st_as_sf()</p>
+</blockquote>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Write your code below</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>ski_resorts <span class="ot">&lt;-</span> <span class="st">"https://bestmapsever.com/pages/vermont-ski-areas-resorts-list"</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="co"># This scraps the names, Acres, Vertical, Trails, and List from the website above. Use the slice_max() function to grab the top 9 resorts by acres.   </span></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>vt_ski_resorts <span class="ot">&lt;-</span> ski_resorts <span class="sc">|&gt;</span></span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">read_html</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_element</span>(<span class="st">"table"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_table</span>() <span class="sc">|&gt;</span></span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">clean_names</span>() <span class="sc">|&gt;</span></span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice_max</span>(<span class="at">order_by =</span> acres, <span class="at">n =</span> <span class="dv">10</span>)</span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a><span class="co"># geocode the addresses and save them in the vt_ski_resorts_df. wait 1 second per address.</span></span>
+<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a>vt_ski_resorts <span class="ot">&lt;-</span> vt_ski_resorts <span class="sc">|&gt;</span></span>
+<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geocode</span>(resort, <span class="at">method=</span><span class="st">"osm"</span>)</span>
+<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-17"><a href="#cb16-17" aria-hidden="true" tabindex="-1"></a><span class="co"># transfrom your data to have the correct projection.  </span></span>
+<span id="cb16-18"><a href="#cb16-18" aria-hidden="true" tabindex="-1"></a>vt_ski_resorts <span class="ot">&lt;-</span> vt_ski_resorts <span class="sc">|&gt;</span></span>
+<span id="cb16-19"><a href="#cb16-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">st_as_sf</span>(<span class="at">coords =</span> <span class="fu">c</span>(<span class="st">"long"</span>, <span class="st">"lat"</span>), <span class="at">crs =</span> <span class="dv">4326</span>, <span class="at">remove =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb16-20"><a href="#cb16-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-21"><a href="#cb16-21" aria-hidden="true" tabindex="-1"></a><span class="co"># Use map from the maps package to get your vermont map information. We don't need the counties just the state </span></span>
+<span id="cb16-22"><a href="#cb16-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-23"><a href="#cb16-23" aria-hidden="true" tabindex="-1"></a>vt_counties <span class="ot">&lt;-</span> maps<span class="sc">::</span><span class="fu">map</span>(<span class="st">"state"</span>,<span class="at">regions =</span> <span class="st">"vermont"</span>,  <span class="at">plot =</span> <span class="cn">FALSE</span>, <span class="at">fill =</span> <span class="cn">TRUE</span>) <span class="sc">|&gt;</span></span>
+<span id="cb16-24"><a href="#cb16-24" aria-hidden="true" tabindex="-1"></a>  <span class="co"># This sets the simple features </span></span>
+<span id="cb16-25"><a href="#cb16-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">st_as_sf</span>(<span class="at">coords =</span> <span class="fu">c</span>(<span class="st">"x"</span>, <span class="st">"y"</span>), <span class="at">crs =</span> <span class="dv">4326</span>) <span class="sc">|&gt;</span></span>
+<span id="cb16-26"><a href="#cb16-26" aria-hidden="true" tabindex="-1"></a>  <span class="co"># This adds a new column with the names of the counties. </span></span>
+<span id="cb16-27"><a href="#cb16-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">county_name =</span> <span class="fu">str_replace</span>(ID,<span class="at">pattern =</span> <span class="st">"vermont,"</span>, <span class="at">replace =</span> <span class="st">""</span>))</span>
+<span id="cb16-28"><a href="#cb16-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-29"><a href="#cb16-29" aria-hidden="true" tabindex="-1"></a><span class="co"># Load in the lease shape file. </span></span>
+<span id="cb16-30"><a href="#cb16-30" aria-hidden="true" tabindex="-1"></a>leases <span class="ot">&lt;-</span> <span class="fu">read_sf</span>(<span class="st">"Alpine_Ski_Area_Leases/"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb16-31"><a href="#cb16-31" aria-hidden="true" tabindex="-1"></a>  <span class="fu">st_transform</span>(<span class="at">crs =</span> <span class="dv">4326</span>)</span>
+<span id="cb16-32"><a href="#cb16-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-33"><a href="#cb16-33" aria-hidden="true" tabindex="-1"></a><span class="co"># plot the vermont ski areas. When plotting the ski resorts, set shape = 8  for a snowflake. Add the name with geom_text, set the size to 2 and nudge_x to move the names to the right.  </span></span>
+<span id="cb16-34"><a href="#cb16-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-35"><a href="#cb16-35" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>()<span class="sc">+</span></span>
+<span id="cb16-36"><a href="#cb16-36" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> vt_counties, <span class="at">color =</span> <span class="st">"green"</span>)<span class="sc">+</span></span>
+<span id="cb16-37"><a href="#cb16-37" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> leases, <span class="at">color=</span><span class="st">"blue"</span>)<span class="sc">+</span></span>
+<span id="cb16-38"><a href="#cb16-38" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> vt_ski_resorts, <span class="at">shape =</span> <span class="dv">8</span>, )<span class="sc">+</span></span>
+<span id="cb16-39"><a href="#cb16-39" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(<span class="at">data =</span> vt_ski_resorts, <span class="fu">aes</span>(<span class="at">x=</span>long, <span class="at">y=</span>lat, <span class="at">label=</span> resort), <span class="at">size =</span> <span class="dv">2</span>, <span class="at">nudge_x =</span> <span class="fl">0.75</span>)<span class="sc">+</span></span>
+<span id="cb16-40"><a href="#cb16-40" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()<span class="sc">+</span></span>
+<span id="cb16-41"><a href="#cb16-41" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
+<span id="cb16-42"><a href="#cb16-42" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.text =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb16-43"><a href="#cb16-43" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.line =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb16-44"><a href="#cb16-44" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.ticks =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb16-45"><a href="#cb16-45" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.grid =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb16-46"><a href="#cb16-46" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb16-47"><a href="#cb16-47" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb16-48"><a href="#cb16-48" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Top 9 Aki Areas VT"</span>,</span>
+<span id="cb16-49"><a href="#cb16-49" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"Resort Land leases in blue"</span>,</span>
+<span id="cb16-50"><a href="#cb16-50" aria-hidden="true" tabindex="-1"></a>    <span class="at">x=</span><span class="st">""</span>,</span>
+<span id="cb16-51"><a href="#cb16-51" aria-hidden="true" tabindex="-1"></a>    <span class="at">y=</span><span class="st">""</span></span>
+<span id="cb16-52"><a href="#cb16-52" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="27_Mapping_solutions_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid" width="768"></p>
+</div>
+</div>
+<p>part 7: Make go back and get the top 10 ski resorts in Vermont, instead of 9 and redraw your map, what do you notice? Why do you think this happened? How do you think we can get Pico on the VT map correctly? Try it below to make a map of the top 10 resorts.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>vt_ski_resorts <span class="ot">&lt;-</span> ski_resorts <span class="sc">|&gt;</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">read_html</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_element</span>(<span class="st">"table"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_table</span>() <span class="sc">|&gt;</span></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">clean_names</span>() <span class="sc">|&gt;</span></span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">resort_state =</span> <span class="fu">paste</span>(resort , <span class="st">", VT"</span>))<span class="sc">|&gt;</span></span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice_max</span>(<span class="at">order_by =</span> acres, <span class="at">n =</span> <span class="dv">10</span>)</span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a>vt_ski_resorts <span class="ot">&lt;-</span> vt_ski_resorts <span class="sc">|&gt;</span></span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geocode</span>(resort_state, <span class="at">method=</span><span class="st">"osm"</span>)</span>
+<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a><span class="co"># transfrom your data to have the correct projection.  </span></span>
+<span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a>vt_ski_resorts <span class="ot">&lt;-</span> vt_ski_resorts <span class="sc">|&gt;</span></span>
+<span id="cb17-14"><a href="#cb17-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">st_as_sf</span>(<span class="at">coords =</span> <span class="fu">c</span>(<span class="st">"long"</span>, <span class="st">"lat"</span>), <span class="at">crs =</span> <span class="dv">4326</span>, <span class="at">remove =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb17-15"><a href="#cb17-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-16"><a href="#cb17-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Use map from the maps package to get your vermont map information. We don't need the counties just the state </span></span>
+<span id="cb17-17"><a href="#cb17-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-18"><a href="#cb17-18" aria-hidden="true" tabindex="-1"></a>vt_counties <span class="ot">&lt;-</span> maps<span class="sc">::</span><span class="fu">map</span>(<span class="st">"state"</span>,<span class="at">regions =</span> <span class="st">"vermont"</span>,  <span class="at">plot =</span> <span class="cn">FALSE</span>, <span class="at">fill =</span> <span class="cn">TRUE</span>) <span class="sc">|&gt;</span></span>
+<span id="cb17-19"><a href="#cb17-19" aria-hidden="true" tabindex="-1"></a>  <span class="co"># This sets the simple features </span></span>
+<span id="cb17-20"><a href="#cb17-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">st_as_sf</span>(<span class="at">coords =</span> <span class="fu">c</span>(<span class="st">"x"</span>, <span class="st">"y"</span>), <span class="at">crs =</span> <span class="dv">4326</span>) <span class="sc">|&gt;</span></span>
+<span id="cb17-21"><a href="#cb17-21" aria-hidden="true" tabindex="-1"></a>  <span class="co"># This adds a new column with the names of the counties. </span></span>
+<span id="cb17-22"><a href="#cb17-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">county_name =</span> <span class="fu">str_replace</span>(ID,<span class="at">pattern =</span> <span class="st">"vermont,"</span>, <span class="at">replace =</span> <span class="st">""</span>))</span>
+<span id="cb17-23"><a href="#cb17-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-24"><a href="#cb17-24" aria-hidden="true" tabindex="-1"></a><span class="co"># Load in the lease shape file. </span></span>
+<span id="cb17-25"><a href="#cb17-25" aria-hidden="true" tabindex="-1"></a>leases <span class="ot">&lt;-</span> <span class="fu">read_sf</span>(<span class="st">"Alpine_Ski_Area_Leases/"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb17-26"><a href="#cb17-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">st_transform</span>(<span class="at">crs =</span> <span class="dv">4326</span>)</span>
+<span id="cb17-27"><a href="#cb17-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-28"><a href="#cb17-28" aria-hidden="true" tabindex="-1"></a><span class="co"># plot the vermont ski areas. When plotting the ski resorts, set shape = 8  for a snowflake. Add the name with geom_text, set the size to 2 and nudge_x to move the names to the right.  </span></span>
+<span id="cb17-29"><a href="#cb17-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-30"><a href="#cb17-30" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>()<span class="sc">+</span></span>
+<span id="cb17-31"><a href="#cb17-31" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> vt_counties, <span class="at">color =</span> <span class="st">"green"</span>)<span class="sc">+</span></span>
+<span id="cb17-32"><a href="#cb17-32" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> leases, <span class="at">color=</span><span class="st">"blue"</span>)<span class="sc">+</span></span>
+<span id="cb17-33"><a href="#cb17-33" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> vt_ski_resorts, <span class="at">shape =</span> <span class="dv">8</span>, )<span class="sc">+</span></span>
+<span id="cb17-34"><a href="#cb17-34" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(<span class="at">data =</span> vt_ski_resorts, <span class="fu">aes</span>(<span class="at">x=</span>long, <span class="at">y=</span>lat, <span class="at">label=</span> resort), <span class="at">size =</span> <span class="dv">2</span>, <span class="at">nudge_x =</span> <span class="fl">0.75</span>)<span class="sc">+</span></span>
+<span id="cb17-35"><a href="#cb17-35" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()<span class="sc">+</span></span>
+<span id="cb17-36"><a href="#cb17-36" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
+<span id="cb17-37"><a href="#cb17-37" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.text =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb17-38"><a href="#cb17-38" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.line =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb17-39"><a href="#cb17-39" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.ticks =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb17-40"><a href="#cb17-40" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.grid =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb17-41"><a href="#cb17-41" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb17-42"><a href="#cb17-42" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb17-43"><a href="#cb17-43" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Top 9 Aki Areas VT"</span>,</span>
+<span id="cb17-44"><a href="#cb17-44" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"Resort Land leases in blue"</span>,</span>
+<span id="cb17-45"><a href="#cb17-45" aria-hidden="true" tabindex="-1"></a>    <span class="at">x=</span><span class="st">""</span>,</span>
+<span id="cb17-46"><a href="#cb17-46" aria-hidden="true" tabindex="-1"></a>    <span class="at">y=</span><span class="st">""</span></span>
+<span id="cb17-47"><a href="#cb17-47" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="27_Mapping_solutions_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid" width="768"></p>
+</div>
+</div>
+</section>
+</section>
+<section id="interactive-maps-using-leaflet" class="level1">
+<h1>3. Interactive maps using leaflet</h1>
+<p>Draw an interative map of a previous school or place you went.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Interactive map example:</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="fu">leaflet</span>() <span class="sc">|&gt;</span></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">addTiles</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">addMarkers</span>(<span class="at">lng =</span> <span class="sc">-</span><span class="fl">72.64039</span>, </span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>             <span class="at">lat =</span> <span class="fl">42.31622</span>,</span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>             <span class="at">popup =</span> <span class="st">"Smith College"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="leaflet html-widget html-fill-item" id="htmlwidget-5564978dc8c759731aa8" style="width:100%;height:365px;"></div>
+<script type="application/json" data-for="htmlwidget-5564978dc8c759731aa8">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org/copyright/\">OpenStreetMap<\/a>,  <a href=\"https://opendatacommons.org/licenses/odbl/\">ODbL<\/a>"}]},{"method":"addMarkers","args":[42.31622,-72.64039,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"Smith College",null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[42.31622,42.31622],"lng":[-72.64039,-72.64039]}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot sf objects in leaflet:</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="fu">leaflet</span>() <span class="sc">|&gt;</span></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">addTiles</span>() <span class="sc">|&gt;</span></span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">addPolygons</span>(<span class="at">data =</span> ma_counties)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="leaflet html-widget html-fill-item" id="htmlwidget-b1a464c8f8318d0fea1c" style="width:100%;height:365px;"></div>
+<script type="application/json" data-for="htmlwidget-b1a464c8f8318d0fea1c">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org/copyright/\">OpenStreetMap<\/a>,  <a href=\"https://opendatacommons.org/licenses/odbl/\">ODbL<\/a>"}]},{"method":"addPolygons","args":[[[[{"lng":[-70.67434692382812,-70.53683471679688,-70.53683471679688,-70.513916015625,-70.47953796386719,-70.41078186035156,-70.33629608154297,-70.25608062744141,-70.17587280273438,-70.08992767333984,-70.04981994628906,-70.02690124511719,-70.02117156982422,-70.02690124511719,-70.04981994628906,-70.08419799804688,-70.08992767333984,-70.08992767333984,-70.08419799804688,-70.10711669921875,-70.13576507568359,-70.16440582275391,-70.18160247802734,-70.19879150390625,-70.21598052978516,-70.23316955566406,-70.25035095214844,-70.25035095214844,-70.23316955566406,-70.21024322509766,-70.16440582275391,-70.12430572509766,-70.08419799804688,-70.03263092041016,-69.99825286865234,-69.94669342041016,-69.95242309570312,-69.96387481689453,-69.97533416748047,-69.94669342041016,-69.94669342041016,-69.95814514160156,-69.9696044921875,-69.95814514160156,-69.94669342041016,-69.96387481689453,-69.98106384277344,-69.99253082275391,-69.99825286865234,-70.01544189453125,-70.04981994628906,-70.09565734863281,-70.13003540039062,-70.15867614746094,-70.18733215332031,-70.21024322509766,-70.25035095214844,-70.27900695800781,-70.33629608154297,-70.35349273681641,-70.38786315917969,-70.42797088623047,-70.43943023681641,-70.46234893798828,-70.49099731445312,-70.66287994384766,-70.66287994384766,-70.64569854736328,-70.65142822265625,-70.62850952148438,-70.62277984619141,-70.64569854736328,-70.67434692382812],"lat":[41.73997497558594,41.79727172851562,41.79727172851562,41.78008270263672,41.75716400146484,41.73424530029297,41.72278594970703,41.73997497558594,41.76289367675781,41.78008270263672,41.79727172851562,41.82592010498047,41.84883880615234,41.911865234375,41.92332077026367,41.9175910949707,41.92905426025391,41.96342849731445,41.99780654907227,42.02072525024414,42.03791046142578,42.04937362670898,42.04937362670898,42.03791046142578,42.02645492553711,42.03218460083008,42.04937362670898,42.06656265258789,42.08374786376953,42.08948135375977,42.08374786376953,42.06656265258789,42.05510330200195,42.0092658996582,41.96342849731445,41.85456466674805,41.83164596557617,41.82592010498047,41.80873107910156,41.79727172851562,41.76862335205078,41.74570465087891,41.72278594970703,41.67694854736328,41.64257431030273,41.59673690795898,41.58527374267578,41.59100723266602,41.64257431030273,41.65402984619141,41.66548919677734,41.65976333618164,41.65402984619141,41.65976333618164,41.66548919677734,41.65402984619141,41.63111114501953,41.64257431030273,41.63111114501953,41.62538146972656,41.63111114501953,41.62538146972656,41.61965560913086,41.57954788208008,41.55089950561523,41.54516983032227,41.59100723266602,41.63111114501953,41.68840789794922,41.71132659912109,41.72278594970703,41.73424530029297,41.73997497558594]}]],[[{"lng":[-73.4990234375,-73.50475311279297,-73.47610473632812,-73.41880798339844,-73.37870025634766,-73.35005950927734,-73.31568145751953,-73.27557373046875,-73.28130340576172,-73.02920532226562,-73.02346801757812,-72.96044158935547,-72.97763061523438,-72.97763061523438,-72.96617126464844,-72.93753051757812,-72.94898986816406,-72.96044158935547,-72.97190093994141,-72.97763061523438,-72.96617126464844,-73.01200866699219,-73.05211639404297,-73.05784606933594,-73.05784606933594,-73.04638671875,-73.01773834228516,-72.99482727050781,-72.99482727050781,-72.99482727050781,-73.03493499755859,-73.05784606933594,-73.05784606933594,-73.06930541992188,-73.05211639404297,-73.04065704345703,-73.4990234375],"lat":[42.04937362670898,42.09521102905273,42.17542266845703,42.32439041137695,42.45617294311523,42.51346588134766,42.59941101074219,42.70254516601562,42.74265289306641,42.73691940307617,42.70254516601562,42.69108581542969,42.67962646484375,42.66816711425781,42.66243743896484,42.64524841308594,42.62232971191406,42.61087417602539,42.55357360839844,42.53065490722656,42.53065490722656,42.38741683959961,42.39314651489258,42.3530387878418,42.33585357666016,42.32439041137695,42.31866455078125,42.31866455078125,42.29001617431641,42.23271942138672,42.15250396728516,42.15250396728516,42.12385559082031,42.10666656494141,42.07801818847656,42.04364395141602,42.04937362670898]}]],[[{"lng":[-71.16135406494141,-71.16709136962891,-71.20146179199219,-71.26449584960938,-71.32178497314453,-71.33897399902344,-71.34470367431641,-71.35044097900391,-71.37908172607422,-71.38481140136719,-71.08687591552734,-71.05249786376953,-71.02384185791016,-71.00093078613281,-71.00093078613281,-70.97801208496094,-70.97228240966797,-71.02957916259766,-71.01239013671875,-71.01239013671875,-70.91498565673828,-70.89206695556641,-70.8748779296875,-70.81758117675781,-70.84049987792969,-70.85196685791016,-70.8748779296875,-70.89206695556641,-70.91498565673828,-70.96082305908203,-70.96082305908203,-70.95509338378906,-70.96082305908203,-70.99520111083984,-70.99520111083984,-71.00666046142578,-71.06395721435547,-71.08114624023438,-71.10978698730469,-71.13844299316406,-71.15562438964844,-71.16135406494141],"lat":[41.71705627441406,41.74570465087891,41.75143432617188,41.75716400146484,41.77435302734375,41.79727172851562,41.81446075439453,41.911865234375,41.911865234375,41.98634719848633,42.08948135375977,41.98061752319336,41.96342849731445,41.94050979614258,41.92905426025391,41.89467239379883,41.86029815673828,41.82592010498047,41.80300140380859,41.78008270263672,41.78008270263672,41.75716400146484,41.75716400146484,41.63111114501953,41.61965560913086,41.59673690795898,41.59673690795898,41.60819244384766,41.60819244384766,41.57954788208008,41.56235504150391,41.53371047973633,41.52798080444336,41.53371047973633,41.51652145385742,41.50506210327148,41.49933624267578,41.54516983032227,41.5394401550293,41.65402984619141,41.68840789794922,41.71705627441406]}]],[[{"lng":[-70.45088958740234,-70.45661926269531,-70.45661926269531,-70.46807861328125,-70.50818634033203,-70.56548309326172,-70.61704254150391,-70.68007659912109,-70.70871734619141,-70.73736572265625,-70.74309539794922,-70.77747344970703,-70.80039215087891,-70.81758117675781,-70.82904052734375,-70.82904052734375,-70.82331085205078,-70.80612945556641,-70.77747344970703,-70.74309539794922,-70.69725799560547,-70.63996887207031,-70.61704254150391,-70.61131286621094,-70.61704254150391,-70.61131286621094,-70.59413146972656,-70.56548309326172,-70.54829406738281,-70.54829406738281,-70.53110504150391,-70.49672698974609,-70.48526763916016,-70.46807861328125,-70.45661926269531,-70.45088958740234],"lat":[41.40192794799805,41.39047241210938,41.37328338623047,41.35609436035156,41.35609436035156,41.34463500976562,41.34463500976562,41.34463500976562,41.33890533447266,41.33890533447266,41.32744598388672,41.31025695800781,41.30452728271484,41.31025695800781,41.32744598388672,41.34463500976562,41.35609436035156,41.35036468505859,41.34463500976562,41.37328338623047,41.43058013916016,41.47068405151367,41.47641754150391,41.47068405151367,41.4477653503418,41.4477653503418,41.4477653503418,41.45349884033203,41.44203567504883,41.40192794799805,41.39047241210938,41.39047241210938,41.40192794799805,41.41911697387695,41.41911697387695,41.40192794799805]}]],[[{"lng":[-70.99520111083984,-71.01811981201172,-71.02384185791016,-71.05249786376953,-71.03530883789062,-71.04103851318359,-71.06967926025391,-71.08114624023438,-71.06967926025391,-71.07541656494141,-71.05249786376953,-71.0582275390625,-71.12125396728516,-71.15562438964844,-71.17855072021484,-71.17855072021484,-71.25302886962891,-71.23583984375,-71.23583984375,-71.23583984375,-71.21865844726562,-71.19573211669922,-71.19573211669922,-71.19573211669922,-71.17855072021484,-71.14417266845703,-71.08687591552734,-71.06967926025391,-71.04103851318359,-71.01239013671875,-70.90925598144531,-70.88633728027344,-70.84049987792969,-70.84622955322266,-70.85769653320312,-70.85769653320312,-70.83477020263672,-70.81758117675781,-70.82331085205078,-70.783203125,-70.77175140380859,-70.77175140380859,-70.72018432617188,-70.70298767089844,-70.69725799560547,-70.71445465087891,-70.76029205322266,-70.84622955322266,-70.8748779296875,-70.88633728027344,-70.88060760498047,-70.85769653320312,-70.85769653320312,-70.86914825439453,-70.93790435791016,-70.97228240966797,-70.99520111083984],"lat":[42.43325424194336,42.43898391723633,42.43898391723633,42.47336196899414,42.49054718017578,42.52492904663086,42.52492904663086,42.54211807250977,42.54784774780273,42.58222198486328,42.58795547485352,42.61087417602539,42.58795547485352,42.61087417602539,42.61087417602539,42.62232971191406,42.65670776367188,42.66816711425781,42.70254516601562,42.73119354248047,42.73119354248047,42.73691940307617,42.75983810424805,42.78849029541016,42.8056755065918,42.81140899658203,42.8056755065918,42.81140899658203,42.85724639892578,42.86870193481445,42.87443161010742,42.87443161010742,42.85724639892578,42.817138671875,42.81140899658203,42.79421997070312,42.75983810424805,42.71973419189453,42.69681549072266,42.68535614013672,42.67962646484375,42.64524841308594,42.63951873779297,42.62232971191406,42.58795547485352,42.57076263427734,42.55930328369141,42.55357360839844,42.54211807250977,42.52492904663086,42.51346588134766,42.50201034545898,42.49628067016602,42.47336196899414,42.45617294311523,42.45044326782227,42.43325424194336]}]],[[{"lng":[-72.97190093994141,-72.96044158935547,-72.94898986816406,-72.93753051757812,-72.96617126464844,-72.97763061523438,-72.97763061523438,-72.96044158935547,-73.02346801757812,-73.02920532226562,-72.92606353759766,-72.47342681884766,-72.28435516357422,-72.27289581298828,-72.24424743652344,-72.24424743652344,-72.22705841064453,-72.20987701416016,-72.22705841064453,-72.24424743652344,-72.26143646240234,-72.27289581298828,-72.27289581298828,-72.24424743652344,-72.24424743652344,-72.28435516357422,-72.29008483886719,-72.29581451416016,-72.30154418945312,-72.30727386474609,-72.30154418945312,-72.31300354003906,-72.31300354003906,-72.324462890625,-72.34738159179688,-72.35884094238281,-72.38175201416016,-72.37602996826172,-72.47915649414062,-72.49635314941406,-72.70261383056641,-72.70261383056641,-72.74845123291016,-72.76564025878906,-72.76564025878906,-72.83438873291016,-72.87450408935547,-72.8687744140625,-72.87450408935547,-72.88022613525391,-72.97190093994141],"lat":[42.55357360839844,42.61087417602539,42.62232971191406,42.64524841308594,42.66243743896484,42.66816711425781,42.67962646484375,42.69108581542969,42.70254516601562,42.73691940307617,42.73691940307617,42.73119354248047,42.7254638671875,42.67389678955078,42.66816711425781,42.65670776367188,42.65670776367188,42.62232971191406,42.61087417602539,42.61087417602539,42.58222198486328,42.57649230957031,42.53065490722656,42.50774002075195,42.49054718017578,42.48482131958008,42.47336196899414,42.43898391723633,42.41606521606445,42.39314651489258,42.37595748901367,42.3702278137207,42.35877227783203,42.34730911254883,42.3530387878418,42.35877227783203,42.39314651489258,42.41606521606445,42.41033554077148,42.42752456665039,42.40460968017578,42.4447135925293,42.43898391723633,42.4447135925293,42.45044326782227,42.47336196899414,42.48482131958008,42.51346588134766,42.52492904663086,42.53065490722656,42.55357360839844]}]],[[{"lng":[-72.2327880859375,-72.24424743652344,-72.26143646240234,-72.19841003417969,-72.19268035888672,-72.12966156005859,-72.12966156005859,-72.50208282470703,-72.55364227294922,-72.74845123291016,-72.75991058349609,-72.81720733642578,-72.81720733642578,-73.01200866699219,-73.04065704345703,-73.05211639404297,-73.06930541992188,-73.05784606933594,-73.05784606933594,-73.03493499755859,-72.99482727050781,-72.99482727050781,-72.99482727050781,-72.93753051757812,-72.93753051757812,-72.88022613525391,-72.87450408935547,-72.87450408935547,-72.88022613525391,-72.90888214111328,-72.87450408935547,-72.84585571289062,-72.80574798583984,-72.80574798583984,-72.78855895996094,-72.78855895996094,-72.77136993408203,-72.777099609375,-72.69688415527344,-72.69115447998047,-72.66824340820312,-72.65677642822266,-72.64531707763672,-72.62813568115234,-72.61093902587891,-72.60520935058594,-72.61093902587891,-72.61666870117188,-72.61093902587891,-72.59375,-72.41040802001953,-72.39894866943359,-72.34738159179688,-72.33592224121094,-72.2327880859375],"lat":[42.23844909667969,42.20980072021484,42.18688201904297,42.15823745727539,42.15250396728516,42.16396331787109,42.03791046142578,42.03791046142578,42.03218460083008,42.03791046142578,42.00353622436523,42.0092658996582,42.03791046142578,42.04364395141602,42.04364395141602,42.07801818847656,42.10666656494141,42.12385559082031,42.15250396728516,42.15250396728516,42.23271942138672,42.29001617431641,42.31866455078125,42.32439041137695,42.34158325195312,42.33585357666016,42.30147552490234,42.28428268432617,42.26709747314453,42.23844909667969,42.21553039550781,42.24417877197266,42.24417877197266,42.23271942138672,42.22698974609375,42.21553039550781,42.21553039550781,42.19834136962891,42.18688201904297,42.21553039550781,42.22126007080078,42.23271942138672,42.26136779785156,42.27855682373047,42.27855682373047,42.27855682373047,42.26136779785156,42.24417877197266,42.22698974609375,42.21553039550781,42.22698974609375,42.20980072021484,42.20980072021484,42.22698974609375,42.23844909667969]}]],[[{"lng":[-72.99482727050781,-73.01773834228516,-73.04638671875,-73.05784606933594,-73.05784606933594,-73.05211639404297,-73.01200866699219,-72.96617126464844,-72.97763061523438,-72.97190093994141,-72.88022613525391,-72.87450408935547,-72.8687744140625,-72.87450408935547,-72.83438873291016,-72.76564025878906,-72.76564025878906,-72.74845123291016,-72.70261383056641,-72.70261383056641,-72.49635314941406,-72.47915649414062,-72.37602996826172,-72.38175201416016,-72.35884094238281,-72.34738159179688,-72.324462890625,-72.31300354003906,-72.31300354003906,-72.30154418945312,-72.29008483886719,-72.27862548828125,-72.27862548828125,-72.27862548828125,-72.20987701416016,-72.21560668945312,-72.20413970947266,-72.20987701416016,-72.20413970947266,-72.20987701416016,-72.2327880859375,-72.33592224121094,-72.34738159179688,-72.39894866943359,-72.41040802001953,-72.59375,-72.61093902587891,-72.61666870117188,-72.61093902587891,-72.60520935058594,-72.61093902587891,-72.62813568115234,-72.64531707763672,-72.65677642822266,-72.66824340820312,-72.69115447998047,-72.69688415527344,-72.777099609375,-72.77136993408203,-72.78855895996094,-72.78855895996094,-72.80574798583984,-72.80574798583984,-72.84585571289062,-72.87450408935547,-72.90888214111328,-72.88022613525391,-72.87450408935547,-72.87450408935547,-72.88022613525391,-72.93753051757812,-72.93753051757812,-72.99482727050781],"lat":[42.31866455078125,42.31866455078125,42.32439041137695,42.33585357666016,42.3530387878418,42.39314651489258,42.38741683959961,42.53065490722656,42.53065490722656,42.55357360839844,42.53065490722656,42.52492904663086,42.51346588134766,42.48482131958008,42.47336196899414,42.45044326782227,42.4447135925293,42.43898391723633,42.4447135925293,42.40460968017578,42.42752456665039,42.41033554077148,42.41606521606445,42.39314651489258,42.35877227783203,42.3530387878418,42.34730911254883,42.35877227783203,42.3702278137207,42.37595748901367,42.37595748901367,42.3702278137207,42.33585357666016,42.29574584960938,42.30147552490234,42.29574584960938,42.28428268432617,42.26136779785156,42.25563812255859,42.24990844726562,42.23844909667969,42.22698974609375,42.20980072021484,42.20980072021484,42.22698974609375,42.21553039550781,42.22698974609375,42.24417877197266,42.26136779785156,42.27855682373047,42.27855682373047,42.27855682373047,42.26136779785156,42.23271942138672,42.22126007080078,42.21553039550781,42.18688201904297,42.19834136962891,42.21553039550781,42.21553039550781,42.22698974609375,42.23271942138672,42.24417877197266,42.24417877197266,42.21553039550781,42.23844909667969,42.26709747314453,42.28428268432617,42.30147552490234,42.33585357666016,42.34158325195312,42.32439041137695,42.31866455078125]}]],[[{"lng":[-71.47647857666016,-71.48221588134766,-71.49367523193359,-71.49367523193359,-71.58535003662109,-71.59680938720703,-71.58535003662109,-71.56242370605469,-71.51659393310547,-71.49367523193359,-71.48221588134766,-71.5108642578125,-71.52805328369141,-71.53951263427734,-71.55097198486328,-71.58535003662109,-71.61399078369141,-71.58535003662109,-71.59680938720703,-71.57389068603516,-71.56242370605469,-71.54524230957031,-71.55097198486328,-71.54524230957031,-71.53378295898438,-71.53951263427734,-71.58535003662109,-71.59680938720703,-71.61399078369141,-71.63118743896484,-71.67129516601562,-71.66556549072266,-71.7801513671875,-71.78588104248047,-71.86609649658203,-71.86609649658203,-71.89474487304688,-71.90047454833984,-71.74577331542969,-71.34470367431641,-71.31033325195312,-71.28167724609375,-71.26449584960938,-71.23583984375,-71.23583984375,-71.23583984375,-71.25302886962891,-71.17855072021484,-71.17855072021484,-71.15562438964844,-71.12125396728516,-71.0582275390625,-71.05249786376953,-71.07541656494141,-71.06967926025391,-71.08114624023438,-71.06967926025391,-71.04103851318359,-71.03530883789062,-71.05249786376953,-71.02384185791016,-71.01811981201172,-70.99520111083984,-71.00093078613281,-71.00666046142578,-71.00093078613281,-71.02384185791016,-71.04676818847656,-71.04676818847656,-71.07541656494141,-71.09260559082031,-71.10978698730469,-71.12698364257812,-71.13271331787109,-71.17282104492188,-71.15562438964844,-71.16709136962891,-71.16135406494141,-71.17855072021484,-71.22438812255859,-71.25302886962891,-71.29313659667969,-71.33324432373047,-71.30460357666016,-71.32178497314453,-71.32178497314453,-71.33324432373047,-71.34470367431641,-71.39054107666016,-71.39627075195312,-71.419189453125,-71.43064880371094,-71.45356750488281,-71.47647857666016],"lat":[42.15250396728516,42.16969299316406,42.16969299316406,42.19261169433594,42.19261169433594,42.21553039550781,42.25563812255859,42.2728271484375,42.27855682373047,42.28428268432617,42.30147552490234,42.31293487548828,42.32439041137695,42.33012008666992,42.32439041137695,42.31293487548828,42.3530387878418,42.38169097900391,42.39887619018555,42.41033554077148,42.41606521606445,42.46762847900391,42.46762847900391,42.50774002075195,42.51919937133789,42.54211807250977,42.54784774780273,42.54211807250977,42.54784774780273,42.52492904663086,42.53065490722656,42.60514068603516,42.63951873779297,42.6337890625,42.6337890625,42.67389678955078,42.68535614013672,42.71400451660156,42.70254516601562,42.69681549072266,42.69681549072266,42.71400451660156,42.7254638671875,42.73119354248047,42.70254516601562,42.66816711425781,42.65670776367188,42.62232971191406,42.61087417602539,42.61087417602539,42.58795547485352,42.61087417602539,42.58795547485352,42.58222198486328,42.54784774780273,42.54211807250977,42.52492904663086,42.52492904663086,42.49054718017578,42.47336196899414,42.43898391723633,42.43898391723633,42.43325424194336,42.41606521606445,42.39887619018555,42.37595748901367,42.38169097900391,42.37595748901367,42.35877227783203,42.35877227783203,42.3530387878418,42.34730911254883,42.35877227783203,42.35877227783203,42.3530387878418,42.33012008666992,42.31293487548828,42.30147552490234,42.29001617431641,42.31866455078125,42.33012008666992,42.33012008666992,42.31293487548828,42.26709747314453,42.24990844726562,42.23844909667969,42.22126007080078,42.20407104492188,42.19261169433594,42.18115234375,42.18115234375,42.18115234375,42.15823745727539,42.15250396728516]}]],[[{"lng":[-70.061279296875,-70.03836059570312,-70.02117156982422,-70.01544189453125,-70.04409027099609,-70.04981994628906,-70.03263092041016,-70.04981994628906,-70.04409027099609,-70.02690124511719,-70.01544189453125,-69.99253082275391,-69.98679351806641,-69.98679351806641,-69.9696044921875,-69.95242309570312,-69.95242309570312,-69.97533416748047,-70.02117156982422,-70.04981994628906,-70.09565734863281,-70.1529541015625,-70.18160247802734,-70.21024322509766,-70.21024322509766,-70.18160247802734,-70.1529541015625,-70.13003540039062,-70.08992767333984,-70.061279296875],"lat":[41.27587890625,41.28160858154297,41.29879760742188,41.31598663330078,41.31598663330078,41.32744598388672,41.35036468505859,41.37328338623047,41.38474273681641,41.38474273681641,41.37328338623047,41.34463500976562,41.31598663330078,41.31025695800781,41.28733825683594,41.27587890625,41.25868988037109,41.25296401977539,41.24150085449219,41.24150085449219,41.25296401977539,41.25868988037109,41.25868988037109,41.27587890625,41.28160858154297,41.28733825683594,41.29306793212891,41.29306793212891,41.27587890625,41.27587890625]}]],[[{"lng":[-71.47647857666016,-71.45356750488281,-71.43064880371094,-71.419189453125,-71.39627075195312,-71.39054107666016,-71.34470367431641,-71.33324432373047,-71.32178497314453,-71.32178497314453,-71.30460357666016,-71.33324432373047,-71.29313659667969,-71.25302886962891,-71.22438812255859,-71.17855072021484,-71.16135406494141,-71.15562438964844,-71.14417266845703,-71.12125396728516,-71.10978698730469,-71.06395721435547,-71.03530883789062,-71.02384185791016,-70.98947143554688,-70.96082305908203,-70.92644500732422,-70.92071533203125,-70.91498565673828,-70.90925598144531,-71.08687591552734,-71.38481140136719,-71.39054107666016,-71.49367523193359,-71.48794555664062,-71.48221588134766,-71.47647857666016],"lat":[42.15250396728516,42.15823745727539,42.18115234375,42.18115234375,42.18115234375,42.19261169433594,42.20407104492188,42.22126007080078,42.23844909667969,42.24990844726562,42.26709747314453,42.31293487548828,42.33012008666992,42.33012008666992,42.31866455078125,42.29001617431641,42.27855682373047,42.26709747314453,42.26136779785156,42.23844909667969,42.26709747314453,42.2728271484375,42.27855682373047,42.26136779785156,42.23844909667969,42.22698974609375,42.23271942138672,42.20980072021484,42.18115234375,42.16396331787109,42.08948135375977,41.98634719848633,42.02645492553711,42.02645492553711,42.12385559082031,42.12385559082031,42.15250396728516]}]],[[{"lng":[-70.53683471679688,-70.67434692382812,-70.69725799560547,-70.72591400146484,-70.74309539794922,-70.77175140380859,-70.78893280029297,-70.81758117675781,-70.8748779296875,-70.89206695556641,-70.91498565673828,-71.01239013671875,-71.01239013671875,-71.02957916259766,-70.97228240966797,-70.97801208496094,-71.00093078613281,-71.00093078613281,-71.02384185791016,-71.05249786376953,-71.08687591552734,-70.90925598144531,-70.91498565673828,-70.92071533203125,-70.92644500732422,-70.91498565673828,-70.90925598144531,-70.89780426025391,-70.8748779296875,-70.84622955322266,-70.78893280029297,-70.73164367675781,-70.72591400146484,-70.73164367675781,-70.72018432617188,-70.66287994384766,-70.64569854736328,-70.63996887207031,-70.61704254150391,-70.61704254150391,-70.62277984619141,-70.64569854736328,-70.65142822265625,-70.67434692382812,-70.68580627441406,-70.70298767089844,-70.69153594970703,-70.66287994384766,-70.64569854736328,-70.6055908203125,-70.56548309326172,-70.55402374267578,-70.54829406738281,-70.53683471679688],"lat":[41.79727172851562,41.73997497558594,41.74570465087891,41.73997497558594,41.71705627441406,41.66548919677734,41.64830017089844,41.63111114501953,41.75716400146484,41.75716400146484,41.78008270263672,41.78008270263672,41.80300140380859,41.82592010498047,41.86029815673828,41.89467239379883,41.92905426025391,41.94050979614258,41.96342849731445,41.98061752319336,42.08948135375977,42.16396331787109,42.18115234375,42.20980072021484,42.23271942138672,42.24417877197266,42.25563812255859,42.29001617431641,42.26709747314453,42.24990844726562,42.23844909667969,42.20407104492188,42.18115234375,42.15250396728516,42.13531875610352,42.11240005493164,42.09521102905273,42.03791046142578,42.02645492553711,42.0092658996582,42.0092658996582,42.0092658996582,42.02645492553711,42.03218460083008,42.03218460083008,41.99780654907227,41.97488784790039,41.95197296142578,41.94623947143555,41.94623947143555,41.93478012084961,41.90613555908203,41.82592010498047,41.79727172851562]}]],[[{"lng":[-71.17855072021484,-71.16135406494141,-71.16709136962891,-71.15562438964844,-71.17282104492188,-71.13271331787109,-71.12698364257812,-71.10978698730469,-71.09260559082031,-71.07541656494141,-71.04676818847656,-71.04676818847656,-71.04103851318359,-71.04676818847656,-71.04103851318359,-71.03530883789062,-71.06395721435547,-71.10978698730469,-71.12125396728516,-71.14417266845703,-71.15562438964844,-71.16135406494141,-71.17855072021484],"lat":[42.29001617431641,42.30147552490234,42.31293487548828,42.33012008666992,42.3530387878418,42.35877227783203,42.35877227783203,42.34730911254883,42.3530387878418,42.35877227783203,42.35877227783203,42.34730911254883,42.33585357666016,42.31293487548828,42.30147552490234,42.27855682373047,42.2728271484375,42.26709747314453,42.23844909667969,42.26136779785156,42.26709747314453,42.27855682373047,42.29001617431641]}]],[[{"lng":[-71.90047454833984,-71.89474487304688,-71.86609649658203,-71.86609649658203,-71.78588104248047,-71.7801513671875,-71.66556549072266,-71.67129516601562,-71.63118743896484,-71.61399078369141,-71.59680938720703,-71.58535003662109,-71.53951263427734,-71.53378295898438,-71.54524230957031,-71.55097198486328,-71.54524230957031,-71.56242370605469,-71.57389068603516,-71.59680938720703,-71.58535003662109,-71.61399078369141,-71.58535003662109,-71.55097198486328,-71.53951263427734,-71.52805328369141,-71.5108642578125,-71.48221588134766,-71.49367523193359,-71.51659393310547,-71.56242370605469,-71.58535003662109,-71.59680938720703,-71.58535003662109,-71.49367523193359,-71.49367523193359,-71.48221588134766,-71.47647857666016,-71.48221588134766,-71.48794555664062,-71.49367523193359,-71.78588104248047,-71.80307769775391,-72.10100555419922,-72.12966156005859,-72.12966156005859,-72.19268035888672,-72.19841003417969,-72.26143646240234,-72.24424743652344,-72.2327880859375,-72.20987701416016,-72.20413970947266,-72.20987701416016,-72.20413970947266,-72.21560668945312,-72.20987701416016,-72.27862548828125,-72.27862548828125,-72.27862548828125,-72.29008483886719,-72.30154418945312,-72.30727386474609,-72.30154418945312,-72.29581451416016,-72.29008483886719,-72.28435516357422,-72.24424743652344,-72.24424743652344,-72.27289581298828,-72.27289581298828,-72.26143646240234,-72.24424743652344,-72.22705841064453,-72.20987701416016,-72.22705841064453,-72.24424743652344,-72.24424743652344,-72.27289581298828,-72.28435516357422,-71.93485260009766,-71.90047454833984],"lat":[42.71400451660156,42.68535614013672,42.67389678955078,42.6337890625,42.6337890625,42.63951873779297,42.60514068603516,42.53065490722656,42.52492904663086,42.54784774780273,42.54211807250977,42.54784774780273,42.54211807250977,42.51919937133789,42.50774002075195,42.46762847900391,42.46762847900391,42.41606521606445,42.41033554077148,42.39887619018555,42.38169097900391,42.3530387878418,42.31293487548828,42.32439041137695,42.33012008666992,42.32439041137695,42.31293487548828,42.30147552490234,42.28428268432617,42.27855682373047,42.2728271484375,42.25563812255859,42.21553039550781,42.19261169433594,42.19261169433594,42.16969299316406,42.16969299316406,42.15250396728516,42.12385559082031,42.12385559082031,42.02645492553711,42.0092658996582,42.03791046142578,42.03218460083008,42.03791046142578,42.16396331787109,42.15250396728516,42.15823745727539,42.18688201904297,42.20980072021484,42.23844909667969,42.24990844726562,42.25563812255859,42.26136779785156,42.28428268432617,42.29574584960938,42.30147552490234,42.29574584960938,42.33585357666016,42.3702278137207,42.37595748901367,42.37595748901367,42.39314651489258,42.41606521606445,42.43898391723633,42.47336196899414,42.48482131958008,42.49054718017578,42.50774002075195,42.53065490722656,42.57649230957031,42.58222198486328,42.61087417602539,42.61087417602539,42.62232971191406,42.65670776367188,42.65670776367188,42.66816711425781,42.67389678955078,42.7254638671875,42.71400451660156,42.71400451660156]}]]],null,null,{"interactive":true,"className":"","stroke":true,"color":"#03F","weight":5,"opacity":0.5,"fill":true,"fillColor":"#03F","fillOpacity":0.2,"smoothFactor":1,"noClip":false},null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[41.24150085449219,42.87443161010742],"lng":[-73.50475311279297,-69.94669342041016]}},"evals":[],"jsHooks":[]}</script>
+</div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">st_crs</span>(ma_counties)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Coordinate Reference System:
+  User input: +proj=longlat +ellps=clrk66 +no_defs +type=crs 
+  wkt:
+GEOGCRS["unknown",
+    DATUM["Unknown based on Clarke 1866 ellipsoid",
+        ELLIPSOID["Clarke 1866",6378206.4,294.978698213898,
+            LENGTHUNIT["metre",1,
+                ID["EPSG",9001]]]],
+    PRIMEM["Greenwich",0,
+        ANGLEUNIT["degree",0.0174532925199433],
+        ID["EPSG",8901]],
+    CS[ellipsoidal,2],
+        AXIS["longitude",east,
+            ORDER[1],
+            ANGLEUNIT["degree",0.0174532925199433,
+                ID["EPSG",9122]]],
+        AXIS["latitude",north,
+            ORDER[2],
+            ANGLEUNIT["degree",0.0174532925199433,
+                ID["EPSG",9122]]]]</code></pre>
+</div>
+</div>
+<section id="exercise-2" class="level2">
+<h2 class="anchored" data-anchor-id="exercise-2">Exercise</h2>
+<p>Draw an interactive map of a previous school or place you went.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Write your code below</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="color-in-leaflet" class="level2">
+<h2 class="anchored" data-anchor-id="color-in-leaflet">Color in leaflet</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>wetlands <span class="ot">&lt;-</span> macleish_layers <span class="sc">|&gt;</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pluck</span>(<span class="st">"wetlands"</span>)</span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a><span class="fu">leaflet</span>() <span class="sc">|&gt;</span></span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">addTiles</span>()<span class="sc">|&gt;</span></span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">addPolygons</span>(<span class="at">data =</span> wetlands, </span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a>              <span class="at">color =</span> <span class="sc">~</span>SHAPE_LEN, </span>
+<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a>              <span class="at">popup =</span> <span class="sc">~</span>IT_VALDESC)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="leaflet html-widget html-fill-item" id="htmlwidget-50bd1a4d37e21c60e26d" style="width:100%;height:365px;"></div>
+<script type="application/json" data-for="htmlwidget-50bd1a4d37e21c60e26d">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org/copyright/\">OpenStreetMap<\/a>,  <a href=\"https://opendatacommons.org/licenses/odbl/\">ODbL<\/a>"}]},{"method":"addPolygons","args":[[[[{"lng":[-72.67986457177275,-72.68011200709135,-72.6801699192373,-72.68020754609762,-72.68022351030237,-72.68023494224163,-72.68021454060919,-72.68015221363821,-72.68007066007857,-72.67998983118224,-72.67994637228317,-72.67991337391904,-72.6798803980848,-72.67984153428505,-72.6798500779765,-72.67983412844873,-72.67982154349373,-72.67983563318958,-72.67986457177275],"lat":[42.45683091832483,42.45678449231924,42.4567929022578,42.45681389956918,42.45684974921312,42.45693291413352,42.45701021472752,42.45707556683033,42.45712873485414,42.45723591522201,42.45726899741175,42.45727721334089,42.45728149082544,42.45726556969557,42.45717882389197,42.45710302114473,42.45690226159145,42.45686328977218,42.45683091832483]}]],[[{"lng":[-72.68378452183222,-72.68383952452629,-72.68389079074619,-72.68393886143382,-72.68397814339377,-72.6839994994984,-72.68402216115646,-72.68401966062061,-72.68394575895326,-72.68394114675408,-72.68396620685586,-72.68402635672706,-72.68405893678778,-72.68408201193014,-72.68416883808086,-72.68420743467084,-72.68422608912398,-72.68422988607358,-72.68422503311569,-72.68418434684011,-72.68412607145122,-72.68408409946973,-72.68394758813564,-72.68375546173432,-72.68367764589372,-72.68358086069269,-72.68353942610651,-72.6835019908707,-72.6834836524321,-72.68348012041217,-72.68349070505899,-72.68355733063612,-72.68358536651473,-72.68361039368781,-72.68369346384479,-72.68378452183222],"lat":[42.44904660402354,42.44904210042781,42.44905113872668,42.44907202746422,42.44910032248165,42.44913499230857,42.44921410190327,42.44929347018548,42.4494450386509,42.44948278675983,42.44955793348821,42.44967098360347,42.44986872481605,42.44994445388917,42.45004653894496,42.45011929559968,42.45020238604141,42.45028337693878,42.45031831621262,42.45033167610319,42.45031877029636,42.4502938792339,42.45017092348212,42.44997932392624,42.44992722770426,42.44989164565076,42.44986506148711,42.449833934547,42.44979810820843,42.44972105277837,42.44960164844458,42.44924420246239,42.44916907194858,42.44913617767301,42.449083554761,42.44904660402354]}]],[[{"lng":[-72.67472836885965,-72.6747921514919,-72.67497516613459,-72.67506928410307,-72.67510984816975,-72.67521466946188,-72.67525449262727,-72.67524928598615,-72.67523048921217,-72.67515896008229,-72.67510092106882,-72.67508032057943,-72.67504520184742,-72.67504862094412,-72.67507790317686,-72.67508658471884,-72.67506997691918,-72.67500347191765,-72.67499095084109,-72.67476663265009,-72.67473209729854,-72.67471023487994,-72.67471062653654,-72.67475411977077,-72.6748078148602,-72.67485208545848,-72.67445922096027,-72.67446434133927,-72.67445376367684,-72.67433202226941,-72.67431945098514,-72.67432461358359,-72.67429452219992,-72.67424268581389,-72.67414776425927,-72.67412443035835,-72.67410574582459,-72.67412622193,-72.67413461631133,-72.67415509014027,-72.67418988166625,-72.67427865587999,-72.674312887227,-72.67434270798501,-72.6743445455912,-72.67432912598862,-72.67425811805425,-72.67425509554923,-72.67433503353368,-72.67434495749076,-72.67434715229453,-72.67432302649578,-72.67433898091977,-72.67443181761088,-72.6746661824175,-72.67472836885965],"lat":[42.44708148402898,42.44706395216611,42.44712004467786,42.44716072621899,42.44718676030966,42.44732805642033,42.44744188187382,42.44747851173598,42.44751471683512,42.44762630235329,42.44781990545758,42.44785613041447,42.44788800035862,42.4479644951626,42.44808349183584,42.44816218376974,42.44823944487727,42.44839149393259,42.44850979170246,42.44887334411822,42.44894684833596,42.44902247558809,42.44914064159017,42.44933939925848,42.44940750329101,42.44957541740141,42.4496156840043,42.44948247106304,42.44944487681315,42.44926717440961,42.44922960195778,42.44914964341683,42.44907398255501,42.44900360998858,42.44890441441414,42.44887032642694,42.44879511266876,42.44863453013647,42.44859561701472,42.44855770615263,42.44852865410736,42.44848104351704,42.44845255762795,42.44837572536039,42.4482958007054,42.44825825580906,42.44819370432129,42.44815884728724,42.44800891252485,42.44797054723112,42.44777188544967,42.44761344650033,42.44753675412466,42.44735011100678,42.44708268179907,42.44708148402898]}],[{"lng":[-72.67504528885776,-72.67502380235305,-72.67504192202678,-72.67504528885776],"lat":[42.4500036930873,42.44991691385747,42.44997345659122,42.4500036930873]}]],[[{"lng":[-72.6801707117595,-72.68028284274709,-72.6803344883902,-72.68045339922752,-72.68055212572737,-72.68059380639833,-72.68060361249493,-72.68057694416115,-72.68056004064958,-72.68050842748299,-72.68046471689613,-72.68042919516867,-72.68034429304161,-72.68031343390685,-72.68027308986967,-72.68013018562125,-72.68009029508505,-72.68006465999024,-72.6800759484901,-72.68011684790446,-72.6801707117595],"lat":[42.44606866129087,42.44606694866663,42.44607598611935,42.44615242101374,42.44625157251289,42.44632204793277,42.44639960260847,42.4466801090852,42.44670560349153,42.44669319103726,42.44667169274322,42.44664110716671,42.44649398294768,42.44646391299609,42.44643956732684,42.44638025788603,42.44635478209002,42.44631959342613,42.44616135455169,42.44608834535214,42.44606866129087]}]],[[{"lng":[-72.67806302054936,-72.67805818688923,-72.67809215176176,-72.6783579798424,-72.67840850734868,-72.67845648446371,-72.67850012303916,-72.67855759235302,-72.6785920834007,-72.67870986744846,-72.6788797492389,-72.67893169956018,-72.6791454313979,-72.67935768734651,-72.67927398758141,-72.67925208585757,-72.67923585608175,-72.67920267182259,-72.67915766038942,-72.67900173157791,-72.67889446274143,-72.6788422601074,-72.67868702294425,-72.67863663435797,-72.67859150606343,-72.67853513848024,-72.67849171061451,-72.67838550819882,-72.67833719426702,-72.67820008345366,-72.67814869182835,-72.67810698845335,-72.678076174338,-72.67806302054936],"lat":[42.44570534347041,42.44562436148331,42.44559700404208,42.44562241970452,42.44561233590048,42.44559271287752,42.44556975798482,42.44545831414067,42.44542870033045,42.44534815223719,42.44525018798269,42.44524009086182,42.44524746790422,42.44522672573927,42.44538795693479,42.44550691485448,42.44554309436829,42.44557663468989,42.44559735307605,42.44562877384163,42.44563662450002,42.44563321918881,42.44559485516339,42.4455919946417,42.44561665369827,42.44568531898585,42.44570433351939,42.44572342694876,42.44574024058794,42.44580297935686,42.44580237971429,42.44577635833651,42.44574347305262,42.44570534347041]}]],[[{"lng":[-72.6747921514919,-72.67472836885965,-72.6746661824175,-72.67466200486298,-72.67463489489757,-72.67459376232932,-72.67457160355437,-72.6745767237806,-72.67462012069069,-72.67465404743918,-72.67467267874824,-72.67473240169689,-72.67478673140327,-72.6748901781728,-72.67493685290864,-72.67499886891962,-72.67498738067509,-72.67495027758946,-72.67494730702261,-72.67491498489909,-72.67481355572494,-72.67478744676083,-72.67478737669312,-72.67481412699856,-72.67482555169973,-72.6747921514919],"lat":[42.44706395216611,42.44708148402898,42.44708268179907,42.44708272441024,42.44703967171091,42.44681444183099,42.44669030873169,42.44660809972519,42.44652606375985,42.44648126307176,42.44643099131446,42.44638423860744,42.44636398888436,42.44637024949611,42.44633602428963,42.44633031563612,42.44645422737554,42.44656827434677,42.44660769566785,42.44663165915003,42.44667771200173,42.44671399162993,42.44675113104296,42.44686677739195,42.44701634401032,42.44706395216611]}]],[[{"lng":[-72.68068214742976,-72.68063369020719,-72.68057741322387,-72.68053155362288,-72.68051969571357,-72.68052779052147,-72.68061678592478,-72.68074259798826,-72.6807520344483,-72.68076498225737,-72.68074913633976,-72.68071939214744,-72.68063816314738,-72.68061060266407,-72.68060961174204,-72.68062797716047,-72.68065589910286,-72.6806936164281,-72.6807484574377,-72.68080059598363,-72.68097389093012,-72.68112849299085,-72.68128136170479,-72.6813088812402,-72.68122246084219,-72.6811720236347,-72.68114109622225,-72.68111980973846,-72.68108473100931,-72.6810379212469,-72.68092421750121,-72.68075756116941,-72.68068214742976],"lat":[42.45740495002072,42.45739419259405,42.45739702025517,42.4573828599216,42.45734302854855,42.45730355612299,42.45720641890014,42.45694459237584,42.45690566814029,42.4567445998191,42.45666935808325,42.45663815142142,42.45658158650983,42.45654529233479,42.45650760040203,42.45646858613214,42.45643284865726,42.4564077029334,42.45639419775722,42.45639872687512,42.4564920498255,42.45652535236292,42.45656767726205,42.45659159066916,42.45690253356957,42.45724799518644,42.45741768925764,42.45744773173116,42.457466660013,42.45747783216095,42.4574829376724,42.45746551271914,42.45740495002072]}]]],null,null,{"interactive":true,"className":"","stroke":true,"color":[147.111221116,339.832341113,799.893907273,184.904507482,288.226893235,210.988564034,325.597047362],"weight":5,"opacity":0.5,"fill":true,"fillColor":[147.111221116,339.832341113,799.893907273,184.904507482,288.226893235,210.988564034,325.597047362],"fillOpacity":0.2,"smoothFactor":1,"noClip":false},["WOODED SWAMP DECIDUOUS","DEEP MARSH","WOODED SWAMP MIXED TREES","SHALLOW MARSH MEADOW OR FEN","SHRUB SWAMP","SHRUB SWAMP","WOODED SWAMP DECIDUOUS"],null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[42.44522672573927,42.4574829376724],"lng":[-72.68422988607358,-72.67410574582459]}},"evals":[],"jsHooks":[]}</script>
+</div>
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>wetland_pal <span class="ot">&lt;-</span> <span class="fu">colorNumeric</span>(</span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">palette =</span> <span class="st">"viridis"</span>, </span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">domain =</span> wetlands <span class="sc">|&gt;</span></span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">pull</span>(SHAPE_LEN)</span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a><span class="fu">leaflet</span>() <span class="sc">|&gt;</span></span>
+<span id="cb24-8"><a href="#cb24-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">addTiles</span>() <span class="sc">|&gt;</span></span>
+<span id="cb24-9"><a href="#cb24-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">addPolygons</span>(<span class="at">data =</span> wetlands, </span>
+<span id="cb24-10"><a href="#cb24-10" aria-hidden="true" tabindex="-1"></a>              <span class="at">color =</span> <span class="sc">~</span><span class="fu">wetland_pal</span>(SHAPE_LEN), </span>
+<span id="cb24-11"><a href="#cb24-11" aria-hidden="true" tabindex="-1"></a>              <span class="at">fillOpacity =</span> <span class="fl">0.8</span>, <span class="at">weight =</span> <span class="fl">0.1</span>, </span>
+<span id="cb24-12"><a href="#cb24-12" aria-hidden="true" tabindex="-1"></a>              <span class="at">popup =</span> <span class="sc">~</span>IT_VALDESC) <span class="sc">|&gt;</span></span>
+<span id="cb24-13"><a href="#cb24-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">addLegend</span>(<span class="at">position =</span> <span class="st">"bottomleft"</span>, </span>
+<span id="cb24-14"><a href="#cb24-14" aria-hidden="true" tabindex="-1"></a>            <span class="at">pal =</span> wetland_pal, </span>
+<span id="cb24-15"><a href="#cb24-15" aria-hidden="true" tabindex="-1"></a>            <span class="at">values =</span> wetlands<span class="sc">$</span>SHAPE_LEN,</span>
+<span id="cb24-16"><a href="#cb24-16" aria-hidden="true" tabindex="-1"></a>            <span class="at">title =</span> <span class="st">"Wetland Area"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="leaflet html-widget html-fill-item" id="htmlwidget-2298b9eb95931f2ef8dc" style="width:100%;height:365px;"></div>
+<script type="application/json" data-for="htmlwidget-2298b9eb95931f2ef8dc">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org/copyright/\">OpenStreetMap<\/a>,  <a href=\"https://opendatacommons.org/licenses/odbl/\">ODbL<\/a>"}]},{"method":"addPolygons","args":[[[[{"lng":[-72.67986457177275,-72.68011200709135,-72.6801699192373,-72.68020754609762,-72.68022351030237,-72.68023494224163,-72.68021454060919,-72.68015221363821,-72.68007066007857,-72.67998983118224,-72.67994637228317,-72.67991337391904,-72.6798803980848,-72.67984153428505,-72.6798500779765,-72.67983412844873,-72.67982154349373,-72.67983563318958,-72.67986457177275],"lat":[42.45683091832483,42.45678449231924,42.4567929022578,42.45681389956918,42.45684974921312,42.45693291413352,42.45701021472752,42.45707556683033,42.45712873485414,42.45723591522201,42.45726899741175,42.45727721334089,42.45728149082544,42.45726556969557,42.45717882389197,42.45710302114473,42.45690226159145,42.45686328977218,42.45683091832483]}]],[[{"lng":[-72.68378452183222,-72.68383952452629,-72.68389079074619,-72.68393886143382,-72.68397814339377,-72.6839994994984,-72.68402216115646,-72.68401966062061,-72.68394575895326,-72.68394114675408,-72.68396620685586,-72.68402635672706,-72.68405893678778,-72.68408201193014,-72.68416883808086,-72.68420743467084,-72.68422608912398,-72.68422988607358,-72.68422503311569,-72.68418434684011,-72.68412607145122,-72.68408409946973,-72.68394758813564,-72.68375546173432,-72.68367764589372,-72.68358086069269,-72.68353942610651,-72.6835019908707,-72.6834836524321,-72.68348012041217,-72.68349070505899,-72.68355733063612,-72.68358536651473,-72.68361039368781,-72.68369346384479,-72.68378452183222],"lat":[42.44904660402354,42.44904210042781,42.44905113872668,42.44907202746422,42.44910032248165,42.44913499230857,42.44921410190327,42.44929347018548,42.4494450386509,42.44948278675983,42.44955793348821,42.44967098360347,42.44986872481605,42.44994445388917,42.45004653894496,42.45011929559968,42.45020238604141,42.45028337693878,42.45031831621262,42.45033167610319,42.45031877029636,42.4502938792339,42.45017092348212,42.44997932392624,42.44992722770426,42.44989164565076,42.44986506148711,42.449833934547,42.44979810820843,42.44972105277837,42.44960164844458,42.44924420246239,42.44916907194858,42.44913617767301,42.449083554761,42.44904660402354]}]],[[{"lng":[-72.67472836885965,-72.6747921514919,-72.67497516613459,-72.67506928410307,-72.67510984816975,-72.67521466946188,-72.67525449262727,-72.67524928598615,-72.67523048921217,-72.67515896008229,-72.67510092106882,-72.67508032057943,-72.67504520184742,-72.67504862094412,-72.67507790317686,-72.67508658471884,-72.67506997691918,-72.67500347191765,-72.67499095084109,-72.67476663265009,-72.67473209729854,-72.67471023487994,-72.67471062653654,-72.67475411977077,-72.6748078148602,-72.67485208545848,-72.67445922096027,-72.67446434133927,-72.67445376367684,-72.67433202226941,-72.67431945098514,-72.67432461358359,-72.67429452219992,-72.67424268581389,-72.67414776425927,-72.67412443035835,-72.67410574582459,-72.67412622193,-72.67413461631133,-72.67415509014027,-72.67418988166625,-72.67427865587999,-72.674312887227,-72.67434270798501,-72.6743445455912,-72.67432912598862,-72.67425811805425,-72.67425509554923,-72.67433503353368,-72.67434495749076,-72.67434715229453,-72.67432302649578,-72.67433898091977,-72.67443181761088,-72.6746661824175,-72.67472836885965],"lat":[42.44708148402898,42.44706395216611,42.44712004467786,42.44716072621899,42.44718676030966,42.44732805642033,42.44744188187382,42.44747851173598,42.44751471683512,42.44762630235329,42.44781990545758,42.44785613041447,42.44788800035862,42.4479644951626,42.44808349183584,42.44816218376974,42.44823944487727,42.44839149393259,42.44850979170246,42.44887334411822,42.44894684833596,42.44902247558809,42.44914064159017,42.44933939925848,42.44940750329101,42.44957541740141,42.4496156840043,42.44948247106304,42.44944487681315,42.44926717440961,42.44922960195778,42.44914964341683,42.44907398255501,42.44900360998858,42.44890441441414,42.44887032642694,42.44879511266876,42.44863453013647,42.44859561701472,42.44855770615263,42.44852865410736,42.44848104351704,42.44845255762795,42.44837572536039,42.4482958007054,42.44825825580906,42.44819370432129,42.44815884728724,42.44800891252485,42.44797054723112,42.44777188544967,42.44761344650033,42.44753675412466,42.44735011100678,42.44708268179907,42.44708148402898]}],[{"lng":[-72.67504528885776,-72.67502380235305,-72.67504192202678,-72.67504528885776],"lat":[42.4500036930873,42.44991691385747,42.44997345659122,42.4500036930873]}]],[[{"lng":[-72.6801707117595,-72.68028284274709,-72.6803344883902,-72.68045339922752,-72.68055212572737,-72.68059380639833,-72.68060361249493,-72.68057694416115,-72.68056004064958,-72.68050842748299,-72.68046471689613,-72.68042919516867,-72.68034429304161,-72.68031343390685,-72.68027308986967,-72.68013018562125,-72.68009029508505,-72.68006465999024,-72.6800759484901,-72.68011684790446,-72.6801707117595],"lat":[42.44606866129087,42.44606694866663,42.44607598611935,42.44615242101374,42.44625157251289,42.44632204793277,42.44639960260847,42.4466801090852,42.44670560349153,42.44669319103726,42.44667169274322,42.44664110716671,42.44649398294768,42.44646391299609,42.44643956732684,42.44638025788603,42.44635478209002,42.44631959342613,42.44616135455169,42.44608834535214,42.44606866129087]}]],[[{"lng":[-72.67806302054936,-72.67805818688923,-72.67809215176176,-72.6783579798424,-72.67840850734868,-72.67845648446371,-72.67850012303916,-72.67855759235302,-72.6785920834007,-72.67870986744846,-72.6788797492389,-72.67893169956018,-72.6791454313979,-72.67935768734651,-72.67927398758141,-72.67925208585757,-72.67923585608175,-72.67920267182259,-72.67915766038942,-72.67900173157791,-72.67889446274143,-72.6788422601074,-72.67868702294425,-72.67863663435797,-72.67859150606343,-72.67853513848024,-72.67849171061451,-72.67838550819882,-72.67833719426702,-72.67820008345366,-72.67814869182835,-72.67810698845335,-72.678076174338,-72.67806302054936],"lat":[42.44570534347041,42.44562436148331,42.44559700404208,42.44562241970452,42.44561233590048,42.44559271287752,42.44556975798482,42.44545831414067,42.44542870033045,42.44534815223719,42.44525018798269,42.44524009086182,42.44524746790422,42.44522672573927,42.44538795693479,42.44550691485448,42.44554309436829,42.44557663468989,42.44559735307605,42.44562877384163,42.44563662450002,42.44563321918881,42.44559485516339,42.4455919946417,42.44561665369827,42.44568531898585,42.44570433351939,42.44572342694876,42.44574024058794,42.44580297935686,42.44580237971429,42.44577635833651,42.44574347305262,42.44570534347041]}]],[[{"lng":[-72.6747921514919,-72.67472836885965,-72.6746661824175,-72.67466200486298,-72.67463489489757,-72.67459376232932,-72.67457160355437,-72.6745767237806,-72.67462012069069,-72.67465404743918,-72.67467267874824,-72.67473240169689,-72.67478673140327,-72.6748901781728,-72.67493685290864,-72.67499886891962,-72.67498738067509,-72.67495027758946,-72.67494730702261,-72.67491498489909,-72.67481355572494,-72.67478744676083,-72.67478737669312,-72.67481412699856,-72.67482555169973,-72.6747921514919],"lat":[42.44706395216611,42.44708148402898,42.44708268179907,42.44708272441024,42.44703967171091,42.44681444183099,42.44669030873169,42.44660809972519,42.44652606375985,42.44648126307176,42.44643099131446,42.44638423860744,42.44636398888436,42.44637024949611,42.44633602428963,42.44633031563612,42.44645422737554,42.44656827434677,42.44660769566785,42.44663165915003,42.44667771200173,42.44671399162993,42.44675113104296,42.44686677739195,42.44701634401032,42.44706395216611]}]],[[{"lng":[-72.68068214742976,-72.68063369020719,-72.68057741322387,-72.68053155362288,-72.68051969571357,-72.68052779052147,-72.68061678592478,-72.68074259798826,-72.6807520344483,-72.68076498225737,-72.68074913633976,-72.68071939214744,-72.68063816314738,-72.68061060266407,-72.68060961174204,-72.68062797716047,-72.68065589910286,-72.6806936164281,-72.6807484574377,-72.68080059598363,-72.68097389093012,-72.68112849299085,-72.68128136170479,-72.6813088812402,-72.68122246084219,-72.6811720236347,-72.68114109622225,-72.68111980973846,-72.68108473100931,-72.6810379212469,-72.68092421750121,-72.68075756116941,-72.68068214742976],"lat":[42.45740495002072,42.45739419259405,42.45739702025517,42.4573828599216,42.45734302854855,42.45730355612299,42.45720641890014,42.45694459237584,42.45690566814029,42.4567445998191,42.45666935808325,42.45663815142142,42.45658158650983,42.45654529233479,42.45650760040203,42.45646858613214,42.45643284865726,42.4564077029334,42.45639419775722,42.45639872687512,42.4564920498255,42.45652535236292,42.45656767726205,42.45659159066916,42.45690253356957,42.45724799518644,42.45741768925764,42.45744773173116,42.457466660013,42.45747783216095,42.4574829376724,42.45746551271914,42.45740495002072]}]]],null,null,{"interactive":true,"className":"","stroke":true,"color":["#440154","#355E8D","#FDE725","#481769","#3F4889","#482475","#38598C"],"weight":0.1,"opacity":0.5,"fill":true,"fillColor":["#440154","#355E8D","#FDE725","#481769","#3F4889","#482475","#38598C"],"fillOpacity":0.8,"smoothFactor":1,"noClip":false},["WOODED SWAMP DECIDUOUS","DEEP MARSH","WOODED SWAMP MIXED TREES","SHALLOW MARSH MEADOW OR FEN","SHRUB SWAMP","SHRUB SWAMP","WOODED SWAMP DECIDUOUS"],null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addLegend","args":[{"colors":["#440154 , #481E70 8.10204988667236%, #3D4E8A 23.4210836356694%, #2B758E 38.7401173846664%, #1F9A8A 54.0591511336634%, #40BD72 69.3781848826604%, #98D83E 84.6972186316574%, #FDE725 "],"labels":["200","300","400","500","600","700"],"na_color":null,"na_label":"NA","opacity":0.5,"position":"bottomleft","type":"numeric","title":"Wetland Area","extra":{"p_1":0.08102049886672361,"p_n":0.8469721863165737},"layerId":null,"className":"info legend","group":null}]}],"limits":{"lat":[42.44522672573927,42.4574829376724],"lng":[-72.68422988607358,-72.67410574582459]}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</section>
+<section id="exercise-3" class="level2">
+<h2 class="anchored" data-anchor-id="exercise-3">Exercise</h2>
+<p>Draw an interactive map adding circles.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Write your code below</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+</section>
+<section id="choropleth-maps-using-census-data" class="level1">
+<h1>4. Choropleth maps using census data</h1>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Get MA county sf object, that includes population estimate column in data</span></span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>mass_pop_orig <span class="ot">&lt;-</span> </span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>  tidycensus<span class="sc">::</span><span class="fu">get_acs</span>(</span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">geography =</span> <span class="st">"county"</span>, </span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">variables =</span> <span class="st">"B01003_001"</span>, </span>
+<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">state =</span> <span class="st">"MA"</span>,</span>
+<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">geometry =</span> <span class="cn">TRUE</span></span>
+<span id="cb26-8"><a href="#cb26-8" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span> </span>
+<span id="cb26-9"><a href="#cb26-9" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Add centroids to each region using purrr package</span></span>
+<span id="cb26-10"><a href="#cb26-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb26-11"><a href="#cb26-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">lng =</span> purrr<span class="sc">::</span><span class="fu">map_dbl</span>(geometry, <span class="sc">~</span><span class="fu">st_centroid</span>(.x)[[<span class="dv">1</span>]]),</span>
+<span id="cb26-12"><a href="#cb26-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">lat =</span> purrr<span class="sc">::</span><span class="fu">map_dbl</span>(geometry, <span class="sc">~</span><span class="fu">st_centroid</span>(.x)[[<span class="dv">2</span>]])</span>
+<span id="cb26-13"><a href="#cb26-13" aria-hidden="true" tabindex="-1"></a>  )  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+  |                                                                            
+  |                                                                      |   0%
+  |                                                                            
+  |                                                                      |   1%
+  |                                                                            
+  |=                                                                     |   1%
+  |                                                                            
+  |=                                                                     |   2%
+  |                                                                            
+  |==                                                                    |   2%
+  |                                                                            
+  |==                                                                    |   3%
+  |                                                                            
+  |==                                                                    |   4%
+  |                                                                            
+  |===                                                                   |   4%
+  |                                                                            
+  |===                                                                   |   5%
+  |                                                                            
+  |====                                                                  |   5%
+  |                                                                            
+  |====                                                                  |   6%
+  |                                                                            
+  |=====                                                                 |   6%
+  |                                                                            
+  |=====                                                                 |   7%
+  |                                                                            
+  |=====                                                                 |   8%
+  |                                                                            
+  |======                                                                |   8%
+  |                                                                            
+  |======                                                                |   9%
+  |                                                                            
+  |=======                                                               |   9%
+  |                                                                            
+  |=======                                                               |  10%
+  |                                                                            
+  |=======                                                               |  11%
+  |                                                                            
+  |========                                                              |  11%
+  |                                                                            
+  |========                                                              |  12%
+  |                                                                            
+  |=========                                                             |  12%
+  |                                                                            
+  |=========                                                             |  13%
+  |                                                                            
+  |==========                                                            |  14%
+  |                                                                            
+  |==========                                                            |  15%
+  |                                                                            
+  |===========                                                           |  15%
+  |                                                                            
+  |===========                                                           |  16%
+  |                                                                            
+  |============                                                          |  17%
+  |                                                                            
+  |============                                                          |  18%
+  |                                                                            
+  |=============                                                         |  18%
+  |                                                                            
+  |=============                                                         |  19%
+  |                                                                            
+  |==============                                                        |  19%
+  |                                                                            
+  |==============                                                        |  20%
+  |                                                                            
+  |==============                                                        |  21%
+  |                                                                            
+  |===============                                                       |  21%
+  |                                                                            
+  |===============                                                       |  22%
+  |                                                                            
+  |================                                                      |  22%
+  |                                                                            
+  |================                                                      |  23%
+  |                                                                            
+  |================                                                      |  24%
+  |                                                                            
+  |=================                                                     |  24%
+  |                                                                            
+  |=================                                                     |  25%
+  |                                                                            
+  |==================                                                    |  25%
+  |                                                                            
+  |==================                                                    |  26%
+  |                                                                            
+  |===================                                                   |  26%
+  |                                                                            
+  |===================                                                   |  27%
+  |                                                                            
+  |===================                                                   |  28%
+  |                                                                            
+  |====================                                                  |  28%
+  |                                                                            
+  |====================                                                  |  29%
+  |                                                                            
+  |=====================                                                 |  29%
+  |                                                                            
+  |=====================                                                 |  30%
+  |                                                                            
+  |=====================                                                 |  31%
+  |                                                                            
+  |======================                                                |  31%
+  |                                                                            
+  |======================                                                |  32%
+  |                                                                            
+  |=======================                                               |  32%
+  |                                                                            
+  |=======================                                               |  33%
+  |                                                                            
+  |=======================                                               |  34%
+  |                                                                            
+  |========================                                              |  34%
+  |                                                                            
+  |========================                                              |  35%
+  |                                                                            
+  |=========================                                             |  35%
+  |                                                                            
+  |=========================                                             |  36%
+  |                                                                            
+  |==========================                                            |  36%
+  |                                                                            
+  |==========================                                            |  37%
+  |                                                                            
+  |==========================                                            |  38%
+  |                                                                            
+  |===========================                                           |  38%
+  |                                                                            
+  |===========================                                           |  39%
+  |                                                                            
+  |============================                                          |  39%
+  |                                                                            
+  |============================                                          |  40%
+  |                                                                            
+  |============================                                          |  41%
+  |                                                                            
+  |=============================                                         |  41%
+  |                                                                            
+  |=============================                                         |  42%
+  |                                                                            
+  |==============================                                        |  42%
+  |                                                                            
+  |==============================                                        |  43%
+  |                                                                            
+  |===============================                                       |  44%
+  |                                                                            
+  |===============================                                       |  45%
+  |                                                                            
+  |================================                                      |  45%
+  |                                                                            
+  |================================                                      |  46%
+  |                                                                            
+  |=================================                                     |  47%
+  |                                                                            
+  |=================================                                     |  48%
+  |                                                                            
+  |==================================                                    |  48%
+  |                                                                            
+  |==================================                                    |  49%
+  |                                                                            
+  |===================================                                   |  49%
+  |                                                                            
+  |===================================                                   |  50%
+  |                                                                            
+  |===================================                                   |  51%
+  |                                                                            
+  |====================================                                  |  51%
+  |                                                                            
+  |====================================                                  |  52%
+  |                                                                            
+  |=====================================                                 |  52%
+  |                                                                            
+  |=====================================                                 |  53%
+  |                                                                            
+  |=====================================                                 |  54%
+  |                                                                            
+  |======================================                                |  54%
+  |                                                                            
+  |======================================                                |  55%
+  |                                                                            
+  |=======================================                               |  55%
+  |                                                                            
+  |=======================================                               |  56%
+  |                                                                            
+  |========================================                              |  56%
+  |                                                                            
+  |========================================                              |  57%
+  |                                                                            
+  |========================================                              |  58%
+  |                                                                            
+  |=========================================                             |  58%
+  |                                                                            
+  |=========================================                             |  59%
+  |                                                                            
+  |==========================================                            |  59%
+  |                                                                            
+  |==========================================                            |  60%
+  |                                                                            
+  |==========================================                            |  61%
+  |                                                                            
+  |===========================================                           |  61%
+  |                                                                            
+  |===========================================                           |  62%
+  |                                                                            
+  |============================================                          |  62%
+  |                                                                            
+  |============================================                          |  63%
+  |                                                                            
+  |============================================                          |  64%
+  |                                                                            
+  |=============================================                         |  64%
+  |                                                                            
+  |=============================================                         |  65%
+  |                                                                            
+  |==============================================                        |  65%
+  |                                                                            
+  |==============================================                        |  66%
+  |                                                                            
+  |===============================================                       |  66%
+  |                                                                            
+  |===============================================                       |  67%
+  |                                                                            
+  |===============================================                       |  68%
+  |                                                                            
+  |================================================                      |  68%
+  |                                                                            
+  |================================================                      |  69%
+  |                                                                            
+  |=================================================                     |  69%
+  |                                                                            
+  |=================================================                     |  70%
+  |                                                                            
+  |=================================================                     |  71%
+  |                                                                            
+  |==================================================                    |  71%
+  |                                                                            
+  |==================================================                    |  72%
+  |                                                                            
+  |===================================================                   |  72%
+  |                                                                            
+  |===================================================                   |  73%
+  |                                                                            
+  |====================================================                  |  74%
+  |                                                                            
+  |====================================================                  |  75%
+  |                                                                            
+  |=====================================================                 |  75%
+  |                                                                            
+  |=====================================================                 |  76%
+  |                                                                            
+  |======================================================                |  77%
+  |                                                                            
+  |======================================================                |  78%
+  |                                                                            
+  |=======================================================               |  78%
+  |                                                                            
+  |=======================================================               |  79%
+  |                                                                            
+  |========================================================              |  79%
+  |                                                                            
+  |========================================================              |  80%
+  |                                                                            
+  |========================================================              |  81%
+  |                                                                            
+  |=========================================================             |  81%
+  |                                                                            
+  |=========================================================             |  82%
+  |                                                                            
+  |==========================================================            |  82%
+  |                                                                            
+  |==========================================================            |  83%
+  |                                                                            
+  |==========================================================            |  84%
+  |                                                                            
+  |===========================================================           |  84%
+  |                                                                            
+  |===========================================================           |  85%
+  |                                                                            
+  |============================================================          |  85%
+  |                                                                            
+  |============================================================          |  86%
+  |                                                                            
+  |=============================================================         |  87%
+  |                                                                            
+  |=============================================================         |  88%
+  |                                                                            
+  |==============================================================        |  88%
+  |                                                                            
+  |==============================================================        |  89%
+  |                                                                            
+  |===============================================================       |  89%
+  |                                                                            
+  |===============================================================       |  90%
+  |                                                                            
+  |===============================================================       |  91%
+  |                                                                            
+  |================================================================      |  91%
+  |                                                                            
+  |================================================================      |  92%
+  |                                                                            
+  |=================================================================     |  92%
+  |                                                                            
+  |=================================================================     |  93%
+  |                                                                            
+  |=================================================================     |  94%
+  |                                                                            
+  |==================================================================    |  94%
+  |                                                                            
+  |==================================================================    |  95%
+  |                                                                            
+  |===================================================================   |  95%
+  |                                                                            
+  |===================================================================   |  96%
+  |                                                                            
+  |====================================================================  |  97%
+  |                                                                            
+  |====================================================================  |  98%
+  |                                                                            
+  |===================================================================== |  98%
+  |                                                                            
+  |===================================================================== |  99%
+  |                                                                            
+  |======================================================================|  99%
+  |                                                                            
+  |======================================================================| 100%</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>mass_pop_orig</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Simple feature collection with 14 features and 7 fields
+Geometry type: MULTIPOLYGON
+Dimension:     XY
+Bounding box:  xmin: -73.50814 ymin: 41.23796 xmax: -69.92839 ymax: 42.88659
+Geodetic CRS:  NAD83
+First 10 features:
+   GEOID                             NAME   variable estimate moe
+1  25001 Barnstable County, Massachusetts B01003_001   229436  NA
+2  25013    Hampden County, Massachusetts B01003_001   464575  NA
+3  25015  Hampshire County, Massachusetts B01003_001   153931  NA
+4  25025    Suffolk County, Massachusetts B01003_001   785443  NA
+5  25005    Bristol County, Massachusetts B01003_001   576699  NA
+6  25017  Middlesex County, Massachusetts B01003_001  1623109  NA
+7  25027  Worcester County, Massachusetts B01003_001   858898  NA
+8  25011   Franklin County, Massachusetts B01003_001    70980  NA
+9  25007      Dukes County, Massachusetts B01003_001    20543  NA
+10 25009      Essex County, Massachusetts B01003_001   806103  NA
+                         geometry       lng      lat
+1  MULTIPOLYGON (((-70.68698 4... -70.29032 41.72436
+2  MULTIPOLYGON (((-73.07484 4... -72.63158 42.13509
+3  MULTIPOLYGON (((-73.06577 4... -72.66378 42.34016
+4  MULTIPOLYGON (((-70.93091 4... -71.07347 42.33284
+5  MULTIPOLYGON (((-70.83573 4... -71.11444 41.79724
+6  MULTIPOLYGON (((-71.89877 4... -71.39180 42.48557
+7  MULTIPOLYGON (((-72.31363 4... -71.90774 42.35142
+8  MULTIPOLYGON (((-73.02301 4... -72.59183 42.58309
+9  MULTIPOLYGON (((-70.8071 41... -70.64999 41.39608
+10 MULTIPOLYGON (((-70.58029 4... -70.95243 42.67323</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Unfortunately the original NAME variable above is very long and redundant.</span></span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a new data frame with the just the county name using the separate()</span></span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a><span class="co"># function from the tidyr package. </span></span>
+<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a>mass_pop <span class="ot">&lt;-</span> mass_pop_orig <span class="sc">|&gt;</span> </span>
+<span id="cb30-5"><a href="#cb30-5" aria-hidden="true" tabindex="-1"></a>  tidyr<span class="sc">::</span><span class="fu">separate</span>(NAME, <span class="fu">c</span>(<span class="st">"County"</span>, <span class="st">"State"</span>), <span class="at">sep =</span> <span class="st">", "</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb30-6"><a href="#cb30-6" aria-hidden="true" tabindex="-1"></a>  tidyr<span class="sc">::</span><span class="fu">separate</span>(County, <span class="fu">c</span>(<span class="st">"County"</span>, <span class="st">"Fluff"</span>), <span class="at">sep =</span> <span class="st">" "</span>) </span>
+<span id="cb30-7"><a href="#cb30-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-8"><a href="#cb30-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot gradient choropleth map based on numerical variable estimate</span></span>
+<span id="cb30-9"><a href="#cb30-9" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb30-10"><a href="#cb30-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> mass_pop, <span class="fu">aes</span>(<span class="at">fill =</span> estimate)) <span class="sc">+</span></span>
+<span id="cb30-11"><a href="#cb30-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(<span class="at">data =</span> mass_pop, <span class="fu">aes</span>(<span class="at">x =</span> lng, <span class="at">y =</span> lat, <span class="at">label =</span> County)) <span class="sc">+</span></span>
+<span id="cb30-12"><a href="#cb30-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">fill =</span> <span class="st">"Population</span><span class="sc">\n</span><span class="st">Estimate"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="27_Mapping_solutions_files/figure-html/unnamed-chunk-15-1.png" class="img-fluid" width="768"></p>
+</div>
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="co"># What if instead we want a bin based choropleth map. Use the cut_number()</span></span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a><span class="co"># function to convert the numerical variable estimate </span></span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a><span class="co"># to a categorical variable with 3 levels!</span></span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a>mass_pop <span class="ot">&lt;-</span> mass_pop <span class="sc">|&gt;</span></span>
+<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">estimate_discrete =</span> <span class="fu">cut_number</span>(estimate, <span class="dv">3</span>))</span>
+<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a>mass_pop</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Simple feature collection with 14 features and 10 fields
+Geometry type: MULTIPOLYGON
+Dimension:     XY
+Bounding box:  xmin: -73.50814 ymin: 41.23796 xmax: -69.92839 ymax: 42.88659
+Geodetic CRS:  NAD83
+First 10 features:
+   GEOID     County  Fluff         State   variable estimate moe       lng
+1  25001 Barnstable County Massachusetts B01003_001   229436  NA -70.29032
+2  25013    Hampden County Massachusetts B01003_001   464575  NA -72.63158
+3  25015  Hampshire County Massachusetts B01003_001   153931  NA -72.66378
+4  25025    Suffolk County Massachusetts B01003_001   785443  NA -71.07347
+5  25005    Bristol County Massachusetts B01003_001   576699  NA -71.11444
+6  25017  Middlesex County Massachusetts B01003_001  1623109  NA -71.39180
+7  25027  Worcester County Massachusetts B01003_001   858898  NA -71.90774
+8  25011   Franklin County Massachusetts B01003_001    70980  NA -72.59183
+9  25007      Dukes County Massachusetts B01003_001    20543  NA -70.64999
+10 25009      Essex County Massachusetts B01003_001   806103  NA -70.95243
+        lat                       geometry   estimate_discrete
+1  41.72436 MULTIPOLYGON (((-70.68698 4... (1.79e+05,6.74e+05]
+2  42.13509 MULTIPOLYGON (((-73.07484 4... (1.79e+05,6.74e+05]
+3  42.34016 MULTIPOLYGON (((-73.06577 4... [1.41e+04,1.79e+05]
+4  42.33284 MULTIPOLYGON (((-70.93091 4... (6.74e+05,1.62e+06]
+5  41.79724 MULTIPOLYGON (((-70.83573 4... (1.79e+05,6.74e+05]
+6  42.48557 MULTIPOLYGON (((-71.89877 4... (6.74e+05,1.62e+06]
+7  42.35142 MULTIPOLYGON (((-72.31363 4... (6.74e+05,1.62e+06]
+8  42.58309 MULTIPOLYGON (((-73.02301 4... [1.41e+04,1.79e+05]
+9  41.39608 MULTIPOLYGON (((-70.8071 41... [1.41e+04,1.79e+05]
+10 42.67323 MULTIPOLYGON (((-70.58029 4... (6.74e+05,1.62e+06]</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot!</span></span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> mass_pop, <span class="fu">aes</span>(<span class="at">fill =</span> estimate_discrete)) <span class="sc">+</span></span>
+<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(<span class="at">data =</span> mass_pop, <span class="fu">aes</span>(<span class="at">x =</span> lng, <span class="at">y =</span> lat, <span class="at">label =</span> County)) <span class="sc">+</span></span>
+<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">fill =</span> <span class="st">"Population</span><span class="sc">\n</span><span class="st">Estimate"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="27_Mapping_solutions_files/figure-html/unnamed-chunk-15-2.png" class="img-fluid" width="768"></p>
+</div>
+</div>
+<section id="exercise-4" class="level2">
+<h2 class="anchored" data-anchor-id="exercise-4">Exercise</h2>
+<p>Use the <code>tidycensus</code> package to conduct a spatial analysis of the Census data it contains for Massachusetts.</p>
+<p><a href="https://walker-data.com/tidycensus/articles/basic-usage.html">Instructions for using the tidycensus package</a></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Write your code below</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="challenge" class="level2">
+<h2 class="anchored" data-anchor-id="challenge">Challenge!!</h2>
+<ol type="1">
+<li>Use the above data to create an interactive map</li>
+<li>Convert the numerical variable estimate to a categorical variable with 3 levels such as Low, Medium, High</li>
+<li>Use the <code>factor()</code> function to order 3 levels as Low, Medium, High, otherwise the legend order will be in alphabetical order</li>
+<li>Create your own color palette to match the color order (e.g., from light green to dark green) with your legend order</li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Write your code below</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="../../credits.qmd">credits</a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+</body></html>
