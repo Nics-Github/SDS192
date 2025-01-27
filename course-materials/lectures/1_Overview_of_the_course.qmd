@@ -34,7 +34,7 @@ execute:
 library(googlesheets4)
 library(janitor)
 
-student_data <- read_sheet('https://docs.google.com/spreadsheets/d/1XOAFQvBcFvhKwEl5xH6l3nRJK2Wk0hWZ18S9kAZclQ0/edit?usp=sharing')
+student_data <- read_sheet('https://docs.google.com/spreadsheets/d/1k9qA7XldtHB8-FZjmEymoUoeZJArS4tGy5gyVsvyLB0/edit?usp=sharing')
 
 student_data <- clean_names(student_data)
 
@@ -43,11 +43,12 @@ student_data <- clean_names(student_data)
 ## Data Visualization
 
 ```{r}
+
 # make simple plot of student data. 
 library(tidyverse)
 
 student_data |>
-  ggplot(mapping = aes(x = height) )+
+  ggplot(mapping = aes(x = what_is_your_height_in_inches) )+
   geom_histogram()+
   labs(
     title = "Students' height in inches"

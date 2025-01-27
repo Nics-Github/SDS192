@@ -82,5 +82,96 @@
     "title": "Basic information",
     "section": "Resources",
     "text": "Resources\n\nMoodle and course website\nThe course website and Moodle will be updated regularly with lecture handouts, project information, assignments, and other course resources. Grades will be recorded on Moodle. Please check both regularly.\n\n\nCommunication\n\n Slack is the primary mechanism for course-related discussions of all kinds. Please do not email the course instructor with course-related questions! Instead, post these on #questions on Slack. If discretion is absolutely necessary, private message the instructor on Slack.\n\n\n\nWriting\nYour ability to communicate results (which may be technical in nature) to your audience (which is likely to be non-technical) is critical to your success as a data analyst. The assignments in this class will place an emphasis on the clarity of your writing.\n\n\nWriting Enriched Curriculum\nThis course is part of Smith College’s Writing Enriched Curriculum. As such, the course supports the Writing Plan of the Program in Statistical & Data Sciences.\nPlease read the SDS Writing Plan for more information.\n\n\nThe Spinelli Center\nThe Spinelli Center (now in Seelye 207) supports students doing quantitative work across the curriculum. In particular, they employ:\n\nSDS Tutors available from 7:00–9:00pm on Sunday–Thursday evenings in Burton 301. These students are trained to help you with your statistics and R questions.\nA Data Research and Statistics Counselor (Osman Keshawarz) who keeps both drop-in hours and appointments. Students are welcome to email qlctutor@smith.edu to make an appointment.\n\nYour fellow students are also an excellent source for explanations, tips, etc."
+  },
+  {
+    "objectID": "course-materials/lectures/1_Overview_of_the_course.html#introduction-to-programming-language-for-data-science-r-and-computing-environment-rstudio",
+    "href": "course-materials/lectures/1_Overview_of_the_course.html#introduction-to-programming-language-for-data-science-r-and-computing-environment-rstudio",
+    "title": "Course Overview",
+    "section": "Introduction to Programming Language for Data Science (R) and Computing Environment (RStudio)",
+    "text": "Introduction to Programming Language for Data Science (R) and Computing Environment (RStudio)\n\nTake a look at R Studio together\nShort History of R"
+  },
+  {
+    "objectID": "course-materials/lectures/1_Overview_of_the_course.html#data-science-life-cycle",
+    "href": "course-materials/lectures/1_Overview_of_the_course.html#data-science-life-cycle",
+    "title": "Course Overview",
+    "section": "Data Science Life Cycle",
+    "text": "Data Science Life Cycle\nDS life cycle"
+  },
+  {
+    "objectID": "course-materials/lectures/1_Overview_of_the_course.html#grammar-of-graphics",
+    "href": "course-materials/lectures/1_Overview_of_the_course.html#grammar-of-graphics",
+    "title": "Course Overview",
+    "section": "Grammar of Graphics",
+    "text": "Grammar of Graphics\nHadley Wickham"
+  },
+  {
+    "objectID": "course-materials/lectures/1_Overview_of_the_course.html#data-collection",
+    "href": "course-materials/lectures/1_Overview_of_the_course.html#data-collection",
+    "title": "Course Overview",
+    "section": "Data Collection",
+    "text": "Data Collection\nCollect student data here"
+  },
+  {
+    "objectID": "course-materials/lectures/1_Overview_of_the_course.html#web-scraping-and-importing-data-and-a-tiny-bit-of-cleaning",
+    "href": "course-materials/lectures/1_Overview_of_the_course.html#web-scraping-and-importing-data-and-a-tiny-bit-of-cleaning",
+    "title": "Course Overview",
+    "section": "Web Scraping and Importing Data ( and a tiny bit of cleaning)",
+    "text": "Web Scraping and Importing Data ( and a tiny bit of cleaning)\n\nlibrary(googlesheets4)\nlibrary(janitor)\n\nstudent_data &lt;- read_sheet('https://docs.google.com/spreadsheets/d/1k9qA7XldtHB8-FZjmEymoUoeZJArS4tGy5gyVsvyLB0/edit?usp=sharing')\n\nstudent_data &lt;- clean_names(student_data)"
+  },
+  {
+    "objectID": "course-materials/lectures/1_Overview_of_the_course.html#data-visualization",
+    "href": "course-materials/lectures/1_Overview_of_the_course.html#data-visualization",
+    "title": "Course Overview",
+    "section": "Data Visualization",
+    "text": "Data Visualization\n\n# make simple plot of student data. \nlibrary(tidyverse)\n\nstudent_data |&gt;\n  ggplot(mapping = aes(x = what_is_your_height_in_inches) )+\n  geom_histogram()+\n  labs(\n    title = \"Students' height in inches\"\n  )"
+  },
+  {
+    "objectID": "course-materials/lectures/1_Overview_of_the_course.html#data-wrangling",
+    "href": "course-materials/lectures/1_Overview_of_the_course.html#data-wrangling",
+    "title": "Course Overview",
+    "section": "Data Wrangling",
+    "text": "Data Wrangling\n\n# wrangle student data. edit plot\nstudent_data |&gt;\n  \n  select(briefly_describe_any_previous_experience_you_have_with_r) |&gt;\n  \n  rename(r_experiance = briefly_describe_any_previous_experience_you_have_with_r )|&gt;\n  \n  group_by(r_experiance)|&gt;\n  \n  summarize(\n    \n    sum()/n()\n    \n  )\n\n# A tibble: 2 × 2\n  r_experiance   `sum()/n()`\n  &lt;chr&gt;                &lt;dbl&gt;\n1 More than none           0\n2 None                     0"
+  },
+  {
+    "objectID": "course-materials/lectures/1_Overview_of_the_course.html#data-management",
+    "href": "course-materials/lectures/1_Overview_of_the_course.html#data-management",
+    "title": "Course Overview",
+    "section": "Data Management",
+    "text": "Data Management\n-   Security\n-   Keeping yourself organized!\n-   How Data is housed"
+  },
+  {
+    "objectID": "course-materials/lectures/1_Overview_of_the_course.html#data-ethics",
+    "href": "course-materials/lectures/1_Overview_of_the_course.html#data-ethics",
+    "title": "Course Overview",
+    "section": "Data Ethics",
+    "text": "Data Ethics\nHow we use data without doing harm."
+  },
+  {
+    "objectID": "course-materials/lectures/1_Overview_of_the_course.html#iteration",
+    "href": "course-materials/lectures/1_Overview_of_the_course.html#iteration",
+    "title": "Course Overview",
+    "section": "Iteration",
+    "text": "Iteration\n\n# have r do many repeat steps for us. \n\nprint(student_data$one_word_summer_highlight)\n\nNULL"
+  },
+  {
+    "objectID": "course-materials/lectures/1_Overview_of_the_course.html#verson-control",
+    "href": "course-materials/lectures/1_Overview_of_the_course.html#verson-control",
+    "title": "Course Overview",
+    "section": "Verson Control",
+    "text": "Verson Control\nWith git and github."
+  },
+  {
+    "objectID": "course-materials/lectures/1_Overview_of_the_course.html#introduction-to-database-querying-with-sql",
+    "href": "course-materials/lectures/1_Overview_of_the_course.html#introduction-to-database-querying-with-sql",
+    "title": "Course Overview",
+    "section": "Introduction to Database Querying with SQL",
+    "text": "Introduction to Database Querying with SQL\nWrangle some data with the classic SQL.\nSimple Query?"
+  },
+  {
+    "objectID": "course-materials/lectures/1_Overview_of_the_course.html#further-topics-based-on-time-and-student-interest-may-include",
+    "href": "course-materials/lectures/1_Overview_of_the_course.html#further-topics-based-on-time-and-student-interest-may-include",
+    "title": "Course Overview",
+    "section": "Further Topics based on time and student interest may include:",
+    "text": "Further Topics based on time and student interest may include:\n-   Dynamic and Customized Data Graphics\n\n-   Geospatial Data and Maps\n\n-   Learning with AI"
   }
 ]
