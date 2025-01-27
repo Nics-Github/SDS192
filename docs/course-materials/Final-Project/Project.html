@@ -2,12 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.353">
+<meta name="generator" content="quarto-1.5.57">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Schwab">
 
-<title>SDS 192 -</title>
+<title>Final Project – SDS 192</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -48,7 +49,13 @@ ul.task-list li input[type="checkbox"] {
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -57,13 +64,13 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
 
@@ -71,65 +78,65 @@ ul.task-list li input[type="checkbox"] {
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">SDS 192</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../course-materials/website/Resources.html" rel="" target="">
- <span class="menu-text">Resources</span></a>
+    <a class="nav-link" href="../../course-materials/website/Resources.html"> 
+<span class="menu-text">Resources</span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://mdsr-book.github.io/mdsr3e/" rel="" target=""><i class="bi bi-book" role="img">
+    <a class="nav-link" href="https://mdsr-book.github.io/mdsr3e/"> <i class="bi bi-book" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="https://moderndive.com/C-appendixC.html" rel="" target="">
- <span class="menu-text">T &amp; T</span></a>
+    <a class="nav-link" href="https://moderndive.com/C-appendixC.html"> 
+<span class="menu-text">T &amp; T</span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://www.slack.com" rel="" target=""><i class="bi bi-slack" role="img">
+    <a class="nav-link" href="https://www.slack.com"> <i class="bi bi-slack" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="https://rstudio.smith.edu/auth-sign-in?appUri=%2F" rel="" target="">
- <span class="menu-text">R</span></a>
+    <a class="nav-link" href="https://rstudio.smith.edu/auth-sign-in?appUri=%2F"> 
+<span class="menu-text">R</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="https://moodle.smith.edu/" rel="" target="">
- <span class="menu-text">m</span></a>
+    <a class="nav-link" href="https://moodle.smith.edu/"> 
+<span class="menu-text">m</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
-    <a class="nav-link" href="https://classroom.github.com/classrooms/144164606-sds-192-f23-sections-02-03" rel="" target=""><i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://classroom.github.com/classrooms/196546846-sds-192-spring-2025"> <i class="bi bi-github" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../.././course-materials/syllabus/syllabus.html" rel="" target="">
- <span class="menu-text">Syllabus</span></a>
+    <a class="nav-link" href="../../course-materials/syllabus/syllabus.html"> 
+<span class="menu-text">Syllabus</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../course-materials/website/schwab.html" rel="" target="">
- <span class="menu-text">Schwab</span></a>
+    <a class="nav-link" href="../../course-materials/website/schwab.html"> 
+<span class="menu-text">Schwab</span></a>
   </li>  
 </ul>
+          </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
-          </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
 </header>
@@ -141,150 +148,80 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Final Project</h1>
+<p class="subtitle lead">Due: December 16, 2024</p>
+</div>
 
 
-<section id="project-overview" class="level2">
-<h2 class="anchored" data-anchor-id="project-overview">Project Overview</h2>
-<p>As part of the coursework requirement for SDS 220, you will conduct a quantitative analysis on a real data set with the goal of using data analysis to address a research question. Your final product will be a written report describing the motivation for the project, details of the data used in the analysis, and the conclusions drawn from your analysis. The project is an opportunity to integrate what you’ve learned about data wrangling, data visualization, and statistical inference with statistical communication skills.</p>
-<p>The core project requirements pertain to the statistical analysis you perform, and the narrative structure of your written report. Roughly speaking, your data analysis project will address a question like “How is {Variable X} related to {Variable Y}”. This means that your data set must measure several variables.</p>
-<p>Your analysis must also include at least one hypothesis test that allows you to draw an inferential conclusions about how your outcome variable is related to your explanatory variable(s). For example, you may include a hypothesis test for a difference in means, a hypothesis test for a difference in proportions, or a hypothesis test on the coefficients of a regression model.</p>
-<p>When choosing which variables to use in your analysis, it is prudent to keep the hypothesis testing requirement in mind. For example, before choosing a categorical variable with 5 levels as your outcome, and a numeric explanatory variable, ask yourself: Do I know how to conduct a hypothesis test that would answer a research question about how these kinds of variables relate? If not, it is recommended that you choose a different set of variables to analyze.</p>
-<p>Your report should be structured as a narrative document that introduces the topic of your analysis (including your research question(s) and the goals of your data analysis), explains the nature of the data you are analyzing in sufficient detail, explains what analyses are being performed and what can be learned from them, and ends with overall conclusions related to your research question that are supported by your data analysis. Your writing should be supplemented with illustrative figures and tables that help the reader understand how these data help answer the questions of your investigation. Your report should also cite at least one outside source of information (in addition to citing the source of your data), though that source does not necessarily have to be a peer-reviewed `academic’ article.</p>
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Schwab </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="final-portfolio" class="level2">
+<h2 class="anchored" data-anchor-id="final-portfolio">Final portfolio</h2>
+<p>For your final project you will build a website displaying your three projects from the semester.</p>
+<p>This final project is a portfolio of your work, you can choose to leave it on the internet or take it down after it is graded.</p>
+<p>You do not need to remake your projects, but you may want to proof read the blog posts.</p>
+<p>You do not need to include your name on any of your work and you need to get permission from your partner to include their name.</p>
+<p>(If you are actually making a digital portfolio, that you plan to keep on the internet, your name would be included in the about me section.)</p>
 </section>
-<section id="stages-and-timeline" class="level2">
-<h2 class="anchored" data-anchor-id="stages-and-timeline">Stages and Timeline</h2>
-<p>You will complete your project several stages outlined below. More details about what is required to complete each stage is described in the subsequent sections.</p>
-<ul>
-<li><strong>Friday, November 17 - Group formation and Data Set Selection (2 points)</strong></li>
-</ul>
-<!-- -   **Tuesday, November 21 - Data Analysis Plan (5 points)** -->
-<!-- -   **Monday, December 11 - Project Presentation (15 points)** -->
-<!-- -   **Saturday, December 20 - Written Report (25 points)** -->
-<!-- -   **Saturday, December 20 - Reflection (3 points)** -->
-<ul>
-<li><p><strong>Data Analysis Plan </strong></p></li>
-<li><p><strong>Project Presentation</strong></p></li>
-<li><p><strong>Saturday, December 20 - Written Report</strong></p></li>
-<li><p><strong>Saturday, December 20 - Reflection</strong></p></li>
-</ul>
-</section>
-<section id="group-formation-and-data-set-selection" class="level2">
-<h2 class="anchored" data-anchor-id="group-formation-and-data-set-selection">Group formation and Data Set Selection</h2>
-<p>You will work in pairs to complete this project, and you will choose your partner yourself. If you do not have a good idea who you want to work with, I encourage you to solicit potential project partners in the course slack.</p>
-<p>Informing the instructor who you are working with is considered the first checkpoint of the group project assignment. You are expected to fill out the provided form before the deadline posted. In the event you are unable to join a group by the deadline, or do not inform the instructor, you will be assigned to a group by the instructor.</p>
-<p>Once you have formed your group, the next step in the project is chosing your data set and planning your analysis. You are free to use any data set the meets the below requirements:</p>
-<ul>
-<li><p>You may not use any variable representing temporal measurement (months, days, years, etc.) as explanatory variable</p></li>
-<li><p>You may not use proportions/percentages as your outcome variable</p></li>
-<li><p>The data set must be in a “tidy” data format to start with</p></li>
-<li><p>There must be at least 10 observations per level in all categorical variables</p></li>
-<li><p>You may not use any data sets used in this class, the Into to Modern Statistics [IMS] book, or any data used as part of example demonstrations.</p></li>
-</ul>
-<p>To simplify the process of choosing a data set, a curated list of data sets that are appropriate for this project is provided <a href="ListOfProjectDatasets.pdf">HERE</a>. Additionally, if you wish to use a data set not on the curated list, you must get approval.</p>
-<p>You will inform the instructor who you are working with, and your chosen data set using the form provided <a href="https://forms.gle/LKV829Nu6rksmMCB9">HERE</a> (only one group member needs to fill out the form). This form is graded on completion provided it is submitted by the due date.</p>
-</section>
-<section id="data-analysis-plan" class="level2">
-<h2 class="anchored" data-anchor-id="data-analysis-plan">Data Analysis Plan</h2>
-<p>Once you’ve chosen a data set, you must form a research question, and plan an analysis suitable to address your question. One member of your group must fill out the Data Analysis Pre-Registration form. This form to submit this is HERE, and will ask you:</p>
-<ul>
-<li><p>What variables you plan to analyze</p></li>
-<li><p>What research question you have</p></li>
-<li><p>What hypothesis you have about your variables</p></li>
-<li><p>How you plan to test your hypothesis</p></li>
-<li><p>How will you divide the work</p></li>
-</ul>
-<p>Completing the Data Analysis Pre-Registration form is considered the second checkpoint of the group project assignment. You are expected to fill out the Data Analysis Pre-Registration form before the deadline posted. If no one from your group fills out the Data Analysis Pre-Registration form by the posted deadline, your group will be assigned a data set by the instructor, and a receive a 0 for this portion of the grade. <!-- One point for thoroughly answering each question above in full sentences. --></p>
-<p>Note, your plan can have errors, this is chance to have feedback. We are looking to see if you have thought carefully about a plan. You are also allowed to make minor changes your plan after the form has been submitted.</p>
-<!-- ## Presentation -->
-<!-- The ability to communicate clearly is of paramount importance in statistics and data science. Statistics almost always happens within a broader context: whether that context be the biological sciences, psychology, political science, economics, art history, linguistics, entertainment, or the myriad other fields in which data are generated and analyzed. As a data analyst operating in these contexts, you need to be able to convey the results of a technical investigation to a potentially non-technical audience. An analysis that is poorly communicated (or miscommunicated) is an analysis that has failed to meet its objective. -->
-<!-- An effective oral presentation is thus an integral part of this project. As a group, you will make a short, 5-minute presentation to the class. Your goal should be to convey to your audience a clear understanding of your research question, as well as the data and proposed primary analysis that you are using to address it. Please also present (and interpret in context) the key preliminary results that you have from this analysis: these might be a series of informative plots, a hypothesis test and the corresponding confidence interval, or a linear regression fit. You should not tell us everything that you have done, or show a number of approaches and analyses that did not work. After hearing your talk, each student in the class should be able to answer the following questions: -->
-<!-- 1.  What is the project about? -->
-<!-- 2.  What is the proposed primary statistical analysis? -->
-<!-- 3.  What are some key initial findings or takeaways from the project? -->
-<!-- **Presentation and Speaking Time**: Each group will have 7 minutes allocated to them; this time comprises both the 5 minute presentation itself and at most 2 minutes for questions. Every member of the group must speak during the presentation. -->
-<!-- **Slides**: You should prepare no more than 5 slides for your talk. If you want to use something other than Google Slides you need instructor permission. One thing you should not do is walk the class through your calculations in RStudio. -->
-<!-- **Presentation Dates**: Slides must be submitted on Monday December 11. Presentations will happen on Dec 11 and Dec 13. -->
-<!-- **Rubric**: Coming soon! -->
-</section>
-<section id="data-analysis-report" class="level2">
-<h2 class="anchored" data-anchor-id="data-analysis-report">Data Analysis Report</h2>
-<p>In this final phase, you will execute the project by writing a technical report that introduces your topics, describes your data and analysis, and explains the conclusions that are supported by your analysis. Many of the key features of this report have already been described in the Core Project Requirements section. In general, your report should follow this basic format:</p>
+<section id="requirements" class="level2">
+<h2 class="anchored" data-anchor-id="requirements">Requirements:</h2>
 <ol type="1">
-<li><p>Introduction: an overview of your project. In a few paragraphs, you should explain clearly and precisely what your research question is, why it is interesting, and what contribution you have made towards answering that question. You should give an overview of the specifics of your model, but not the full details. Most readers never make it past the introduction, so this is your chance to hook the reader, and is in many ways the most important part of the paper!</p></li>
-<li><p>Data: a brief description of your data set. This section should introduce the reader to the data by answering questions such as: what variables are included? Where did they come from? What are units of measurement? What is the population that was sampled? How was the sample collected? This section should also acquaint the reader with your data set through the use of univariate and multivariate visualizations, and univariate and multivariate summaries.</p></li>
-<li><p>Results: A hypothesis test set up to address your research questions(s). You should interpret the results in the context of the data explain their relevance. If you are using a regression model in your analysis, each of it’s coefficients should be clearly explained. You should include negative results, but be careful about how you interpret them. For example, you may want to say something along the lines of: ‘we found no evidence that explanatory variable x is associated with response variable y,’ or ‘explanatory variable x did not provide any additional explanatory power above what was already conveyed by explanatory variable z’. On other hand, you probably shouldn’t claim: ‘there is no relationship between x and y’.</p></li>
-<li><p>Dicussion/Conclusion: a summary of your findings and a discussion of their limitations. Be sure to remind the reader of the question that you originally set out to answer, and summarize your answer to the question. Your discussion should also protect yourself against misinterpretation by being clear about what is not implied by your research. Finally, you should also discuss the limitations of your analysis and/or data, and how it could be augmented or improved with future research. This `future questions’ portion of the discussion should include a brief exploratory analysis showing how your project could be extended to include additional explanatory variables in the future.</p></li>
-<li><p>Appendix (Potentially Optional): If you have any supplemental analyses that would be of interest (e.g., examining the assumptions of your two-sample t-tets), you may wish to place those analyses in an appendix at the end of your report.</p></li>
-<li><p>Bibliography: Your report should contain at least two references (one of those references must be the source of your data). You can use any reasonable citation style (e.g., APA or MLA format), but regardless of style, your bibliography should clearly identify the primary source you are referencing.</p></li>
+<li><p>Each of your projects must be individual files on different webpages. They must be rendered to html. Please check your live website to make sure everything looks good and the links work.</p></li>
+<li><p>You must remove the code, warnings and errors from each rendered file.</p></li>
+<li><p>Your website will have 5 pages minimum:</p>
+<ol type="i">
+<li><p>Landing page - This must have an image of some data graphic, this could be anything you made, including work from SDS 100, 220 or a lab. From the landing page people should be able to navigate to your three projects and your about me section.</p></li>
+<li><p>One page per project.</p></li>
+<li><p>An about page so people can contact you to hire you. You can choose to have genuine information here but no contact information until you are ready to graduate. You can also choose to post fake information that seems legitimate and professional. You cannot add identifying info about your partner here. Once again fake information is completely okay, I’ll be able to verify your github username.</p></li>
+</ol></li>
+<li><p>You will make use of the nav bar.</p></li>
+<li><p>Your website should look professional. Use any of the skills from 192 or 100. Consider headers and links.</p></li>
+<li><p>Your website must be pushed to github and turned on and working.* Please test it by visiting you site. When you are done submit the link to your site to the forum on moodle.</p></li>
+<li><p>When I’m done grading I’ll let you know and you can turn off your portfolio.</p></li>
+<li><p>(Optional) add a 404 page.</p></li>
 </ol>
-<p>To complete the project, your group should submit</p>
+</section>
+<section id="website-options" class="level2">
+<h2 class="anchored" data-anchor-id="website-options">Website options:</h2>
 <ol type="1">
-<li><p>Your written report as either a PDF document,</p></li>
-<li><p>The .qmd or .Rmd file that, when rendered, creates the self-contained PDF document for the report.</p></li>
-<li><p>Your bibtex references file (and your citation style file, if any citation style file was used)</p></li>
+<li><p><a href="https://quarto.org/docs/websites/">Here is the website for quarto websites.</a></p></li>
+<li><p>Change the <a href="https://quarto.org/docs/output-formats/html-themes.html">theme of your website.</a></p></li>
+<li><p>Customize your website using ideas from <a href="https://ucsb-meds.github.io/customizing-quarto-websites/#/title-slide">here</a>.</p></li>
 </ol>
-<p>There is no limit to the length of the technical report, but it should not be longer than it needs to be; you should strive to express your ideas concisely and precisely in all situations. Even though you are expected to write your technical report as an Rmarkdown or Quarto document, the PDF file you submit should not display any R code, warnings, or messages. Your technical report should also be well formatted and well organized (e.g., using properly formatted headers to divide sections, using LaTeX markup for mathematical symbols where needed, tables should have bolded column and row labels, etc.).</p>
 </section>
-<section id="guidelines-for-successful-statistical-writing" class="level2">
-<h2 class="anchored" data-anchor-id="guidelines-for-successful-statistical-writing">Guidelines for Successful Statistical Writing</h2>
-<p>This document should be written for peer reviewers, who comprehend statistics at least as well as you do. You should aim for a level of complexity that is more statistically sophisticated than an article in the Science section of The New York Times, but less sophisticated than an academic journal. For example, your report will use terms that that you will likely never see in the Times (e.g.&nbsp;a <span class="math inline">\(t\)</span>-statistic), but you should not dwell or expound on technical points with no obvious ramifications for the reader (e.g., explaining that your plots were made using ggplot2, or including the definition of a p-value after reporting the p-value of your test statistic). Your goal for this paper is to convince a statistically-minded reader (e.g.&nbsp;a student in this class, or a student from another school who has taken an introductory statistics class) that you have addressed an interesting research question in a meaningful way. But even a reader with no background in statistics should be able to read your report and get the gist of it.</p>
-<p>A good example of how the writing in this report might differ from the writing you’ve done on a HW assignment or exam is how you describe (or rather, don’t) describe your null and alternative hypotheses. In a HW assignment or exam, you might be asked to explicitly state your null and alternative hypotheses in words and symbols, and included sentences like ‘The null hypothesis is that in the population of all babies, there is no difference in the average birth weight between babies born to smokers babies born to non-smokers’ or equations like <span class="math inline">\(\mu_A – \mu_B = 0\)</span>. But in a research paper, you would not include such literal descriptions of the null hypothesis; rather, you would explain your research question (‘Does the smoking behavior of pregnant women affect their baby’s birth weight?’) and how you chose to address this research question with data analysis (e.g., a two-sample t-test, using a two-tailed p-value). In other words, you shouldn’t explicitly write the null and alternative hypotheses, but a statistically literate reader should be able to answer the question ‘What are the null and alternative hypotheses being tested?’ based on your writing.</p>
-<p>This report is not simply a dump of all the figures, tables, and calculations that you made during this project, or a story about all the things you tried out in the beginning of the project but didn’t end up keeping. Rather, the technical report should be focused and concise, and based on the minimal set of R code that is necessary to understand your results and findings in full. If you make a claim about your research question or data, it must be justified by explicit calculation. A knowledgeable reviewer should be able to run each line of code in your .qmd or .Rmd file without modification, and verify every statement that you have made.</p>
-<p>And even though your report may be written in a Quarto document, and rendered in RStudio, its primary purpose is to be a narrative report that describes how you addressed your research question, not a computer program or a lab notebook with technical details and no context. You should not present tables, figures, or calculations without a written explanation of the information that is supposed to be conveyed by that table or figure. Keep in mind the distinction between data and information. For example, simply displaying a table with the means and standard deviations of your variables with not explanation is not meaningful. And adding an accompanying sentence that reiterates the content of the table (e.g.&nbsp;‘the mean of variable x was 34.5 and the standard deviation was 2.8…’) is equally meaningless. What you should strive to do is interpret these values in context (e.g.&nbsp;‘although variables <span class="math inline">\(x_1\)</span> and <span class="math inline">\(x_2\)</span> have similar means, the variability of <span class="math inline">\(x_1\)</span> is much larger, suggesting…’).</p>
+<section id="some-examples-of-digital-portfolios" class="level2">
+<h2 class="anchored" data-anchor-id="some-examples-of-digital-portfolios">Some examples of digital portfolios</h2>
+<p>A perfect Digital Portfolio takes time to make, yours does not need to be perfect. It is just a start, you can add work to it throughout your college and post-college career.</p>
+<p><a href="https://erinschwab.webflow.io/">Erin Schwab’s work</a></p>
+<p><a href="https://careerfoundry.com/en/blog/data-analytics/data-analytics-portfolio-examples/">A website with examples</a></p>
 </section>
-<section id="written-report-grading" class="level2">
-<h2 class="anchored" data-anchor-id="written-report-grading">Written Report Grading</h2>
-<p>Below is a rough list of features I will be looking for when judging the quality of the final project report. Each section will be graded out of 5 points, for a total of 25 points: (5) Exceptional, (4) very good, (3) satisfactory, (2) below expectations, (1) reasonable attempt.</p>
-<p><strong>Introduction</strong></p>
+<section id="a-few-things-to-note" class="level2">
+<h2 class="anchored" data-anchor-id="a-few-things-to-note">A few things to note:</h2>
 <ul>
-<li><p>Is the topic clearly explained?</p></li>
-<li><p>Is the research question / goals for the analysis clearly explained?</p></li>
-<li><p>Is there any justification or motivation for this study?</p></li>
-<li><p>Are the outcome and explanatory variables of interest clearly identified?</p></li>
-<li><p>Are important parts of upcoming analysis and conclusion foreshadowed?</p></li>
-<li><p>Is the source of the data clearly explained and cited?</p></li>
+<li><p>I am meant to protect your identity as students. Eventually you will want contact information on your portfolio, but leave it off for now. Don’t even mention Smith College.</p></li>
+<li><p>After your website is graded I’ll let you know and you should turn it off.</p></li>
+<li><p>This is meant to be a simple skill that students last Fall wished they knew how to do. It should not be very very time consuming. Make something that meet requirements then move on. You can perfect it later.</p></li>
+<li><p>If you would prefer to not post a website online, you still have to make one, then you have to invite me to your repo so I can download it and make sure it works. You have to let me know you are doing this before the due date.</p></li>
 </ul>
-<p><strong>Exploratory Data Analysis</strong></p>
-<ul>
-<li><p>Are any important data wrangling steps (e.g., filtering missing values, recoding variables) and any impacts of these steps clearly described?</p></li>
-<li><p>Is the number of observations clearly identified?</p></li>
-<li><p>Are the distributions of each outcome and explanatory variable visualized and clearly described? Are the distributions summarized with appropriate statistics?</p></li>
-<li><p>Are the relationships between variables explored with visualizations? Are these relationships discussed and interpreted in writing?</p></li>
-<li><p>Do all figures and tables have captions, and is the content of figures/tables sufficiently unpackage/explained for the reader?</p></li>
-<li><p>Are the content of the figures and tables overly redundant (they should not be!)</p></li>
-</ul>
-<p><strong>Results</strong></p>
-<ul>
-<li><p>Is the type of test you are using made clear?</p></li>
-<li><p>Is the relationship between the research question and hypothesis test made clear?</p></li>
-<li><p>Are the test statistic, p-value, degrees of freedom (t-test only) and alpha level clearly explained?</p></li>
-<li><p>Are the results of the test clear?</p></li>
-<li><p>Are you including a confidence interval around the statistics relevant for your hypothesis test?</p></li>
-<li><p>Is your Null Hypothesis Distribution shown?</p></li>
-<li><p>Are your model’s coefficients clearly interpreted, and is the fitted regression equation presented (regression only) ?</p></li>
-<li><p>Are your hypothesis test’s assumptions, if any, investigated to make sure they are reasonable assumptions to make? (These assumptions may be assessed in an appendix section)</p></li>
-</ul>
-<p><strong>Discussion</strong></p>
-<ul>
-<li><p>Are all the conclusions explained in a clear and straightforward manner such a that person without statistical training or domain expertise can understand them?</p></li>
-<li><p>Are the results of your analysis clearly tied back to your analysis goals and research questions?</p></li>
-<li><p>Is there any discussion of what the results mean (e.g., are the results and conclusion connected back the motivation for your study?)</p></li>
-<li><p>Are limitations of your analysis and/or data acknowledged?</p></li>
-<li><p>Does your discussion include a brief exploratory analysis showing how your project could be extended to include additional explanatory variables in the future?</p></li>
-</ul>
-<p><strong>Writing Style</strong></p>
-<ul>
-<li><p>Overall throughout the report, are the ideas expressed precisely and concisely?</p></li>
-<li><p>Overall throughout the report, is the writing and exposition in the report geared towards someone with a similar level of statistical training (e.g., the writing doesn’t rely heavily on jargon, but also doesn’t elaborate on minute details that don’t benefit the readers understanding of the research).</p></li>
-<li><p>Does the report include a citaiton for the source of the data, and reference at least one outside source, using approrpriate in-text citations and a formatted bibliography?</p></li>
-<li><p>Is the R code hidden from the reader, and is the report free from messages, warning messages, and error messages?</p></li>
-<li><p>Is the output from your R code appropriately styled (i.e., are tables formatted as tables?) and is the report free from ‘random’ outputs (e.g., a p-value being printed out in the middle of a paragraph)</p></li>
-</ul>
-</section>
-<section id="reflection" class="level2">
-<h2 class="anchored" data-anchor-id="reflection">Reflection</h2>
-<p>You will write a short reflection piece describing what you learned from working on this project and how well you and your group navigated the collaborative learning process.</p>
-<p>Details coming soon!</p>
 
 
 </section>
@@ -331,6 +268,33 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       } else {
         el.classList.add('notransition');
       }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
     }
   }
   const toggleColorMode = (alternate) => {
@@ -399,13 +363,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return localAlternateSentinel;
     }
   }
-  let localAlternateSentinel = 'default';
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
   // Dark / light mode switch
   window.quartoToggleColorScheme = () => {
     // Read the current dark / light value 
     let toAlternate = !hasAlternateSentinel();
     toggleColorMode(toAlternate);
     setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
   };
   // Ensure there is a toggle, if there isn't float one in the top right
   if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
@@ -440,18 +406,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -483,11 +438,50 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
-  function tippyHover(el, contentFn) {
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -497,8 +491,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -510,7 +513,130 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -554,6 +680,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -579,6 +706,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -650,12 +803,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
-    <a class="nav-link" href="../../credits.qmd">credits</a>
+    <a class="nav-link" href="../../credits.qmd">
+<p>credits</p>
+</a>
   </li>  
 </ul>
     </div>
   </div>
 </footer>
+
 
 
 

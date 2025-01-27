@@ -40,16 +40,16 @@ h1{font-weight: 400;}
 
 -   **Contact Info:**\
     `r fontawesome::fa("at")` [nschwab\@smith.edu](mailto:nschwab@smith.edu)\
-    <!-- `r fontawesome::fa("phone")` 413-585-\ -->
+    `r fontawesome::fa("phone")` 413-585-3938
     `r fontawesome::fa("github")` [Nics-Github](http://www.github.com/Nics-Github)
 
 -   **Office location:** McConnell 215
 
     -   Office Hours:
 
-        -   Monday: 9:20-9:40
+        -   Monday: 12:45-1:45 pm
 
-        -   Wednesday: 9:20-10:00, 1:30-2:30 pm
+        -   Wednesday: 8:20-9:20 am
 
         -   In McConnell 214
 
@@ -59,17 +59,18 @@ h1{font-weight: 400;}
 
 -   **Meeting locations/times:**
 
-Morning Section
+Morning Sections
 
 ```         
--   MWF: 8:00 AM - 9:15 AM / Sabin-Reed 301
+-   MWF: 9:25 AM - 10:40 AM / Sabin-Reed 301
+-   MWF: 10:50 AM - 12:05 PM / Sabin-Reed 301
 ```
 
 -   **Getting help**:
 
     -   For non personal/sensitive questions, ask on the `#questions` channel on Slack. For personal/sensitive matters, Slack DM Professor Schwab.
 
-    -   [Student hours](/schwab.qmd)
+    -   Office hours
 
     -   [Spinelli Center](https://www.smith.edu/academics/spinelli-center/tutoring)
 
@@ -157,7 +158,7 @@ Students who complete this course will be able to:
 
 # Lecture schedule
 
-The lecture schedule and associated readings can be found on the [main page](../index.qmd) of this course webpage.
+The lecture schedule and associated readings can be found on the [main page](/index.qmd) of this course webpage.
 
 # Book and software
 
@@ -177,7 +178,7 @@ We'll be reading chapters 1-6,8,15,and 17 of Modern Data Science with R. And som
 
 # Evaluation
 
-All due dates can be found on the [main page](../index.html) of this course webpage.
+All due dates can be found on the [main page](/index.qmd) of this course webpage.
 
 This class is project based. As such your evaluations will be based on projects you create.
 
@@ -231,7 +232,7 @@ Project 3- due after reading chapter 17 of MDSR
 
 Final Project/ Presentation during our final time.
 
-For a more up to date schedule see the course's [website](../index.html).
+For a more up to date schedule see the course's [website](/index.qmd).
 
 ## Policies
 

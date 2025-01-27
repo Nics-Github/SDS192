@@ -56,13 +56,12 @@ h1{font-weight: 400;}
 ```
 # Schedule
 
-<!-- This is the wesbite for the schedule below:  -->
+<!-- The the wesbite for the schedule below:  -->
 
 <!-- https://docs.google.com/spreadsheets/d/1j1Mub7lb1CJKpG-PySzdbzzgvryVQ3XrlvNgPRUcN0I/edit?usp=sharing -->
 
 ```{=html}
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTG_b6upDZcPxXB92LHYIhV1uAXgeVGaMsZ3sDRPuSQN74JdhkKhZQVjw6T68I3zsP8KGYzDSVTZW64/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false&amp;gid=0&amp;range=A1:E35
-" width="100%" height="300">
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTG_b6upDZcPxXB92LHYIhV1uAXgeVGaMsZ3sDRPuSQN74JdhkKhZQVjw6T68I3zsP8KGYzDSVTZW64/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false&amp;gid=0&amp;range=A1:E3" width="100%" height="300">
 ```
 </iframe>
 
@@ -98,13 +97,7 @@ h1{font-weight: 400;}
 
 <!-- [Prof Cao's Post Course Survey](https://smithcollege.qualtrics.com/jfe/form/SV_dh7rSgiH2AvNUj4) -->
 
-<!-- Project 3 work day.  -->
 
-<!-- # Day 35 -->
-
-<!-- Project 3 work day.  -->
-
-<!-- Professor Garcia -->
 
 <!-- # Day 34 SQL lab -->
 
@@ -128,547 +121,560 @@ h1{font-weight: 400;}
 
 <!-- [SQL Notes](./course-materials/lectures/32_Tim_s_SQL/Smith-SQL-Notes-I.pdf) -->
 
-<!-- # Day 31 Project 3 -->
 
-<!-- Leaflet Example -->
+<!-- # This is where you got to Fall 2024 -->
+<!-- # Day 36 Project 3 and Final Project -->
 
-<!-- [Project 3](https://classroom.github.com/a/9QKu_fCl) -->
+<!-- The final project instructions can be found [here](./course-materials/Final-Project/Project.qmd).  -->
+
+<!-- Today and Wednesday you should mostly work on Project 3 in class -->
+
+
+
+<!-- # Day 35 Project 3 -->
+
+<!-- [Here is the link to project 3.](https://classroom.github.com/a/byNX6O7W)  -->
+
+<!-- I encourage you to work with a new partner in the class to experiance what it is like working with another person on github.  -->
+
+<!-- # Day 34 SAL guests -->
+
+<!-- [Jon Caris and Kala'i Ellis](https://docs.google.com/presentation/d/1s6YGENIbpoSxuAcfiv_E6Lv5kRv15lDMJ9BE8BNS2uU/edit?usp=sharing) -->
+
+
+<!-- # Day 33 Lab 7 Mapping Monarchs. -->
+
+<!-- [Here is the lab for today.](https://classroom.github.com/a/OgSLZGBv) -->
+
+<!-- It is due next Monday. -->
+
+<!-- [Survey for Prof Coa's class](https://smithcollege.qualtrics.com/jfe/form/SV_eR2LYqtBBTu0BBI)) -->
 
 <!-- Quiz 3 is available and due by Sunday. -->
 
 
 
-<!-- # Day 34 SAL guests -->
+<!-- # Day 32 Choropleth Mapping and Leaflet -->
 
-<!-- [Jon Caris and Kala'i Ellis](https://docs.google.com/presentation/d/1yxMAglQLNAWok3_xqPgMCqxa2g1IlsPHXeu04iT9BZs/edit?usp=sharing) -->
-
-# Day 33 Lab 7 Mapping Monarchs.
-
-[Here is the lab for today.](https://classroom.github.com/a/OgSLZGBv)
-
-It is due next Monday.
-
-# Day 32 Choropleth Mapping and Leaflet
-
-[Choropleth Mapping](./course-materials/in-class-activies/29_Choropleth_and_Leaflet.qmd)
+<!-- [Choropleth Mapping](./course-materials/in-class-activies/29_Choropleth_and_Leaflet.qmd) -->
 
 
 
-# Day 31 Mapping with simple features (sf) and shape files
+<!-- # Day 31 Mapping with simple features (sf) and shape files -->
 
-Simple features and Shape files.
+<!-- Simple features and Shape files. -->
 
--   [Vermont's Geospacial Data](https://geodata.vermont.gov/)
+<!-- -   [Vermont's Geospacial Data](https://geodata.vermont.gov/) -->
 
--   [MA Bike Trails](https://www.mass.gov/info-details/massgis-data-bicycle-trails)
+<!-- -   [MA Bike Trails](https://www.mass.gov/info-details/massgis-data-bicycle-trails) -->
 
--   [tidygeocoder services](https://jessecambon.github.io/tidygeocoder/articles/geocoder_services.html)
+<!-- -   [tidygeocoder services](https://jessecambon.github.io/tidygeocoder/articles/geocoder_services.html) -->
 
-[In class activity](./course-materials/in-class-activies/27_mapping.zip)
+<!-- [In class activity](./course-materials/in-class-activies/27_mapping.zip) -->
 
-Quiz 3 on mapping is open, don't take it until after Monday's class. 
+<!-- Quiz 3 on mapping is open, don't take it until after Monday's class.  -->
 
-<!-- # Day 26 Static Mapping part 1 -->
+<!-- <!-- # Day 26 Static Mapping part 1 --> 
 
-<!-- Announcements -->
+<!-- <!-- Announcements --> 
 
+
+<!-- <!-- [Example: static maps](./course-materials/lectures/26_maps-ggplot.qmd) --> 
+
+<!-- # Day 30 Functions and Static Maps -->
+
+<!-- Let's finish this problem from last class.  -->
+
+
+<!-- ::: {.callout-note collapse="true"} -->
+<!-- # 6 scatter plots -->
+
+<!-- Make a function that takes a df and a variable then produces a scatter plot of that variable vs cesd. Use it to plot multiple graphs of the first 6 numeric variables HELPrct. [Hint: check out the extended example from 7.7](https://mdsr-book.github.io/mdsr3e/07-iteration.html#extended-example-factors-associated-with-bmi) -->
+<!-- ::: -->
+
+<!-- [Anonymous functions](course-materials/lectures/30_anonymous_functions.qmd) -->
+
+<!-- [Mapping Review](course-materials/lectures/30_map_review.qmd) -->
 
 <!-- [Example: static maps](./course-materials/lectures/26_maps-ggplot.qmd) -->
 
-# Day 30 Functions and Static Maps
 
-Let's finish this problem from last class. 
+<!-- # Day 29 Practice function writing in R  -->
 
+<!-- [Chapter 7 Problem 1 and 3](https://mdsr-book.github.io/mdsr3e/07-iteration.html#iteration-exercises) -->
 
-::: {.callout-note collapse="true"}
-# 6 scatter plots
 
-Make a function that takes a df and a variable then produces a scatter plot of that variable vs cesd. Use it to plot multiple graphs of the first 6 numeric variables HELPrct. [Hint: check out the extended example from 7.7](https://mdsr-book.github.io/mdsr3e/07-iteration.html#extended-example-factors-associated-with-bmi)
-:::
+<!-- # Day 28 Lab 6 -->
 
-[Anonymous functions](course-materials/lectures/30_anonymous_functions.qmd)
+<!-- [Lab 6](https://classroom.github.com/a/bZFal6M8) -->
 
-[Mapping Review](course-materials/lectures/30_map_review.qmd)
+<!-- # Day 27: Bonus Project 2 day? -->
 
-[Example: static maps](./course-materials/lectures/26_maps-ggplot.qmd)
+<!-- Making our own functions -->
 
+<!-- # Day 26: Iteration -->
 
-# Day 29 Practice function writing in R 
+<!-- [Lecture: `across()` and `map()`](course-materials/lectures/24_across_maps.qmd) -->
 
-[Chapter 7 Problem 1 and 3](https://mdsr-book.github.io/mdsr3e/07-iteration.html#iteration-exercises)
+<!-- [In class activity](./course-materials/in-class-activies/24_In-classExercise-Iteration.qmd) -->
 
+<!-- Making our own functions -->
 
-# Day 28 Lab 6
+<!-- # Day 25: Function refresher -->
 
-[Lab 6](https://classroom.github.com/a/bZFal6M8)
+<!-- [Data Masking](course-materials/lectures/24_data_masking.qmd) -->
 
-# Day 27: Bonus Project 2 day?
+<!-- [More on masking](https://rlang.r-lib.org/reference/topic-data-mask.html) -->
 
-Making our own functions
+<!-- <!-- [Solution to Monday's in class activity](/course-materials/in-class-activies/day_25solutions_function_writing.html) --> 
 
-# Day 26: Iteration
+<!-- # Day 24: Project 2 work day -->
 
-[Lecture: `across()` and `map()`](course-materials/lectures/24_across_maps.qmd)
+<!-- # Day 23: Final Project: Website  -->
 
-[In class activity](./course-materials/in-class-activies/24_In-classExercise-Iteration.qmd)
+<!-- ::: {.callout-note collapse="true"} -->
+<!-- # Website work -->
 
-Making our own functions
+<!-- -   Make a new private repo -->
 
-# Day 25: Function refresher
+<!-- -   Move all your website files to that repo -->
 
-[Data Masking](course-materials/lectures/24_data_masking.qmd)
+<!--     -   Recall they are in your lab 1 folder. -->
 
-[More on masking](https://rlang.r-lib.org/reference/topic-data-mask.html)
+<!-- -   Add your project 1 to your website.  -->
 
-<!-- [Solution to Monday's in class activity](/course-materials/in-class-activies/day_25solutions_function_writing.html) -->
+<!--     -   You could just link it to the main page -->
 
-# Day 24: Project 2 work day
+<!--     -   [Add it to the side bar](https://quarto.org/docs/websites/website-navigation.html#side-navigations). -->
 
-# Day 23: Final Project: Website 
+<!-- ::: -->
 
-::: {.callout-note collapse="true"}
-# Website work
 
--   Make a new private repo
 
--   Move all your website files to that repo
+<!-- ::: {.callout-note collapse="true"} -->
+<!-- # Clean up your project -->
 
-    -   Recall they are in your lab 1 folder.
+<!-- -   #| echo: False to hide code from a code chunk.  -->
 
--   Add your project 1 to your website. 
+<!-- -   #| eval: False to not include the output of the code.  -->
 
-    -   You could just link it to the main page
-    
-    -   [Add it to the side bar](https://quarto.org/docs/websites/website-navigation.html#side-navigations).
+<!-- -   [More options](https://rstudio.github.io/cheatsheets/html/quarto.html) -->
+<!-- ::: -->
 
-:::
 
+<!-- ::: {.callout-note collapse="true"} -->
+<!-- # Customize -->
 
+<!-- -   [Formatting, sds 100 :lab 8 ](https://quarto.org/docs/authoring/markdown-basics.html) -->
 
-::: {.callout-note collapse="true"}
-# Clean up your project
+<!-- -   [set a theme](https://quarto.org/docs/websites/#website-theme) -->
 
--   #| echo: False to hide code from a code chunk. 
+<!-- -   [make a custom 404](https://quarto.org/docs/websites/website-navigation.html#pages-404) -->
 
--   #| eval: False to not include the output of the code. 
+<!-- ::: -->
 
--   [More options](https://rstudio.github.io/cheatsheets/html/quarto.html)
-:::
+<!-- What more to do?  -->
 
 
-::: {.callout-note collapse="true"}
-# Customize
+<!-- # Day 22 -->
 
--   [Formatting, sds 100 :lab 8 ](https://quarto.org/docs/authoring/markdown-basics.html)
+<!-- Project 1 grades are up and current. Please let me know if you cannot see grades on moodle.  -->
 
--   [set a theme](https://quarto.org/docs/websites/#website-theme)
+<!-- Project 2 workday -->
 
--   [make a custom 404](https://quarto.org/docs/websites/website-navigation.html#pages-404)
+<!-- # Day 21  -->
 
-:::
+<!-- Lab 5 reflection - personal information -->
 
-What more to do? 
+<!-- Many to one join warning. -->
 
+<!-- [Pivot Practice - Problem 5 chapter 6 ](https://mdsr-book.github.io/mdsr3e/06-dataII.html#dataII-exercises) -->
 
-# Day 22
+<!-- [Project 2](https://classroom.github.com/a/kprELIeW) -->
 
-Project 1 grades are up and current. Please let me know if you cannot see grades on moodle. 
+<!-- # Day 20 Pivots -->
 
-Project 2 workday
 
-# Day 21 
 
-Lab 5 reflection - personal information
+<!-- [Reflection on Lab 4](course-materials/lectures/20_SQF.qmd) -->
 
-Many to one join warning.
+<!-- [Pivots](course-materials/lectures/18_pivots.qmd) -->
 
-[Pivot Practice - Problem 5 chapter 6 ](https://mdsr-book.github.io/mdsr3e/06-dataII.html#dataII-exercises)
+<!-- We'll do Problems [Chapter 4: 1,2,5,9,(12)](https://mdsr-book.github.io/mdsr3e/04-dataI.html#dataI-exercises) in class today. [Chapter 5: 3,4](https://mdsr-book.github.io/mdsr3e/05-joins.html#join-exercises) -->
 
-[Project 2](https://classroom.github.com/a/kprELIeW)
+<!-- # Day 19 lab 5 -->
 
-# Day 20 Pivots
+<!-- [POM](SDS_POM_Flyer.pdf) -->
 
+<!-- [Map](Map_SDs_POM.pdf) -->
 
+<!-- ::: {.callout-tip collapse="true"} -->
+<!-- # lab 4 rendering/submission issues -->
 
-[Reflection on Lab 4](course-materials/lectures/20_SQF.qmd)
+<!-- before rendering: -->
 
-[Pivots](course-materials/lectures/18_pivots.qmd)
+<!-- -   remove the `#| eval: FALSE` in lab 4 (due Friday) -->
 
-We'll do Problems [Chapter 4: 1,2,5,9,(12)](https://mdsr-book.github.io/mdsr3e/04-dataI.html#dataI-exercises) in class today. [Chapter 5: 3,4](https://mdsr-book.github.io/mdsr3e/05-joins.html#join-exercises)
+<!-- gitignore: -->
 
-# Day 19 lab 5
+<!-- Don't push the `sqf_2011.csv` to github you will get an error! Its too big -->
+<!-- <!-- -->
 
-[POM](SDS_POM_Flyer.pdf)
+<!-- -   First save your qmd somewhere. -->
 
-[Map](Map_SDs_POM.pdf)
+<!-- -   Uncommit your commit with `git reset --hard HEAD^` or `git reset --hard HEAD~2` -->
 
-::: {.callout-tip collapse="true"}
-# lab 4 rendering/submission issues
+<!-- -   You may need to add a `.gitignore` file.--> 
 
-before rendering:
+<!-- -   Open the `.gitignore` file and add `sqf_2011.csv` to it. -->
+<!-- ::: -->
 
--   remove the `#| eval: FALSE` in lab 4 (due Friday)
+<!-- [Lab 5](https://classroom.github.com/a/tI92Hb_z) -->
 
-gitignore:
 
-Don't push the `sqf_2011.csv` to github you will get an error! Its too big
-<!--
+<!-- # Day 18 Joining tables -->
 
--   First save your qmd somewhere.
+<!-- Exploration: How to join tables? -->
 
--   Uncommit your commit with `git reset --hard HEAD^` or `git reset --hard HEAD~2`
+<!-- [Problems 1, 4](https://mdsr-book.github.io/mdsr3e/05-joins.html#join-exercises) -->
 
--   You may need to add a `.gitignore` file.-->
+<!-- [Joining two tables in class exercise](https://scao53.github.io/sds192spring2023/in-class_exercises/Lec17In-classExercise-JoinTables.zip) -->
 
--   Open the `.gitignore` file and add `sqf_2011.csv` to it.
-:::
+<!-- <!-- Open Quiz 2, maybe edit it!  -->
 
-[Lab 5](https://classroom.github.com/a/tI92Hb_z)
+<!-- <!-- Part of day 18 should be digestion of lab 4 --> 
 
+<!-- # Day 17 Lab 4 -->
 
-# Day 18 Joining tables
+<!-- [Lab 4 SQF](https://classroom.github.com/a/eSF9MUxn) -->
 
-Exploration: How to join tables?
+<!-- ::: {.callout-tip collapse="true"} -->
+<!-- # lab 4 rendering/submission issues -->
 
-[Problems 1, 4](https://mdsr-book.github.io/mdsr3e/05-joins.html#join-exercises)
+<!-- rendering: -->
 
-[Joining two tables in class exercise](https://scao53.github.io/sds192spring2023/in-class_exercises/Lec17In-classExercise-JoinTables.zip)
+<!-- -   Note on `#| eval: FALSE` in lab 4 (due Friday) -->
 
-<!-- Open Quiz 2, maybe edit it!  -->
+<!-- gitignore: -->
 
-<!-- Part of day 18 should be digestion of lab 4 -->
+<!-- Don't push the `sqf_2011.csv` to github you will get an error! Its too big<!-- -->
 
-# Day 17 Lab 4
+<!-- -   First save your qmd somewhere. -->
 
-[Lab 4 SQF](https://classroom.github.com/a/eSF9MUxn)
+<!-- -   Uncommit your commit with `git reset --hard HEAD^` or `git reset --hard HEAD~2` -->
 
-::: {.callout-tip collapse="true"}
-# lab 4 rendering/submission issues
+<!-- -   You may need to add a `.gitignore` file.--> 
 
-rendering:
+<!-- -   Open the `.gitignore` file and add `sqf_2011.csv` to it. -->
+<!-- ::: -->
 
--   Note on `#| eval: FALSE` in lab 4 (due Friday)
+<!-- # Day 16 -->
 
-gitignore:
+<!-- [Wrangle babynames](/course-materials/in-class-activies/Wrangling_Baby_Names.qmd) -->
 
-Don't push the `sqf_2011.csv` to github you will get an error! Its too big<!--
+<!-- ```{r} -->
+<!-- #| code-fold: true -->
+<!-- #| echo: true -->
+<!-- #| eval: false -->
 
--   First save your qmd somewhere.
+<!--  install.packages("babynames") -->
 
--   Uncommit your commit with `git reset --hard HEAD^` or `git reset --hard HEAD~2`
+<!-- ``` -->
 
--   You may need to add a `.gitignore` file.-->
+<!-- # Day 15 Data wrangling in one table. -->
 
--   Open the `.gitignore` file and add `sqf_2011.csv` to it.
-:::
+<!-- [Lecture on the five verbs](course-materials/lectures/mdsr-the-verbs.qmd) -->
 
-# Day 16
+<!-- [dpylr cheatsheet for wrangling](https://nyu-cdsc.github.io/learningr/assets/data-transformation.pdf) -->
 
-[Wrangle babynames](/course-materials/in-class-activies/Wrangling_Baby_Names.qmd)
+<!-- ```{r} -->
+<!-- #| code-summary: "Make the Random_subset data frame." -->
+<!-- #| code-fold: true -->
+<!-- #| echo: true -->
+<!-- #| eval: false -->
 
-```{r}
-#| code-fold: true
-#| echo: true
-#| eval: false
 
- install.packages("babynames")
 
-```
+<!-- Random_subset <-  tibble::tribble( -->
 
-# Day 15 Data wrangling in one table.
+<!--     ~year,~sex,   ~name,         ~n, ~prop, -->
 
-[Lecture on the five verbs](course-materials/lectures/mdsr-the-verbs.qmd)
+<!--      2003, "M",     "Bilal",        146, 0.0000695, -->
 
-[dpylr cheatsheet for wrangling](https://nyu-cdsc.github.io/learningr/assets/data-transformation.pdf)
+<!--      1999, "F",     "Terria",        23, 0.0000118, -->
 
-```{r}
-#| code-summary: "Make the Random_subset data frame."
-#| code-fold: true
-#| echo: true
-#| eval: false
+<!--      2010, "F",     "Naziyah",       45, 0.0000230, -->
 
+<!--      1989, "F",     "Shawana",       41, 0.0000206, -->
 
+<!--      1989, "F",     "Jessi",        210, 0.000105, -->
 
-Random_subset <-  tibble::tribble(
+<!--      1928, "M",     "Tillman",       43, 0.0000377, -->
 
-    ~year,~sex,   ~name,         ~n, ~prop,
+<!--      1981, "F",     "Leslee",        83, 0.0000464, -->
 
-     2003, "M",     "Bilal",        146, 0.0000695,
+<!--      1981, "F",     "Sherise",       27, 0.0000151, -->
 
-     1999, "F",     "Terria",        23, 0.0000118,
+<!--      1920, "F",     "Marquerite",    26, 0.0000209, -->
 
-     2010, "F",     "Naziyah",       45, 0.0000230,
+<!--      1941, "M",     "Lorraine",      24, 0.0000191 -->
 
-     1989, "F",     "Shawana",       41, 0.0000206,
+<!--   ) -->
 
-     1989, "F",     "Jessi",        210, 0.000105,
+<!-- ``` -->
 
-     1928, "M",     "Tillman",       43, 0.0000377,
+<!-- <!-- The below is based on my NECOMMIT keynote.   --> 
 
-     1981, "F",     "Leslee",        83, 0.0000464,
+<!-- <!-- [Stop and Frisk Wrangling](/course-materials/lectures/15_Wrangling_1_SQF.qmd) --> 
 
-     1981, "F",     "Sherise",       27, 0.0000151,
+<!-- # Day 14 Project 1 work day -->
 
-     1920, "F",     "Marquerite",    26, 0.0000209,
+<!-- Working on projects together. -->
 
-     1941, "M",     "Lorraine",      24, 0.0000191
+<!-- -   Consider the ethics. -->
 
-  )
+<!-- -   You might realize you are sharing an API key. Consider what that means. -->
 
-```
+<!-- -   Consider code layout. -->
 
-<!-- The below is based on my NECOMMIT keynote.   -->
+<!-- -   Remember to comment your code. -->
 
-<!-- [Stop and Frisk Wrangling](/course-materials/lectures/15_Wrangling_1_SQF.qmd) -->
+<!-- -   Follow tidyverse style guide. -->
 
-# Day 14 Project 1 work day
+<!-- -   Practice a pull request today. -->
 
-Working on projects together.
+<!-- -   Make your graph legible to the lay person (title, labels, source, captions, etc). -->
 
--   Consider the ethics.
+<!-- # Day 13 Ethics -->
 
--   You might realize you are sharing an API key. Consider what that means.
+<!-- <!-- Add a bit about hiring bias based on the open intro data --> 
 
--   Consider code layout.
+<!-- <!-- facial recognition bias --> 
 
--   Remember to comment your code.
+<!-- [Data Ethics](/course-materials/lectures/11_ethics.qmd) -->
 
--   Follow tidyverse style guide.
+<!-- [Maybe some project time]{.smallcaps} -->
 
--   Practice a pull request today.
+<!-- # Day 12 Practice with git/ Project 1 -->
 
--   Make your graph legible to the lay person (title, labels, source, captions, etc).
+<!-- We'll practice with git in our projects. -->
 
-# Day 13 Ethics
+<!-- [Another git lecture](course-materials/lectures/12_git.qmd) -->
 
-<!-- Add a bit about hiring bias based on the open intro data -->
+<!-- [Project 1](https://classroom.github.com/a/UyQ4D2MD) -->
 
-<!-- facial recognition bias -->
+<!-- See moodle for project groups. -->
 
-[Data Ethics](/course-materials/lectures/11_ethics.qmd)
+<!-- # Day 11 Lab 3 -->
 
-[Maybe some project time]{.smallcaps}
+<!-- [Link to lab 3](https://classroom.github.com/a/Nwp-FDXz) -->
 
-# Day 12 Practice with git/ Project 1
+<!-- ::: {.callout-warning collapse="true"} -->
+<!-- # Lab 3 pitfalls -->
 
-We'll practice with git in our projects.
+<!-- Step 5: part 3. To set the line color do color="green" -->
 
-[Another git lecture](course-materials/lectures/12_git.qmd)
+<!-- For some notes on skew: https://en.wikipedia.org/wiki/Skewness -->
 
-[Project 1](https://classroom.github.com/a/UyQ4D2MD)
+<!-- `geom_bar()` counts whatever variable you give it for x. -->
 
-See moodle for project groups.
+<!-- reorder(categorical_var, numeric variable, function for reordering) -->
 
-# Day 11 Lab 3
+<!-- We'll discuss ethics Monday or Wednesday, read chapter 8. -->
+<!-- ::: -->
 
-[Link to lab 3](https://classroom.github.com/a/Nwp-FDXz)
+<!-- # Day 10 Color theory -->
 
-::: {.callout-warning collapse="true"}
-# Lab 3 pitfalls
+<!-- [ggplot cheatsheet](https://github.com/rstudio/cheatsheets/blob/main/data-visualization-2.1.pdf) -->
 
-Step 5: part 3. To set the line color do color="green"
+<!-- ## Colors -->
 
-For some notes on skew: https://en.wikipedia.org/wiki/Skewness
+<!-- -   [Prof. Baumer's Color talk](https://beanumber.github.io/sds192/lectures/mdsr_viz_05-color.html) -->
 
-`geom_bar()` counts whatever variable you give it for x.
+<!-- -   Color Brewer [site](https://colorbrewer2.org/#type=sequential&scheme=BuGn&n=3) -->
 
-reorder(categorical_var, numeric variable, function for reordering)
+<!-- -   [In class exercise](./course-materials/in-class-activies/5_color_theory.qmd) -->
 
-We'll discuss ethics Monday or Wednesday, read chapter 8.
-:::
+<!-- ![Figure 2.26 from Modern Dive](https://moderndive.com/ModernDive_files/figure-html/flights-dodged-bar-color-tweak-1.png) -->
 
-# Day 10 Color theory
+<!-- See moodle for project 1 partners. -->
 
-[ggplot cheatsheet](https://github.com/rstudio/cheatsheets/blob/main/data-visualization-2.1.pdf)
+<!-- ::: {.callout-note collapse="true"} -->
+<!-- ### Git Resources -->
 
-## Colors
+<!-- -   [Github Fundamentals Lab 0](https://classroom.github.com/a/GG36O-3I) -->
 
--   [Prof. Baumer's Color talk](https://beanumber.github.io/sds192/lectures/mdsr_viz_05-color.html)
+<!--     -   This lab is not due, it is only for reference. -->
 
--   Color Brewer [site](https://colorbrewer2.org/#type=sequential&scheme=BuGn&n=3)
+<!-- -   [Happy Git and the UseR](https://happygitwithr.com/) -->
+<!-- ::: -->
 
--   [In class exercise](./course-materials/in-class-activies/5_color_theory.qmd)
+<!-- # Day 9 Taxonomy part 2 -->
 
-![Figure 2.26 from Modern Dive](https://moderndive.com/ModernDive_files/figure-html/flights-dodged-bar-color-tweak-1.png)
+<!-- <!-- [Check out lab 3](https://smithcollege-sds.github.io/sds100/lab_03_graphics.html) from sds 100 I might not have to do this. --> 
 
-See moodle for project 1 partners.
+<!-- 1.  [Together: scatter plot](./course-materials/in-class-activies/3_Scatterplots.zip) -->
 
-::: {.callout-note collapse="true"}
-### Git Resources
+<!-- -   We are halfway through this open Lec02In-classExercise -->
 
--   [Github Fundamentals Lab 0](https://classroom.github.com/a/GG36O-3I)
+<!-- 2.  [Solo: linegraph](./course-materials/in-class-activies/3_Line_Graph.qmd) -->
 
-    -   This lab is not due, it is only for reference.
+<!-- 3.  [Frequency Plots](course-materials/lectures/9_frequency_plots.qmd) -->
 
--   [Happy Git and the UseR](https://happygitwithr.com/)
-:::
+<!-- 4.  [Notes on Style](course-materials/lectures/5_notes_on_style.qmd) -->
 
-# Day 9 Taxonomy part 2
+<!-- <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/IRJ2Ac9vI5o?si=JMeZEIQQNGNBscno" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen> --> 
 
-<!-- [Check out lab 3](https://smithcollege-sds.github.io/sds100/lab_03_graphics.html) from sds 100 I might not have to do this. -->
+<!-- <!-- </iframe> --> 
 
-1.  [Together: scatter plot](./course-materials/in-class-activies/3_Scatterplots.zip)
+<!-- ::: {.callout-tip collapse="true"} -->
+<!-- ## Lab requirements -->
 
--   We are halfway through this open Lec02In-classExercise
+<!-- -   All labs must be rendered as a pdf or self-contained html. -->
 
-2.  [Solo: linegraph](./course-materials/in-class-activies/3_Line_Graph.qmd)
+<!-- -   All code for labs must be satisfactorily commented. -->
+<!-- ::: -->
 
-3.  [Frequency Plots](course-materials/lectures/9_frequency_plots.qmd)
+<!-- # Day 8 Lab 2 -->
 
-4.  [Notes on Style](course-materials/lectures/5_notes_on_style.qmd)
+<!-- <!-- Note to self, update the format of lab 2 --> 
 
-<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/IRJ2Ac9vI5o?si=JMeZEIQQNGNBscno" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen> -->
+<!-- Change the format of lab 2 -->
 
-<!-- </iframe> -->
+<!-- This lab is due Wednesday at Midnight. -->
 
-::: {.callout-tip collapse="true"}
-## Lab requirements
+<!-- [Lab 2](https://classroom.github.com/a/CLF1ck4I) -->
 
--   All labs must be rendered as a pdf or self-contained html.
+<!-- # Day 7 Taxonomy -->
 
--   All code for labs must be satisfactorily commented.
-:::
+<!-- [Kaelen Medeiros Healthech](presentation.pdf) -->
 
-# Day 8 Lab 2
+<!-- ::: {.callout-tip collapse="true"} -->
+<!-- ## Screenshots Help -->
 
-<!-- Note to self, update the format of lab 2 -->
+<!-- -   [The six-fixes](https://docs.google.com/document/d/1P7IyZ4On9OlrCOhygFxjC7XhQqyw8OludwChz-uFd_o/edit) -->
 
-Change the format of lab 2
+<!-- Help us help you: take screenshots of your screen and post them to Slack. -->
 
-This lab is due Wednesday at Midnight.
+<!-- -   macOS: Command+Shift+3 to take shot of whole screen, Command+Shift+4 to take subportion -->
 
-[Lab 2](https://classroom.github.com/a/CLF1ck4I)
+<!-- -   Windows: Shift-Windows Key-S and Snip & Sketch -->
 
-# Day 7 Taxonomy
+<!-- -   Linux: Print screen -->
 
-[Kaelen Medeiros Healthech](presentation.pdf)
+<!-- -   Chromebook: Shift + Ctrl + Show windows -->
+<!-- ::: -->
 
-::: {.callout-tip collapse="true"}
-## Screenshots Help
+<!-- ### Lecture -->
 
--   [The six-fixes](https://docs.google.com/document/d/1P7IyZ4On9OlrCOhygFxjC7XhQqyw8OludwChz-uFd_o/edit)
+<!-- -   [Taxonomy of graphs](course-materials/lectures/2_mdsr_viz_1_taxonomy.qmd) -->
 
-Help us help you: take screenshots of your screen and post them to Slack.
+<!-- -   Demo: How R builds a graph. -->
 
--   macOS: Command+Shift+3 to take shot of whole screen, Command+Shift+4 to take subportion
+<!-- -   [Discussion: Taxonomy of Graphics](./course-materials/in-class-activies/3Activity_Taxonomy_of_Graphics.qmd) -->
 
--   Windows: Shift-Windows Key-S and Snip & Sketch
+<!-- Working directory problems with scatterplots -->
 
--   Linux: Print screen
+<!-- # Day 6 No Computer Data Viz -->
 
--   Chromebook: Shift + Ctrl + Show windows
-:::
+<!-- -   Office Hours: -->
 
-### Lecture
+<!--     ```          -->
+<!--     -   Monday: 9:20-9:40 -->
 
--   [Taxonomy of graphs](course-materials/lectures/2_mdsr_viz_1_taxonomy.qmd)
+<!--     -   Wednesday: 9:20-10:00, 1:30-2:30 pm -->
+<!--     ``` -->
 
--   Demo: How R builds a graph.
+<!-- [Data Viz No Computers](./course-materials/lectures/1first-day-survey/Data-Viz-No-Computers.qmd) -->
 
--   [Discussion: Taxonomy of Graphics](./course-materials/in-class-activies/3Activity_Taxonomy_of_Graphics.qmd)
+<!-- [Notes on Style](course-materials/lectures/5_notes_on_style.qmd) -->
 
-Working directory problems with scatterplots
+<!-- <!-- Cleaning up documents happens in sds100 [lab 8](https://smithcollege-sds.github.io/sds100/lab_08_formatting.html) --> 
 
-# Day 6 No Computer Data Viz
+<!-- <!-- [Cleaning up documents](https://quarto.org/docs/computations/execution-options.html) --> 
 
--   Office Hours:
+<!-- 9am - Guest: Cameron Haas -->
 
-    ```         
-    -   Monday: 9:20-9:40
+<!-- -   [Appointments](https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1H8Jjb0iUT1d-ZNrc1wfg0wrGjzd2bPSjdcDdgXuBGyt3A8x6LORIyVEm3-TA1NflWPkgOXsIq) -->
 
-    -   Wednesday: 9:20-10:00, 1:30-2:30 pm
-    ```
+<!-- -   [Spinelli Center](https://www.smith.edu/academics/applied-learning-research/spinelli-center-quantitative-learning#PanelDataCnslr) -->
 
-[Data Viz No Computers](./course-materials/lectures/1first-day-survey/Data-Viz-No-Computers.qmd)
+<!-- # Day 5 Making Functions (cont.) -->
 
-[Notes on Style](course-materials/lectures/5_notes_on_style.qmd)
+<!-- <!-- A bit of github practice might have been good here. --> 
 
-<!-- Cleaning up documents happens in sds100 [lab 8](https://smithcollege-sds.github.io/sds100/lab_08_formatting.html) -->
+<!-- [Lecture: Intro to functions](course-materials/lectures/23_functions.qmd) -->
 
-<!-- [Cleaning up documents](https://quarto.org/docs/computations/execution-options.html) -->
+<!-- See `function_map.qmd`. -->
 
-9am - Guest: Cameron Haas
+<!-- -   Make a function that takes the country each person is from and makes a `map()`. -->
 
--   [Appointments](https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1H8Jjb0iUT1d-ZNrc1wfg0wrGjzd2bPSjdcDdgXuBGyt3A8x6LORIyVEm3-TA1NflWPkgOXsIq)
+<!-- # Day 4 Getting Data Into R Making functions -->
 
--   [Spinelli Center](https://www.smith.edu/academics/applied-learning-research/spinelli-center-quantitative-learning#PanelDataCnslr)
+<!-- <!-- Students know how to store variables -->
 
-# Day 5 Making Functions (cont.)
+<!-- <!-- Students know about functions and arguments --> 
 
-<!-- A bit of github practice might have been good here. -->
+<!-- <!-- Students Errors and warnings and comments --> 
 
-[Lecture: Intro to functions](course-materials/lectures/23_functions.qmd)
+<!-- Getting data into R -->
 
-See `function_map.qmd`.
+<!-- Leaflet Maps -->
 
--   Make a function that takes the country each person is from and makes a `map()`.
+<!-- [Lecture: Intro to functions](course-materials/lectures/23_functions.qmd) -->
 
-# Day 4 Getting Data Into R Making functions
+<!-- # Day 3 Understanding File Paths -->
 
-<!-- Students know how to store variables -->
+<!-- [Survey for Prof Cao's study](https://smithcollege.qualtrics.com/jfe/form/SV_1YAqUXjbwJJbe3s) -->
 
-<!-- Students know about functions and arguments -->
+<!-- [Overview of Intro to Data Science](./course-materials/lectures/1_Overview_of_the_course.qmd) -->
 
-<!-- Students Errors and warnings and comments -->
+<!-- ::: {.callout-note collapse="true"} -->
+<!-- ## Learning Goals -->
 
-Getting data into R
+<!-- -   Understand File Structure -->
 
-Leaflet Maps
+<!--     -   Filing system -->
 
-[Lecture: Intro to functions](course-materials/lectures/23_functions.qmd)
+<!-- -   Pushing, commiting and pulling from git -->
 
-# Day 3 Understanding File Paths
+<!-- -   Strings and Vectors -->
 
-[Survey for Prof Cao's study](https://smithcollege.qualtrics.com/jfe/form/SV_1YAqUXjbwJJbe3s)
+<!-- -   Libraries, functions, arguments and parameters -->
 
-[Overview of Intro to Data Science](./course-materials/lectures/1_Overview_of_the_course.qmd)
+<!-- -   Introduction to the pipe -->
+<!-- ::: -->
 
-::: {.callout-note collapse="true"}
-## Learning Goals
+<!-- Where are we going? -->
 
--   Understand File Structure
+<!-- -   Final project Website -->
 
-    -   Filing system
+<!-- # Day 2 Github Lab -->
 
--   Pushing, commiting and pulling from git
+<!-- <!--Note to self update github lab 1 it is out of date. updating github username, email and password should be in the terminal. -->
 
--   Strings and Vectors
+<!-- You are only installing git today. Ignore the other files until later -->
 
--   Libraries, functions, arguments and parameters
+<!-- ::: {.callout-note collapse="true"} -->
+<!-- ## Sign into githubclassroom -->
 
--   Introduction to the pipe
-:::
+<!-- Link github account to github classroom - sign into github -->
 
-Where are we going?
+<!-- -   prereq- We need to have a github account -->
 
--   Final project Website
+<!-- -   https://classroom.github.com/a/Ca2gHqyI for lab 1 -->
 
-# Day 2 Github Lab
+<!-- -   find your name in the roster and click it. -->
 
-<!--Note to self update github lab 1 it is out of date. updating github username, email and password should be in the terminal. -->
+<!-- -   you should see lab 1, which we will discuss on Friday. -->
+<!-- ::: -->
 
-You are only installing git today. Ignore the other files until Day 3
-
-::: {.callout-note collapse="true"}
-## Sign into githubclassroom
-
-Link github account to github classroom - sign into github
-
--   prereq- We need to have a github account
-
--   https://classroom.github.com/a/ERIt75vu for lab 1
-
--   find your name in the roster and click it.
-
--   you should see lab 1, which we will discuss on Friday.
-:::
-
-# Day 1 Welcome and Github
+# Day 1 Welcome and SQL
 
 ::: {.callout-note collapse="true"}
 ## Classic First Day Stuff
 
--   [Syllabus](./course-materials/syllabus/syllabus.html)
+-   [Syllabus](./course-materials/syllabus/syllabus.qmd)
 
 -   Log into [Slack](https://www.slack.com)
 
@@ -677,9 +683,12 @@ Link github account to github classroom - sign into github
 -   Bring Computers to Class
 :::
 
--   [Make some of our own class data](https://forms.gle/bzaGFftbFczZMhRe7)
+-   [Make some of our own class data](https://docs.google.com/forms/d/e/1FAIpQLSdRR5mxYfqj5kSr1bu7dTGlMBdKdEhPG8wQ6o8iRMAY-wFAxQ/viewform?usp=sharing)
 
 -   [Overview of Intro to Data Science](./course-materials/lectures/1_Overview_of_the_course.qmd)
+
+-   [Intro to SQL](./course-materials/lectures/0_First_Day_SQL.qmd)
+
 
 ::: {.callout-note collapse="true"}
 ### git started with Version Control
