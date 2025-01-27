@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "SDS 192: Intro to Data Science",
     "section": "",
-    "text": "Schedule\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDay 1 Welcome and SQL\n\n\n\n\n\n\nClassic First Day Stuff\n\n\n\n\n\n\nSyllabus\nLog into Slack\nWebsite tour\nBring Computers to Class\n\n\n\n\n\nMake some of our own class data\nOverview of Intro to Data Science\nIntro to SQL\n\n\n\n\n\n\n\ngit started with Version Control\n\n\n\n\n\n\nSign up for github here, if you don’t already have an account. We will very carefully link your github account to our github classroom account.\nIntro to github\nGithub Fundamentals Lab 0\nHappy Git and the UseR\n\n\n\n\n\nWalk to MCConnell 215 and 214\nMy office and group study room."
+    "text": "Schedule\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDay 2 Github Lab\n\n\n\n\n\n\n\ngit started with Version Control\n\n\n\n\n\n\nSign up for github here, if you don’t already have an account. We will very carefully link your github account to our github classroom account.\nIntro to github\nOptional Lab, to familiarize yourself with git: Github Fundamentals Lab 0\nHappy Git and the UseR\n\n\n\n\nYou are only installing git today. There are other files, Ignore the other files until later\n\n\n\n\n\n\nSign into githubclassroom\n\n\n\n\n\nLink github account to github classroom - sign into github\n\nprereq-&gt; You need to have a github account\nhttps://classroom.github.com/a/Ca2gHqyI for lab 1\nfind your name in the roster and click it.\nyou should see lab 1, which we will discuss on Friday.\n\n\n\n\n\n\nDay 1 Welcome and SQL\n\n\n\n\n\n\nClassic First Day Stuff\n\n\n\n\n\n\nSyllabus\nLog into Slack\nWebsite tour\nBring Computers to Class\n\n\n\n\n\nMake some of our own class data\nOverview of Intro to Data Science\nIntro to SQL\n\n\nWalk to MCConnell 215 and 214\nMy office and group study room."
   },
   {
     "objectID": "course-materials/syllabus/syllabus.html",
@@ -173,5 +173,103 @@
     "title": "Course Overview",
     "section": "Further Topics based on time and student interest may include:",
     "text": "Further Topics based on time and student interest may include:\n-   Dynamic and Customized Data Graphics\n\n-   Geospatial Data and Maps\n\n-   Learning with AI"
+  },
+  {
+    "objectID": "course-materials/lectures/Brief-R-history.html#why-r",
+    "href": "course-materials/lectures/Brief-R-history.html#why-r",
+    "title": "A Short History of R",
+    "section": "Why R?",
+    "text": "Why R?\nThe top three languages in Data Science right now are:\n\nPython (pandas, numpy, pytorch)\nR (tidyverse)\nSQL\nProbably in that order."
+  },
+  {
+    "objectID": "course-materials/lectures/Brief-R-history.html#interchangeable",
+    "href": "course-materials/lectures/Brief-R-history.html#interchangeable",
+    "title": "A Short History of R",
+    "section": "Interchangeable",
+    "text": "Interchangeable\nLearning how to work with data is similar from on language to another.\nR, I think, is the most convenient way to get students working with Data.\nFor vizualization: the ggplot ecosystem is nicer than pandas.\nThe RStudio and R work very well together."
+  },
+  {
+    "objectID": "course-materials/lectures/Brief-R-history.html#before-r-there-was-s",
+    "href": "course-materials/lectures/Brief-R-history.html#before-r-there-was-s",
+    "title": "A Short History of R",
+    "section": "Before R there was S",
+    "text": "Before R there was S\n“S is a language that was developed [in 1976] by John Chambers and others at the old Bell Telephone Laboratories”"
+  },
+  {
+    "objectID": "course-materials/lectures/Brief-R-history.html#s-got-bought-and-sold",
+    "href": "course-materials/lectures/Brief-R-history.html#s-got-bought-and-sold",
+    "title": "A Short History of R",
+    "section": "S got bought and sold",
+    "text": "S got bought and sold\nTIBCO is the owner of S\nHere’s a book on S"
+  },
+  {
+    "objectID": "course-materials/lectures/Brief-R-history.html#r-is-released-for-free",
+    "href": "course-materials/lectures/Brief-R-history.html#r-is-released-for-free",
+    "title": "A Short History of R",
+    "section": "1996-2000 R is released for free",
+    "text": "1996-2000 R is released for free\nRoss Ihaka and Robert Gentleman of the university of Auckland Developed it."
+  },
+  {
+    "objectID": "course-materials/lectures/Brief-R-history.html#ross-ihaka",
+    "href": "course-materials/lectures/Brief-R-history.html#ross-ihaka",
+    "title": "A Short History of R",
+    "section": "Ross Ihaka",
+    "text": "Ross Ihaka"
+  },
+  {
+    "objectID": "course-materials/lectures/Brief-R-history.html#robert-gentleman",
+    "href": "course-materials/lectures/Brief-R-history.html#robert-gentleman",
+    "title": "A Short History of R",
+    "section": "Robert Gentleman",
+    "text": "Robert Gentleman"
+  },
+  {
+    "objectID": "course-materials/lectures/Brief-R-history.html#cran",
+    "href": "course-materials/lectures/Brief-R-history.html#cran",
+    "title": "A Short History of R",
+    "section": "CRAN",
+    "text": "CRAN\nComprehensive R Archive Network\nThey manage all R updates and R packages. There are currently 19897 packages.\nThey put on the UseR! conference\nThere’s an R magazine\nThis is the CRAN team"
+  },
+  {
+    "objectID": "course-materials/lectures/Brief-R-history.html#the-tidyverse",
+    "href": "course-materials/lectures/Brief-R-history.html#the-tidyverse",
+    "title": "A Short History of R",
+    "section": "The tidyverse",
+    "text": "The tidyverse\nHadley Wickham and others made it."
+  },
+  {
+    "objectID": "course-materials/lectures/Brief-R-history.html#who-makes-rstudio",
+    "href": "course-materials/lectures/Brief-R-history.html#who-makes-rstudio",
+    "title": "A Short History of R",
+    "section": "Who makes RStudio?",
+    "text": "Who makes RStudio?\n\n\nStarted in 2009 as RStudio\nThe tidyverse comes out in 2016\nRenamed Posit last year.\nOffers Python, SQL, and other DS language Support"
+  },
+  {
+    "objectID": "course-materials/lectures/Brief-R-history.html#deep-learning-and-ai",
+    "href": "course-materials/lectures/Brief-R-history.html#deep-learning-and-ai",
+    "title": "A Short History of R",
+    "section": "Deep Learning and AI",
+    "text": "Deep Learning and AI\npytorch is becoming increasingly an increasingly popular method for deep learning in python.\nR has torch, which is an implementation of pytorch in R."
+  },
+  {
+    "objectID": "course-materials/lectures/Brief-R-history.html#the-future",
+    "href": "course-materials/lectures/Brief-R-history.html#the-future",
+    "title": "A Short History of R",
+    "section": "The future",
+    "text": "The future\nPosit has made a pivot toward integrating Python and Jupyter into their ecosystem with Quarto.\nQuarto is a document that works with Python, R, and other languges.\nPositron is an IDE independent of language forked from VS code."
+  },
+  {
+    "objectID": "course-materials/lectures/Brief-R-history.html#some-credits",
+    "href": "course-materials/lectures/Brief-R-history.html#some-credits",
+    "title": "A Short History of R",
+    "section": "Some Credits",
+    "text": "Some Credits\n\nPhoto of John Chambers taken from Stanford’s website.\nPhoto of Ross Ihaka - https://www.auckland.ac.nz/content/auckland/en/science/about-the-faculty/department-of-statistics/ihaka-lecture-series/jcr:content/leftpar/imagecomponent/image.img.1024.medium.jpg/1561079330278.jpg\nPhoto by Robert Gentalman - https://calendar.gatech.edu/sites/default/files/styles/large/public/hg_media/2024-25/Robert_Gentleman.jpg.webp?itok=0aDlOIOK\nPhoto by Hadley Wickham - Private correspondence, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=46810731\nMost of the details of this short history came from chapter 2 of Roger Peng’s R Programming for Data Science.\nhttps://bookdown.org/rdpeng/rprogdatascience/history-and-overview-of-r.html"
+  },
+  {
+    "objectID": "index.html#if-time-maps",
+    "href": "index.html#if-time-maps",
+    "title": "SDS 192: Intro to Data Science",
+    "section": "If time maps!",
+    "text": "If time maps!"
   }
 ]
