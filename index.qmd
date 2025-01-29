@@ -61,7 +61,7 @@ h1{font-weight: 400;}
 <!-- https://docs.google.com/spreadsheets/d/1j1Mub7lb1CJKpG-PySzdbzzgvryVQ3XrlvNgPRUcN0I/edit?usp=sharing -->
 
 ```{=html}
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTG_b6upDZcPxXB92LHYIhV1uAXgeVGaMsZ3sDRPuSQN74JdhkKhZQVjw6T68I3zsP8KGYzDSVTZW64/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false&amp;gid=0&amp;range=A1:E3" width="100%" height="300">
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTG_b6upDZcPxXB92LHYIhV1uAXgeVGaMsZ3sDRPuSQN74JdhkKhZQVjw6T68I3zsP8KGYzDSVTZW64/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false&amp;gid=0&amp;range=A1:E4" width="100%" height="300">
 ```
 </iframe>
 
@@ -677,16 +677,18 @@ h1{font-weight: 400;}
 
 <!--Note to self update github lab 1 it is out of date. updating github username, email and password should be in the terminal.-->
 
+Why do we do use git? **Collaboration**
+
 ::: {.callout-note collapse="true"}
 ### git started with Version Control
 
 -   Sign up for [github here](https://github.com/), if you don't already have an account. We will very carefully link your github account to our github classroom account.
 
--   Intro to github
+-   git vs github
 
 -   Optional Lab, to familiarize yourself with git: [Github Fundamentals Lab 0](https://classroom.github.com/a/GG36O-3I)
 
--   [Happy Git and the UseR](https://happygitwithr.com/)
+-   [Happy Git and the UseR](https://happygitwithr.com/) is a helpful text.
 :::
 
 You are only installing git today. There are other files, Ignore the other files until later
@@ -696,13 +698,13 @@ You are only installing git today. There are other files, Ignore the other files
 
 Link github account to github classroom - sign into github
 
--   prereq-> You need to have a github account
+-   prereq -> You need to have a github account
 
--   https://classroom.github.com/a/Ca2gHqyI for lab 1
+-   [Click here](https://classroom.github.com/a/Ca2gHqyI) for lab 1. This is due in one week. 
 
--   find your name in the roster and click it.
+-   very carefully find your name in the roster and click it.
 
--   you should see lab 1, which we will discuss on Friday.
+-   you should see todays lab in what is called a repository. 
 :::
 
 # Day 1 Welcome and SQL
