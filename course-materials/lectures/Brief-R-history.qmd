@@ -63,6 +63,16 @@ Ross Ihaka and Robert Gentleman of the university of Auckland Developed it.
 
 # Why is it called R?
 
+## version names    
+
+The versions of R are named after Peanuts comics or cartoons. 
+
+[Pile of Leaves](https://www.gocomics.com/peanuts/1957/11/15)
+
+Why? [4.4.2 release](https://stat.ethz.ch/pipermail/r-announce/2024/000706.html) 
+
+Other versions
+
 ## CRAN
 
 Comprehensive R Archive Network

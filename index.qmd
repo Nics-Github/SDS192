@@ -645,33 +645,40 @@ h1{font-weight: 400;}
 
 <!-- -   Final project Website -->
 
-<!-- # Day 3 R Ecosystem and More SQL -->
+# Day 3 R Ecosystem and More SQL
 
-<!-- ::: {.callout-note collapse="true"} -->
-<!-- ### Things I forgot -->
+::: {.callout-note collapse="true"}
+### Things I forgot from Monday
 
-<!-- -   Section 1 - about me -->
+-   Section 1 - about me
 
-<!-- -   Section 2 - variable types -->
+-   Section 2 - variable types
 
-<!-- ::: -->
+:::
 
-<!-- -   [Brief History of R](./course-materials/lectuBrief-R-history.qmd) -->
+-   [Brief History of R](./course-materials/lectures/Brief-R-history.qmd)
 
-<!-- ::: {.callout-note collapse="true"} -->
-<!-- ### SQL practice -->
+::: {.callout-note collapse="true"}
+### SQL practice
 
-<!-- -   Problems 1-4 in pairs -->
+[sql-practice](https://www.sql-practice.com/)
 
-<!-- -   Problem 5 together  -->
+-   Problems 1-4 in pairs
 
-<!-- -   Problems 6-9 in pairs -->
+-   Problem 5 together
 
-<!-- ::: -->
+-   Problems 6-9 in pairs
 
-<!-- ## If time maps! -->
+Try without hints, then hints, finally solutions. 
 
-<!-- Open Lab 0  -->
+:::
+
+::: {.callout-note collapse="true"}
+### If time: Final project introduction!
+
+- Open Lab 1
+
+:::
 
 # Day 2 Github Lab
 
