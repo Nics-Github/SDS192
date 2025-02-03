@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "SDS 192: Intro to Data Science",
     "section": "",
-    "text": "Schedule\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDay 4 Intro to Data Viz\nData Viz No Computers\nNotes on Style\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDay 4 Understanding File Paths\n\n\n\n\n\n\nLearning Goals\n\n\n\n\n\n\nUnderstand File Structure\n\nFiling system\n\nPushing, commiting and pulling from git\nStrings and Vectors\nLibraries, functions, arguments and parameters\nIntroduction to the pipe\n\n\n\n\nWhere are we going?\n\nFinal project Website\n\n\n\nDay 3 R Ecosystem and More SQL\n\n\n\n\n\n\nThings I forgot from Monday\n\n\n\n\n\n\nSection 1 - about me\nSection 2 - variable types\n\n\n\n\n\nBrief History of R\n\n\n\n\n\n\n\nSQL practice\n\n\n\n\n\nsql-practice\n\nProblems 1-4 in pairs\nProblem 5 together\nProblems 6-9 in pairs\n\nTry without hints, then hints, finally solutions.\n\n\n\n\n\n\n\n\n\nIf time: Final project introduction!\n\n\n\n\n\n\nOpen Lab 1\n\n\n\n\n\n\nDay 2 Github Lab\n\nWhy do we do use git? Collaboration\n\n\n\n\n\n\ngit started with Version Control\n\n\n\n\n\n\nSign up for github here, if you don’t already have an account. We will very carefully link your github account to our github classroom account.\ngit vs github\nOptional Lab, to familiarize yourself with git: Github Fundamentals Lab 0\nHappy Git and the UseR is a helpful text.\n\n\n\n\nYou are only installing git today. There are other files, Ignore the other files until later\n\n\n\n\n\n\nSign into githubclassroom\n\n\n\n\n\nLink github account to github classroom - sign into github\n\nprereq -&gt; You need to have a github account\nClick here for lab 1. This is due in one week.\nvery carefully find your name in the roster and click it.\nyou should see todays lab in what is called a repository.\n\n\n\n\n\n\nDay 1 Welcome and SQL\n\n\n\n\n\n\nClassic First Day Stuff\n\n\n\n\n\n\nSyllabus\nLog into Slack\nWebsite tour\nBring Computers to Class\n\n\n\n\n\nMake some of our own class data\nOverview of Intro to Data Science\nIntro to SQL\n\n\nWalk to MCConnell 215 and 214\nMy office and group study room."
+    "text": "Schedule\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDay 4 Understanding File Paths\nWhere are we going?\n\nFinal project Website\n\n\n\n\n\n\n\nLearning Goals\n\n\n\n\n\n\nUnderstand File Structure\n\nFiling system\n\nPushing, commiting and pulling from git\nStrings and Vectors\nLibraries, functions, arguments and parameters\nIntroduction to the pipe\n\n\n\n\nLecture: Intro to functions\n\n\nDay 3 R Ecosystem and More SQL\n\n\n\n\n\n\nThings I forgot from Monday\n\n\n\n\n\n\nSection 1 - about me\nSection 2 - variable types\n\n\n\n\n\nBrief History of R\n\n\n\n\n\n\n\nSQL practice\n\n\n\n\n\nsql-practice\n\nProblems 1-4 in pairs\nProblem 5 together\nProblems 6-9 in pairs\n\nTry without hints, then hints, finally solutions.\n\n\n\n\n\n\n\n\n\nIf time: Final project introduction!\n\n\n\n\n\n\nOpen Lab 1\n\n\n\n\n\n\nDay 2 Github Lab\n\nWhy do we do use git? Collaboration\n\n\n\n\n\n\ngit started with Version Control\n\n\n\n\n\n\nSign up for github here, if you don’t already have an account. We will very carefully link your github account to our github classroom account.\ngit vs github\nOptional Lab, to familiarize yourself with git: Github Fundamentals Lab 0\nHappy Git and the UseR is a helpful text.\n\n\n\n\nYou are only installing git today. There are other files, Ignore the other files until later\n\n\n\n\n\n\nSign into githubclassroom\n\n\n\n\n\nLink github account to github classroom - sign into github\n\nprereq -&gt; You need to have a github account\nClick here for lab 1. This is due in one week.\nvery carefully find your name in the roster and click it.\nyou should see todays lab in what is called a repository.\n\n\n\n\n\n\nDay 1 Welcome and SQL\n\n\n\n\n\n\nClassic First Day Stuff\n\n\n\n\n\n\nSyllabus\nLog into Slack\nWebsite tour\nBring Computers to Class\n\n\n\n\n\nMake some of our own class data\nOverview of Intro to Data Science\nIntro to SQL\n\n\nWalk to MCConnell 215 and 214\nMy office and group study room."
   },
   {
     "objectID": "course-materials/syllabus/syllabus.html",
@@ -1097,5 +1097,68 @@
     "title": "A Short History of R",
     "section": "version names",
     "text": "version names\nThe versions of R are named after Peanuts comics or cartoons.\nPile of Leaves\nWhy? 4.4.2 release\nOther versions"
+  },
+  {
+    "objectID": "course-materials/lectures/23_functions.html",
+    "href": "course-materials/lectures/23_functions.html",
+    "title": "Making Functions practice",
+    "section": "",
+    "text": "Inputs and outputs\nCan set defaults arguments\nCan be general or specific to a package.\n\nn() vs. read_all_contributions()\n\nSave time in the long run."
+  },
+  {
+    "objectID": "course-materials/lectures/23_functions.html#functions",
+    "href": "course-materials/lectures/23_functions.html#functions",
+    "title": "Making Functions practice",
+    "section": "",
+    "text": "Inputs and outputs\nCan set defaults arguments\nCan be general or specific to a package.\n\nn() vs. read_all_contributions()\n\nSave time in the long run."
+  },
+  {
+    "objectID": "course-materials/lectures/23_functions.html#function-outline",
+    "href": "course-materials/lectures/23_functions.html#function-outline",
+    "title": "Making Functions practice",
+    "section": "Function outline",
+    "text": "Function outline\n\nGreeting &lt;- function(arg1 = \"Hello\" ){\n  print(arg1)\n}\nGreeting()\n\n[1] \"Hello\"\n\nGreeting(\"Hiya\")\n\n[1] \"Hiya\""
+  },
+  {
+    "objectID": "course-materials/lectures/23_functions.html#this-function-will-add",
+    "href": "course-materials/lectures/23_functions.html#this-function-will-add",
+    "title": "Making Functions practice",
+    "section": "This function will add",
+    "text": "This function will add\n\nadding &lt;- function(x,y){\n  \n  total &lt;- sum( c( x , y ))\n  \n  return(total)\n}\n\nadding(2,4)\n\n[1] 6\n\n#adding()"
+  },
+  {
+    "objectID": "course-materials/lectures/23_functions.html#this-function-will-multiply",
+    "href": "course-materials/lectures/23_functions.html#this-function-will-multiply",
+    "title": "Making Functions practice",
+    "section": "This function will multiply",
+    "text": "This function will multiply\n\nmultiplying &lt;- function(x = 1, y = 1){\n  total &lt;- x*y\n  total\n}\n\nmultiplying()\n\n[1] 1\n\nmultiplying(2,4)\n\n[1] 8"
+  },
+  {
+    "objectID": "course-materials/lectures/23_functions.html#if-else-if-else",
+    "href": "course-materials/lectures/23_functions.html#if-else-if-else",
+    "title": "Making Functions practice",
+    "section": "if, else if, else",
+    "text": "if, else if, else\nThe computer can run a logical check.\nConsider this function:\n\numbrella &lt;- function(weather = \"sunny\"){\n\nif(weather == \"no precipitation\"){\n  \n    print(\"leave umbrella at home\")\n    }\n    \nelse if(weather == \"snow\"){\n\n    print(\"You don't need an umbrella\")\n}\n  \nelse{\n    print(\"bring an umbrella\")\n    \n    }\n}\numbrella(weather = \"snow\")\n\n[1] \"You don't need an umbrella\""
+  },
+  {
+    "objectID": "course-materials/lectures/23_functions.html#this-is-a-composite-function",
+    "href": "course-materials/lectures/23_functions.html#this-is-a-composite-function",
+    "title": "Making Functions practice",
+    "section": "This is a composite function",
+    "text": "This is a composite function\nDepending in an argument\n\nmy_1st_calculator &lt;-function(x,y,operation=\"add\"){\n  \n  if(operation %in% \"add\"){\n    total &lt;- adding(x,y)\n  }\n  \n  else if(operation %in% \"multiply\"){\n    total &lt;- multiplying(x,y)\n  }\n  \n  else{\n    stop(\"Please choose `add` or `multiply` for the operation argument\")\n  }\n  \n  return(total)\n}\n\n\nmy_1st_calculator(1,6, operation=\"multiply\")\n\n[1] 6"
+  },
+  {
+    "objectID": "course-materials/lectures/23_functions.html#r-is-vectorized",
+    "href": "course-materials/lectures/23_functions.html#r-is-vectorized",
+    "title": "Making Functions practice",
+    "section": "R is vectorized",
+    "text": "R is vectorized\nThis means that R will do operations on vectors.\n\nvec1 &lt;- c(1,2,3)\nvec2 &lt;- c(9,9,9)\nvec1 + vec2\n\n[1] 10 11 12"
+  },
+  {
+    "objectID": "course-materials/lectures/23_functions.html#try-one",
+    "href": "course-materials/lectures/23_functions.html#try-one",
+    "title": "Making Functions practice",
+    "section": "Try one",
+    "text": "Try one\nMake a function that takes a vector of students in this class and prints the name of each student.\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.1     ✔ tibble    3.2.1\n✔ lubridate 1.9.3     ✔ tidyr     1.3.1\n✔ purrr     1.0.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nlibrary(googlesheets4)\n\nclass_info &lt;- read_sheet(\"https://docs.google.com/spreadsheets/d/1XOAFQvBcFvhKwEl5xH6l3nRJK2Wk0hWZ18S9kAZclQ0/edit?usp=sharing\") |&gt;\n  janitor::clean_names()\n\n! Using an auto-discovered, cached token.\n  To suppress this message, modify your code or options to clearly consent to\n  the use of a cached token.\n  See gargle's \"Non-interactive auth\" vignette for more details:\n  &lt;https://gargle.r-lib.org/articles/non-interactive-auth.html&gt;\nℹ The googlesheets4 package is using a cached token for 'nschwab@smith.edu'.\nAuto-refreshing stale OAuth token.\n✔ Reading from \"Fall 2024  Questionnaire (Responses)\".\n✔ Range 'Form Responses 1'.\n\n# selecting only the column we are interested in and making it into a vector.\nname_vector &lt;- as.vector( \n  class_info |&gt;\n    select(\"preferred_name\"))"
   }
 ]

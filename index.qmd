@@ -575,11 +575,11 @@ h1{font-weight: 400;}
 
 <!-- Working directory problems with scatterplots -->
 
-# Day 4 Intro to Data Viz
+<!-- # Day 4 Intro to Data Viz -->
 
-[Data Viz No Computers](./course-materials/lectures/1first-day-survey/Data-Viz-No-Computers.qmd)
+<!-- [Data Viz No Computers](./course-materials/lectures/1first-day-survey/Data-Viz-No-Computers.qmd) -->
 
-[Notes on Style](course-materials/lectures/5_notes_on_style.qmd)
+<!-- [Notes on Style](course-materials/lectures/5_notes_on_style.qmd) -->
 
 <!-- Cleaning up documents happens in sds100 [lab 8](https://smithcollege-sds.github.io/sds100/lab_08_formatting.html)
 
