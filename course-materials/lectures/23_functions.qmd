@@ -130,10 +130,12 @@ vec1 + vec2
 Make a function that takes a vector of students in this class and prints the name of each student.
 
 ```{r}
+#| warning: false
+
 library(tidyverse)
 library(googlesheets4)
 
-class_info <- read_sheet("https://docs.google.com/spreadsheets/d/1XOAFQvBcFvhKwEl5xH6l3nRJK2Wk0hWZ18S9kAZclQ0/edit?usp=sharing") |>
+class_info <- read_sheet("https://docs.google.com/spreadsheets/d/1k9qA7XldtHB8-FZjmEymoUoeZJArS4tGy5gyVsvyLB0/edit?usp=sharing") |>
   janitor::clean_names()
 
 # selecting only the column we are interested in and making it into a vector.

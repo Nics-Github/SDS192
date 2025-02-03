@@ -576,7 +576,7 @@ h1{font-weight: 400;}
 
 <!-- Working directory problems with scatterplots -->
 
-<!-- # Day 4 Intro to Data Viz -->
+<!-- # Day 6 Intro to Data Viz -->
 
 <!-- [Data Viz No Computers](./course-materials/lectures/1first-day-survey/Data-Viz-No-Computers.qmd) -->
 
@@ -598,19 +598,30 @@ h1{font-weight: 400;}
 
 <!-- -   Make a function that takes the country each person is from and makes a `map()`. -->
 
-<!-- # Day 4 Getting Data Into R Making functions -->
+# Day 5 Intro to Functions
 
-<!-- <!-- Students know how to store variables -->
+ <!-- Students know how to store variables -->
 
-<!-- <!-- Students know about functions and arguments --> 
+<!-- - Students know about functions and arguments -->
 
-<!-- <!-- Students Errors and warnings and comments --> 
+::: {.callout-note collapse="true"}
+## Learning Goals
 
-<!-- Getting data into R -->
+-   Pushing, commiting and pulling from git
 
-<!-- Leaflet Maps -->
+    -   Students Errors and warnings and comments
 
+-   Strings and Vectors
 
+-   Libraries, functions, arguments and parameters
+
+-   Introduction to the pipe
+
+-   Getting data into R
+
+:::
+
+[Lecture: Intro to functions](course-materials/lectures/23_functions.qmd)
 
 # Day 4 File Struture/ Final Project
 
@@ -624,18 +635,9 @@ Where are we going?
 -   Understand File Structure
 
     -   Filing system
-
--   Pushing, commiting and pulling from git
-
--   Strings and Vectors
-
--   Libraries, functions, arguments and parameters
-
--   Introduction to the pipe
+    
 :::
 
-
-[Lecture: Intro to functions](course-materials/lectures/23_functions.qmd)
 
 # Day 3 R Ecosystem and More SQL
 
