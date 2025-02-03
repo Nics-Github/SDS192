@@ -612,7 +612,7 @@ h1{font-weight: 400;}
 
 
 
-# Day 4 Understanding File Paths
+# Day 4 File Struture/ Final Project
 
 Where are we going?
 
