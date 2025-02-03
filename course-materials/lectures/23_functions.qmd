@@ -13,7 +13,7 @@ execute:
 
 -   Inputs and outputs
 
--   Can set defaults arguements
+-   Can set defaults arguments
 
 -   Can be general or specific to a package.
 
@@ -113,6 +113,16 @@ my_1st_calculator <-function(x,y,operation="add"){
 
 ```{r}
 my_1st_calculator(1,6, operation="multiply")
+```
+
+## R is vectorized
+
+This means that R will do operations on vectors.
+
+```{r}
+vec1 <- c(1,2,3)
+vec2 <- c(9,9,9)
+vec1 + vec2
 ```
 
 ## Try one

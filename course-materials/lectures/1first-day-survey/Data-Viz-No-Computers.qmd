@@ -19,7 +19,7 @@ library(tidyverse)
 
 ## Data Viz no computers
 
-[Sheets data](https://docs.google.com/spreadsheets/d/1x9srZXDoYzKGew1f-y4brMbN8dl4QM66pc-dmCBWHQY/edit?usp=sharing)
+[Sheets data](https://docs.google.com/spreadsheets/d/1k9qA7XldtHB8-FZjmEymoUoeZJArS4tGy5gyVsvyLB0/edit?usp=sharing)
 
 -   Data Frame
 
@@ -68,8 +68,6 @@ Class discussion.
 4.  Data Source
 
 5.  Captions
-
-## 
 
 ## Baumer's Thoughts
 

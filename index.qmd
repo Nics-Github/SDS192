@@ -61,7 +61,7 @@ h1{font-weight: 400;}
 <!-- https://docs.google.com/spreadsheets/d/1j1Mub7lb1CJKpG-PySzdbzzgvryVQ3XrlvNgPRUcN0I/edit?usp=sharing -->
 
 ```{=html}
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTG_b6upDZcPxXB92LHYIhV1uAXgeVGaMsZ3sDRPuSQN74JdhkKhZQVjw6T68I3zsP8KGYzDSVTZW64/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false&amp;gid=0&amp;range=A1:E4" width="100%" height="300">
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTG_b6upDZcPxXB92LHYIhV1uAXgeVGaMsZ3sDRPuSQN74JdhkKhZQVjw6T68I3zsP8KGYzDSVTZW64/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false&amp;gid=0&amp;range=A1:E5" width="100%" height="300">
 ```
 </iframe>
 
@@ -575,29 +575,17 @@ h1{font-weight: 400;}
 
 <!-- Working directory problems with scatterplots -->
 
-<!-- # Day 6 No Computer Data Viz -->
+# Day 4 Intro to Data Viz
 
-<!-- -   Office Hours: -->
+[Data Viz No Computers](./course-materials/lectures/1first-day-survey/Data-Viz-No-Computers.qmd)
 
-<!--     ```          -->
-<!--     -   Monday: 9:20-9:40 -->
+[Notes on Style](course-materials/lectures/5_notes_on_style.qmd)
 
-<!--     -   Wednesday: 9:20-10:00, 1:30-2:30 pm -->
-<!--     ``` -->
+<!-- Cleaning up documents happens in sds100 [lab 8](https://smithcollege-sds.github.io/sds100/lab_08_formatting.html)
 
-<!-- [Data Viz No Computers](./course-materials/lectures/1first-day-survey/Data-Viz-No-Computers.qmd) -->
+<!-- [Cleaning up documents](https://quarto.org/docs/computations/execution-options.html)
 
-<!-- [Notes on Style](course-materials/lectures/5_notes_on_style.qmd) -->
-
-<!-- <!-- Cleaning up documents happens in sds100 [lab 8](https://smithcollege-sds.github.io/sds100/lab_08_formatting.html) --> 
-
-<!-- <!-- [Cleaning up documents](https://quarto.org/docs/computations/execution-options.html) --> 
-
-<!-- 9am - Guest: Cameron Haas -->
-
-<!-- -   [Appointments](https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1H8Jjb0iUT1d-ZNrc1wfg0wrGjzd2bPSjdcDdgXuBGyt3A8x6LORIyVEm3-TA1NflWPkgOXsIq) -->
-
-<!-- -   [Spinelli Center](https://www.smith.edu/academics/applied-learning-research/spinelli-center-quantitative-learning#PanelDataCnslr) -->
+-   [Spinelli Center](https://www.smith.edu/academics/applied-learning-research/spinelli-center-quantitative-learning#PanelDataCnslr)
 
 <!-- # Day 5 Making Functions (cont.) -->
 
@@ -621,29 +609,32 @@ h1{font-weight: 400;}
 
 <!-- Leaflet Maps -->
 
-<!-- [Lecture: Intro to functions](course-materials/lectures/23_functions.qmd) -->
 
-<!-- # Day 3 Understanding File Paths -->
 
-<!-- ::: {.callout-note collapse="true"} -->
-<!-- ## Learning Goals -->
+# Day 4 Understanding File Paths
 
-<!-- -   Understand File Structure -->
+Where are we going?
 
-<!--     -   Filing system -->
+-   Final project Website
 
-<!-- -   Pushing, commiting and pulling from git -->
+::: {.callout-note collapse="true"}
+## Learning Goals
 
-<!-- -   Strings and Vectors -->
+-   Understand File Structure
 
-<!-- -   Libraries, functions, arguments and parameters -->
+    -   Filing system
 
-<!-- -   Introduction to the pipe -->
-<!-- ::: -->
+-   Pushing, commiting and pulling from git
 
-<!-- Where are we going? -->
+-   Strings and Vectors
 
-<!-- -   Final project Website -->
+-   Libraries, functions, arguments and parameters
+
+-   Introduction to the pipe
+:::
+
+
+[Lecture: Intro to functions](course-materials/lectures/23_functions.qmd)
 
 # Day 3 R Ecosystem and More SQL
 
