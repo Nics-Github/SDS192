@@ -602,7 +602,12 @@ h1{font-weight: 400;}
 
  <!-- Students know how to store variables -->
 
+
 <!-- - Students know about functions and arguments -->
+
+[Data Fest Info Session](DataFest_Info_session_2025.pdf)
+
+Datafest is April 4-6 at UMass
 
 ::: {.callout-note collapse="true"}
 ## Learning Goals
