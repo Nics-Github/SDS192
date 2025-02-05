@@ -465,36 +465,63 @@ Schwab
 </div>
 </div>
 </section>
-<section id="if-else-if-else" class="slide level2">
-<h2>if, else if, else</h2>
-<p>The computer can run a logical check.</p>
-<p>Consider this function:</p>
+<section id="control-flow" class="slide level2">
+<h2>Control Flow</h2>
+<p>If, else if , else</p>
+<p>Make a <a href="https://magic-8ball.com">magic 8 ball.</a></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a>umbrella <span class="ot">&lt;-</span> <span class="cf">function</span>(<span class="at">weather =</span> <span class="st">"sunny"</span>){</span>
-<span id="cb12-2"><a href="#cb12-2"></a></span>
-<span id="cb12-3"><a href="#cb12-3"></a><span class="cf">if</span>(weather <span class="sc">==</span> <span class="st">"no precipitation"</span>){</span>
-<span id="cb12-4"><a href="#cb12-4"></a>  </span>
-<span id="cb12-5"><a href="#cb12-5"></a>    <span class="fu">print</span>(<span class="st">"leave umbrella at home"</span>)</span>
-<span id="cb12-6"><a href="#cb12-6"></a>    }</span>
-<span id="cb12-7"><a href="#cb12-7"></a>    </span>
-<span id="cb12-8"><a href="#cb12-8"></a><span class="cf">else</span> <span class="cf">if</span>(weather <span class="sc">==</span> <span class="st">"snow"</span>){</span>
-<span id="cb12-9"><a href="#cb12-9"></a></span>
-<span id="cb12-10"><a href="#cb12-10"></a>    <span class="fu">print</span>(<span class="st">"You don't need an umbrella"</span>)</span>
-<span id="cb12-11"><a href="#cb12-11"></a>}</span>
-<span id="cb12-12"><a href="#cb12-12"></a>  </span>
-<span id="cb12-13"><a href="#cb12-13"></a><span class="cf">else</span>{</span>
-<span id="cb12-14"><a href="#cb12-14"></a>    <span class="fu">print</span>(<span class="st">"bring an umbrella"</span>)</span>
-<span id="cb12-15"><a href="#cb12-15"></a>    </span>
-<span id="cb12-16"><a href="#cb12-16"></a>    }</span>
-<span id="cb12-17"><a href="#cb12-17"></a>}</span>
-<span id="cb12-18"><a href="#cb12-18"></a><span class="fu">umbrella</span>(<span class="at">weather =</span> <span class="st">"snow"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a><span class="co">#Defining the function</span></span>
+<span id="cb12-2"><a href="#cb12-2"></a>magic_8_ball <span class="ot">&lt;-</span> <span class="cf">function</span>(){</span>
+<span id="cb12-3"><a href="#cb12-3"></a></span>
+<span id="cb12-4"><a href="#cb12-4"></a><span class="co">#Making a set of values to choose from</span></span>
+<span id="cb12-5"><a href="#cb12-5"></a>sample_set <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">1</span>,<span class="dv">0</span>,<span class="dv">1</span>)  </span>
+<span id="cb12-6"><a href="#cb12-6"></a>  </span>
+<span id="cb12-7"><a href="#cb12-7"></a><span class="co">#Randomly choosing a value</span></span>
+<span id="cb12-8"><a href="#cb12-8"></a>random_number <span class="ot">&lt;-</span> <span class="fu">sample</span>(sample_set, <span class="at">size =</span> <span class="dv">1</span>)  </span>
+<span id="cb12-9"><a href="#cb12-9"></a>  </span>
+<span id="cb12-10"><a href="#cb12-10"></a><span class="co"># Making a couple of vectors with 8 ball sayings</span></span>
+<span id="cb12-11"><a href="#cb12-11"></a>positive_vibes <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"It is certain"</span>,</span>
+<span id="cb12-12"><a href="#cb12-12"></a>                    <span class="st">"It is decidedly so"</span>,</span>
+<span id="cb12-13"><a href="#cb12-13"></a>                    <span class="st">"Most likely"</span>,</span>
+<span id="cb12-14"><a href="#cb12-14"></a>                    <span class="st">"Signs point to yes"</span>)</span>
+<span id="cb12-15"><a href="#cb12-15"></a></span>
+<span id="cb12-16"><a href="#cb12-16"></a>neutral_vibes <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Reply hazy, try again"</span>,</span>
+<span id="cb12-17"><a href="#cb12-17"></a>                   <span class="st">"Ask again later"</span>,</span>
+<span id="cb12-18"><a href="#cb12-18"></a>                   <span class="st">"Concentrate and ask again"</span>)</span>
+<span id="cb12-19"><a href="#cb12-19"></a></span>
+<span id="cb12-20"><a href="#cb12-20"></a>negative_vibes <span class="ot">&lt;-</span> <span class="fu">c</span>( <span class="st">"Don't count on it"</span>, </span>
+<span id="cb12-21"><a href="#cb12-21"></a>                     <span class="st">"My reply is no"</span>, </span>
+<span id="cb12-22"><a href="#cb12-22"></a>                     <span class="st">"Very doubtful"</span>)</span>
+<span id="cb12-23"><a href="#cb12-23"></a><span class="co"># Control flow</span></span>
+<span id="cb12-24"><a href="#cb12-24"></a><span class="cf">if</span>(random_number <span class="sc">==</span> <span class="dv">1</span>){</span>
+<span id="cb12-25"><a href="#cb12-25"></a>    <span class="fu">print</span>(</span>
+<span id="cb12-26"><a href="#cb12-26"></a>      <span class="fu">sample</span>(positive_vibes, <span class="at">size =</span> <span class="dv">1</span>)</span>
+<span id="cb12-27"><a href="#cb12-27"></a>    )</span>
+<span id="cb12-28"><a href="#cb12-28"></a>    }</span>
+<span id="cb12-29"><a href="#cb12-29"></a>    </span>
+<span id="cb12-30"><a href="#cb12-30"></a><span class="cf">else</span> <span class="cf">if</span>(random_number <span class="sc">==</span> <span class="dv">0</span>){</span>
+<span id="cb12-31"><a href="#cb12-31"></a>    <span class="fu">print</span>(</span>
+<span id="cb12-32"><a href="#cb12-32"></a>      <span class="fu">sample</span>(neutral_vibes, <span class="at">size =</span> <span class="dv">1</span>)</span>
+<span id="cb12-33"><a href="#cb12-33"></a>    )</span>
+<span id="cb12-34"><a href="#cb12-34"></a>}</span>
+<span id="cb12-35"><a href="#cb12-35"></a>  </span>
+<span id="cb12-36"><a href="#cb12-36"></a><span class="cf">else</span>{</span>
+<span id="cb12-37"><a href="#cb12-37"></a>    <span class="fu">print</span>(</span>
+<span id="cb12-38"><a href="#cb12-38"></a>      <span class="fu">sample</span>(negative_vibes, <span class="at">size =</span> <span class="dv">1</span>)</span>
+<span id="cb12-39"><a href="#cb12-39"></a>    )</span>
+<span id="cb12-40"><a href="#cb12-40"></a>    </span>
+<span id="cb12-41"><a href="#cb12-41"></a>    }</span>
+<span id="cb12-42"><a href="#cb12-42"></a>}</span>
+<span id="cb12-43"><a href="#cb12-43"></a></span>
+<span id="cb12-44"><a href="#cb12-44"></a><span class="co"># Run the function</span></span>
+<span id="cb12-45"><a href="#cb12-45"></a><span class="fu">magic_8_ball</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "You don't need an umbrella"</code></pre>
+<pre><code>[1] "Reply hazy, try again"</code></pre>
 </div>
 </div>
 </section>
-<section id="this-is-a-composite-function" class="slide level2">
-<h2>This is a composite function</h2>
+<section id="a-composite-function" class="slide level2">
+<h2>A composite function</h2>
 <p>Depending in an argument</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a>my_1st_calculator <span class="ot">&lt;-</span><span class="cf">function</span>(x,y,<span class="at">operation=</span><span class="st">"add"</span>){</span>
@@ -548,6 +575,14 @@ Schwab
 <span id="cb19-9"><a href="#cb19-9"></a>  class_info <span class="sc">|&gt;</span></span>
 <span id="cb19-10"><a href="#cb19-10"></a>    <span class="fu">select</span>(<span class="st">"preferred_name"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+</section>
+<section id="try-these-ones" class="slide level2">
+<h2>Try these ones</h2>
+<ol type="1">
+<li><p>Make a function that takes a column of data and finds the average. Use it on the height variable by doing class_info$height (hint: try it with sum() and length(), or for an easier approach use mean()) .</p></li>
+<li><p>Make a function that draws the US state that is input ( hint: use the maps library).</p></li>
+<li><p>Challenge: Make it so that the user can override the magic 8 ball function to always get a positive answer. (Hint: I did this by adding an override argument. )</p></li>
+</ol>
 <!-- ## Note on data masking -->
 <!-- No masking : data\$variable -->
 <!-- With masking : data \|\> filter(variable) -->

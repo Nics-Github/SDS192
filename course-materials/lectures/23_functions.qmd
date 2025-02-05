@@ -35,7 +35,6 @@ Greeting("Hiya")
 
 ```{r}
 
-
 adding <- function(x,y){
   
   total <- sum( c( x , y ))
@@ -61,34 +60,61 @@ multiplying(2,4)
 
 ```
 
-## if, else if, else
+## Control Flow
 
-The computer can run a logical check.
+If, else if , else
 
-Consider this function:
+Make a [magic 8 ball.](https://magic-8ball.com)
 
 ```{r}
-umbrella <- function(weather = "sunny"){
+#Defining the function
+magic_8_ball <- function(){
 
-if(weather == "no precipitation"){
+#Making a set of values to choose from
+sample_set <- c(-1,0,1)  
   
-    print("leave umbrella at home")
+#Randomly choosing a value
+random_number <- sample(sample_set, size = 1)  
+  
+# Making a couple of vectors with 8 ball sayings
+positive_vibes <- c("It is certain",
+                    "It is decidedly so",
+                    "Most likely",
+                    "Signs point to yes")
+
+neutral_vibes <- c("Reply hazy, try again",
+                   "Ask again later",
+                   "Concentrate and ask again")
+
+negative_vibes <- c( "Don't count on it", 
+                     "My reply is no", 
+                     "Very doubtful")
+# Control flow
+if(random_number == 1){
+    print(
+      sample(positive_vibes, size = 1)
+    )
     }
     
-else if(weather == "snow"){
-
-    print("You don't need an umbrella")
+else if(random_number == 0){
+    print(
+      sample(neutral_vibes, size = 1)
+    )
 }
   
 else{
-    print("bring an umbrella")
+    print(
+      sample(negative_vibes, size = 1)
+    )
     
     }
 }
-umbrella(weather = "snow")
+
+# Run the function
+magic_8_ball()
 ```
 
-## This is a composite function
+## A composite function
 
 Depending in an argument
 
@@ -144,6 +170,14 @@ name_vector <- as.vector(
     select("preferred_name"))
 
 ```
+
+## Try these ones
+
+1.  Make a function that takes a column of data and finds the average. Use it on the height variable by doing class_info\$height (hint: try it with sum() and length(), or for an easier approach use mean()) .
+
+2.  Make a function that draws the US state that is input ( hint: use the maps library).
+
+3.  Challenge: Make it so that the user can override the magic 8 ball function to always get a positive answer. (Hint: I did this by adding an override argument. )
 
 <!-- ## Note on data masking -->
 

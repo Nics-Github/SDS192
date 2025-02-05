@@ -609,6 +609,10 @@ h1{font-weight: 400;}
 
 Datafest is April 4-6 at UMass
 
+Check lab 1 is successfully submitted on git. 
+
+Intro to functions via first_map.qmd (see maps folder in lab 1)
+
 ::: {.callout-note collapse="true"}
 ## Learning Goals
 
@@ -627,6 +631,8 @@ Datafest is April 4-6 at UMass
 :::
 
 [Lecture: Intro to functions](course-materials/lectures/23_functions.qmd)
+
+If time: [Anonymous functions](course-materials/lectures/30_anonymous_functions.qmd)
 
 # Day 4 File Struture/ Final Project
 

@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "SDS 192: Intro to Data Science",
     "section": "",
-    "text": "Schedule\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDay 5 Intro to Functions\n\n\nData Fest Info Session\nDatafest is April 4-6 at UMass\n\n\n\n\n\n\nLearning Goals\n\n\n\n\n\n\nPushing, commiting and pulling from git\n\nStudents Errors and warnings and comments\n\nStrings and Vectors\nLibraries, functions, arguments and parameters\nIntroduction to the pipe\nGetting data into R\n\n\n\n\nLecture: Intro to functions\n\n\nDay 4 File Struture/ Final Project\nWhere are we going?\n\nFinal project Website\n\n\n\n\n\n\n\nLearning Goals\n\n\n\n\n\n\nUnderstand File Structure\n\nFiling system\n\n\n\n\n\n\n\nDay 3 R Ecosystem and More SQL\n\n\n\n\n\n\nThings I forgot from Monday\n\n\n\n\n\n\nSection 1 - about me\nSection 2 - variable types\n\n\n\n\n\nBrief History of R\n\n\n\n\n\n\n\nSQL practice\n\n\n\n\n\nsql-practice\n\nProblems 1-4 in pairs\nProblem 5 together\nProblems 6-9 in pairs\n\nTry without hints, then hints, finally solutions.\n\n\n\n\n\n\n\n\n\nIf time: Final project introduction!\n\n\n\n\n\n\nOpen Lab 1\n\n\n\n\n\n\nDay 2 Github Lab\n\nWhy do we do use git? Collaboration\n\n\n\n\n\n\ngit started with Version Control\n\n\n\n\n\n\nSign up for github here, if you don’t already have an account. We will very carefully link your github account to our github classroom account.\ngit vs github\nOptional Lab, to familiarize yourself with git: Github Fundamentals Lab 0\nHappy Git and the UseR is a helpful text.\n\n\n\n\nYou are only installing git today. There are other files, Ignore the other files until later\n\n\n\n\n\n\nSign into githubclassroom\n\n\n\n\n\nLink github account to github classroom - sign into github\n\nprereq -&gt; You need to have a github account\nClick here for lab 1. This is due in one week.\nvery carefully find your name in the roster and click it.\nyou should see todays lab in what is called a repository.\n\n\n\n\n\n\nDay 1 Welcome and SQL\n\n\n\n\n\n\nClassic First Day Stuff\n\n\n\n\n\n\nSyllabus\nLog into Slack\nWebsite tour\nBring Computers to Class\n\n\n\n\n\nMake some of our own class data\nOverview of Intro to Data Science\nIntro to SQL\n\n\nWalk to MCConnell 215 and 214\nMy office and group study room."
+    "text": "Schedule\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDay 5 Intro to Functions\n\n\nData Fest Info Session\nDatafest is April 4-6 at UMass\nCheck lab 1 is successfully submitted on git.\nIntro to functions via first_map.qmd (see maps folder in lab 1)\n\n\n\n\n\n\nLearning Goals\n\n\n\n\n\n\nPushing, commiting and pulling from git\n\nStudents Errors and warnings and comments\n\nStrings and Vectors\nLibraries, functions, arguments and parameters\nIntroduction to the pipe\nGetting data into R\n\n\n\n\nLecture: Intro to functions\nIf time: Anonymous functions\n\n\nDay 4 File Struture/ Final Project\nWhere are we going?\n\nFinal project Website\n\n\n\n\n\n\n\nLearning Goals\n\n\n\n\n\n\nUnderstand File Structure\n\nFiling system\n\n\n\n\n\n\n\nDay 3 R Ecosystem and More SQL\n\n\n\n\n\n\nThings I forgot from Monday\n\n\n\n\n\n\nSection 1 - about me\nSection 2 - variable types\n\n\n\n\n\nBrief History of R\n\n\n\n\n\n\n\nSQL practice\n\n\n\n\n\nsql-practice\n\nProblems 1-4 in pairs\nProblem 5 together\nProblems 6-9 in pairs\n\nTry without hints, then hints, finally solutions.\n\n\n\n\n\n\n\n\n\nIf time: Final project introduction!\n\n\n\n\n\n\nOpen Lab 1\n\n\n\n\n\n\nDay 2 Github Lab\n\nWhy do we do use git? Collaboration\n\n\n\n\n\n\ngit started with Version Control\n\n\n\n\n\n\nSign up for github here, if you don’t already have an account. We will very carefully link your github account to our github classroom account.\ngit vs github\nOptional Lab, to familiarize yourself with git: Github Fundamentals Lab 0\nHappy Git and the UseR is a helpful text.\n\n\n\n\nYou are only installing git today. There are other files, Ignore the other files until later\n\n\n\n\n\n\nSign into githubclassroom\n\n\n\n\n\nLink github account to github classroom - sign into github\n\nprereq -&gt; You need to have a github account\nClick here for lab 1. This is due in one week.\nvery carefully find your name in the roster and click it.\nyou should see todays lab in what is called a repository.\n\n\n\n\n\n\nDay 1 Welcome and SQL\n\n\n\n\n\n\nClassic First Day Stuff\n\n\n\n\n\n\nSyllabus\nLog into Slack\nWebsite tour\nBring Computers to Class\n\n\n\n\n\nMake some of our own class data\nOverview of Intro to Data Science\nIntro to SQL\n\n\nWalk to MCConnell 215 and 214\nMy office and group study room."
   },
   {
     "objectID": "course-materials/syllabus/syllabus.html",
@@ -1160,5 +1160,124 @@
     "title": "Making Functions practice",
     "section": "Try one",
     "text": "Try one\nMake a function that takes a vector of students in this class and prints the name of each student.\n\nlibrary(tidyverse)\nlibrary(googlesheets4)\n\nclass_info &lt;- read_sheet(\"https://docs.google.com/spreadsheets/d/1k9qA7XldtHB8-FZjmEymoUoeZJArS4tGy5gyVsvyLB0/edit?usp=sharing\") |&gt;\n  janitor::clean_names()\n\n# selecting only the column we are interested in and making it into a vector.\nname_vector &lt;- as.vector( \n  class_info |&gt;\n    select(\"preferred_name\"))"
+  },
+  {
+    "objectID": "course-materials/lectures/30_anonymous_functions.html#digression",
+    "href": "course-materials/lectures/30_anonymous_functions.html#digression",
+    "title": "Anonymous Functions",
+    "section": "Digression",
+    "text": "Digression\nAnonymous functions are functions without a name."
+  },
+  {
+    "objectID": "course-materials/lectures/30_anonymous_functions.html#a-named-function",
+    "href": "course-materials/lectures/30_anonymous_functions.html#a-named-function",
+    "title": "Anonymous Functions",
+    "section": "A named function",
+    "text": "A named function\n\nlibrary(stringr)\n\n#This function has a name, upper_case\n\nupper_case &lt;-  function(word){\n  str_to_upper(word)\n}\n\nupper_case(\"hi\")\n\n[1] \"HI\""
+  },
+  {
+    "objectID": "course-materials/lectures/30_anonymous_functions.html#anonymous-functions",
+    "href": "course-materials/lectures/30_anonymous_functions.html#anonymous-functions",
+    "title": "Anonymous Functions",
+    "section": "Anonymous functions",
+    "text": "Anonymous functions\nThis is the same function without a name\n\nfunction(word) str_to_upper(word)\n\nfunction(word) str_to_upper(word)\n\n\nIts harder to use by itself, we often use them in combination with other functions."
+  },
+  {
+    "objectID": "course-materials/lectures/30_anonymous_functions.html#using-the-anonymous-function",
+    "href": "course-materials/lectures/30_anonymous_functions.html#using-the-anonymous-function",
+    "title": "Anonymous Functions",
+    "section": "Using the anonymous function",
+    "text": "Using the anonymous function\nThe function after .f will only be used once, we don’t need to name it.\n\nwords &lt;- c(\"I\", \"Like\", \"to\", \"eat\", \"cheese\", \"!\")\npurrr::map_chr(\n  .x = words,\n  .f = function(word) str_to_upper(word)\n)\n\n[1] \"I\"      \"LIKE\"   \"TO\"     \"EAT\"    \"CHEESE\" \"!\""
+  },
+  {
+    "objectID": "course-materials/lectures/30_anonymous_functions.html#name-an-anonymous-function",
+    "href": "course-materials/lectures/30_anonymous_functions.html#name-an-anonymous-function",
+    "title": "Anonymous Functions",
+    "section": "Name an anonymous function",
+    "text": "Name an anonymous function\nYou can name an anonymous function.\n\n# This works with map_chhr() because str_to_upper is vectorized\n\nupper_case_anon &lt;- function(word) str_to_upper(word)\nupper_case_anon(words)\n\n[1] \"I\"      \"LIKE\"   \"TO\"     \"EAT\"    \"CHEESE\" \"!\""
+  },
+  {
+    "objectID": "course-materials/lectures/30_anonymous_functions.html#does-this-work",
+    "href": "course-materials/lectures/30_anonymous_functions.html#does-this-work",
+    "title": "Anonymous Functions",
+    "section": "Does this work?",
+    "text": "Does this work?\n\n# This works because str_to_upper is vectorized\n\nupper_case_anon &lt;- function(word) \n  str_to_upper(word)\n\nupper_case_anon(words)\n\n[1] \"I\"      \"LIKE\"   \"TO\"     \"EAT\"    \"CHEESE\" \"!\"     \n\n\nYes, but it can get confusing."
+  },
+  {
+    "objectID": "course-materials/lectures/30_anonymous_functions.html#this-does-not-work",
+    "href": "course-materials/lectures/30_anonymous_functions.html#this-does-not-work",
+    "title": "Anonymous Functions",
+    "section": "This does not work",
+    "text": "This does not work\n\nlibrary(tidyverse)\n\nconfusing_function &lt;- function(word) \n  upper_case_words&lt;- \n    str_to_upper(word)\n## This should lower the word's case, but it doesn't because its not part of the function.  \n  str_to_lower(upper_case_words)\n\nconfusing_function(words)"
+  },
+  {
+    "objectID": "course-materials/lectures/30_anonymous_functions.html#last-example-fixed-with",
+    "href": "course-materials/lectures/30_anonymous_functions.html#last-example-fixed-with",
+    "title": "Anonymous Functions",
+    "section": "Last example fixed with",
+    "text": "Last example fixed with\n\nconfusing_function &lt;- function(word){ \n  upper_case_words&lt;- \n    str_to_upper(word)\n  ## Now it is part of the function.  \n  str_to_lower(upper_case_words)\n}\n  \nconfusing_function(words)\n\n[1] \"i\"      \"like\"   \"to\"     \"eat\"    \"cheese\" \"!\""
+  },
+  {
+    "objectID": "course-materials/lectures/30_anonymous_functions.html#summary",
+    "href": "course-materials/lectures/30_anonymous_functions.html#summary",
+    "title": "Anonymous Functions",
+    "section": "Summary",
+    "text": "Summary\nUse an anonymous function to do one thing.\nIf it get complicated give some {}"
+  },
+  {
+    "objectID": "course-materials/lectures/30_anonymous_functions.html#more-anonymous",
+    "href": "course-materials/lectures/30_anonymous_functions.html#more-anonymous",
+    "title": "Anonymous Functions",
+    "section": "More anonymous?",
+    "text": "More anonymous?\nSince R version 4.1, May 2021.\nJust use a \\(argument) operations\n\n# This is also an anonymous function. \n\\(word) str_to_upper(word)\n\nmap_chr(.x = words,\n    .f = \\(word) str_to_upper(word))"
+  },
+  {
+    "objectID": "course-materials/lectures/30_anonymous_functions.html#deep-dive",
+    "href": "course-materials/lectures/30_anonymous_functions.html#deep-dive",
+    "title": "Anonymous Functions",
+    "section": "Deep dive",
+    "text": "Deep dive\nThere are actually lots of ways of making anonymous functions.\nHere are more. I like the idea of the lambda package."
+  },
+  {
+    "objectID": "course-materials/lectures/30_anonymous_functions.html#sds-270-for-more-on-functions-in-r",
+    "href": "course-materials/lectures/30_anonymous_functions.html#sds-270-for-more-on-functions-in-r",
+    "title": "Anonymous Functions",
+    "section": "SDS 270 for more on functions in R",
+    "text": "SDS 270 for more on functions in R"
+  },
+  {
+    "objectID": "course-materials/lectures/23_functions.html#control-flow",
+    "href": "course-materials/lectures/23_functions.html#control-flow",
+    "title": "Making Functions practice",
+    "section": "Control Flow",
+    "text": "Control Flow\nIf, else if , else\nMake a magic 8 ball.\n\n#Defining the function\nmagic_8_ball &lt;- function(){\n\n#Making a set of values to choose from\nsample_set &lt;- c(-1,0,1)  \n  \n#Randomly choosing a value\nrandom_number &lt;- sample(sample_set, size = 1)  \n  \n# Making a couple of vectors with 8 ball sayings\npositive_vibes &lt;- c(\"It is certain\",\n                    \"It is decidedly so\",\n                    \"Most likely\",\n                    \"Signs point to yes\")\n\nneutral_vibes &lt;- c(\"Reply hazy, try again\",\n                   \"Ask again later\",\n                   \"Concentrate and ask again\")\n\nnegative_vibes &lt;- c( \"Don't count on it\", \n                     \"My reply is no\", \n                     \"Very doubtful\")\n# Control flow\nif(random_number == 1){\n    print(\n      sample(positive_vibes, size = 1)\n    )\n    }\n    \nelse if(random_number == 0){\n    print(\n      sample(neutral_vibes, size = 1)\n    )\n}\n  \nelse{\n    print(\n      sample(negative_vibes, size = 1)\n    )\n    \n    }\n}\n\n# Run the function\nmagic_8_ball()\n\n[1] \"Reply hazy, try again\""
+  },
+  {
+    "objectID": "course-materials/lectures/23_functions.html#try-these",
+    "href": "course-materials/lectures/23_functions.html#try-these",
+    "title": "Making Functions practice",
+    "section": "Try these",
+    "text": "Try these\n\nMake a function that takes a column of data and finds the average. Use it on the height variable by doing class_info$height (hint: try it with sum() and length(), or for an easier approach use mean())"
+  },
+  {
+    "objectID": "course-materials/lectures/23_functions.html#a-composite-function",
+    "href": "course-materials/lectures/23_functions.html#a-composite-function",
+    "title": "Making Functions practice",
+    "section": "A composite function",
+    "text": "A composite function\nDepending in an argument\n\nmy_1st_calculator &lt;-function(x,y,operation=\"add\"){\n  \n  if(operation %in% \"add\"){\n    total &lt;- adding(x,y)\n  }\n  \n  else if(operation %in% \"multiply\"){\n    total &lt;- multiplying(x,y)\n  }\n  \n  else{\n    stop(\"Please choose `add` or `multiply` for the operation argument\")\n  }\n  \n  return(total)\n}\n\n\nmy_1st_calculator(1,6, operation=\"multiply\")\n\n[1] 6"
+  },
+  {
+    "objectID": "course-materials/lectures/23_functions.html#try-this-one",
+    "href": "course-materials/lectures/23_functions.html#try-this-one",
+    "title": "Making Functions practice",
+    "section": "Try this one",
+    "text": "Try this one\n\nMake a function that takes a column of data and finds the average. Use it on the height variable by doing class_info$height (hint: try it with sum() and length(), or for an easier approach use mean()) .\nMake a function that draws the US state that is input ( hint: use the maps library).\nChallenge: Make it so that the user can override the magic 8 ball function to always get a positive answer. (Hint: I did this by adding an override argument. )"
+  },
+  {
+    "objectID": "course-materials/lectures/23_functions.html#try-these-ones",
+    "href": "course-materials/lectures/23_functions.html#try-these-ones",
+    "title": "Making Functions practice",
+    "section": "Try these ones",
+    "text": "Try these ones\n\nMake a function that takes a column of data and finds the average. Use it on the height variable by doing class_info$height (hint: try it with sum() and length(), or for an easier approach use mean()) .\nMake a function that draws the US state that is input ( hint: use the maps library).\nChallenge: Make it so that the user can override the magic 8 ball function to always get a positive answer. (Hint: I did this by adding an override argument. )"
   }
 ]
