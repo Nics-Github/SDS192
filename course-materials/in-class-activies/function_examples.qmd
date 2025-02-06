@@ -1,0 +1,69 @@
+---
+title: "More Function Practice"
+author: "Schwab"
+---
+
+Here are four problems for you to try. Don't overly complicate your functions.
+
+```{r}
+#Load maps and googlesheets4 and janitor as those are the packages we'll use. 
+library(maps)
+library(googlesheets4)
+library(janitor)
+
+```
+
+## Problem 1.
+
+R is a vectorized language, and one thing that means is that you can easily add values from vectors element-wise.
+
+Make two vectors, each with 5 integers and save them as vector_1 and vector_2. Then make a function that will, add or subtract these vectors based on an argument called operation. Note that the answer also have five integers.
+
+## Problem 2.
+
+The function below is broken. It's syntax (the way it is typed) is not great. Your task is to fix it and make the style conform to the style guide. You'll add paraenthesis and curley brackets, adjust spacing and consider why the else_if is black. Then when you run the function with default arguments and it'll be fixed.
+
+```{r}
+FixMe <- function(argument1 = "fixed", argument2= "broken"){
+  if(identical(argument1, argument2)){print(argument2)}
+  else_if(argument1 == argument2){
+  print("still broken")
+  }else{
+print(argument1)      
+  }
+
+
+
+```
+
+## Problem 3
+
+Make a function that draws a map of every country where students in this class are from. Call it home_countries and have it take one argument, a vector of the names of countries students are from. You can access this vector with class_info\$country after running the chunk below.
+
+```{r}
+class_info <- read_sheet("https://docs.google.com/spreadsheets/d/1k9qA7XldtHB8-FZjmEymoUoeZJArS4tGy5gyVsvyLB0/edit?usp=sharing") |>
+  janitor::clean_names()
+
+```
+
+## Problem 4
+
+Make a function that draws a map of one student's home country and colors it according to their computer OS (Mac or Windows). You should add a title stating the student's name and their country.  Your function should take one argument: the name of the student. 
+
+We will learn nicer tools for this, but for now use the `subset()` function to select a row of information for a student. Adding a \[\] bracket after the subset function will allow you to choose individual items from the data frame. (See examples below).
+
+```{r}
+# If you want the row based on a student use subset. This gives my row
+subset(class_info, preferred_name == "Nic" )
+
+#If you want a particular column you can access it with bracket notation. This chooses my pronouns. 
+subset(class_info, preferred_name == "Nic" )[3]
+```
+
+## Bonus: Rainbows 
+
+Keeping track of parenthesis while making functions is difficult some times. R has an option where you can make parenthesis rainbow colored. To turn it on go Tools \> Global Options \> Code \> Display and select the checkbox near the bottom.
+
+## Bonus 2:
+
+If you already have a some programming experience I encourage you to take a look at the anonymous_function.qmd. In it you will see examples of other ways in which you can write functions in R. (Think lambda functions) We wont have too much time to get into these this semester, but they can simplify your programming.

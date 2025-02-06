@@ -1,0 +1,119 @@
+---
+title: "More Function Practice"
+author: "Schwab"
+---
+
+Here are four problems for you to try. Don't overly complicate your functions.
+
+```{r}
+#Load maps and googlesheets4 and janitor as those are the packages we'll use. 
+library(maps)
+library(googlesheets4)
+library(janitor)
+
+```
+
+## Problem 1.
+
+R is a vectorized language, and one thing that means is that you can easily add values from vectors element-wise.
+
+Make two vectors, each with 5 integers and save them as vector_1 and vector_2. Then make a function that will, add or subtract these vectors based on an argument called operation. Note that the answer also have five integers.
+
+```{r}
+vector_1 <- c(1,2,3,4,5)
+vector_2 <- c(2,2,2,2,2)
+
+calculator <- function(vec1, vec2, operation ="add") {
+  if (operation == "add"){
+    vec1 + vec2
+  }
+  else{
+    vector_1 - vector_2
+  }
+}
+calculator(vector_1,vector_2)
+```
+
+
+## Problem 2.
+
+The function below is broken. It's syntax (the way it is typed) is not great. Your task is to fix it and make the style conform to the style guide. You'll add paraenthesis and curley brackets, adjust spacing and consider why the else_if is black. Then when you run the function with default arguments and it'll be fixed.
+
+```{r}
+fix_me <- function(argument1 = "fixed", argument2= "broken") {
+  if (identical(argument1, argument2)){
+    print(argument2)
+  }
+  else if (argument1 == argument2){
+    print("still broken")
+  }
+  else{
+    print(argument1)      
+  }
+}
+
+fix_me()
+```
+
+## Problem 3
+
+Make a function that draws a map of every country where students in this class are from. Call it home_countries and have it take one argument, a vector of the names of countries students are from. You can access this vector with class_info$country after running the chunk below.
+
+```{r}
+class_info <- read_sheet("https://docs.google.com/spreadsheets/d/1k9qA7XldtHB8-FZjmEymoUoeZJArS4tGy5gyVsvyLB0/edit?usp=sharing") |>
+  janitor::clean_names()
+
+home_countries <- function(country_vector = c()) {
+  map(regions = country_vector)
+}
+
+home_countries(class_info$country)
+```
+
+## Problem 4
+
+Make a function that draws a map of one student's home country and colors it according to their computer OS (Mac or Windows). You should add a title stating the student's name and their country.  Your function should take one argument: the name of the student. 
+
+We will learn nicer tools for this, but for now use the `subset()` function to select a row of information for a student. Adding a \[\] bracket after the subset function will allow you to choose individual items from the data frame. (See examples below).
+
+```{r}
+# If you want the row based on a student use subset. This gives my row
+subset(class_info, preferred_name == "Nic" )
+
+#If you want a particular column you can access it with bracket notation. This chooses my pronouns. 
+subset(class_info, preferred_name == "Nic" )[8]
+```
+
+```{r}
+
+home_countries <- function(students_name) {
+  # A function that dras a picture of a student's country based and colors it based on their computer type.   
+  student_region <- subset(class_info, preferred_name == students_name )[8] # Set the variable
+  student_computer <- subset(class_info, preferred_name == students_name )[4] # Set the region
+  
+  if(student_computer == "Mac"){
+    color="purple"
+  } 
+  else if(student_computer == "Windows"){
+    color = "blue"
+  }
+  else{
+    color = "red"
+  }
+  map(regions = student_region, fill = TRUE, col = color)
+  title(paste(students_name,"'s country:", student_region))
+}
+
+home_countries(students_name = "Nic")
+
+```
+
+
+
+## Bonus: Rainbows 
+
+Keeping track of parenthesis while making functions is difficult some times. R has an option where you can make parenthesis rainbow colored. To turn it on go Tools \> Global Options \> Code \> Display and select the checkbox near the bottom.
+
+## Bonus 2:
+
+If you already have a some programming experience I encourage you to take a look at the anonymous_function.qmd. In it you will see examples of other ways in which you can write functions in R. (Think lambda functions) We wont have too much time to get into these this semester, but they can simplify your programming.
