@@ -24,6 +24,8 @@ Make two vectors, each with 5 integers and save them as vector_1 and vector_2. T
 The function below is broken. It's syntax (the way it is typed) is not great. Your task is to fix it and make the style conform to the style guide. You'll add paraenthesis and curley brackets, adjust spacing and consider why the else_if is black. Then when you run the function with default arguments and it'll be fixed.
 
 ```{r}
+#| eval: false   # ignore this line
+
 FixMe <- function(argument1 = "fixed", argument2= "broken"){
   if(identical(argument1, argument2)){print(argument2)}
   else_if(argument1 == argument2){

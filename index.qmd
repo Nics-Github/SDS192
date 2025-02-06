@@ -586,17 +586,15 @@ h1{font-weight: 400;}
 
 <!-- [Cleaning up documents](https://quarto.org/docs/computations/execution-options.html)
 
--   [Spinelli Center](https://www.smith.edu/academics/applied-learning-research/spinelli-center-quantitative-learning#PanelDataCnslr)
+-   [Spinelli Center](https://www.smith.edu/academics/applied-learning-research/spinelli-center-quantitative-learning#PanelDataCnslr) -->
 
-<!-- # Day 5 Making Functions (cont.) -->
+# Day 6 Making Functions (cont.)
 
-<!-- <!-- A bit of github practice might have been good here. --> 
+[Download this function practice](https://github.com/Nics-Github/SDS192/blob/0662a3c95e52e9064ebf422030658bc7e286cca6/course-materials/in-class-activies/function_examples.qmd). 
 
-<!-- [Lecture: Intro to functions](course-materials/lectures/23_functions.qmd) -->
+Solutions will be posted later in the class. 
 
-<!-- See `function_map.qmd`. -->
-
-<!-- -   Make a function that takes the country each person is from and makes a `map()`. -->
+<!-- [Solutions](./course-materials/in-class-activies/SOLUTIONS_function_examples.qmd) -->
 
 # Day 5 Intro to Functions
 
