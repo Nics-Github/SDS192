@@ -28,7 +28,7 @@ calculator <- function(vec1, vec2, operation ="add") {
     vec1 + vec2
   }
   else{
-    vector_1 - vector_2
+    vec1 - vec2
   }
 }
 calculator(vector_1,vector_2)
@@ -60,9 +60,19 @@ fix_me()
 Make a function that draws a map of every country where students in this class are from. Call it home_countries and have it take one argument, a vector of the names of countries students are from. You can access this vector with class_info$country after running the chunk below.
 
 ```{r}
+#| eval: false
 class_info <- read_sheet("https://docs.google.com/spreadsheets/d/1k9qA7XldtHB8-FZjmEymoUoeZJArS4tGy5gyVsvyLB0/edit?usp=sharing") |>
   janitor::clean_names()
+write.csv(class_info, "class_info.csv")
+```
 
+```{r}
+class_info <- read.csv("class_info.csv")
+
+```
+
+
+```{r}
 home_countries <- function(country_vector = c()) {
   map(regions = country_vector)
 }
@@ -81,14 +91,14 @@ We will learn nicer tools for this, but for now use the `subset()` function to s
 subset(class_info, preferred_name == "Nic" )
 
 #If you want a particular column you can access it with bracket notation. This chooses my pronouns. 
-subset(class_info, preferred_name == "Nic" )[8]
+subset(class_info, preferred_name == "Nic" )[9]
 ```
 
 ```{r}
 
 home_countries <- function(students_name) {
   # A function that dras a picture of a student's country based and colors it based on their computer type.   
-  student_region <- subset(class_info, preferred_name == students_name )[8] # Set the variable
+  student_region <- subset(class_info, preferred_name == students_name )[9] # Set the variable
   student_computer <- subset(class_info, preferred_name == students_name )[4] # Set the region
   
   if(student_computer == "Mac"){

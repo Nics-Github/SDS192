@@ -15,7 +15,7 @@ library(tidyverse)
 
 ## Names and Surveys
 
-[Survey Questions](https://docs.google.com/forms/d/e/1FAIpQLSfYrVhaMo9BCVSTRZ8EhOnfxZbkdzjek9AB2EV11qFDDXgo9Q/viewform?usp=sf_link)
+[Survey Questions](https://docs.google.com/forms/d/e/1FAIpQLSdRR5mxYfqj5kSr1bu7dTGlMBdKdEhPG8wQ6o8iRMAY-wFAxQ/viewform?usp=sharing)
 
 ## Data Viz no computers
 
@@ -31,7 +31,7 @@ library(tidyverse)
 
 -   Variable Types
 
-## Take 1: Hand drawn graphs of survey questions.
+## Part 1: Hand drawn graphs of survey questions.
 
 Draw a graph of a variable. **Do not write your name.**
 
