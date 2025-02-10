@@ -595,6 +595,10 @@ Reflect on the functions [we made](./course-materials/in-class-activies/SOLUTION
 ```{r}
 #| eval: false
 library(googlesheets4)
+
+#googlesheets4::gs4_auth()
+#googlesheets4::deauth()
+  
 class_info <- read_sheet("https://docs.google.com/spreadsheets/d/1k9qA7XldtHB8-FZjmEymoUoeZJArS4tGy5gyVsvyLB0/edit?usp=sharing") |>
   janitor::clean_names()
 ```
