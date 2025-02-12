@@ -61,7 +61,7 @@ h1{font-weight: 400;}
 <!-- https://docs.google.com/spreadsheets/d/1j1Mub7lb1CJKpG-PySzdbzzgvryVQ3XrlvNgPRUcN0I/edit?usp=sharing -->
 
 ```{=html}
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTG_b6upDZcPxXB92LHYIhV1uAXgeVGaMsZ3sDRPuSQN74JdhkKhZQVjw6T68I3zsP8KGYzDSVTZW64/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false&amp;gid=0&amp;range=A1:E8" width="100%" height="300">
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTG_b6upDZcPxXB92LHYIhV1uAXgeVGaMsZ3sDRPuSQN74JdhkKhZQVjw6T68I3zsP8KGYzDSVTZW64/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false&amp;gid=0&amp;range=A1:E11" width="100%" height="300">
 </iframe>
 ```
 
@@ -536,43 +536,54 @@ h1{font-weight: 400;}
 <!-- -   All code for labs must be satisfactorily commented. -->
 <!-- ::: -->
 
-<!-- # Day 8 Lab 2 -->
-
-<!-- <!-- Note to self, update the format of lab 2 --> 
-
-<!-- Change the format of lab 2 -->
+<!-- # Day 9 Lab 2 -->
 
 <!-- This lab is due Wednesday at Midnight. -->
 
-<!-- [Lab 2](https://classroom.github.com/a/CLF1ck4I) -->
+<!-- [Lab 2](https://classroom.github.com/a/KcegUyPW) -->
 
-<!-- # Day 8 Taxonomy -->
+# Day 8 Taxonomy
 
-<!-- ::: {.callout-tip collapse="true"} -->
-<!-- ## Screenshots Help -->
+::: {.callout-tip collapse="true"}
+## Screenshots Help
 
-<!-- -   [The six-fixes](https://docs.google.com/document/d/1P7IyZ4On9OlrCOhygFxjC7XhQqyw8OludwChz-uFd_o/edit) -->
+-   [The six-fixes](https://docs.google.com/document/d/1P7IyZ4On9OlrCOhygFxjC7XhQqyw8OludwChz-uFd_o/edit)
 
-<!-- Help us help you: take screenshots of your screen and post them to Slack. -->
+Help us help you: take screenshots of your screen and post them to Slack.
 
-<!-- -   macOS: Command+Shift+3 to take shot of whole screen, Command+Shift+4 to take subportion -->
+-   macOS: Command+Shift+3 to take shot of whole screen, Command+Shift+4 to take subportion
 
-<!-- -   Windows: Shift-Windows Key-S and Snip & Sketch -->
+-   Windows: Shift-Windows Key-S and Snip & Sketch
 
-<!-- -   Linux: Print screen -->
+-   Linux: Print screen
 
-<!-- -   Chromebook: Shift + Ctrl + Show windows -->
-<!-- ::: -->
+-   Chromebook: Shift + Ctrl + Show windows
+:::
 
 <!-- ### Lecture -->
 
+::: {.callout-tip collapse="true"}
+## Make a graph from class data
 
+```{r}
+#| eval: false
+library(googlesheets4)
 
-<!-- -   [Taxonomy of graphs](course-materials/lectures/2_mdsr_viz_1_taxonomy.qmd) -->
+#googlesheets4::gs4_auth()
+#googlesheets4::deauth()
+  
+class_info <- read_sheet("https://docs.google.com/spreadsheets/d/1k9qA7XldtHB8-FZjmEymoUoeZJArS4tGy5gyVsvyLB0/edit?usp=sharing") |>
+  janitor::clean_names()
+```
+:::
 
-<!-- -   Demo: How R builds a graph. -->
+-   [Taxonomy of graphs](course-materials/lectures/2_mdsr_viz_1_taxonomy.qmd)
 
-<!-- -   [Discussion: Taxonomy of Graphics](./course-materials/in-class-activies/3Activity_Taxonomy_of_Graphics.qmd) -->
+-   Exploratory Data analysis and How R builds a graph.
+
+If time: 
+
+-   [Discussion: Taxonomy of Graphics](./course-materials/in-class-activies/3Activity_Taxonomy_of_Graphics.qmd)
 
 
 # Day 7 Intro to Data Viz
@@ -589,20 +600,7 @@ Reflect on the functions [we made](./course-materials/in-class-activies/SOLUTION
 
 -   [Spinelli Center](https://www.smith.edu/academics/applied-learning-research/spinelli-center-quantitative-learning#PanelDataCnslr) -->
 
-::: {.callout-tip collapse="true"}
-## If time make a graph from class data. 
 
-```{r}
-#| eval: false
-library(googlesheets4)
-
-#googlesheets4::gs4_auth()
-#googlesheets4::deauth()
-  
-class_info <- read_sheet("https://docs.google.com/spreadsheets/d/1k9qA7XldtHB8-FZjmEymoUoeZJArS4tGy5gyVsvyLB0/edit?usp=sharing") |>
-  janitor::clean_names()
-```
-:::
 
 
 # Day 6 Making Functions (cont.)
