@@ -61,7 +61,7 @@ h1{font-weight: 400;}
 <!-- https://docs.google.com/spreadsheets/d/1j1Mub7lb1CJKpG-PySzdbzzgvryVQ3XrlvNgPRUcN0I/edit?usp=sharing -->
 
 ```{=html}
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTG_b6upDZcPxXB92LHYIhV1uAXgeVGaMsZ3sDRPuSQN74JdhkKhZQVjw6T68I3zsP8KGYzDSVTZW64/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false&amp;gid=0&amp;range=A1:E11" width="100%" height="300">
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTG_b6upDZcPxXB92LHYIhV1uAXgeVGaMsZ3sDRPuSQN74JdhkKhZQVjw6T68I3zsP8KGYzDSVTZW64/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false&amp;gid=0&amp;range=A1:E15" width="100%" height="300">
 </iframe>
 ```
 
@@ -536,11 +536,26 @@ h1{font-weight: 400;}
 <!-- -   All code for labs must be satisfactorily commented. -->
 <!-- ::: -->
 
-<!-- # Day 9 Lab 2 -->
+# Day 9 Lab 2
 
-<!-- This lab is due Wednesday at Midnight. -->
+5 minutes about colors via the [cheat sheet](https://posit.co/wp-content/uploads/2022/10/data-visualization-1.pdf).
 
-<!-- [Lab 2](https://classroom.github.com/a/KcegUyPW) -->
+This lab is due Wednesday at Midnight.
+
+[Lab 2](https://classroom.github.com/a/KcegUyPW)
+
+::: {.callout-note collapse="true"}
+## Note on colors
+
+We will discuss colors on Monday when you get to them in ex 6:
+
+You can reread [this section](https://mdsr-book.github.io/mdsr3e/02-datavizI.html#sec-color) if you forget what sequential,diverging,qualitative mean. 
+
+Or check out the colors examples on the [cheat sheet](https://posit.co/wp-content/uploads/2022/10/data-visualization-1.pdf). 
+
+Intuitive [Color Examples](https://jhudatascience.org/tidyversecourse/dataviz.html#colors)
+
+:::
 
 # Day 8 Taxonomy
 
