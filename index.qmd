@@ -538,6 +538,8 @@ h1{font-weight: 400;}
 
 # Day 9 Lab 2
 
+Quiz 1 is open. It is due in two Mondays. 
+
 5 minutes about colors via the [cheat sheet](https://posit.co/wp-content/uploads/2022/10/data-visualization-1.pdf).
 
 This lab is due Wednesday at Midnight.
