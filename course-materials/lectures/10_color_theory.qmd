@@ -1,0 +1,363 @@
+---
+title: "Color Theory"
+subtitle: "and a word on themes"
+author: "Schwab"
+format: 
+  revealjs:
+    theme: beige
+execute: 
+  echo: false
+  warning: false
+  message: false
+
+  
+---
+
+```{r}
+# Load all packages here. It's good practice to load all packages at the
+# beginning of a qmd file so that collaborators can see in one shot all packages
+# they'll need installed:
+library(tidyverse)
+library(fivethirtyeight) # This is the the presidential data
+
+# Libraries for Mapping
+library(sf) # shape files
+library(tidycensus)
+
+```
+
+## Skip this
+
+```{r}
+#| warning: false
+
+# Get MA county sf object, that includes population estimate column in data
+mass_pop_orig <- 
+  tidycensus::get_acs(
+    geography = "county", 
+    variables = c("B01003_001"),
+    state = "MA",
+    geometry = TRUE
+  ) |> 
+  # Add centroids to each region using purrr package
+  mutate(
+    lng = purrr::map_dbl(geometry, ~st_centroid(.x)[[1]]),
+    lat = purrr::map_dbl(geometry, ~st_centroid(.x)[[2]])
+  )  
+
+
+# Unfortunately the original NAME variable above is very long and redundant.
+# Create a new data frame with the just the county name using the separate()
+# function from the tidyr package. 
+mass_pop <- mass_pop_orig |> 
+  tidyr::separate(NAME, c("County", "State"), sep = ", ") |> 
+  tidyr::separate(County, c("County", "Fluff"), sep = " ") 
+
+
+```
+
+## Colors
+
+Big Idea:  **Color Choices Matter**
+
+General Color Palettes: 
+
+- Sequential Palettes
+
+- Diverging Palettes
+
+- Qualitative Palettes
+
+## R Color Brewer palletts
+
+![](https://r-graph-gallery.com/38-rcolorbrewers-palettes_files/figure-html/thecode-1.png)
+
+## A Map of Massachusetts
+
+```{r}
+# Plot gradient choropleth map based on numerical variable estimate
+ggplot() +
+  geom_sf(data = mass_pop, aes()) +
+  #geom_text(data = mass_pop, aes(x = lng, y = lat, label = County)) +
+  labs(fill = "Population\nEstimate") +
+  theme_classic()+
+  theme(axis.title.x=element_blank(),
+        axis.text.x=element_blank(),
+        axis.ticks.x=element_blank(),
+        axis.title.y=element_blank(),
+        axis.text.y=element_blank(),
+        axis.ticks.y=element_blank(),
+        axis.line = element_blank()
+        )
+```
+
+```{r}
+
+# What if instead we want a bin based choropleth map. Use the cut_number()
+# function to convert the numerical variable estimate 
+# to a categorical variable with 3 levels!
+mass_pop <- mass_pop |>
+  mutate(estimate_discrete = cut_number(estimate, 3))
+
+```
+
+## Sequential 
+
+```{r}
+# Plot!
+ggplot() +
+  geom_sf(data = mass_pop, aes(fill = estimate)) +
+  labs(title= "Population of MA counties 2020",
+       fill = "Population\nEstimate",
+       source ="US Census")+
+  scale_fill_distiller(direction = -1) +
+  theme_classic()+
+  theme(axis.title.x=element_blank(),
+        axis.text.x=element_blank(),
+        axis.ticks.x=element_blank(),
+        axis.title.y=element_blank(),
+        axis.text.y=element_blank(),
+        axis.ticks.y=element_blank(),
+        axis.line = element_blank()
+        )
+```
+
+## Sequential Again
+
+```{r}
+
+ggplot() +
+  geom_sf(data = mass_pop, aes(fill = estimate)) +
+  labs(title= "Population of MA counties 2020",
+       fill = "Population\nEstimate",
+       source ="US Census")+
+  scale_fill_distiller(direction = 1) +
+  theme_classic()+
+  theme(axis.title.x=element_blank(),
+        axis.text.x=element_blank(),
+        axis.ticks.x=element_blank(),
+        axis.title.y=element_blank(),
+        axis.text.y=element_blank(),
+        axis.ticks.y=element_blank(),
+        axis.line = element_blank()
+        )
+
+```
+
+## Sequential
+
+Notes: 
+
+- Used for continuous numeric variables
+
+- Darker should be used to show more
+
+
+## Sequential Again
+
+```{r}
+mass_pop_under_5 <- 
+  tidycensus::get_acs(
+    geography = "county", 
+    variables = c(population = "B01003_001", under_5m="B01001_003", under_5f= "B01001_027"),
+    state = "MA",
+    # We'll need to pivot wider, but that doesn't work with simple features. 
+    geometry = TRUE
+  )|>
+  # Add centroids to each region using purrr package
+ tidyr::separate(NAME, c("County", "State"), sep = ", ") |> 
+ tidyr::separate(County, c("County", "Fluff"), sep = " ") 
+
+# Just count them we get a similar map to before. 
+props <- mass_pop_under_5 |> 
+  select(County,variable,estimate)|>
+  pivot_wider(names_from = variable, values_from = estimate)|>
+  group_by(County)|>
+  reframe(County, prop_under_5 = (under_5m+under_5f)/population)
+
+# Do a left join, a right join will lose the multipolygon-ness
+mass_pop_under_5  <- mass_pop_under_5  |>
+  left_join(props, by = "County") |>
+  mutate(prop_under_5 = round(prop_under_5, 3),
+         under_5_discrete = cut_number(prop_under_5, 
+                                       n = 3,
+                                       labels = c("3-4%","4-5.1%","5.1%-5.4%" )))
+         
+
+options(scipen =10)
+ggplot() +
+  geom_sf(data = mass_pop_under_5, aes(fill = under_5_discrete)) +
+  scale_fill_brewer(direction = 1, palette = "Purples")+
+  labs(title = "Babies and Toddlers in MA",
+       subtitle= "Proportion of MA population under 5 years old",
+       fill = "Under 5s \nEstimate",
+       caption ="source: US Census") +
+  theme_classic()+
+  theme(axis.title.x=element_blank(),
+        axis.text.x=element_blank(),
+        axis.ticks.x=element_blank(),
+        axis.title.y=element_blank(),
+        axis.text.y=element_blank(),
+        axis.ticks.y=element_blank(),
+        axis.line = element_blank()
+        )
+```
+
+## Diverging Palettes
+
+```{r}
+mass_med_income <- 
+  tidycensus::get_acs(
+    geography = "county", 
+    variables = c(med_household_income = "B19013_001"),
+    state = "MA",
+    # We'll need to pivot wider, but that doesn't work with simple features. 
+    geometry = TRUE
+  )|>
+  # Add centroids to each region using purrr package
+ tidyr::separate(NAME, c("County", "State"), sep = ", ") |> 
+ tidyr::separate(County, c("County", "Fluff"), sep = " ") |>
+  mutate(med_household_income = estimate) |>
+  mutate(med_income_discrete = cut_interval(
+    med_household_income, 
+    length = 15000, 
+    labels = c("60-75", "75-90","90-105", "105-120","120-135")
+    ))
+```
+
+```{r}
+# Plot!
+ggplot() +
+  geom_sf(data = mass_med_income, aes(fill = med_income_discrete)) +
+ # geom_text(data = mass_pop, aes(x = lng, y = lat, label = County)) +
+  labs(fill = "Median Income\n thousands dollars",
+       title = "Massachusetts Med Income 2020 ",
+       subtitle = "Median income in 2020 was $91,842",
+       caption = "deptofnumbers.com")+
+  scale_fill_brewer(palette = "PuOr",na.value ="grey" )+
+  theme_classic()+
+  theme(axis.title.x=element_blank(),
+        axis.text.x=element_blank(),
+        axis.ticks.x=element_blank(),
+        axis.title.y=element_blank(),
+        axis.text.y=element_blank(),
+        axis.ticks.y=element_blank(),
+        axis.line = element_blank()
+        )
+```
+
+## Diverging Palettes
+
+Missing Data should be clearly represented with grey or a like color. 
+
+```{r}
+# Plot!
+mass_med_income$med_income_discrete[8] = NA
+
+ggplot() +
+  geom_sf(data = mass_med_income, aes(fill = med_income_discrete)) +
+ # geom_text(data = mass_pop, aes(x = lng, y = lat, label = County)) +
+  labs(fill = "Median Income\n thousands dollars",
+       title = "Massachusetts Med Income 2020 ",
+       #subtitle = "Median income in 2020 was $91,842",
+       subtitle = "Hampshire county data is missing",
+       caption = "deptofnumbers.com")+
+  scale_fill_brewer(palette = "PuOr",na.value ="grey" )+
+  theme_classic()+
+  theme(axis.title.x=element_blank(),
+        axis.text.x=element_blank(),
+        axis.ticks.x=element_blank(),
+        axis.title.y=element_blank(),
+        axis.text.y=element_blank(),
+        axis.ticks.y=element_blank(),
+        axis.line = element_blank()
+        )
+```
+
+
+## Qualitative Data
+
+If the variable is categorical use a qualitative palette. 
+
+Limit yourself to six categories. 
+
+```{r}
+
+fun_facts <- tribble(
+  ~fun_facts,
+  "County of Mass Bay Colony",
+  "County of Plymouth Colony",
+  "Newest",
+  "Island",
+  "County of Mass Bay Colony",
+  "County of Plymouth Colony",
+  "Newest",
+  "Smith College",
+  "County of Mass Bay Colony",
+  "Newest",
+  "County of Plymouth Colony",
+  "Boarders Three States",
+  "Boarders Three States",
+  "Island"
+)
+
+ggplot() +
+  geom_sf(data = bind_cols(mass_med_income, fun_facts), aes(fill = fun_facts)) +
+ # geom_text(data = mass_pop, aes(x = lng, y = lat, label = County)) +
+  labs(fill = "",
+       title = "Massachusetts Med Income 2020 ",
+       #subtitle = "Median income in 2020 was $91,842",
+       subtitle = "Fun Facts about MA Counties",
+       caption = "source: https://en.wikipedia.org/wiki/List_of_counties_in_Massachusetts")+
+  scale_fill_brewer(palette = "Set2",na.value ="grey" )+
+  theme_classic()+
+  theme(axis.title.x=element_blank(),
+        axis.text.x=element_blank(),
+        axis.ticks.x=element_blank(),
+        axis.title.y=element_blank(),
+        axis.text.y=element_blank(),
+        axis.ticks.y=element_blank(),
+        axis.line = element_blank()
+        )
+```
+
+## How do we do this? 
+
+Categorical/discrete variable
+
+add `scale_*_brewer()` to your plot
+
+Numeric/continuous Variable
+
+add `scale_*_distiller()` to your plot
+
+# Common Pitfalls
+
+## Too many categories and Rainbows!
+
+This is the default option in R
+
+```{r}
+ggplot() +
+  geom_sf(data = bind_cols(mass_med_income, fun_facts), aes(fill = County )) +
+ # geom_text(data = mass_pop, aes(x = lng, y = lat, label = County)) +
+  labs(fill = "County Names",
+       title = "Counties in MA")+
+  theme_classic()+
+  theme(axis.title.x=element_blank(),
+        axis.text.x=element_blank(),
+        axis.ticks.x=element_blank(),
+        axis.title.y=element_blank(),
+        axis.text.y=element_blank(),
+        axis.ticks.y=element_blank(),
+        axis.line = element_blank()
+        )
+
+```
+
+
+## Themes
+
+
+
+

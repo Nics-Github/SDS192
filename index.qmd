@@ -484,7 +484,7 @@ h1{font-weight: 400;}
 <!-- We'll discuss ethics Monday or Wednesday, read chapter 8. -->
 <!-- ::: -->
 
-<!-- # Day 10 Color theory -->
+# Day 10 Color theory
 
 <!-- [ggplot cheatsheet](https://github.com/rstudio/cheatsheets/blob/main/data-visualization-2.1.pdf) -->
 
@@ -492,22 +492,22 @@ h1{font-weight: 400;}
 
 <!-- -   [Prof. Baumer's Color talk](https://beanumber.github.io/sds192/lectures/mdsr_viz_05-color.html) -->
 
-<!-- -   Color Brewer [site](https://colorbrewer2.org/#type=sequential&scheme=BuGn&n=3) -->
+-   [Color talk](course-materials/lectures/10_color_theory.qmd)
 
-<!-- -   [In class exercise](./course-materials/in-class-activies/5_color_theory.qmd) -->
+-   Color Brewer [site](https://colorbrewer2.org/#type=sequential&scheme=BuGn&n=3)
+
+-   [In class exercise](./course-materials/in-class-activies/colors_in_class_activity.qmd)
 
 <!-- ![Figure 2.26 from Modern Dive](https://moderndive.com/ModernDive_files/figure-html/flights-dodged-bar-color-tweak-1.png) -->
 
 <!-- See moodle for project 1 partners. -->
 
-<!-- ::: {.callout-note collapse="true"} -->
-<!-- ### Git Resources -->
+<!-- ::: {.callout-tip collapse="true"} -->
+<!-- ## Lab requirements -->
 
-<!-- -   [Github Fundamentals Lab 0](https://classroom.github.com/a/GG36O-3I) -->
+<!-- -   All labs must be rendered as a pdf or self-contained html. -->
 
-<!--     -   This lab is not due, it is only for reference. -->
-
-<!-- -   [Happy Git and the UseR](https://happygitwithr.com/) -->
+<!-- -   All code for labs must be satisfactorily commented. -->
 <!-- ::: -->
 
 <!-- # Day 9 Taxonomy part 2 -->
@@ -528,13 +528,7 @@ h1{font-weight: 400;}
 
 <!-- <!-- </iframe> --> 
 
-<!-- ::: {.callout-tip collapse="true"} -->
-<!-- ## Lab requirements -->
 
-<!-- -   All labs must be rendered as a pdf or self-contained html. -->
-
-<!-- -   All code for labs must be satisfactorily commented. -->
-<!-- ::: -->
 
 # Day 9 Lab 2
 
