@@ -596,6 +596,8 @@ Solutions will be posted later in the class.
 
 <!-- [Solutions](./course-materials/in-class-activies/SOLUTIONS_function_examples.qmd) -->
 
+
+
 # Day 5 Intro to Functions
 
  <!-- Students know how to store variables -->
