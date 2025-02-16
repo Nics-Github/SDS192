@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "SDS 192: Intro to Data Science",
     "section": "",
-    "text": "Schedule\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDay 6 Making Functions (cont.)\nDownload this function practice.\nSolutions will be posted later in the class.\n\n\n\nDay 5 Intro to Functions\n\n\nData Fest Info Session\nDatafest is April 4-6 at UMass\nCheck lab 1 is successfully submitted on git.\nIntro to functions via first_map.qmd (see maps folder in lab 1)\n\n\n\n\n\n\nLearning Goals\n\n\n\n\n\n\nPushing, commiting and pulling from git\n\nStudents Errors and warnings and comments\n\nStrings and Vectors\nLibraries, functions, arguments and parameters\nIntroduction to the pipe\nGetting data into R\n\n\n\n\nLecture: Intro to functions\nIf time: Anonymous functions\n\n\nDay 4 File Struture/ Final Project\nWhere are we going?\n\nFinal project Website\n\n\n\n\n\n\n\nLearning Goals\n\n\n\n\n\n\nUnderstand File Structure\n\nFiling system\n\n\n\n\n\n\n\nDay 3 R Ecosystem and More SQL\n\n\n\n\n\n\nThings I forgot from Monday\n\n\n\n\n\n\nSection 1 - about me\nSection 2 - variable types\n\n\n\n\n\nBrief History of R\n\n\n\n\n\n\n\nSQL practice\n\n\n\n\n\nsql-practice\n\nProblems 1-4 in pairs\nProblem 5 together\nProblems 6-9 in pairs\n\nTry without hints, then hints, finally solutions.\n\n\n\n\n\n\n\n\n\nIf time: Final project introduction!\n\n\n\n\n\n\nOpen Lab 1\n\n\n\n\n\n\nDay 2 Github Lab\n\nWhy do we do use git? Collaboration\n\n\n\n\n\n\ngit started with Version Control\n\n\n\n\n\n\nSign up for github here, if you don’t already have an account. We will very carefully link your github account to our github classroom account.\ngit vs github\nOptional Lab, to familiarize yourself with git: Github Fundamentals Lab 0\nHappy Git and the UseR is a helpful text.\n\n\n\n\nYou are only installing git today. There are other files, Ignore the other files until later\n\n\n\n\n\n\nSign into githubclassroom\n\n\n\n\n\nLink github account to github classroom - sign into github\n\nprereq -&gt; You need to have a github account\nClick here for lab 1. This is due in one week.\nvery carefully find your name in the roster and click it.\nyou should see todays lab in what is called a repository.\n\n\n\n\n\n\nDay 1 Welcome and SQL\n\n\n\n\n\n\nClassic First Day Stuff\n\n\n\n\n\n\nSyllabus\nLog into Slack\nWebsite tour\nBring Computers to Class\n\n\n\n\n\nMake some of our own class data\nOverview of Intro to Data Science\nIntro to SQL\n\n\nWalk to MCConnell 215 and 214\nMy office and group study room."
+    "text": "Schedule\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDay 9 Lab 2\nQuiz 1 is open. It is due in two Mondays.\n5 minutes about colors via the cheat sheet.\nThis lab is due Wednesday at Midnight.\nLab 2\n\n\n\n\n\n\nNote on colors\n\n\n\n\n\nWe will discuss colors on Monday when you get to them in ex 6:\nYou can reread this section if you forget what sequential,diverging,qualitative mean.\nOr check out the colors examples on the cheat sheet.\nIntuitive Color Examples\n\n\n\n\n\nDay 8 Taxonomy\n\n\n\n\n\n\nScreenshots Help\n\n\n\n\n\n\nThe six-fixes\n\nHelp us help you: take screenshots of your screen and post them to Slack.\n\nmacOS: Command+Shift+3 to take shot of whole screen, Command+Shift+4 to take subportion\nWindows: Shift-Windows Key-S and Snip & Sketch\nLinux: Print screen\nChromebook: Shift + Ctrl + Show windows\n\n\n\n\n\n\n\n\n\n\n\nMake a graph from class data\n\n\n\n\n\n\nlibrary(googlesheets4)\n\n#googlesheets4::gs4_auth()\n#googlesheets4::deauth()\n  \nclass_info &lt;- read_sheet(\"https://docs.google.com/spreadsheets/d/1k9qA7XldtHB8-FZjmEymoUoeZJArS4tGy5gyVsvyLB0/edit?usp=sharing\") |&gt;\n  janitor::clean_names()\n\n\n\n\n\nTaxonomy of graphs\nExploratory Data analysis and How R builds a graph.\n\nIf time:\n\nDiscussion: Taxonomy of Graphics\n\n\n\nDay 7 Intro to Data Viz\nReflect on the functions we made, taking note of style.\nNotes on Style\nData Viz No Computers\n\n\n\nDay 6 Making Functions (cont.)\nDownload this function practice.\nSolutions will be posted later in the class.\nSolutions\n\n\nDay 5 Intro to Functions\n\n\nData Fest Info Session\nDatafest is April 4-6 at UMass\nCheck lab 1 is successfully submitted on git.\nIntro to functions via first_map.qmd (see maps folder in lab 1)\n\n\n\n\n\n\nLearning Goals\n\n\n\n\n\n\nPushing, commiting and pulling from git\n\nStudents Errors and warnings and comments\n\nStrings and Vectors\nLibraries, functions, arguments and parameters\nIntroduction to the pipe\nGetting data into R\n\n\n\n\nLecture: Intro to functions\nIf time: Anonymous functions\n\n\nDay 4 File Struture/ Final Project\nWhere are we going?\n\nFinal project Website\n\n\n\n\n\n\n\nLearning Goals\n\n\n\n\n\n\nUnderstand File Structure\n\nFiling system\n\n\n\n\n\n\n\nDay 3 R Ecosystem and More SQL\n\n\n\n\n\n\nThings I forgot from Monday\n\n\n\n\n\n\nSection 1 - about me\nSection 2 - variable types\n\n\n\n\n\nBrief History of R\n\n\n\n\n\n\n\nSQL practice\n\n\n\n\n\nsql-practice\n\nProblems 1-4 in pairs\nProblem 5 together\nProblems 6-9 in pairs\n\nTry without hints, then hints, finally solutions.\n\n\n\n\n\n\n\n\n\nIf time: Final project introduction!\n\n\n\n\n\n\nOpen Lab 1\n\n\n\n\n\n\nDay 2 Github Lab\n\nWhy do we do use git? Collaboration\n\n\n\n\n\n\ngit started with Version Control\n\n\n\n\n\n\nSign up for github here, if you don’t already have an account. We will very carefully link your github account to our github classroom account.\ngit vs github\nOptional Lab, to familiarize yourself with git: Github Fundamentals Lab 0\nHappy Git and the UseR is a helpful text.\n\n\n\n\nYou are only installing git today. There are other files, Ignore the other files until later\n\n\n\n\n\n\nSign into githubclassroom\n\n\n\n\n\nLink github account to github classroom - sign into github\n\nprereq -&gt; You need to have a github account\nClick here for lab 1. This is due in one week.\nvery carefully find your name in the roster and click it.\nyou should see todays lab in what is called a repository.\n\n\n\n\n\n\nDay 1 Welcome and SQL\n\n\n\n\n\n\nClassic First Day Stuff\n\n\n\n\n\n\nSyllabus\nLog into Slack\nWebsite tour\nBring Computers to Class\n\n\n\n\n\nMake some of our own class data\nOverview of Intro to Data Science\nIntro to SQL\n\n\nWalk to MCConnell 215 and 214\nMy office and group study room."
   },
   {
     "objectID": "course-materials/syllabus/syllabus.html",
@@ -1292,7 +1292,7 @@
     "href": "course-materials/in-class-activies/SOLUTIONS_function_examples.html#problem-1.",
     "title": "More Function Practice",
     "section": "Problem 1.",
-    "text": "Problem 1.\nR is a vectorized language, and one thing that means is that you can easily add values from vectors element-wise.\nMake two vectors, each with 5 integers and save them as vector_1 and vector_2. Then make a function that will, add or subtract these vectors based on an argument called operation. Note that the answer also have five integers.\n\nvector_1 &lt;- c(1,2,3,4,5)\nvector_2 &lt;- c(2,2,2,2,2)\n\ncalculator &lt;- function(vec1, vec2, operation =\"add\") {\n  if (operation == \"add\"){\n    vec1 + vec2\n  }\n  else{\n    vector_1 - vector_2\n  }\n}\ncalculator(vector_1,vector_2)\n\n[1] 3 4 5 6 7"
+    "text": "Problem 1.\nR is a vectorized language, and one thing that means is that you can easily add values from vectors element-wise.\nMake two vectors, each with 5 integers and save them as vector_1 and vector_2. Then make a function that will, add or subtract these vectors based on an argument called operation. Note that the answer also have five integers.\n\nvector_1 &lt;- c(1,2,3,4,5)\nvector_2 &lt;- c(2,2,2,2,2)\n\ncalculator &lt;- function(vec1, vec2, operation =\"add\") {\n  if (operation == \"add\"){\n    vec1 + vec2\n  }\n  else{\n    vec1 - vec2\n  }\n}\ncalculator(vector_1,vector_2)\n\n[1] 3 4 5 6 7"
   },
   {
     "objectID": "course-materials/in-class-activies/SOLUTIONS_function_examples.html#problem-2.",
@@ -1306,14 +1306,14 @@
     "href": "course-materials/in-class-activies/SOLUTIONS_function_examples.html#problem-3",
     "title": "More Function Practice",
     "section": "Problem 3",
-    "text": "Problem 3\nMake a function that draws a map of every country where students in this class are from. Call it home_countries and have it take one argument, a vector of the names of countries students are from. You can access this vector with class_info$country after running the chunk below.\n\nclass_info &lt;- read_sheet(\"https://docs.google.com/spreadsheets/d/1k9qA7XldtHB8-FZjmEymoUoeZJArS4tGy5gyVsvyLB0/edit?usp=sharing\") |&gt;\n  janitor::clean_names()\n\n! Using an auto-discovered, cached token.\n\n\n  To suppress this message, modify your code or options to clearly consent to\n  the use of a cached token.\n\n\n  See gargle's \"Non-interactive auth\" vignette for more details:\n\n\n  &lt;https://gargle.r-lib.org/articles/non-interactive-auth.html&gt;\n\n\nℹ The googlesheets4 package is using a cached token for 'nschwab@smith.edu'.\n\n\n✔ Reading from \"Spring 2025  Questionnaire (Responses)\".\n\n\n✔ Range 'Form Responses 1'.\n\nhome_countries &lt;- function(country_vector = c()) {\n  map(regions = country_vector)\n}\n\nhome_countries(class_info$country)"
+    "text": "Problem 3\nMake a function that draws a map of every country where students in this class are from. Call it home_countries and have it take one argument, a vector of the names of countries students are from. You can access this vector with class_info$country after running the chunk below.\n\nclass_info &lt;- read_sheet(\"https://docs.google.com/spreadsheets/d/1k9qA7XldtHB8-FZjmEymoUoeZJArS4tGy5gyVsvyLB0/edit?usp=sharing\") |&gt;\n  janitor::clean_names()\nwrite.csv(class_info, \"class_info.csv\")\n\n\nclass_info &lt;- read.csv(\"class_info.csv\")\n\n\nhome_countries &lt;- function(country_vector = c()) {\n  map(regions = country_vector)\n}\n\nhome_countries(class_info$country)"
   },
   {
     "objectID": "course-materials/in-class-activies/SOLUTIONS_function_examples.html#problem-4",
     "href": "course-materials/in-class-activies/SOLUTIONS_function_examples.html#problem-4",
     "title": "More Function Practice",
     "section": "Problem 4",
-    "text": "Problem 4\nMake a function that draws a map of one student’s home country and colors it according to their computer OS (Mac or Windows). You should add a title stating the student’s name and their country. Your function should take one argument: the name of the student.\nWe will learn nicer tools for this, but for now use the subset() function to select a row of information for a student. Adding a [] bracket after the subset function will allow you to choose individual items from the data frame. (See examples below).\n\n# If you want the row based on a student use subset. This gives my row\nsubset(class_info, preferred_name == \"Nic\" )\n\n# A tibble: 1 × 14\n  timestamp           preferred_name pronouns computer height siblings \n  &lt;dttm&gt;              &lt;chr&gt;          &lt;chr&gt;    &lt;chr&gt;     &lt;dbl&gt; &lt;list&gt;   \n1 2025-01-27 09:37:18 Nic            He /Him  Linux      69.5 &lt;dbl [1]&gt;\n# ℹ 8 more variables: other_course &lt;chr&gt;, country &lt;chr&gt;, class_year &lt;dbl&gt;,\n#   major &lt;chr&gt;, required_for_major &lt;chr&gt;, previos_r_experiance &lt;chr&gt;,\n#   joke &lt;chr&gt;, one_or_two_word_january_highlight &lt;chr&gt;\n\n#If you want a particular column you can access it with bracket notation. This chooses my pronouns. \nsubset(class_info, preferred_name == \"Nic\" )[8]\n\n# A tibble: 1 × 1\n  country\n  &lt;chr&gt;  \n1 USA    \n\n\n\nhome_countries &lt;- function(students_name) {\n  # A function that dras a picture of a student's country based and colors it based on their computer type.   \n  student_region &lt;- subset(class_info, preferred_name == students_name )[8] # Set the variable\n  student_computer &lt;- subset(class_info, preferred_name == students_name )[4] # Set the region\n  \n  if(student_computer == \"Mac\"){\n    color=\"purple\"\n  } \n  else if(student_computer == \"Windows\"){\n    color = \"blue\"\n  }\n  else{\n    color = \"red\"\n  }\n  map(regions = student_region, fill = TRUE, col = color)\n  title(paste(students_name,\"'s country:\", student_region))\n}\n\nhome_countries(students_name = \"Nic\")"
+    "text": "Problem 4\nMake a function that draws a map of one student’s home country and colors it according to their computer OS (Mac or Windows). You should add a title stating the student’s name and their country. Your function should take one argument: the name of the student.\nWe will learn nicer tools for this, but for now use the subset() function to select a row of information for a student. Adding a [] bracket after the subset function will allow you to choose individual items from the data frame. (See examples below).\n\n# If you want the row based on a student use subset. This gives my row\nsubset(class_info, preferred_name == \"Nic\" )\n\n  X               timestamp preferred_name pronouns computer height siblings\n8 8 2025-01-27 09:37:18.685            Nic  He /Him    Linux   69.5        4\n                other_course country class_year        major required_for_major\n8 I have never taken SDS 291     USA       2027 Data Science                 No\n  previos_r_experiance joke one_or_two_word_january_highlight\n8       More than none &lt;NA&gt;                       Snow pretty\n\n#If you want a particular column you can access it with bracket notation. This chooses my pronouns. \nsubset(class_info, preferred_name == \"Nic\" )[9]\n\n  country\n8     USA\n\n\n\nhome_countries &lt;- function(students_name) {\n  # A function that dras a picture of a student's country based and colors it based on their computer type.   \n  student_region &lt;- subset(class_info, preferred_name == students_name )[9] # Set the variable\n  student_computer &lt;- subset(class_info, preferred_name == students_name )[4] # Set the region\n  \n  if(student_computer == \"Mac\"){\n    color=\"purple\"\n  } \n  else if(student_computer == \"Windows\"){\n    color = \"blue\"\n  }\n  else{\n    color = \"red\"\n  }\n  map(regions = student_region, fill = TRUE, col = color)\n  title(paste(students_name,\"'s country:\", student_region))\n}\n\nhome_countries(students_name = \"Nic\")"
   },
   {
     "objectID": "course-materials/in-class-activies/SOLUTIONS_function_examples.html#bonus-rainbows",
@@ -1334,7 +1334,7 @@
     "href": "course-materials/in-class-activies/function_examples.html",
     "title": "More Function Practice",
     "section": "",
-    "text": "Here are four problems for you to try. Don’t overly complicate your functions.\n#Load maps and googlesheets4 and janitor as those are the packages we'll use. \nlibrary(maps)\nlibrary(googlesheets4)\nlibrary(janitor)\n\n\nAttaching package: 'janitor'\n\n\nThe following objects are masked from 'package:stats':\n\n    chisq.test, fisher.test"
+    "text": "Here are four problems for you to try. Don’t overly complicate your functions.\n#Load maps and googlesheets4 and janitor as those are the packages we'll use. \nlibrary(maps)\nlibrary(googlesheets4)\nlibrary(janitor)"
   },
   {
     "objectID": "course-materials/in-class-activies/function_examples.html#problem-1.",
@@ -1355,14 +1355,14 @@
     "href": "course-materials/in-class-activies/function_examples.html#problem-3",
     "title": "More Function Practice",
     "section": "Problem 3",
-    "text": "Problem 3\nMake a function that draws a map of every country where students in this class are from. Call it home_countries and have it take one argument, a vector of the names of countries students are from. You can access this vector with class_info$country after running the chunk below.\n\nclass_info &lt;- read_sheet(\"https://docs.google.com/spreadsheets/d/1k9qA7XldtHB8-FZjmEymoUoeZJArS4tGy5gyVsvyLB0/edit?usp=sharing\") |&gt;\n  janitor::clean_names()\n\n! Using an auto-discovered, cached token.\n\n\n  To suppress this message, modify your code or options to clearly consent to\n  the use of a cached token.\n\n\n  See gargle's \"Non-interactive auth\" vignette for more details:\n\n\n  &lt;https://gargle.r-lib.org/articles/non-interactive-auth.html&gt;\n\n\nℹ The googlesheets4 package is using a cached token for 'nschwab@smith.edu'.\n\n\nAuto-refreshing stale OAuth token.\n\n\n✔ Reading from \"Spring 2025  Questionnaire (Responses)\".\n\n\n✔ Range 'Form Responses 1'."
+    "text": "Problem 3\nMake a function that draws a map of every country where students in this class are from. Call it home_countries and have it take one argument, a vector of the names of countries students are from. You can access this vector with class_info$country after running the chunk below.\n\nclass_info &lt;- read_sheet(\"https://docs.google.com/spreadsheets/d/1k9qA7XldtHB8-FZjmEymoUoeZJArS4tGy5gyVsvyLB0/edit?usp=sharing\") |&gt;\n  janitor::clean_names()\n\n! Using an auto-discovered, cached token.\n\n\n  To suppress this message, modify your code or options to clearly consent to\n  the use of a cached token.\n\n\n  See gargle's \"Non-interactive auth\" vignette for more details:\n\n\n  &lt;https://gargle.r-lib.org/articles/non-interactive-auth.html&gt;\n\n\nℹ The googlesheets4 package is using a cached token for 'nschwab@smith.edu'.\n\n\n✔ Reading from \"Spring 2025  Questionnaire (Responses)\".\n\n\n✔ Range 'Form Responses 1'."
   },
   {
     "objectID": "course-materials/in-class-activies/function_examples.html#problem-4",
     "href": "course-materials/in-class-activies/function_examples.html#problem-4",
     "title": "More Function Practice",
     "section": "Problem 4",
-    "text": "Problem 4\nMake a function that draws a map of one student’s home country and colors it according to their computer OS (Mac or Windows). You should add a title stating the student’s name and their country. Your function should take one argument: the name of the student.\nWe will learn nicer tools for this, but for now use the subset() function to select a row of information for a student. Adding a [] bracket after the subset function will allow you to choose individual items from the data frame. (See examples below).\n\n# If you want the row based on a student use subset. This gives my row\nsubset(class_info, preferred_name == \"Nic\" )\n\n# A tibble: 1 × 14\n  timestamp           preferred_name pronouns computer height siblings \n  &lt;dttm&gt;              &lt;chr&gt;          &lt;chr&gt;    &lt;chr&gt;     &lt;dbl&gt; &lt;list&gt;   \n1 2025-01-27 09:37:18 Nic            He /Him  Linux      69.5 &lt;dbl [1]&gt;\n# ℹ 8 more variables: other_course &lt;chr&gt;, country &lt;chr&gt;, class_year &lt;dbl&gt;,\n#   major &lt;chr&gt;, required_for_major &lt;chr&gt;, previos_r_experiance &lt;chr&gt;,\n#   joke &lt;chr&gt;, one_or_two_word_january_highlight &lt;chr&gt;\n\n#If you want a particular column you can access it with bracket notation. This chooses my pronouns. \nsubset(class_info, preferred_name == \"Nic\" )[3]\n\n# A tibble: 1 × 1\n  pronouns\n  &lt;chr&gt;   \n1 He /Him"
+    "text": "Problem 4\nMake a function that draws a map of one student’s home country and colors it according to their computer OS (Mac or Windows). You should add a title stating the student’s name and their country. Your function should take one argument: the name of the student.\nWe will learn nicer tools for this, but for now use the subset() function to select a row of information for a student. Adding a [] bracket after the subset function will allow you to choose individual items from the data frame. (See examples below).\n\n# If you want the row based on a student use subset. This gives my row\nsubset(class_info, preferred_name == \"Nic\" )\n\n# A tibble: 1 × 14\n  timestamp           preferred_name pronouns computer height siblings\n  &lt;dttm&gt;              &lt;chr&gt;          &lt;chr&gt;    &lt;chr&gt;     &lt;dbl&gt;    &lt;dbl&gt;\n1 2025-01-27 09:37:18 Nic            He /Him  Linux      69.5        4\n# ℹ 8 more variables: other_course &lt;chr&gt;, country &lt;chr&gt;, class_year &lt;dbl&gt;,\n#   major &lt;chr&gt;, required_for_major &lt;chr&gt;, previos_r_experiance &lt;chr&gt;,\n#   joke &lt;chr&gt;, one_or_two_word_january_highlight &lt;chr&gt;\n\n#If you want a particular column you can access it with bracket notation. This chooses my pronouns. \nsubset(class_info, preferred_name == \"Nic\" )[3]\n\n# A tibble: 1 × 1\n  pronouns\n  &lt;chr&gt;   \n1 He /Him"
   },
   {
     "objectID": "course-materials/in-class-activies/function_examples.html#bonus-rainbows",
@@ -1377,5 +1377,145 @@
     "title": "More Function Practice",
     "section": "Bonus 2:",
     "text": "Bonus 2:\nIf you already have a some programming experience I encourage you to take a look at the anonymous_function.qmd. In it you will see examples of other ways in which you can write functions in R. (Think lambda functions) We wont have too much time to get into these this semester, but they can simplify your programming."
+  },
+  {
+    "objectID": "course-materials/in-class-activies/function_examples.html#anonymous-functions",
+    "href": "course-materials/in-class-activies/function_examples.html#anonymous-functions",
+    "title": "More Function Practice",
+    "section": "Anonymous Functions:",
+    "text": "Anonymous Functions:\nIf you already have a some programming experience or you just finished the four problems above, take a look at the anonymous_function.qmd. In it you will see examples of other ways in which you can write functions in R. (Think lambda functions) We wont have too much time to get into these this semester, but they can simplify your programming."
+  },
+  {
+    "objectID": "course-materials/in-class-activies/function_examples.html#problem-5",
+    "href": "course-materials/in-class-activies/function_examples.html#problem-5",
+    "title": "More Function Practice",
+    "section": "Problem 5:",
+    "text": "Problem 5:\nAfter looking over anonymous functions. Try the following: Without using the mean() function, make an anonymous function the calculates the mean of a vector. You may want to consider sum() and length(). After you do this find the mean height of students."
+  },
+  {
+    "objectID": "course-materials/in-class-activies/function_examples.html#problem-6",
+    "href": "course-materials/in-class-activies/function_examples.html#problem-6",
+    "title": "More Function Practice",
+    "section": "Problem 6:",
+    "text": "Problem 6:\nThere is no built in mode function for R. The mode is the most common value from a vector. If your vector was c(2,1,1,1) then 1 would be the mode. Make a mode function and use it to find the most common number of siblings a student has. You may want to consider the discussion here. You can also do this with the count() function from the dplyr, like this dplyr::count() here."
+  },
+  {
+    "objectID": "course-materials/in-class-activies/SOLUTIONS_function_examples.html#anonymous-functions",
+    "href": "course-materials/in-class-activies/SOLUTIONS_function_examples.html#anonymous-functions",
+    "title": "More Function Practice",
+    "section": "Anonymous Functions:",
+    "text": "Anonymous Functions:\nIf you already have a some programming experience or you just finished the four problems above, take a look at the anonymous_function.qmd. In it you will see examples of other ways in which you can write functions in R. (Think lambda functions) We wont have too much time to get into these this semester, but they can simplify your programming."
+  },
+  {
+    "objectID": "course-materials/in-class-activies/SOLUTIONS_function_examples.html#problem-5",
+    "href": "course-materials/in-class-activies/SOLUTIONS_function_examples.html#problem-5",
+    "title": "More Function Practice",
+    "section": "Problem 5:",
+    "text": "Problem 5:\nAfter looking over anonymous functions. Try the following: Without using the mean() function, make an anonymous function the calculates the mean of a vector. You may want to consider sum() and length(). Be sure to remove the NAs with the subset() function. Then give you function a name, and use it to find the mean height of students. (We often use anonymous functions with other functions like purrr::map() but we wont get into that yet).\n\n# The follow code removes all rows with missing heights\nstudent_heights &lt;- subset(class_info,  !is.na(height))$height \n\n# The mean is calculated as the sum of the values divided by the length of the values\nmean_func &lt;- function(vec) sum(vec)/length(vec)\n\n#Using the heights\nmean_func(student_heights)\n\n[1] 66.43281"
+  },
+  {
+    "objectID": "course-materials/in-class-activies/SOLUTIONS_function_examples.html#problem-6",
+    "href": "course-materials/in-class-activies/SOLUTIONS_function_examples.html#problem-6",
+    "title": "More Function Practice",
+    "section": "Problem 6:",
+    "text": "Problem 6:\nThere is no built in mode function for R. The mode is the most common value from a vector. If your vector was c(2,1,1,1) then 1 would be the mode. Make a mode function and use it to find the most common number of siblings a student has. You may want to consider the discussion here. You can also do this with the count() function from the dplyr, like this dplyr::count() here.\n\n# To calculate the mode from a vector. \n\nmode_vector &lt;- function(vec) {\n  # This breaks the vector into counts and stores it as a table. \n  count_of_vec &lt;- table(vec)\n  # I am more comfortable with data frames than tables, so I changed count_of_vec to a df. \n  count_of_vec &lt;- as.data.frame(count_of_vec)\n  #To subset I need the maximum from the frequencies\n  max_freq &lt;- max(count_of_vec$Freq)\n  \n  # Prints the answer\n  print(\"The mode is,\") \n  subset(count_of_vec, Freq == max_freq)[1,1]\n}\n\nstudent_siblings &lt;- class_info$siblings\nmode_vector(student_siblings)\n\n[1] \"The mode is,\"\n\n\n[1] 1\nLevels: 0 1 2 3 4 5 6 7 8 9"
+  },
+  {
+    "objectID": "course-materials/lectures/1first-day-survey/Data-Viz-No-Computers.html#part-1-hand-drawn-graphs-of-survey-questions.",
+    "href": "course-materials/lectures/1first-day-survey/Data-Viz-No-Computers.html#part-1-hand-drawn-graphs-of-survey-questions.",
+    "title": "No Computers Data Viz",
+    "section": "Part 1: Hand drawn graphs of survey questions.",
+    "text": "Part 1: Hand drawn graphs of survey questions.\nDraw a graph of a variable. Do not write your name.\n\nIt does not need to be perfect.\nTry to make it correct.\n\nIt is fine if its not correct."
+  },
+  {
+    "objectID": "course-materials/lectures/5_notes_on_style.html",
+    "href": "course-materials/lectures/5_notes_on_style.html",
+    "title": "Notes on Style",
+    "section": "",
+    "text": "Tidyverse style guide"
+  },
+  {
+    "objectID": "course-materials/lectures/5_notes_on_style.html#the-tidyverse-style-guide",
+    "href": "course-materials/lectures/5_notes_on_style.html#the-tidyverse-style-guide",
+    "title": "Notes on Style",
+    "section": "The Tidyverse Style Guide",
+    "text": "The Tidyverse Style Guide\nTidyverse style guide"
+  },
+  {
+    "objectID": "course-materials/lectures/5_notes_on_style.html#files",
+    "href": "course-materials/lectures/5_notes_on_style.html#files",
+    "title": "Notes on Style",
+    "section": "1. files",
+    "text": "1. files\nI will use underscores _, not spaces to name your files. You can also use -\n\nAvoid special symbols.\nCalled snake case.\n\ngood name\nmy_file.qmd\npoor name\nmy file!.qmd"
+  },
+  {
+    "objectID": "course-materials/lectures/5_notes_on_style.html#syntax",
+    "href": "course-materials/lectures/5_notes_on_style.html#syntax",
+    "title": "Notes on Style",
+    "section": "2. Syntax",
+    "text": "2. Syntax\nsyntax is how the code looks\n\nvariables should be in snake case and lower case\nvariables should be nouns\nfunctions should be verbs\nnames should be meaningful and concise.\nDon’t reuse built in R names (True, False, c, n)\n\n\n# good\nfirst_name &lt;- \"Nic\"\n\n# nmean is a built in function and should not be overwritten\nmean &lt;- \"Schwab\""
+  },
+  {
+    "objectID": "course-materials/lectures/5_notes_on_style.html#more-syntax",
+    "href": "course-materials/lectures/5_notes_on_style.html#more-syntax",
+    "title": "Notes on Style",
+    "section": "2.5 More Syntax",
+    "text": "2.5 More Syntax\nConsider spacing and commas like in English writing.\nMore space for readability is ok. Don’t over do it.\n\n# good\nx &lt;- 1\ny &lt;- 2\ntotal &lt;- sum(c(x, y))\n  \n# Not as good\nnew_total&lt;-x+y-total \n\n# Maybe too much space\nsum( c( x , y , total ) )\n\n[1] 6"
+  },
+  {
+    "objectID": "course-materials/lectures/5_notes_on_style.html#functions",
+    "href": "course-materials/lectures/5_notes_on_style.html#functions",
+    "title": "Notes on Style",
+    "section": "Functions",
+    "text": "Functions\nIndent long lines (R does this automatically)\nWe don’t need return, R automatically returns the last line.\n\nadd &lt;- function(a = \"first number\",\n                b = \"second number\",\n                c = \"third number\") {\n  a + b + c\n  # As usual code is indented by two spaces.\n}"
+  },
+  {
+    "objectID": "course-materials/lectures/5_notes_on_style.html#pipes-and-plus",
+    "href": "course-materials/lectures/5_notes_on_style.html#pipes-and-plus",
+    "title": "Notes on Style",
+    "section": "Pipes and plus",
+    "text": "Pipes and plus\nIn general |&gt; and + should end lines.\nWe will discuss these operators more later."
+  },
+  {
+    "objectID": "course-materials/in-class-activies/3Activity_Taxonomy_of_Graphics.html",
+    "href": "course-materials/in-class-activies/3Activity_Taxonomy_of_Graphics.html",
+    "title": "Discussion: Taxonomy of Graphics",
+    "section": "",
+    "text": "Use the vocabulary from the taxonomy of data graphics.\n\nvisual cues\ncoordinate system\nscales\ncontext\nWhat is the graph showing?"
+  },
+  {
+    "objectID": "course-materials/in-class-activies/3Activity_Taxonomy_of_Graphics.html#discuss-the-following",
+    "href": "course-materials/in-class-activies/3Activity_Taxonomy_of_Graphics.html#discuss-the-following",
+    "title": "Discussion: Taxonomy of Graphics",
+    "section": "",
+    "text": "Use the vocabulary from the taxonomy of data graphics.\n\nvisual cues\ncoordinate system\nscales\ncontext\nWhat is the graph showing?"
+  },
+  {
+    "objectID": "course-materials/in-class-activies/3Activity_Taxonomy_of_Graphics.html#ny-times-graphs",
+    "href": "course-materials/in-class-activies/3Activity_Taxonomy_of_Graphics.html#ny-times-graphs",
+    "title": "Discussion: Taxonomy of Graphics",
+    "section": "NY Times Graphs:",
+    "text": "NY Times Graphs:\n\nSerena Williams\nEndangered Biodiversity"
+  },
+  {
+    "objectID": "course-materials/in-class-activies/3Activity_Taxonomy_of_Graphics.html#yougov",
+    "href": "course-materials/in-class-activies/3Activity_Taxonomy_of_Graphics.html#yougov",
+    "title": "Discussion: Taxonomy of Graphics",
+    "section": "Yougov:",
+    "text": "Yougov:\n\nIce Cream (Just the first graph, there is a lot here)."
+  },
+  {
+    "objectID": "course-materials/in-class-activies/3Activity_Taxonomy_of_Graphics.html#from-five-thirty-eight",
+    "href": "course-materials/in-class-activies/3Activity_Taxonomy_of_Graphics.html#from-five-thirty-eight",
+    "title": "Discussion: Taxonomy of Graphics",
+    "section": "From Five Thirty Eight:",
+    "text": "From Five Thirty Eight:\nPresident Biden’s Approval Rating"
+  },
+  {
+    "objectID": "course-materials/in-class-activies/3Activity_Taxonomy_of_Graphics.html#sources",
+    "href": "course-materials/in-class-activies/3Activity_Taxonomy_of_Graphics.html#sources",
+    "title": "Discussion: Taxonomy of Graphics",
+    "section": "Sources",
+    "text": "Sources\nThe last graph was grabbed from The Washington Post"
   }
 ]

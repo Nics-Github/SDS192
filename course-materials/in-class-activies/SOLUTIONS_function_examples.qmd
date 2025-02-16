@@ -28,7 +28,7 @@ calculator <- function(vec1, vec2, operation ="add") {
     vec1 + vec2
   }
   else{
-    vector_1 - vector_2
+    vec1 - vec2
   }
 }
 calculator(vector_1,vector_2)
@@ -60,9 +60,19 @@ fix_me()
 Make a function that draws a map of every country where students in this class are from. Call it home_countries and have it take one argument, a vector of the names of countries students are from. You can access this vector with class_info$country after running the chunk below.
 
 ```{r}
+#| eval: false
 class_info <- read_sheet("https://docs.google.com/spreadsheets/d/1k9qA7XldtHB8-FZjmEymoUoeZJArS4tGy5gyVsvyLB0/edit?usp=sharing") |>
   janitor::clean_names()
+write.csv(class_info, "class_info.csv")
+```
 
+```{r}
+class_info <- read.csv("class_info.csv")
+
+```
+
+
+```{r}
 home_countries <- function(country_vector = c()) {
   map(regions = country_vector)
 }
@@ -81,14 +91,14 @@ We will learn nicer tools for this, but for now use the `subset()` function to s
 subset(class_info, preferred_name == "Nic" )
 
 #If you want a particular column you can access it with bracket notation. This chooses my pronouns. 
-subset(class_info, preferred_name == "Nic" )[8]
+subset(class_info, preferred_name == "Nic" )[9]
 ```
 
 ```{r}
 
 home_countries <- function(students_name) {
   # A function that dras a picture of a student's country based and colors it based on their computer type.   
-  student_region <- subset(class_info, preferred_name == students_name )[8] # Set the variable
+  student_region <- subset(class_info, preferred_name == students_name )[9] # Set the variable
   student_computer <- subset(class_info, preferred_name == students_name )[4] # Set the region
   
   if(student_computer == "Mac"){
@@ -114,6 +124,52 @@ home_countries(students_name = "Nic")
 
 Keeping track of parenthesis while making functions is difficult some times. R has an option where you can make parenthesis rainbow colored. To turn it on go Tools \> Global Options \> Code \> Display and select the checkbox near the bottom.
 
-## Bonus 2:
+## Anonymous Functions:
 
-If you already have a some programming experience I encourage you to take a look at the anonymous_function.qmd. In it you will see examples of other ways in which you can write functions in R. (Think lambda functions) We wont have too much time to get into these this semester, but they can simplify your programming.
+If you already have a some programming experience or you just finished the four problems above, take a look at the [anonymous_function.qmd](../lectures/30_anonymous_functions.qmd). In it you will see examples of other ways in which you can write functions in R. (Think lambda functions) We wont have too much time to get into these this semester, but they can simplify your programming.
+
+## Problem 5: 
+
+After looking over [anonymous functions](../lectures/30_anonymous_functions.qmd). Try the following: 
+Without using the `mean()` function, make an anonymous function the calculates the mean of a vector. You may want to consider `sum()` and `length()`. Be sure to remove the NAs with the `subset()` function. Then give you function a name, and use it to find the mean height of students. (We often use anonymous functions with other functions like `purrr::map()` but we wont get into that yet). 
+
+```{r}
+# The follow code removes all rows with missing heights
+student_heights <- subset(class_info,  !is.na(height))$height 
+
+# The mean is calculated as the sum of the values divided by the length of the values
+mean_func <- function(vec) sum(vec)/length(vec)
+
+#Using the heights
+mean_func(student_heights)
+```
+
+
+## Problem 6: 
+
+There is no built in mode function for R. The mode is the most common value from a vector. If your vector was `c(2,1,1,1)` then 1 would be the mode. Make a mode function and use it to find the most common number of siblings a student has. You may want to consider the [discussion here](https://stackoverflow.com/questions/1923273/counting-the-number-of-elements-with-the-values-of-x-in-a-vector). You can also do this with the `count()` function from the dplyr, like this dplyr::count() [here](https://dplyr.tidyverse.org/reference/count.html). 
+
+```{r}
+# To calculate the mode from a vector. 
+
+mode_vector <- function(vec) {
+  # This breaks the vector into counts and stores it as a table. 
+  count_of_vec <- table(vec)
+  # I am more comfortable with data frames than tables, so I changed count_of_vec to a df. 
+  count_of_vec <- as.data.frame(count_of_vec)
+  #To subset I need the maximum from the frequencies
+  max_freq <- max(count_of_vec$Freq)
+  
+  # Prints the answer
+  print("The mode is,") 
+  subset(count_of_vec, Freq == max_freq)[1,1]
+}
+
+student_siblings <- class_info$siblings
+mode_vector(student_siblings)
+
+
+
+```
+
+

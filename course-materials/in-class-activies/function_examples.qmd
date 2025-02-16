@@ -6,6 +6,7 @@ author: "Schwab"
 Here are four problems for you to try. Don't overly complicate your functions.
 
 ```{r}
+#| warning: false
 #Load maps and googlesheets4 and janitor as those are the packages we'll use. 
 library(maps)
 library(googlesheets4)
@@ -66,6 +67,15 @@ subset(class_info, preferred_name == "Nic" )[3]
 
 Keeping track of parenthesis while making functions is difficult some times. R has an option where you can make parenthesis rainbow colored. To turn it on go Tools \> Global Options \> Code \> Display and select the checkbox near the bottom.
 
-## Bonus 2:
+## Anonymous Functions:
 
-If you already have a some programming experience I encourage you to take a look at the anonymous_function.qmd. In it you will see examples of other ways in which you can write functions in R. (Think lambda functions) We wont have too much time to get into these this semester, but they can simplify your programming.
+If you already have a some programming experience or you just finished the four problems above, take a look at the [anonymous_function.qmd](../lectures/30_anonymous_functions.qmd). In it you will see examples of other ways in which you can write functions in R. (Think lambda functions) We wont have too much time to get into these this semester, but they can simplify your programming.
+
+## Problem 5: 
+
+After looking over [anonymous functions](../lectures/30_anonymous_functions.qmd). Try the following: 
+Without using the `mean()` function, make an anonymous function the calculates the mean of a vector. You may want to consider `sum()` and `length()`. After you do this find the mean height of students. 
+
+## Problem 6: 
+
+There is no built in mode function for R. The mode is the most common value from a vector. If your vector was `c(2,1,1,1)` then 1 would be the mode. Make a mode function and use it to find the most common number of siblings a student has. You may want to consider the [discussion here](https://stackoverflow.com/questions/1923273/counting-the-number-of-elements-with-the-values-of-x-in-a-vector). You can also do this with the `count()` function from the dplyr, like this dplyr::count() [here](https://dplyr.tidyverse.org/reference/count.html). 

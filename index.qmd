@@ -61,7 +61,7 @@ h1{font-weight: 400;}
 <!-- https://docs.google.com/spreadsheets/d/1j1Mub7lb1CJKpG-PySzdbzzgvryVQ3XrlvNgPRUcN0I/edit?usp=sharing -->
 
 ```{=html}
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTG_b6upDZcPxXB92LHYIhV1uAXgeVGaMsZ3sDRPuSQN74JdhkKhZQVjw6T68I3zsP8KGYzDSVTZW64/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false&amp;gid=0&amp;range=A1:E6" width="100%" height="300">
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTG_b6upDZcPxXB92LHYIhV1uAXgeVGaMsZ3sDRPuSQN74JdhkKhZQVjw6T68I3zsP8KGYzDSVTZW64/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false&amp;gid=0&amp;range=A1:E15" width="100%" height="300">
 </iframe>
 ```
 
@@ -536,51 +536,80 @@ h1{font-weight: 400;}
 <!-- -   All code for labs must be satisfactorily commented. -->
 <!-- ::: -->
 
-<!-- # Day 8 Lab 2 -->
+# Day 9 Lab 2
 
-<!-- <!-- Note to self, update the format of lab 2 --> 
+Quiz 1 is open. It is due in two Mondays. 
 
-<!-- Change the format of lab 2 -->
+5 minutes about colors via the [cheat sheet](https://posit.co/wp-content/uploads/2022/10/data-visualization-1.pdf).
 
-<!-- This lab is due Wednesday at Midnight. -->
+This lab is due Wednesday at Midnight.
 
-<!-- [Lab 2](https://classroom.github.com/a/CLF1ck4I) -->
+[Lab 2](https://classroom.github.com/a/KcegUyPW)
 
-<!-- # Day 7 Taxonomy -->
+::: {.callout-note collapse="true"}
+## Note on colors
 
-<!-- [Kaelen Medeiros Healthech](presentation.pdf) -->
+We will discuss colors on Monday when you get to them in ex 6:
 
-<!-- ::: {.callout-tip collapse="true"} -->
-<!-- ## Screenshots Help -->
+You can reread [this section](https://mdsr-book.github.io/mdsr3e/02-datavizI.html#sec-color) if you forget what sequential,diverging,qualitative mean. 
 
-<!-- -   [The six-fixes](https://docs.google.com/document/d/1P7IyZ4On9OlrCOhygFxjC7XhQqyw8OludwChz-uFd_o/edit) -->
+Or check out the colors examples on the [cheat sheet](https://posit.co/wp-content/uploads/2022/10/data-visualization-1.pdf). 
 
-<!-- Help us help you: take screenshots of your screen and post them to Slack. -->
+Intuitive [Color Examples](https://jhudatascience.org/tidyversecourse/dataviz.html#colors)
 
-<!-- -   macOS: Command+Shift+3 to take shot of whole screen, Command+Shift+4 to take subportion -->
+:::
 
-<!-- -   Windows: Shift-Windows Key-S and Snip & Sketch -->
+# Day 8 Taxonomy
 
-<!-- -   Linux: Print screen -->
+::: {.callout-tip collapse="true"}
+## Screenshots Help
 
-<!-- -   Chromebook: Shift + Ctrl + Show windows -->
-<!-- ::: -->
+-   [The six-fixes](https://docs.google.com/document/d/1P7IyZ4On9OlrCOhygFxjC7XhQqyw8OludwChz-uFd_o/edit)
+
+Help us help you: take screenshots of your screen and post them to Slack.
+
+-   macOS: Command+Shift+3 to take shot of whole screen, Command+Shift+4 to take subportion
+
+-   Windows: Shift-Windows Key-S and Snip & Sketch
+
+-   Linux: Print screen
+
+-   Chromebook: Shift + Ctrl + Show windows
+:::
 
 <!-- ### Lecture -->
 
-<!-- -   [Taxonomy of graphs](course-materials/lectures/2_mdsr_viz_1_taxonomy.qmd) -->
+::: {.callout-tip collapse="true"}
+## Make a graph from class data
 
-<!-- -   Demo: How R builds a graph. -->
+```{r}
+#| eval: false
+library(googlesheets4)
 
-<!-- -   [Discussion: Taxonomy of Graphics](./course-materials/in-class-activies/3Activity_Taxonomy_of_Graphics.qmd) -->
+#googlesheets4::gs4_auth()
+#googlesheets4::deauth()
+  
+class_info <- read_sheet("https://docs.google.com/spreadsheets/d/1k9qA7XldtHB8-FZjmEymoUoeZJArS4tGy5gyVsvyLB0/edit?usp=sharing") |>
+  janitor::clean_names()
+```
+:::
 
-<!-- Working directory problems with scatterplots -->
+-   [Taxonomy of graphs](course-materials/lectures/2_mdsr_viz_1_taxonomy.qmd)
 
-<!-- # Day 6 Intro to Data Viz -->
+-   Exploratory Data analysis and How R builds a graph.
 
-<!-- [Data Viz No Computers](./course-materials/lectures/1first-day-survey/Data-Viz-No-Computers.qmd) -->
+If time: 
 
-<!-- [Notes on Style](course-materials/lectures/5_notes_on_style.qmd) -->
+-   [Discussion: Taxonomy of Graphics](./course-materials/in-class-activies/3Activity_Taxonomy_of_Graphics.qmd)
+
+
+# Day 7 Intro to Data Viz
+
+Reflect on the functions [we made](./course-materials/in-class-activies/SOLUTIONS_function_examples.qmd), taking note of style.
+
+[Notes on Style](course-materials/lectures/5_notes_on_style.qmd)
+
+[Data Viz No Computers](./course-materials/lectures/1first-day-survey/Data-Viz-No-Computers.qmd)
 
 <!-- Cleaning up documents happens in sds100 [lab 8](https://smithcollege-sds.github.io/sds100/lab_08_formatting.html)
 
@@ -588,19 +617,25 @@ h1{font-weight: 400;}
 
 -   [Spinelli Center](https://www.smith.edu/academics/applied-learning-research/spinelli-center-quantitative-learning#PanelDataCnslr) -->
 
+
+
+
 # Day 6 Making Functions (cont.)
 
-[Download this function practice](https://github.com/Nics-Github/SDS192/blob/0662a3c95e52e9064ebf422030658bc7e286cca6/course-materials/in-class-activies/function_examples.qmd). 
+[Download this function practice](https://github.com/Nics-Github/SDS192/blob/a9f20aec96c663da36227874d9649762b04db983/course-materials/in-class-activies/function_examples.qmd). 
 
 Solutions will be posted later in the class. 
 
-<!-- [Solutions](./course-materials/in-class-activies/SOLUTIONS_function_examples.qmd) -->
+[Solutions](./course-materials/in-class-activies/SOLUTIONS_function_examples.qmd)
+
+
+
 
 
 
 # Day 5 Intro to Functions
 
- <!-- Students know how to store variables -->
+<!-- Students know how to store variables -->
 
 
 <!-- - Students know about functions and arguments -->

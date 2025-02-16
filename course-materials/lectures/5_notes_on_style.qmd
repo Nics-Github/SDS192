@@ -15,7 +15,7 @@ editor: visual
 
 [Tidyverse style guide](https://style.tidyverse.org/index.html)
 
-## 1. files 
+## 1. files
 
 I will use underscores `_`, not spaces to name your files. You can also use `-`
 
@@ -31,7 +31,7 @@ I will use underscores `_`, not spaces to name your files. You can also use `-`
 
 `my file!.qmd`
 
-## 2. Syntax 
+## 2. Syntax
 
 syntax is how the code looks
 
@@ -49,15 +49,15 @@ syntax is how the code looks
 # good
 first_name <- "Nic"
 
-# not so good
-LASTNAME <- "Schwab"
+# nmean is a built in function and should not be overwritten
+mean <- "Schwab"
 ```
 
 ## 2.5 More Syntax
 
-Consider spacing and commas like in english writing.
+Consider spacing and commas like in English writing.
 
-More space for reability is ok. Don't over do it.
+More space for readability is ok. Don't over do it.
 
 ```{r}
 # good
@@ -68,7 +68,7 @@ total <- sum(c(x, y))
 # Not as good
 new_total<-x+y-total 
 
-# Maybe ok
+# Maybe too much space
 sum( c( x , y , total ) )
 
 ```
