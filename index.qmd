@@ -61,7 +61,7 @@ h1{font-weight: 400;}
 <!-- https://docs.google.com/spreadsheets/d/1j1Mub7lb1CJKpG-PySzdbzzgvryVQ3XrlvNgPRUcN0I/edit?usp=sharing -->
 
 ```{=html}
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTG_b6upDZcPxXB92LHYIhV1uAXgeVGaMsZ3sDRPuSQN74JdhkKhZQVjw6T68I3zsP8KGYzDSVTZW64/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false&amp;gid=0&amp;range=A1:E15" width="100%" height="300">
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTG_b6upDZcPxXB92LHYIhV1uAXgeVGaMsZ3sDRPuSQN74JdhkKhZQVjw6T68I3zsP8KGYzDSVTZW64/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false&amp;gid=0&amp;range=A1:E18" width="100%" height="300">
 </iframe>
 ```
 
@@ -498,17 +498,18 @@ h1{font-weight: 400;}
 
 -   [In class exercise](./course-materials/in-class-activies/colors_in_class_activity.qmd)
 
-<!-- ![Figure 2.26 from Modern Dive](https://moderndive.com/ModernDive_files/figure-html/flights-dodged-bar-color-tweak-1.png) -->
+![Figure 2.26 from Modern Dive](https://moderndive.com/ModernDive_files/figure-html/flights-dodged-bar-color-tweak-1.png)
+
+Some time to finish up lab 2.
 
 <!-- See moodle for project 1 partners. -->
 
-<!-- ::: {.callout-tip collapse="true"} -->
-<!-- ## Lab requirements -->
+::: {.callout-tip collapse="true"}
+## Lab requirements
 
-<!-- -   All labs must be rendered as a pdf or self-contained html. -->
+-   All labs must be rendered as a pdf or self-contained html.
 
-<!-- -   All code for labs must be satisfactorily commented. -->
-<!-- ::: -->
+:::
 
 <!-- # Day 9 Taxonomy part 2 -->
 
@@ -521,8 +522,6 @@ h1{font-weight: 400;}
 <!-- 2.  [Solo: linegraph](./course-materials/in-class-activies/3_Line_Graph.qmd) -->
 
 <!-- 3.  [Frequency Plots](course-materials/lectures/9_frequency_plots.qmd) -->
-
-<!-- 4.  [Notes on Style](course-materials/lectures/5_notes_on_style.qmd) -->
 
 <!-- <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/IRJ2Ac9vI5o?si=JMeZEIQQNGNBscno" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen> --> 
 
