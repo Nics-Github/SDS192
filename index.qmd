@@ -456,15 +456,17 @@ h1{font-weight: 400;}
 
 <!-- [Maybe some project time]{.smallcaps} -->
 
-<!-- # Day 12 Practice with git/ Project 1 -->
+# Day 11 Practice with git/ Project 1
 
-<!-- We'll practice with git in our projects. -->
+(Section 1 is still on day 10)
 
-<!-- [Another git lecture](course-materials/lectures/12_git.qmd) -->
+We'll practice with git in our projects.
 
-<!-- [Project 1](https://classroom.github.com/a/UyQ4D2MD) -->
+[Another git lecture](course-materials/lectures/12_git.qmd)
 
-<!-- See moodle for project groups. -->
+[Project 1](https://classroom.github.com/a/YOE-nu6Z)
+
+See moodle for project groups.
 
 <!-- # Day 11 Lab 3 -->
 
