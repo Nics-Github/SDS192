@@ -1,0 +1,146 @@
+---
+title: "new-lab-3"
+author: "Schwab"
+editor: visual
+---
+
+Trying out some APIs
+
+```{r}
+library(tidyverse)
+library(httr2)
+library(jsonlite)
+```
+The following are some examples for NYT book review: 
+https://developer.nytimes.com/docs/books-product/1/overview
+```{r}
+your_key <-'6J6DXZkwFpx47E59VpHNC29SEoGlcgdN'
+
+req <- request("https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=6J6DXZkwFpx47E59VpHNC29SEoGlcgdN")
+req
+```
+
+```{r}
+req |> req_dry_run()
+
+```
+
+```{r}
+data= req_perform(req = req)
+
+```
+
+```{r}
+
+data = fromJSON(rawToChar(data$body))
+data$results
+
+
+```
+
+
+```{r}
+
+hour_forcast <- "https://api.weather.gov/gridpoints/BOX/19,79/forecast/hourly"
+req2 <- request("https://api.weather.gov/gridpoints/BOX/19,79/forecast/hourly")
+data = req_perform(req2)
+
+df <- fromJSON(rawToChar(data$body))
+df <- as.data.frame(df$properties)
+```
+
+
+```{r}
+
+your_key <-'6J6DXZkwFpx47E59VpHNC29SEoGlcgdN'
+
+req <- request("https://api.nytimes.com/svc/books/v3/reviews.json?author=Stephen+King&api-key=6J6DXZkwFpx47E59VpHNC29SEoGlcgdN")
+req
+```
+
+```{r}
+req |> req_dry_run()
+
+```
+
+```{r}
+data= req_perform(req = req)
+
+```
+
+```{r}
+
+data = fromJSON(rawToChar(data$body))
+data$results
+
+
+```
+
+
+```{r}
+
+
+your_key <-'6J6DXZkwFpx47E59VpHNC29SEoGlcgdN'
+
+req <- request("https://api.nytimes.com/svc/books/v3/lists/names.json?api-key=6J6DXZkwFpx47E59VpHNC29SEoGlcgdN")
+req
+```
+
+
+```{r}
+data= req_perform(req = req)
+
+```
+
+```{r}
+
+data = fromJSON(rawToChar(data$body))
+data$results
+
+
+```
+
+```{r}
+req <- request("https://api.nytimes.com/svc/books/v3/lists/combined-print-and-e-book-fiction?api-key=6J6DXZkwFpx47E59VpHNC29SEoGlcgdN")
+req
+```
+
+
+```{r}
+
+data= req_perform(req = req)
+
+```
+
+```{r}
+
+
+data = fromJSON(rawToChar(data$body))
+data$results
+
+
+```
+
+National Parks Example
+
+```{r}
+req <- request("https://developer.nps.gov/api/v1/parks?parkCode=acad&api_key=grehwCvgDfjrtG0AC3auTYsfphDcOcc8E8Wh14SC")
+req
+
+```
+
+```{r}
+
+data= req_perform(req = req)
+
+```
+
+```{r}
+
+
+data = fromJSON(rawToChar(data$body))
+data$results
+
+
+```
+
