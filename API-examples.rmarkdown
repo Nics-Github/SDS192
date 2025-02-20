@@ -4,15 +4,23 @@ author: "Schwab"
 editor: visual
 ---
 
+
+
 Trying out some APIs
+
+
 
 ```{r}
 library(tidyverse)
 library(httr2)
 library(jsonlite)
 ```
+
+
 The following are some examples for NYT book review: 
 https://developer.nytimes.com/docs/books-product/1/overview
+
+
 ```{r}
 your_key <-'6J6DXZkwFpx47E59VpHNC29SEoGlcgdN'
 
@@ -29,7 +37,11 @@ clean_data = fromJSON(rawToChar(get_data$body))
 clean_data
 ```
 
+
+
 A list of the wednesdays in 2024
+
+
 ```{r}
 wednesday_1_2024 <-c("January 3, 2024"," January 10, 2024"," January 17, 2024","January 24, 2024", "January 31, 2024", "February 7, 2024", "February 14, 2024", "February 21, 2024", "February 28, 2024")
 wed_2_2024 <- c(' March 6, 2024',' March 13, 2024',' March 20, 2024',' March 27, 2024', 'April 3, 2024', 'April 10, 2024', 'April 17, 2024', 'April 24, 2024', 'May 1, 2024', 'May 8, 2024', 'May 15, 2024', 'May 22, 2024', 'May 29, 2024')
@@ -69,7 +81,6 @@ df <- fromJSON(rawToChar(data$body))
 df <- as.data.frame(df$properties)
 ```
 
-
 ```{r}
 
 your_key <-'6J6DXZkwFpx47E59VpHNC29SEoGlcgdN'
@@ -96,7 +107,6 @@ data$results
 
 ```
 
-
 ```{r}
 
 
@@ -105,7 +115,6 @@ your_key <-'6J6DXZkwFpx47E59VpHNC29SEoGlcgdN'
 req <- request("https://api.nytimes.com/svc/books/v3/lists/names.json?api-key=6J6DXZkwFpx47E59VpHNC29SEoGlcgdN")
 req
 ```
-
 
 ```{r}
 data= req_perform(req = req)
@@ -125,7 +134,6 @@ req <- request("https://api.nytimes.com/svc/books/v3/lists/combined-print-and-e-
 req
 ```
 
-
 ```{r}
 
 data= req_perform(req = req)
@@ -141,7 +149,11 @@ data$results
 
 ```
 
+
+
 National Parks Example
+
+
 
 ```{r}
 req <- request("https://developer.nps.gov/api/v1/parks?parkCode=acad&api_key=grehwCvgDfjrtG0AC3auTYsfphDcOcc8E8Wh14SC")
