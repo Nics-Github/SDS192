@@ -16,28 +16,48 @@ https://developer.nytimes.com/docs/books-product/1/overview
 ```{r}
 your_key <-'6J6DXZkwFpx47E59VpHNC29SEoGlcgdN'
 
-req <- request("https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=6J6DXZkwFpx47E59VpHNC29SEoGlcgdN")
+req <- request(paste("https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=",your_key, sep = ""))
 req
 ```
 
 ```{r}
-req |> req_dry_run()
-
+get_data = req_perform(req = req)
 ```
 
 ```{r}
-data= req_perform(req = req)
+clean_data = fromJSON(rawToChar(get_data$body))
+clean_data
+```
 
+A list of the wednesdays in 2024
+```{r}
+wednesday_1_2024 <-c("January 3, 2024"," January 10, 2024"," January 17, 2024","January 24, 2024", "January 31, 2024", "February 7, 2024", "February 14, 2024", "February 21, 2024", "February 28, 2024")
+wed_2_2024 <- c(' March 6, 2024',' March 13, 2024',' March 20, 2024',' March 27, 2024', 'April 3, 2024', 'April 10, 2024', 'April 17, 2024', 'April 24, 2024', 'May 1, 2024', 'May 8, 2024', 'May 15, 2024', 'May 22, 2024', 'May 29, 2024')
+half_wed_2024 <-c('June 5, 2024', 'June 12, 2024','June 19, 2024', 'June 26, 2024', 'July 3, 2024', 'July 10, 2024', 'July 17, 2024', 'July 24, 2024',' July 31, 2024', 'August 7, 2024','August 14, 2024',' August 21, 2024', 'August 28, 2024', 'September 4, 2024', 'September 11, 2024', 'September 18, 2024',' September 25, 2024',' October 2, 2024', 'October 9, 2024', 'October 16, 2024',' October 23, 2024', 'October 30, 2024', 'November 6, 2024', 'November 13, 2024', 'November 20, 2024', 'November 27, 2024',' December 4, 2024','December 11, 2024','December 25, 2024')
+
+wednesdays_2024 <- mdy(wednesdays_2024)
+wednesday_1_2024 <- mdy(wednesday_1_2024)
+half_wed_2024 <-mdy(half_wed_2024)
 ```
 
 ```{r}
+nyt_book_review <- function(dates){
+  your_key <-'6J6DXZkwFpx47E59VpHNC29SEoGlcgdN'
+  req <- request(paste("https://api.nytimes.com/svc/books/v3/lists/",dates,"/hardcover-fiction.json?api-key=",your_key, sep = ""))
+  get_data = req_perform(req = req)
+  clean_data = fromJSON(rawToChar(get_data$body))
+  Sys.sleep(time = 6)
+  clean_data
+  
+}
 
-data = fromJSON(rawToChar(data$body))
-data$results
+reviews <- map_df(wednesday_1_2024,
+    nyt_book_review)
+reviews$results
+
 
 
 ```
-
 
 ```{r}
 
