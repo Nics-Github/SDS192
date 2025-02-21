@@ -11,24 +11,23 @@ library(tidyverse)
 library(httr2) # This is used for working with apis
 library(jsonlite) # This is for converting api data to readable text. 
 ```
-The following are some examples for NYT book review: 
-https://developer.nytimes.com/docs/books-product/1/overview
 
+The following are some examples for NYT book review: https://developer.nytimes.com/docs/books-product/1/overview
 
-#Step 1: Make a developer key for the new york times. 
+#Step 1: Make a developer key for the new york times.
 
-Go to [this website](https://developer.nytimes.com/get-started) follow the instructions to create an account and sign in. 
+Go to [this website](https://developer.nytimes.com/get-started) follow the instructions to create an account and sign in.
 
-After you sign in to your New York Times Developers account find the git started tab and click it (It'll bring you back to the get-started page above). Follow the instructions to Register an app for the Books API. (The first step may be confusing: click you username in the upper right corner and select apps). I labeled my app lab 3. 
+After you sign in to your New York Times Developers account find the git started tab and click it (It'll bring you back to the get-started page above). Follow the instructions to Register an app for the Books API. (The first step may be confusing: click you username in the upper right corner and select apps). I labeled my app lab 3.
 
-After you've created an app got back to the [my-apps page](https://developer.nytimes.com/my-apps) and click on it to find the key. Copy and paste your key below. Put quotes around it, it needs to be a string. 
+After you've created an app got back to the [my-apps page](https://developer.nytimes.com/my-apps) and click on it to find the key. Copy and paste your key below. Put quotes around it, it needs to be a string.
 
 ```{r}
 #Add your key below
-your_key <-'Your key here'
+your_key <-'6J6DXZkwFpx47E59VpHNC29SEoGlcgdN'
 ```
 
-With an API we need to first prepare a GET request. This is a specially formatted url, that will reach out to the server at the New York Times. You can see how these are formatted for the best seller list [here](https://developer.nytimes.com/docs/books-product/1/overview). Most APIs are similar, but each is unique. 
+With an API we need to first prepare a GET request. This is a specially formatted url, that will reach out to the server at the New York Times. You can see how these are formatted for the best seller list [here](https://developer.nytimes.com/docs/books-product/1/overview). Most APIs are similar, but each is unique.
 
 ```{r}
 #prepare the GET request
@@ -38,7 +37,7 @@ prepare_request <- request(paste("https://api.nytimes.com/svc/books/v3/lists/cur
 prepare_request
 ```
 
-After we prepare the request we need to execute it. The httr2 package does this with req_perform(). Afterwards we have the data from the New York Times saved as get_data. If you want to take a look at the hex data you can with get_data$body
+After we prepare the request we need to execute it. The httr2 package does this with req_perform(). Afterwards we have the data from the New York Times saved as get_data. If you want to take a look at the hex data you can with get_data\$body
 
 ```{r}
 get_data = req_perform(req = prepare_request)
@@ -48,17 +47,19 @@ We don't want hexadecial data. We want it to be readable by humans. Because we a
 
 ```{r}
 clean_data = fromJSON(rawToChar(get_data$body))
-clean_data
+best_sell_hardcover = clean_data 
 ```
 
-You don'tt need to remember everythin aboe, but many scientist that work with data use APIs, so I wanted you to understand what's going on in the function below. You will likely one day need to GET data from an API. 
+You don't need to remember everything above, but many scientist that work with data use APIs, so I wanted you to understand what's going on in the function below. You will likely one day need to GET data from an API.
 
-Each Wednesday the NYT puts out its best seller list, which is 15 books long. You can see an example [here](https://www.nytimes.com/books/best-sellers/hardcover-fiction/). In fact that is the list that you got from the API and is now saved in clean_data. We can can ask the API for past book lists. And so we have consistency lets get the book list from Janurary 2024. Notice in the chunk below I've got listed the Wednesdays as a character string, then I use mdy() to make them into dates. 
+Each Wednesday the NYT puts out its best seller list, which is 15 books long. You can see an example [here](https://www.nytimes.com/books/best-sellers/hardcover-fiction/). In fact that is the list that you got from the API and is now saved in clean_data. We can can ask the API for past book lists. And so we have consistency lets get the book list from Janurary 2024. Notice in the chunk below I've got listed the Wednesdays as a character string, then I use mdy() to make them into dates.
 
 ```{r}
 #|echo: false
 
-wed_jan_2024 <-c("January 3, 2024"," January 10, 2024"," January 17, 2024","January 24, 2024", "January 31, 2024")
+wed_jan_2024 <-c("January 3, 2024")
+
+" January 10, 2024"," January 17, 2024","January 24, 2024", "January 31, 2024")
      
 wed_jan_2024 <- mdy(wed_jan_2024)
                
@@ -91,7 +92,7 @@ nyt_book_review <- function(dates, api_key = your_key){
 }
 
 # This is not part of the function it runs the function above on each date and saves them as reviews. You will learn how to use map() later. 
-best_sell_hardcover <- map_df(wednesday_1_2024,
+best_sell_hardcover <- map_df(wed_jan_2024,
     nyt_book_review)
 
 # This will save the file, so we don't have to request the data again. 
@@ -106,7 +107,7 @@ load("best_sell_hardcover.Rdata")
 
 # Step 2: View the Data Using Two Approaches
 
-View the artist data frame you have created. 
+View the artist data frame you have created.
 
 ```{r}
 # Write your code below
@@ -117,15 +118,7 @@ View the artist data frame you have created.
 # Write your code below
 
 
-A list of the wednesdays in 2024
-```{r}
-wednesday_1_2024 <-c("January 3, 2024"," January 10, 2024"," January 17, 2024","January 24, 2024", "January 31, 2024", "February 7, 2024", "February 14, 2024", "February 21, 2024", "February 28, 2024")
-wed_2_2024 <- c(' March 6, 2024',' March 13, 2024',' March 20, 2024',' March 27, 2024', 'April 3, 2024', 'April 10, 2024', 'April 17, 2024', 'April 24, 2024', 'May 1, 2024', 'May 8, 2024', 'May 15, 2024', 'May 22, 2024', 'May 29, 2024')
-half_wed_2024 <-c('June 5, 2024', 'June 12, 2024','June 19, 2024', 'June 26, 2024', 'July 3, 2024', 'July 10, 2024', 'July 17, 2024', 'July 24, 2024',' July 31, 2024', 'August 7, 2024','August 14, 2024',' August 21, 2024', 'August 28, 2024', 'September 4, 2024', 'September 11, 2024', 'September 18, 2024',' September 25, 2024',' October 2, 2024', 'October 9, 2024', 'October 16, 2024',' October 23, 2024', 'October 30, 2024', 'November 6, 2024', 'November 13, 2024', 'November 20, 2024', 'November 27, 2024',' December 4, 2024','December 11, 2024','December 25, 2024')
 
-wednesdays_2024 <- mdy(wednesdays_2024)
-wednesday_1_2024 <- mdy(wednesday_1_2024)
-half_wed_2024 <-mdy(half_wed_2024)
 ```
 
 # Step 5: Create a Histogram Visualizing the Distribution of the weeks_on_list variable
@@ -136,13 +129,13 @@ half_wed_2024 <-mdy(half_wed_2024)
 (4) Follow the style guide
 
 ```{r}
-
 # Write your code below 
 
 ggplot(data = best_sell_hardcover)+
   geom_histogram(aes(weeks_on_list,
-                     color = "brown"), 
-                 binwidth = 5,
+                     color = "brown",
+                     ), 
+                 binwidth = 10,
                  show.legend = FALSE)+
   labs(
     title="Number of weeks on best sellers list",
@@ -153,15 +146,13 @@ ggplot(data = best_sell_hardcover)+
 
 ```
 
-**Discussion**: How do you interpret this plot?
-> Interpreting histograms: (1) Peaks; (2) Spread; (3) Skewed data; (4) Outliers.
+**Discussion**: How do you interpret this plot? \> Interpreting histograms: (1) Peaks; (2) Spread; (3) Skewed data; (4) Outliers. Keep in mind that there may be title repetitions in this data, to see them change fill = title.
 
 **Answer**:
 
 # Step 6: Facet Your Previous Plot by publisher
 
 Set `nrow` of your choice in the `facet_wrap` function.
-
 
 ```{r}
 # Paste the code below and adjust it 
@@ -184,70 +175,98 @@ ggplot(data = best_sell_hardcover)+
 
 # Step 7: Create a Stacked, Dodged, or Filled Barplot for publishers
 
-Use the `coord_flip()` function to flip the x-axis and the y-axis. Also, be sure to add labels to your plot.  
+Use the `coord_flip()` function to flip the x-axis and the y-axis. Also, be sure to add labels to your plot.
 
 ```{r}
 # Write your code below
 ggplot(data = best_sell_hardcover)+
   geom_bar(aes(publisher, fill=author),
-           position = "Dodge",
+           position = "dodge",
            show.legend = FALSE)+
   labs(
     title="Number of weeks on best sellers list",
     subtitle = "New York Times Best Selling Hardcover",
   ) +
-  coord_fixed()+
+  coord_flip()+
   # This will rotate the publisher's names. 
   theme(
     axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1)
   )
 ```
 
-
-
-
 # Step 8: Reorder the x-axis of Your Previous Plot
 
-I want to reorder my x-axis, so I will place the `reorder()` function around my x aesthetic, and assign the following arguments:
+Copy the code from above and remove the posittion arguement from geom_bar() This will make your graph stacked. Reorder your x-axis, by placing the `reorder()` function around the x aesthetic, and assign the following arguments:
 
-* the values to be reordered: `key_mode`
-* the values will serve as the basis for reordering: `key_mode`
-* and a function to determine how values will be reordered: `length`
+-   the values to be reordered: `publisher`
+-   the values will serve as the basis for reordering: `publisher`
+-   and a function to determine how values will be reordered: `length`
 
 ```{r}
 # Paste the code below and adjust it
-
+#Hint: your answer should look like x = reorder()
+ggplot(data = best_sell_hardcover)+
+  geom_bar(aes(
+    x = reorder(publisher, publisher, length),
+    fill=author),
+    #position = "dodge",
+    show.legend = FALSE)+
+  labs(
+    title="Number of weeks on best sellers list",
+    subtitle = "New York Times Best Selling Hardcover",
+  ) +
+  coord_flip()+
+  # This will rotate the publisher's names. 
+  theme(
+    axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1)
+  )
 ```
 
-**Discussion**: What do the frequencies indicate? What do you learn when comparing frequencies across albums?
+**Discussion**: What do the frequencies indicate? What do you learn when comparing frequencies across publishers?
 
 **Answer**:
 
-# Step 9: Create Grouped Boxplots Visualizing the Distribution of Values in a Song Feature of Your Choice, Grouped by Album Name
+# Step 9: Create Grouped Boxplots Visualizing the Distribution of `rank_last_week` by `publisher`
 
-Use the `coord_flip()` function to flip the x-axis and the y-axis. Also, be sure to add labels to your plot. 
+Use the `coord_flip()` function to flip the x-axis and the y-axis. Use `scale_y_reverse()` or `scale_x_reverse()` to make the vertical axis have smaller numbers on top. Be sure to add labels to your plot.
 
 ```{r}
 # Write your code below
 
+ggplot(data = best_sell_hardcover)+
+  geom_boxplot(aes(
+    x = rank_last_week,
+    group = publisher)
+    )+
+  labs(
+    title="Number of weeks on best sellers list",
+    subtitle = "New York Times Best Selling Hardcover",
+  ) +
+  coord_flip()+
+  scale_x_reverse()+
+  # This will rotate the publisher's names. 
+  theme(
+    axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1)
+  )
 ```
+
+**Discussion**: What does the horizontal axis tell you? Consider the six boxplots with zero length, what week are those on the best seller list? What is the
+
+**Answer**:
 
 # Step 10: Reorder the x-axis of Your Previous Plot
 
 I want to reorder my x-axis, so I will place the `reorder()` function around my x aesthetic, and assign the following arguments:
 
-* the values to be reordered: `album_name`
-* the values will serve as the basis for reordering: `valence` (yours will be the song feature of your choice)
-* and a function to determine how values will be reordered: `median`
+-   the values to be reordered: `album_name`
+-   the values will serve as the basis for reordering: `valence` (yours will be the song feature of your choice)
+-   and a function to determine how values will be reordered: `median`
 
 ```{r}
 # Paste the code below and adjust it
 
 ```
 
-**Discussion**: How do you interpret this plot? 
-> Interpreting boxplots: (1) Check for outliers; (2) Compare medians; (3) Compare the ranges; (4) Compare the IQRs; (5) Compare the symmetry. (Questions in Lec 6 Slides Page 14-18 will be a good guide to answer this.)
+**Discussion**: How do you interpret this plot? \> Interpreting boxplots: (1) Check for outliers; (2) Compare medians; (3) Compare the ranges; (4) Compare the IQRs; (5) Compare the symmetry. (Questions in Lec 6 Slides Page 14-18 will be a good guide to answer this.)
 
 **Answer**:
-
-
