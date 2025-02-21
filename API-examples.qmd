@@ -8,159 +8,233 @@ Trying out some APIs
 
 ```{r}
 library(tidyverse)
-library(httr2)
-library(jsonlite)
+library(httr2) # This is used for working with apis
+library(jsonlite) # This is for converting api data to readable text. 
 ```
 The following are some examples for NYT book review: 
 https://developer.nytimes.com/docs/books-product/1/overview
-```{r}
-your_key <-'6J6DXZkwFpx47E59VpHNC29SEoGlcgdN'
 
-req <- request(paste("https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=",your_key, sep = ""))
-req
+#Step 1: Make a developer key for the new york times. 
+
+Go to [this website](https://developer.nytimes.com/get-started) follow the instructions to create an account and sign in. 
+
+After you sign in to your New York Times Developers account find the git started tab and click it (It'll bring you back to the get-started page above). Follow the instructions to Register an app for the Books API. (The first step may be confusing: click you username in the upper right corner and select apps). I labeled my app lab 3. 
+
+After you've created an app got back to the [my-apps page](https://developer.nytimes.com/my-apps) and click on it to find the key. Copy and paste your key below. Put quotes around it, it needs to be a string. 
+
+```{r}
+#Add your key below
+your_key <-'Your key here'
 ```
 
+With an API we need to first prepare a GET request. This is a specially formatted url, that will reach out to the server at the New York Times. You can see how these are formatted for the best seller list [here](https://developer.nytimes.com/docs/books-product/1/overview). Most APIs are similar, but each is unique. 
+
 ```{r}
-get_data = req_perform(req = req)
+#prepare the GET request
+prepare_request <- request(paste("https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=",your_key, sep = ""))
+
+# Take a look at the request:
+prepare_request
 ```
+
+After we prepare the request we need to execute it. The httr2 package does this with req_perform(). Afterwards we have the data from the New York Times saved as get_data. If you want to take a look at the hex data you can with get_data$body
+
+```{r}
+get_data = req_perform(req = prepare_request)
+```
+
+We don't want hexadecial data. We want it to be readable by humans. Because we are human. rawToChar() takes hexadecimal data and changes it to characters which are in json format. The fromJSON() makes the data into a nice list.
 
 ```{r}
 clean_data = fromJSON(rawToChar(get_data$body))
 clean_data
 ```
 
-A list of the wednesdays in 2024
-```{r}
-wednesday_1_2024 <-c("January 3, 2024"," January 10, 2024"," January 17, 2024","January 24, 2024", "January 31, 2024", "February 7, 2024", "February 14, 2024", "February 21, 2024", "February 28, 2024")
-wed_2_2024 <- c(' March 6, 2024',' March 13, 2024',' March 20, 2024',' March 27, 2024', 'April 3, 2024', 'April 10, 2024', 'April 17, 2024', 'April 24, 2024', 'May 1, 2024', 'May 8, 2024', 'May 15, 2024', 'May 22, 2024', 'May 29, 2024')
-half_wed_2024 <-c('June 5, 2024', 'June 12, 2024','June 19, 2024', 'June 26, 2024', 'July 3, 2024', 'July 10, 2024', 'July 17, 2024', 'July 24, 2024',' July 31, 2024', 'August 7, 2024','August 14, 2024',' August 21, 2024', 'August 28, 2024', 'September 4, 2024', 'September 11, 2024', 'September 18, 2024',' September 25, 2024',' October 2, 2024', 'October 9, 2024', 'October 16, 2024',' October 23, 2024', 'October 30, 2024', 'November 6, 2024', 'November 13, 2024', 'November 20, 2024', 'November 27, 2024',' December 4, 2024','December 11, 2024','December 25, 2024')
+You don'tt need to remember everythin aboe, but many scientist that work with data use APIs, so I wanted you to understand what's going on in the function below. You will likely one day need to GET data from an API. 
 
-wednesdays_2024 <- mdy(wednesdays_2024)
-wednesday_1_2024 <- mdy(wednesday_1_2024)
-half_wed_2024 <-mdy(half_wed_2024)
+Each Wednesday the NYT puts out its best seller list, which is 15 books long. You can see an example [here](https://www.nytimes.com/books/best-sellers/hardcover-fiction/). In fact that is the list that you got from the API and is now saved in clean_data. We can can ask the API for past book lists. And so we have consistency lets get the book list from Janurary 2024. Notice in the chunk below I've got listed the Wednesdays as a character string, then I use mdy() to make them into dates. 
+
+```{r}
+#|echo: false
+
+wed_jan_2024 <-c("January 3, 2024"," January 10, 2024"," January 17, 2024","January 24, 2024", "January 31, 2024")
+     
+wed_jan_2024 <- mdy(wed_jan_2024)
+               
+# I couldn't bring myself to throw out the other Wednesdays in 2024. But we wont use them for this lab. 
+
+wed_not_jan_2024 <- c("February 7, 2024", "February 14, 2024", "February 21, 2024", "February 28, 2024",' March 6, 2024',' March 13, 2024',' March 20, 2024',' March 27, 2024', 'April 3, 2024', 'April 10, 2024', 'April 17, 2024', 'April 24, 2024', 'May 1, 2024', 'May 8, 2024', 'May 15, 2024', 'May 22, 2024', 'May 29, 2024','June 5, 2024', 'June 12, 2024','June 19, 2024', 'June 26, 2024', 'July 3, 2024', 'July 10, 2024', 'July 17, 2024', 'July 24, 2024',' July 31, 2024', 'August 7, 2024','August 14, 2024',' August 21, 2024', 'August 28, 2024', 'September 4, 2024', 'September 11, 2024', 'September 18, 2024',' September 25, 2024',' October 2, 2024', 'October 9, 2024', 'October 16, 2024',' October 23, 2024', 'October 30, 2024', 'November 6, 2024', 'November 13, 2024', 'November 20, 2024', 'November 27, 2024',' December 4, 2024','December 11, 2024','December 25, 2024')
+
 ```
 
+The function below iterates over all the dates in wed_jan_2024.
+
 ```{r}
-nyt_book_review <- function(dates){
-  your_key <-'6J6DXZkwFpx47E59VpHNC29SEoGlcgdN'
-  req <- request(paste("https://api.nytimes.com/svc/books/v3/lists/",dates,"/hardcover-fiction.json?api-key=",your_key, sep = ""))
-  get_data = req_perform(req = req)
-  clean_data = fromJSON(rawToChar(get_data$body))
-  Sys.sleep(time = 6)
-  clean_data
+#| echo: false
+#| execute: false
+
+nyt_book_review <- function(dates, api_key = your_key){
+  # This function reaches out to the nyt times api to grab the hardcover-fiction titles on the best seller list.
+  # This function takes one dates at a time and requires a personalized key from 
   
+  #your_key <-'6J6DXZkwFpx47E59VpHNC29SEoGlcgdN'
+  prepare_request <- request(paste("https://api.nytimes.com/svc/books/v3/lists/",dates,"/hardcover-fiction.json?api-key=",your_key, sep = ""))
+  get_data = req_perform(req = prepare_request)
+  #This changes it to json then to human readble characters
+  list_from_nyt = fromJSON(rawToChar(get_data$body)) 
+  #Sys.sleep(time = 8) # Take a nap because of item 11. https://developer.nytimes.com/faq#a11
+  clean_data <- as.data.frame(list_from_nyt$results$books) |>
+    mutate(week = dates) |>
+    select(-c(age_group, book_review_link, first_chapter_link)) # Remove blank columns
+  clean_data
 }
 
-reviews <- map_df(wednesday_1_2024,
+# This is not part of the function it runs the function above on each date and saves them as reviews. You will learn how to use map() later. 
+best_sell_hardcover <- map_df(wednesday_1_2024,
     nyt_book_review)
-reviews$results
 
+# This will save the file, so we don't have to request the data again. 
+save(best_sell_hardcover, file = "best_sell_hardcover.Rdata")
+```
 
+```{r}
+#This is where you can load the data again to work with. 
+load("best_sell_hardcover.Rdata")
+
+```
+
+# Step 2: View the Data Using Two Approaches
+
+View the artist data frame you have created. 
+
+```{r}
+# Write your code below
 
 ```
 
 ```{r}
+# Write your code below
 
-hour_forcast <- "https://api.weather.gov/gridpoints/BOX/19,79/forecast/hourly"
-req2 <- request("https://api.weather.gov/gridpoints/BOX/19,79/forecast/hourly")
-data = req_perform(req2)
-
-df <- fromJSON(rawToChar(data$body))
-df <- as.data.frame(df$properties)
 ```
 
+# Step 5: Create a Histogram Visualizing the Distribution of the weeks_on_list variable
+
+(1) Be sure to add labels to your plot.
+(2) Set appropriate `binwidth` for bins.
+(3) Set the line color for bins (turn off the legend with the show.legend argument)
+(4) Follow the style guide
 
 ```{r}
+# Write your code below 
 
-your_key <-'6J6DXZkwFpx47E59VpHNC29SEoGlcgdN'
+ggplot(data = best_sell_hardcover)+
+  geom_histogram(aes(weeks_on_list,
+                     color = "brown"), 
+                 binwidth = 5,
+                 show.legend = FALSE)+
+  labs(
+    title="Number of weeks on best sellers list",
+    subtitle = "New York Times Best Selling Hardcover",
+    
+  )+
+  theme(legend = element_blank())
 
-req <- request("https://api.nytimes.com/svc/books/v3/reviews.json?author=Stephen+King&api-key=6J6DXZkwFpx47E59VpHNC29SEoGlcgdN")
-req
 ```
+
+**Discussion**: How do you interpret this plot?
+> Interpreting histograms: (1) Peaks; (2) Spread; (3) Skewed data; (4) Outliers.
+
+**Answer**:
+
+# Step 6: Facet Your Previous Plot by publisher
+
+Set `nrow` of your choice in the `facet_wrap` function.
 
 ```{r}
-req |> req_dry_run()
-
+# Paste the code below and adjust it 
+ggplot(data = best_sell_hardcover)+
+  geom_histogram(aes(weeks_on_list,
+                     color = "brown"), 
+                 binwidth = 5,
+                 show.legend = FALSE
+                 )+
+  labs(
+    title="Number of weeks on best sellers list",
+    subtitle = "New York Times Best Selling Hardcover",
+  ) +
+  facet_wrap(~publisher)
 ```
+
+**Discussion**: What do the distributions indicate? What do you learn when comparing distributions across albums?
+
+**Answer**:
+
+# Step 7: Create a Stacked, Dodged, or Filled Barplot for publishers
+
+Use the `coord_flip()` function to flip the x-axis and the y-axis. Also, be sure to add labels to your plot.  
 
 ```{r}
-data= req_perform(req = req)
-
+# Write your code below
+ggplot(data = best_sell_hardcover)+
+  geom_bar(aes(publisher, fill=author),
+           position = "Dodge",
+           show.legend = FALSE)+
+  labs(
+    title="Number of weeks on best sellers list",
+    subtitle = "New York Times Best Selling Hardcover",
+  ) +
+  coord_fixed()+
+  # This will rotate the publisher's names. 
+  theme(
+    axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1)
+  )
 ```
+
+
+
+
+# Step 8: Reorder the x-axis of Your Previous Plot
+
+I want to reorder my x-axis, so I will place the `reorder()` function around my x aesthetic, and assign the following arguments:
+
+* the values to be reordered: `key_mode`
+* the values will serve as the basis for reordering: `key_mode`
+* and a function to determine how values will be reordered: `length`
 
 ```{r}
-
-data = fromJSON(rawToChar(data$body))
-data$results
-
+# Paste the code below and adjust it
 
 ```
 
+**Discussion**: What do the frequencies indicate? What do you learn when comparing frequencies across albums?
+
+**Answer**:
+
+# Step 9: Create Grouped Boxplots Visualizing the Distribution of Values in a Song Feature of Your Choice, Grouped by Album Name
+
+Use the `coord_flip()` function to flip the x-axis and the y-axis. Also, be sure to add labels to your plot. 
 
 ```{r}
+# Write your code below
 
-
-your_key <-'6J6DXZkwFpx47E59VpHNC29SEoGlcgdN'
-
-req <- request("https://api.nytimes.com/svc/books/v3/lists/names.json?api-key=6J6DXZkwFpx47E59VpHNC29SEoGlcgdN")
-req
 ```
 
+# Step 10: Reorder the x-axis of Your Previous Plot
+
+I want to reorder my x-axis, so I will place the `reorder()` function around my x aesthetic, and assign the following arguments:
+
+* the values to be reordered: `album_name`
+* the values will serve as the basis for reordering: `valence` (yours will be the song feature of your choice)
+* and a function to determine how values will be reordered: `median`
 
 ```{r}
-data= req_perform(req = req)
+# Paste the code below and adjust it
 
 ```
 
-```{r}
+**Discussion**: How do you interpret this plot? 
+> Interpreting boxplots: (1) Check for outliers; (2) Compare medians; (3) Compare the ranges; (4) Compare the IQRs; (5) Compare the symmetry. (Questions in Lec 6 Slides Page 14-18 will be a good guide to answer this.)
 
-data = fromJSON(rawToChar(data$body))
-data$results
+**Answer**:
 
-
-```
-
-```{r}
-req <- request("https://api.nytimes.com/svc/books/v3/lists/combined-print-and-e-book-fiction?api-key=6J6DXZkwFpx47E59VpHNC29SEoGlcgdN")
-req
-```
-
-
-```{r}
-
-data= req_perform(req = req)
-
-```
-
-```{r}
-
-
-data = fromJSON(rawToChar(data$body))
-data$results
-
-
-```
-
-National Parks Example
-
-```{r}
-req <- request("https://developer.nps.gov/api/v1/parks?parkCode=acad&api_key=grehwCvgDfjrtG0AC3auTYsfphDcOcc8E8Wh14SC")
-req
-
-```
-
-```{r}
-
-data= req_perform(req = req)
-
-```
-
-```{r}
-
-
-data = fromJSON(rawToChar(data$body))
-data$results
-
-
-```
 
