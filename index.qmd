@@ -428,23 +428,29 @@ h1{font-weight: 400;}
 
 <!-- <!-- [Stop and Frisk Wrangling](/course-materials/lectures/15_Wrangling_1_SQF.qmd) --> 
 
-<!-- # Day 14 Project 1 work day -->
+# Day 12/13 Project 1 work day
 
-<!-- Working on projects together. -->
+(Section 1 is on day 11)
 
-<!-- -   Consider the ethics. -->
+Quiz 1 due tonight (both sections). 
 
-<!-- -   You might realize you are sharing an API key. Consider what that means. -->
+::: {.callout-tip collapse="false"}
 
-<!-- -   Consider code layout. -->
+# Working on projects together.
 
-<!-- -   Remember to comment your code. -->
+-   You might realize you are sharing an API key. Consider what that means.
 
-<!-- -   Follow tidyverse style guide. -->
+-   Consider code layout.
 
-<!-- -   Practice a pull request today. -->
+-   Remember to comment your code.
 
-<!-- -   Make your graph legible to the lay person (title, labels, source, captions, etc). -->
+-   Follow tidyverse style guide.
+
+-   Practice a pull request today.
+
+-   Make your graph legible to the lay person (title, labels, source, captions, etc).
+
+:::
 
 <!-- # Day 13 Ethics -->
 
@@ -456,7 +462,7 @@ h1{font-weight: 400;}
 
 <!-- [Maybe some project time]{.smallcaps} -->
 
-# Day 12 Lab 3: NYTBooks
+# Day 11/12 Lab 3: NYTBooks
 
 Intro to paste()
 
