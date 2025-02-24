@@ -434,6 +434,29 @@ h1{font-weight: 400;}
 
 Quiz 1 due tonight (both sections). 
 
+::: {.callout-tip collapse="true"}
+
+# Interested in mapping? 
+
+[SAL offering workshops](https://drive.google.com/file/d/1hjMORAGX-Dl1pWTl7Iy3gFuS3b5CkX4s/view)
+
+### Teach yourself GIS: Resource and data walk-through
+> February 27th, 4:15-5:15pm, in the SAL
+
+> Interested in teaching yourself some GIS or building on your existing GIS skills? This workshop will walk participants through various tutorials, online short courses, and major data sources, enabling you to find the resources you need. Participants will also create a map in ArcGIS Online from a Map in a Minute tutorial.
+
+### Mapping political data with Flourish 
+> March 6th, 4:15-5:15pm, in the SAL
+
+> Flourish is a web-based tool for mapping and data visualization. Using data about contemporary politics, learn how to bring in data, customize how it is displayed, and export it to Canva.
+
+### Georeferencing historic maps
+> March 13th, 4:15-5:15pm, in the SAL
+
+> Learn how to create digital maps from paper ones through a process called georeferencing. Participants will explore historic maps of Massachusetts in Atlascope and gain practice georeferencing historic maps of Northampton using the AllMaps platform.
+
+:::
+
 ::: {.callout-tip collapse="false"}
 
 # Working on projects together.
@@ -462,7 +485,7 @@ Quiz 1 due tonight (both sections).
 
 <!-- [Maybe some project time]{.smallcaps} -->
 
-# Day 11/12 Lab 3: NYTBooks
+# Day 12 Lab 3: NYTBooks
 
 Intro to paste()
 
