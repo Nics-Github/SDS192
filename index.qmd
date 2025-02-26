@@ -428,6 +428,23 @@ h1{font-weight: 400;}
 
 <!-- <!-- [Stop and Frisk Wrangling](/course-materials/lectures/15_Wrangling_1_SQF.qmd) --> 
 
+# Day 13/14 Project 1 work day
+
+(Section 1 is on day 12)
+
+::: {.callout-tip collapse="true"}
+# Rendering notes
+
+Push all files to github. 
+
+grader's notes in grade.qmd.  
+
+:::
+
+Last day to work on Project 1 in class, due in a week. 
+
+
+
 # Day 12/13 Project 1 work day
 
 (Section 1 is on day 10)
