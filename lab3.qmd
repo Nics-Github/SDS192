@@ -4,7 +4,7 @@ author: "Schwab"
 editor: visual
 ---
 
-In this lab we will use an API to grab top ten best sellers list from the new york times. [This is a nice intro to APIs](https://www.dataquest.io/blog/r-api-tutorial/) if you'd like to read it.  
+In this lab we will use an API to grab top ten best sellers list from the new york times. [This is a nice intro to APIs](https://www.dataquest.io/blog/r-api-tutorial/) if you'd like to read it.
 
 Learning Goals:
 
@@ -46,7 +46,7 @@ prepare_request <- request(
 prepare_request
 ```
 
-After we prepare the request we need to execute it. The httr2 package does this with req_perform(). Afterwards we have the data from the New York Times saved as get_data. If you want to take a look at the hexadecimal data you can with get_data$body.
+After we prepare the request we need to execute it. The httr2 package does this with req_perform(). Afterwards we have the data from the New York Times saved as get_data. If you want to take a look at the hexadecimal data you can with get_data\$body.
 
 ```{r}
 #|echo: false
@@ -100,7 +100,7 @@ View the artist data frame you have created.
 
 ```
 
-**Discussion**: How do you interpret this plot? \> Interpreting histograms: (1) Peaks; (2) Spread; (3) Skewed data; (4) Outliers. To see the titles, fill by title in aes(). 
+**Discussion**: How do you interpret this plot? \> Interpreting histograms: (1) Peaks; (2) Spread; (3) Skewed data; (4) Outliers. To see the titles, fill by title in aes().
 
 **Answer**:
 
@@ -119,7 +119,7 @@ Set `nrow` of your choice in the `facet_wrap` function.
 
 # Step 6: Create a Dodged, or Filled Barplot for publishers
 
-You will need to fill by author in aes(). Alter the position argument. 
+You will need to fill by author in aes(). Alter the position argument.
 
 Use the `coord_flip()` function to flip the x-axis and the y-axis. Also, be sure to add labels to your plot.
 
@@ -165,9 +165,7 @@ Use the `coord_flip()` function to flip the x-axis and the y-axis. Use `scale_y_
 
 **Answer**:
 
-## Step 9: Make another API call for the author specifically. 
-
-
+## Step 9: Make another API call for the author specifically.
 
 ```{r}
 # Edit the url to make a call for the specific author I've pasted your key below so no need to include that. 
@@ -203,9 +201,6 @@ Copy the graph from step 8. You can reorder by variables not present in the grap
 
 **Answer**:
 
-
 ## Step 11: Make a final plot
 
-In this last step make a final plot of your choosing, it can be a plot you made previously or something different. Clean it up, don't use default colors, add context and give good titles and labels. Cite your source. Final apply a theme with theme_*() to lose the gray background. 
-
-
+In this last step make a final plot of your choosing, it can be a plot you made previously or something different. Clean it up, don't use default colors, add context and give good titles and labels. Cite your source. Final apply a theme with theme\_\*() to lose the gray background.

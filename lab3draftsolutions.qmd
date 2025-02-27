@@ -26,7 +26,7 @@ After you've created an app go back to the [my-apps page](https://developer.nyti
 
 ```{r}
 #Add your key below
-your_key <-'your-key-here'
+your_key <-'6J6DXZkwFpx47E59VpHNC29SEoGlcgdN'
 ```
 
 # Step2: Make a call to an API
@@ -201,7 +201,7 @@ Use the `coord_flip()` function to flip the x-axis and the y-axis. Use `scale_y_
 
 ggplot(data = best_sell_hardcover)+
   geom_boxplot(aes(
-    x = weeks_on_list,
+    x = rank_last_week,
     group = author)
     )+
   labs(
@@ -241,7 +241,7 @@ Your API call will be return a dataframe with nothing in it, what does that mean
 
 # Step 10: Reorder the x-axis of Your Previous Plot
 
-Copy the graph from step 8. You can reorder by variables not present in the graph. reorder the graph in the following way
+Copy the graph from step 8. You can reorder by variables not present in the graph. `reorder()` the graph in the following way
 
 -   the values to be reordered: `publisher`
 -   the values will serve as the basis for reordering: `weeks_on_list` (yours will be the song feature of your choice)
@@ -253,7 +253,6 @@ ggplot(data = best_sell_hardcover)+
   geom_bar(aes(
     x = reorder(publisher, weeks_on_list, median),
     fill=author),
-    #position = "dodge",
     show.legend = FALSE)+
   labs(
     title="Number of weeks on best sellers list",
@@ -264,6 +263,7 @@ ggplot(data = best_sell_hardcover)+
   theme(
     axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1)
   )
+ 
 ```
 
 **Discussion**: How do you interpret this plot? What does is the relationship between the publishers now? How would you indicate this reordering on your
