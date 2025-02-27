@@ -1,10 +1,14 @@
 ---
 title: "lab-3-nytimes"
-author: "Schwab"
+author: "Your name"
 editor: visual
 ---
 
+<<<<<<< HEAD
 In this lab we will use an API to grab top ten best sellers list from the new york times. [This is a nice intro to APIs](https://www.dataquest.io/blog/r-api-tutorial/) if you'd like to read it.
+=======
+In this lab we will use an API to grab top ten best sellers list from the New York Times. [This is a nice intro to APIs](https://www.dataquest.io/blog/r-api-tutorial/) if you'd like to read it.
+>>>>>>> 91c7a3f6483b782d2c66b9f44d027046514a60aa
 
 Learning Goals:
 
@@ -18,28 +22,31 @@ library(httr2) # This is used for working with apis
 library(jsonlite) # This is for converting api data to readable text. 
 ```
 
-# Step 1: Make a developer key for the New York times.
+## Step 1: Make a Developer Key for the New York Times.
 
 Go to [this website](https://developer.nytimes.com/get-started) follow the instructions to create an account and sign in.
 
-After you sign in to your New York Times Developers account find the get started tab and click it (It'll bring you back to the get-started page above). Follow the instructions to Register an app for the Books API. (The first step may be confusing: click you username in the upper right corner and select apps). I labeled my app "lab 3". Enable permissions for the book API
+After you sign in to your New York Times Developers account find the get started tab and click it (It'll bring you back to the get-started page above). Follow the instructions to register an app for the Books API. (The first step may be confusing: click you username in the upper right corner and select apps). I labeled my app "lab 3". Enable permissions for the book API
 
-After you've created an app go back to the [my-apps page](https://developer.nytimes.com/my-apps) and click on it to find the key. Paste your key below. Put quotes around it, it needs to be a string.
+After you've created an app go back to the [my-apps page](https://developer.nytimes.com/my-apps) and click on the app to find your key. Paste your key below. Put quotes around it, it needs to be a string.
 
 ```{r}
 #Add your key below
 your_key <-'your-key-here'
 ```
 
-# Step2: Make a call to an API
+## Step 2: Make a Call to an API
 
-With an API we need to first prepare a GET request. This is a specially formatted url, that will reach out to the server at the New York Times. You can see how these are formatted for the best seller list [here](https://developer.nytimes.com/docs/books-product/1/overview). Most APIs are similar, but each is unique. No spaces are allowed in the url. Edit the words data and genre to get the hardcover fiction books from Feb 19, 2025. Look at the website for examples.
+With an API we need to first prepare a GET request. This is a specially formatted url, that will reach out to the server at the New York Times. You can see how these are formatted for the best seller list [here](https://developer.nytimes.com/docs/books-product/1/overview). Most APIs are similar, but each has its own file struture. No spaces are allowed in the url. Edit the words data and genre to get the hardcover fiction books from Feb 19, 2025. Look at the website for examples.
 
 ```{r}
 #prepare the GET request for the hardcover-fiction genre from Feb 19, 2025
 #only edit date and genre
+date_nyt <- '2025-02-19'
+genre <- 'hardcover-fiction'
+#don't edit the function below, but read it
 prepare_request <- request(
-  paste("https://api.nytimes.com/svc/books/v3/lists/2025-02-19/hardcover-fiction.json?api-key=",your_key, sep = "")
+  paste("https://api.nytimes.com/svc/books/v3/lists/",date_nyt,"/",genre,"/.json?api-key=",your_key, sep = "")
   )
 
 # Take a look at the request, make sure there are no spaces and its formatted correctly
@@ -70,7 +77,7 @@ You don't need to remember everything above, but many scientist that work with d
 
 Each Wednesday the NYT puts out its best seller lists, each of which is 15 books long. You can see an example [here](https://www.nytimes.com/books/best-sellers/hardcover-fiction/). In fact that is the list that you got from the API and is now saved in clean_data. We can can ask the API for past book lists, or authors too, but we will not do that today. The data is fairly small and not challenging to understand, the rest of the focus will be on showing the data with different graphing techniques.
 
-# Step 3: View the Data Using Two Approaches
+## Step 3: View the Data Using Two Approaches
 
 View the artist data frame you have created.
 
@@ -87,7 +94,7 @@ View the artist data frame you have created.
 
 ```
 
-# Step 4: Create a Histogram Visualizing the Distribution of the weeks_on_list variable
+## Step 4: Create a Histogram Visualizing the Distribution of the weeks_on_list Variable.
 
 (1) Be sure to add labels to your plot.
 (2) Set appropriate `binwidth` for bins. Don't use the default.
@@ -104,7 +111,7 @@ View the artist data frame you have created.
 
 **Answer**:
 
-# Step 5: Facet Your Previous Plot by publisher
+## Step 5: Facet Your Previous Plot by Publisher
 
 Set `nrow` of your choice in the `facet_wrap` function.
 
@@ -117,9 +124,13 @@ Set `nrow` of your choice in the `facet_wrap` function.
 
 **Answer**:
 
-# Step 6: Create a Dodged, or Filled Barplot for publishers
+## Step 6: Create a Dodged, or Filled Barplot for Publishers
 
+<<<<<<< HEAD
 You will need to fill by author in aes(). Alter the position argument.
+=======
+You will need to fill by author in aes() and alter the position argument.
+>>>>>>> 91c7a3f6483b782d2c66b9f44d027046514a60aa
 
 Use the `coord_flip()` function to flip the x-axis and the y-axis. Also, be sure to add labels to your plot.
 
@@ -132,9 +143,9 @@ Use the `coord_flip()` function to flip the x-axis and the y-axis. Also, be sure
   )
 ```
 
-# Step 7: Reorder the x-axis of Your Previous Plot
+## Step 7: Reorder the x-axis of Your Previous Plot
 
-Copy the code from above and remove the position argument from geom_bar(), this will make your graph stacked as stacked is the default. Reorder your x-axis, by placing the `reorder()` function around the x aesthetic, and assign the following arguments:
+Copy the code from above and remove the position argument from `geom_bar()`, this will make your graph stacked, as stacked is the default. Reorder your x-axis, by placing the `reorder()` function around the x aesthetic, and assign the following arguments:
 
 -   the values to be reordered: `publisher`
 -   the values will serve as the basis for reordering: `publisher`
@@ -151,7 +162,7 @@ Copy the code from above and remove the position argument from geom_bar(), this 
 
 **Answer**:
 
-# Step 8: Create Grouped Boxplots Visualizing the Distribution of `rank_last_week` by `author`
+## Step 8: Create Grouped Boxplots Visualizing the Distribution of weeks_on_list by `author`
 
 Use the `coord_flip()` function to flip the x-axis and the y-axis. Use `scale_y_reverse()` or `scale_x_reverse()` to make the vertical axis have smaller numbers on top. Be sure to add labels to your plot.
 
@@ -161,14 +172,18 @@ Use the `coord_flip()` function to flip the x-axis and the y-axis. Use `scale_y_
 
 ```
 
-**Discussion**: What does the horizontal axis tell you? Consider the one boxplot that doesn't have zero length, what does that tell you about that author? Who are they?
+**Discussion**: This is no an interesting plot. What does the horizontal axis tell you? Consider the one boxplot that doesn't have zero length, what does that tell you about that author? Who are they?
 
 **Answer**:
 
+<<<<<<< HEAD
 ## Step 9: Make another API call for the author specifically.
+=======
+## Step 9: Make Another API call for the Author You found in the Part Above
+>>>>>>> 91c7a3f6483b782d2c66b9f44d027046514a60aa
 
 ```{r}
-# Edit the url to make a call for the specific author I've pasted your key below so no need to include that. 
+# Edit the url to make a call for the specific author I've pasted your key below so no need to include that. Hint look at the examples on the developers page. 
 authors_url = ""
   
 prepare_request <- request(
@@ -180,11 +195,11 @@ author <- as.data.frame(author_from_nyt$results) # Remove blank columns
 author
 ```
 
-**Question:** Your author object will be a dataframe with nothing in it, what could this mean?
+**Question:** Your author object will be a dataframe with nothing in it, what could this mean? (Hint: James Patterson is also on this weeks book list, do a call for him and look at the data. )
 
 **Answer:**
 
-# Step 10: Reorder the x-axis of Your Previous Plot
+## Step 10: Reorder the x-axis of Your Previous Plot
 
 Copy the graph from step 8. You can reorder by variables not present in the graph. reorder the graph in the following way
 
@@ -203,4 +218,8 @@ Copy the graph from step 8. You can reorder by variables not present in the grap
 
 ## Step 11: Make a final plot
 
+<<<<<<< HEAD
 In this last step make a final plot of your choosing, it can be a plot you made previously or something different. Clean it up, don't use default colors, add context and give good titles and labels. Cite your source. Final apply a theme with theme\_\*() to lose the gray background.
+=======
+In this last step make a final plot of your choosing, it can be a plot you made previously or something different. Clean it up, don't use default colors, add context and give good titles and labels. Cite your source. Final apply a theme with theme\_\*() to lose the gray background. The \* can be any theme available (i.e. minimal, bw, classic, etc)
+>>>>>>> 91c7a3f6483b782d2c66b9f44d027046514a60aa

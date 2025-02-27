@@ -428,23 +428,69 @@ h1{font-weight: 400;}
 
 <!-- <!-- [Stop and Frisk Wrangling](/course-materials/lectures/15_Wrangling_1_SQF.qmd) --> 
 
-<!-- # Day 14 Project 1 work day -->
+# Day 13/14 Project 1 work day
 
-<!-- Working on projects together. -->
+(Section 1 is on day 12)
 
-<!-- -   Consider the ethics. -->
+::: {.callout-tip collapse="true"}
+# Rendering notes
 
-<!-- -   You might realize you are sharing an API key. Consider what that means. -->
+Push all files to github. 
 
-<!-- -   Consider code layout. -->
+grader's notes in grade.qmd.  
 
-<!-- -   Remember to comment your code. -->
+:::
 
-<!-- -   Follow tidyverse style guide. -->
+Last day to work on Project 1 in class, due in a week. 
 
-<!-- -   Practice a pull request today. -->
 
-<!-- -   Make your graph legible to the lay person (title, labels, source, captions, etc). -->
+
+# Day 12/13 Project 1 work day
+
+(Section 1 is on day 10)
+
+Quiz 1 due tonight (both sections). 
+
+::: {.callout-tip collapse="true"}
+
+# Interested in mapping? 
+
+[SAL offering workshops](https://drive.google.com/file/d/1hjMORAGX-Dl1pWTl7Iy3gFuS3b5CkX4s/view)
+
+### Teach yourself GIS: Resource and data walk-through
+> February 27th, 4:15-5:15pm, in the SAL
+
+> Interested in teaching yourself some GIS or building on your existing GIS skills? This workshop will walk participants through various tutorials, online short courses, and major data sources, enabling you to find the resources you need. Participants will also create a map in ArcGIS Online from a Map in a Minute tutorial.
+
+### Mapping political data with Flourish 
+> March 6th, 4:15-5:15pm, in the SAL
+
+> Flourish is a web-based tool for mapping and data visualization. Using data about contemporary politics, learn how to bring in data, customize how it is displayed, and export it to Canva.
+
+### Georeferencing historic maps
+> March 13th, 4:15-5:15pm, in the SAL
+
+> Learn how to create digital maps from paper ones through a process called georeferencing. Participants will explore historic maps of Massachusetts in Atlascope and gain practice georeferencing historic maps of Northampton using the AllMaps platform.
+
+:::
+
+::: {.callout-tip collapse="false"}
+
+# Working on projects together.
+
+-   You might realize you are sharing an API key. Consider what that means.
+
+-   Consider code layout.
+
+-   Remember to comment your code.
+
+-   Follow tidyverse style guide.
+
+-   Practice a pull request today.
+
+-   Make your graph legible to the lay person (title, labels, source, captions, etc).
+
+:::
 
 <!-- # Day 13 Ethics -->
 
@@ -456,11 +502,13 @@ h1{font-weight: 400;}
 
 <!-- [Maybe some project time]{.smallcaps} -->
 
-# Day 12 Lab 3: NYTBooks
+# Day 11/12 Lab 3: NYTBooks
+
+Intro to paste()
 
 [lab 3](https://classroom.github.com/a/PSzawcoR)
 
-# Day 11 Practice with git/ Project 1
+# Day 10/11 Practice with git/ Project 1
 
 (Section 1 is still on day 10)
 
