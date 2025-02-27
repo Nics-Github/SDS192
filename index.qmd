@@ -428,6 +428,20 @@ h1{font-weight: 400;}
 
 <!-- <!-- [Stop and Frisk Wrangling](/course-materials/lectures/15_Wrangling_1_SQF.qmd) --> 
 
+# Day 14/15 Ethics
+(Section 1 is one day)
+
+::: {.callout-tip collapse="true"}
+# RStudio tips and tricks. 
+
+Running chunk tips
+
+Running all the above
+
+:::
+
+[Data Ethics](/course-materials/lectures/11_ethics.qmd)
+
 # Day 13/14 Project 1 work day
 
 (Section 1 is on day 12)
@@ -492,15 +506,7 @@ Quiz 1 due tonight (both sections).
 
 :::
 
-<!-- # Day 13 Ethics -->
 
-<!-- <!-- Add a bit about hiring bias based on the open intro data --> 
-
-<!-- <!-- facial recognition bias --> 
-
-<!-- [Data Ethics](/course-materials/lectures/11_ethics.qmd) -->
-
-<!-- [Maybe some project time]{.smallcaps} -->
 
 # Day 11/12 Lab 3: NYTBooks
 
