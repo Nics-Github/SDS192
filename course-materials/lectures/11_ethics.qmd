@@ -13,15 +13,15 @@ This is a squishy area.
 
 "Use Common Sense" - The authors of our textbook.
 
-## The Five Ps of Ethical Data Handling. 
+## The Five Ps of Ethical Data Handling.
 
-The five Ps termonology comes from here the Harvard Business Review.
+The five Ps terminology comes from here the Harvard Business Review.
 
 [Here's the link.](https://hbr.org/2023/07/the-ethics-of-managing-peoples-data)
 
 ## Copyright and Chat GPT
 
-::: columns
+::::: columns
 ::: {.column width="50%"}
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/ChatGPT_logo.svg/1920px-ChatGPT_logo.svg.png)
 :::
@@ -33,22 +33,22 @@ The five Ps termonology comes from here the Harvard Business Review.
 
 -   [List of suits is getting longer.](https://originality.ai/blog/openai-chatgpt-lawsuit-list)
 :::
-:::
+:::::
 
 ## Provenance
 
 Where does the data originate?
 
-Was it aquired legally?
+Was it acquired legally?
 
-## Github 
+## Github
 
-::: columns
+:::::: columns
 ::: {.column width="50%"}
 ![](https://upload.wikimedia.org/wikipedia/commons/a/ae/Github-desktop-logo-symbol.svg){width="354"}
 :::
 
-::: {.column width="50%"}
+:::: {.column width="50%"}
 ::: columns
 Microsoft (owner of github) uses code in repos to train copilot.
 
@@ -58,8 +58,8 @@ Microsoft (owner of github) uses code in repos to train copilot.
 
 -   Copilot costs \$20 a month or is free.
 :::
-:::
-:::
+::::
+::::::
 
 ## Purpose
 
@@ -72,8 +72,7 @@ What if the data is re-purposed?
 ::: incremental
 -   If that data is scraped from the site by a third party and made available is that ethical?
 
--   OkCupid, including usernames, age, gender, location, what kind of
-    relationship (or sex) they’re interested in, personality traits
+-   OkCupid, including usernames, age, gender, location, what kind of relationship (or sex) they’re interested in, personality traits
 
 -   "The data is already public. " -Emil Kirkegaard
 :::
@@ -86,19 +85,19 @@ Who is responsible for destroying it?
 
 ## College Students
 
-::: columns
+:::::: columns
 ::: {.column width="50%"}
 ![Smith College](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQm_RWI9VTHbnc4TXZTOpWZxf-nX3KdhlyATA&s)
 :::
 
-::: {.column width="50%"}
+:::: {.column width="50%"}
 ::: columns
 There is data that Smith collected from you.
 
 The repos in this class are data that you are creating.
 :::
-:::
-:::
+::::
+::::::
 
 ## Preparation
 
@@ -108,7 +107,7 @@ Are data sets being combined to preserve anonymity?
 
 Is the accuracy of the data verified?
 
-## Lab 7ish
+## Lab 5ish
 
 [![](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAGMOJ6BcHCxFFTln4-ZM9AQ9jaul5yUThUg&s)](https://aratrace.com/7-sisters-trail-race-4/)
 
@@ -120,28 +119,59 @@ How will individuals be anonymized?
 
 Who has access to that anonymized data.
 
-## Lab 3
+## Scenario 
 
-[Spotify](https://www.vox.com/culture/22814121/spotify-wrapped-2021-algorithm-data-privacy)
+A citizen of a country files taxes with their government. Paying taxes is rarely optional. In filing there are data related to residence, wages, age, gender, taxes and government ID numbers pertaining to this citizen and their family.
 
-## Algorithms Reflect the bais of their creator
+Discuss:
 
-> A piece of data itself has no positive or negative moral value, but the way we manipulate it does. It's hard to imagine a more contentious project than programing **ethics into our algorithms**; to do otherwise, however, and allow algorithms to monitor themselves, is to invite the quicksand of **moral equivalence**.
+-   Provenance
+
+-   Purpose
+
+-   Protection
+
+-   Preparation
+
+-   Privacy
+
+## Government's responsibility 
+
+Who should access to this data?
+
+How should is be secured?
+
+What rights to privacy does this citizen have?
+
+How long should the data be held?
+
+## Current Events
+
+DOGE requesting access to tax payer returns to root out fraud.[^1]
+
+[^1]: <https://www.economist.com/united-states/2025/02/18/is-elon-musks-war-on-fraud-just-cover-for-a-power-grab>
+
+Wanted a person without the proper clearance to be able to access tax payer returns. (Gavin Kliger)
+
+Will be given access if needed in anonymized form. [^2]
+
+[^2]: <https://www.nytimes.com/2025/02/21/us/politics/irs-doge-gavin-kliger.html>
 
 ## Books
 
-
-::: columns
+:::::: columns
 ::: {.column width="33%"}
 ![](https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1427665814i/51291.jpg)
 :::
+
 ::: {.column width="33%"}
 ![](https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1456091964i/28186015.jpg)
 :::
+
 ::: {.column width="33%"}
 ![](https://timharford.com/wp-content/uploads/2020/11/data-detective.png)
 :::
-:::
+::::::
 
 ## Credits
 

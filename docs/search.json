@@ -1622,5 +1622,117 @@
     "title": "Color Theory",
     "section": "Themes",
     "text": "Themes"
+  },
+  {
+    "objectID": "course-materials/lectures/11_ethics.html#the-five-ps-of-ethical-data-handling.",
+    "href": "course-materials/lectures/11_ethics.html#the-five-ps-of-ethical-data-handling.",
+    "title": "Data Ethics",
+    "section": "The Five Ps of Ethical Data Handling.",
+    "text": "The Five Ps of Ethical Data Handling.\nThe five Ps terminology comes from here the Harvard Business Review.\nHere’s the link."
+  },
+  {
+    "objectID": "course-materials/lectures/11_ethics.html#copyright-and-chat-gpt",
+    "href": "course-materials/lectures/11_ethics.html#copyright-and-chat-gpt",
+    "title": "Data Ethics",
+    "section": "Copyright and Chat GPT",
+    "text": "Copyright and Chat GPT\n\n\n\n\n\nSarah Silverman, Mona Awad and Paul Tremplay sue Open AI for direct infringement.\nUsing copyrighted materials to train their models.\nList of suits is getting longer."
+  },
+  {
+    "objectID": "course-materials/lectures/11_ethics.html#provenance",
+    "href": "course-materials/lectures/11_ethics.html#provenance",
+    "title": "Data Ethics",
+    "section": "Provenance",
+    "text": "Provenance\nWhere does the data originate?\nWas it acquired legally?"
+  },
+  {
+    "objectID": "course-materials/lectures/11_ethics.html#github",
+    "href": "course-materials/lectures/11_ethics.html#github",
+    "title": "Data Ethics",
+    "section": "Github",
+    "text": "Github\n\n\n\n\n\nMicrosoft (owner of github) uses code in repos to train copilot.\nEthical on public repositories?\nPrivate repositories?\nCopilot costs $20 a month or is free."
+  },
+  {
+    "objectID": "course-materials/lectures/11_ethics.html#purpose",
+    "href": "course-materials/lectures/11_ethics.html#purpose",
+    "title": "Data Ethics",
+    "section": "Purpose",
+    "text": "Purpose\nWould the source of the data agree with how it is being used?\nWhat if the data is re-purposed?"
+  },
+  {
+    "objectID": "course-materials/lectures/11_ethics.html#section",
+    "href": "course-materials/lectures/11_ethics.html#section",
+    "title": "Data Ethics",
+    "section": "",
+    "text": "If that data is scraped from the site by a third party and made available is that ethical?\nOkCupid, including usernames, age, gender, location, what kind of relationship (or sex) they’re interested in, personality traits\n“The data is already public.” -Emil Kirkegaard"
+  },
+  {
+    "objectID": "course-materials/lectures/11_ethics.html#protection",
+    "href": "course-materials/lectures/11_ethics.html#protection",
+    "title": "Data Ethics",
+    "section": "Protection",
+    "text": "Protection\nHow is the data being protected?\nWho is responsible for destroying it?"
+  },
+  {
+    "objectID": "course-materials/lectures/11_ethics.html#college-students",
+    "href": "course-materials/lectures/11_ethics.html#college-students",
+    "title": "Data Ethics",
+    "section": "College Students",
+    "text": "College Students\n\n\n\n\n\nSmith College\n\n\n\n\nThere is data that Smith collected from you.The repos in this class are data that you are creating."
+  },
+  {
+    "objectID": "course-materials/lectures/11_ethics.html#preparation",
+    "href": "course-materials/lectures/11_ethics.html#preparation",
+    "title": "Data Ethics",
+    "section": "Preparation",
+    "text": "Preparation\nHow is the data cleaned?\nAre data sets being combined to preserve anonymity?\nIs the accuracy of the data verified?"
+  },
+  {
+    "objectID": "course-materials/lectures/11_ethics.html#lab-5ish",
+    "href": "course-materials/lectures/11_ethics.html#lab-5ish",
+    "title": "Data Ethics",
+    "section": "Lab 5ish",
+    "text": "Lab 5ish"
+  },
+  {
+    "objectID": "course-materials/lectures/11_ethics.html#privacy",
+    "href": "course-materials/lectures/11_ethics.html#privacy",
+    "title": "Data Ethics",
+    "section": "Privacy",
+    "text": "Privacy\nWho will have access to data that can be used to ID a person?\nHow will individuals be anonymized?\nWho has access to that anonymized data."
+  },
+  {
+    "objectID": "course-materials/lectures/11_ethics.html#scenario",
+    "href": "course-materials/lectures/11_ethics.html#scenario",
+    "title": "Data Ethics",
+    "section": "Scenario",
+    "text": "Scenario\nA citizen of a country files taxes with their government. Paying taxes is rarely optional. In filing there are data related to residence, wages, age, gender, taxes and government ID numbers pertaining to this citizen and their family.\nDiscuss:\n\nProvenance\nPurpose\nProtection\nPreparation\nPrivacy"
+  },
+  {
+    "objectID": "course-materials/lectures/11_ethics.html#governments-responsibility",
+    "href": "course-materials/lectures/11_ethics.html#governments-responsibility",
+    "title": "Data Ethics",
+    "section": "Government’s responsibility",
+    "text": "Government’s responsibility\nWho should access to this data?\nHow should is be secured?\nWhat rights to privacy does this citizen have?\nHow long should the data be held?"
+  },
+  {
+    "objectID": "course-materials/lectures/11_ethics.html#current-events",
+    "href": "course-materials/lectures/11_ethics.html#current-events",
+    "title": "Data Ethics",
+    "section": "Current Events",
+    "text": "Current Events\nDOGE requesting access to tax payer returns to root out fraud.1\nWanted a person without the proper clearance to be able to access tax payer returns. (Gavin Kliger)\nWill be given access if needed in anonymized form. 2\nhttps://www.economist.com/united-states/2025/02/18/is-elon-musks-war-on-fraud-just-cover-for-a-power-grabhttps://www.nytimes.com/2025/02/21/us/politics/irs-doge-gavin-kliger.html"
+  },
+  {
+    "objectID": "course-materials/lectures/11_ethics.html#books",
+    "href": "course-materials/lectures/11_ethics.html#books",
+    "title": "Data Ethics",
+    "section": "Books",
+    "text": "Books"
+  },
+  {
+    "objectID": "course-materials/lectures/11_ethics.html#credits",
+    "href": "course-materials/lectures/11_ethics.html#credits",
+    "title": "Data Ethics",
+    "section": "Credits",
+    "text": "Credits\n\nThe five ps seem to come from the Harvard Business Review https://hbr.org/2023/07/the-ethics-of-managing-peoples-data 9/30/2024\nSuing Chat GPT https://www.theverge.com/2024/2/13/24072131/sarah-silverman-paul-tremblay-openai-chatgpt-copyright-lawsuit"
   }
 ]
