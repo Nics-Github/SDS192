@@ -442,6 +442,51 @@ Running all the above
 
 [Data Ethics](/course-materials/lectures/11_ethics.qmd)
 
+More data: 
+
+[World Cube Association](https://www.worldcubeassociation.org/results/rankings/333/single?)
+
+!-- [Lecture on the five verbs](course-materials/lectures/mdsr-the-verbs.qmd) -->
+
+[dpylr cheatsheet for wrangling](https://nyu-cdsc.github.io/learningr/assets/data-transformation.pdf)
+
+```{r}
+#| code-summary: "Make the Random_subset data frame."
+#| code-fold: true
+#| echo: true
+#| eval: false
+
+
+
+Random_subset <-  tibble::tribble(
+
+    ~year,~sex,   ~name,         ~n, ~prop,
+
+     2003, "M",     "Bilal",        146, 0.0000695,
+
+     1999, "F",     "Terria",        23, 0.0000118,
+
+     2010, "F",     "Naziyah",       45, 0.0000230,
+
+     1989, "F",     "Shawana",       41, 0.0000206,
+
+     1989, "F",     "Jessi",        210, 0.000105,
+
+     1928, "M",     "Tillman",       43, 0.0000377,
+
+     1981, "F",     "Leslee",        83, 0.0000464,
+
+     1981, "F",     "Sherise",       27, 0.0000151,
+
+     1920, "F",     "Marquerite",    26, 0.0000209,
+
+     1941, "M",     "Lorraine",      24, 0.0000191
+
+  )
+
+```
+
+
 # Day 13/14 Project 1 work day
 
 (Section 1 is on day 12)
