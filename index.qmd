@@ -382,7 +382,7 @@ h1{font-weight: 400;}
 
 <!-- ``` -->
 
-# Day 15 Data wrangling in one table.
+# Day 14/15 Data wrangling in one table.
 
 (Section 1 is one day below)
 
