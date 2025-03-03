@@ -382,54 +382,54 @@ h1{font-weight: 400;}
 
 <!-- ``` -->
 
-<!-- # Day 15 Data wrangling in one table. -->
+# Day 15 Data wrangling in one table.
 
-<!-- [Lecture on the five verbs](course-materials/lectures/mdsr-the-verbs.qmd) -->
+[Lecture on the five verbs](course-materials/lectures/mdsr-the-verbs.qmd)
 
-<!-- [dpylr cheatsheet for wrangling](https://nyu-cdsc.github.io/learningr/assets/data-transformation.pdf) -->
+[dpylr cheatsheet for wrangling](https://nyu-cdsc.github.io/learningr/assets/data-transformation.pdf)
 
-<!-- ```{r} -->
-<!-- #| code-summary: "Make the Random_subset data frame." -->
-<!-- #| code-fold: true -->
-<!-- #| echo: true -->
-<!-- #| eval: false -->
+```{r}
+#| code-summary: "Make the Random_subset data frame."
+#| code-fold: true
+#| echo: true
+#| eval: false
 
 
 
-<!-- Random_subset <-  tibble::tribble( -->
+Random_subset <-  tibble::tribble(
 
-<!--     ~year,~sex,   ~name,         ~n, ~prop, -->
+    ~year,~sex,   ~name,         ~n, ~prop,
 
-<!--      2003, "M",     "Bilal",        146, 0.0000695, -->
+     2003, "M",     "Bilal",        146, 0.0000695,
 
-<!--      1999, "F",     "Terria",        23, 0.0000118, -->
+     1999, "F",     "Terria",        23, 0.0000118,
 
-<!--      2010, "F",     "Naziyah",       45, 0.0000230, -->
+     2010, "F",     "Naziyah",       45, 0.0000230,
 
-<!--      1989, "F",     "Shawana",       41, 0.0000206, -->
+     1989, "F",     "Shawana",       41, 0.0000206,
 
-<!--      1989, "F",     "Jessi",        210, 0.000105, -->
+     1989, "F",     "Jessi",        210, 0.000105,
 
-<!--      1928, "M",     "Tillman",       43, 0.0000377, -->
+     1928, "M",     "Tillman",       43, 0.0000377,
 
-<!--      1981, "F",     "Leslee",        83, 0.0000464, -->
+     1981, "F",     "Leslee",        83, 0.0000464,
 
-<!--      1981, "F",     "Sherise",       27, 0.0000151, -->
+     1981, "F",     "Sherise",       27, 0.0000151,
 
-<!--      1920, "F",     "Marquerite",    26, 0.0000209, -->
+     1920, "F",     "Marquerite",    26, 0.0000209,
 
-<!--      1941, "M",     "Lorraine",      24, 0.0000191 -->
+     1941, "M",     "Lorraine",      24, 0.0000191
 
-<!--   ) -->
+  )
 
-<!-- ``` -->
+```
 
 <!-- <!-- The below is based on my NECOMMIT keynote.   --> 
 
 <!-- <!-- [Stop and Frisk Wrangling](/course-materials/lectures/15_Wrangling_1_SQF.qmd) --> 
 
 # Day 14/15 Ethics
-(Section 1 is one day)
+(Section 1 is one day below)
 
 ::: {.callout-tip collapse="true"}
 # RStudio tips and tricks. 
@@ -439,24 +439,6 @@ Running chunk tips
 Running all the above
 
 :::
-
-[Data Ethics](/course-materials/lectures/11_ethics.qmd)
-
-# Day 13/14 Project 1 work day
-
-(Section 1 is on day 12)
-
-::: {.callout-tip collapse="true"}
-# Rendering notes
-
-Push all files to github. 
-
-grader's notes in grade.qmd.  
-
-:::
-
-Last day to work on Project 1 in class, due in a week. 
-
 
 
 # Day 12/13 Project 1 work day
