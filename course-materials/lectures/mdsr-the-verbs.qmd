@@ -1,6 +1,5 @@
 ---
 title: "The Verbs"
-subtitle: "Edited from Ben Baumer's Lecture"
 author: "Nic Schwab" 
 format: 
   revealjs:
@@ -19,9 +18,9 @@ knitr::opts_chunk$set(fig.path = 'figures/', fig.height = 5)
 
 ## SDS 100 Lab 4
 
-::: columns
+::::: columns
 ::: {.column width="50%"}
-In lab 4 you learned about these verbs:
+You've learned about these verbs:
 
 -   `select()`
 
@@ -35,7 +34,7 @@ In lab 4 you learned about these verbs:
 
     -   creates new variables (or columns)
 
--   `arrange()` and `arrange(desc())`
+-   `arrange()` / `arrange(desc())`
 :::
 
 ::: {.column width="50%"}
@@ -53,7 +52,18 @@ We will also use:
 
     -   to rename columns
 :::
-:::
+:::::
+
+## Recall SQL Queries
+
+| SQL      | dplyr                           |
+|----------|---------------------------------|
+| SELECT   | select(), mutate(), summarise() |
+| FROM     | the data frame. data=           |
+| WHERE    | filter()                        |
+| ORDER BY | arrange()                       |
+| LIMIT    | slice_head()                    |
+| GROUP BY | group_by                        |
 
 ## The idea
 
@@ -73,7 +83,7 @@ When we wrangle we are not altering the original data.
 
 ## What is a tibble?
 
-::: columns
+::::: columns
 ::: {.column width="50%"}
 ![](http://hexb.in/hexagons/tibble.png){width="90%"}
 :::
@@ -83,16 +93,22 @@ When we wrangle we are not altering the original data.
 
 -   [Its different from a data frame.](https://jtr13.github.io/cc21fall1/tibble-vs.-dataframe.html)
 :::
-:::
+:::::
+
+## Group by example
+
+Live code with the `mpg` data frame.
+
+Open R or Smith's [RStudio Server](https://rstudio.smith.edu/auth-sign-in?appUri=%2F)
 
 ## Practice wrangling
 
 [In class MDSR Problems 1 and 2](https://mdsr-book.github.io/mdsr2e/ch-dataI.html#dataI-exercises)
 
 ```{r, Random_subset }
- #| eval: FALSE
- #| echo: TRUE
- #| code-fold: true
+#| code-summary: "Make the Random_subset data frame."
+#| echo: TRUE
+
  # Copy this code into a chunk in R to make the Random_subset data frame from problem 1 and 2.
  # Use the verbs we've discussed to make the subsets from the text.
  Random_subset <-  tibble::tribble(

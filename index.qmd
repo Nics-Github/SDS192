@@ -61,7 +61,7 @@ h1{font-weight: 400;}
 <!-- https://docs.google.com/spreadsheets/d/1j1Mub7lb1CJKpG-PySzdbzzgvryVQ3XrlvNgPRUcN0I/edit?usp=sharing -->
 
 ```{=html}
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTG_b6upDZcPxXB92LHYIhV1uAXgeVGaMsZ3sDRPuSQN74JdhkKhZQVjw6T68I3zsP8KGYzDSVTZW64/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false&amp;gid=0&amp;range=A1:E18" width="100%" height="300">
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTG_b6upDZcPxXB92LHYIhV1uAXgeVGaMsZ3sDRPuSQN74JdhkKhZQVjw6T68I3zsP8KGYzDSVTZW64/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false&amp;gid=0&amp;range=A1:E20" width="100%" height="300">
 </iframe>
 ```
 
@@ -382,54 +382,37 @@ h1{font-weight: 400;}
 
 <!-- ``` -->
 
-<!-- # Day 15 Data wrangling in one table. -->
+# Day 15 Data wrangling in one table.
 
-<!-- [Lecture on the five verbs](course-materials/lectures/mdsr-the-verbs.qmd) -->
+(Section 1 is one day below)
 
-<!-- [dpylr cheatsheet for wrangling](https://nyu-cdsc.github.io/learningr/assets/data-transformation.pdf) -->
+[Lecture on the five verbs](course-materials/lectures/mdsr-the-verbs.qmd)
 
-<!-- ```{r} -->
-<!-- #| code-summary: "Make the Random_subset data frame." -->
-<!-- #| code-fold: true -->
-<!-- #| echo: true -->
-<!-- #| eval: false -->
+[dpylr cheatsheet for wrangling](https://nyu-cdsc.github.io/learningr/assets/data-transformation.pdf)
 
 
-
-<!-- Random_subset <-  tibble::tribble( -->
-
-<!--     ~year,~sex,   ~name,         ~n, ~prop, -->
-
-<!--      2003, "M",     "Bilal",        146, 0.0000695, -->
-
-<!--      1999, "F",     "Terria",        23, 0.0000118, -->
-
-<!--      2010, "F",     "Naziyah",       45, 0.0000230, -->
-
-<!--      1989, "F",     "Shawana",       41, 0.0000206, -->
-
-<!--      1989, "F",     "Jessi",        210, 0.000105, -->
-
-<!--      1928, "M",     "Tillman",       43, 0.0000377, -->
-
-<!--      1981, "F",     "Leslee",        83, 0.0000464, -->
-
-<!--      1981, "F",     "Sherise",       27, 0.0000151, -->
-
-<!--      1920, "F",     "Marquerite",    26, 0.0000209, -->
-
-<!--      1941, "M",     "Lorraine",      24, 0.0000191 -->
-
-<!--   ) -->
-
-<!-- ``` -->
 
 <!-- <!-- The below is based on my NECOMMIT keynote.   --> 
 
 <!-- <!-- [Stop and Frisk Wrangling](/course-materials/lectures/15_Wrangling_1_SQF.qmd) --> 
 
+If time: 
+
+Discuss the difference between `%in%` and `==`
+
+[Wrangle babynames](/course-materials/in-class-activies/Wrangling_Baby_Names.qmd)
+
+```{r}
+#| code-fold: true
+#| echo: true
+#| eval: false
+
+install.packages("babynames")
+
+```
+
 # Day 14/15 Ethics
-(Section 1 is one day)
+(Section 1 is one day below)
 
 ::: {.callout-tip collapse="true"}
 # RStudio tips and tricks. 
@@ -441,50 +424,6 @@ Running all the above
 :::
 
 [Data Ethics](/course-materials/lectures/11_ethics.qmd)
-
-More data: 
-
-[World Cube Association](https://www.worldcubeassociation.org/results/rankings/333/single?)
-
-!-- [Lecture on the five verbs](course-materials/lectures/mdsr-the-verbs.qmd) -->
-
-[dpylr cheatsheet for wrangling](https://nyu-cdsc.github.io/learningr/assets/data-transformation.pdf)
-
-```{r}
-#| code-summary: "Make the Random_subset data frame."
-#| code-fold: true
-#| echo: true
-#| eval: false
-
-
-
-Random_subset <-  tibble::tribble(
-
-    ~year,~sex,   ~name,         ~n, ~prop,
-
-     2003, "M",     "Bilal",        146, 0.0000695,
-
-     1999, "F",     "Terria",        23, 0.0000118,
-
-     2010, "F",     "Naziyah",       45, 0.0000230,
-
-     1989, "F",     "Shawana",       41, 0.0000206,
-
-     1989, "F",     "Jessi",        210, 0.000105,
-
-     1928, "M",     "Tillman",       43, 0.0000377,
-
-     1981, "F",     "Leslee",        83, 0.0000464,
-
-     1981, "F",     "Sherise",       27, 0.0000151,
-
-     1920, "F",     "Marquerite",    26, 0.0000209,
-
-     1941, "M",     "Lorraine",      24, 0.0000191
-
-  )
-
-```
 
 
 # Day 13/14 Project 1 work day

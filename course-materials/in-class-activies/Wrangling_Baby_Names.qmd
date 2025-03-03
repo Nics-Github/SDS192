@@ -12,7 +12,7 @@ You should check out the [dplyr cheatsheet](https://nics-github.github.io/SDS192
 
 There are three parts to today's classwork.
 
--   Part 1. make a narcissistic graph.
+-   Part 1. Make a narcissistic graph.
 
 -   Part 2. 5 most popular names in the US since 1880
 
@@ -33,6 +33,8 @@ You will want to `filter()` your name. I would make a vector of names c("Nic","N
 ## 2. Create a line graph
 
 Show the proportion of children with the same names as you over time.
+
+You may want to use `%in%` instead of `==`
 
 # Part 2. 5 most popular names in the US since 1880
 
