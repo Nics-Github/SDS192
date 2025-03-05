@@ -369,32 +369,13 @@ h1{font-weight: 400;}
 <!-- -   Open the `.gitignore` file and add `sqf_2011.csv` to it. -->
 <!-- ::: -->
 
-<!-- # Day 16 -->
-
-<!-- [Wrangle babynames](/course-materials/in-class-activies/Wrangling_Baby_Names.qmd) -->
-
-<!-- ```{r} -->
-<!-- #| code-fold: true -->
-<!-- #| echo: true -->
-<!-- #| eval: false -->
-
-<!--  install.packages("babynames") -->
-
-<!-- ``` -->
-
-# Day 15/16 Data wrangling in one table.
+# Day 16/17
 
 (Section 1 is one day below)
 
-[Lecture on the five verbs](course-materials/lectures/mdsr-the-verbs.qmd)
+<!-- The below is based on my NECOMMIT keynote. -->
 
-[dpylr cheatsheet for wrangling](https://nyu-cdsc.github.io/learningr/assets/data-transformation.pdf)
-
-
-
-<!-- <!-- The below is based on my NECOMMIT keynote.   --> 
-
-<!-- <!-- [Stop and Frisk Wrangling](/course-materials/lectures/15_Wrangling_1_SQF.qmd) --> 
+<!-- [Stop and Frisk Wrangling](/course-materials/lectures/15_Wrangling_1_SQF.qmd) -->
 
 If time: 
 
@@ -410,6 +391,16 @@ Discuss the difference between `%in%` and `==`
 install.packages("babynames")
 
 ```
+
+# Day 15/16 Data wrangling in one table.
+
+(Section 1 is one day below)
+
+[Lecture on the five verbs](course-materials/lectures/mdsr-the-verbs.qmd)
+
+[dpylr cheatsheet for wrangling](https://nyu-cdsc.github.io/learningr/assets/data-transformation.pdf)
+
+
 
 # Day 14/15 Ethics
 (Section 1 is one day below)
