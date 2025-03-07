@@ -7,7 +7,7 @@ format:
 editor: visual
 ---
 
-# Stop, Question, Frisk
+## Stop, Question, Frisk
 
 -   Started in the 1990s
 
@@ -17,7 +17,7 @@ editor: visual
 
 -   Leads to mistrust in the police by these groups.
 
-# Disclaimer: Person Bias
+## Disclaimer: Personal Bias
 
 I'm not Black.
 
@@ -29,11 +29,11 @@ I am not from New York City.
 
 In this data analysis I will have limited perspective.
 
-# Disclaimer: Race
+## Disclaimer: Race
 
 This is an acknowledgement that the construct of race exists and plays a part in the way human being interact with each other.
 
-# The Data
+## The Data
 
 [Here is](https://www.nyc.gov/site/nypd/stats/reports-analysis/stopfrisk.page) NYC's stop and frisk data.
 
@@ -47,7 +47,7 @@ Let's consider 2011 data
 
 *The variable names are inconsistent across years.*
 
-# SQF History
+## SQF History
 
 ```{r stop-frisk-years}
 #| echo: TRUE
@@ -130,22 +130,22 @@ sqf |>
   )
 ```
 
-## You found:
+<!-- ## You found: -->
 
-![SQF Lab Solutions 2024](images/SQF_results.png)
+<!-- ![SQF Lab Solutions 2024](images/SQF_results.png) -->
 
-## For comparison:
+<!-- ## For comparison: -->
 
-Here's the demographics of NYC[^1]:
+<!-- Here's the demographics of NYC[^1]: -->
 
-[^1]: https://www.census.gov/quickfacts/fact/table/newyorkcitynewyork/PST045222
+<!-- [^1]: https://www.census.gov/quickfacts/fact/table/newyorkcitynewyork/PST045222 -->
 
--   Black: 23.4 %
+<!-- -   Black: 23.4 % -->
 
--   Latino: 28.9%
+<!-- -   Latino: 28.9% -->
 
--   White: 39.8%
+<!-- -   White: 39.8% -->
 
-## Data exposure
+<!-- ## Data exposure -->
 
-Data helped to expose the racism of the practice of Stop Question Frisk.
+<!-- Data helped to expose the racism of the practice of Stop Question Frisk. -->

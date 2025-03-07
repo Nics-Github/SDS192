@@ -1,0 +1,104 @@
+---
+title: "Schwab's Baby Name Solution"
+editor: visual
+---
+
+
+```{r}
+library(tidyverse)
+library(babynames)
+```
+
+## 1. Wrangle your name out of babynames
+
+You will want to `filter()` your name. I would make a vector of names c("Nic","Nicholas", "Nick")
+
+-   In what year was your name the most popular?
+
+-   Make a graph and facet by sex.
+
+```{r}
+babynames_Nic <- babynames |>
+  filter(name %in% c("Nic","Nicholas","Nick")) |> # I've filtered my name out
+  group_by(year)|>
+  summarise(prop_total =sum(prop), total = sum(n))  # I've calculated the total of all the Nic's born in a year I'm saving prop because I need it for part 2
+  
+babynames_Nic
+```
+## 2. Create a line graph
+
+Show the proportion of children with the same names as you over time.
+
+
+```{r}
+babynames_Nic |>
+  ggplot()+
+  geom_line(aes(x = year, y= prop_total)) +
+  labs(title ="Nicholas born since 1880",
+       subtitle =" Data includes Nic, Nick and Nicholas",
+       y= "proportion of babies named Nicholas")+
+  theme_classic()
+
+```
+
+# Part 2. 5 most popular names in the US since 1880
+
+Do some wrangling to tell me the five most popular names separated by sex.
+
+```{r}
+babynames |>
+  filter(sex == "M") |>
+  group_by(name) |>
+  summarise(total = sum(n)) |>
+  slice_max(total, n=5)  
+
+babynames |>
+  filter(sex =="F") |>
+  group_by(name) |>
+  summarise(total = sum(n)) |>
+  arrange(desc(total)) |>
+  slice_head(n=5)
+```
+
+# Part 3. Do presidents' names influence babies' names?
+
+Wrangle the data to show how president's first names effect newborn babies' names. [Former Presidents](https://www.whitehouse.gov/about-the-white-house/presidents/)
+
+-   Choose three recent presidents (Donald Trump and Joe Biden might be too recent).
+
+-   Make one graph that shows all three president's names. Use `geom_vline()` to show the year they entered office.
+
+
+```{r}
+babynames |>
+  filter(name %in% c("William","George","Barack")) |>
+  filter(year > 1990) |>  # I really only care about the years after they were elected. 
+  group_by(year, name) |>
+  summarize(prop_total = sum(prop), total = sum(n)) |>
+  ggplot() +
+  geom_line(aes( x= year, y= prop_total, color = name)) +
+  geom_vline(xintercept = 2009, color="Red")+
+  geom_vline(xintercept = 1993, color="Green")+
+  geom_vline(xintercept = 2001, color="Blue")+
+  labs(color = "President",
+         y = "proportion of new borns")
+```
+
+# Part 4: Most and least.
+
+What is the year in which the most babies were born?
+
+What is the year the least babies were born?
+
+
+```{r}
+babynames_total <- babynames |>
+  group_by(year)|>
+  summarise(total = sum(n))
+  
+babynames_total |>
+  slice_min(total)
+
+babynames_total |>
+  slice_max(total)
+```
