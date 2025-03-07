@@ -5,6 +5,8 @@ editor: visual
 
 
 ```{r}
+# Use the line below to install the babynames package
+# install.packages("babynames")
 library(tidyverse)
 library(babynames)
 ```
