@@ -119,7 +119,7 @@ How will individuals be anonymized?
 
 Who has access to that anonymized data.
 
-## Scenario 
+## Scenario
 
 A citizen of a country files taxes with their government. Paying taxes is rarely optional. In filing there are data related to residence, wages, age, gender, taxes and government ID numbers pertaining to this citizen and their family.
 
@@ -135,7 +135,7 @@ Discuss:
 
 -   Privacy
 
-## Government's responsibility 
+## Government's responsibility
 
 Who should access to this data?
 

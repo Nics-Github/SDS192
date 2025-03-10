@@ -333,17 +333,21 @@ h1{font-weight: 400;}
 <!-- [Lab 5](https://classroom.github.com/a/tI92Hb_z) -->
 
 
-<!-- # Day 18 Joining tables -->
+# Day 18 Joining tables
 
-<!-- Exploration: How to join tables? -->
+[Intro to Lab 4](/course-materials/lectures/20_SQF.qmd)
 
-<!-- [Problems 1, 4](https://mdsr-book.github.io/mdsr3e/05-joins.html#join-exercises) -->
+Quiz 2 will open in Wednesday and be due the Friday after break. 
 
-<!-- [Joining two tables in class exercise](https://scao53.github.io/sds192spring2023/in-class_exercises/Lec17In-classExercise-JoinTables.zip) -->
+Exploration: How to join tables?
 
-<!-- <!-- Open Quiz 2, maybe edit it!  -->
+[Problems 1](https://mdsr-book.github.io/mdsr3e/05-joins.html#join-exercises)
 
-<!-- <!-- Part of day 18 should be digestion of lab 4 --> 
+[Joining two tables in class exercise](https://scao53.github.io/sds192spring2023/in-class_exercises/Lec17In-classExercise-JoinTables.zip)
+
+
+
+
 
 # Day 17/18 Lab 4
 

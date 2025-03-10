@@ -130,22 +130,22 @@ sqf |>
   )
 ```
 
-<!-- ## You found: -->
+## You found:
 
-<!-- ![SQF Lab Solutions 2024](images/SQF_results.png) -->
+![SQF Lab Solutions 2024](images/SQF_results.png)
 
-<!-- ## For comparison: -->
+## For comparison:
 
-<!-- Here's the demographics of NYC[^1]: -->
+Here's the demographics of NYC[^1]:
 
-<!-- [^1]: https://www.census.gov/quickfacts/fact/table/newyorkcitynewyork/PST045222 -->
+[^1]: https://www.census.gov/quickfacts/fact/table/newyorkcitynewyork/PST045222
 
-<!-- -   Black: 23.4 % -->
+-   Black: 23.4 %
 
-<!-- -   Latino: 28.9% -->
+-   Latino: 28.9%
 
-<!-- -   White: 39.8% -->
+-   White: 39.8%
 
-<!-- ## Data exposure -->
+<!-- ## Data exposure --> <!--# -->
 
 <!-- Data helped to expose the racism of the practice of Stop Question Frisk. -->
