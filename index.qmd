@@ -293,21 +293,9 @@ h1{font-weight: 400;}
 
 <!-- [Project 2](https://classroom.github.com/a/kprELIeW) -->
 
-<!-- # Day 20 Pivots -->
 
-
-
-<!-- [Reflection on Lab 4](course-materials/lectures/20_SQF.qmd) -->
-
-<!-- [Pivots](course-materials/lectures/18_pivots.qmd) -->
-
-<!-- We'll do Problems [Chapter 4: 1,2,5,9,(12)](https://mdsr-book.github.io/mdsr3e/04-dataI.html#dataI-exercises) in class today. [Chapter 5: 3,4](https://mdsr-book.github.io/mdsr3e/05-joins.html#join-exercises) -->
 
 <!-- # Day 19 lab 5 -->
-
-<!-- [POM](SDS_POM_Flyer.pdf) -->
-
-<!-- [Map](Map_SDs_POM.pdf) -->
 
 <!-- ::: {.callout-tip collapse="true"} -->
 <!-- # lab 4 rendering/submission issues -->
@@ -330,22 +318,40 @@ h1{font-weight: 400;}
 <!-- -   Open the `.gitignore` file and add `sqf_2011.csv` to it. -->
 <!-- ::: -->
 
+
 <!-- [Lab 5](https://classroom.github.com/a/tI92Hb_z) -->
 
 
-# Day 18 Joining tables
+<!-- # Day 20 Pivots -->
 
-[Intro to Lab 4](/course-materials/lectures/20_SQF.qmd)
+<!-- [Reflection on Lab 4](course-materials/lectures/20_SQF.qmd) -->
+
+<!-- [Pivots](course-materials/lectures/18_pivots.qmd) -->
+
+<!-- We'll do Problems [Chapter 4: 1,2,5,9,(12)](https://mdsr-book.github.io/mdsr3e/04-dataI.html#dataI-exercises) in class today. [Chapter 5: 3,4](https://mdsr-book.github.io/mdsr3e/05-joins.html#join-exercises) -->
+
+
+# Day 19 Joining tables
+
+[Reflection Lab 4](/course-materials/lectures/20_SQF.qmd)
 
 Quiz 2 will open in Wednesday and be due the Friday after break. 
 
-Exploration: How to join tables?
+Exploration: How to join tables in R?
 
-[Problems 1](https://mdsr-book.github.io/mdsr3e/05-joins.html#join-exercises)
+::: {.callout-tip collapse="true"}
+# Simple Join data frame 
+
+These data are from `dplyr` 
+
+`band_members`
+
+`band_band_instruments`
+:::
 
 [Joining two tables in class exercise](https://scao53.github.io/sds192spring2023/in-class_exercises/Lec17In-classExercise-JoinTables.zip)
 
-
+[Problems 1](https://mdsr-book.github.io/mdsr3e/05-joins.html#join-exercises)
 
 
 
