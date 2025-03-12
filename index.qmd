@@ -295,7 +295,7 @@ h1{font-weight: 400;}
 
 
 
-<!-- # Day 19 lab 5 -->
+
 
 <!-- ::: {.callout-tip collapse="true"} -->
 <!-- # lab 4 rendering/submission issues -->
@@ -318,8 +318,9 @@ h1{font-weight: 400;}
 <!-- -   Open the `.gitignore` file and add `sqf_2011.csv` to it. -->
 <!-- ::: -->
 
+# Day 21 lab 5
 
-<!-- [Lab 5](https://classroom.github.com/a/tI92Hb_z) -->
+[Lab 5](https://classroom.github.com/a/zhMWEXc7)
 
 
 # Day 20 Pivots
