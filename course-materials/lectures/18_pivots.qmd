@@ -21,7 +21,9 @@ library(googlesheets4)
 
 ![](https://d33wubrfki0l68.cloudfront.net/6f1ddb544fc5c69a2478e444ab8112fb0eea23f8/91adc/images/tidy-1.png)
 
-## I have heard about
+## First Job
+
+You need to get data into machine readable format. What do you do?
 
 `pivot_longer()`
 
@@ -37,7 +39,6 @@ This data is not tidy how can we make it longer for computers?
 
 ```{r}
 #| echo: FALSE
-
 
 gs4_deauth()
 hiv_key <- "1kWH_xdJDM4SMfT_Kzpkk-1yuxWChfurZuWYjfmv51EA"
@@ -104,7 +105,7 @@ babynames |>
      summarize(total = sum(n))
 ```
 
-## Try this one
+## Not Tidy -\> Tidy
 
 This table is not tidy can you make it so?
 
@@ -123,22 +124,22 @@ fish_encounters |>
   pivot_wider(names_from = station,values_from = "seen")
 ```
 
-## tidy, clean, join.
+<!-- ## tidy, clean, join. -->
+<!-- We didn't do lab 5 yet.  -->
+<!-- `world_bank_pop` is loaded with the tidyverse. -->
 
-`world_bank_pop` is loaded with the tidyverse.
+<!-- 1.  Make `world_bank_pop` tidy. -->
 
-1.  Make `world_bank_pop` tidy.
+<!-- 2.  Use `clean_names()` to clean up `country_info`. -->
 
-2.  Use `clean_names()` to clean up `country_info`.
+<!-- 3.  Join `world_bank_pop` with the `country_info` data (loaded below) to add names of countries. (Hint: You only need to `country_codes` and the english version of the name.) -->
 
-3.  Join `world_bank_pop` with the `country_info` data (loaded below) to add names of countries. (Hint: You only need to `country_codes` and the english version of the name.)
+<!-- ```{r} -->
+<!-- #| echo: true -->
 
-```{r}
-#| echo: true
+<!-- country_info <- read_csv("https://raw.githubusercontent.com/datasets/country-codes/master/data/country-codes.csv") -->
 
-country_info <- read_csv("https://raw.githubusercontent.com/datasets/country-codes/master/data/country-codes.csv")
-
-```
+<!-- ``` -->
 
 ## consider some tables
 

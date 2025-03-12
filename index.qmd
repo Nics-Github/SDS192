@@ -322,13 +322,11 @@ h1{font-weight: 400;}
 <!-- [Lab 5](https://classroom.github.com/a/tI92Hb_z) -->
 
 
-<!-- # Day 20 Pivots -->
+# Day 20 Pivots
 
-<!-- [Reflection on Lab 4](course-materials/lectures/20_SQF.qmd) -->
+[Pivots](course-materials/lectures/18_pivots.qmd)
 
-<!-- [Pivots](course-materials/lectures/18_pivots.qmd) -->
-
-<!-- We'll do Problems [Chapter 4: 1,2,5,9,(12)](https://mdsr-book.github.io/mdsr3e/04-dataI.html#dataI-exercises) in class today. [Chapter 5: 3,4](https://mdsr-book.github.io/mdsr3e/05-joins.html#join-exercises) -->
+We'll do Problems [Chapter 6: 5 a-c,](https://mdsr-book.github.io/mdsr3e/06-dataII.html#dataII-exercises) in class today. [Chapter 5: 3,4](https://mdsr-book.github.io/mdsr3e/05-joins.html#join-exercises)
 
 
 # Day 19 Joining tables
