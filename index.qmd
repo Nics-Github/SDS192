@@ -320,6 +320,21 @@ h1{font-weight: 400;}
 
 # Day 21 lab 5
 
+[Intro to Project 2](https://classroom.github.com/a/GpWfJRyo)
+
+::: {.callout-tip collapse="true"}
+# Project 2 Details
+
+- Project 2 groups on Moodle
+
+- Monday and Wednesday after break are dedicated project 2 days
+
+- More on git work flow. (Issues)
+
+- Due: Friday: April 4th.
+
+:::
+
 [Lab 5](https://classroom.github.com/a/zhMWEXc7)
 
 
