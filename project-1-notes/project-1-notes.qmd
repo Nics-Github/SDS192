@@ -1,0 +1,56 @@
+---
+title: "Project 1"
+subtitle: "Common Issues"
+author: "Nic Schwab"
+format: 
+  revealjs:
+    theme: beige
+    controls: 
+      true
+
+editor: visual
+execute:
+  freeze: auto  # re-render only when source changes
+---
+
+## Blog Posts
+
+Blog posts should be in paragraphs, not one big wall of text.
+
+Please double check your rendered assignment before submitting.
+
+In markdown hit enter to make a new paragraph.
+
+## Comments
+
+Comments on code are missing. You should have a brief comment for each block of code describing what important [findings](https://style.tidyverse.org/syntax.html#comments) you have in your code. You can also describe what you are doing if your code is unclear.
+
+```{r}
+#| eval: false
+#| echo: true
+
+# Create plot 1 here
+ggplot(data = scorecard, aes(x = pctfloan)) + #Accessing scorecard data, setting 'pctfloan' as the X-axis variable
+  geom_histogram() + #Making a histogram to show the distribution
+  labs(x = "Percent of Undergraduates Receiving Federal Loans",
+       y = "Frequency",
+       title = "Percentage of Undergraduates Receiving Federal Loans at Massachusetts Institutions",
+       subtitle = "Source: MA College Scorecard Data") + #Adding labels and the data source to the plot
+theme_minimal() #Adding the theme
+```
+
+## Default Colors
+
+Pretty please do not use default colors. I will take off points for default colors going forward. (grey is okay)
+
+## Year of data
+
+Adding the year the data is from. This data is reproduced every year. If you do not provide a year the data is from it is annoying to reproduce your research.
+
+![](images/Screenshot%202025-03-24%20at%209.11.18%20AM.png)
+
+## Confusing labels
+
+Make the labels and scale match. Don't say 'percent' then show ratios or proportions.
+
+![](images/Screenshot%202025-03-24%20at%209.08.08%20AM.png)

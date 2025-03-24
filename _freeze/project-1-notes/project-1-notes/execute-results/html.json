@@ -1,0 +1,19 @@
+{
+  "hash": "489c96865501c1169e5d5ddc36c94853",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Project 1\"\nsubtitle: \"Common Issues\"\nauthor: \"Nic Schwab\"\nformat: \n  revealjs:\n    theme: beige\n    controls: \n      true\n\neditor: visual\nexecute:\n  freeze: auto  # re-render only when source changes\n---\n\n\n\n## Blog Posts\n\nBlog posts should be in paragraphs, not one big wall of text.\n\nPlease double check your rendered assignment before submitting.\n\nIn markdown hit enter to make a new paragraph.\n\n## Comments\n\nComments on code are missing. You should have a brief comment for each block of code describing what important [findings](https://style.tidyverse.org/syntax.html#comments) you have in your code. You can also describe what you are doing if your code is unclear.\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\n# Create plot 1 here\nggplot(data = scorecard, aes(x = pctfloan)) + #Accessing scorecard data, setting 'pctfloan' as the X-axis variable\n  geom_histogram() + #Making a histogram to show the distribution\n  labs(x = \"Percent of Undergraduates Receiving Federal Loans\",\n       y = \"Frequency\",\n       title = \"Percentage of Undergraduates Receiving Federal Loans at Massachusetts Institutions\",\n       subtitle = \"Source: MA College Scorecard Data\") + #Adding labels and the data source to the plot\ntheme_minimal() #Adding the theme\n```\n:::\n\n\n\n## Default Colors\n\nPretty please do not use default colors. I will take off points for default colors going forward. (grey is okay)\n\n## Year of data\n\nAdding the year the data is from. This data is reproduced every year. If you do not provide a year the data is from it is annoying to reproduce your research.\n\n![](images/Screenshot%202025-03-24%20at%209.11.18%20AM.png)\n\n## Confusing labels\n\nMake the labels and scale match. Don't say 'percent' then show ratios or proportions.\n\n![](images/Screenshot%202025-03-24%20at%209.08.08%20AM.png)\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {
+      "include-after-body": [
+        "\n<script>\n  // htmlwidgets need to know to resize themselves when slides are shown/hidden.\n  // Fire the \"slideenter\" event (handled by htmlwidgets.js) when the current\n  // slide changes (different for each slide format).\n  (function () {\n    // dispatch for htmlwidgets\n    function fireSlideEnter() {\n      const event = window.document.createEvent(\"Event\");\n      event.initEvent(\"slideenter\", true, true);\n      window.document.dispatchEvent(event);\n    }\n\n    function fireSlideChanged(previousSlide, currentSlide) {\n      fireSlideEnter();\n\n      // dispatch for shiny\n      if (window.jQuery) {\n        if (previousSlide) {\n          window.jQuery(previousSlide).trigger(\"hidden\");\n        }\n        if (currentSlide) {\n          window.jQuery(currentSlide).trigger(\"shown\");\n        }\n      }\n    }\n\n    // hookup for slidy\n    if (window.w3c_slidy) {\n      window.w3c_slidy.add_observer(function (slide_num) {\n        // slide_num starts at position 1\n        fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);\n      });\n    }\n\n  })();\n</script>\n\n"
+      ]
+    },
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
