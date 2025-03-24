@@ -276,6 +276,9 @@ h1{font-weight: 400;}
 
 <!-- What more to do?  -->
 
+Thursday [Presentation of Major](SDS_POM.pdf)
+
+Short `kable()` [demo](https://www.geeksforgeeks.org/kable-method-in-r/)
 
 # Day 22/23: Project 2 workday
 
@@ -291,9 +294,6 @@ Project 1 grades are up and current. Please let me know if you cannot see grades
 -   [Pull Requests](https://github.blog/developer-skills/github/beginners-guide-to-github-creating-a-pull-request/)
 
 :::
-
-Short `kable()` [demo](https://www.geeksforgeeks.org/kable-method-in-r/)
-
 
 
 <!-- # Day 21  -->
