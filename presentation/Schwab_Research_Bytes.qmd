@@ -26,7 +26,7 @@ editor: visual
 
 -   Had no data science degree
 
-##  {background-color="rgba(240,241,234,255)" background-image="map-of-hcc-1.png" background-size="cover"}
+##  {background-image="map-of-hcc-1.png"}
 
 ```{r map-of-hcc}
 #| echo: false
@@ -81,8 +81,7 @@ ggplot() +
   # )+
   theme_classic()+
   theme_void()+
-  # theme(panel.background = element_rect(fill = '#f0f1ea', color = '#f0f1ea'),
-  #       strip.background = element_rect(fill="#f0f1ea"))+
+  #theme(panel.background = element_rect(fill = '#f0f1ea', color = '#f0f1ea'))+
   ylim(41.95,42.55)+
   xlim(-73.1,-72.15)
   
@@ -130,7 +129,7 @@ Two Faculty: Eric Carreira and I
 ```
 
 | Math |   | Comp Sci |
-|-----------------------------|-------------|-----------------------------|
+|----------------------------|-----------------|----------------------------|
 | Intro to Data Science |  | Intro to Data Science |
 | Statistical Computing |  | Programming Fundamentals I |
 | Calculus 1 |  | Computer Concepts with Applications |
@@ -154,7 +153,7 @@ Two Faculty: Eric Carreira and I
 ```
 
 | Math |   | Comp Sci |
-|-----------------------------|-------------|-----------------------------|
+|----------------------------|-----------------|----------------------------|
 | Intro to Data Science (MTH 190 and CSI 190) |  | Intro to Data Science (MTH 190 and CSI 190) |
 | Statistical Computing (MTH 192) |  | Programming Fundamentals I (CSI 106 - Python) |
 | Calculus 1 (MTH 113) |  | Computer Concepts with Applications (CSI 111) |
