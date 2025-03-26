@@ -1,0 +1,287 @@
+---
+title: "lab5_seven_sisters"
+author: "Your name"
+format:
+  html:
+    self-contained: true
+knitr:
+  opts_chunk:
+    message: false
+editor: visual
+---
+
+I consider the Seven Sister's trail race to be a classic run of Western Massachusetts. Every year RAT Race Timing collects information about this race and its runners and posts it to the web.
+
+We will scrape this information from the internet, clean the data and join it with another file to answer these questions about it.
+
+> 1.  How many runners ran in both the 2022 and 2019 Seven Sisters races?
+> 2.  Which states does this group hail from?
+> 3.  On average did this group improve their net running time and by how much?
+> 4.  Discuss the Ethics of having so much personal information.
+
+In the process you will practice:
+
+-   Data scraping
+
+-   Data Cleaning
+
+-   Joining
+
+-   Wrangling
+
+```{r setup}
+# This is your set up chunk, load your libraries here. 
+library(___)
+library(rvest)
+
+
+```
+
+Question: What sensitive data was hidden on the website? What sensitive data is presented in the website?  
+
+**Answer :**
+
+`rvest` is a new package, you should take a moment to look up `rvest`.
+
+Check out the 2022 results at this [website](https://aratrace.com/7-sisters-trail-race-4/).
+
+In the following chunk we will scrape the 2022 data from the website above.
+
+```{r scrape}
+
+# This chunk scrapes data from the internet. 
+# In the space below put the url of the 2022 results. It should be a string with quotes. 
+
+seven_sisters_2022 <- "___"
+
+# pipe the url into read_html(). 
+
+results_2022 <- seven_sisters_2022 |>
+  read_html() |> 
+  html_element("table") |>
+  html_table()
+```
+
+# Goal 1: Drop variables
+
+Drop all of the variables that tell us nothing (hint: use `select(- c("var1","var2",...)` ).
+
+```{r drop}
+results_2022 <- results_2022 |>
+  select(___)
+```
+
+# Goal 2: Clean the names
+
+Variable names should be tidy. We will make them so in the next several parts. 
+
+## Part 1: Lose the spaces
+
+
+
+A lot of string manipulation happens with the stringr package. Here's the [cheat sheet](https://rstudio.github.io/cheatsheets/strings.pdf).
+
+All those spaces in the variable names can cause problems. We can clean them with `str_replace()` or `str_replace_all()` (one works better than the other). Then make sure to check your table's names to make sure the look correct.
+
+```{r}
+# Note: we are directly overwriting the variable names with the names() function. 
+
+names(results_2022) <-  ___(names(results_2022),
+                                    
+                                    )
+
+names(results_2022)
+
+```
+
+## Part 2: Make the variables lowercase
+
+The tidyverse style guide telles us to make variables lowercase. So we should do that. Find the function in the cheatsheet that will make the column names lowercase and add it below.
+
+```{r lower-case}
+names(results_2022) <-  ___(names(results_2022)
+                                    )
+names(results_2022)
+```
+
+# Goal 3: Make the Times into Times.
+
+There are two columns with times. We are most interested in `net_elapsed` . Make that into a minutes variable using the [lubridate package](https://rstudio.github.io/cheatsheets/lubridate.pdf)'s `as.duration()` and base r's `as.numeric()`
+
+```{r times}
+# as.numeric changes a string or other value to a number. 
+# as.duration looks at the type of time and makes it into seconds
+results_2022 <- results_2022 |>
+  mutate(
+    net_elapsed = 
+      as.numeric(
+        as.duration(
+    # You need to indicate the correct time format here.
+          ___(net_elapsed)
+          )
+    )/__
+  # In the line above divide by 60 to change times to minutes. 
+  )
+```
+
+# Goal 4: Scrape the 2019 table.
+
+I want to know which runners from 2022 also ran in 2019. In the years 2021 and 2020 the race was cancelled for COVID reasons. So we need to scrape the 2019 data. The web address below has been updated. Please alter the code from above to scrape the 2019 data
+
+```{r scrape-2021-data}
+
+seven_sisters_2019 <- "https://aratrace.com/7-sisters-trail-race-3/"
+
+results_2019 <- seven_sisters_2019 |>
+  ___
+  ___
+  ___
+```
+
+# Goal 5: Drop variables and clean names again
+
+If you get here before your classmates do not tell them about the `janitor` package. The janitor package is a small collection of functions that will clean up your names in the tidyverse style for you. It will also remove empty rows. Sorry to make you mess with strings before, but now you can appreciate `janitor`. [Read about this package here.](https://cran.r-project.org/web/packages/janitor/vignettes/janitor.html#convert-a-mix-of-date-and-datetime-formats-to-date) You may need to install this package.
+
+Add the appropriate functions to clean the names and remove empty columns.
+
+```{r}
+library(janitor)
+
+results_2019 <- results_2019 |> 
+  #This line should cleans names
+  ____() |>
+  #This line removes empty columns
+  ____( which = "cols" )
+
+```
+
+Please take a moment to appreciate `janitor.`
+
+# Goal 6: Times to times
+
+`chip_elapsed` from 2019 is the same as `net_elapsed` from 2022. But `chip_elapsed` is still a character and not a time. Can you reference the code from above to make it into a time in minutes?
+
+```{r}
+results_2019<- results_2019 |>
+  mutate(
+    chip_elapsed = # You can change this to net_elapsed if you'd like.
+      as.numeric(
+        as.duration(
+          ___(chip_elapsed)
+          )
+        )/__
+    )
+
+```
+
+# Goal 7: Renaming
+
+`chip_elapsed` from 2019 is the same as `net_elapsed` from 2022. Rename `chip_elapsed` to `net_elapsed`. Use `rename()`.If you did this in the mutate above you can skip this step and delete the chunk below. 
+
+```{r rename}
+results_2019 <- results_2019 |>
+  rename( )
+```
+
+# Goal 8: Join the tables
+
+Finally we are ready to join the tables.
+
+You will need to join the two tables in a way that answers the questions. You will also have to join by two different variables. Why do you think we have to do this? Also give appropriate suffixes.
+
+```{r}
+# Join the tables
+results_joined <- results_2022 |> 
+  ____(results_2019,
+       by = c("",""),
+       suffix = c("",""))
+```
+
+# Goal 9: Change blank space to NA
+
+In the state column we should have NA if a runner did not enter their state. Instead we have blank space.
+
+```{r}
+#Nothing to do here but notice the missing state names 
+levels(factor(results_joined$state))
+```
+
+We cannot have that. We need to fill those with NAs. We can use `na_if()` from the `dplyr` package.
+
+```{r}
+results_joined <- results_joined |>
+  mutate(state = 
+         )
+
+```
+
+
+
+# Question 1
+
+We can finally answer the questions we started with! Answer the following either with a code chunk or a sentence or both. They say most of Data Analysis is cleaning.
+
+> How many runners ran in both the 2022 and 2019 Seven Sisters races?
+
+```{r}
+
+```
+
+**Answer:**
+
+# Question 2
+
+> Which states does this group hail from?
+
+```{r}
+
+```
+
+# Question 3
+
+> On average did this group improve their net running time and by how much? Give a sentence to describe this number in context. (Hint: Make a new column to do some subtraction, caution a negative value might be an improvement).
+
+```{r}
+
+```
+
+**Answer:**
+
+# Question 4.
+
+>We should be careful with sensitive information even if it is publicly available. There are many reason why this is a good idea. To illustrate this imagine you want to know if someone will be at the 2022 race, join the 2017-2019 data to see which runners did all three races and make predictions about who will be at the 2022 race. Then join your data with the 2022 to verify your predictions.  I have scraped/cleaned data from 2017-2018 in the chunk below. 
+
+```{r scrape-2017-2018-data}
+seven_sisters_2018 <- "https://aratrace.com/7-sisters-trail-race-2/"
+
+results_2018 <- seven_sisters_2018 |>
+  read_html() |> 
+  html_element("table") |>
+  html_table() |>
+  clean_names()
+
+seven_sisters_2017 <- "https://aratrace.com/seven-sisters-trail-race/"
+
+results_2017 <- seven_sisters_2017 |>
+  read_html() |> 
+  html_element("table") |>
+  html_table() |>
+  clean_names()
+
+```
+
+```{r}
+# Do your joins here. 
+
+```
+
+Figuring out the diehard runners of a race is not necessarily nefarious. You might be the race coordinator and want to reach out to these people for donations, that seems fine. Alternatively you might be a reporter writing for the local news. Would the original purpose of the data effect what you write about the race? What is the original purpose of the data? Do we want to get consent before we publish first and last names, do we need to publish the city and state where the runners are from?  
+
+**Answer:**
+
+
+Bonus. Make your document alittle cooler by inserting the logo from the 7 sisters race here. Use Insert \> image from the visual mode. The come back to source mode to see how this gets coded. 
+
+Here's the logo's url:
+
+https://7sisterstrailrace.com/wp-content/uploads/C3FD1C0B-463E-4C31-88EE-716D1899AC7D.png

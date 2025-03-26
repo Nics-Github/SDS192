@@ -1,0 +1,186 @@
+---
+title: "Starting a Data Science Program"
+author: "Nic Schwab"
+subtitle: "at Holyoke Community College"
+format: 
+  revealjs:
+    theme: serif
+editor: visual
+---
+
+## What's happening here
+
+1.  Holyoke Community College
+
+2.  Faculty Training
+
+3.  Challenges
+
+4.  Program Courses
+
+## HCC stats
+
+-   [Serves 7391 students](https://www.hcc.edu/about/facts-and-history/fast-facts)
+
+-   Has a Math and a Computer Science Department
+
+-   Had no data science degree
+
+##  {background-image="map-of-hcc-1.png"}
+
+```{r map-of-hcc}
+#| echo: false
+#| warning: false
+#| eval: true
+#| include: false
+
+library(tidyverse)
+library(sf)
+library(tidygeocoder)
+library(maps)
+
+rivers <- read_sf("rs16my07/") |>
+  filter(PNAME == "CONNECTICUT R")|>
+  st_set_crs(4326)
+
+colleges <- tibble(address=c("Triangle St, Amherst, MA 01002",
+                             "Holyoke Community College")) |>
+  geocode(address, method="osm") |>
+  mutate(name = c( "Mass Mutual",
+                   "Holyoke Community College"))
+
+ma_counties <- maps::map("county",regions = "massachusetts",  plot = FALSE, fill = TRUE) |>
+  # This sets the simple features 
+  st_as_sf(coords = c("x", "y"), crs = 4326) |>
+  # This adds a new column with the names of the counties. 
+  mutate(county_name = str_replace(ID,pattern = "massachusetts,", replace = ""))|>
+  filter(county_name %in% c("hampden", "hampshire")) |>
+  mutate(county_name = case_when(
+    county_name == "hampden" ~"Hampden",
+    county_name == "hampshire"~"Hampshire"))
+
+colleges <- colleges |>
+  st_as_sf(coords = c("long", "lat"), crs = 4326)
+
+ggplot() +
+  geom_sf(data = ma_counties, 
+          fill = "yellowgreen",
+          size = 20)+
+  geom_sf_text(data = ma_counties,
+                aes(label = county_name),
+                nudge_x = 0.35,
+                nudge_y = -0.1)+
+  geom_sf(data= rivers, color = "blue")+
+  geom_sf(data = colleges)+
+  geom_sf_label(data = colleges, 
+               aes(label = name),
+               nudge_y = -0.03
+               )+
+  # labs(
+  #   #title = "HCC is in Hampden County"
+  # )+
+  theme_classic()+
+  theme_void()+
+  #theme(panel.background = element_rect(fill = '#f0f1ea', color = '#f0f1ea'))+
+  ylim(41.95,42.55)+
+  xlim(-73.1,-72.15)
+  
+
+
+```
+
+## Faculty Training
+
+Two Faculty: Eric Carreira and I
+
+-   [DSC- WAV](https://dsc-wav.github.io/facdev21/) grant funded 3 weeks of training
+
+-   Independent Study
+
+-   Smith Teaching
+
+-   UT Austin
+
+# Challenges
+
+## Math and CS
+
+-   Math department excited
+
+-   CS Department becomes vacant
+
+-   I join the CS department
+
+## Transfer
+
+-   Worked with Westfield State Faculty on Transfer
+
+-   WSU developed Elementary Stats with R to match Statistical Computing.
+
+## Courses {.smaller}
+
+```{css}
+#| echo: false
+
+.reveal table {
+  font-size: x-large;
+}
+
+```
+
+| Math |   | Comp Sci |
+|----------------------------|-----------------|----------------------------|
+| Intro to Data Science |  | Intro to Data Science |
+| Statistical Computing |  | Programming Fundamentals I |
+| Calculus 1 |  | Computer Concepts with Applications |
+| Calculus 2 |  | Applied Database Management |
+| Linear Algebra |  | Programming Fundamentals II \* |
+| Precalculus \* |  | Data Structures \* |
+| Discrete Mathematics \* |  |  |
+| Probability and Statistics for Engineers... \* |  |  |
+
+\* electives
+
+## Courses w/ numbers {.smaller}
+
+```{css}
+#| echo: false
+
+.reveal table {
+  font-size: x-large;
+}
+
+```
+
+| Math |   | Comp Sci |
+|----------------------------|-----------------|----------------------------|
+| Intro to Data Science (MTH 190 and CSI 190) |  | Intro to Data Science (MTH 190 and CSI 190) |
+| Statistical Computing (MTH 192) |  | Programming Fundamentals I (CSI 106 - Python) |
+| Calculus 1 (MTH 113) |  | Computer Concepts with Applications (CSI 111) |
+| Calculus 2 (MTH 114) |  | Applied Database Management (CSI 242) |
+| Linear Algebra (MTH 205) |  | Programming Fundamentals II (CSI 218 - Python)\* |
+| Precalculus (MTH 108) \* |  | Data Structures (CSI 258 )\* |
+| Discrete Mathematics (MTH 230) \* |  |  |
+| Probability and Statistics for Engineers...(MTH 245) \* |  |  |
+
+\* electives
+
+## Note:
+
+-   Two math faculty and one CS faculty can teach these new courses.
+
+-   The major is actually called an "option" under the mathematics degree.
+
+-   Major is new as of 2025.
+
+-   Minor tweaks to courses.
+
+## Thanks
+
+Ben Baumer and Nick Horton and [others involed in DSC-WAV](https://dsc-wav.github.io/www/people.html)
+
+Eric Carreira
+
+Paul Twum-Barima
+
+Ileana Vasu
