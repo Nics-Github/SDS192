@@ -120,6 +120,8 @@ map_chr(.x = words,
     .f = \(word) str_to_upper(word))
 ```
 
+## Try one 
+
 ## Deep dive
 
 There are actually lots of ways of making anonymous functions.
