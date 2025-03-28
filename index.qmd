@@ -217,9 +217,9 @@ h1{font-weight: 400;}
 
 No class next Wednesday April 2, finish up your projects. 
 
-[Practice function writing](course-materials/in-class-activies/function_writing_practice.qmd)
-
 [Data Masking](course-materials/lectures/24_data_masking.qmd)
+
+[Practice function writing](course-materials/in-class-activies/function_writing_practice.qmd)
 
 [More on masking](https://rlang.r-lib.org/reference/topic-data-mask.html)
 

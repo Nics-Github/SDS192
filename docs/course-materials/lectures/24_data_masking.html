@@ -415,7 +415,7 @@
 <span id="cb2-5"><a></a>  <span class="dv">5</span>, <span class="dv">0</span> , <span class="dv">0</span></span>
 <span id="cb2-6"><a></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>x and df are global. They are referred to as environment variables.</p>
+<p>x and df are referred to as global environment variables.</p>
 <p>df#x and df$y are local to the dataframe. They are often referred to as stats-variables.</p>
 </section>
 <section id="the-dollar-sign-operator" class="slide level2">
@@ -467,13 +467,13 @@
 <pre><code>[1] 5</code></pre>
 </div>
 </div>
-<p>my_printer() looks through the environment first.</p>
+<p>my_printer() looks through the global environment first.</p>
 <p>So my_printer(x)=10 and not 5.</p>
 </section>
 <section id="tidyverse-problems" class="slide level2">
 <h2>tidyverse problems</h2>
-<p>The tidyverse uses a process called masking to blur the lines between environment and data variables.</p>
-<p>This is why we like it so much.</p>
+<p>The tidyverse uses a process called “masking” to blur the lines between environment and data variables.</p>
+<p>This is the Tidyverse is easy to use.</p>
 <p>However it makes programming with the tidyverse functions more challenging.</p>
 </section>
 <section id="use-summarize-to-calculate-a-mean." class="slide level2">
@@ -522,7 +522,7 @@
 </section>
 <section id="solution" class="slide level2">
 <h2>Solution</h2>
-<p>We need to inject the data into the sumarize function. We can do this by <strong>unmasking</strong> the data with {{}}.</p>
+<p>We need to inject the data into the summarize function. We can do this by <strong>unmasking</strong> the data with {{}}.</p>
 <p>This tells R to look for the variable within the dataframe, not the global environment.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a></a>my_mean_maker <span class="ot">&lt;-</span> <span class="cf">function</span>(data, variable){</span>
