@@ -254,7 +254,7 @@ iris |>
   )
 ```
 
-## `map()`  for iteration.
+## `map()` for iteration.
 
 It performs some operation on a data frame, vector or list.
 

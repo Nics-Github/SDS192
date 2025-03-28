@@ -21,6 +21,7 @@ format:
 h1{font-weight: 400;}
 </style>
 ```
+
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(
   echo = TRUE, message=FALSE, warning = FALSE, eval = TRUE,
@@ -54,6 +55,7 @@ set.seed(76)
 h1{font-weight: 400;}
 </style>
 ```
+
 # Schedule
 
 <!-- The the wesbite for the schedule below:  -->
@@ -61,10 +63,9 @@ h1{font-weight: 400;}
 <!-- https://docs.google.com/spreadsheets/d/1j1Mub7lb1CJKpG-PySzdbzzgvryVQ3XrlvNgPRUcN0I/edit?usp=sharing -->
 
 ```{=html}
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTG_b6upDZcPxXB92LHYIhV1uAXgeVGaMsZ3sDRPuSQN74JdhkKhZQVjw6T68I3zsP8KGYzDSVTZW64/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false&amp;gid=0&amp;range=A1:E28" width="100%" height="300">
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTG_b6upDZcPxXB92LHYIhV1uAXgeVGaMsZ3sDRPuSQN74JdhkKhZQVjw6T68I3zsP8KGYzDSVTZW64/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false&amp;gid=0&amp;range=A1:E31" width="100%" height="500">
 </iframe>
 ```
-
 
 <!-- # Day 38  -->
 
@@ -98,8 +99,6 @@ h1{font-weight: 400;}
 
 <!-- [Prof Cao's Post Course Survey](https://smithcollege.qualtrics.com/jfe/form/SV_dh7rSgiH2AvNUj4) -->
 
-
-
 <!-- # Day 34 SQL lab -->
 
 <!-- Prof Cao will be in to help with the lab.  -->
@@ -122,15 +121,13 @@ h1{font-weight: 400;}
 
 <!-- [SQL Notes](./course-materials/lectures/32_Tim_s_SQL/Smith-SQL-Notes-I.pdf) -->
 
-
 <!-- # This is where you got to Fall 2024 -->
+
 <!-- # Day 36 Project 3 and Final Project -->
 
 <!-- The final project instructions can be found [here](./course-materials/Final-Project/Project.qmd).  -->
 
 <!-- Today and Wednesday you should mostly work on Project 3 in class -->
-
-
 
 <!-- # Day 35 Project 3 -->
 
@@ -142,7 +139,6 @@ h1{font-weight: 400;}
 
 <!-- [Jon Caris and Kala'i Ellis](https://docs.google.com/presentation/d/1s6YGENIbpoSxuAcfiv_E6Lv5kRv15lDMJ9BE8BNS2uU/edit?usp=sharing) -->
 
-
 <!-- # Day 33 Lab 7 Mapping Monarchs. -->
 
 <!-- [Here is the lab for today.](https://classroom.github.com/a/OgSLZGBv) -->
@@ -153,13 +149,9 @@ h1{font-weight: 400;}
 
 <!-- Quiz 3 is available and due by Sunday. -->
 
-
-
 <!-- # Day 32 Choropleth Mapping and Leaflet -->
 
 <!-- [Choropleth Mapping](./course-materials/in-class-activies/29_Choropleth_and_Leaflet.qmd) -->
-
-
 
 <!-- # Day 31 Mapping with simple features (sf) and shape files -->
 
@@ -175,35 +167,33 @@ h1{font-weight: 400;}
 
 <!-- Quiz 3 on mapping is open, don't take it until after Monday's class.  -->
 
-<!-- <!-- # Day 26 Static Mapping part 1 --> 
+<!-- <!-- # Day 26 Static Mapping part 1 -->
 
-<!-- <!-- Announcements --> 
+<!-- <!-- Announcements -->
 
-
-<!-- <!-- [Example: static maps](./course-materials/lectures/26_maps-ggplot.qmd) --> 
+<!-- <!-- [Example: static maps](./course-materials/lectures/26_maps-ggplot.qmd) -->
 
 <!-- # Day 30 Functions and Static Maps -->
 
 <!-- Let's finish this problem from last class.  -->
 
-
 <!-- ::: {.callout-note collapse="true"} -->
+
 <!-- # 6 scatter plots -->
 
 <!-- Make a function that takes a df and a variable then produces a scatter plot of that variable vs cesd. Use it to plot multiple graphs of the first 6 numeric variables HELPrct. [Hint: check out the extended example from 7.7](https://mdsr-book.github.io/mdsr3e/07-iteration.html#extended-example-factors-associated-with-bmi) -->
+
 <!-- ::: -->
 
-<!-- [Anonymous functions](course-materials/lectures/30_anonymous_functions.qmd) -->
+
 
 <!-- [Mapping Review](course-materials/lectures/30_map_review.qmd) -->
 
 <!-- [Example: static maps](./course-materials/lectures/26_maps-ggplot.qmd) -->
 
-
 <!-- # Day 29 Practice function writing in R  -->
 
 <!-- [Chapter 7 Problem 1 and 3](https://mdsr-book.github.io/mdsr3e/07-iteration.html#iteration-exercises) -->
-
 
 <!-- # Day 28 Lab 6 -->
 
@@ -223,17 +213,24 @@ h1{font-weight: 400;}
 
 <!-- # Day 25: Function refresher -->
 
-<!-- [Data Masking](course-materials/lectures/24_data_masking.qmd) -->
+# Day 24 Functions and The Tidyverse
 
-<!-- [More on masking](https://rlang.r-lib.org/reference/topic-data-mask.html) -->
+No class next Wednesday April 2, finish up your projects. 
 
-<!-- <!-- [Solution to Monday's in class activity](/course-materials/in-class-activies/day_25solutions_function_writing.html) --> 
+[Practice function writing](course-materials/in-class-activies/function_writing_practice.qmd)
 
-<!-- # Day 24: Project 2 work day -->
+[Data Masking](course-materials/lectures/24_data_masking.qmd)
+
+[More on masking](https://rlang.r-lib.org/reference/topic-data-mask.html)
+
+[Anonymous functions](course-materials/lectures/30_anonymous_functions.qmd)
+
+<!-- <!-- [Solution to Monday's in class activity](/course-materials/in-class-activies/day_25solutions_function_writing.html) -->
 
 <!-- # Day 23: Final Project: Website  -->
 
 <!-- ::: {.callout-note collapse="true"} -->
+
 <!-- # Website work -->
 
 <!-- -   Make a new private repo -->
@@ -250,9 +247,8 @@ h1{font-weight: 400;}
 
 <!-- ::: -->
 
-
-
 <!-- ::: {.callout-note collapse="true"} -->
+
 <!-- # Clean up your project -->
 
 <!-- -   #| echo: False to hide code from a code chunk.  -->
@@ -260,10 +256,11 @@ h1{font-weight: 400;}
 <!-- -   #| eval: False to not include the output of the code.  -->
 
 <!-- -   [More options](https://rstudio.github.io/cheatsheets/html/quarto.html) -->
+
 <!-- ::: -->
 
-
 <!-- ::: {.callout-note collapse="true"} -->
+
 <!-- # Customize -->
 
 <!-- -   [Formatting, sds 100 :lab 8 ](https://quarto.org/docs/authoring/markdown-basics.html) -->
@@ -276,11 +273,11 @@ h1{font-weight: 400;}
 
 <!-- What more to do?  -->
 
+# Day 22/23: Project 2 workday
+
 Thursday [Presentation of Major](SDS_POM.pdf)
 
 Short `kable()` [demo](https://www.geeksforgeeks.org/kable-method-in-r/)
-
-# Day 22/23: Project 2 workday
 
 Project 1 grades are up and current. Please let me know if you cannot see grades on moodle.
 
@@ -289,12 +286,10 @@ Project 1 grades are up and current. Please let me know if you cannot see grades
 ::: {.callout-note collapse="true"}
 # Git workflow
 
--   [Issues ](https://docs.github.com/en/issues/tracking-your-work-with-issues/configuring-issues/quickstart)
+-   [Issues](https://docs.github.com/en/issues/tracking-your-work-with-issues/configuring-issues/quickstart)
 
 -   [Pull Requests](https://github.blog/developer-skills/github/beginners-guide-to-github-creating-a-pull-request/)
-
 :::
-
 
 <!-- # Day 21  -->
 
@@ -306,11 +301,8 @@ Project 1 grades are up and current. Please let me know if you cannot see grades
 
 <!-- [Project 2](https://classroom.github.com/a/kprELIeW) -->
 
-
-
-
-
 <!-- ::: {.callout-tip collapse="true"} -->
+
 <!-- # lab 4 rendering/submission issues -->
 
 <!-- before rendering: -->
@@ -320,15 +312,17 @@ Project 1 grades are up and current. Please let me know if you cannot see grades
 <!-- gitignore: -->
 
 <!-- Don't push the `sqf_2011.csv` to github you will get an error! Its too big -->
+
 <!-- <!-- -->
 
 <!-- -   First save your qmd somewhere. -->
 
 <!-- -   Uncommit your commit with `git reset --hard HEAD^` or `git reset --hard HEAD~2` -->
 
-<!-- -   You may need to add a `.gitignore` file.--> 
+<!-- -   You may need to add a `.gitignore` file.-->
 
 <!-- -   Open the `.gitignore` file and add `sqf_2011.csv` to it. -->
+
 <!-- ::: -->
 
 # Day 21 lab 5
@@ -338,18 +332,16 @@ Project 1 grades are up and current. Please let me know if you cannot see grades
 ::: {.callout-tip collapse="true"}
 # Project 2 Details
 
-- Project 2 groups on Moodle
+-   Project 2 groups on Moodle
 
-- Monday and Wednesday after break are dedicated project 2 days
+-   Monday and Wednesday after break are dedicated project 2 days
 
-- More on git work flow. (Issues)
+-   More on git work flow. (Issues)
 
-- Due: Friday: April 4th.
-
+-   Due: Friday: April 4th.
 :::
 
 [Lab 5](https://classroom.github.com/a/zhMWEXc7)
-
 
 # Day 20 Pivots
 
@@ -359,19 +351,18 @@ Project 1 notes
 
 We'll do Problems [Chapter 6: 5 a-c,](https://mdsr-book.github.io/mdsr3e/06-dataII.html#dataII-exercises) in class today. [Chapter 5: 3,4](https://mdsr-book.github.io/mdsr3e/05-joins.html#join-exercises)
 
-
 # Day 19 Joining tables
 
 [Reflection Lab 4](/course-materials/lectures/20_SQF.qmd)
 
-Quiz 2 will open in Wednesday and be due the Friday after break. 
+Quiz 2 will open in Wednesday and be due the Friday after break.
 
 Exploration: How to join tables in R?
 
 ::: {.callout-tip collapse="true"}
-# Simple Join data frame 
+# Simple Join data frame
 
-These data are from `dplyr` 
+These data are from `dplyr`
 
 `band_members`
 
@@ -381,8 +372,6 @@ These data are from `dplyr`
 [Joining two tables in class exercise](https://scao53.github.io/sds192spring2023/in-class_exercises/Lec17In-classExercise-JoinTables.zip)
 
 [Problems 1](https://mdsr-book.github.io/mdsr3e/05-joins.html#join-exercises)
-
-
 
 # Day 17/18 Lab 4
 
@@ -397,6 +386,7 @@ Section 1: The difference between `%in%` and `==`
 <!-- [Stop and Frisk Wrangling](/course-materials/lectures/15_Wrangling_1_SQF.qmd) -->
 
 <!-- ::: {.callout-tip collapse="true"} -->
+
 <!-- # lab 4 rendering/submission issues -->
 
 <!-- rendering: -->
@@ -414,6 +404,7 @@ Section 1: The difference between `%in%` and `==`
 <!-- -   You may need to add a `.gitignore` file. -->
 
 <!-- -   Open the `.gitignore` file and add `sqf_2011.csv` to it. -->
+
 <!-- ::: -->
 
 # Day 16/17 Wrangling on one table
@@ -447,22 +438,19 @@ install.packages("babynames")
 
 [dpylr cheatsheet for wrangling](https://nyu-cdsc.github.io/learningr/assets/data-transformation.pdf)
 
-
-
 # Day 14/15 Ethics
+
 (Section 1 is one day below)
 
 ::: {.callout-tip collapse="true"}
-# RStudio tips and tricks. 
+# RStudio tips and tricks.
 
 Running chunk tips
 
 Running all the above
-
 :::
 
 [Data Ethics](/course-materials/lectures/11_ethics.qmd)
-
 
 # Day 13/14 Project 1 work day
 
@@ -471,47 +459,44 @@ Running all the above
 ::: {.callout-tip collapse="true"}
 # Rendering notes
 
-Push all files to github. 
+Push all files to github.
 
-grader's notes in grade.qmd.  
-
+grader's notes in grade.qmd.
 :::
 
-Last day to work on Project 1 in class, due in a week. 
-
-
+Last day to work on Project 1 in class, due in a week.
 
 # Day 12/13 Project 1 work day
 
 (Section 1 is on day 10)
 
-Quiz 1 due tonight (both sections). 
+Quiz 1 due tonight (both sections).
 
 ::: {.callout-tip collapse="true"}
-
-# Interested in mapping? 
+# Interested in mapping?
 
 [SAL offering workshops](https://drive.google.com/file/d/1hjMORAGX-Dl1pWTl7Iy3gFuS3b5CkX4s/view)
 
 ### Teach yourself GIS: Resource and data walk-through
+
 > February 27th, 4:15-5:15pm, in the SAL
 
 > Interested in teaching yourself some GIS or building on your existing GIS skills? This workshop will walk participants through various tutorials, online short courses, and major data sources, enabling you to find the resources you need. Participants will also create a map in ArcGIS Online from a Map in a Minute tutorial.
 
-### Mapping political data with Flourish 
+### Mapping political data with Flourish
+
 > March 6th, 4:15-5:15pm, in the SAL
 
 > Flourish is a web-based tool for mapping and data visualization. Using data about contemporary politics, learn how to bring in data, customize how it is displayed, and export it to Canva.
 
 ### Georeferencing historic maps
+
 > March 13th, 4:15-5:15pm, in the SAL
 
 > Learn how to create digital maps from paper ones through a process called georeferencing. Participants will explore historic maps of Massachusetts in Atlascope and gain practice georeferencing historic maps of Northampton using the AllMaps platform.
-
 :::
 
 ::: {.callout-tip collapse="false"}
-
 # Working on projects together.
 
 -   You might realize you are sharing an API key. Consider what that means.
@@ -525,10 +510,7 @@ Quiz 1 due tonight (both sections).
 -   Practice a pull request today.
 
 -   Make your graph legible to the lay person (title, labels, source, captions, etc).
-
 :::
-
-
 
 # Day 11/12 Lab 3: NYTBooks
 
@@ -553,6 +535,7 @@ See moodle for project groups.
 <!-- [Link to lab 3](https://classroom.github.com/a/Nwp-FDXz) -->
 
 <!-- ::: {.callout-warning collapse="true"} -->
+
 <!-- # Lab 3 pitfalls -->
 
 <!-- Step 5: part 3. To set the line color do color="green" -->
@@ -564,6 +547,7 @@ See moodle for project groups.
 <!-- reorder(categorical_var, numeric variable, function for reordering) -->
 
 <!-- We'll discuss ethics Monday or Wednesday, read chapter 8. -->
+
 <!-- ::: -->
 
 # Day 10 Color theory
@@ -590,12 +574,11 @@ Some time to finish up lab 2.
 ## Lab requirements
 
 -   All labs must be rendered as a pdf or self-contained html.
-
 :::
 
 <!-- # Day 9 Taxonomy part 2 -->
 
-<!-- <!-- [Check out lab 3](https://smithcollege-sds.github.io/sds100/lab_03_graphics.html) from sds 100 I might not have to do this. --> 
+<!-- <!-- [Check out lab 3](https://smithcollege-sds.github.io/sds100/lab_03_graphics.html) from sds 100 I might not have to do this. -->
 
 <!-- 1.  [Together: scatter plot](./course-materials/in-class-activies/3_Scatterplots.zip) -->
 
@@ -605,15 +588,13 @@ Some time to finish up lab 2.
 
 <!-- 3.  [Frequency Plots](course-materials/lectures/9_frequency_plots.qmd) -->
 
-<!-- <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/IRJ2Ac9vI5o?si=JMeZEIQQNGNBscno" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen> --> 
+<!-- <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/IRJ2Ac9vI5o?si=JMeZEIQQNGNBscno" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen> -->
 
-<!-- <!-- </iframe> --> 
-
-
+<!-- <!-- </iframe> -->
 
 # Day 9 Lab 2
 
-Quiz 1 is open. It is due in two Mondays. 
+Quiz 1 is open. It is due in two Mondays.
 
 5 minutes about colors via the [cheat sheet](https://posit.co/wp-content/uploads/2022/10/data-visualization-1.pdf).
 
@@ -626,12 +607,11 @@ This lab is due Wednesday at Midnight.
 
 We will discuss colors on Monday when you get to them in ex 6:
 
-You can reread [this section](https://mdsr-book.github.io/mdsr3e/02-datavizI.html#sec-color) if you forget what sequential,diverging,qualitative mean. 
+You can reread [this section](https://mdsr-book.github.io/mdsr3e/02-datavizI.html#sec-color) if you forget what sequential,diverging,qualitative mean.
 
-Or check out the colors examples on the [cheat sheet](https://posit.co/wp-content/uploads/2022/10/data-visualization-1.pdf). 
+Or check out the colors examples on the [cheat sheet](https://posit.co/wp-content/uploads/2022/10/data-visualization-1.pdf).
 
 Intuitive [Color Examples](https://jhudatascience.org/tidyversecourse/dataviz.html#colors)
-
 :::
 
 # Day 8 Taxonomy
@@ -673,10 +653,9 @@ class_info <- read_sheet("https://docs.google.com/spreadsheets/d/1k9qA7XldtHB8-F
 
 -   Exploratory Data analysis and How R builds a graph.
 
-If time: 
+If time:
 
 -   [Discussion: Taxonomy of Graphics](./course-materials/in-class-activies/3Activity_Taxonomy_of_Graphics.qmd)
-
 
 # Day 7 Intro to Data Viz
 
@@ -686,32 +665,25 @@ Reflect on the functions [we made](./course-materials/in-class-activies/SOLUTION
 
 [Data Viz No Computers](./course-materials/lectures/1first-day-survey/Data-Viz-No-Computers.qmd)
 
+```{=html}
 <!-- Cleaning up documents happens in sds100 [lab 8](https://smithcollege-sds.github.io/sds100/lab_08_formatting.html)
 
 <!-- [Cleaning up documents](https://quarto.org/docs/computations/execution-options.html)
 
 -   [Spinelli Center](https://www.smith.edu/academics/applied-learning-research/spinelli-center-quantitative-learning#PanelDataCnslr) -->
-
-
-
+```
 
 # Day 6 Making Functions (cont.)
 
-[Download this function practice](https://github.com/Nics-Github/SDS192/blob/a9f20aec96c663da36227874d9649762b04db983/course-materials/in-class-activies/function_examples.qmd). 
+[Download this function practice](https://github.com/Nics-Github/SDS192/blob/a9f20aec96c663da36227874d9649762b04db983/course-materials/in-class-activies/function_examples.qmd).
 
-Solutions will be posted later in the class. 
+Solutions will be posted later in the class.
 
 [Solutions](./course-materials/in-class-activies/SOLUTIONS_function_examples.qmd)
-
-
-
-
-
 
 # Day 5 Intro to Functions
 
 <!-- Students know how to store variables -->
-
 
 <!-- - Students know about functions and arguments -->
 
@@ -719,7 +691,7 @@ Solutions will be posted later in the class.
 
 Datafest is April 4-6 at UMass
 
-Check lab 1 is successfully submitted on git. 
+Check lab 1 is successfully submitted on git.
 
 Intro to functions via first_map.qmd (see maps folder in lab 1)
 
@@ -737,7 +709,6 @@ Intro to functions via first_map.qmd (see maps folder in lab 1)
 -   Introduction to the pipe
 
 -   Getting data into R
-
 :::
 
 [Lecture: Intro to functions](course-materials/lectures/23_functions.qmd)
@@ -756,9 +727,7 @@ Where are we going?
 -   Understand File Structure
 
     -   Filing system
-    
 :::
-
 
 # Day 3 R Ecosystem and More SQL
 
@@ -768,7 +737,6 @@ Where are we going?
 -   Section 1 - about me
 
 -   Section 2 - variable types
-
 :::
 
 -   [Brief History of R](./course-materials/lectures/Brief-R-history.qmd)
@@ -784,15 +752,13 @@ Where are we going?
 
 -   Problems 6-9 in pairs
 
-Try without hints, then hints, finally solutions. 
-
+Try without hints, then hints, finally solutions.
 :::
 
 ::: {.callout-note collapse="true"}
 ### If time: Final project introduction!
 
-- Open Lab 1
-
+-   Open Lab 1
 :::
 
 # Day 2 Github Lab
@@ -820,13 +786,13 @@ You are only installing git today. There are other files, Ignore the other files
 
 Link github account to github classroom - sign into github
 
--   prereq -> You need to have a github account
+-   prereq -\> You need to have a github account
 
--   [Click here](https://classroom.github.com/a/Ca2gHqyI) for lab 1. This is due in one week. 
+-   [Click here](https://classroom.github.com/a/Ca2gHqyI) for lab 1. This is due in one week.
 
 -   very carefully find your name in the roster and click it.
 
--   you should see todays lab in what is called a repository. 
+-   you should see todays lab in what is called a repository.
 :::
 
 # Day 1 Welcome and SQL
@@ -848,9 +814,6 @@ Link github account to github classroom - sign into github
 -   [Overview of Intro to Data Science](./course-materials/lectures/1_Overview_of_the_course.qmd)
 
 -   [Intro to SQL](./course-materials/lectures/0_First_Day_SQL.qmd)
-
-
-
 
 ### Walk to MCConnell 215 and 214
 
