@@ -203,13 +203,13 @@ h1{font-weight: 400;}
 
 <!-- Making our own functions -->
 
-<!-- # Day 26: Iteration -->
+# Day 26: Iteration
 
-<!-- [Lecture: `across()` and `map()`](course-materials/lectures/24_across_maps.qmd) -->
+[Lecture: `across()` and `map()`](course-materials/lectures/24_across_maps.qmd)
 
-<!-- [In class activity](./course-materials/in-class-activies/24_In-classExercise-Iteration.qmd) -->
+[In class activity](./course-materials/in-class-activies/24_Iteration.qmd)
 
-<!-- Making our own functions -->
+
 
 <!-- # Day 25: Function refresher -->
 

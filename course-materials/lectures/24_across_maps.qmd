@@ -16,21 +16,56 @@ In most computer programming languages you can write a for loop.
 
 In R we try not to do this (although we can).
 
+## Ways to make a vector in R
+
+::: incremental
+-   `1:100` makes a vector of the number 1 through 100 in R.
+
+-    `c("a","b")` makes a vector with "a" and "b" in it
+
+-   `vector()` also makes a vector.
+
+-   `df$column` makes a vector of a data frame column.
+:::
+
+Remember vectors are sets of values of the same type.
+
+## Example for() loop
+
+```{r}
+#letters:  R has the alphabet built in. 
+
+for (letter in letters){
+  print(letter)
+}
+
+```
+
 ## Computing multiple powers.
 
 Write a for loop that computes e\^1, e\^2,... e\^100 and prints them.
 
 Or better yet stores them as a vector (this is a little harder).
 
+Here's a start:
+
+```{r}
+e = 2.71828 # define e
+vector_o_numbers <- vector(mode = "numeric", length = 100) #Making the loop fast by making an empty vector first.
+
+# write for loop below. 
+```
+
 ## Solution
 
 ```{r}
 e = 2.71828
-vector_o_numbers <- vector(mode = "numeric", length = 100)
+vector_o_numbers <- vector(mode = "numeric", length = 100) #Making the loop fast by making an empty vector first.
 
 for(exponent in 1:100){
-  print(e^exponent)
-  vector_o_numbers[exponent] <- exp(exponent)
+  print(e^exponent) # print the number
+  vector_o_numbers[exponent] <- exp(exponent) # store the number
+  # we don't need to return() in R, b/c the last line is always returned. 
 }
 ```
 
@@ -59,9 +94,21 @@ This means they take a vector as an input and give a vector as an output.
 
 ```{r}
 # Here I recompute the for loop with 100 powers of e in it. 
-
 faster_vec_o_numbers <- exp(1:100)
 
+```
+
+## Checking the time
+
+If you are interested you can check to see which is faster with system.time()
+
+```{r}
+
+print("With a for loop the time is:")
+system.time(for(exponent in 1:100){vector_o_numbers[exponent] <- exp(exponent)})
+
+print("Using vectorized operations the time is: ")
+system.time( faster_vec_o_numbers <- exp(1:100))
 ```
 
 ## Some vectorized operations and functions
@@ -92,8 +139,6 @@ celcius_temps <- C_to_F(0:100)
 
 ```
 
-Note: In R the last line is always returned, so we do not need to explicitly return anything.
-
 ## Aggregating functions
 
 These are functions that take a vector and give one output.
@@ -102,11 +147,11 @@ Examples: `mean()`, `sd()`, `median()`, `sum()`, `n()`
 
 They are not vectorized functions.
 
-## Vectorize Exisiting functions
+## Vectorize exisiting functions
 
-We can vectorized existing functions with helper functions in R
+We can vectorize existing functions with helper functions in R
 
-Two general types are `across()` and `map()`
+Two general what of doing this are `across()` and `map()`
 
 ## `across()` and `map()`
 
@@ -119,6 +164,7 @@ These functions allow us to preform the same operation across multiple rows.
 `map()` comes from [the `purr` package.](https://github.com/rstudio/cheatsheets/blob/main/purrr.pdf)
 
 -   many different map()s
+    -   map_df() will be useful for us.
 -   apply a function to every element
 
 `across()` comes from [the `dplyr` package.](https://raw.githubusercontent.com/rstudio/cheatsheets/main/data-transformation.pdf)
@@ -132,21 +178,22 @@ These functions allow us to preform the same operation across multiple rows.
 head(iris)
 ```
 
-## A for loop
+<!-- ## A for loop -->
 
-There are four columns in iris and I'd like to calculate the mean of each of them.
+<!-- There are four columns in iris and I'd like to calculate the mean of each of them. -->
 
-This feels bad. I'm using vectors in a four loop
+<!-- This feels bad. I'm using vectors in a four loop -->
 
-```{r}
-for (column in 1:4){
-  print(mean(iris[[column]], na.rm = TRUE))
-}
-```
+<!-- ```{r} -->
+<!-- library(tidyverse) -->
+<!-- for (column in 1:4){ -->
+<!--   print(mean(iris[[column]], na.rm = TRUE)) -->
+<!-- } -->
+<!-- ``` -->
 
 ## Average with across
 
-Let's mimic the for loop above.
+There are four columns in iris and I'd like to calculate the mean of each of them.
 
 ```{r}
 iris %>%
@@ -172,6 +219,8 @@ iris %>%
 
 We'll look at 5 methods of rounding.
 
+I'll also show you a couple of ways to select columns.
+
 ## Rounding with `across()`
 
 Let's say we want to round every value.
@@ -179,9 +228,11 @@ Let's say we want to round every value.
 ```{r}
 iris %>%
   group_by(Species) %>%
-  summarise(across(
-    .cols = Sepal.Length:Petal.Width, 
-    .fns = round))
+  summarise(
+    across(
+      .cols = Sepal.Length:Petal.Width, # R makes a vector of column names
+      .fns = round)
+    )
 ```
 
 ## Rounding without `across()`
@@ -191,15 +242,15 @@ and the tidyverse
 ```{r}
 iris %>%
   group_by(Species) %>%
-  mutate(Sepal.Length = round(Sepal.Length),
-            Sepal.Width = round(Sepal.Width),
-            Petal.Length = round(Petal.Length),
-            Petal.Width = round(Petal.Width))
+  mutate(
+    Sepal.Length = round(Sepal.Length),
+    Sepal.Width = round(Sepal.Width),
+    Petal.Length = round(Petal.Length),
+    Petal.Width = round(Petal.Width)
+    )
 ```
 
 ## Rounding old school R
-
-This is not taking advantage of the vectors.
 
 ```{r}
 # one at a time
@@ -211,7 +262,7 @@ iris$Petal.Width <- round(iris$Petal.Width)
 
 ```
 
-## Rounding w/ vectors
+## Rounding old school w/ vectors
 
 Round all at the same time because round() is vectorized.
 
@@ -222,21 +273,22 @@ iris <- round(iris[1:4])
 ## Rounding example 5
 
 ```{r}
-# This removes the previous iris df that we made. 
-rm(iris)
+rm(iris) # This removes the previous iris df that we made. 
 
 iris %>%
   group_by(Species) %>%
-  reframe(across(
-    .cols = starts_with("Sepal"), 
-    .fns = ~ round(. , digits = 2)))
+  summarise(
+    across( 
+      .cols = starts_with("Sepal"), 
+      .fns = ~ round(. , digits = 2))
+    ) # The ~ introduces a custom round function the . references the data.  
 ```
 
 ## What .fns?
 
 Any aggregating function with the appropriate data type can be used.
 
-mean, median, sd, round
+`mean`, `median`, `sd`, `round`
 
 [Here's a nice list](https://www.datacamp.com/doc/r/functions) just drop the parenthesis.
 
@@ -260,9 +312,11 @@ It performs some operation on a data frame, vector or list.
 
 map() returns a list.
 
+map_df() returns a data frame.
+
 ```{r}
 iris |>
-  map(.f = mean)
+  map_df(.f = mean)
 ```
 
 ## Different maps()
