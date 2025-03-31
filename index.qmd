@@ -203,13 +203,13 @@ h1{font-weight: 400;}
 
 <!-- Making our own functions -->
 
-# Day 26: Iteration
+# Day 25: Iteration
 
 [Lecture: `across()` and `map()`](course-materials/lectures/24_across_maps.qmd)
 
 [In class activity](./course-materials/in-class-activies/24_Iteration.qmd)
 
-
+[Anonymous functions](course-materials/lectures/30_anonymous_functions.qmd)
 
 <!-- # Day 25: Function refresher -->
 
@@ -223,7 +223,7 @@ No class next Wednesday April 2, finish up your projects.
 
 [More on masking](https://rlang.r-lib.org/reference/topic-data-mask.html)
 
-[Anonymous functions](course-materials/lectures/30_anonymous_functions.qmd)
+
 
 <!-- <!-- [Solution to Monday's in class activity](/course-materials/in-class-activies/day_25solutions_function_writing.html) -->
 
