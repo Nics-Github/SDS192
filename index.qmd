@@ -195,13 +195,14 @@ h1{font-weight: 400;}
 
 <!-- [Chapter 7 Problem 1 and 3](https://mdsr-book.github.io/mdsr3e/07-iteration.html#iteration-exercises) -->
 
-<!-- # Day 28 Lab 6 -->
+# Day 27 Lab 6
 
-<!-- [Lab 6](https://classroom.github.com/a/bZFal6M8) -->
+[Lab 6](https://classroom.github.com/a/OvEKpt9p)
 
-<!-- # Day 27: Bonus Project 2 day? -->
+Today: Bonus office hour at 2:30-3:30.
 
-<!-- Making our own functions -->
+# Day 26: No class
+
 
 # Day 25: Iteration
 
