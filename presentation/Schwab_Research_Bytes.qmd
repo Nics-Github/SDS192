@@ -89,17 +89,27 @@ ggplot() +
 
 ```
 
-## Faculty Training
+# Faculty Training
 
-Two Faculty: Eric Carreira and I
+## Individual
+
+### Two Faculty: Eric Carreira and I
 
 -   [DSC- WAV](https://dsc-wav.github.io/facdev21/) grant funded 3 weeks of training
 
 -   Independent Study
 
+### Personal:
+
 -   Smith Teaching
 
--   UT Austin
+-   Masters Through UT Austin
+
+## Workshops:
+
+Teaching Stats with R
+
+-   HCC and WSU
 
 # Challenges
 
@@ -128,16 +138,16 @@ Two Faculty: Eric Carreira and I
 
 ```
 
-| Math |   | Comp Sci |
-|----------------------------|-----------------|----------------------------|
-| Intro to Data Science |  | Intro to Data Science |
-| Statistical Computing |  | Programming Fundamentals I |
-| Calculus 1 |  | Computer Concepts with Applications |
-| Calculus 2 |  | Applied Database Management |
-| Linear Algebra |  | Programming Fundamentals II \* |
-| Precalculus \* |  | Data Structures \* |
-| Discrete Mathematics \* |  |  |
-| Probability and Statistics for Engineers... \* |  |  |
+| Math | Comp Sci |
+|----|----|
+| Intro to Data Science | Intro to Data Science |
+| Statistical Computing | Programming Fundamentals I |
+| Calculus 1 | Computer Concepts with Applications |
+| Calculus 2 | Applied Database Management |
+| Linear Algebra | Programming Fundamentals II \* |
+| Precalculus \* | Data Structures \* |
+| Discrete Mathematics \* |  |
+| Probability and Statistics for Engineers... \* |  |
 
 \* electives
 
@@ -152,16 +162,16 @@ Two Faculty: Eric Carreira and I
 
 ```
 
-| Math |   | Comp Sci |
-|----------------------------|-----------------|----------------------------|
-| Intro to Data Science (MTH 190 and CSI 190) |  | Intro to Data Science (MTH 190 and CSI 190) |
-| Statistical Computing (MTH 192) |  | Programming Fundamentals I (CSI 106 - Python) |
-| Calculus 1 (MTH 113) |  | Computer Concepts with Applications (CSI 111) |
-| Calculus 2 (MTH 114) |  | Applied Database Management (CSI 242) |
-| Linear Algebra (MTH 205) |  | Programming Fundamentals II (CSI 218 - Python)\* |
-| Precalculus (MTH 108) \* |  | Data Structures (CSI 258 )\* |
-| Discrete Mathematics (MTH 230) \* |  |  |
-| Probability and Statistics for Engineers...(MTH 245) \* |  |  |
+| Math | Comp Sci |
+|------------------------|------------------------|
+| Intro to Data Science (MTH 190 and CSI 190) | Intro to Data Science (MTH 190 and CSI 190) |
+| Statistical Computing (MTH 192) | Programming Fundamentals I (CSI 106 - Python) |
+| Calculus 1 (MTH 113) | Computer Concepts with Applications (CSI 111) |
+| Calculus 2 (MTH 114) | Applied Database Management (CSI 242) |
+| Linear Algebra (MTH 205) | Programming Fundamentals II (CSI 218 - Python)\* |
+| Precalculus (MTH 108) \* | Data Structures (CSI 258 )\* |
+| Discrete Mathematics (MTH 230) \* |  |
+| Probability and Statistics for Engineers...(MTH 245) \* |  |
 
 \* electives
 
@@ -177,7 +187,9 @@ Two Faculty: Eric Carreira and I
 
 ## Thanks
 
-Ben Baumer and Nick Horton and [others involed in DSC-WAV](https://dsc-wav.github.io/www/people.html)
+Ben Baumer, Nick Horton, and the [DSC-WAV](https://dsc-wav.github.io/www/people.html) PIs
+
+**HCC's DS Committee:**
 
 Eric Carreira
 
