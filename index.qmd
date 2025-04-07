@@ -197,11 +197,9 @@ h1{font-weight: 400;}
 
 # Day 28: Final Project: Website
 
-
+Start thinking about who you want to work with on project 3: 2 or 3 people. 
 
 The final project instructions can be found [here](./course-materials/Final-Project/Project.qmd).
-
-
 
 ::: {.callout-note collapse="true"}
 
