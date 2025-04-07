@@ -10,7 +10,9 @@ toc: false
 
 For your final project you will build a website displaying your three projects from the semester.
 
-This final project is a portfolio of your work, you can choose to leave it on the internet or take it down after it is graded.
+You do not need to post it on the internet.
+
+If you do post it on the internet I will tell you when I'm done grading so you may take it down.
 
 You do not need to remake your projects, but you may want to proof read the blog posts.
 
@@ -71,3 +73,25 @@ A perfect Digital Portfolio takes time to make, yours does not need to be perfec
 -   This is meant to be a simple skill that past students expressed that they wished they knew how to do. It should not be very very time consuming. Make something that meet requirements then move on. You can perfect it later.
 
 -   If you would prefer to not post a website online, you still have to make one, then you have to invite me to your repo so I can download it and make sure it works. You have to let me know you are doing this before the due date.
+
+## Grading: 
+
+Each of the following bullets is worth one point: 
+
+-   1 Each project is on a different webpage
+
+-   1 Code, warnings , messages, etc. are removed.
+
+There are five pages:
+
+-  1 landing page
+
+-  3 per project
+
+-   1 an about page
+
+-   1 nav bar use
+
+-  1 professional appearance
+
+-  1 website rendered and on github

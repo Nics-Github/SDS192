@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.42">
+<meta name="generator" content="quarto-1.5.57">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -37,12 +37,12 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-b53751a350365c71b6c909e95f209ed1.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-a63af1ca33dac87a3264a732013fe00b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-4ae9f64677753ab2fc57376227d86151.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -177,7 +177,8 @@ ul.task-list li input[type="checkbox"] {
 <section id="final-portfolio" class="level2">
 <h2 class="anchored" data-anchor-id="final-portfolio">Final portfolio</h2>
 <p>For your final project you will build a website displaying your three projects from the semester.</p>
-<p>This final project is a portfolio of your work, you can choose to leave it on the internet or take it down after it is graded.</p>
+<p>You do not need to post it on the internet.</p>
+<p>If you do post it on the internet I will tell you when I’m done grading so you may take it down.</p>
 <p>You do not need to remake your projects, but you may want to proof read the blog posts.</p>
 <p>You do not need to include your name on any of your work and you need to get permission from your partner to include their name.</p>
 <p>(If you are actually making a digital portfolio, that you plan to keep on the internet, your name would be included in the about me section.)</p>
@@ -223,6 +224,23 @@ ul.task-list li input[type="checkbox"] {
 <li><p>After your website is graded I’ll let you know and you should turn it off.</p></li>
 <li><p>This is meant to be a simple skill that past students expressed that they wished they knew how to do. It should not be very very time consuming. Make something that meet requirements then move on. You can perfect it later.</p></li>
 <li><p>If you would prefer to not post a website online, you still have to make one, then you have to invite me to your repo so I can download it and make sure it works. You have to let me know you are doing this before the due date.</p></li>
+</ul>
+</section>
+<section id="grading" class="level2">
+<h2 class="anchored" data-anchor-id="grading">Grading:</h2>
+<p>Each of the following bullets is worth one point:</p>
+<ul>
+<li><p>1 Each project is on a different webpage</p></li>
+<li><p>1 Code, warnings , messages, etc. are removed.</p></li>
+</ul>
+<p>There are five pages:</p>
+<ul>
+<li><p>1 landing page</p></li>
+<li><p>3 per project</p></li>
+<li><p>1 an about page</p></li>
+<li><p>1 nav bar use</p></li>
+<li><p>1 professional appearance</p></li>
+<li><p>1 website rendered and on github</p></li>
 </ul>
 
 
@@ -455,6 +473,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
   clipboard.on('success', onCopySuccess);
   if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
     const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
       text: getTextToCopy,
       container: window.document.getElementById('quarto-embedded-source-code-modal')
@@ -565,6 +585,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
+      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {

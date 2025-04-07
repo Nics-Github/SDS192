@@ -201,11 +201,13 @@ h1{font-weight: 400;}
 
 The final project instructions can be found [here](./course-materials/Final-Project/Project.qmd).
 
+
+
 ::: {.callout-note collapse="true"}
 
 # Website work
 
--   Check sds pages permissions/ Make a new private repo
+-   [Empty repo](https://classroom.github.com/a/BrlY_cSN)
 
 -   Move all your website files to that repo
 
