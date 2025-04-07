@@ -26,7 +26,7 @@ df <- tribble(
 )
 ```
 
-x and df are global. They are referred to as environment variables.
+x and df are referred to as global environment variables.
 
 df#x and df\$y are local to the dataframe. They are often referred to as stats-variables.
 
@@ -66,15 +66,15 @@ my_printer(x)
 my_printer(df$x)
 ```
 
-my_printer() looks through the environment first.
+my_printer() looks through the global environment first.
 
 So my_printer(x)=10 and not 5.
 
 ## tidyverse problems
 
-The tidyverse uses a process called masking to blur the lines between environment and data variables.
+The tidyverse uses a process called "masking" to blur the lines between environment and data variables.
 
-This is why we like it so much.
+This is the Tidyverse is easy to use.
 
 However it makes programming with the tidyverse functions more challenging.
 
@@ -120,7 +120,7 @@ If these words are not present we will not need to inject the data (aka unmask t
 
 ## Solution
 
-We need to inject the data into the sumarize function. We can do this by **unmasking** the data with {{}}.
+We need to inject the data into the summarize function. We can do this by **unmasking** the data with {{}}.
 
 This tells R to look for the variable within the dataframe, not the global environment.
 
