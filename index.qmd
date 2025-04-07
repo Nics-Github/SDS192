@@ -195,6 +195,61 @@ h1{font-weight: 400;}
 
 <!-- [Chapter 7 Problem 1 and 3](https://mdsr-book.github.io/mdsr3e/07-iteration.html#iteration-exercises) -->
 
+# Day 28: Final Project: Website
+
+
+
+The final project instructions can be found [here](./course-materials/Final-Project/Project.qmd).
+
+::: {.callout-note collapse="true"}
+
+# Website work
+
+-   Check sds pages permissions/ Make a new private repo
+
+-   Move all your website files to that repo
+
+    -   Recall they are in your lab 1 folder.
+
+-   Add your project 1 to your website.
+
+    -   You could just link it to the main page
+
+    -   [Add it to the side bar](https://quarto.org/docs/websites/website-navigation.html#side-navigations).
+
+:::
+
+::: {.callout-note collapse="true"}
+
+# Clean up your project
+
+-   #| echo: False - to hide code from a code chunk.
+
+-   #| eval: False - to not include the output of the code.
+
+-   #| warnings: False - drop the warnings from functions. 
+
+-   [More options](https://rstudio.github.io/cheatsheets/html/quarto.html)
+
+:::
+
+::: {.callout-note collapse="true"}
+
+# Customize
+
+-   [Formatting, sds 100 :lab 8 ](https://smithcollege-sds.github.io/sds100/lab_08_formatting.html)
+
+-   [Markdown Basics](https://quarto.org/docs/authoring/markdown-basics.html)
+
+-   [set a theme](https://quarto.org/docs/websites/#website-theme)
+
+-   [make a custom 404](https://quarto.org/docs/websites/website-navigation.html#pages-404)
+
+:::
+
+What more to do?
+
+
 # Day 27 Lab 6
 
 [Lab 6](https://classroom.github.com/a/OvEKpt9p)
@@ -228,51 +283,7 @@ No class next Wednesday April 2, finish up your projects.
 
 <!-- <!-- [Solution to Monday's in class activity](/course-materials/in-class-activies/day_25solutions_function_writing.html) -->
 
-<!-- # Day 23: Final Project: Website  -->
 
-<!-- ::: {.callout-note collapse="true"} -->
-
-<!-- # Website work -->
-
-<!-- -   Make a new private repo -->
-
-<!-- -   Move all your website files to that repo -->
-
-<!--     -   Recall they are in your lab 1 folder. -->
-
-<!-- -   Add your project 1 to your website.  -->
-
-<!--     -   You could just link it to the main page -->
-
-<!--     -   [Add it to the side bar](https://quarto.org/docs/websites/website-navigation.html#side-navigations). -->
-
-<!-- ::: -->
-
-<!-- ::: {.callout-note collapse="true"} -->
-
-<!-- # Clean up your project -->
-
-<!-- -   #| echo: False to hide code from a code chunk.  -->
-
-<!-- -   #| eval: False to not include the output of the code.  -->
-
-<!-- -   [More options](https://rstudio.github.io/cheatsheets/html/quarto.html) -->
-
-<!-- ::: -->
-
-<!-- ::: {.callout-note collapse="true"} -->
-
-<!-- # Customize -->
-
-<!-- -   [Formatting, sds 100 :lab 8 ](https://quarto.org/docs/authoring/markdown-basics.html) -->
-
-<!-- -   [set a theme](https://quarto.org/docs/websites/#website-theme) -->
-
-<!-- -   [make a custom 404](https://quarto.org/docs/websites/website-navigation.html#pages-404) -->
-
-<!-- ::: -->
-
-<!-- What more to do?  -->
 
 # Day 22/23: Project 2 workday
 

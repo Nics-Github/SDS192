@@ -8,40 +8,39 @@ toc: false
 
 ## Final portfolio
 
-For your final project you will build a website displaying your three projects from the semester. 
+For your final project you will build a website displaying your three projects from the semester.
 
-This final project is a portfolio of your work, you can choose to leave it on the internet or take it down after it is graded. 
+This final project is a portfolio of your work, you can choose to leave it on the internet or take it down after it is graded.
 
 You do not need to remake your projects, but you may want to proof read the blog posts.
 
-You do not need to include your name on any of your work and you need to get permission from your partner to include their name. 
+You do not need to include your name on any of your work and you need to get permission from your partner to include their name.
 
-(If you are actually making a digital portfolio, that you plan to keep on the internet, your name would be included in the about me section.) 
-
+(If you are actually making a digital portfolio, that you plan to keep on the internet, your name would be included in the about me section.)
 
 ## Requirements:
 
-1.  Each of your projects must be individual files on different webpages. They must be rendered to html. Please check your live website to make sure everything looks good and the links work. 
+1.  Each of your projects must be individual files on different webpages. They must be rendered to html. Please check your live website to make sure everything looks good and the links work.
 
-2.  You must remove the code, warnings and errors from each rendered file. 
+2.  You must remove the code, warnings and errors from each rendered file.
 
 3.  Your website will have 5 pages minimum:
 
-    i.  Landing page - This must have an image of some data graphic, this could be anything you made, including work from SDS 100, 220 or a lab. From the landing page people should be able to navigate to your three projects and your about me section.  
+    i.  Landing page - This must have an image of some data graphic, this could be anything you made, including work from SDS 100, 220 or a lab. From the landing page people should be able to navigate to your three projects and your about me section.
 
     ii. One page per project.
 
-    iii. An about page so people can contact you to hire you. You can choose to have genuine information here but no contact information until you are ready to graduate. You can also choose to post fake information that seems legitimate and professional. You cannot add identifying info about your partner here. Once again fake information is completely okay, I'll be able to verify your github username. 
+    iii. An about page so people can contact you to hire you. You can choose to have genuine information here but no contact information until you are ready to graduate. You can also choose to post fake information that seems legitimate and professional. You cannot add identifying info about your partner here. Once again fake information is completely okay, I'll be able to verify your github username.
 
 4.  You will make use of the nav bar.
 
-5.  Your website should look professional. Use any of the skills from 192 or 100. Consider headers and links. 
+5.  Your website should look professional. Use any of the skills from 192 or 100. Consider headers and links.
 
-6.  Your website must be pushed to github and turned on and working.* Please test it by visiting you site. When you are done submit the link to your site to the forum on moodle. 
+6.  Your website must be pushed to github and turned on and working.\* Please test it by visiting you site. When you are done submit the link to your site to the forum on moodle.
 
 7.  When I'm done grading I'll let you know and you can turn off your portfolio.
 
-8. (Optional) add a 404 page. 
+8.  (Optional) add a 404 page.
 
 ## Website options:
 
@@ -53,18 +52,22 @@ You do not need to include your name on any of your work and you need to get per
 
 ## Some examples of digital portfolios
 
-A perfect Digital Portfolio takes time to make, yours does not need to be perfect. It is just a start, you can add work to it throughout your college and post-college career. 
+A perfect Digital Portfolio takes time to make, yours does not need to be perfect. It is just a start, you can add work to it throughout your college and post-college career.
 
-[Erin Schwab's work](https://erinschwab.webflow.io/)
+[Erin Schwab](https://erinschwab.webflow.io/resume)
+
+[Prof. Poirier](https://lindsaypoirier.github.io/)
+
+[Ben Baumer](https://beanumber.github.io/)
 
 [A website with examples](https://careerfoundry.com/en/blog/data-analytics/data-analytics-portfolio-examples/)
 
 ## A few things to note:
 
--   I am meant to protect your identity as students. Eventually you will want contact information on your portfolio, but leave it off for now. Don't even mention Smith College. 
+-   I am meant to protect your identity as students. Eventually you will want contact information on your portfolio, but leave it off for now. Don't even mention Smith College.
 
 -   After your website is graded I'll let you know and you should turn it off.
 
--   This is meant to be a simple skill that students last Fall wished they knew how to do. It should not be very very time consuming. Make something that meet requirements then move on. You can perfect it later.
+-   This is meant to be a simple skill that past students expressed that they wished they knew how to do. It should not be very very time consuming. Make something that meet requirements then move on. You can perfect it later.
 
 -   If you would prefer to not post a website online, you still have to make one, then you have to invite me to your repo so I can download it and make sure it works. You have to let me know you are doing this before the due date.
