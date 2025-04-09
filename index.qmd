@@ -167,12 +167,6 @@ h1{font-weight: 400;}
 
 <!-- Quiz 3 on mapping is open, don't take it until after Monday's class.  -->
 
-<!-- <!-- # Day 26 Static Mapping part 1 -->
-
-<!-- <!-- Announcements -->
-
-<!-- <!-- [Example: static maps](./course-materials/lectures/26_maps-ggplot.qmd) -->
-
 <!-- # Day 30 Functions and Static Maps -->
 
 <!-- Let's finish this problem from last class.  -->
@@ -185,11 +179,34 @@ h1{font-weight: 400;}
 
 <!-- ::: -->
 
+# Day 30 Mapping with simple features (sf) and shape files
+
+Simple features and Shape files.
+
+-   [Vermont's Geospacial Data](https://geodata.vermont.gov/)
+
+-   [MA Bike Trails](https://www.mass.gov/info-details/massgis-data-bicycle-trails)
+
+-   [tidygeocoder services](https://jessecambon.github.io/tidygeocoder/articles/geocoder_services.html)
+
+[In class activity](./course-materials/in-class-activies/27_mapping.zip)
 
 
-<!-- [Mapping Review](course-materials/lectures/30_map_review.qmd) -->
+# Day 29: Maps
 
-<!-- [Example: static maps](./course-materials/lectures/26_maps-ggplot.qmd) -->
+[Mapping Review](course-materials/lectures/30_map_review.qmd)
+
+[Example: static maps](./course-materials/lectures/26_maps-ggplot.qmd)
+
+Simple features and Shape files.
+
+-   [Vermont's Geospacial Data](https://geodata.vermont.gov/)
+
+-   [MA Bike Trails](https://www.mass.gov/info-details/massgis-data-bicycle-trails)
+
+-   [tidygeocoder services](https://jessecambon.github.io/tidygeocoder/articles/geocoder_services.html)
+
+[In class activity](./course-materials/in-class-activies/27_mapping.zip)
 
 <!-- # Day 29 Practice function writing in R  -->
 

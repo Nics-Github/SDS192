@@ -120,7 +120,7 @@ map_chr(.x = words,
     .f = \(word) str_to_upper(word))
 ```
 
-## Try one 
+## Try one
 
 ## Deep dive
 
