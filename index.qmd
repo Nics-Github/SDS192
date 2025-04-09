@@ -179,22 +179,27 @@ h1{font-weight: 400;}
 
 <!-- ::: -->
 
+
+<!-- # Day 31 Choropleth Mapping and Leaflet -->
+
+<!-- ![Cora's map](www/coras_map.jpg) -->
+
+<!-- [Choropleth Mapping](./course-materials/in-class-activies/29_Choropleth_and_Leaflet.qmd) -->
+
+<!-- Simple features and Shape files. -->
+
+
+
 # Day 30 Mapping with simple features (sf) and shape files
 
-Simple features and Shape files.
 
--   [Vermont's Geospacial Data](https://geodata.vermont.gov/)
-
--   [MA Bike Trails](https://www.mass.gov/info-details/massgis-data-bicycle-trails)
-
--   [tidygeocoder services](https://jessecambon.github.io/tidygeocoder/articles/geocoder_services.html)
 
 [In class activity](./course-materials/in-class-activies/27_mapping.zip)
 
 
 # Day 29: Maps
 
-[Mapping Review](course-materials/lectures/30_map_review.qmd)
+<!-- [Mapping Review](course-materials/lectures/30_map_review.qmd) -->
 
 [Example: static maps](./course-materials/lectures/26_maps-ggplot.qmd)
 
