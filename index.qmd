@@ -192,10 +192,11 @@ h1{font-weight: 400;}
 
 # Day 30 Mapping with simple features (sf) and shape files
 
-
+[VISA info session](www/Visa_April_15.pdf)
 
 [In class activity](./course-materials/in-class-activies/27_mapping.zip)
 
+Maybe fix some things in the final project if time. 
 
 # Day 29: Maps
 
