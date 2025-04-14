@@ -39,12 +39,12 @@ library(tidycensus)
 
 ```{r}
 # Get population map for USA
-usa_pop_orig <- 
+usa_pop <- 
   tidycensus::get_acs(
     geography = "state", 
     variables = "B01003_001", # This is the population variable
     #state = "MA",
-    geometry = FALSE # this adds a geometry column. Was broken Wednesday :(
+    geometry = TRUE # this adds a geometry column. Was broken Wednesday :(
   ) |>
   rename(name = NAME)
 
@@ -53,9 +53,8 @@ usa_states <- maps::map("state",  plot = FALSE, fill = TRUE) |>
   st_as_sf(coords = c("x", "y"), crs = 4326)  |>
   mutate(name = tools::toTitleCase(ID),
          )
-
 usa_pop <- usa_states |>
-  left_join(usa_pop_orig)
+  left_join(usa_pop)
 
 # Plot gradient choropleth map based on numerical variable estimate
 ggplot() +
@@ -68,7 +67,7 @@ ggplot() +
 
 ```{r}
 # Get MA county sf object, that includes population estimate column in data
-mass_pop_orig <- 
+mass_pop <- 
   tidycensus::get_acs(
     geography = "county", 
     variables = "B01003_001", # This is the population variable
@@ -83,9 +82,8 @@ ma_counties <- maps::map("county",regions = "massachusetts",  plot = FALSE, fill
   st_as_sf(coords = c("x", "y"), crs = 4326) |>
   mutate(county_name = str_replace(ID, pattern = "massachusetts,", replace = ""),
          county_name = tools::toTitleCase(county_name))
-
 mass_pop <- ma_counties |>
-    left_join(mass_pop_orig)
+    left_join(mass_pop)
 
 # Plot gradient choropleth map based on numerical variable estimate
 ggplot() +
@@ -115,6 +113,15 @@ ggplot() +
   scale_fill_brewer(palette = "Set2")
 ```
 
+## Exercise:
+
+Remake Cora's US population map.
+
+
+
+
+
+
 Check out this site for more on [tidycensus](https://walker-data.com/tidycensus/articles/basic-usage.html)
 
 Specifically the `load_variables` function.
@@ -127,7 +134,7 @@ View(v20)
 
 # What counties have the highes proportion of under 5s?
 
-We need to weight our data in some way. 
+We need to scale our data in some way. 
 ```{r}
 # Where do all the under 5 year olds live?
 
@@ -137,14 +144,13 @@ mass_pop_under_5 <-
     variables = c(population = "B01003_001", under_5m="B01001_003", under_5f= "B01001_027"),
     state = "MA",
     # We'll need to pivot wider, but that doesn't work with simple features. 
-    geometry = FALSE
+    geometry = TRUE
   )|>
-  # Add centroids to each region using purrr package
+  # Break up the columns in a way that makes sense. 
  tidyr::separate(NAME, c("County", "State"), sep = ", ") |> 
  tidyr::separate(County, c("County", "Fluff"), sep = " ") 
 
-# Just count them we get a similar map to before. 
-
+# Just count them we get a similar map to before. pivoting seems to ruin geometry.
 props <- mass_pop_under_5 |> 
   select(County,variable,estimate)|>
   pivot_wider(names_from = variable, values_from = estimate)|>
@@ -159,7 +165,7 @@ ggplot() +
   scale_fill_distiller(direction = -1)
 ```
 
-What is wrong with this map? 
+What do you notice with this map? 
 
 ```{r}
 
@@ -185,8 +191,12 @@ Hint: you want to load the variables, the look at the data frame and search "Not
 
 ```
 
+# Grabing official data from US Census. 
 
-# 4 Interactive maps using leaflet. If time. 
+Let's grab some data from the US census. 
+
+
+# Interactive maps using leaflet. If time. 
 
 ## Color in leaflet
 
@@ -251,6 +261,5 @@ leaflet() |>
             values = wetlands$SHAPE_LEN,
             title = "Wetland Area")
 ```
-
 
 

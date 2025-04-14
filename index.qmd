@@ -180,15 +180,25 @@ h1{font-weight: 400;}
 <!-- ::: -->
 
 
-<!-- # Day 31 Choropleth Mapping and Leaflet -->
+# Day 31 Choropleth Mapping and Leaflet
 
-<!-- ![Cora's map](www/coras_map.jpg) -->
+[Data Jounralism at the Globe Wed from 4-5:15](https://umass-amherst.zoom.us/meeting/register/3R83LNn7ROWw6lAbmltMAw)
 
-<!-- [Choropleth Mapping](./course-materials/in-class-activies/29_Choropleth_and_Leaflet.qmd) -->
+[Scott Lacombe today 12:15-1:30](www/Tech_SL.png)
 
-<!-- Simple features and Shape files. -->
+Pushing back office hours 1:40-3:00 pm.
 
+![Cora's map](www/coras_map.jpg)
 
+[Choropleth Mapping](./course-materials/in-class-activies/29_Choropleth_and_Leaflet.qmd)
+
+::: {.callout-note collapse="true"}
+
+[Project 3](https://classroom.github.com/a/lEaHigyH)
+
+After you know your group name in github classroom (or if you need a partner) fill out this form to tell me your[Project 3 groups](https://docs.google.com/forms/d/e/1FAIpQLSdgnj_qMUuWGNCCeez2dnFYTa3Am2HzTo8Whd5YbBqsy0cE4Q/viewform?usp=header)
+
+:::
 
 # Day 30 Mapping with simple features (sf) and shape files
 
