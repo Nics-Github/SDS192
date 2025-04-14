@@ -63,7 +63,7 @@ h1{font-weight: 400;}
 <!-- https://docs.google.com/spreadsheets/d/1j1Mub7lb1CJKpG-PySzdbzzgvryVQ3XrlvNgPRUcN0I/edit?usp=sharing -->
 
 ```{=html}
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTG_b6upDZcPxXB92LHYIhV1uAXgeVGaMsZ3sDRPuSQN74JdhkKhZQVjw6T68I3zsP8KGYzDSVTZW64/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false&amp;gid=0&amp;range=A1:E31" width="100%" height="300">
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTG_b6upDZcPxXB92LHYIhV1uAXgeVGaMsZ3sDRPuSQN74JdhkKhZQVjw6T68I3zsP8KGYzDSVTZW64/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false&amp;gid=0&amp;range=A1:E41" width="100%" height="300">
 </iframe>
 ```
 
@@ -145,40 +145,17 @@ h1{font-weight: 400;}
 
 <!-- It is due next Monday. -->
 
-<!-- [Survey for Prof Coa's class](https://smithcollege.qualtrics.com/jfe/form/SV_eR2LYqtBBTu0BBI)) -->
+
 
 <!-- Quiz 3 is available and due by Sunday. -->
 
 <!-- # Day 32 Choropleth Mapping and Leaflet -->
 
-<!-- [Choropleth Mapping](./course-materials/in-class-activies/29_Choropleth_and_Leaflet.qmd) -->
+# Day 32 [SAL](https://www.science.smith.edu/sal/)
 
-<!-- # Day 31 Mapping with simple features (sf) and shape files -->
+[SAL slides](https://docs.google.com/presentation/d/1whClXFOTzLDBaFNTpw_ShyhHXVkj47YpVviwzUvXybU/edit?usp=sharing)
 
-<!-- Simple features and Shape files. -->
-
-<!-- -   [Vermont's Geospacial Data](https://geodata.vermont.gov/) -->
-
-<!-- -   [MA Bike Trails](https://www.mass.gov/info-details/massgis-data-bicycle-trails) -->
-
-<!-- -   [tidygeocoder services](https://jessecambon.github.io/tidygeocoder/articles/geocoder_services.html) -->
-
-<!-- [In class activity](./course-materials/in-class-activies/27_mapping.zip) -->
-
-<!-- Quiz 3 on mapping is open, don't take it until after Monday's class.  -->
-
-<!-- # Day 30 Functions and Static Maps -->
-
-<!-- Let's finish this problem from last class.  -->
-
-<!-- ::: {.callout-note collapse="true"} -->
-
-<!-- # 6 scatter plots -->
-
-<!-- Make a function that takes a df and a variable then produces a scatter plot of that variable vs cesd. Use it to plot multiple graphs of the first 6 numeric variables HELPrct. [Hint: check out the extended example from 7.7](https://mdsr-book.github.io/mdsr3e/07-iteration.html#extended-example-factors-associated-with-bmi) -->
-
-<!-- ::: -->
-
+[Spacial Analysis Lab](https://smithcollege.maps.arcgis.com/home/index.html)
 
 # Day 31 Choropleth Mapping and Leaflet
 
@@ -196,7 +173,7 @@ Pushing back office hours 1:40-3:00 pm.
 
 [Project 3](https://classroom.github.com/a/lEaHigyH)
 
-After you know your group name in github classroom (or if you need a partner) fill out this form to tell me your[Project 3 groups](https://docs.google.com/forms/d/e/1FAIpQLSdgnj_qMUuWGNCCeez2dnFYTa3Am2HzTo8Whd5YbBqsy0cE4Q/viewform?usp=header)
+After you know your group name in github classroom (or if you need a partner) fill out this form to tell me your [Project 3 groups](https://docs.google.com/forms/d/e/1FAIpQLSdgnj_qMUuWGNCCeez2dnFYTa3Am2HzTo8Whd5YbBqsy0cE4Q/viewform?usp=header)
 
 :::
 
