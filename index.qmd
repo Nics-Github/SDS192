@@ -153,6 +153,8 @@ h1{font-weight: 400;}
 
 # Day 32 [SAL](https://www.science.smith.edu/sal/)
 
+Quiz 3 is open and due Sunday April 27.
+
 [SAL slides](https://docs.google.com/presentation/d/1whClXFOTzLDBaFNTpw_ShyhHXVkj47YpVviwzUvXybU/edit?usp=sharing)
 
 [Spacial Analysis Lab](https://smithcollege.maps.arcgis.com/home/index.html)
