@@ -141,6 +141,8 @@ h1{font-weight: 400;}
 
 # Day 33 Lab 7 Mapping Monarchs.
 
+[Alumani Panel](www/Alum_Panel.pdf)
+
 [Here is the lab for today.](https://classroom.github.com/a/QxAl2Zx9)
 
 It is due next Wednesday
